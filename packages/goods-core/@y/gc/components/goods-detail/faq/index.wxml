@@ -1,0 +1,10 @@
+<view class="c1ccb5">
+    <view>{{faq.title1}}</view>
+    <view> {{faq.info1}} </view>
+    <view class="c3124f">{{faq.title2}}</view>
+    <view>{{faq.info2a}}</view>
+    <view> {{faq.info2b}} </view>
+    <view>{{faq.info2c}}</view>
+    <view class="c3124f">{{faq.title3}}</view>
+    <view> {{faq.info3}} </view>
+</view>

@@ -1,0 +1,18 @@
+.c3333a {
+  display: flex;
+  border-bottom: 1px solid #ebedf0 !important;
+}
+.c295d0 {
+  min-width: 64px;
+  line-height: 60px;
+  font-size: 14px;
+}
+.d09ee {
+  width: auto;
+  height: 60px;
+}
+.c3db58,
+.c3db58 input {
+  height: 40px !important;
+  line-height: 40px !important;
+}

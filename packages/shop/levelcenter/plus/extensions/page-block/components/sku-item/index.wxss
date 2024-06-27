@@ -1,0 +1,44 @@
+.start-info {
+  position: absolute;
+  top: -2px;
+  left: -1px;
+  font-size: 12px;
+  background-image: linear-gradient(90deg, #ffaf79, #f44);
+  padding: 3px 7px;
+  border-radius: 8px 0 10px 0;
+  color: #fff;
+  font-weight: 500;
+}
+.choice-radio {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+.set-name {
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #323233;
+}
+.set-price {
+  font-size: 18px;
+  color: #c68e31;
+  margin-bottom: 4px;
+  margin-left: -15px;
+  font-weight: 700;
+}
+.set-price .price {
+  display: inline;
+  font-size: 28px;
+  font-weight: 700;
+}
+.origin-price {
+  color: #7d7e80;
+  margin-left: -5px;
+  text-decoration: line-through;
+}
+.center-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

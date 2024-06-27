@@ -1,0 +1,20 @@
+.skeleton-wrapper {
+  position: relative;
+}
+.skeleton {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #f7f8fa;
+  background-image: url(https://img01.yzcdn.cn/public_files/2020/09/21/3825c94b8615284bd0daae6372cec367.png);
+  background-size: 100%auto;
+  z-index: 50;
+}
+.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}

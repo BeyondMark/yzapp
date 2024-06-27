@@ -1,0 +1,14 @@
+.r-c {
+  flex-direction: column;
+}
+.r-c,
+.r-r {
+  display: flex;
+}
+.r-r {
+  flex-direction: row;
+}
+.pFSzNF {
+  position: relative;
+  z-index: 1;
+}

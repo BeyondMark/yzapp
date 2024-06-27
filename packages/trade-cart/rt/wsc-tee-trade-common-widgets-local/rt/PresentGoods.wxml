@@ -1,0 +1,46 @@
+<view class="c02baa" style="{{customStyle}}">
+    <view catch:tap="_p" class="f2102" data-t="{{ tap:{en:'chooseGoods',et:'stop'} }}" wx:if="{{isCanChoose}}">
+        <c bind:_init="_tic" color="{{themeGeneralColor}}" customStyle="{{iconStyle}}" name="{{iconName}}" size="18px"></c>
+        <view class="c7d786" wx:if="{{isInvalid}}"></view>
+    </view>
+    <view bind:tap="_p" class="c9ad47" data-t="{{ tap:{en:'goToGoodsPage'} }}" style="{{cardStyle}}">
+        <view class="c7d786" wx:if="{{isInvalid}}"></view>
+        <view class="f77e3">
+            <view class="c9f53e c89585" style="{{'background:'+themeGeneralColor}}" wx:if="{{!isPop}}">赠品</view>
+            <image class="c318f6 bd231" lazyLoad="true" mode="aspectFit" src="{{imgUrl}}"></image>
+            <block wx:if="{{isInvalid}}">
+                <b bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b4-13'}}"></b>
+            </block>
+        </view>
+        <view class="f99fa">
+            <view>
+                <view class="c2df1d">
+                    <view class="ca7e8 c89585" wx:if="{{goodsTitleTag}}">
+                        <image class="bd231" lazyLoad="true" src="{{goodsTitleTag}}"></image>
+                    </view>
+                    <view class="c6f808"> {{goods.title}} </view>
+                </view>
+                <view class="c74c1a" wx:if="{{!isInvalid&&skuStr}}">
+                    <view wx:if="{{!canChooseSku}}">{{skuStr}}</view>
+                    <view catch:tap="_p" class="ba6b0" data-t="{{ tap:{en:'changeSku',et:'stop'} }}" wx:else>
+                        <view class="c89585"> {{skuStr}} </view>
+                        <c bind:_init="_tic" name="arrow-down" wx:if="{{!isRetailWeappScene}}"></c>
+                    </view>
+                </view>
+            </view>
+            <view wx:if="{{isInvalid}}">
+                <view class="c99994"> {{goods.reason}} </view>
+            </view>
+            <view wx:else>
+                <view>
+                    <view class="c0085f">
+                        <a bind:_init="_tic" isPop="{{isPop}}" originPrice="{{goods.originPrice||goods.goodsPrice}}" price="{{0}}" rmId="{{rmId}}" themeGeneralColor="{{isPop?'#323233':themeGeneralColor}}" wx:if="{{rmId==='b4-13'}}"></a>
+                        <view class="aada7">
+                            <view class="common-num-font c89585">x{{goods.num}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

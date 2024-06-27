@@ -1,0 +1,5 @@
+<a customStyle="border-radius:4px;top:{{imgTop}}" position="center" show="{{show}}" zIndex="{{zIndex}}">
+    <view class="subscribe-guide-wrapper">
+        <image alt="勾选总是保持，不再错过重要信息" src="{{show?'https://img01.yzcdn.cn/upload_files/2020/03/25/Fq24gCcTJhE3bpk9giOf7LPqC-7H.gif':''}}"></image>
+    </view>
+</a>

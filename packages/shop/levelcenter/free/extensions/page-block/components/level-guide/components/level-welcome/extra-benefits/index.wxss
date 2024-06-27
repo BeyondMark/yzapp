@@ -1,0 +1,39 @@
+.extra-benefits {
+  padding: 15px 20px 0;
+}
+.benefit-item-wrap {
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.06);
+  border: 1px solid #ece3d0;
+}
+.benefit-item-wrap:last-child {
+  margin-bottom: 0;
+}
+.benefit-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #fcfaf7;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.benefit-item:after {
+  border-radius: 8px;
+  border-color: #ece3d0;
+}
+.benefit-item .benefit-name {
+  padding: 16px 12px;
+  width: 112px;
+  box-sizing: border-box;
+  text-align: left;
+}
+.benefit-item .benefit-name .benefit-desc {
+  color: #b18836;
+  font-size: 30px;
+  font-weight: 600;
+}
+.benefit-item .benefit-tip {
+  font-size: 14px;
+  font-weight: 500;
+}

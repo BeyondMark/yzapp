@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../display/index",
+    "b": "../control/index",
+    "c": "/@vant/weapp/dist/popup/index",
+    "d": "/packages/async-main/@vant/weapp/dist/icon/index",
+    "_": "../../../../../../../../../../components/_/index"
+  }
+}

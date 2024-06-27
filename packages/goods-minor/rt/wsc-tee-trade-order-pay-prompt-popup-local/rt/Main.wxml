@@ -1,0 +1,8 @@
+<a bind:_init="_tic" closeOnClickOverlay="{{false}}" customClass="fcc95" show="{{innerShow}}" wx:if="{{initialShow}}">
+    <view class="c7ebd5">{{promptData.title}}</view>
+    <c bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'onClose'} }}" desc="{{promptData.descTemplate}}" themeColors="{{formatThemeColors}}"></c>
+    <e bind:_init="_tic" evaluate="{{promptData.evaluateList}}" themeColors="{{formatThemeColors}}"></e>
+    <d bind:_init="_tic" bind:tap="_p" class="c2e29" data-t="{{ tap:{en:'toPay'} }}" goods="{{promptData.goods}}" prompt="{{promptData}}"></d>
+    <b bind:_init="_tic" bind:tap="_p" block="{{true}}" color="{{formatThemeColors['main-bg']}}" customClass="c77ba6" customStyle="width: 100%;" data-t="{{ tap:{en:'toPay'} }}" round="{{true}}" style="width: 100%">立即支付</b>
+    <view bind:tap="_p" block="{{true}}" class="c77ba6 c9bb74" data-t="{{ tap:{en:'onClose'} }}" round="{{true}}" style="width: 100%">稍后再说</view>
+</a>

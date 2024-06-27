@@ -1,0 +1,18 @@
+<view>
+    <view class="{{'c6e2ba'}} {{useTransparentBg?'c46068':''}}" wx:if="{{hasPaid}}">
+        <view class="b9c37">{{showPriorUse?'提交订单成功':displayPrompt.payPrompt}}</view>
+        <view class="c78a5e">
+            <view class="c0fc3c c89585">{{realPayAmount}}</view>
+        </view>
+        <view class="f9a35 c89585" wx:if="{{displayPrompt.payPromptSubTitle}}">{{displayPrompt.payPromptSubTitle}}</view>
+        <view class="e6d24" wx:if="{{showPriorUse}}">
+            <i bind:_init="_tic" class="baec6"></i>
+            <view class="label a8a9e c89585">微信支付分<view class="e6dec c89585">|</view>先用后付</view>
+            <view class="label c89585">下单成功，确认收货后自动扣款</view>
+        </view>
+        <view class="c951da" wx:if="{{payTip}}"> {{payTip.prefixText}} <view bind:tap="_p" class="c5b185" data-t="{{ tap:{en:'openPayDetailWv'} }}">{{payTip.urlText}}</view>
+        </view>
+    </view>
+    <a bind:_init="_tic" wx:elif="{{showOversale}}"></a>
+    <b bind:_init="_tic" bind:tap="_p" data-t="{{ tap:{en:'refresh'} }}" loading="{{isRefreshing}}" wx:elif="{{showError}}"></b>
+</view>

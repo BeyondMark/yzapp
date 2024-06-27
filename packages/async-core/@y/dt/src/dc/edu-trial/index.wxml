@@ -1,0 +1,32 @@
+<view class="edu_trial" style="{{containerStyle}}" wx:if="{{show}}">
+    <view class="edu_trial__title-wrapper" wx:if="{{opt.showTitle}}">
+        <view class="edu_trial__title t-text" style="{{titleStyle}}">预约礼</view>
+    </view>
+    <view class="edu_trial__content-wrapper">
+        <view class="edu_trial__content-list">
+            <view class="edu_trial__content-item" wx:if="{{auditionText}}">
+                <view class="edu_trial__content-tag" style="{{tagStyle}}">
+                    <view class="edu_trial__tag-text t-text">免费试听</view>
+                </view>
+                <view class="edu_trial__content-detail-list">
+                    <view class="edu_trial__content-detail-item t-text"> {{auditionText}} </view>
+                </view>
+            </view>
+            <view class="edu_trial__content-item" wx:if="{{hasGift}}">
+                <view class="edu_trial__content-tag" style="{{tagStyle}}">
+                    <view class="edu_trial__tag-text t-text">到店礼</view>
+                </view>
+                <view class="edu_trial__content-detail-list">
+                    <view class="edu_trial__content-detail-item t-text"> {{mainGift}} </view>
+                    <view class="edu_trial__content-detail-item t-text">{{minorGift}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="edu_trial__trial-btn" style="{{btnStyle}}">
+            <a authTypeList="{{['mobile']}}" bind:_init="_tic" bind:fail="_p" bind:next="_p" data-t="{{ next:{en:'handleAuthPopupAllow'},fail:{en:'handleAuthPopupRefuse'} }}" kdtId="{{kdtId}}" type="separate">
+                <view class="edu_trial__trial-btn-text t-text">立即预约</view>
+            </a>
+        </view>
+        <b bind:_init="_tic" bind:onClose="_p" bind:sendCaptcha="_p" bind:trialClick="_p" data-t="{{ sendCaptcha:{en:'sendCaptcha'},trialClick:{en:'trialClick'},onClose:{en:'closeTrial'} }}" mainColor="{{mainColor}}" trialData="{{trialPopupData}}" value="{{trialPopupShow}}"></b>
+    </view>
+</view>

@@ -1,0 +1,13 @@
+<view class="expe-log">
+    <view class="log-list">
+        <view class="l-i" wx:for="{{logList}}" wx:key="{{ item.cardNo }}">
+            <view class="avatar">
+                <image alt="头像" class="taked" id="{{item.userId}}" src="{{item.avatar||'//img01.yzcdn.cn/upload_files/avatar.png'}}" wx:if="{{item.userId}}"></image>
+                <view class="untake" wx:else>
+                    <image class="u-img" src="//img01.yzcdn.cn/upload_files/2023/10/30/FqjXUIsXZ6xNwyRanGdWcqA4tiR3.png"></image>
+                </view>
+            </view>
+            <view class="re-ti" wx:if="{{item.userId}}">{{rewardTip}}</view>
+        </view>
+    </view>
+</view>

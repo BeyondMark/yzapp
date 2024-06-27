@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./store-item-com",
+    "b": "./store-item-com-v2",
+    "_": "../../../../../components/_/index"
+  }
+}

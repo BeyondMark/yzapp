@@ -1,0 +1,14 @@
+<view class="root" wx:if="{{goodsList.length>0}}">
+    <view class="tip">更多超值商品</view>
+    <view class="goods-container">
+        <navigator class="goods-block" url="/pages/goods/detail/index?alias={{item.alias}}" wx:for="{{goodsList}}" wx:key="alias">
+            <view class="goods-image">
+                <image mode="widthFix" src="{{item.imageUrl}}"></image>
+            </view>
+            <view class="content-block">
+                <view class="goods-title">{{item.title}}</view>
+                <view class="goods-price">¥ {{item.price}}</view>
+            </view>
+        </navigator>
+    </view>
+</view>

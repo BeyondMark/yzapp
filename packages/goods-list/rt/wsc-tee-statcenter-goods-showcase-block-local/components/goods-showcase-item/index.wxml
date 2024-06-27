@@ -1,0 +1,16 @@
+<view class="c429f1" style="{{showcaseStyle}}" wx:if="{{showItem}}">
+    <view class="cbf8d">
+        <view class="c9980a">
+            <image class="c64cc8 bd231" lazyLoad="true" src="{{item.iconUrl}}"></image>
+            <view class="c89585">{{item.title}}</view>
+        </view>
+        <view bind:tap="_p" class="c34ff8" data-t="{{ tap:{ en:'jumpPage',args:[item] } }}">
+            <view class="c89585">查看更多</view>
+            <a bind:_init="_tic" class="c59255" name="arrow"></a>
+        </view>
+    </view>
+    <c bind:_init="_tic" bind:item-click="_p" bind:jump-page="_p" bind:load-failed="_p" bind:render-success="_p" bizName="{{item.bizName}}" buyerId="{{buyerId}}" customRecommendName="{{recommendName}}" data-t="{{ renderSuccess:{en:'handleLoadedFn'},loadFailed:{en:'handleLoadedFn'},itemClick:{en:'handleItemClick'},jumpPage:{en:'jumpPage'} }}" goodsNumber="{{goodsNumber}}" kdtId="{{kdtId}}" layoutConfig="{{layoutConfig}}" loggerParams="{{loggerParams}}" loggerSpm="{{loggerSpm}}" maxGoodsNumber="{{maxGoodsNumber}}" offlineId="{{offlineId}}" show="{{loaded}}" showCornerMark="{{item.showCornerMark}}"></c>
+    <view class="c51d2b" hidden="{{!!loaded}}">
+        <b bind:_init="_tic" size="20px"></b>
+    </view>
+</view>

@@ -1,0 +1,184 @@
+.container {
+  background-color: #f2f3f5;
+  min-height: 100%;
+  padding-top: 1px;
+}
+.container .shop-list-title {
+  display: flex;
+  justify-content: space-between;
+  margin: 24px 0 0 10px;
+  font-size: 14px;
+  color: #969799;
+}
+.container .shop-list-title .all {
+  display: flex;
+  align-items: center;
+}
+.container .shop-list-title .all .title-arrow {
+  margin: 1px 16px 0 4px;
+  font-size: 15px;
+  color: #c8c9cc;
+}
+.container .shop-list-wrap {
+  padding-bottom: 1px;
+}
+.container .shop-item--selected {
+  position: relative;
+}
+.container .shop-item--selected:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  border: 2px solid #ee0a24;
+  transform-origin: left top;
+  transform: scale(0.5);
+  border-radius: 32rpx;
+}
+.container .shop-item--selected-bg {
+  position: absolute;
+  right: -2rpx;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top-right-radius: 16rpx;
+  border: 28rpx solid transparent;
+  border-top: 28rpx solid #ee0a24;
+  border-right: 28rpx solid #ee0a24;
+}
+.container .shop-item--selected-icon {
+  position: absolute;
+  top: 4rpx;
+  right: 4rpx;
+  font-size: 24rpx;
+}
+.container .shop-list-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 12px;
+  padding: 12px 12px;
+  font-size: 14px;
+  background-color: #fff;
+  border-radius: 16rpx;
+}
+.container .shop-list-item .item-content {
+  width: 100%;
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+.container .shop-list-item .item-content.disabled .item-desc,
+.container .shop-list-item .item-content.disabled .item-footer__time,
+.container .shop-list-item .item-content.disabled .name {
+  color: #c8c9cc !important;
+}
+.container .shop-list-item .item-content .item-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 20px;
+  color: #323233;
+}
+.container .shop-list-item .item-content .item-head__icon {
+  position: relative;
+  top: -2rpx;
+  flex-shrink: 0;
+  margin-right: 4rpx;
+  margin-left: 4rpx;
+}
+.container .shop-list-item .item-content .item-head__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+.container .shop-list-item .item-content .item-head__container .name {
+  font-size: 16px;
+  line-height: 20px;
+  color: #323233;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-right: 4rpx;
+}
+.container .shop-list-item .item-content .item-head .distance {
+  flex: 0 0 auto;
+  font-size: 13px;
+  line-height: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex-shrink: 0;
+}
+.container .shop-list-item .item-content .item-desc {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #969799;
+  line-height: 16px;
+}
+.container .shop-list-item .item-content .item-desc .icon-location {
+  margin-right: 4rpx;
+  font-size: 28rpx;
+  transform: translateY(2rpx);
+}
+.container .shop-list-item .item-content .item-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  flex-wrap: wrap;
+  color: #969799;
+}
+.container .shop-list-item .item-content .item-footer__time {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 16rpx;
+}
+.container .shop-list-item .item-content .item-footer__time .icon-time {
+  font-size: 28rpx;
+  margin-right: 4rpx;
+  transform: translateY(6rpx);
+}
+.container .shop-list-item .item-content .item-footer__contact {
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rpx 16rpx;
+  font-size: 24rpx;
+  color: #323233;
+  margin-left: auto;
+}
+.container .shop-list-item .item-content .item-footer__contact .icon-phone {
+  font-size: 28rpx;
+  margin-right: 4rpx;
+}
+.container .shop-list-item .item-content .item-footer__contact:before {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  border-radius: 48rpx;
+  border: 2px solid #dcdee0;
+  transform-origin: left top;
+  transform: scale(0.5);
+}
+.container .about-blank {
+  margin: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+}

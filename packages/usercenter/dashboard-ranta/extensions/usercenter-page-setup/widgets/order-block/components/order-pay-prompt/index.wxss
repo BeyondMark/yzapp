@@ -1,0 +1,5 @@
+.mc__orderPayPrompt_text-dec {
+  display: inline-block;
+  font-size: 12px;
+  color: var(--ump-icon, #323233);
+}

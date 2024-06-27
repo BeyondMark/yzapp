@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../inject-protocol/index",
+    "_": "../../../../../components/_/index"
+  }
+}

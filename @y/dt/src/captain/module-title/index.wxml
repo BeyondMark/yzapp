@@ -1,0 +1,4 @@
+<view wx:if="{{showTitle}}">
+    <view class="cap-title-text" style="{{textSyle}}" wx:if="{{isTextTitle}}"> {{opt.titleValue}} </view>
+    <image class="cap-title-img tee-image" lazyLoad="true" mode="widthFix" src="{{opt.titleValue}}" style="{{imageStyle}}" wx:if="{{isImgTitle}}"></image>
+</view>

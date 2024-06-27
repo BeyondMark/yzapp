@@ -1,0 +1,16 @@
+<view class="showcase-item {{className}}" wx:if="{{showItem}}">
+    <view bindtap="jumpPage" class="showcase-item__header">
+        <view class="showcase-item__header-main">
+            <image alt="项目图标" class="showcase-item__header-icon" src="{{iconUrl}}"></image>
+            <text>{{title}}</text>
+        </view>
+        <view class="showcase-item__more">查看更多<c class="showcase-item__more-icon" name="arrow"></c>
+        </view>
+    </view>
+    <a bind:afterload="handleSuccessFn" bizName="{{bizName}}" componentIndex="{{componentIndex}}" customRecommendName="{{recommendName}}" goodsNumber="{{goodsNumber}}" layoutConfig="{{layoutConfig}}" pageRandomNumber="{{pageRandomNumber}}" showLastSelfDefineItem="{{showLastSelfDefineItem}}">
+        <view slot="last-item-in-list">
+            <view bindtap="jumpPage" class="list-more-btn">
+                <view class="list-more-btn-icon"></view>查看更多</view>
+        </view>
+    </a>
+</view>

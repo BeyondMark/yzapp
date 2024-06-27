@@ -1,0 +1,5 @@
+<view bind:tap="_p" class="c18379" data-t="{{ tap:{en:'click'} }}" wx:if="{{!hasHaitaoGoods&&enable&&!showPromotionBest}}"> {{postageModel.meetText}} <view class="fd424">
+        <view class="c89585">去凑单</view>
+        <a bind:_init="_tic" name="arrow"></a>
+    </view>
+</view>

@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../address-list-item/rt/index",
+    "b": "./../../wechat-address/rt/index",
+    "c": "../../../../../@y/wsc-tee-trade-common/components/OrderActionSheet",
+    "_": "../../../../../../../components/_/index"
+  }
+}

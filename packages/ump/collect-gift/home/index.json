@@ -1,0 +1,20 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/pages/common/page-container/index",
+    "b": "../../../async-main/common/components/form-view/index",
+    "c": "../../common/components/icon/index",
+    "d": "./components/uploader/index",
+    "e": "../../common/rewards-list/index",
+    "f": "../../components/subscribe-fail-popup/index",
+    "g": "/components/account/user-authorize/index",
+    "h": "../../@vant/weapp/dist/button/index",
+    "i": "../../../async-main/@vant/weapp/dist/toast/index",
+    "j": "../../../async-main/@vant/weapp/dist/notify/index",
+    "_": "../../../../components/_/index"
+  },
+  "navigationBarBackgroundColor": "#FFCE00",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "收藏有礼",
+  "componentPlaceholder": { "b": "_", "i": "_", "j": "_" }
+}

@@ -1,0 +1,7 @@
+<canvas canvasId="{{canvasId}}" class="share-canvas" style="width: 292px; height: {{posterHeight}}px; display: {{showCanvas?'block':'none'}}"></canvas>
+<view class="share-image__container">
+    <view class="share-image__content">
+        <image class="share-image--preview" src="{{src}}" style="width: {{posterStyle.width}}; height: {{posterStyle.height}}; top: {{posterStyle.top}}; left: {{posterStyle.left}}"></image>
+        <image bindload="handleLoad" mode="widthFix" src="{{goodsImage||mockGoodsImage.equal}}" style="display: none"></image>
+    </view>
+</view>

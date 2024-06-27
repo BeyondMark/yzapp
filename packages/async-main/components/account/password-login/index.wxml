@@ -1,0 +1,13 @@
+<view class="container" hoverClass="none" hoverStopPropagation="false">
+    <view class="title">{{title}}</view>
+    <view class="section">
+        <b bind:input="bindMobileInput" border="{{false}}" class="mobile-input" clearable="{{true}}" customStyle="padding-left:0px !important;" maxlength="11" placeholder="请输入手机号" type="number" value="{{formData.mobile}}"></b>
+    </view>
+    <view class="section">
+        <b bind:input="bindPasswordInput" border="{{false}}" class="password-input" clearable="{{true}}" customStyle="padding-left:0px !important;" maxlength="30" placeholder="请输入密码" placeholderStyle="" type="password" value="{{formData.password}}"></b>
+    </view>
+    <view catchtap="changeLoginType" class="login-type-change">验证码登录</view>
+    <a bind:agreementChange="agreementChange"></a>
+    <c block="{{true}}" catchtap="login" class="button" customClass="login-btn" disabled="{{loginBtn.disabled}}" type="primary">{{loginBtn.text}}</c>
+</view>
+<d id="van-dialog"></d>

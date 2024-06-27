@@ -1,0 +1,19 @@
+.a5c8e {
+  overflow: hidden;
+}
+.c2527f {
+  margin: var(--theme-goods-sku-normal-margin, 12px) 12px;
+  padding: var(--theme-goods-sku-ecard-padding, 8px);
+  font-size: 12px;
+  color: #969799;
+  line-height: 16px;
+  border-radius: 4px;
+  background: var(--theme-goods-sku-card-background-color, #f7f8fa);
+}
+.c56218 {
+  font-size: 12px;
+  color: #323233;
+  font-weight: var(--theme-common-field-font-weight, 500);
+  margin-bottom: var(--theme-goods-sku-normal-margin, 8px);
+  line-height: 16px;
+}

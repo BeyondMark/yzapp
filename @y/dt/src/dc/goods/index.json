@@ -1,0 +1,16 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y-open/vt/dist/list/index",
+    "b": "./../../captain/item-card/index",
+    "c": "./../../captain/layout/layout",
+    "d": "./../../captain/layout/layout-item",
+    "e": "/packages/async-core/@y/dt/src/captain/countdown/index",
+    "f": "./../../captain/load-mode/index",
+    "g": "./../../captain/module-title/index",
+    "h": "./component/more-button/index",
+    "i": "/packages/async-core/@y/dt/src/dc/goods/component/extra/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "e": "_", "i": "_" }
+}

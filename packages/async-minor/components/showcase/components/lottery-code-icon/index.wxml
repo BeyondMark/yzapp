@@ -1,0 +1,5 @@
+<view class="lottery-code-icon">
+    <view class="number" wx:if="{{number}}">+{{number}}</view>
+    <view bind:tap="toBack" class="tip-btn">{{btnText}}</view>
+    <text class="guide-arrow" wx:if="{{showArrow}}"></text>
+</view>

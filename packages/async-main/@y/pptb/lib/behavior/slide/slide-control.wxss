@@ -1,0 +1,103 @@
+.tee-image {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.slide-captcha-control {
+  display: block;
+  width: 100%;
+  height: 44px;
+  position: relative;
+}
+.slide-captcha-control .slider-block {
+  position: absolute;
+  left: 0;
+  cursor: pointer;
+  transform-origin: left top;
+}
+.slide-captcha-control .slider-block.error,
+.slide-captcha-control .slider-block.failed,
+.slide-captcha-control .slider-block.limit,
+.slide-captcha-control .slider-block.success {
+  transition: left 0.25s ease-out 0s;
+}
+.slide-captcha-control-bar,
+.slide-captcha-control .slider-block__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.slide-captcha-control-bar {
+  background-color: #f8f8f8;
+  border-radius: 2px;
+  position: relative;
+}
+.slide-captcha-control-bar-placeholder {
+  display: block;
+  height: 100%;
+  line-height: 44px;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+  border-radius: 2px;
+  user-select: none;
+}
+.slide-captcha-control-bar-block {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  cursor: pointer;
+  text-align: center;
+  background-color: #38f;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slide-captcha-control-bar-block.success {
+  background-color: #2da641;
+  transition: left 0.25s ease-out 0s;
+}
+.slide-captcha-control-bar-block.error,
+.slide-captcha-control-bar-block.failed,
+.slide-captcha-control-bar-block.limit {
+  background-color: #df4545;
+  transition: left 0.25s ease-out 0s;
+}
+.slide-captcha-control-bar-block-icon {
+  display: flex;
+  color: #fff;
+  font-size: 18px;
+}
+.slide-captcha-control-bar-mask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  border: 1px solid rgba(51, 136, 255, 0.3);
+  border-right: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  background-color: rgba(51, 136, 255, 0.16);
+}
+.slide-captcha-control-bar-mask.error,
+.slide-captcha-control-bar-mask.failed,
+.slide-captcha-control-bar-mask.limit {
+  border: 1px solid rgba(223, 69, 69, 0.4);
+  border-right: 0;
+  background: rgba(223, 69, 69, 0.1);
+  transition: width 0.25s ease-out 0s;
+}
+.slide-captcha-control-bar-mask.success {
+  border: 1px solid rgba(45, 166, 65, 0.4);
+  border-right: 0;
+  background: rgba(45, 166, 65, 0.08);
+  transition: width 0.25s ease-out 0s;
+}
+.slide-captcha-control .can-drag-false {
+  transition: all 0.3s;
+}

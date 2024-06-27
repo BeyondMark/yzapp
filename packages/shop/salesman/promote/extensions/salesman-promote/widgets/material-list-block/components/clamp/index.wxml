@@ -1,0 +1,7 @@
+<view class="clamp custom-class">
+    <a class="clamp__content {{contentClass}}" html="{{content}}" style="-webkit-line-clamp: {{maxLine}};max-height: {{isClamped?maxHeight+'px':'inherit'}}"></a>
+    <block wx:if="{{needAction}}">
+        <a class="clamp__fake-content" html="{{content}}" id="fake-content"></a>
+        <view bind:tap="handleActionClick" class="clamp__action-area custom-action-class" wx:if="{{showAction}}">{{isClamped?expandText:shrinkText}}</view>
+    </block>
+</view>

@@ -1,0 +1,4 @@
+.bb4ee .t-loading__spinner {
+  width: 20px;
+  height: 20px;
+}

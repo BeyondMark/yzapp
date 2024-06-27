@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/shop/components/showcase/video/index",
+    "b": "./components/gallery/index",
+    "c": "../clamp/index",
+    "_": "../../../../../../../../../../components/_/index"
+  }
+}

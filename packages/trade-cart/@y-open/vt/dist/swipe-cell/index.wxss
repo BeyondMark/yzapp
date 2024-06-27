@@ -1,0 +1,18 @@
+.c950c8 {
+  position: relative;
+  overflow: hidden;
+}
+.c9e8c0,
+.e215b {
+  position: absolute;
+  top: 0;
+  height: 100%;
+}
+.c9e8c0 {
+  left: 0;
+  transform: translate3d(-100%, 0, 0);
+}
+.e215b {
+  right: 0;
+  transform: translate3d(100%, 0, 0);
+}

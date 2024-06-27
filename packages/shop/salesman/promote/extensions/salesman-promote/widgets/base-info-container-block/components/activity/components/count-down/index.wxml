@@ -1,0 +1,17 @@
+<view class="activity-count-down" wx:if="{{countdown}}">
+    <view class="flex-column">
+        <view class="activity-count-down__time" wx:if="{{!ended}}">
+            <text class="activity-count-down__time-text day-text" wx:if="{{remainObj.days}}">{{remainObj.days}}天</text>
+            <text class="activity-count-down__time-text" color="general">{{remainObj.hours}}</text>
+            <text class="">:</text>
+            <text class="activity-count-down__time-text">{{remainObj.minutes}}</text>
+            <text class="">:</text>
+            <text class="activity-count-down__time-text">{{remainObj.seconds}}</text>
+            <text class="" wx:if="{{!remainObj.days}}">:</text>
+            <view class="activity-count-down__time-box" color="general" wx:if="{{!remainObj.days}}">
+                <text class="activity-count-down__time-text">{{remainObj.milliseconds}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="activity-count-down__label {{ended?'activity-end':''}}">{{remainDesc}}</view>
+</view>

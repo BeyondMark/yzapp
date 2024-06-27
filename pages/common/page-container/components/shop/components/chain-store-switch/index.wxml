@@ -1,0 +1,7 @@
+<view class="multi-store__page--header, {{isImmersion?'immersion':''}}, {{immersionUpShow?'hidden':''}}, {{showInNavigation?'in-navigation':''}}" wx:if="{{showTopBar&&(!useImmersion||isImmersion)&&!info.isRootShop&&!tableBooking}}">
+    <image bind:tap="goHome" class="logo" src="{{shopLogo||info.logo}}"></image>
+    <a class="van-font-14, {{isImmersion?'':'van-c-gray'}}" type="switchTab">
+        <view class="text-ellipsis name">{{util.formatTitle(userLocation||shopName||info.name,isImmersion)}}</view>
+    </a>
+    <view bind:tap="handleChooseShop" class="switch-trigger van-font-14" wx:if="{{info.showBtn}}">[切换]</view>
+</view>

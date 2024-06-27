@@ -1,0 +1,80 @@
+.winner-collapse {
+  text-align: center;
+  line-height: 31px;
+  border-top: 1px solid #f2f3f5;
+  font-size: 12px;
+  color: #646566;
+  position: relative;
+  background: #fff;
+}
+.winner-collapse__icon {
+  margin-left: 2px;
+}
+.winner-list-wrap {
+  display: block;
+  position: relative;
+  transition: max-height 0.25s;
+  padding-top: 6px;
+}
+.collapse {
+  max-height: 209px;
+  overflow: hidden;
+}
+.winner-list {
+  height: 100%;
+  font-size: 10px;
+  width: 100%;
+  transition: all 0.5s linear;
+}
+.winner-list__record {
+  display: flex;
+  line-height: 20px;
+  align-items: flex-start;
+  border-bottom: 1px solid #f2f3f5;
+  margin-top: 12px;
+  padding-bottom: 11px;
+  justify-content: space-between;
+}
+.winner-list__record:last-child {
+  border-bottom: none;
+}
+.winner-list .record-avatar {
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.winner-list .record-info {
+  display: inline-block;
+  vertical-align: top;
+}
+.winner-list .record-user {
+  max-width: 180px;
+  overflow: hidden;
+  font-size: 14px;
+  text-overflow: ellipsis;
+}
+.winner-list .record-time {
+  font-size: 12px;
+  color: #969799;
+}
+.winner-list .record-award {
+  overflow: hidden;
+  margin-left: 10px;
+  font-weight: 500;
+  margin-top: 10px;
+  max-width: 112px;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.empty-text {
+  display: flex;
+  align-items: center;
+  height: 75px;
+  font-size: 14px;
+  padding-bottom: 5px;
+  color: #969799;
+  flex-direction: column;
+  justify-content: center;
+}

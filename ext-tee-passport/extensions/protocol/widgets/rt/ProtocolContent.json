@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-main/components/account/protocol/ecloud-custom/index",
+    "b": "./CloudProtocolContent",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

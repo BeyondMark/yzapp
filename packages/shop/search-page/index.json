@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "商品搜索",
+  "usingComponents": {
+    "search-input": "./components/search-input/index",
+    "words-list": "./components/words-list/index",
+    "van-dialog": "../../async-main/@vant/weapp/dist/dialog/index",
+    "inject-protocol": "../../async-main/components/account/inject-protocol/index",
+    "_": "../../../components/_/index"
+  },
+  "componentPlaceholder": { "van-dialog": "_", "inject-protocol": "_" }
+}

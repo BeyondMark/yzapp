@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "全部店铺",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "a": "../components/shop-list/index",
+    "_": "../../../../components/_/index"
+  }
+}

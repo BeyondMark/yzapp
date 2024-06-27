@@ -1,0 +1,7 @@
+<a openCustomNav="{{true}}" showShopStatus="{{true}}" showStoreSwitch="{{showStoreSwitch}}" titleText="{{title}}">
+    <b class="goods-page-container" rmId="{{rmId}}" wx:if="{{rmId==='b29-0'}}">
+        <view slot="detail-base-footer"></view>
+    </b>
+    <c rmId="{{rmId}}" slot="page-bottom-hook" wx:if="{{rmId==='b29-0'}}"></c>
+</a>
+<d id="van-toast"></d>

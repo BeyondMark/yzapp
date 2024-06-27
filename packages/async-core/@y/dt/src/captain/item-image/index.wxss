@@ -1,0 +1,120 @@
+.tee-image {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.cap-item-image {
+  position: relative;
+}
+.cap-item-image.circle {
+  border-radius: 8px;
+  overflow: hidden;
+}
+.cap-item-image.rect {
+  border-radius: 2px;
+  overflow: hidden;
+}
+.cap-item-image .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.cap-item-image .image.width {
+  position: relative;
+}
+.cap-item-image .image.preImage {
+  position: absolute;
+  z-index: 1;
+}
+.cap-item-image .image-mask {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+}
+.cap-item-image .soldout {
+  background-image: url(https://img01.yzcdn.cn/v2/image/wsc-wap/showcase/soldout.png);
+}
+.cap-item-image .end {
+  background-image: url(https://img01.yzcdn.cn/v2/image/wsc-wap/showcase/end.png);
+}
+.cap-item-image .corner-key-label,
+.cap-item-image .corner-mark,
+.cap-item-image .corner-mark-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+.cap-item-image .corner-key-label {
+  color: #fff;
+  background-color: var(--general, #65c4aa);
+  padding: 2px 3px;
+  font-family: PingFangSC-Medium;
+  font-size: 14px;
+  border-bottom-right-radius: 5px;
+}
+.cap-item-image .corner-mark-icon {
+  color: var(--main-bg, #65c4aa);
+}
+.cap-item-image .corner-mark-bg {
+  position: absolute;
+  background: var(--main-text, #fff);
+}
+.cap-item-image .corner-mark-img {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 36px 36px;
+  width: 36px;
+  height: 36px;
+}
+.cap-item-image .mark-new-arrival {
+  left: 0;
+}
+.cap-item-image .mark-new-arrival .corner-mark-bg {
+  width: 84%;
+  height: 40%;
+  top: 24%;
+  left: 0;
+}
+.cap-item-image .mark-hot-sale {
+  left: 5px;
+  top: 10px;
+}
+.cap-item-image .mark-hot-sale .corner-mark-bg {
+  width: 50%;
+  height: 82%;
+  left: 26%;
+  top: 8%;
+}
+.cap-item-image .mark-hot {
+  left: 10px;
+  top: 10px;
+}
+.cap-item-image .mark-hot .corner-mark-bg {
+  width: 60%;
+  height: 45%;
+  left: 20%;
+  top: 20%;
+}
+.cap-item-image .mark-new {
+  left: 4px;
+}
+.cap-item-image .mark-new .corner-mark-bg {
+  width: 55%;
+  height: 64%;
+  left: 22%;
+  top: 0;
+}
+.cap-item-image .girdle {
+  width: 100%;
+  line-height: 1.45;
+}
+.photo-skeleton-bg {
+  background: #f2f3f5;
+}

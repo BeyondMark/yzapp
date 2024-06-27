@@ -1,0 +1,4 @@
+<view class="plugin-list">
+    <b bind:bindGetUserInfo="handleBindGetUserInfo" bind:pluginItemClicked="onPluginItemClicked" iconMode="{{iconMode}}" isNotValid="{{isNotValid}}" links="{{links}}" plugins="{{plugins}}" userAgreePrivacy="{{userAgreePrivacy}}" values="{{values}}" wx:if="{{mode===1}}"></b>
+    <a bind:bindGetUserInfo="handleBindGetUserInfo" bind:pluginItemClicked="onPluginItemClicked" iconMode="{{iconMode}}" isNotValid="{{isNotValid}}" links="{{links}}" plugins="{{plugins}}" values="{{values}}" wx:if="{{mode===2}}"></a>
+</view>

@@ -1,0 +1,14 @@
+<view class="c8ecdc {{disabledClass}} {{unavailableClass}}">
+    <view class="e7f33 c63dd2">
+        <view class="c3edcf">
+            <slot name="C1"></slot>
+        </view>
+        <a class="ff688" content="{{content}}" disabled="{{disabled}}" extra="{{extra}}" unavailable="{{unavailable}}"></a>
+    </view>
+    <view class="e7f33 d359e">
+        <view class="c3edcf">
+            <slot name="C2"></slot>
+        </view>
+        <b class="ff688" customClass="{{disabled||unavailable?'':'e537f'}}" description="{{description}}" disabled="{{disabled}}" unavailable="{{unavailable}}" validEndTime="{{validEndTime}}" validStartTime="{{validStartTime}}"></b>
+    </view>
+</view>

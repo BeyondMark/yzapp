@@ -1,0 +1,89 @@
+.block-top-line {
+  position: relative;
+  padding-top: 4px;
+}
+.block-top-line:before {
+  position: absolute;
+  box-sizing: border-box;
+  content: " ";
+  pointer-events: none;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  border: 0 solid #f9f9fa;
+  transform: scale(0.5);
+  border-top-width: 8px;
+  z-index: 1;
+}
+.sku-order-core-popup {
+  height: 75vh;
+  border-radius: var(--theme-radius-dialog, 16px)
+    var(--theme-radius-dialog, 16px) 0 0 !important;
+  --price-font-family: "Avenir";
+}
+.sku-order-core-popup.large-size {
+  height: calc(90vh - 20px);
+}
+.sku-order-core-popup .t-popup__close-icon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: #c8c9cc;
+  font-size: 22px;
+}
+.sku-stepper-stock-order {
+  display: flex;
+  padding: 0 !important;
+  margin-top: 4px;
+}
+.is-address-block-sticky {
+  border-bottom: 0.1px solid transparent;
+  transform: scale(0.5);
+  margin-bottom: var(--theme-goods-direct-order-popup-card-margin-bottom, 8px);
+}
+.sku-order-body {
+  padding-bottom: 61px;
+  height: calc(80vh - 44px);
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.sku-order-body-inner {
+  min-height: calc(100% + 1px);
+}
+.sku-order-body::-webkit-scrollbar {
+  display: none;
+}
+.sku-order-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+}
+.sku-order-container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  overflow-y: visible;
+  font-size: 14px;
+  color: #333;
+  background-image: linear-gradient(
+    var(--theme-sku-order-background-color, #fff) 8%,
+    var(--theme-sku-order-background-color, #f9f9fa) 11%
+  );
+}
+.sku-order-group-container {
+  padding-top: 12px;
+}
+.sku-order-group-container--hide-soldout .sku-row__item--disabled {
+  display: none;
+}
+.sku-order-group-container--none-sku {
+  padding-top: 0;
+}
+.sku-order-pay-btn {
+  width: 100%;
+}

@@ -1,0 +1,12 @@
+<view class="d5585">
+    <a active="{{activeTabIndex}}" animated="{{true}}" bind:_init="_tic" bind:tap="_p" border="{{false}}" customClass="c431be" data-ref="tabs" data-t="{{ tap:{en:'onChangeTab'} }}" pid="{{pid}}">
+        <b bind:_init="_tic" disabled="{{item.disabled}}" pid="{{pid}}" title="{{item.title}}" wx:for="{{tabList}}" wx:key="key"></b>
+    </a>
+    <c bind:_init="_tic" class="c2dae9">
+        <d bind:_init="_tic" bind:tap="_p" border="{{false}}" customClass="{{item.code===activeTabSelectedItem.code?'c84668':''}}" data-t="{{ tap:{ en:'onSelectListItem',args:[item] } }}" title="{{item.name}}" wx:for="{{activeTabList}}" wx:key="code">
+            <view slot="right-icon" wx:if="{{item.code===activeTabSelectedItem.code}}">
+                <e bind:_init="_tic" name="success"></e>
+            </view>
+        </d>
+    </c>
+</view>

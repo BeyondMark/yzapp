@@ -1,0 +1,8 @@
+<view class="messages van-c-gray-darker">
+    <input bindinput="handleInputUpdate" class="input--edit" focus="{{!isEditing}}" maxlength="20" placeholder="写点祝福语吧～" placeholderClass="input-placeholder" type="text" value="{{message}}" wx:if="{{isEditing}}"></input>
+    <text bindtap="handleMessageEdit" class="van-ellipsis input-display-text" wx:else>{{message}}</text>
+    <block wx:if="{{presenterView}}">
+        <view bindtap="handleMessageEdit" class="icon-edit" wx:if="{{!isEditing}}"></view>
+        <view bindtap="handleMessageFinish" class="van-font-12 message-edit-finish" wx:else>完成</view>
+    </block>
+</view>

@@ -1,0 +1,3 @@
+<b wx:if="{{showWinnerList}}">
+    <a winners="{{winnerList}}"></a>
+</b>

@@ -1,0 +1,21 @@
+<view class="c00705 c2f7e6" style="{{themeVars}}" wx:if="{{availableStores.length>0}}">
+    <a bind:_init="_tic" bind:tap="_p" customClass="dfd71" data-t="{{ tap:{en:'toggleRecommend'} }}" isLink="{{true}}" title="查看其他门店商品" titleClass="c7c3db" value="查看全部" valueClass="c1ef57"></a>
+    <view class="c07e8d">
+        <view bind:tap="_p" class="df85a" data-t="{{ tap:{ en:'jumpLink',args:[item] } }}" wx:for="{{availableStores}}" wx:key="id">
+            <view class="c28247">{{item.name}}</view>
+            <view class="b0d84" wx:if="{{item.distance}}">
+                <d bind:_init="_tic" class="c5a2f7" name="location-o"></d>        距离 {{item.distance}} </view>
+        </view>
+    </view>
+    <c bind:_init="_tic" bind:close="_p" class="c7c071" data-t="{{ close:{en:'toggleRecommend'} }}" position="bottom" round="{{true}}" safeAreaInsetBottom="{{true}}" show="{{showRecommend}}">
+        <view wx:if="{{showRecommend}}">
+            <view class="c535e0">
+                <a bind:_init="_tic" bind:tap="_p" data-t="{{ tap:{ en:'jumpLink',args:[item] } }}" isLink="{{true}}" title="{{item.name}}" wx:for="{{availableStores}}" wx:key="id">          距离 {{item.distance}} </a>
+            </view>
+            <view catch:tap="_p" class="c7f1f6" data-t="{{ tap:{en:'true',et:'stop'} }}">
+                <b bind:_init="_tic" bind:tap="_p" customClass="c3eb13" data-t="{{ tap:{en:'toggleRecommend'} }}" round="{{true}}" type="primary">          我知道了
+        </b>
+            </view>
+        </view>
+    </c>
+</view>

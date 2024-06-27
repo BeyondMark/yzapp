@@ -1,0 +1,14 @@
+<view>
+    <a bind:_init="_tic" customClass="c18dab">
+        <view class="f9ce5" wx:for="{{totalPriceList}}" wx:for-item="price" wx:key="index">
+            <view class="aab6a c89585">{{price.label}}</view>
+            <view class="e6afd c89585">{{price.value}}</view>
+        </view>
+    </a>
+    <a bind:_init="_tic" border="{{false}}" customClass="c4a4a8">
+        <view>
+            <view class="aa7d0 c89585">{{isPriorUse?'收货满意后再付款：':'合计：'}}</view>
+            <view class="c38477 c89585">￥{{finalPrice}}</view>
+        </view>
+    </a>
+</view>

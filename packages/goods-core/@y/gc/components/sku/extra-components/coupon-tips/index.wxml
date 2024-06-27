@@ -1,0 +1,12 @@
+<view class="db4bb" wx:if="{{show}}">
+    <view wx:if="{{showCoupon}}">
+        <view class="c89585">当前商品可使用</view>
+        <view class="c41b11">{{' '+text+' '}}</view>
+        <view class="c89585">优惠券</view>
+    </view>
+    <view wx:elif="{{showNotEnoughCouponTip}}">
+        <view class="c89585">当前商品需要使用</view>
+        <view class="c41b11">{{' '+showNotEnoughCouponTip+' '}}</view>
+        <view class="c89585">内购劵</view>
+    </view>
+</view>

@@ -1,0 +1,68 @@
+.t-text {
+  text-decoration: inherit;
+}
+.t-text,
+.tee-image {
+  display: inline-block;
+}
+.tee-image {
+  width: 100%;
+  height: 100%;
+}
+.component-container {
+  background-color: #fff;
+  padding: 16px 12px;
+  font-size: 12px;
+  color: #646566;
+  position: relative;
+}
+.component-container .card-title {
+  display: -webkit-flex;
+  display: flex;
+  margin-bottom: 12px;
+}
+.component-container .card-title .title {
+  width: 50%;
+}
+.component-container .card-title .title .title-text {
+  margin-left: 4px;
+  vertical-align: middle;
+}
+.component-container .card-title .navigator {
+  width: 50%;
+  text-align: right;
+}
+.component-container .card-title .navigator .navigator-text {
+  max-width: calc(100% - 16px);
+  margin-right: 2px;
+  vertical-align: middle;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.component-container .align-middle {
+  vertical-align: middle;
+}
+.component-container .shop-container {
+  line-height: 0;
+}
+.component-container .shop-container .shop-name {
+  margin-top: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  color: #323233;
+}
+.component-container .shop-container .shop-pic {
+  height: 170px;
+  width: 100%;
+}
+.component-container .shop-container .shop-info {
+  margin-top: 6px;
+  line-height: 18px;
+}
+.component-container .shop-container .shop-info .split-line {
+  color: #c8c9cc;
+  padding: 0 4px;
+  font-size: 14px;
+}

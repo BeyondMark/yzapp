@@ -1,0 +1,14 @@
+<view style="{{containerStyle}}">
+    <view class="group" style="{{cardStyle}}">
+        <view class="left">
+            <image class="logo tee-image" lazyLoad="true" mode="aspectFill" src="{{opt.logo}}"></image>
+            <view class="cnt">
+                <view class="title">{{opt.title}}</view>
+                <view class="desc">{{opt.desc}}</view>
+            </view>
+        </view>
+        <view class="right">
+            <view class="btn" style="width:{{btnWidth}}">{{opt.btnName}}</view>
+        </view>
+    </view>
+</view>

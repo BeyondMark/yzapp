@@ -1,0 +1,14 @@
+.agreement {
+  margin: 26px 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: #323233;
+}
+.agreement__check {
+  align-items: baseline !important;
+  line-height: 20px !important;
+}
+.agreement__link {
+  display: inline;
+  color: #155bd4;
+}

@@ -1,0 +1,15 @@
+<view class="trade-share">
+    <b bind:_init="_tic" bind:cancel="_p" bind:close="_p" bind:select="_p" data-t="{{ close:{en:'close'},cancel:{en:'close'},select:{en:'handleSelect'} }}" options="{{shareItems}}" popupClass="c78058" safeAreaInsetBottom="{{true}}" show="{{visible}}" title="立即分享给好友"></b>
+    <a bind:_init="_tic" customClass="c992ac" show="{{showPoster}}">
+        <view class="c0ce16">
+            <scroll-view class="c02d04" scrollY="{{true}}" type="list">
+                <image bind:longpress="_p" class="c20a11 bd231" data-t="{{ longpress:{en:'saveToLocal'} }}" hidden="{{!posterSrc}}" lazyLoad="true" mode="widthFix" src="{{posterSrc}}"></image>
+                <image class="b8ace bd231" hidden="{{!!posterSrc}}" lazyLoad="true" mode="widthFix" src="{{previewSrc}}" wx:if="{{!posterSrc}}"></image>
+            </scroll-view>
+            <view class="c8dd24" wx:if="{{posterSrc}}">长按图片保存至相册</view>
+            <view bind:tap="_p" class="c8e6e0" data-t="{{ tap:{en:'closePoster'} }}" wx:if="{{posterSrc}}">
+                <view class="c548a0"></view>
+            </view>
+        </view>
+    </a>
+</view>

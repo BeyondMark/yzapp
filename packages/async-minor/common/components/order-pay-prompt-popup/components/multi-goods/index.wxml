@@ -1,0 +1,19 @@
+<view bindtap="viewOrderHandle" class="multi-goods">
+    <viwe class="goods-wrap">
+        <viwe class="goods-img {{showgoods.length<4?'goods-image-center':''}}">
+            <viwe class="goods-image" wx:for="{{showgoods}}" wx:for-item="goodsValue">
+                <image class="goods-image-item" mode="aspectFill" src="{{goodsValue.imgUrl}}"></image>
+            </viwe>
+        </viwe>
+        <viwe class="goods-desc">
+            <text class="normal-text">共{{goods.length}}件，应付</text>
+            <text class="unit-text">¥</text>
+            <text class="price-text-yuan">{{yuan}}</text>
+            <text class="price-text-fen">.</text>
+            <text class="price-text-fen">{{fen}}</text>
+        </viwe>
+    </viwe>
+    <viwe class="arrow">
+        <a class="arrow-icon" name="arrow" size="10px"></a>
+    </viwe>
+</view>

@@ -1,0 +1,5 @@
+<view class="navbar" style="padding-top: {{statusH}}px">
+    <view bind:tap="onBackTap" class="back-icon">
+        <a class="arrow-icon" name="arrow-left"></a>
+    </view>
+</view>

@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-feature-ext/rt/ext-tee-wsc-im-im-message-contact-local/components/MessageContactButton",
+    "b": "./UmpTips",
+    "c": "./../containers/bottom-btns-block/index",
+    "d": "/packages/goods-core/@y/gc/components/fix-bottom-block/goods-bottom-risk/index",
+    "e": "/packages/goods-core/@y/gc/components/fix-bottom-block/goods-bottom-bar/index",
+    "f": "/packages/goods-core/@y/gc/components/fix-bottom-block/sold-out-recommend/index",
+    "g": "/packages/goods-core/@y/gc/components/fix-bottom-block/multi-store-recommend/index",
+    "_": "../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_", "d": "_", "e": "_", "f": "_", "g": "_" }
+}

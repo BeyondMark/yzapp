@@ -1,0 +1,29 @@
+.r-c {
+  flex-direction: column;
+}
+.r-c,
+.r-r {
+  display: flex;
+}
+.r-r {
+  flex-direction: row;
+}
+.XDizrO {
+  width: 100%;
+  padding-bottom: calc(85px + env(safe-area-inset-bottom));
+  background-color: var(--theme-page-footer-bg-color, #f7f8fa);
+  background-size: 100%auto;
+  color: #323233;
+}
+.XDizrO::-webkit-scrollbar-thumb,
+.XDizrO::-webkit-scrollbar-track {
+  background-color: initial;
+}
+.XDizrO::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
+.jnmKko {
+  position: relative;
+  z-index: 999999;
+}

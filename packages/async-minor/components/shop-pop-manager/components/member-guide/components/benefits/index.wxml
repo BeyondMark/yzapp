@@ -1,0 +1,32 @@
+<view class="benefits">
+    <view class="benefits__head">
+        <slot name="head"></slot>
+    </view>
+    <view class="benefits__body">
+        <view class="benefits__title">会员好礼</view>
+        <block wx:if="{{benefitNum>0}}">
+            <view class="benefits__subtitle">新会员享<text class="benefits__summary" decode="{{true}}" wx:if="{{coupons.length>0}}">&nbsp;<text class="highlight">{{couponsNum}}张</text>&nbsp;优惠券</text>
+                <text class="benefits__summary" decode="{{true}}" wx:if="{{presents.length>0}}">
+                    <text class="highlight">{{presents.length}}种</text>&nbsp;赠品</text>
+                <text class="benefits__summary" decode="{{true}}" wx:if="{{points.value>0}}">
+                    <text class="highlight">{{points.value}}</text>&nbsp;{{points.unit}}</text>，还有更多会员权益等你解锁。</view>
+            <view class="items">
+                <view class="item" wx:for="{{tickets}}" wx:key="label">
+                    <view class="item__icon {{item.icon}}"></view>
+                    <view class="item__info">
+                        <view class="item__label">{{item.label}}</view>
+                        <view class="item__desc" wx:if="{{item.desc}}">{{item.desc}}</view>
+                    </view>
+                </view>
+            </view>
+        </block>
+        <block wx:else>
+            <view class="benefits__subtitle">新会员享<text class="highlight">丰富会员权益。</text>
+            </view>
+            <view class="benefits__empty"></view>
+        </block>
+        <view class="benefits__actions">
+            <slot name="actions"></slot>
+        </view>
+    </view>
+</view>

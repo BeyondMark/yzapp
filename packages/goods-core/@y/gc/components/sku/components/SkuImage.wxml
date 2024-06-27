@@ -1,0 +1,4 @@
+<view bind:tap="_p" class="c22c99 custom-class" data-t="{{ tap:{en:'onImageClick'} }}" wx:if="{{opt.showImage}}">
+    <image class="d29e0 bd231" lazyLoad="true" mode="aspectFill" src="{{opt.headerImage}}"></image>
+    <view class="c89933"></view>
+</view>

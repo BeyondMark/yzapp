@@ -1,0 +1,3 @@
+<view class="custom-loading-warp" wx:if="{{show}}">
+    <image class="custom-loading-logo" mode="aspectFit" src="{{globalCustomLoading}}" style="{{'top:'+topOffset}}" wx:if="{{globalCustomLoading}}"></image>
+</view>

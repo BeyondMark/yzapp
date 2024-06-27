@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../widgets/service-bar/rt/index",
+    "b": "./../widgets/select-sku-bar/rt/index",
+    "c": "/packages/goods-main/rt/ext-tee-assets-prior-use-block-local/rt/Widget",
+    "d": "/packages/goods-core/@y/gc/components/group-block/service-category-block/index",
+    "_": "../../../../components/_/index"
+  },
+  "componentPlaceholder": { "c": "_", "d": "_" }
+}

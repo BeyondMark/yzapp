@@ -1,0 +1,15 @@
+<b bind:agree="onAgree" bind:disagree="onDisagree" bind:popup-after-leave="onPopupAfterLeave" bind:popup-before-show="onPopupBeforeEnter" bind:protocol-popup-show="onPopupEnter" bind:refresh-protocol-data="initData" btnConfig="{{btnConfig}}" code="{{code}}" contentCustomStyle="{{contentCustomStyle}}" controlled="{{controlled}}" duration="{{duration}}" hooks="{{hooks}}" needSkipSigned="{{needSkipSigned}}" popupCustomStyle="{{popupCustomStyle}}" ready="{{ready}}" source="{{source}}" theme="{{theme}}" useNativeSlot="{{useNativeSlot}}" useUIComponentSlot="{{useUIComponentSlot}}" visible="{{visible}}" zIndex="{{zIndex}}">
+    <slot name="ui-component" slot="ui-component"></slot>
+    <view class="protocol-title" slot="title"></view>
+    <view class="protocol-content" slot="content">
+        <view class="protocol-content__header">为给你提供更好的服务</view>
+        <view class="protocol-content__skt" wx:if="{{!ready}}">
+            <a row="3"></a>
+        </view>
+        <view wx:else>
+            <view class="protocol-content__body">{{protocolSignContent}}</view>
+            <c class="protocol-content__protocols" protocols="{{protocols}}"></c>
+        </view>
+    </view>
+    <slot name="agree-btn" slot="agree-btn"></slot>
+</b>

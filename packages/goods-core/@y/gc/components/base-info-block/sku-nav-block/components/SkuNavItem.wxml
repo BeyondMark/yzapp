@@ -1,0 +1,3 @@
+<view class="c8e654">
+    <image bind:tap="_p" class="c45b61 {{isActive?'c689ac':''}} bd231" data-t="{{ tap:{en:'handleSelectSkuNav'} }}" lazyLoad="{{true}}" mode="aspectFill" src="{{url}}"></image>
+</view>

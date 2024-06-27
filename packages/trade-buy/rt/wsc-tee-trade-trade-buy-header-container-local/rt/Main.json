@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../widgets/guide/rt/index",
+    "b": "./../../wsc-tee-trade-trade-buy-misc-pre-local/widgets/order-keep-navigator/rt/index",
+    "c": "./../components/head-prompt/index",
+    "_": "../../../../../components/_/index"
+  }
+}

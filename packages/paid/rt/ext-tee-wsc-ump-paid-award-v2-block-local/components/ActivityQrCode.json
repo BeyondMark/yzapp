@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./widgets/ConcatButton",
+    "_": "../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,58 @@
+.num-pads--root {
+  height: 40px;
+}
+.num-pads__container,
+.num-pads__pad {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.num-pads__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.num-pads__pad {
+  width: 14.3581%;
+  position: relative;
+  display: inline-block;
+}
+.num-pads__pad:after {
+  content: " ";
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #c8c9cc;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.num-pads__pad--occupied:after {
+  background-color: #323233;
+}
+.num-pads__pad--occupied:before {
+  content: " ";
+  position: absolute;
+  width: 18px;
+  height: 17px;
+  background-size: 18px 17px;
+  background-image: url(https://img01.yzcdn.cn/upload_files/2021/08/30/FsYg9aLL7p42ZqRFNMeXFrEA-CXl.png);
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.num-pads__pad--blink:after {
+  animation: blink 1s ease-in-out infinite;
+}
+@keyframes blink {
+  0% {
+    background-color: #c8c9cc;
+  }
+  50% {
+    background-color: #323233;
+  }
+  to {
+    background-color: #c8c9cc;
+  }
+}

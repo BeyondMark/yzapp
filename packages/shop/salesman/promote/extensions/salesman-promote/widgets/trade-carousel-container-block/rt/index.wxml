@@ -1,0 +1,8 @@
+<view class="trade-carousel" style="top: {{topBarHeight}}px">
+    <view class="trade-carousel__swipe">
+        <view class="trade-carousel__swipe-item {{tradeRecord.showEnter?'move-enter-active':''}} {{tradeRecord.showLeave?'move-leave-active':''}} " wx:if="{{tradeRecord.showEnter||tradeRecord.showLeave}}" wx:for="{{tradeRecords}}" wx:for-item="tradeRecord" wx:key="payTime">
+            <image class="trade-carousel__swipe-avatar" src="{{tradeRecord.avatar}}"></image>
+            <text class="trade-carousel__swipe-text">{{tradeRecord.desc}}</text>
+        </view>
+    </view>
+</view>

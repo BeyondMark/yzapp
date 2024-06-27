@@ -1,0 +1,52 @@
+<view class="trial-popup">
+    <a bind:_init="_tic" bind:close="_p" catch:touchmove="_p" closeable="{{true}}" data-t="{{ close:{en:'onClose'},touchmove:{en:'true',et:'stop'} }}" position="bottom" show="{{value}}" zIndex="{{12000}}">
+        <scroll-view>
+            <view class="trial-popup__title">{{title}}</view>
+            <view class="trial-popup__content">
+                <view class="trial-popup__gift" style="{{giftStyle}}">
+                    <view class="trial-popup__gift-item" wx:if="{{auditionText}}">
+                        <view class="trial-popup__gift-item-icon" style="{{bgStyle}}">
+                            <image class="trial-popup__img-icon tee-image" lazyLoad="true" src="https://img01.yzcdn.cn/upload_files/2021/12/23/FqkOONnwcw3-LQv-qJiTSh-gwyto.png"></image>
+                        </view>
+                        <view class="trial-popup__gift-item-detail">
+                            <view class="trial-popup__gift-item-title"> {{auditionTitle}} </view>
+                            <view class="trial-popup__gift-item-content"> {{auditionText}} </view>
+                        </view>
+                    </view>
+                    <view class="trial-popup__gift-item" wx:if="{{hasGift}}">
+                        <view class="trial-popup__gift-item-icon" style="{{bgStyle}}">
+                            <image class="trial-popup__img-icon tee-image" lazyLoad="true" src="https://img01.yzcdn.cn/upload_files/2021/12/23/Fg2R7Z7pA4AT8c6z7yd6vwn_oNtI.png"></image>
+                        </view>
+                        <view class="trial-popup__gift-item-detail">
+                            <view class="trial-popup__gift-item-title">{{giftTitle}}</view>
+                            <view class="trial-popup__gift-item-content"> {{mainGift}} </view>
+                            <view class="trial-popup__gift-item-content"> {{minorGift}} </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="trial-popup__collect">
+                    <p bind:_init="_tic" class="trial-popup__collect-text">{{collectText}}</p>
+                    <view class="trial-popup__input-list">
+                        <view class="trial-popup__input-item">
+                            <c bind:_init="_tic" bind:change="_p" customStyle="{{fieldStyle}}" data-t="{{ change:{en:'onPhoneChange'} }}" maxlength="{{11}}" placeholder="请输入手机号" value="{{phone}}">
+                                <view slot="button" wx:if="{{needVerifyCode}}">
+                                    <view bind:tap="_p" class="trial-popup__send-code" data-t="{{ tap:{en:'onSendClick'} }}" style="{{mainTextStyle}}"> {{sendText}} </view>
+                                </view>
+                            </c>
+                        </view>
+                        <view class="trial-popup__input-item" wx:if="{{needVerifyCode}}">
+                            <c bind:_init="_tic" bind:change="_p" customStyle="{{fieldStyle}}" data-t="{{ change:{en:'onVerifyCodeChange'} }}" placeholder="请输入验证码" value="{{verifyCode}}"></c>
+                        </view>
+                    </view>
+                    <view class="trial-popup__promise-list">
+                        <view class="trial-popup__promise-item" wx:for="{{tags}}" wx:for-item="tag" wx:key="index">
+                            <b bind:_init="_tic" color="{{mainColor}}" customStyle="position:relative;top:-1px" name="passed" size="{{12}}"></b>
+                            <p bind:_init="_tic" class="trial-popup__promise-item-text">{{tag}}</p>
+                        </view>
+                    </view>
+                </view>
+                <view bind:tap="_p" class="trial-popup__trail-btn" data-t="{{ tap:{en:'onTrialClick'} }}" style="{{bgStyle}}"> {{trialBtnText}} </view>
+            </view>
+        </scroll-view>
+    </a>
+</view>

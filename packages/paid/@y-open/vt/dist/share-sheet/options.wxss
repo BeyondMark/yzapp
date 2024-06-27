@@ -1,0 +1,68 @@
+.bd231 {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.t-share-sheet__options {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  padding: 16px 0 16px 8px;
+  overflow-x: auto;
+  overflow-y: visible;
+  -webkit-overflow-scrolling: touch;
+}
+.t-share-sheet__options--border:before {
+  position: absolute;
+  box-sizing: border-box;
+  content: " ";
+  pointer-events: none;
+  top: 0;
+  right: 0;
+  left: 16px;
+  border-top: 1px solid #ebedf0;
+  transform: scaleY(0.5);
+}
+.t-share-sheet__options::-webkit-scrollbar {
+  height: 0;
+}
+.t-share-sheet__button {
+  border: 0;
+  padding: 0;
+  height: auto;
+  line-height: inherit;
+  background-color: initial;
+}
+.t-share-sheet__button:after {
+  border: 0;
+}
+.t-share-sheet__option {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+}
+.t-share-sheet__option:active {
+  opacity: 0.7;
+}
+.t-share-sheet__option:focus {
+  outline: none;
+}
+.t-share-sheet__icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 16px;
+  display: block;
+}
+.t-share-sheet__name {
+  margin-top: 8px;
+  padding: 0 4px;
+  color: #646566;
+  font-size: 12px;
+}
+.t-share-sheet__option-description {
+  padding: 0 4px;
+  color: #c8c9cc;
+  font-size: 12px;
+}

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y-open/tu/src/input/index",
+    "_": "../../../../../components/_/index"
+  }
+}

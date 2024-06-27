@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-tee/@y-open/vt/dist/skeleton/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

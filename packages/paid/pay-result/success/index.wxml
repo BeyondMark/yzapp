@@ -1,0 +1,59 @@
+<x bind:_init="_tic" copyrightBgColor="{{bgColor}}" forbidCopyright="{{isSimpleStyle}}" noProtocol="{{true}}" pageBgColor="{{bgColor}}">
+    <scroll-view scrollY="{{true}}" style="height: 100vh" type="list">
+        <view style="{{_pageStyle}}">
+            <view>
+                <view class="c964a4 f25c0">
+                    <view class="c964a4">
+                        <view class="c964a4">
+                            <a bind:_init="_tic" nr="true" rmId="b21-26" wx:if="{{_normal&&RM&&RM['b21-26']}}"></a>
+                            <b bind:_init="_tic" nr="true" rmId="b21-0" wx:if="{{RM&&RM['b21-0']}}"></b>
+                        </view>
+                    </view>
+                    <view class="c964a4">
+                        <view class="c964a4">
+                            <c bind:_init="_tic" nr="true" rmId="b21-1" wx:if="{{RM&&RM['b21-1']}}"></c>
+                        </view>
+                        <view class="c964a4">
+                            <d bind:_init="_tic" nr="true" rmId="b21-10" wx:if="{{_normal&&RM&&RM['b21-10']}}"></d>
+                            <e bind:_init="_tic" nr="true" rmId="b21-2" wx:if="{{RM&&RM['b21-2']}}"></e>
+                        </view>
+                        <view class="c964a4">
+                            <f bind:_init="_tic" nr="true" rmId="b21-3" wx:if="{{_normal&&RM&&RM['b21-3']}}"></f>
+                        </view>
+                        <view class="c964a4">
+                            <g bind:_init="_tic" nr="true" rmId="b21-6" wx:if="{{_post&&RM&&RM['b21-6']}}"></g>
+                        </view>
+                        <view class="c964a4">
+                            <h bind:_init="_tic" nr="true" rmId="b21-22" wx:if="{{_normal&&RM&&RM['b21-22']}}"></h>
+                        </view>
+                        <view class="c964a4">
+                            <i bind:_init="_tic" nr="true" rmId="b21-23" wx:if="{{_normal&&RM&&RM['b21-23']}}"></i>
+                            <j bind:_init="_tic" nr="true" rmId="b21-27" wx:if="{{_normal&&RM&&RM['b21-27']}}"></j>
+                        </view>
+                        <view class="c964a4"></view>
+                        <view class="c964a4">
+                            <k bind:_init="_tic" nr="true" rmId="b21-8" wx:if="{{_normal&&RM&&RM['b21-8']}}"></k>
+                            <l bind:_init="_tic" nr="true" rmId="b21-15" wx:if="{{_normal&&RM&&RM['b21-15']}}"></l>
+                            <m bind:_init="_tic" nr="true" rmId="b21-9" wx:if="{{_normal&&RM&&RM['b21-9']}}"></m>
+                            <n bind:_init="_tic" nr="true" rmId="b21-14" wx:if="{{_normal&&RM&&RM['b21-14']}}"></n>
+                            <o bind:_init="_tic" nr="true" rmId="b21-4" wx:if="{{_normal&&RM&&RM['b21-4']}}"></o>
+                            <p bind:_init="_tic" nr="true" rmId="b21-7" wx:if="{{_normal&&RM&&RM['b21-7']}}"></p>
+                            <q bind:_init="_tic" nr="true" rmId="b21-21" wx:if="{{_normal&&RM&&RM['b21-21']}}"></q>
+                        </view>
+                        <view class="c964a4">
+                            <r bind:_init="_tic" nr="true" rmId="b21-19" wx:if="{{_normal&&RM&&RM['b21-19']}}"></r>
+                        </view>
+                        <view class="c964a4">
+                            <s bind:_init="_tic" nr="true" rmId="b21-18" wx:if="{{_normal&&RM&&RM['b21-18']}}"></s>
+                            <t bind:_init="_tic" nr="true" rmId="b21-24" wx:if="{{_normal&&RM&&RM['b21-24']}}"></t>
+                            <u bind:_init="_tic" nr="true" rmId="b21-25" wx:if="{{_normal&&RM&&RM['b21-25']}}"></u>
+                        </view>
+                    </view>
+                </view>
+                <v bind:_init="_tic" data-ref="van-toast" isPageDefault="{{true}}"></v>
+                <w bind:_init="_tic" data-ref="van-dialog" isPageDefault="{{true}}"></w>
+            </view>
+        </view>
+    </scroll-view>
+    <y bind:_init="_tic" pageBgColor="#ffffff" wx:if="{{isSimpleStyle}}"></y>
+</x>

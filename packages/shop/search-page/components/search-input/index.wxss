@@ -1,0 +1,28 @@
+.deco-search-input-wrap {
+  background-color: #fff;
+  padding: 3px 1px;
+}
+.deco-search-input-wrap__input {
+  width: 100%;
+}
+.deco-search-input-wrap .text-action {
+  margin: 0 12px;
+}
+.deco-search-input-wrap .automated-words-list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 60px;
+  background-color: #fff;
+  z-index: 5;
+  padding: 0 16px;
+  overflow: scroll;
+}
+.deco-search-input-wrap .automated-words-list__item {
+  font-size: 14px;
+  color: #4a4a4a;
+  line-height: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid #f7f8fa;
+}

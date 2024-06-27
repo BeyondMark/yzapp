@@ -1,0 +1,3 @@
+<a bind:_init="_tic" bind:load="_p" class="bb4ee" data-ref="list" data-t="{{ load:{en:'getList'} }}" error="{{error}}" errorText="请求失败，点击重新加载" finished="{{finished}}" immediateCheck="{{false}}" loading="{{loading}}" offset="{{88}}">
+    <b avatar="{{item.avatar}}" bind:_init="_tic" buyerName="{{item.buyerName}}" hairline="{{true}}" num="{{item.num}}" payTime="{{item.payTime}}" wx:for="{{list}}" wx:key="index"></b>
+</a>

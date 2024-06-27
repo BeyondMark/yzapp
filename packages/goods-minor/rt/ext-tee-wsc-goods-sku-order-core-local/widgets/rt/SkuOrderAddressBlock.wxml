@@ -1,0 +1,8 @@
+<view class="c5e0ea" style="{{customStyle}}" wx:if="{{isPhysical||isVirtualTicket}}">
+    <block wx:if="{{isPhysical}}">
+        <a bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b7-42'}}"></a>
+    </block>
+    <block wx:elif="{{isVirtualTicket}}">
+        <b bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b7-42'}}"></b>
+    </block>
+</view>

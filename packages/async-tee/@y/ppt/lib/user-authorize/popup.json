@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../../pptc/lib/components/user-authorize/components/popup/index",
+    "_": "../../../../../../components/_/index"
+  }
+}

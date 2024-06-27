@@ -1,0 +1,36 @@
+.tee-image {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.behavior-display {
+  display: block;
+  position: relative;
+  margin: 16px 0;
+  overflow: hidden;
+}
+.behavior-display__bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.behavior-display__bg--refresh {
+  position: absolute;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAoCAMAAACl6XjsAAAAZlBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+Vn2moAAAAIXRSTlMACfXuEQXmc0ca2pPp1cutmIMmjolpQDYrt32ln1E0ZCFfBh5hAAABM0lEQVQ4y6WUa3eDIAyGA0QFra3zVu1t8///yZmso3iUZce+X+CEBwi5ALul6sGpP4mkL0o9zdLl7R5DsTVTIN24rbsyD3mwowWaecod/WKe69/5iEvskbL5UFnkTfamfwx9iD3YaLLAbewM2+oX5visE8JCbiRr7jHFfn3ASheyeyx7UmsVAYaGbtyO9/jCWvIUV8gUiHbQYRlIWE/hURLGblYgYuU8WBBFCVAipSjbIKqmhOzApEvff4IckPO1GyAaXla4bOcxTaI9mfJlPvURdfRCdr3xhbSWosMaEMoSTnQYglDkfkVumSM/L96AeOVG/QpiqLnFsyRw/pP36n4Ra7ZNaWUVM7Y9sMGcgbX+akxZMsJ+1f/5uC5bycFmAZrWxRJoi+fflhd3obhwGBD26RvNAzMZ4SEYUAAAAABJRU5ErkJggg==)
+    no-repeat;
+  background-size: 100%;
+  right: 10px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+.behavior-display__bg--img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: left top;
+}

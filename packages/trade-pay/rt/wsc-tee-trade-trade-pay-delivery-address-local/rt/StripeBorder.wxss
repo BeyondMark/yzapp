@@ -1,0 +1,13 @@
+.c5cec {
+  position: relative;
+}
+.c5cec:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: url(https://b.yzcdn.cn/v2/image/wap/address/border2@2x.png);
+  background-size: 36px 2px;
+}

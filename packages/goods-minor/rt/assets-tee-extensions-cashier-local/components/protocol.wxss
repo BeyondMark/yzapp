@@ -1,0 +1,13 @@
+.t-text {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.zan-pay__protocol {
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 7px;
+  color: #969799;
+}
+.zan-pay__protocol-link {
+  color: #576b95;
+}

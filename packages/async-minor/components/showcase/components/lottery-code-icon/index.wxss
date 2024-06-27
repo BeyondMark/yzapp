@@ -1,0 +1,66 @@
+@keyframes rightan {
+  0% {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 5%;
+    opacity: 1;
+  }
+}
+.lottery-code-icon {
+  padding-top: 21px;
+  position: fixed;
+  top: 94px;
+  right: 8px;
+  text-align: center;
+  z-index: 999;
+}
+.lottery-code-icon .number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 35px;
+  height: 16px;
+  line-height: 16px;
+  border-radius: 8px;
+  background-color: rgba(254, 73, 73, 0.7);
+  color: #fff;
+  font-size: 12px;
+  font-family: PingFangSC-Medium;
+}
+.lottery-code-icon .tip-btn {
+  padding-top: 38px;
+  width: 76px;
+  height: 61px;
+  background: url(https://b.yzcdn.cn/public_files/89d36221841d3f8595e48efb0ecd74da.png)
+    no-repeat 50%;
+  background-size: 76px 61px;
+  box-sizing: border-box;
+  color: #f44;
+  font-size: 12px;
+  font-family: PingFangSC-Medium;
+  line-height: 17px;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+.guide-arrow {
+  display: block;
+  content: "";
+  margin: 3px auto 0;
+  width: 10px;
+  height: 13px;
+  background: url(https://b.yzcdn.cn/public_files/460f89e645904edb89ee270367ff14a0.png)
+    no-repeat 50%;
+  background-size: 10px 13px;
+  animation: rightan 1s infinite;
+  animation-fill-mode: both;
+}

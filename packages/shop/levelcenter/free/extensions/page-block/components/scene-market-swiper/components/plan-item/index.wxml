@@ -1,0 +1,19 @@
+<view bindtap="onViewPlan" class="plan-detail">
+    <view class="icon-text-group">
+        <image class="plan-icon" src="{{planIcon}}"></image>
+        <view class="plan-info">
+            <view class="birthday-text" wx:if="{{planDetail.planType===PlanTypeEnum.Birthday}}">
+                <view class="nick-name">{{nickName||''}}</view>生日快乐！请查看生日特权</view>
+            <view wx:elif="{{planDetail.planType===PlanTypeEnum.Festival}}">
+                <text>店铺节日庆典，会员享专属权益</text>
+            </view>
+            <view wx:else>
+                <text>会员日，会员享专属权益</text>
+            </view>
+        </view>
+    </view>
+    <view class="view-wrap">
+        <text>查看</text>
+        <a color="#979797" name="arrow"></a>
+    </view>
+</view>

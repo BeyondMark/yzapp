@@ -1,0 +1,69 @@
+.tee-image {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.yz-guarantee-popup__content {
+  padding: 10px 24px 20px 24px;
+  font-size: 14px;
+}
+.yz-guarantee__logo .logo_img {
+  margin-top: 32px;
+  margin-bottom: 20px;
+  width: 88px;
+  height: 24px;
+}
+.yz-guarantee__logo .logo_img.youzan {
+  width: 142px;
+}
+.yz-guarantee-service {
+  margin-top: 8px;
+  margin-bottom: 24px;
+  display: flex;
+}
+.yz-guarantee-service__icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background-size: 100%;
+  margin-right: 16px;
+}
+.yz-guarantee-service__right {
+  flex: 1;
+}
+.yz-guarantee-service__title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.29;
+  color: #323233;
+  display: block;
+}
+.yz-guarantee-service__title-icon {
+  float: right;
+  color: #c8c9cc;
+}
+.yz-guarantee-service__detail {
+  font-size: 16px;
+  line-height: 1.33;
+  color: #969799;
+  margin-top: 8px;
+  font-weight: 400;
+}
+.yz-guarantee-fixed .yz-guarantee-fixed__img-title {
+  line-height: 0;
+}
+.yz-guarantee-fixed .yz-guarantee-fixed__img-title .t-cell-img {
+  padding-top: 4px;
+  height: 16px;
+  width: 59px;
+}
+.yz-guarantee-fixed .yz-guarantee-fixed__img-title .t-cell-img.youzan {
+  width: 95px;
+}
+.yz-guarantee-fixed .yz-guarantee-fixed__img-title .t-cell-text {
+  line-height: 24px;
+}
+.yz-guarantee-fixed .yz-guarantee-fixed__value {
+  color: #323233;
+  font-weight: var(--theme-common-field-font-weight, 500);
+}

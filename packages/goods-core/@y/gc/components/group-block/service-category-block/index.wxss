@@ -1,0 +1,121 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.a5896 {
+  font-size: 14px;
+  --cell-vertical-padding: var(--theme-page-cell-padding);
+}
+.a5896:before {
+  content: "";
+  display: block;
+  margin: 0 16px;
+  border-top: var(--theme-page-ext-border-top, 0);
+}
+.a5896 .c341e4 {
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh !important;
+  max-height: 80vh !important;
+  border-radius: var(--theme-radius-dialog, 16px)
+    var(--theme-radius-dialog, 16px) 0 0 !important;
+}
+.a5896 .c341e4__title {
+  flex-shrink: 0;
+  font-size: 16px;
+  line-height: 44px;
+  font-weight: 500;
+  text-align: center;
+}
+.a5896 .a485f {
+  padding: 0 16px;
+  height: 100%;
+  flex: 1;
+  overflow: auto;
+  box-sizing: border-box;
+}
+.a5896 .ca138 {
+  flex-shrink: 0;
+  padding: 8px 16px;
+}
+.a5896 .b402e {
+  width: 100%;
+  height: 40px;
+  font-size: 14px;
+  color: var(--main-text) !important;
+  background-color: var(--general) !important;
+  border-color: var(--general) !important;
+  border-radius: var(--theme-radius-button, 999px) !important;
+}
+.a5896 .sc {
+  padding-right: 12px;
+  font-size: 14px;
+}
+.a5896 .c5b46e {
+  display: flex;
+  color: #323233;
+}
+.a5896 .c30faf {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.a5896 .c0c0ea {
+  flex-shrink: 0;
+  margin-right: 12px;
+  color: #969799;
+}
+.a5896 .c4ef3 .c4fded {
+  font-size: 16px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+  font-weight: 700;
+}
+.a5896 .c4ef3 .c35ea5 {
+  display: flex;
+  padding: 13px 0;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  max-height: 98px;
+  font-size: 14px;
+  box-sizing: border-box;
+  border-bottom: 0.5px solid #ebedf0;
+}
+.a5896 .c4ef3 .c35ea5 .c196c0 {
+  width: 119px;
+  min-height: 18px;
+  max-height: 64px;
+  color: #646566;
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+  line-height: 18px;
+}
+.a5896 .c4ef3 .c35ea5 .c196c0 .b57f6 {
+  max-width: 119px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.a5896 .c4ef3 .c35ea5 .c68ebd {
+  min-height: 18px;
+  width: 100%;
+  color: #323233;
+  display: flex;
+  align-items: center;
+  line-height: 18px;
+  font-size: 14px;
+  scrollbar-face-color: red;
+}
+.a5896 .c4ef3 .c35ea5 .c68ebd .c05378 {
+  overflow-y: auto;
+  max-height: 72px;
+  width: 100%;
+}

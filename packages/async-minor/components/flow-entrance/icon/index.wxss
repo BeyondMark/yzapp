@@ -1,0 +1,25 @@
+.flow-entrance-icon {
+  z-index: 140;
+  position: fixed;
+  left: 10px;
+  bottom: 60px;
+  width: 185px;
+  transition: transform 0.3s;
+}
+.flow-entrance-icon.is-iphone-x {
+  bottom: 90px;
+}
+.flow-entrance-icon--hidden {
+  transform: translate3d(-370px, 0, 0);
+}
+.flow-entrance-icon .icon-image {
+  display: block;
+  width: 100%;
+}
+.flow-entrance-icon .icon-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+}

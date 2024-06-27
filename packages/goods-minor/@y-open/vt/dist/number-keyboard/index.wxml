@@ -1,0 +1,17 @@
+<a bind:_init="_tic" bind:close="_p" customClass="c4488e" data-t="{{ close:{en:'onBlur'} }}" duration="{{transition?300:0}}" overlay="{{overlay}}" overlayStyle="opacity: 0;" position="bottom" round="{{title||showClose}}" safeAreaInsetBottom="{{safeAreaInsetBottom}}" show="{{show}}" zIndex="{{zIndex}}">
+    <view class="c04009">
+        <view class="c7650e" wx:if="{{title||showClose}}">
+            <view class="c0aa5e" wx:if="{{title}}">{{title}}</view>
+            <button bind:tap="_p" class="c4850a" data-t="{{ tap:{en:'onClose'} }}" type="button" wx:if="{{showClose}}"> {{closeButtonText}} </button>
+        </view>
+        <view class="e3825">
+            <view class="c49d8b">
+                <b bind:_init="_tic" bind:press="_p" class="f65d9 {{classes.key}}" color="{{key.color}}" data-t="{{ press:{en:'onPress'} }}" text="{{key.text}}" type="{{key.type}}" wider="{{key.wider}}" wx:for="{{keys}}" wx:for-item="key" wx:key="text"></b>
+            </view>
+            <view class="c816c2" wx:if="{{theme==='custom'}}">
+                <b bind:_init="_tic" bind:press="_p" class="f65d9 {{classes.key}}" data-t="{{ press:{en:'onPress'} }}" large="{{true}}" text="{{deleteButtonText}}" type="delete" wx:if="{{showDeleteKey}}"></b>
+                <b bind:_init="_tic" bind:press="_p" class="f65d9 {{classes.key}}" color="blue" customStyle="{{closeButtonStyle}}" data-t="{{ press:{en:'onPress'} }}" large="{{true}}" loading="{{closeButtonLoading}}" text="{{closeButtonText}}" type="close"></b>
+            </view>
+        </view>
+    </view>
+</a>

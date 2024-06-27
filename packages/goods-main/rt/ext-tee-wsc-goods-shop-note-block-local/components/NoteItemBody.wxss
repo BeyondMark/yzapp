@@ -1,0 +1,30 @@
+.bd231 {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.cad47 {
+  display: flex;
+}
+.c078a6 {
+  flex: 0 0 112px;
+  position: relative;
+  width: 112px;
+  height: 72px;
+  overflow: hidden;
+  border-radius: var(--theme-radius-card, 4px);
+}
+.c53d5b {
+  flex: 1;
+  padding: 12px 0 12px 12px;
+  color: #323233;
+}
+.c8256a {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 500;
+}
+.ca5bf {
+  width: 100%;
+  height: 100%;
+}

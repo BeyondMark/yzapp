@@ -1,0 +1,5 @@
+<view class="{{'cap-item'}} {{opt.type}}" style="{{wrapStyle}}">
+    <view class="item" style="{{itemStyle}}">
+        <slot></slot>
+    </view>
+</view>

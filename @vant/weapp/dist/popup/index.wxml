@@ -1,0 +1,6 @@
+<import src="./popup.wxml"></import>
+<van-overlay bind:click="onClickOverlay" customStyle="{{overlayStyle}}" duration="{{duration}}" lockScroll="{{lockScroll}}" rootPortal="{{rootPortal}}" show="{{show}}" zIndex="{{zIndex}}" wx:if="{{overlay}}"></van-overlay>
+<root-portal wx:if="{{rootPortal}}">
+    <include src="./popup.wxml"></include>
+</root-portal>
+<include src="./popup.wxml" wx:else></include>

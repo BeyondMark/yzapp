@@ -1,0 +1,67 @@
+<template name="goods-item">
+    <goods-item-image goodsInfo="{{goodsInfo}}" hideImageStatus="{{goodsInfo.hideImageStatus}}" imageClass="photo__image" imageFillStyle="{{imageFillStyle}}" imageRatio="{{imageRatio}}" imageUrl="{{goodsInfo.imageUrl||goodsInfo.thumbUrl}}" isEnd="{{infoData.isEnd||goodsInfo.isEnd}}" isSoldout="{{goodsInfo.isSoldout}}" isWaterfall="{{isWaterfall}}" layout="{{layout}}" photoClass="photo" soldoutFlag="{{soldOutFlag}}">
+        <view slot="tag-info">
+            <goods-item-tag-info bind:tag-info-change="tagInfoChange" goodsInfo="{{goodsInfo}}" infoData="{{infoData}}" layout="{{layout}}" pageData="{{pageData}}" size="{{sizeType}}"></goods-item-tag-info>
+        </view>
+        <view slot="corner-mark">
+            <goods-item-corner-mark backTypeClass="{{'corner-back--'+cornerMarkType}}" goodsInfo="{{goodsInfo}}" markImage="{{cornerMarkImage}}" markTypeClass="{{'corner-mark--'+cornerMarkType}}" type="{{cornerMarkType}}" wx:if="{{showCornerMark}}"></goods-item-corner-mark>
+        </view>
+        <view slot="label">
+            <view class="label" style="background-color: {{themeColor}}" wx:if="{{showLabel&&goodsInfo.keyLabel}}">{{goodsInfo.keyLabel}}</view>
+        </view>
+    </goods-item-image>
+    <view class="c-goods-layout__info c-goods-layout__info-size{{sizeType}} c-goods-layout__info-layout{{layout}}">
+        <goods-item-title customClass="c-goods-layout__info-title" goodsIndex="{{goodsIndex}}" goodsInfo="{{goodsInfo}}" infoData="{{infoData}}" layout="{{layout}}" sizeType="{{sizeType}}"></goods-item-title>
+        <goods-item-tags customClass="c-goods-layout__tags" exhibitionTag="{{exhibitionTag}}" goodsInfo="{{goodsInfo}}" infoData="{{infoData}}" itemIndex="{{goodsIndex}}" layout="{{layout}}" sizeType="{{sizeType}}"></goods-item-tags>
+        <goods-item-ump-tags goodsInfo="{{goodsInfo}}" maxCount="{{umpTagsMaxCount}}" show="{{showUmpTags}}" wx:if="{{!goodsInfo.skeleton&&showUmpTags}}"></goods-item-ump-tags>
+        <b rectStyle="width: 56px; height: 16px;" type="rect" wx:if="{{goodsInfo.skeleton&&showUmpTags}}"></b>
+        <goods-item-expand goodsInfo="{{goodsInfo}}" infoData="{{infoData}}" layout="{{layout}}" sizeType="{{sizeType}}"></goods-item-expand>
+        <goods-item-price appId="{{appId}}" bind:buy="handleBuyClick" customClass="c-goods-layout__info-price" extraData="{{extraData}}" goodsIndex="{{goodsIndex}}" goodsInfo="{{goodsInfo}}" infoData="{{infoData}}" layout="{{layout}}" redirectType="{{redirectType}}" showOriginPriceByGoodsInfo="{{showOriginPriceByGoodsInfo}}" showcaseClass="{{showcaseClass}}" sizeType="{{sizeType}}">
+            <view class="goods-price-label" slot="price-label" wx:if="{{showPriceLabel}}">
+                <goods-price-label customClass="member-tag" goodsInfo="{{goodsInfo}}" infoData="{{infoData}}" layout="{{layout}}" pageData="{{pageData}}" showcaseClass="{{showcaseClass}}" size="{{sizeType}}" textAlignType="{{textAlignType}}"></goods-price-label>
+            </view>
+        </goods-item-price>
+    </view>
+</template>
+<view class="c-goods-layout th_vw-buy {{showcaseClass}}">
+    <view class="layout-container {{containerClass}} layout-container--waterfall" style="{{pageMarginStyle}}" wx:if="{{isWaterfall}}">
+        <view class="goods-wrap" wx:for="{{waterfallGoodsList}}" wx:for-index="listIndex" wx:for-item="listCols" wx:key="{{ listIndex }}-{{ listCols.length }}">
+            <view style="overflow: hidden;" wx:for="{{listCols}}" wx:for-index="goodsIndex" wx:for-item="goodsInfo" wx:key="alias">
+                <item-extra item="{{ info:goodsInfo,heightStyle:heightStyle,goodsMarginStyle:goodsMarginStyle,index:goodsIndex,layoutConfig:{layout:layout,sizeType:sizeType,...infoData} }}" layoutClass="{{['waterfall',borderRadiusTypeClass]}}" wx:if="{{goodsInfo.isExtra}}"></item-extra>
+                <view catch:tap="handleGoodsItemClick" class="goods-item goods-item--{{layoutName}} waterfall {{borderRadiusTypeClass}}" data-index="{{listIndex+'-'+goodsIndex}}" style="{{goodsMarginStyle}}" wx:else>
+                    <template is="goods-item" data="{{appId:appId,goodsInfo:goodsInfo,imageFillStyle:imageFillStyle,imageRatio:imageRatio,showCornerMark:showCornerMark,cornerMarkType:cornerMarkType,cornerMarkImage:cornerMarkImage,infoData:infoData,layout:layout,sizeType:sizeType,redirectType:redirectType,extraData:extraData,isWaterfall:isWaterfall,pageData:pageData,pageUtils:pageUtils,showPriceLabel:showPriceLabel,soldOutFlag:soldOutFlag,showLabel:showLabel,borderRadiusType:borderRadiusType,themeColor:themeColor,showOriginPriceByGoodsInfo:showOriginPriceByGoodsInfo}}"></template>
+                </view>
+            </view>
+            <view class="goods-wrap" wx:if="{{skeletonNumber>0}}">
+                <view class="goods-item goods-item--{{layoutName}} waterfall {{borderRadiusTypeClass}}" style="{{goodsMarginStyle}}">
+                    <template is="goods-item" data="{{appId:appId,...skeletonGoodsConfig,imageFillStyle:imageFillStyle,imageRatio:imageRatio,showCornerMark:showCornerMark,cornerMarkType:cornerMarkType,cornerMarkImage:cornerMarkImage,infoData:infoData,layout:layout,sizeType:sizeType,redirectType:redirectType,extraData:extraData,pageData:pageData,showPriceLabel:showPriceLabel,soldOutFlag:soldOutFlag,showLabel:showLabel,borderRadiusType:borderRadiusType,themeColor:themeColor,showOriginPriceByGoodsInfo:showOriginPriceByGoodsInfo}}"></template>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view bind:touchcancel="onTouchEnd" bind:touchend="onTouchEnd" bind:touchmove="onTouchMove" bind:touchstart="onTouchStart" class="layout-container {{showcaseClass}} {{containerClass}}" style="{{pageMarginStyle}}" wx:else>
+        <view class="goods-wrap goods-wrap--{{goodsIndex}}" wx:for="{{list}}" wx:for-index="goodsIndex" wx:for-item="goodsInfo" wx:key="alias">
+            <item-extra item="{{ info:goodsInfo,heightStyle:heightStyle,goodsMarginStyle:goodsMarginStyle,index:goodsIndex,layoutConfig:{layout:layout,sizeType:sizeType,...infoData} }}" layoutClass="{{[sizeName,borderRadiusTypeClass]}}" wx:if="{{goodsInfo.isExtra}}"></item-extra>
+            <view catch:tap="handleGoodsItemClick" class="goods-item goods-item--{{layoutName}} {{sizeName}} {{borderRadiusTypeClass}}" data-index="{{goodsIndex}}" style="{{goodsMarginStyle+';'+heightStyle}}" wx:else>
+                <template is="goods-item" data="{{showcaseClass:showcaseClass,appId:appId,goodsInfo:goodsInfo,goodsIndex:goodsIndex,imageFillStyle:imageFillStyle,imageRatio:imageRatio,showCornerMark:showCornerMark,cornerMarkType:cornerMarkType,cornerMarkImage:cornerMarkImage,infoData:infoData,layout:layout,sizeType:sizeType,redirectType:redirectType,extraData:extraData,pageData:pageData,showPriceLabel:showPriceLabel,showUmpTags:showUmpTags,umpTagsMaxCount:umpTagsMaxCount,soldOutFlag:soldOutFlag,showLabel:showLabel,themeColor:themeColor,borderRadiusType:borderRadiusType,exhibitionTag:exhibitionTag,showOriginPriceByGoodsInfo:showOriginPriceByGoodsInfo}}"></template>
+            </view>
+        </view>
+        <view class="goods-wrap goods-wrap--last" wx:if="{{showLastSelfDefineItem}}">
+            <view class="goods-item goods-item--last {{sizeName}} {{borderRadiusTypeClass}}" style="{{goodsMarginStyle+';'+heightStyle}}">
+                <slot name="last-item-in-list"></slot>
+            </view>
+        </view>
+        <block wx:if="{{skeletonNumber>0}}">
+            <view class="goods-wrap" wx:for="{{skeletonNumber}}" wx:key="item">
+                <view class="goods-item goods-item--{{layoutName}} {{sizeName}} {{borderRadiusTypeClass}}" style="{{goodsMarginStyle}}">
+                    <template is="goods-item" data="{{showcaseClass:showcaseClass,appId:appId,...skeletonGoodsConfig,imageFillStyle:imageFillStyle,imageRatio:imageRatio,showCornerMark:showCornerMark,cornerMarkType:cornerMarkType,cornerMarkImage:cornerMarkImage,infoData:infoData,layout:layout,sizeType:sizeType,redirectType:redirectType,extraData:extraData,pageData:pageData,showPriceLabel:showPriceLabel,showUmpTags:showUmpTags,umpTagsMaxCount:umpTagsMaxCount,soldOutFlag:soldOutFlag,borderRadiusType:borderRadiusType,themeColor:themeColor,showOriginPriceByGoodsInfo:showOriginPriceByGoodsInfo}}"></template>
+                </view>
+            </view>
+        </block>
+        <block wx:if="{{isSwipeLayout&&openSwipePagination}}">
+            <a appId="{{appId}}" buttonType="{{6}}" class="more-button--6" goodsMargin="{{goodsMargin}}" moreText="查看全部" moreUrl="{{moreUrl}}" wx:if="{{isSwipeLoadFinished}}"></a>
+            <a buttonType="{{5}}" goodsMargin="{{goodsMargin}}" loading="{{isSwipeLoading}}" wx:else></a>
+        </block>
+    </view>
+    <a appId="{{appId}}" buttonType="{{moreButtonType}}" goodsMargin="{{goodsMargin}}" moreUrl="{{moreUrl}}" wx:if="{{isShowMore}}"></a>
+</view>

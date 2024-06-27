@@ -1,0 +1,7 @@
+<c bind:prompt-click="goEvaluate" btnTxt="去评价" class="mc__orderEvaluatePrompt" goods="{{goods}}">待评价，快和大家分享你的购物体验吧<view class="mc__orderEvaluatePrompt_rest-time" wx:if="{{remianingSeconds}}">
+        <text class="mc__orderEvaluatePrompt_text-dec">，剩余</text>
+        <a bind:change="handleCountDownChange" key="{{item}}" time="{{remianingSeconds}}" useSlot="{{true}}">
+            <b color="main-bg">{{formattedTime}}</b>
+        </a>
+    </view>
+</c>

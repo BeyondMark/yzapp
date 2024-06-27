@@ -1,0 +1,35 @@
+function isShowBadge(badges, key) {
+  return !!(
+    badges[
+      ((nt_0 = key),
+      null == nt_0 ? undefined : "number" === typeof nt_0 ? nt_0 : "" + nt_0)
+    ] || {}
+  ).value;
+}
+function getBadgesType(badges, key) {
+  var badge =
+    badges[
+      ((nt_1 = key),
+      null == nt_1 ? undefined : "number" === typeof nt_1 ? nt_1 : "" + nt_1)
+    ] || {};
+  return badge.type || "red-point";
+}
+function getBadgesContent(badges, key) {
+  var badge =
+    badges[
+      ((nt_2 = key),
+      null == nt_2 ? undefined : "number" === typeof nt_2 ? nt_2 : "" + nt_2)
+    ] || {};
+  if (badge.num && typeof badge.num === "number") {
+    if (badge.num > 99) {
+      return "99+";
+    }
+    return badge.num;
+  }
+  return "";
+}
+module.exports = {
+  isShowBadge: isShowBadge,
+  getBadgesType: getBadgesType,
+  getBadgesContent: getBadgesContent,
+};

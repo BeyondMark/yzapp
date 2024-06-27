@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-main/common/components/form-view/index",
+    "b": "/components/account/user-authorize/index",
+    "_": "../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

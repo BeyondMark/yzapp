@@ -1,0 +1,39 @@
+.d5a4c {
+  padding: var(--theme-page-cell-padding-top, 10px)
+    var(--theme-page-cell-padding-right, 12px)
+    var(--theme-page-cell-padding-bottom, 10px)
+    var(--theme-page-cell-padding-left, 12px) !important;
+}
+.label-class {
+  color: #323233;
+}
+.c3250f {
+  color: #969799;
+}
+.idcardInput {
+  color: #323233;
+  font-weight: 500;
+}
+.idcardInput:after {
+  margin-left: 15px;
+  border-top-width: 1px;
+}
+.idcardInput .t-cell__title {
+  max-width: 70px;
+}
+.idcardInput .t-cell__value {
+  text-align: right;
+}
+.c92ae0 {
+  color: #969799;
+}
+.c92ae0:after {
+  margin-left: 15px;
+  border-top-width: 1px;
+}
+.c92ae0 .t-cell__title {
+  max-width: 70px;
+}
+.c92ae0 .t-cell__value {
+  text-align: right;
+}

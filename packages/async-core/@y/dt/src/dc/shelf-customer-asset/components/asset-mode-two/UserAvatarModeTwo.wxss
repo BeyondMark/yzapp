@@ -1,0 +1,44 @@
+.t-text {
+  text-decoration: inherit;
+}
+.t-text,
+.tee-image {
+  display: inline-block;
+}
+.tee-image {
+  width: 100%;
+  height: 100%;
+}
+.user-avatar {
+  display: -webkit-flex;
+  display: flex;
+}
+.user-avatar .avatar {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 2px solid #fff;
+  overflow: hidden;
+  background: #fff;
+}
+.user-avatar .info-container {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.user-avatar .info-container .name {
+  display: -webkit-flex;
+  display: flex;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 2px 0;
+  color: var(--realTextColor);
+  font-weight: 700;
+}
+.user-avatar .info-container .name .level-icon {
+  padding-top: 4px;
+}

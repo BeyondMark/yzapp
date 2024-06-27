@@ -1,0 +1,10 @@
+<view bind:tap="_p" class="e7349" data-t="{{ tap:{en:'click'} }}">
+    <image class="c14930 bd231" lazyLoad="true" src="{{imgSrc}}"></image>
+    <view class="c08160">
+        <view class="c89585" wx:for="{{normalTextList}}" wx:for-item="normalText" wx:key="normalText">
+            <view class="c89585">{{normalText}}</view>
+            <view class="e7640 c89585" wx:if="{{boldTextList[index]}}">{{boldTextList[index]}}</view>
+        </view>
+    </view>
+    <a bind:_init="_tic" class="c499e8" color="{{themeColors['ump-main-bg']}}" customClass="b79e7" round="{{true}}" size="small" textStyle="{{btnTextStyle}}" type="danger">立即查看</a>
+</view>

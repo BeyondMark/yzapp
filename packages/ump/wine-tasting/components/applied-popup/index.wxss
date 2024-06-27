@@ -1,0 +1,106 @@
+.mgr15 {
+  margin-right: 15rpx;
+}
+.top3 {
+  position: relative;
+  top: 3rpx;
+}
+.wrapper {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+.header {
+  background-color: #f7f8fa;
+}
+.custom-nav {
+  display: flex;
+  align-items: center;
+}
+.custom-nav__left,
+.custom-nav__right {
+  flex: 1;
+}
+.custom-nav__left {
+  display: flex;
+  align-items: center;
+}
+.custom-nav__left--icon {
+  display: flex;
+  height: 100%;
+  flex-shrink: 1;
+  align-items: center;
+}
+.custom-nav__left--icon .icon-return {
+  display: flex;
+  padding: 0 16px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.custom-nav__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #323233;
+}
+.body {
+  flex-grow: 2;
+  overflow-y: auto;
+  background-color: #f7f8fa;
+}
+.body,
+.body .wine-tasking-sign-in {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.body .wine-tasking-sign-in {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.body .wine-tasking-sign-in .sign-in-group {
+  background-color: #fff;
+  position: absolute;
+  width: 90%;
+  top: 200rpx;
+  border-radius: 16rpx;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.body .wine-tasking-sign-in .sign-in-group .sign-in-icon {
+  position: absolute;
+  top: -50rpx;
+  font-size: 100rpx;
+  width: 102rpx;
+  height: 102rpx;
+  display: block;
+  color: #45a110;
+}
+.body .wine-tasking-sign-in .sign-in-group .sign-in-icon.error {
+  color: #d42f15;
+}
+.body .wine-tasking-sign-in .sign-in-group .sign-in-tip {
+  padding: 90rpx 0 80rpx 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #323233;
+}
+.body .wine-tasking-sign-in .sign-in-group .sign-in-tip .sign-in-title {
+  font-size: 40rpx;
+  font-weight: 700;
+  margin-bottom: 10rpx;
+}
+.body .wine-tasking-sign-in .sign-in-group .sign-in-tip .sign-in-desc {
+  font-size: 28rpx;
+}
+.body .wine-tasking-sign-in .sign-in-group .sign-in-info {
+  align-self: normal;
+  padding: 0 20rpx;
+  margin-bottom: 60rpx;
+}

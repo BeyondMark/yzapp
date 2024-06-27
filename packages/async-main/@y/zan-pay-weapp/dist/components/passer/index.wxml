@@ -1,0 +1,15 @@
+<a bind:close="emit" data-en="close" overlay="{{overlay}}" position="bottom" round="{{cashierType==='B'}}" show="{{show}}" zIndex="{{zIndex}}">
+    <view class="{{cashierType==='B'?'b':''}}">
+        <view class="header center">
+            <b bind:click="emit" customStyle="position: absolute; color: #c8c9cc; top: 13px; right: 16px;" data-en="close" name="cross" size="18px"></b>
+            <view class="content">请输入支付密码</view>
+        </view>
+        <view class="container">
+            <view class="root">
+                <c length="{{length}}"></c>
+                <view bind:click="emit" class="link" data-en="forget-pass" wx:if="{{forget}}">忘记密码?</view>
+                <d bind:delete="onDelete" bind:input="onInput" show="{{true}}"></d>
+            </view>
+        </view>
+    </view>
+</a>

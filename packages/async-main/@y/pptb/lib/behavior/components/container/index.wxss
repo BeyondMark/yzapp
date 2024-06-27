@@ -1,0 +1,6 @@
+page {
+  padding: 0;
+}
+.behavior-container {
+  box-sizing: border-box;
+}

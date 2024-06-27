@@ -1,0 +1,7 @@
+<view class="c9acb4">
+    <view class="c9f7c0" style="{{iconStyle}}">
+        <view class="c43ddd">{{title}}</view>
+        <view class="c0f0d3">{{isCountdownDesc?countdownDesc:desc}}</view>
+    </view>
+    <a active="{{active}}" bind:_init="_tic" customClass="c35c36" steps="{{steps}}" wx:if="{{steps.length}}"></a>
+</view>

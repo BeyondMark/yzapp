@@ -1,0 +1,21 @@
+<view class="b2134" id="js-nav-detail" wx:if="{{serverStatus.fetchSuccess}}">
+    <view wx:if="{{isNormalTplStyle}}">
+        <e active="{{activeType}}" bind:_init="_tic" bind:change="_p" color="var(--general)" data-t="{{ change:{en:'handleTabChange'} }}" navClass="nav-wrapper" pid="{{pid}}" zIndex="{{5}}" wx:if="{{showTabs}}">
+            <f bind:_init="_tic" name="{{tab.type}}" pid="{{pid}}" title="{{tab.desc}}" wx:for="{{finalTabs}}" wx:for-item="tab" wx:key="type"></f>
+        </e>
+        <j bind:_init="_tic" goodsBaseInfo="{{goodsBaseInfo}}" goodsPriceIntro="{{staticConfig.goodsPriceIntro}}" haitaoDesc="{{staticConfig.haitaoDesc}}" shopBaseInfo="{{shopBaseInfo}}" wx:if="{{isShowDetailInfo}}">
+            <block wx:if="{{showDetailTitle}}">
+                <c bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b7-9'}}"></c>
+            </block>
+            <block wx:if="{{featureComponents.length&&isStartRender}}">
+                <d bind:_init="_tic" rmId="b7-58" sourceFrom="goods" wx:if="{{rmId==='b7-9'}}"></d>
+            </block>
+            <a bind:_init="_tic" haitaoDesc="{{staticConfig.haitaoDesc}}" isHaitao="{{goodsBaseInfo.isHaitao}}" rmId="{{rmId}}" slot="haitao-notification" wx:if="{{rmId==='b7-9'}}"></a>
+            <b bind:_init="_tic" goodsPriceIntro="{{staticConfig.goodsPriceIntro}}" rmId="{{rmId}}" shopName="{{shopBaseInfo.name}}" slot="price-intro" wx:if="{{rmId==='b7-9'}}"></b>
+        </j>
+        <i bind:_init="_tic" faq="{{staticConfig.faq}}" wx:if="{{activeType===TAB_TYPE.FAQ}}"></i>
+    </view>
+    <h bind:_init="_tic" border="{{false}}" wx:else>
+        <g bind:_init="_tic" bind:tap="_p" data-t="{{ tap:{ en:'onCellClick',args:[item] } }}" isLink="{{true}}" title="{{item.desc}}" wx:for="{{simpleTabs}}" wx:key="desc"></g>
+    </h>
+</view>

@@ -1,0 +1,11 @@
+.account-wx-button {
+  padding: 0;
+  border-radius: 0;
+  background-color: initial;
+  font-size: inherit;
+  color: inherit;
+  line-height: inherit;
+}
+.account-wx-button:after {
+  border: none;
+}

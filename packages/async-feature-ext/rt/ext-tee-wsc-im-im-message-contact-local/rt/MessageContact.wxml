@@ -1,0 +1,14 @@
+<view class="message-contact" wx:if="{{contact.isImOrder}}">
+    <block wx:if="{{hasUserInfo}}">
+        <a bind:_init="_tic" bind:contact="_p" businessId="{{messageContact.businessId}}" class="message-contact__btn_wrapper" contactClass="message-contact__btn" data-t="{{ contact:{en:'onContactBack'} }}" hoverClass="none" openType="contact" sendMessageImg="{{messageContact.messageImg}}" sendMessagePath="{{messageContact.messagePath}}" sessionFrom="{{messageContact.sourceParam}}" showMessageCard="{{messageContact.messageCard}}" wx:if="{{rmId==='b1-7'||rmId==='b18-69'||rmId==='b7-24'||rmId==='b9-11'||rmId==='b39-8'||rmId==='b21-20'||rmId==='b0-7'||rmId==='b8-4'||rmId==='b33-8'||rmId==='b10-14'||rmId==='b35-4'||rmId==='b15-4'}}">
+            <c bind:_init="_tic" class="message-contact__btn__icon" name="comment-circle-o" size="14px"></c>
+            <view class="t-text">{{contentText}}</view>
+        </a>
+    </block>
+    <block wx:else>
+        <b authTypeList="{{['nicknameAndAvatar']}}" bind:_init="_tic" bind:next="_p" class="message-contact__btn user-authorize-wrapper" data-t="{{ next:{en:'checkUserInfo'} }}" kdtId="{{kdtId}}" rmId="@passport-tee/user-authorize~DDdJBmWG" wx:if="{{rmId==='b18-69'||rmId==='b7-24'||rmId==='b21-20'||rmId==='b33-8'}}">
+            <c bind:_init="_tic" class="message-contact__btn__icon" name="chat-o" size="14px"></c>
+            <view class="t-text">{{contentText}}</view>
+        </b>
+    </block>
+</view>

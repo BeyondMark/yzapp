@@ -1,0 +1,4 @@
+<view class="loading-container">
+    <a size="14px" textSize="12px" wx:if="{{type==='loading'}}">加载中...</a>
+    <text class="loading-text" wx:elif="{{type==='text'}}">{{text}}</text>
+</view>

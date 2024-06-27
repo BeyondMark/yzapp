@@ -1,0 +1,14 @@
+<view wx:if="{{selectablePresents.length}}">
+    <view class="c47ed4">
+        <view class="c47ed4__title">
+            <view class="c74f01 c89585">赠品</view>
+            <view class="c8a416 c89585" wx:if="{{isCanSelect}}">        （可选{{selectablePresentNum}}种）
+      </view>
+        </view>
+        <view catch:tap="_p" class="cefb8" data-t="{{ tap:{en:'handlePickPresent',et:'stop'} }}" wx:if="{{isCanSelect}}">
+            <view class="e74af c89585">去挑选</view>
+            <b bind:_init="_tic" class="e02bf" name="arrow"></b>
+        </view>
+    </view>
+    <a activityId="{{activityId}}" bind:_init="_tic" bind:change-sku="_p" data-t="{{ changeSku:{en:'handleChangeSku'} }}" goods="{{goods}}" isCanChoose="{{false}}" rmId="b4-13" wx:if="{{rmId==='b4-7'}}" wx:for="{{presentList}}" wx:for-item="goods" wx:key="skuId"></a>
+</view>

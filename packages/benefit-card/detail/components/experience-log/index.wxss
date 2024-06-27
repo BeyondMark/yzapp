@@ -1,0 +1,47 @@
+.expe-log {
+  margin-top: 15px;
+}
+.expe-log .log-list {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  text-align: center;
+}
+.expe-log .log-list .l-i {
+  margin-right: 8px;
+}
+.expe-log .avatar {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+}
+.expe-log .avatar .taked {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.expe-log .avatar .untake {
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px dashed #e0e0e0;
+  color: #ccc;
+}
+.expe-log .avatar .untake .u-img {
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: 4px auto;
+}
+.expe-log .re-ti {
+  min-width: 38px;
+  margin-top: -5px;
+  background: #f44;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 12px;
+  transform: scale(0.83);
+  line-height: 14px;
+}

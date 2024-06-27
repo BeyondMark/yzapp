@@ -1,0 +1,10 @@
+.d4f5c {
+  position: relative;
+  display: flex;
+  height: 24px;
+  font-size: 12px;
+  color: var(--general);
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+}

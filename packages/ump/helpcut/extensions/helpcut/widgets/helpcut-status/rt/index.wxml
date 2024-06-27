@@ -1,0 +1,33 @@
+<view class="helpcut-block">
+    <view class="activity-status" style="padding-top: {{newActionExtra.needCutDown?'46':'24'}}px">
+        <view class="cutdown" wx:if="{{newActionExtra.needCutDown}}">
+            <text>{{remainTime.before}}</text>
+            <text class="seconds {{remainTime.hasMilliseconds?'hasMilliseconds':''}}">{{remainTime.second}}</text>
+            <text class="cutdown-after">{{remainTime.after}}</text>
+        </view>
+        <view class="status" wx:if="{{newActionTip.status}}">{{newActionTip.status}}</view>
+        <view wx:if="{{newActionTip.tip}}">
+            <view class="tip" wx:if="{{!newActionTip.needWrap}}">
+                <view class="{{item.type}}" wx:for="{{newActionTip.tip}}">{{item.content}}</view>
+            </view>
+            <view wx:else>
+                <view class="tip">
+                    <view class="{{item.type}}" wx:for="{{util.itemsFilter(newActionTip.tip,0,3)}}">{{item.content}}</view>
+                </view>
+                <view class="tip">
+                    <view class="{{item.type}}" wx:for="{{util.itemsFilter(newActionTip.tip,3,5)}}">{{item.content}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="process" wx:if="{{newActionExtra.needProcess}}">
+            <view class="block" id="process-bar">
+                <view class="bar" style="width: {{bargainProgressWidth*100}}%"></view>
+            </view>
+        </view>
+        <a list="{{recommendGoodsThree}}" marginTop="{{true}}" needBtn="{{true}}" wx:if="{{newActionExtra.showRecommend}}"></a>
+        <view bind:tap="handleClickBtn" class="helpcut-button {{finishBook||newActionBtn.disable?'not-click':''}}" wx:if="{{newActionBtn}}">{{newActionBtn.content}}</view>
+        <view bind:tap="handleRestartBargain" class="restart-button" wx:if="{{newActionExtra.needStartBtn}}">重新发起砍价 ></view>
+        <view bind:tap="handleCurrentBuy" class="restart-button" wx:if="{{newActionExtra.needCurrentBuy}}">不砍了，现价<text class="">{{bargainDetail.currentPrice}}</text>元购买<b class="restart-button-icon" name="arrow" size="14px"></b>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,26 @@
+.status-fail,
+.status-get {
+  font-size: 14px;
+  color: #e0493f;
+}
+.status-get {
+  margin-top: 16px;
+}
+.status-fail {
+  margin-top: 23px;
+}
+.status-engage {
+  font-size: 14px;
+  margin-top: 16px;
+}
+.status-engage-time {
+  margin-top: 11px;
+}
+.status-engage-unit {
+  display: inline-block;
+  background: #000;
+  min-width: 18px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+}

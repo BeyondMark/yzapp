@@ -1,0 +1,38 @@
+.c9718b {
+  height: 50px;
+  padding: 0 16px;
+  font-size: 13px;
+  background: #f7f8fa;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.c80625 {
+  display: flex;
+  align-items: center;
+  color: #969799;
+}
+.d6ce8 {
+  line-height: 14px;
+}
+.c7cc8b {
+  padding-right: 40px;
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  text-align: right;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.b848b {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 40px;
+}
+.c65dcb {
+  width: 236px;
+  height: 180px;
+  background: url(https://img01.yzcdn.cn/upload_files/2020/03/12/FsWOOfoVDWfohplCVEzodzpyIFOt.png);
+  background-size: 236px 180px;
+}

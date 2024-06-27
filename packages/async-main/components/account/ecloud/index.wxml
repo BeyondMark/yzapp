@@ -1,0 +1,3 @@
+<a authTypeList="{{authTypeList}}" bind:fail="handleFail" bind:next="handleNext" class="btn-class" customStyle="{{customStyle}}" trigger="{{trigger}}">
+    <slot></slot>
+</a>

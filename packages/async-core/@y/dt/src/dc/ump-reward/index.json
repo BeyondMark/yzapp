@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y/dt/src/captain/module-title/index",
+    "b": "/@y-open/vt/dist/tabs/index",
+    "c": "/@y-open/vt/dist/tab/index",
+    "d": "./ump-reward-list",
+    "_": "../../../../../../../components/_/index"
+  }
+}

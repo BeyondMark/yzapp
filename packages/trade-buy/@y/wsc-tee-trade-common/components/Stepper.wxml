@@ -1,0 +1,5 @@
+<view class="c87d2c">
+    <view bind:tap="_p" bind:touchend="_p" bind:touchstart="_p" class="{{'c61bcc'}} {{disableMinus?'aba0f':''}}" data-t="{{ tap:{en:'onTap'},touchstart:{en:'onTouchStart'},touchend:{en:'onTouchEnd'} }}" data-type="minus" hoverClass="c4d1e2" hoverStayTime="70" style="{{'width: '+buttonSize+'; height: '+buttonSize}}" wx:if="{{showMinus}}"></view>
+    <a bind:_init="_tic" bind:blur="_p" bind:focus="_p" bind:input="_p" class="ec2a9" data-t="{{ input:{en:'onInput'},focus:{en:'onFocus'},blur:{en:'onBlur'} }}" disabled="{{disabled||disableInput}}" style="{{'width: '+inputWidth+'; height: '+buttonSize}}" type="{{integer?'number':'digit'}}" value="{{currentValue}}"></a>
+    <view bind:tap="_p" bind:touchend="_p" bind:touchstart="_p" class="{{'b2602'}} {{disablePlus?'c7980b':''}}" data-t="{{ tap:{en:'onTap'},touchstart:{en:'onTouchStart'},touchend:{en:'onTouchEnd'} }}" data-type="plus" hoverClass="c2c2c3" hoverStayTime="70" style="{{'width: '+buttonSize+'; height: '+buttonSize}}" wx:if="{{showPlus}}"></view>
+</view>

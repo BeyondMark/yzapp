@@ -1,0 +1,23 @@
+.c52503 {
+  align-items: center;
+  padding: var(--theme-goods-direct-order-popup-cell-padding-top, 12px)
+    var(--theme-goods-direct-order-popup-cell-padding-right, 12px)
+    var(--theme-goods-direct-order-popup-cell-padding-bottom, 12px)
+    var(--theme-goods-direct-order-popup-cell-padding-left, 12px) !important;
+}
+.c6e035 {
+  padding: 12px;
+}
+.c1632 {
+  flex: none;
+}
+.c1632,
+.contact-cell__value {
+  font-weight: var(--theme-common-field-font-weight, normal);
+}
+.contact-cell__value--black {
+  color: #323233;
+}
+.contact-cell__value--gray {
+  color: #969799;
+}

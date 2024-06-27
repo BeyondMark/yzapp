@@ -1,0 +1,23 @@
+.d5a4c {
+  padding: var(--theme-page-cell-padding-top, 10px)
+    var(--theme-page-cell-padding-right, 12px)
+    var(--theme-page-cell-padding-bottom, 10px)
+    var(--theme-page-cell-padding-left, 12px) !important;
+}
+.dc895 {
+  color: #323233 !important;
+  font-family: Avenir;
+  font-weight: var(--theme-common-price-font-weight, 800) !important;
+}
+.cell-title {
+  white-space: nowrap;
+}
+.cell-title,
+.cell-value {
+  display: flex;
+  align-items: center;
+}
+.cell-value {
+  justify-content: flex-end;
+  font-family: Avenir;
+}

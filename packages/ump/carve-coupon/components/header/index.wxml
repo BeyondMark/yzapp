@@ -1,0 +1,13 @@
+<view class="header-wrap">
+    <a></a>
+    <view bind:tap="toggleRules" class="rules-tag">规则</view>
+    <b customClass="rules-popup" position="bottom" round="{{true}}" show="{{rulesVisible}}">
+        <view class="popup-title">活动规则</view>
+        <view class="rules">
+            <view class="rules-detail" wx:for="{{rules}}" wx:for-item="rule" wx:key="{{ key }}">{{rule}}</view>
+        </view>
+        <view class="contact">如有问题，请拨打电话联系客服
+{{shopConcat||''}}</view>
+        <button bind:tap="toggleRules" class="rules-btn">知道了</button>
+    </b>
+</view>

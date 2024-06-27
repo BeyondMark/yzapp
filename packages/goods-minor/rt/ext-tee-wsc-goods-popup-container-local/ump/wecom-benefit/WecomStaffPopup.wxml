@@ -1,0 +1,15 @@
+<a bind:_init="_tic" bind:input="_p" class="c08a44" closeIcon="arrow-left" closeIconPosition="top-left" closeable="{{nested}}" data-model-id="showModal" data-ref="wecomStaffPopRef" position="bottom" round="{{true}}" value="{{showModal}}">
+    <view wx:if="{{qrCodeUrl}}">
+        <view class="e9e00">添加微信好友</view>
+        <image class="{{'c3a25b'}} bd231" lazyLoad="true" mode="widthFix" showMenuByLongpress="{{true}}" src="{{qrCodeUrl}}"></image>
+        <view class="c177c4">长按识别二维码加好友</view>
+    </view>
+    <view wx:else>
+        <view alt="qrcode" class="c3a25b" style="background-image:{{'url('+qrcodeWarnImg+')'}}"></view>
+        <view class="e9e00">二维码失效</view>
+        <view class="e9e00">暂时无法加好友</view>
+    </view>
+    <view class="c349e2" wx:if="{{!nested}}">
+        <b bind:_init="_tic" bind:tap="_p" block="{{true}}" class="ccf26 theme__button--main theme__border" data-t="{{ tap:{en:'handleClose'} }}" round="{{true}}" type="danger"> {{button||'我知道了'}} </b>
+    </view>
+</a>

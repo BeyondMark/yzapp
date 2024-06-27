@@ -1,0 +1,15 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-feature-ext/components/showcase/components/share-feature/index",
+    "b": "/packages/async-feature-ext/components/showcase/components/floating-nav/components/dine-entry/index",
+    "c": "./../../ext-tee-wsc-im-im-message-contact-local/components/MessageContactButton",
+    "d": "./../widgets/rt/FloatingNavBg",
+    "e": "./../widgets/rt/SubItem",
+    "f": "./../../wsc-tee-dc-live-pop-local/rt/Main",
+    "g": "/@y-open/vt/dist/popup/index.weapp",
+    "h": "./../components/live-item/index",
+    "i": "./../components/panel-item/index",
+    "_": "../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,10 @@
+<view class="goods-item custom-class" id="{{'cart-id-'+goods.cartId}}" style="{{themeStyle}}">
+    <c asyncClose="{{true}}" bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'handleItemDelete'} }}" disabled="{{swipeDisabled}}" rightWidth="{{isCanDelete?64:0}}"> {{goods.skeleton?'skeleton':''}} <view class="goods-item-container">
+            <view class="checkbox-wrap" wx:if="{{isCanChoose}}">
+                <b bind:_init="_tic" catch:tap="_p" color="{{iconColor}}" customStyle="{{iconStyle}}" data-t="{{ tap:{en:'handleCheckboxTap',et:'stop'} }}" name="{{iconName}}" size="20px"></b>
+            </view>
+            <a activityType="{{activityType}}" bind:_init="_tic" bind:change-goods-sku="_p" bind:change-swipe-status="_p" bind:goods-img-click="_p" bind:goods-img-load="_p" bind:hide-count-down="_p" bind:item-num-change="_p" bind:item-num-change-logger="_p" bind:open-combo-popup="_p" data-t="{{ itemNumChange:{en:'handleItemNumChange'},itemNumChangeLogger:{en:'handleItemNumChangeLogger'},changeGoodsSku:{en:'handleChangeGoodsSku'},goodsImgClick:{en:'goGoodsDetail'},openComboPopup:{ en:'$emit',args:['open-combo-popup'] },changeSwipeStatus:{en:'changeSwipeStatus'},hideCountDown:{ en:'$emit',args:['hide-count-down'] },goodsImgLoad:{ en:'$emit',args:['goods-img-load'] } }}" editMode="{{editMode}}" goods="{{goods}}" hideTag="{{hideTag}}" isCanStepper="{{isCanStepper}}" isInvalid="{{isInvalid}}" isSub="{{isSub}}" logger="{{logger}}" rmId="{{rmId}}" showEstimatedPrice="{{!editMode&&showEstimatedPrice}}" startSaleNum="{{goods.startSaleNum}}" themeColors="{{themeColors}}" themeStyle="{{themeStyle}}" themeTag="{{themeTag}}" wx:if="{{rmId==='b4-7'}}"></a>
+        </view>
+        <view class="{{deleteBtnClassName}}" slot="right" wx:if="{{isCanDelete}}">删除</view>
+    </c>
+</view>

@@ -1,0 +1,7 @@
+<view class="c93d4c">
+    <view class="c8f35f">{{detail.title}}</view>
+    <view class="c3a622" wx:if="{{detail.desc}}"> {{detail.desc}} </view>
+    <view bind:tap="_t_hn_" data-href="{{detail.link}}" wx:if="{{detail.link}}">
+        <view class="a73c9">{{detail.btnText}}</view>
+    </view>
+</view>

@@ -1,0 +1,1 @@
+<a bind:message="handlePostMessage" src="{{viewSrc}}"></a>

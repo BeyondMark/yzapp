@@ -1,0 +1,10 @@
+<view>
+    <b bind:_init="_tic" bind:after-enter="_p" bind:after-leave="_p" bind:click-overlay="_p" bind:close="_p" closeOnClickOverlay="{{!loading}}" closeable="{{closeable}}" customStyle="{{customStyle+';overflow: hidden;'}}" data-t="{{ close:{en:'handleClose'},clickOverlay:{en:'handleClickOverlay'},afterLeave:{en:'handlePopupLeave'},afterEnter:{en:'handlePoupEnter'} }}" popupCustomStyle="{{popupCustomStyle}}" position="bottom" round="{{true}}" show="{{show}}" zIndex="{{zIndex}}">
+        <view catch:tap="_p" class="account-captcha {{contentCustomStyle}}" data-t="{{ tap:{en:'true',et:'stop'} }}">
+            <view class="account-captcha__title"> {{mode==='sms'?'手机号登录':'账号密码登录'}} </view>
+            <d bind:_init="_tic" bind:on-change-mode="_p" bind:on-submit="_p" bind:on-toast="_p" bind:on-view-agreement="_p" data-t="{{ onSubmit:{en:'handleLogin'},onChangeMode:{en:'changeMode'},onViewAgreement:{en:'handleViewAgreement'},onToast:{en:'handleToast'} }}" loading="{{loading}}" theme="{{theme}}" wx:if="{{mode==='sms'}}"></d>
+            <c bind:_init="_tic" bind:on-change-mode="_p" bind:on-submit="_p" bind:on-toast="_p" bind:on-view-agreement="_p" data-t="{{ onSubmit:{en:'handleLogin'},onChangeMode:{en:'changeMode'},onViewAgreement:{en:'handleViewAgreement'},onToast:{en:'handleToast'} }}" loading="{{loading}}" theme="{{theme}}" wx:if="{{mode==='password'}}"></c>
+        </view>
+    </b>
+    <a bind:_init="_tic" bind:behaviorDidMount="_p" data-ref="behavior" data-t="{{ behaviorDidMount:{en:'behaviorDidMount'} }}"></a>
+</view>

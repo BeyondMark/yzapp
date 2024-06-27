@@ -1,0 +1,13 @@
+<view bindtap="navigateToList" class="wrapper wrapper-{{wrapperType}}" wx:if="{{visible}}">
+    <view class="text">
+        <view class="name">周边好物</view>
+        <view class="desc">为你推荐的精选好物<a class="desc_icon" name="arrow"></a>
+        </view>
+    </view>
+    <view class="goods">
+        <view class="goods-item" wx:for="{{goods}}" wx:key="id">
+            <image class="goods-item_img" src="{{item.imageUrl}}"></image>
+            <view class="goods-item_price">¥ {{item.price}}</view>
+        </view>
+    </view>
+</view>

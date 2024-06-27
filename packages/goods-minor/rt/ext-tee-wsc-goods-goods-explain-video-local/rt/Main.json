@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/ext-tee-wsc-goods/extensions/image-block/components/goods-video/index",
+    "b": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "c": "./../components/movable/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_" }
+}

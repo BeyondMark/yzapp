@@ -1,0 +1,26 @@
+<b bind:_init="_tic" class="c285f2" closeOnPopstate="{{false}}" customStyle="background-color: transparent;" show="{{visible}}" showConfirmButton="{{false}}" theme="round-button" useSlot="{{true}}">
+    <view class="f5e2b">
+        <image class="c14ebf bd231" lazyLoad="true" src="{{bgUrl}}"></image>
+        <view class="c8553e">
+            <view class="c6f538">
+                <view class="c38dfa">{{name}}</view>
+                <view class="c8a6cb">{{desc}}</view>
+            </view>
+            <view class="c8a70" wx:if="{{benefitList.length}}">
+                <view class="c43b68" wx:for="{{benefitList}}" wx:key="key">
+                    <image class="d92ae bd231" lazyLoad="true" src="{{item.icon}}"></image>
+                    <view class="c2b63">{{item.showName}}</view>
+                </view>
+            </view>
+            <view class="c9be8f" wx:else>
+                <image class="b6197 bd231" lazyLoad="true" src="{{EMPTYICON}}"></image>
+            </view>
+        </view>
+    </view>
+    <view class="c183e5">
+        <a bind:_init="_tic" bind:tap="_p" block="{{true}}" color="linear-gradient(90deg, #E2BB7C 0%, #E8C388 100%)" customClass="a834f" data-t="{{ tap:{en:'activate'} }}" textStyle="opacity: 0.94;font-weight: 500;font-size: 16px; color: #724804;" type="info"> {{btnText}} </a>
+        <view class="b7fca">
+            <image bind:tap="_p" class="bd231" data-t="{{ tap:{en:'close'} }}" lazyLoad="true" src="{{CLOSEICON}}"></image>
+        </view>
+    </view>
+</b>

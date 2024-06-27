@@ -1,0 +1,26 @@
+.zan-pay-selected-bar__root {
+  font-size: 12px;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7f8fa;
+  border-radius: 2px;
+}
+.zan-pay-selected-bar__left {
+  display: flex;
+}
+.zan-pay-selected-bar__icon {
+  margin-right: 6px;
+}
+.zan-pay-selected-bar__text {
+  color: #323233;
+}
+.zan-pay-selected-bar__subtext {
+  font-size: 11px;
+  color: #969799;
+}
+.zan-pay-selected-bar__right {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,10 @@
+.f7c26 {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  padding-right: 24px;
+  box-sizing: border-box;
+}
+.b4409 {
+  font-size: 12px;
+}

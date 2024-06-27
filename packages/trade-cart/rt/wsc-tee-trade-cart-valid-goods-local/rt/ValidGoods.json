@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../widgets/rt/GoodsGroupItem",
+    "b": "./../widgets/rt/ComboDetailPopup",
+    "c": "./../../wsc-tee-trade-cart-ump-local/widgets/rt/GoodsGroupUmp",
+    "d": "./../../wsc-tee-trade-cart-ump-local/widgets/rt/UmpInfoPopup",
+    "e": "/packages/async-tee/@y-open/vt/native/weapp/dialog/index/index",
+    "f": "/@y-open/vt/dist/list/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "e": "_" }
+}

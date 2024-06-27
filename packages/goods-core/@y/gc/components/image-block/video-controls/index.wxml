@@ -1,0 +1,11 @@
+<view bind:tap="_p" class="c9bc24" data-t="{{ tap:{ en:'$emit',args:['click'] } }}" style="{{controlsStyle}}">
+    <a bind:_init="_tic" bind:tap="_p" catch:tap="_p" class="eb0c7" data-t="{{ tap:{en:'true',et:'stop'},tap:{ en:'$emit',args:['toggle-play'] } }}" name="{{isPlaying?'pause':'play'}}" wx:if="{{isShowPlayToggle}}"></a>
+    <view class="c94d43">
+        <view class="c07cc6 c615b5 c89585" wx:if="{{showTime}}">{{currentTimeText}}</view>
+        <b activeColor="#fff" bind:_init="_tic" bind:change="_p" class="c10bf0" customClass="c10bf0" data-t="{{ change:{en:'onProgressChange'} }}" inactiveColor="rgba(255, 255, 255, 0.2)" max="{{100}}" min="{{0}}" step="{{0.001}}" useButtonSlot="{{true}}" value="{{percentage}}">
+            <view class="a786e {{c10bf0BtnClass}}" slot="button"></view>
+        </b>
+        <view class="c07cc6 a1a19 c89585" wx:if="{{showTime}}">{{durationText}}</view>
+    </view>
+    <c bind:_init="_tic" bind:t-fullscreen="_p" bind:t-muted="_p" class="c5fb11" data-t="{{ tMuted:{ en:'$emit',args:['toggle-muted'] },tFullscreen:{ en:'$emit',args:['toggle-fullscreen'] } }}" fullscreen="{{isFullscreen}}" isShowFullToggle="{{isShowFullToggle}}" muted="{{muted}}" wx:if="{{isShowToggle}}"></c>
+</view>

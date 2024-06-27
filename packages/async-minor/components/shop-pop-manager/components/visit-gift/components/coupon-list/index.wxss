@@ -1,0 +1,97 @@
+.coupon-list {
+  padding: 10px 10px 0;
+  max-height: 260px;
+  overflow: scroll;
+  box-sizing: border-box;
+}
+.coupon-list__item {
+  margin-bottom: 10px;
+}
+.coupon-list__tips {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  line-height: 20px;
+  font-family: PingFangSC-Semibold;
+  text-align: center;
+  margin: 0 auto 10px;
+  color: #fff;
+  font-size: 12px;
+}
+.coupon-list-0 .coupon-list__tips .tips-content {
+  margin: 0 4px;
+}
+.coupon-list-0 .coupon-list__tips:after,
+.coupon-list-0 .coupon-list__tips:before {
+  display: block;
+  content: "";
+  width: 8px;
+  height: 1px;
+  background: #fff;
+  border-radius: 1px;
+}
+.coupon-list-1 .coupon-list__tips {
+  transform: skewX(-37deg);
+  max-width: 80%;
+}
+.coupon-list-1 .coupon-list__tips .tips-content {
+  margin: 0 3px;
+  padding: 0 15px;
+  background: #4b4f53;
+  border-radius: 2px 1px 2px 1px;
+}
+.coupon-list-1 .coupon-list__tips .text {
+  display: inline-block;
+  transform: skewX(37deg);
+}
+.coupon-list-1 .coupon-list__tips:after,
+.coupon-list-1 .coupon-list__tips:before {
+  display: block;
+  content: "";
+  width: 5px;
+  height: 20px;
+  background: #de5806;
+  border-radius: 1px 0.5px 1px 1px;
+}
+.coupon-list-2 .tips-content {
+  padding: 0 10px;
+  background: #ec2253;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 10px;
+}
+.coupon-list-3 .coupon-list__tips .tips-content {
+  margin: 0 5px;
+  padding: 0 10px;
+  height: 20px;
+  border-radius: 10px;
+  background-image: linear-gradient(90deg, #b08bff, #b02bfd);
+}
+.coupon-list-3 .coupon-list__tips:after,
+.coupon-list-3 .coupon-list__tips:before {
+  display: block;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-image: linear-gradient(90deg, #b08bff, #b02bfd);
+}
+.coupon-list-4 .coupon-list__tips .tips-content {
+  margin: 0 6px;
+}
+.coupon-list-4 .coupon-list__tips:after,
+.coupon-list-4 .coupon-list__tips:before {
+  display: block;
+  content: "";
+  width: 14px;
+  height: 1px;
+  transform: scaleX(-1);
+  border-radius: 9px;
+}
+.coupon-list-4 .coupon-list__tips:before {
+  background-image: linear-gradient(270deg, #2e3048, #fed46a);
+}
+.coupon-list-4 .coupon-list__tips:after {
+  background-image: linear-gradient(-270deg, #2e3048, #fed46a);
+}

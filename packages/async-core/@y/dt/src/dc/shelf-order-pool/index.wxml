@@ -1,0 +1,11 @@
+<view bind:tap="_p" class="order-pool" data-t="{{ tap:{en:'toOrderPool'} }}" style="{{'background-color: '+opt.card_bg_color+';padding: 6px '+opt.page_margin+'px;'}}" wx:if="{{isShowCpn}}">
+    <view class="wrapper" style="{{'background-color: '+opt.bg_color+';border-radius: '+opt.card_border_radius+'px;'}}">
+        <view class="image" style="{{'background-image: url('+opt.icon+');'}}"></view>
+        <view class="content">
+            <view class="title t-text">{{title}}</view>
+            <view class="desc t-text">{{desc}}</view>
+        </view>
+        <view class="btn" style="{{'background-color: '+themeColors.general+';'}}">      发起拼单
+    </view>
+    </view>
+</view>

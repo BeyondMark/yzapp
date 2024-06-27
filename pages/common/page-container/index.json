@@ -1,0 +1,15 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-minor/components/bi-list-icon/index",
+    "b": "/packages/async-main/pages/common/page-container/components/copyright/index",
+    "c": "./components/icon-nav/index",
+    "d": "./components/shop/index",
+    "e": "./components/jump-mini-program/index",
+    "f": "/components/showcase/components/navigation-bar/index",
+    "g": "/packages/async-main/components/account/inject-protocol/index",
+    "h": "/common/components/theme-provider/index",
+    "_": "../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_", "b": "_", "g": "_" }
+}

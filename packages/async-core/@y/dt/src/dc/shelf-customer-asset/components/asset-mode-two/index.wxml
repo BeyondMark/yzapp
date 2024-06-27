@@ -1,0 +1,35 @@
+<view class="component-container" style="{{layoutStyle===1&&authMobile?'margin-top: 18px;':''}}">
+    <view class="customer-asset" style="{{cardStyle}}" wx:if="{{authMobile&&!loadingData}}">
+        <view class="customer-asset-container">
+            <view class="container-line-one">
+                <view class="user-avatar">
+                    <c authUser="{{authUser}}" avatar="{{userInfo.avatar}}" bind:_init="_tic" bind:authUserInfo="_p" bind:jumpToLink="_p" bind:logger="_p" bind:showMemberPop="_p" data-t="{{ showMemberPop:{en:'handleShowMemberPop'},logger:{en:'handleLogger'},jumpToLink:{en:'handleNavigate'},authUserInfo:{en:'handleAuthUserInfo'} }}" kdtId="{{kdtId}}" level="{{memberInfo.vipLevel}}" nickname="{{userInfo.nickname}}" showLevelIcon="{{memberInfo.isMember}}" style="width: 100%" themeColor="{{themeColor}}" wx:if="{{layoutStyle===1}}">
+                        <f bind:_init="_tic" growthValue="{{assetInfoValue.growthValue}}" haveValue="{{authMobile}}" memberInfo="{{memberInfo}}" progressMaxWidth="100%" showGap="{{true}}" strokeWidth="{{4}}" styleDirection="column" themeColor="{{themeColor}}" wx:if="{{showGrowth}}"></f>
+                    </c>
+                    <block wx:else>
+                        <a authTypeList="{{['nicknameAndAvatar']}}" bind:_init="_tic" bind:next="_p" class="auth-block" data-t="{{ next:{en:'handleAuthUserInfo'} }}" kdtId="{{kdtId}}" needUpdateNicknameAndAvatar="{{false}}" type="separate" wx:if="{{!authUser}}"></a>
+                        <d avatar="{{userInfo.avatar}}" bind:_init="_tic" bind:jumpToLink="_p" data-t="{{ jumpToLink:{en:'handleNavigate'} }}" level="{{memberInfo.vipLevel}}" nickname="{{userInfo.nickname}}" showAvatar="{{extraSetting.showAvatar}}" showLevelIcon="{{memberInfo.isMember}}" style="width: 100%">
+                            <f bind:_init="_tic" growthValue="{{assetInfoValue.growthValue}}" haveValue="{{authMobile}}" memberInfo="{{memberInfo}}" themeColor="{{themeColor}}" wx:if="{{showGrowth}}"></f>
+                        </d>
+                    </block>
+                </view>
+                <b bind:_init="_tic" bind:logger="_p" bind:showMemberPop="_p" class="member-code" data-t="{{ showMemberPop:{en:'handleShowMemberPop'},logger:{en:'handleLogger'} }}" wx:if="{{layoutStyle!==1&&authMobile&&extraSetting.showVIP}}"></b>
+            </view>
+            <view class="container-line-two" style="padding-left:{{textPadding}}" wx:if="{{assetInfoSetting.length}}">
+                <a authTypeList="{{['mobile']}}" bind:_init="_tic" bind:next="_p" class="auth-block" customStyle="height: 100%" data-t="{{ next:{en:'handleLogin'} }}" kdtId="{{kdtId}}" type="separate" wx:if="{{!authMobile}}"></a>
+                <e bind:_init="_tic" bind:jumpToLink="_p" data-t="{{ jumpToLink:{en:'handleNavigate'} }}" infoSetting="{{assetInfoSetting}}" infoValue="{{assetInfoValue}}" mode="{{styleSetting.textAlign}}" numberColor="{{styleSetting.textColor}}" pointName="{{extraData.pointName}}"></e>
+            </view>
+        </view>
+        <view class="container-row" wx:if="{{orderCard.show}}">
+            <g bind:_init="_tic" bind:jumpToLink="_p" cardStyle="{{innerCardBorderStyle}}" data-t="{{ jumpToLink:{en:'handleNavigate'} }}" entries="{{orderCard.items}}" style="width: 100%" type="{{orderCard.templateType}}"></g>
+        </view>
+    </view>
+    <view class="customer-asset" style="{{cardStyle}}" wx:else>
+        <view class="customer-asset-container">
+            <slot name="unAuth"></slot>
+        </view>
+        <view class="container-row" wx:if="{{orderCard.show}}">
+            <g bind:_init="_tic" bind:jumpToLink="_p" cardStyle="{{innerCardBorderStyle}}" data-t="{{ jumpToLink:{en:'handleNavigate'} }}" entries="{{orderCard.items}}" style="width: 100%" type="{{orderCard.templateType}}"></g>
+        </view>
+    </view>
+</view>

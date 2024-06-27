@@ -1,0 +1,7 @@
+<a bind:_init="_tic" bind:close="_p" customClass="e2e4c" data-t="{{ close:{en:'onClose'} }}" show="{{show}}">
+    <view class="f85c6">开启位置信息</view>
+    <image class="c00849 bd231" lazyLoad="true" src="https://img01.yzcdn.cn/public_files/2020/02/25/61137c4db22477b628a12790b0b20286.png"></image>
+    <b bind:_init="_tic" block="{{true}}" class="c2cb2b" customClass="theme-button" openType="openSetting" round="{{true}}" type="danger">    去开启
+  </b>
+    <b bind:_init="_tic" bind:tap="_p" block="{{true}}" class="c2cb2b" customClass="c6f508" data-t="{{ tap:{en:'onClose'} }}" plain="{{true}}" round="{{true}}">暂不开启</b>
+</a>

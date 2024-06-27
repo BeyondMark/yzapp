@@ -1,0 +1,31 @@
+<view bindtap="redirectToCouponDetail" class="coupon-item {{isInvalid?'invalid':''}} {{isComposite?'composite':''}} {{compositeNum>2?'more-item':''}}">
+    <view class="item-wrapper">
+        <view class="item-header">
+            <image class="shop-logo" src="{{coupon.shopLogo}}"></image>
+            <view class="shop-name">{{coupon.shopName}}</view>
+        </view>
+        <view class="item-left item-block">
+            <view class="price ellipsis">{{valueBefore}}<view class="unit">{{valueAfter}}</view>
+            </view>
+            <view class="desc ellipsis">{{coupon.thresholdCopywriting||'无使用门槛'}}</view>
+            <view class="maxdiscount ellipsis" wx:if="{{coupon.maxPreferenceCopywriting}}">{{coupon.maxPreferenceCopywriting}}</view>
+        </view>
+        <view class="item-center item-block">
+            <view class="title">
+                <view class="item-name ellipsis">{{couponTitleTags}}{{coupon.title}}</view>
+                <view class="num" wx:if="{{isComposite}}">x{{compositeNum}}</view>
+            </view>
+            <view class="time">
+                <view class="coupon-count-down" wx:if="{{isLessTwoDay}}">仅剩<a bind:change="onChange" class="time-section" time="{{countDownTime}}" useSlot="{{true}}">
+                        <view class="time-section">{{formattedTime}}</view>
+                    </a>
+                </view>
+                <view wx:else>{{coupon.validTimeCopywriting}}</view>
+            </view>
+        </view>
+        <view class="item-right item-block">
+            <view class="label {{isInvalid?'label-invalid':''}}">{{statuDetail}}</view>
+        </view>
+    </view>
+    <view class="item-reminder" wx:if="{{isUnused}}">该券你已领取超过7天未使用，请前往所属店铺使用</view>
+</view>

@@ -1,0 +1,10 @@
+<view class="shop-pop-manager">
+    <h bind:close="toggleSubscribeMask" show="{{showSubscribeMask}}" zIndex="{{10010}}"></h>
+    <e bind:close-pop="handleClosePop" source="{{pageSource}}" wx:if="{{showOrderPayPromptPopup}}"></e>
+    <c bind:close-pop="handleClosePop" featureId="{{featureId}}" popPosition="{{popPosition}}" targetKdtId="{{targetKdtId}}" wx:if="{{showShopAd}}"></c>
+    <b bind:close-pop="handleClosePop" bind:toggle-subscribe-mask="toggleSubscribeMask" source="{{source}}" wx:if="{{showVisitGift}}"></b>
+    <f activeUmpId="{{activeUmpId}}" bind:close-pop="handleClosePop" source="{{source}}" wx:if="{{showMarketingPage}}"></f>
+    <a bind:close-pop="handleClosePop" bind:toggle-subscribe-mask="toggleSubscribeMask" source="{{source}}" wx:if="{{showSignPop}}"></a>
+    <d bind:close-pop="handleClosePop" wx:if="{{showMemberGuide}}"></d>
+    <g bind:close-pop="handleClosePop" bind:toggle-subscribe-mask="toggleSubscribeMask" source="{{source}}" wx:if="{{showCustomerRebuy}}"></g>
+</view>

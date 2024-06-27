@@ -1,0 +1,11 @@
+<button bind:tap="_p" class="c19137 {{fissionCoupon.styleVersion==='v2'?'d176c':'c5553c'}}" data-detail="fission" data-t="{{ tap:{en:'clickFissionCoupon'} }}" openType="share" style="{{isWxReceipt?'padding:0;background:#fff;':''}}">
+    <view class="b0407"></view>
+    <view class="c76cbd" wx:if="{{fissionCoupon.styleVersion==='v2'}}">
+        <view class="c40f11">      送你
+      <view class="c647a8 c89585">{{fissionCoupon.quantity}}</view>      张拼手气优惠券
+    </view>
+        <view class="fe560 c89585">快分享给好友，一起领取吧！</view>
+        <view class="c86471"></view>
+    </view>
+    <view class="c40f11" wx:else>恭喜你！送你{{fissionCoupon.quantity}}张优惠券</view>
+</button>

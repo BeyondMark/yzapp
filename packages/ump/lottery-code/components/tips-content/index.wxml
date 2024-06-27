@@ -1,0 +1,10 @@
+<view class="trade-carousel">
+    <view class="trade-carousel__swipe">
+        <view class="trade-carousel__swipe-item {{carouseItem.showEnter?'move-enter-active':''}} {{carouseItem.showLeave?'move-leave-active':''}} " wx:if="{{carouseItem.showEnter||carouseItem.showLeave||carouseList.length===1}}" wx:for="{{carouseList}}" wx:for-item="carouseItem" wx:key="{{ index }}">
+            <view class="trade-carousel__swipe-avatar">
+                <image src="{{carouseItem.avatar}}"></image>
+            </view>
+            <text class="trade-carousel__swipe-text">恭喜<text class="strong">{{carouseItem.nickName}}</text>{{carouseItem.text}}</text>
+        </view>
+    </view>
+</view>

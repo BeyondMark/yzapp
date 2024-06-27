@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./VisitGift",
+    "_": "../../../../../../components/_/index"
+  }
+}

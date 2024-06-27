@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "a": "/packages/async-main/@vant/weapp/dist/toast/index",
+    "b": "/ext-tee-wsc-dc/extensions/showcase-container/rt/ShowcaseContainer",
+    "c": "/packages/async-main/@vant/weapp/dist/notify/index",
+    "_": "../../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_", "c": "_" }
+}

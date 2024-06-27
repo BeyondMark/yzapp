@@ -1,0 +1,60 @@
+<view class="c8d276" wx:if="{{showVal}}">
+    <view class="c4e13">
+        <a bind:_init="_tic" bind:show-salesman="_p" data-t="{{ showSalesman:{en:'showSalesman'} }}" navigateTo="{{gotoUrl}}" rmId="b21-16" type="line-style" wx:if="{{rmId==='b21-10'}}"></a>
+        <b bind:_init="_tic" bind:tap="_p" border="{{false}}" customClass="c93f6a" data-t="{{ tap:{ en:'gotoUrl',args:[false,'cash'] } }}" isLink="{{!cash.needActivated}}" titleClass="b0531" valueClass="b8a64" wx:if="{{showCash}}">
+            <view class="c33ced" slot="title">
+                <view class="e5ae7">
+                    <view class="c28a1f c65836" style="{{themeBackgroundColorStyle}}"></view>
+                    <view class="c62478 c65836" style="{{themeColorStyle}}">返</view>
+                </view>
+                <view class="e9e05">          恭喜获得返现
+          <view class="c150bc c65836" wx:if="{{cash.money>0}}"> {{cash.money}} 元 </view>
+                    <view class="c65836" wx:if="{{cash.money>0&&cash.valueCard>0}}">以及</view>
+                    <view class="c150bc c65836" wx:if="{{cash.valueCard>0}}"> {{cash.valueCard}} 元储值金 </view>
+                </view>
+                <view bind:tap="_p" class="c17408 c65836" data-t="{{ tap:{ en:'doActivate',args:['cash'] } }}" style="{{themeColorStyle}}" wx:if="{{cash.needActivated}}">          立即激活
+        </view>
+            </view>
+        </b>
+        <b bind:_init="_tic" bind:tap="_p" border="{{false}}" customClass="c93f6a c578d6" data-t="{{ tap:{ en:'gotoUrl',args:[false,'pointCard'] } }}" titleClass="b0531" valueClass="b8a64" wx:if="{{showPointCard}}">
+            <view class="c33ced" slot="title">
+                <view class="e5ae7">
+                    <view class="c28a1f c65836" style="{{themeBackgroundColorStyle}}"></view>
+                    <view class="c62478 c65836" style="{{themeColorStyle}}">集</view>
+                </view>
+                <view class="c50e6e">          获得
+          <view class="c150bc c65836"> {{pointCard.pointNum}} </view>个集点，累计
+          <view class="c150bc c65836"> {{pointCard.costPoints}} </view>个兑换
+          <view class="c65836" wx:if="{{pointCard.price}}">
+                        <view class="c150bc c65836"> {{pointCard.price}} </view>元
+          </view> {{pointCard.rights}} </view>
+                <view bind:tap="_p" class="dc2ac" data-t="{{ tap:{ en:'doActivate',args:['pointCard'] } }}" style="{{themeColorStyle}}"> 立即查看 </view>
+            </view>
+        </b>
+        <b bind:_init="_tic" bind:tap="_p" border="{{false}}" customClass="c93f6a" data-t="{{ tap:{ en:'gotoUrl',args:[false,'creditInfo'] } }}" isLink="{{true}}" titleClass="b0531" valueClass="b8a64" wx:if="{{showCredit}}">
+            <view class="c33ced" slot="title">
+                <view class="e5ae7">
+                    <view class="c28a1f c65836" style="{{themeBackgroundColorStyle}}"></view>
+                    <view class="c62478 c65836" style="{{themeColorStyle}}">积</view>
+                </view>
+                <view class="c65836">
+                    <view class="c150bc c65836">{{creditInfo.num}}{{formatCreditInfoName}}</view>
+                    <view class="c4cee9">{{creditInfo.desc}}</view>
+                </view>
+            </view>
+        </b>
+        <b bind:_init="_tic" bind:tap="_p" border="{{false}}" customClass="c93f6a" data-t="{{ tap:{ en:'gotoUrl',args:[false,'memberCard'] } }}" isLink="{{!memberCard.needActivated}}" titleClass="b0531" valueClass="b8a64" wx:if="{{showMemberCard}}">
+            <view class="c33ced" slot="title">
+                <view class="e5ae7">
+                    <view class="c28a1f c65836" style="{{themeBackgroundColorStyle}}"></view>
+                    <view class="c62478 c65836" style="{{themeColorStyle}}">卡</view>
+                </view>
+                <view class="c65836">          恭喜获得
+          <view class="f9979 c65836"> {{formatMemberName}} </view>
+                </view>
+                <view bind:tap="_p" class="c17408 c65836" data-t="{{ tap:{ en:'doActivate',args:['memberCard'] } }}" style="{{themeColorStyle}}" wx:if="{{memberCard.needActivated}}">          立即激活
+        </view>
+            </view>
+        </b>
+    </view>
+</view>

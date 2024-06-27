@@ -1,0 +1,6 @@
+<a bind:_init="_tic" bind:close="_p" bind:opened="_p" bind:preview="_p" bind:selected="_p" bind:submit="_p" customStyle="{{customStyle}}" data-t="{{ close:{en:'onHideSku'},preview:{en:'onPreview'},submit:{en:'doSubmit'},selected:{en:'onSkuSelected'},opened:{en:'onSkuOpened'} }}" event="{{showEvent}}" extraData="{{extraData}}" goods="{{goods}}" kdtId="{{kdtId}}" pointsConfig="{{pointsConfig}}" show="{{showDecoSku}}" sku="{{sku}}" skuConfig="{{skuConfig}}" themeTag="{{themeTag}}">
+    <slot name="goods-sku-popup-header" slot="sku-header"></slot>
+    <view slot="sku-group-main">
+        <b bind:_init="_tic" bind:change="_p" data-t="{{ change:{en:'onPluginsChange'} }}" opt="{{goodsAttributesOpt}}" wx:if="{{goodsAttributesOpt.show}}"></b>
+    </view>
+</a>

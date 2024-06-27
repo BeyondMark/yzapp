@@ -1,0 +1,14 @@
+<view class="address-panel-container">
+    <view class="address-panel-body">
+        <block wx:if="{{addresses&&addresses.length}}">
+            <a bind:edit="handleEditAddress" bind:select="handleSelectAddress" item="{{address}}" switchable="{{true}}" value="{{isSelectedId}}" wx:for="{{addresses}}" wx:for-item="address" wx:key="id"></a>
+        </block>
+        <view class="no-address" wx:else>
+            <view class="no-address_img"></view>
+            <view class="no-address_title">你还没有收货地址哦</view>
+        </view>
+    </view>
+    <view class="address-panel-bottom">
+        <view bind:tap="clickNewAddress" class="add-address-btn">+新增地址</view>
+    </view>
+</view>

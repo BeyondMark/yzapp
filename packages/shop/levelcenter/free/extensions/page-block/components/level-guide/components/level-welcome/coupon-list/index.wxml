@@ -1,0 +1,5 @@
+<view>
+    <view class="coupon-list" wx:if="{{renderCoupons.length>0}}">
+        <a coupon="{{item}}" customCouponBoxActionClass="coupon-box-action__hide" themeClass="th9" wx:for="{{renderCoupons}}"></a>
+    </view>
+</view>

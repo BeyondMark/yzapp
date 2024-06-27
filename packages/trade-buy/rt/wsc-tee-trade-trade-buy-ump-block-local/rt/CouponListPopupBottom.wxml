@@ -1,0 +1,8 @@
+<view class="c1805c">
+    <view class="c912fa">
+        <a bind:_init="_tic" bind:tap="_p" customClass="c049a0 a334d" data-t="{{ tap:{en:'onClear'} }}" size="large" type="warning"> {{firstBtnText}} </a>
+    </view>
+    <view class="c912fa">
+        <a bind:_init="_tic" bind:tap="_p" customClass="c049a0 c709e6" data-t="{{ tap:{en:'onClose'} }}" size="large" type="danger"> {{secondBtnText}} </a>
+    </view>
+</view>

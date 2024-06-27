@@ -1,0 +1,10 @@
+<view>
+    <view class="e173e" wx:if="{{fastJoinHeaderInfo.type===FastJoinHeadTypeEnum.Logo}}">
+        <view class="c368f4">
+            <image class="a3f00 bd231" lazyLoad="true" src="{{shopInfo.logo}}"></image>
+        </view>
+        <view class="c17424">      欢迎加入{{shopInfo.shopName}} </view>
+        <view class="c243c2">完善资料，立即入会</view>
+    </view>
+    <view class="c2570" wx:else>欢迎加入{{shopInfo.shopName}}</view>
+</view>

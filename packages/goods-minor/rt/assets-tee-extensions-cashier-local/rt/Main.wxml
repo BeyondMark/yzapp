@@ -1,0 +1,4 @@
+<view>
+    <b bind:_init="_tic" bind:change-channel="_p" bind:connect="_p" data-t="{{ connect:{en:'initPayService'},changeChannel:{en:'onChangeChannel'} }}" kdtId="{{shop.kdtId}}" mobile="{{mobile}}" themeColor="{{themeColors.general}}" userAuthorize="{{ctx.widgets.UserAuthorize}}"></b>
+    <a bind:_init="_tic" wx:if="{{rmId==='b7-65'||rmId==='b38-7'}}"></a>
+</view>

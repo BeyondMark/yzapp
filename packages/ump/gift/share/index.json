@@ -1,0 +1,18 @@
+{
+  "navigationBarTitleText": "我要送礼",
+  "usingComponents": {
+    "a": "/pages/common/page-container/index",
+    "b": "../components/gift-header/index",
+    "c": "./components/message-input/index",
+    "d": "./components/address-bar/index",
+    "e": "./components/action-btn/index",
+    "f": "./components/lottery-status/index",
+    "g": "./components/user-list/index",
+    "h": "./components/gift-goods/index",
+    "i": "../../../async-main/common/components/form-view/index",
+    "j": "../../@vant/weapp/dist/action-sheet/index",
+    "k": "../../../async-main/@vant/weapp/dist/dialog/index",
+    "_": "../../../../components/_/index"
+  },
+  "componentPlaceholder": { "i": "_", "k": "_" }
+}

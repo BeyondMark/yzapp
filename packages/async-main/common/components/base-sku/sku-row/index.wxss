@@ -1,0 +1,30 @@
+@import "/common/css/helper/index.wxss";
+.van-sku-row {
+  margin: 0 15px 10px 0;
+}
+.van-hairline--bottom {
+  margin-bottom: 12px;
+}
+.van-hairline--bottom:after {
+  margin-right: 8px;
+  transform: translateX(4px) scale(0.5);
+}
+.van-sku-row.last-child {
+  margin-bottom: 0;
+}
+.van-sku-row__title {
+  font-size: 14px;
+  padding-bottom: 12px;
+}
+.van-sku-row__title-multiple {
+  color: #969799;
+}
+.van-sku-row__extra-text {
+  display: inline-block;
+  color: #f44;
+  font-size: 12px;
+}
+.van-sku-row__body {
+  display: flex;
+  flex-wrap: wrap;
+}

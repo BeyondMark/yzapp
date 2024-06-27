@@ -1,0 +1,11 @@
+<view class="valid-goods" style="{{themeStyle}}" wx:if="{{shopGoods.goodsGroupList}}">
+    <f bind:_init="_tic" bind:load="_p" bind:ob-reloaded="_p" data-t="{{ load:{en:'getLoadGoodsList'},obReloaded:{en:'obReload'} }}" finished="{{finished}}" finishedText=" " immediateCheck="{{true}}" loading="{{loadLoading}}" reInitObserver="{{listObNeedReLoad}}">
+        <view class="c2ebb4" wx:for="{{loadGoodsList}}" wx:for-index="goodsGroupIndex" wx:for-item="goodsGroup" wx:key="uniqId">
+            <a bind:_init="_tic" bind:change-goods-sku="_p" bind:change-present-sku="_p" bind:on-present-popup-show="_p" bind:refresh-cart-goods-list="_p" cloudActivityId="{{goodsGroup.groupActivityInfo&&goodsGroup.groupActivityInfo.activityId||0}}" cloudIndex="{{goodsGroupIndex}}" data-t="{{ changeGoodsSku:{en:'handleChangeGoodsSku'},refreshCartGoodsList:{en:'refreshCartGoodsList'},onPresentPopupShow:{en:'handleChangePresentPopup'},changePresentSku:{en:'handleChangePresentSku'} }}" goodsGroup="{{goodsGroup}}" goodsGroupIndex="{{goodsGroupIndex}}" rmId="{{rmId}}" wx:if="{{rmId==='b4-7'}}"></a>
+            <e bind:_init="_tic" data-ref="van-dialog"></e>
+        </view>
+    </f>
+    <b bind:_init="_tic" data-ref="combo-detail-popup" rmId="{{rmId}}" wx:if="{{rmId==='b4-7'}}"></b>
+    <d activityInfo="{{cartActivityInfo}}" bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'handleCloseCartActivityPopup'} }}" rmId="b4-2" showPopup="{{cartActivityPopupShow}}" wx:if="{{rmId==='b4-7'}}"></d>
+    <c activityInfo="{{currentActivityInfo}}" bind:_init="_tic" bind:refresh-cart-goods-list="_p" checkedGoodsList="{{checkedGoodsList}}" data-t="{{ refreshCartGoodsList:{en:'refreshCartGoodsList'} }}" goodsList="{{currentActivityGoodsList}}" isEditing="{{isEditing}}" kdtId="{{kdtId}}" logger="{{logger}}" offlineId="{{offlineId}}" onlyShowExchange="{{true}}" rmId="b4-2" themeColors="{{themeColors}}" themeCss="{{themeCSS}}" themeGeneralAlpha10Color="{{themeGeneralAlpha10Color}}" themeGeneralColor="{{themeGeneralColor}}" wx:if="{{rmId==='b4-7'}}"></c>
+</view>

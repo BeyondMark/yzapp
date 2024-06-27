@@ -1,0 +1,11 @@
+<b closeOnClickOverlay="{{false}}" closeable="{{false}}" customClass="block-frameless" overlayStyle="background-color: var(--overlay-background-color,rgba(0,0,0,0.8))" show="{{show}}">
+    <view class="block  {{!show?'a-fade-hide':''}}">
+        <view class="title">恭喜你，一刀砍掉</view>
+        <view class="detail">
+            <view class="price">
+                <a config="{{options}}" max="{{firstCut}}" value="{{firstCut}}" wx:if="{{firstCut}}"></a>
+            </view>
+            <view class="unit">元</view>
+        </view>
+    </view>
+</b>

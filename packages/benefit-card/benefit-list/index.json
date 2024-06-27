@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "全部权益",
+  "navigationBarBackgroundColor": "#FFF",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "a": "../common/components/theme-view/index",
+    "b": "./components/benefit-list/index",
+    "c": "../../async-main/@vant/weapp/dist/toast/index",
+    "_": "../../../components/_/index"
+  },
+  "componentPlaceholder": { "c": "_" }
+}

@@ -1,0 +1,12 @@
+<view>
+    <c bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b36-9'}}"></c>
+    <f bind:_init="_tic" businessTime="{{shop.closedDesc}}" isMultiStore="{{false}}" wx:if="{{shop.closed}}"></f>
+    <e bind:_init="_tic" data-ref="submitDialog"></e>
+    <view class="e6dca">
+        <d bind:_init="_tic" bind:behaviorDidMount="_p" data-ref="behaviorTest" data-t="{{ behaviorDidMount:{en:'behaviorDidMount'} }}"></d>
+        <a bind:_init="_tic" wx:if="{{rmId==='b36-9'}}"></a>
+    </view>
+    <block wx:if="{{showSubscribeGuide}}">
+        <b bind:_init="_tic" show="{{true}}" zIndex="{{110}}" wx:if="{{rmId==='b36-9'}}"></b>
+    </block>
+</view>

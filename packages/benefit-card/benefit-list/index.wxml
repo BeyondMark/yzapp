@@ -1,0 +1,12 @@
+<view class="benefits-list" wx:if="{{!loading}}">
+    <b benefitList="{{benefitList}}" cardNo="{{cardNo}}" experienceLog="{{experienceLog}}" hasActivated="{{hasActivated}}" hasCard="{{hasCard}}" needActivate="{{needActivate}}" wx:if="{{!empty}}"></b>
+    <view class="empty" wx:if="{{empty}}">暂无权益</view>
+    <view class="benefit-btn-wrapper" wx:if="{{!hasCard||needActivate&&!hasActivated}}">
+        <view class="theme-view-wrapper">
+            <a bg="main-bg" border="general" color="main-text">
+                <button bindtap="takeCard" block="{{true}}" class="benefit-btn theme-view-button" round="{{true}}" wx:if="{{cardType===3||cardType===8}}">{{btnText}}</button>
+            </a>
+        </view>
+    </view>
+</view>
+<c id="van-toast"></c>

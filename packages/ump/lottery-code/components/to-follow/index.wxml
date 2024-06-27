@@ -1,0 +1,1 @@
+<a bind:close="onClose" btnText="成为粉丝" extraData="{{extraData}}" show="{{showFollow}}" title="成为店铺粉丝才能获得抽奖码"></a>

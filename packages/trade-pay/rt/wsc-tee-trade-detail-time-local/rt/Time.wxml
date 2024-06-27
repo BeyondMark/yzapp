@@ -1,0 +1,36 @@
+<view class="c07cc6" style="{{rootStyle}}">
+    <view bind:tap="_p" class="fd193 c322d" data-t="{{ tap:{en:'handleGoSnapshotClick'} }}" wx:if="{{isUsingNewSnapshot&&!isFxZpp}}">    交易快照：
+    <view class="c2428c c89585">发生交易争议时，可作为判断依据</view>
+        <a bind:_init="_tic" customClass="c5794b" name="arrow"></a>
+    </view>
+    <view class="fd193 c9b23e">
+        <view class="c9d9b7">      订单编号：<view class="c2428c c89585">{{orderNo}}</view>
+        </view>
+        <c bind:_init="_tic" bind:tap="_p" customClass="c86866" data-t="{{ tap:{en:'handleCopyBtnClick'} }}" size="mini">      复制
+    </c>
+    </view>
+    <view class="fd193" wx:if="{{!!time.createTime}}">    创建时间：
+    <view class="c2428c c89585">{{formatTime.createTime}}</view>
+    </view>
+    <view class="fd193" wx:if="{{!!time.payTime}}"> {{time.payTitle}}：
+    <view class="c2428c c89585">{{formatTime.payTime}}</view>
+    </view>
+    <view class="fd193" wx:if="{{!!time.expressTime&&!isEduOrder}}">    发货时间：
+    <view class="c2428c c89585">{{formatTime.expressTime}}</view>
+    </view>
+    <view class="fd193" wx:if="{{!!time.successTime}}">    完成时间：
+    <view class="c2428c c89585">{{formatTime.successTime}}</view>
+    </view>
+    <view class="c4aa1a" wx:if="{{showYZQuestionUrl&&!isTradeComponent3}}">
+        <view bind:tap="_p" class="b844f" data-t="{{ tap:{en:'toYzGuaranteeUrl'} }}" wx:if="{{orderBizUrl.yzGuaranteeUrl}}">      联系放心购客服
+    </view>
+        <block wx:else>
+            <view bind:tap="_p" class="b844f" data-t="{{ tap:{en:'toOrderQuestion'} }}" wx:if="{{orderBizUrl.orderQuestionUrl&&!orderBizUrl.moneyToWhereUrl}}">        对此订单有疑问？
+      </view>
+            <view class="b844f c6fc77" wx:if="{{!!orderBizUrl.moneyToWhereUrl}}">        温馨提示：货款已通过微信支付付给商家。
+        <view bind:tap="_p" class="d9f53 c89585" data-t="{{ tap:{en:'toMoneyToWhere'} }}">钱款去向</view>
+            </view>
+        </block>
+    </view>
+    <b bind:_init="_tic" data-ref="van-toast"></b>
+</view>

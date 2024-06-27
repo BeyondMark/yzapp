@@ -1,0 +1,26 @@
+.c24cbb {
+  padding: 0 16px;
+}
+.c3a6f2 {
+  padding: 4px 8px;
+  background: #f7f8fa;
+  color: #646566;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+.c3a6f2 .b7294 {
+  position: relative;
+  top: 1px;
+  margin-right: 8px;
+}
+.c3a6f2 .ff4b8 {
+  top: 2px;
+}
+.c3a6f2 .c1000 {
+  font-size: 13px;
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

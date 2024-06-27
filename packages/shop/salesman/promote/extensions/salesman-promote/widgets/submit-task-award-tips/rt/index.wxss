@@ -1,0 +1,50 @@
+.tips-container {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: -45px;
+  right: 4px;
+  max-width: 300px;
+}
+.tips-container .tips-content-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 300px;
+  height: 35px;
+  border-radius: 35px;
+  font-size: 13px;
+  letter-spacing: 0;
+  padding: 12px 11px 12px 39px;
+  box-sizing: border-box;
+}
+.tips-container .award-icon-wrap {
+  position: absolute;
+  left: -4px;
+  z-index: 1;
+}
+.tips-container .task-award-info-icon {
+  font-size: 40px;
+}
+.tips-container .tips-content {
+  border-radius: 4px;
+  color: #fff;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.tips-container .next-award-gap {
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 2px;
+}
+.tips-container .tips-triangle {
+  position: absolute;
+  left: 45%;
+  bottom: -12px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-top-color: #fff;
+}

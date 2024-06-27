@@ -1,0 +1,72 @@
+.content,
+.select-store,
+body,
+html {
+  height: 100%;
+}
+.content {
+  overflow: scroll;
+}
+.select-store {
+  position: relative;
+  padding-bottom: 65px;
+  background-color: #f8f8f8;
+}
+.list .item {
+  position: relative;
+  padding: 15px 0;
+}
+.list .item:after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  width: 200%;
+  height: 200%;
+  left: 0;
+  transform: scale(0.5);
+  transform-origin: left top;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+  border-top: 1px solid #e5e5e5;
+}
+.list .item:first-child:after {
+  content: none;
+}
+.bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  background-color: #fff;
+}
+.bottom:after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  width: 200%;
+  height: 200%;
+  left: 0;
+  transform: scale(0.5);
+  transform-origin: left top;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.autolocate {
+  height: 100%;
+  text-align: center;
+}
+.autolocate img {
+  margin-top: 50%;
+}
+.autolocate p {
+  margin-top: 10px;
+}
+page {
+  background-color: #fafafa;
+}

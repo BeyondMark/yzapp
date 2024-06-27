@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "加载中...",
+  "usingComponents": {
+    "a": "/packages/async-main/@vant/weapp/dist/toast/index",
+    "_": "../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

@@ -1,0 +1,10 @@
+<view class="addbd theme-class">
+    <view bindtap="handleClick" class="c0a228 {{filter.type==='sort'?'c0a228--sort':''}} {{index===currentFilter?'c0f74f':''}}" data-index="{{index}}" wx:if="{{filters.length>0}}" wx:for="{{filters}}" wx:for-item="filter" wx:key="{{ index }}">{{filter.title}}<view class="c73a6c c73a6c--{{filter.sortDirection}}" wx:if="{{filter.type==='sort'}}">
+            <view class="df20d"></view>
+            <view class="c02d8f"></view>
+        </view>
+    </view>
+    <view bindtap="handleChangeLayoutType" class="b64a1" wx:if="{{isShowLayoutChange}}">
+        <a name="{{currentLayoutType==='two'?'list-switching':'list-switch'}}" size="18px"></a>
+    </view>
+</view>

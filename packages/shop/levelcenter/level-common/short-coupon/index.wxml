@@ -1,0 +1,10 @@
+<view bindtap="receiveCoupon" class="coupon-box {{disable?'disable-coupon':''}}" wx:if="{{coupon.activityId}}">
+    <view class="member-title text-overfollow" wx:if="{{coupon.lowestLevelDesc&&levelType!==MEMBER_TYPE_ENUM.PAY_MENBER}}">{{coupon.lowestLevelDesc}}</view>
+    <view class="coupon">
+        <text class="account" style="{{fontSizeStyle}}">{{coupon.valueDesc}}</text>{{unitDesc}}</view>
+    <view class="use-condition text-overfollow">{{coupon.thresholdDesc}}</view>
+    <view class="dotted-line"></view>
+    <view class="btn-text">{{btnText}}</view>
+    <view class="left-icon"></view>
+    <view class="right-icon"></view>
+</view>

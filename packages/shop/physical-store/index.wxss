@@ -1,0 +1,17 @@
+.r-c {
+  flex-direction: column;
+}
+.r-c,
+.r-r {
+  display: flex;
+}
+.r-r {
+  flex-direction: row;
+}
+.kVVCwj {
+  min-height: 100vh;
+  background-color: #f7f8fa;
+}
+.PZlrTr {
+  margin-top: 12px;
+}

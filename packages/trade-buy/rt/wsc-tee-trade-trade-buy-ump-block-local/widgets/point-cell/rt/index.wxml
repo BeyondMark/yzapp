@@ -1,0 +1,3 @@
+<view class="c64356" style="{{themeStyle}}">
+    <a bind:_init="_tic" border="{{false}}" customClass="long-cell" title="{{pointsName}}" titleClass="c27ddd" titleWidth="90px" value="{{pointsDescription}}" valueClass="c61780"></a>
+</view>

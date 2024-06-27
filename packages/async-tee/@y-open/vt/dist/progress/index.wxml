@@ -1,0 +1,5 @@
+<view class="t-progress {{customClass}}" style="{{styles.root}}">
+    <view class="t-progress__portion" style="{{styles.portion}}">
+        <view class="t-progress__pivot" style="{{styles.pivot}}" wx:if="{{showPivot&&text}}"> {{text}} </view>
+    </view>
+</view>

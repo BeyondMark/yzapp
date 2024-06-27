@@ -1,0 +1,31 @@
+.c0f300 {
+  color: var(--ump-tag-text, #323233);
+  border: 0;
+  white-space: nowrap;
+}
+.e2ba1 {
+  font-size: 12px;
+  align-items: center;
+  padding: 0 16px;
+  margin: 12px 0;
+}
+.c40aeb {
+  display: flex;
+  align-items: flex-start;
+}
+.e2ba1__value {
+  padding-left: 12px;
+  white-space: nowrap;
+}
+.a5c0c {
+  padding-top: 2px;
+  line-height: 1;
+  padding-left: 10px;
+}
+.e2ba1 .t-cell__value {
+  text-align: right;
+  color: #333;
+  align-self: flex-start;
+  flex-grow: 0;
+  flex-basis: auto;
+}

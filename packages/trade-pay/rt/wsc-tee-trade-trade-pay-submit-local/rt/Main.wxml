@@ -1,0 +1,17 @@
+<view class="c29a53" style="height:{{dynamicHeight.wrapperHeight}}" wx:if="{{!isTradeComponent3}}">
+    <view class="c6c486" style="{{themeVars}}">
+        <c background="#fff7cc" bind:_init="_tic" color="#f56723" scrollable="{{false}}" text="{{displayData.tips}}" wx:if="{{displayData.tips}}"></c>
+        <view class="c1a3f" style="height:{{dynamicHeight.barHeight}}">
+            <view class="c55ac1">
+                <view class="e7e9c">
+                    <view class="c52bc4">{{displayData.label}}：</view>
+                    <view class="c4c89" style="color:var(--icon, #323233)">            ¥ <view class="c3e6c4">{{submitBarPrice}}</view>
+                    </view>
+                </view>
+                <view class="c3a61" wx:if="{{displayData.desc}}">{{displayData.desc}}</view>
+            </view>
+            <b bind:_init="_tic" bind:tap="_p" customClass="c438ef" customStyle="{{btnCustomStyle}}" data-t="{{ tap:{en:'onPayClick'} }}" disabled="{{displayData.disabled}}" loading="{{isPaying}}" round="{{true}}"> {{submitBtnText}} </b>
+        </view>
+    </view>
+    <a bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'toggleQueueUptips'} }}" show="{{showQueueUpTips}}"></a>
+</view>

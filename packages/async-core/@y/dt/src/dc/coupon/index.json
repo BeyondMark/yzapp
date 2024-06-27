@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y/dt/src/captain/layout/layout",
+    "b": "/@y/dt/src/captain/layout/layout-item",
+    "c": "/@y/dt/src/captain/load-mode/index",
+    "d": "/@y/dt/src/captain/module-title/index",
+    "e": "./guide-dialog",
+    "f": "./guide-button/index",
+    "g": "./../../captain/coupon/index",
+    "_": "../../../../../../../components/_/index"
+  }
+}

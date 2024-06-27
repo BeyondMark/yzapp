@@ -1,0 +1,27 @@
+.goods-video {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.goods-video__mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.goods-video__close-btn {
+  position: absolute;
+  top: 8px;
+  left: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+.goods-video__close-btn--fullscreen {
+  top: 25px;
+}

@@ -1,0 +1,42 @@
+<a bind:_init="_tic" bind:close="_p" bind:confirm="_p" closeOnClickOverlay="{{false}}" data-t="{{ close:{en:'onClose'},confirm:{en:'onConfirm'} }}" show="{{show}}" showCancelButton="{{false}}" showConfirmButton="{{false}}" title="{{displayData.title}}" useSlot="{{true}}" wx:if="{{initialShow}}">
+    <view class="ed303">
+        <view class="cdb45">
+            <view class="bc9cb" wx:if="{{type==='FORMAT'}}">
+                <view class="fe636">
+                    <view class="c9f45c" wx:if="{{format.prefix}}">{{format.prefix}}</view>
+                    <view class="c5f5b5 c9f45c" wx:if="{{format.value}}">{{format.value}}</view>
+                    <view class="c9f45c" wx:if="{{format.suffix}}">{{format.suffix}}</view>
+                </view>
+            </view>
+            <view class="bc9cb" wx:if="{{type==='PLAIN_TEXT'}}">
+                <view class="fe636" wx:if="{{hint}}">{{hint}}</view>
+            </view>
+        </view>
+        <view class="d4346" wx:if="{{type==='COUPON'}}">
+            <view class="fe636" wx:if="{{hint}}"> {{hint}} </view>
+            <view class="c41e5f" wx:if="{{loading}}">
+                <c bind:_init="_tic"></c>
+            </view>
+            <view class="c9bf57">
+                <view class="d96b5">
+                    <view class="e4324" style="{{mainColorStyle}}">
+                        <view class="a1587" style="{{couponValueStyle}}">{{coupon.valueDesc}}</view>
+                        <view class="{{coupon.unitDesc?'ad7d7':'fc3ce'}}">{{coupon.unitDesc||''}}</view>
+                    </view>
+                </view>
+                <view class="c5de5">
+                    <view class="c708be">{{coupon.condition}}</view>
+                    <view class="c5e2ef">{{coupon.timeDesc}}</view>
+                </view>
+            </view>
+        </view>
+        <view wx:if="{{type==='TAG_LIST'}}">
+            <view class="{{tags.length?'fe636':'c7ecb'}}" wx:if="{{hint}}">{{hint}}</view>
+            <view class="c4dd6e" wx:if="{{tags.length}}">
+                <d bind:_init="_tic" color="{{themeGeneralAlpha10Color}}" customClass="f2b82" round="{{true}}" wx:for="{{tags}}" wx:for-index="idx" wx:for-item="it" wx:key="idx">{{it.value}}</d>
+            </view>
+        </view>
+        <b bind:_init="_tic" bind:tap="_p" customClass="c1a875" customStyle="{{btnCustomStyle}}" data-t="{{ tap:{en:'onConfirm'} }}" round="{{true}}" type="danger">继续支付</b>
+        <view bind:tap="_p" class="c831b0" data-t="{{ tap:{en:'onClose'} }}">暂时放弃</view>
+    </view>
+</a>

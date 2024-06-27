@@ -1,0 +1,3 @@
+<view bind:tap="_p" class="{{rootClass.root}}" data-t="{{ tap:{en:'click'} }}" style="{{rootStyle}}">
+    <slot></slot>
+</view>

@@ -1,0 +1,1 @@
+<a actions="{{actions}}" bind:cancel="onClose" bind:close="onClose" bind:select="onSelect" cancelText="取消" description="{{'联系电话：'+(customerServiceAreaCode?customerServiceAreaCode+'-':'')+customerServicePhoneNumber}}" show="{{show}}"></a>

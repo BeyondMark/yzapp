@@ -1,0 +1,48 @@
+.winner-list {
+  margin-top: 10px;
+  background: #fff;
+  padding: 15px 15px 20px;
+  box-sizing: border-box;
+}
+.content {
+  padding: 10px 12px;
+  background: #fef0f0;
+  border: 1px solid #ff5644;
+  border-radius: 8px;
+  max-height: 370px;
+  overflow: scroll;
+  box-sizing: border-box;
+}
+.content-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+  color: #fd3852;
+  font-size: 16px;
+}
+.content-title:before {
+  display: inline-block;
+  content: "";
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  background: url(https://b.yzcdn.cn/public_files/93364915f3b730e58f0afb3170c904f8.png)
+    no-repeat 50%;
+  background-size: 14px 14px;
+  margin-right: 5px;
+}
+.content-ranking {
+  max-height: 100px;
+}
+.content-luck {
+  max-height: 174px;
+}
+.second-title {
+  margin-top: 15px;
+}
+.second-title:before {
+  background-image: url(https://b.yzcdn.cn/public_files/88ebea6885059075684dbdabc1a26e3f.png);
+}
+.content-list {
+  margin-bottom: 8px;
+}

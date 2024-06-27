@@ -1,0 +1,3 @@
+<a bind:_init="_tic">
+    <ecloud-protocol bind:_init="_tic" slot="ui-component"></ecloud-protocol>
+</a>

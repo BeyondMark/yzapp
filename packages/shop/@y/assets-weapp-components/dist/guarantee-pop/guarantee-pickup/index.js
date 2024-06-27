@@ -1,0 +1,71 @@
+"use strict";
+var r = require("~/r");
+r(
+  "LWgw",
+  Object.assign({}, require("~/c.js").modules, {
+    LWgw: function (e, c, t) {
+      t.r(c);
+      var i = t("0i4I");
+      Object(i.a)({
+        props: {
+          value: { type: Boolean, default: !1 },
+          zIndex: { type: Number, default: 100 },
+          data: {
+            type: Object,
+            value: {
+              title: "免费上门取退",
+              content: {
+                shortDesc: "快递免费上门，取退后优先退款到账",
+                desc: "有赞放心购为买家提供的售后升级服务，包含上门取件、退货包运费、优先退款3项售后服务。",
+                grayDesc:
+                  "服务履约受买家的地域、信誉等因素影响，请以实际执行为准。1个订单可享受1次免费上门取退服务。",
+                support: [
+                  {
+                    icon: "https://b.yzcdn.cn/public_files/d7e93cb3bf6303f57265b4c95f699fe7.png",
+                    name: "上门取件",
+                    desc: "快递员免费上门取件，运费一口价，低于全网均价。",
+                  },
+                  {
+                    icon: "https://b.yzcdn.cn/public_files/8cc716c2315d99866eefd3b219649d63.png",
+                    name: "退货包运费",
+                    desc: "退货成功后可补贴运费，若选择上门取件，也可直抵运费。",
+                  },
+                  {
+                    icon: "https://b.yzcdn.cn/public_files/47dc1c2288c5c9929c5bffa2396f4b47.png",
+                    name: "\b优先退款",
+                    desc: "上门取件揽收完成后，退款原路退回。",
+                  },
+                ],
+              },
+            },
+          },
+          icon: { type: Object, require: !0, default: {} },
+        },
+        data: { logo: "" },
+        watch: {
+          icon() {
+            this.setLogo();
+          },
+        },
+        methods: {
+          setLogo() {
+            var e, c;
+            this.setData({
+              logo:
+                null ===
+                  (c =
+                    null === (e = this.data.icon) || void 0 === e
+                      ? void 0
+                      : e.white) || void 0 === c
+                  ? void 0
+                  : c.free_pickup_return,
+            });
+          },
+          onClose() {
+            this.$emit("close");
+          },
+        },
+      });
+    },
+  })
+);

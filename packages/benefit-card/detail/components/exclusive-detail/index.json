@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../exclusive-gift/index",
+    "b": "../experience-log/index",
+    "c": "../exclusive-code/index",
+    "_": "../../../../../components/_/index"
+  }
+}

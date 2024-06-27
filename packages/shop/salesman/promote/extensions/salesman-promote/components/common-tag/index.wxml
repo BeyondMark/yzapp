@@ -1,0 +1,5 @@
+<view class="common-tag">
+    <a bg="main-bg" class="common-tag__container" color="main-bg" customClass="common-tag__inner" innerStyle="{{info?'border-radius: 2px;':''}}" opacity="0.1">
+        <slot></slot>
+    </a>
+</view>

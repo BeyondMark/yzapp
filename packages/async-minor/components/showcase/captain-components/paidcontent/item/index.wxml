@@ -1,0 +1,51 @@
+<navigator class="paidcontent-item external-class" hoverClass="none" path="{{url}}" type="{{navigateType}}" url="{{url}}">
+    <view class="paidcontent-item__thumbnail-wrapper">
+        <slot name="thumbnail" wx:if="{{slots.thumbnail}}"></slot>
+        <image class="paidcontent-item__thumbnail" mode="aspectFill" src="{{_thumbnail}}" style="width: {{thumbnailWidth}}px; height: {{thumbnailHeight}}px" wx:else></image>
+        <view class="paidcontent-item__status-tag" wx:if="{{statusTag}}">{{statusTag}}</view>
+        <slot name="icon" wx:if="{{slots.icon}}"></slot>
+        <view class="paidcontent-item__thumbnail-icon" wx:else>
+            <image class="paidcontent-item__thumbnail-icon-image" src="{{icon}}"></image>
+        </view>
+        <view class="paidcontent-item__course-type-name" wx:if="{{courseTypeName}}">{{courseTypeName}}</view>
+    </view>
+    <view class="paidcontent-item-detail" style="height: {{thumbnailHeight}}px">
+        <view class="paidcontent-item-row">
+            <view class="paidcontent-item-col">
+                <view class="paidcontent-item__title-bar">
+                    <slot name="title" wx:if="{{slots.title}}"></slot>
+                    <block wx:else>
+                        <b customClass="paidcontent-item__title-tag" type="{{titleTagClass}}" wx:if="{{titleTag}}">{{titleTag}}</b>
+                        <text class="paidcontent-item__title {{supportsMultiLines?'paidcontent-item__title--multi':''}}">{{title}}</text>
+                    </block>
+                </view>
+                <view class="paidcontent-item__subtitle {{bottomTagText?'':'paidcontent-item__subtitle--notag'}}" wx:if="{{slots.subtitle||_subtitle}}">
+                    <slot name="subtitle" wx:if="{{slots.subtitle}}"></slot>
+                    <text wx:else>{{_subtitle}}</text>
+                </view>
+            </view>
+            <view class="paidcontent-item-col paidcontent-item__corner-top" wx:if="{{!isIOS()}}">
+                <slot name="topTag" wx:if="{{slots.topTag}}"></slot>
+                <block wx:else>
+                    <view class="paidcontent-item__corner-top-text {{topCornerClass}}">{{topCornerText}}</view>
+                    <b customClass="paidcontent-item__top-tag paidcontent-item-tag" plain="{{true}}" type="danger" wx:if="{{topTagText}}">{{topTagText}}</b>
+                </block>
+            </view>
+        </view>
+        <view class="paidcontent-item-row paidcontent-item-detail__footer">
+            <view class="paidcontent-item-col paidcontent-item__status-list">
+                <slot name="status" wx:if="{{slots.status}}"></slot>
+                <block wx:else>
+                    <text class="paidcontent-item__status" style="{{item.color?'color:'+item.color:''}}" wx:for="{{statusList}}" wx:key="item">{{item.text?item.text:item}}</text>
+                </block>
+            </view>
+            <view class="paidcontent-item-col paidcontent-item__corner-bottom" wx:if="{{!isIOS}}">
+                <slot name="bottomTag" wx:if="{{slots.bottomTag}}"></slot>
+                <block wx:else>
+                    <b color="{{themeGeneral}}" customClass="paidcontent-item__bottom-tag paidcontent-item-tag" plain="{{true}}" wx:if="{{bottomTagText}}">{{bottomTagText}}</b>
+                    <a color="{{bottomCornerClass?'general':''}}" customClass="paidcontent-item__corner-bottom-text">{{bottomCornerText}}</a>
+                </block>
+            </view>
+        </view>
+    </view>
+</navigator>

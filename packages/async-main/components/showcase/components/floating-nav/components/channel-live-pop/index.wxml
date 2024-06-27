@@ -1,0 +1,23 @@
+<view wx:if="{{isLive}}">
+    <view bind:tap="linkToLive" class="channel-live-floating-new">
+        <view class="top">
+            <view class="circle-outside"></view>
+            <view class="circle-middle"></view>
+            <view class="circle-inside">
+                <image alt="" mode="aspectFill" src="{{headUrl}}"></image>
+            </view>
+        </view>
+        <view class="bottom">
+            <image alt="" src="https://b.yzcdn.cn/public_files/599d402fc2051bc42b2046b2afb2b6ba.png"></image>
+            <view class="live-icon-wrap">
+                <view class="default-live-icon-wave">
+                    <view class="wave-wrap">
+                        <view class="wave-item wave-1"></view>
+                        <view class="wave-item wave-2"></view>
+                        <view class="wave-item wave-3"></view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

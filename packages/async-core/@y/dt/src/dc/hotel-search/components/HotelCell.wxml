@@ -1,0 +1,24 @@
+<view bind:tap="_p" class="hotel" data-t="{{ tap:{en:'handleClickHotel'} }}">
+    <view class="list-img">
+        <image class="pic-img tee-image" lazyLoad="true" mode="aspectFill" src="{{hotel.cover.url}}"></image>
+        <view class="list-img-position">{{hotelAddress}}</view>
+    </view>
+    <view class="list-content">
+        <view class="title">
+            <view class="{{titleClass}}">{{hotel.name}}</view>
+        </view>
+        <view class="hotel-tag" wx:if="{{hotel.tags.length>0}}">
+            <b bind:_init="_tic" color="{{themeColors.general}}" customClass="hotel-tag-item" plain="{{true}}" wx:for="{{hotel.tags}}" wx:for-index="i" wx:for-item="tag" wx:key="i"> {{tag}} </b>
+        </view>
+        <view class="address">
+            <a bind:_init="_tic" color="#969799" name="location-o" size="14"></a>
+            <view class="address-span">{{hotel.address.address}}</view>
+        </view>
+        <view class="full" wx:if="{{showFull}}">满房</view>
+        <view class="price" wx:else>
+            <view style="color:{{themeColors.general}}">￥</view>
+            <view class="price-value" style="color:{{themeColors.general}}">{{hotelPrice}}</view>
+            <view>起</view>
+        </view>
+    </view>
+</view>

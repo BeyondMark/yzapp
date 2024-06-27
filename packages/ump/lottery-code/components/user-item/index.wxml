@@ -1,0 +1,15 @@
+<view class="user-item custom-class">
+    <view class="left">
+        <slot></slot>
+        <image class="left-img" src="{{imgUrl}}"></image>
+        <view class="left-content">
+            <view class="title title-class">{{title}}</view>
+            <text class="desc" wx:if="{{desc}}">{{desc}}</text>
+            <slot name="desc"></slot>
+        </view>
+    </view>
+    <view class="right">
+        <view class="right-value">{{value}}</view>
+        <text class="desc" vIf="label">{{label}}</text>
+    </view>
+</view>

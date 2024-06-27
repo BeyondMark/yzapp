@@ -1,0 +1,12 @@
+<c bind:_init="_tic" bind:close="_p" bind:confirm="_p" bodyBackgroundColor="#F7F8FA" bodyStyle="{{bodyStyle}}" buttonText="确定" class="c57bdf" closeOnConfirm="{{false}}" data-t="{{ close:{en:'onClose'},confirm:{en:'submit'} }}" disablePadding="{{true}}" show="{{show}}" showClose="{{true}}" title="活动商品" zIndex="{{80}}">
+    <view class="c9a036">
+        <d bind:_init="_tic" bind:load="_p" class="de02b" data-t="{{ load:{en:'onLoad'} }}" finished="{{finished}}" finishedText="没有更多了" loading="{{loading}}" wx:if="{{list.length>0}}">
+            <view wx:for="{{list}}" wx:key="id">
+                <a bind:_init="_tic" bind:onChange="_p" data-t="{{ onChange:{en:'onCardChange'} }}" goodsData="{{item}}" orderSkus="{{orderSkus[item.id]}}" rmId="{{rmId}}" selectedInfo="{{selectedSkus[item.id]}}" timelyLimit="{{timelyLimit[item.id]}}" useCustomTitleSlot="{{true}}" wx:if="{{rmId==='b36-27'}}"></a>
+            </view>
+        </d>
+        <b bind:_init="_tic" class="a14fa" size="50" wx:elif="{{loading}}"></b>
+        <e bind:_init="_tic" class="c42683" description="暂未获取到商品，请稍后再试" image="https://img01.yzcdn.cn/upload_files/2021/09/27/FliRCMbDsK8rAQIfl1QaWfBWZvS3.png" wx:else></e>
+    </view>
+    <view class="c6a213" wx:if="{{list.length>0}}">{{meetText}}</view>
+</c>

@@ -1,0 +1,33 @@
+<view class="goods-card">
+    <view class="slider-wrap">
+        <swiper autoplay="{{true}}" bindchange="onSlider" circular="{{true}}" class="slider" easingFunction="linear" interval="{{3000}}">
+            <swiper-item bind:tap="clickPrize" class="prize" data-prize="{{prize}}" itemId="{{index}}" wx:for="{{prizeList}}" wx:for-item="prize" wx:key="{{ index }}">
+                <image class="prize-img" mode="aspectFit" src="{{prize.img}}"></image>
+                <view class="prize-coupon" style="font-size: {{prize.fontSize}}" wx:if="{{prize.prizeType===1}}">
+                    <view class="prize-coupon__value">
+                        <text style="font-size: '20px'" wx:if="{{prize.preferentialMode===1}}">￥</text>{{prize.valueStr}}<text style="font-size: '20px'" wx:if="{{prize.preferentialMode===2}}">折</text>
+                    </view>
+                    <view class="prize-coupon__content van-ellipsis">
+                        <view class="coupon-title">{{prize.title}}</view>
+                        <view class="coupon-detail van-ellipsis">{{prize.preferentialCopywriting}}</view>
+                    </view>
+                </view>
+                <view class="prize-money" wx:if="{{prize.prizeType===10}}">
+                    <view class="prize-money__number">
+                        <text class="unit">￥</text>{{prize.storedMoney}}</view>
+                    <view class="prize-money__name">·店铺红包·</view>
+                </view>
+            </swiper-item>
+        </swiper>
+        <view class="indicator-dots" wx:if="{{prizeList.length>1}}">
+            <view class="dot {{activedId===index?'dot-actived':''}}" wx:for="{{prizeList}}" wx:for-item="prize" wx:key="{{ index }}"></view>
+        </view>
+    </view>
+    <view class="title {{index===0?'title-top':''}}" wx:for="{{prizeList}}" wx:key="{{ index }}">{{item.levelStr}}等奖：<text class="name van-ellipsis">{{item.showTitle}}</text>
+        <text class="number">x{{item.sendNum}}</text>
+    </view>
+    <a wx:if="{{userDrawResultDTO.codeNum}}"></a>
+    <b></b>
+    <view class="tips" wx:if="{{showTip}}">赠送不扣除幸运码，运气有增无减呦！</view>
+    <view class="lottery-icon" wx:if="{{showLotteryIcon}}"></view>
+</view>

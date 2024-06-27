@@ -1,0 +1,22 @@
+<view class="level-wrap" style="{{bgStyle}}">
+    <view class="bg-mask" style="{{maskStyle}}"></view>
+    <view class="level-top">
+        <view class="card-level">
+            <text>{{card.name}}</text>
+            <text class="trial" wx:if="{{levelStatus==='trial'}}">体验</text>
+            <view class="vaild-time">{{vaildTime[levelStatus]}}</view>
+        </view>
+    </view>
+    <view class="level-middle">
+        <view class="level-gift" wx:if="{{levelStatus!=='trial'&&levelStatus!=='member'}}">
+            <text class="level-num">{{bestPirce}}</text>
+            <text>元/{{bestType}}起</text>
+        </view>
+    </view>
+    <view class="level-bottom">
+        <view class="card-level-container" wx:if="{{memberCenterLogoUrl&&!card.image}}">
+            <image class="card-level-container-logo" src="{{memberCenterLogoUrl}}"></image>
+        </view>
+        <view class="level-value" wx:if="{{levelStatus!=='trial'}}">{{receiveBenefit[levelStatus]}}</view>
+    </view>
+</view>

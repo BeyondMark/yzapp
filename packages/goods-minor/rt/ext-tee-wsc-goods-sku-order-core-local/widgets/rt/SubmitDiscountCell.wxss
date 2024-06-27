@@ -1,0 +1,40 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.d82e5 {
+  position: relative;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  height: 36px;
+  box-shadow: 0-1px 0 0#ebedf0;
+}
+.d82e5 .c4105c {
+  flex: 2;
+  text-align: right;
+  color: var(--price, #ee0a24);
+}
+.d82e5 .c4105c__icon {
+  color: var(--price, #ee0a24);
+}
+.d82e5 .c78a5e {
+  margin-left: 2px;
+  font-size: 18px;
+  font-weight: var(--theme-common-price-font-weight, 800);
+  font-family: var(--price-font-family);
+}
+.d82e5 .c777f1 {
+  font-size: 12px;
+}
+.d82e5 .c1b930 {
+  color: #323233;
+}
+.d82e5 .ee295 {
+  color: var(--price, #ee0a24);
+  margin-left: 8px;
+}
+.d82e5 .ee295 .c78a5e {
+  font-size: 16px;
+}

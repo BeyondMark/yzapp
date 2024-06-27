@@ -1,0 +1,33 @@
+.tee-image {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.guarantee-common {
+  height: 80vh;
+}
+.guarantee-common__container {
+  position: relative;
+  width: 100%;
+  padding: 16px 0 0 0;
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+.guarantee-common__title {
+  font-size: 16px;
+  text-align: center;
+  color: #39393a;
+  font-weight: 700;
+  line-height: 22px;
+}
+.guarantee-common__content {
+  margin-top: 10px;
+  overflow-y: auto;
+  flex: auto;
+  font-size: 0;
+}
+.guarantee-common__content img {
+  width: 100%;
+}

@@ -1,0 +1,5 @@
+<view class="dd4e7" wx:if="{{showPriorUseTips}}">
+    <view bind:tap="_p" class="sku-block__actions-tip" data-t="{{ tap:{en:'handlePriorUseTipsClick'} }}" wx:if="{{payWaysData.payWay==='PRIOR_USE'}}">    你正在使用 <icon bind:_init="_tic" class="baec6"></icon>先用后付，收货满意后再付款
+    <image class="b798a bd231" lazyLoad="true" mode="widthFix" src="https://b.yzcdn.cn/wsc-h5-goods/right.png"></image>
+    </view>
+</view>

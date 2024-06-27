@@ -1,0 +1,12 @@
+<view class="shopnote-new-arrival">
+    <view class="shopnote-new-arrival__content">
+        <a title="{{noteData.title}}"></a>
+        <c time="{{noteData.publishTime}}" wx:if="{{noteData.showPublishTime}}"></c>
+        <b desc="{{noteData.description}}"></b>
+        <view class="shopnote-new-arrival__content--goods">
+            <f bind:buy="showcaseHandleGoodsBuy" componentData="{{goodsInfo}}" kdtId="{{shopInfo.kdt_id}}" offlineId="{{shopInfo.offline_id}}" pageLifetimes="{{['onPageScroll']}}"></f>
+        </view>
+        <d bind:shareclick="shareClick" bind:showtoast="showToast" bind:thumbclick="thumbClick" goodsNum="{{goodsInfo.goods.length}}" showGoodsBtn="{{!!goodsInfo.goods.length}}" thumbsStatus="{{thumbsStatus}}"></d>
+        <e bind:closeClick="closeClick" goodsList="{{goodsInfo.contentGoods}}" show="{{toastShow}}"></e>
+    </view>
+</view>

@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y-open/vt/dist/popup/index.weapp",
+    "b": "/@y-open/vt/dist/button/index.weapp",
+    "c": "./../components/OrderPayPromptExpireTip",
+    "d": "./../components/OrderPayPromptGoods",
+    "e": "./../components/OrderPayPromptEvaluate",
+    "_": "../../../../../components/_/index"
+  }
+}

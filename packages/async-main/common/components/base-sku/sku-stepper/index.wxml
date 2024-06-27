@@ -1,0 +1,7 @@
+<view class="van-sku-stepper-stock">
+    <view class="van-sku-stepper-container">
+        <view class="van-sku__stepper-title">{{stepperTitle}}</view>
+        <a bind:change="onSelectNumChange" bind:overlimit="onOverLimit" class="van-sku__stepper" integer="{{true}}" max="{{max}}" min="{{min}}" size="small" value="{{selectedNum}}"></a>
+        <b class="van-sku__quota" color="general" wx:if="{{quotaText}}">{{quotaText}}</b>
+    </view>
+</view>

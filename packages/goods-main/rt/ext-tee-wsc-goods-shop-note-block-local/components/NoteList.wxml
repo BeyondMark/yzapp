@@ -1,0 +1,6 @@
+<view class="c9ce13">
+    <block wx:for="{{noteList}}" wx:for-item="note" wx:key="noteId">
+        <a bind:_init="_tic" bind:handle-click="_p" class="c03d8" data-t="{{ handleClick:{ en:'onItemClick',args:[index] } }}" note="{{note}}" wx:if="{{index===0}}"></a>
+        <b bind:_init="_tic" bind:handle-click="_p" class="c03d8" data-t="{{ handleClick:{ en:'onItemClick',args:[index] } }}" note="{{note}}" wx:else></b>
+    </block>
+</view>

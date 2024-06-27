@@ -1,0 +1,6 @@
+<view class="nav-container">
+    <scroll-view class="scroll-nav theme-taglist-left" enhanced="{{true}}" scrollIntoView="{{'NAV'+opt.selectedGroup}}" scrollY="{{true}}" showScrollbar="{{!hideScrollbar}}" style="{{scrollViewStyle}}">
+        <view bind:tap="_p" class="nav-tab {{opt.selectedGroup===item.alias?'nav-tab__active':''}}" data-alias="{{item.alias}}" data-t="{{ tap:{en:'handleChange'} }}" id="{{'NAV'+item.alias}}" wx:for="{{opt.navList}}" wx:key="alias"> {{item.title}} </view>
+        <slot name="ext"></slot>
+    </scroll-view>
+</view>

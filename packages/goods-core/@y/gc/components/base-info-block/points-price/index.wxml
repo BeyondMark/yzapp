@@ -1,0 +1,4 @@
+<view class="c28e7f">
+    <view class="d304b c89585">兑换价：</view>
+    <view class="c78a5e c89585"> {{priceInfo.pointsPriceText}} </view>
+</view>

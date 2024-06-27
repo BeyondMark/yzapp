@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "搜索地址",
+  "usingComponents": {
+    "a": "../components/search-shop-list/index",
+    "b": "../components/user-address-list/index",
+    "_": "../../../../components/_/index"
+  },
+  "enablePullDownRefresh": true
+}

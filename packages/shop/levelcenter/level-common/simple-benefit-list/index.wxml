@@ -1,0 +1,18 @@
+<view>
+    <view class="simple-benefit-list " wx:if="{{showList.length>0}}">
+        <view class="benefit-list {{customClass}}" style="{{customBg}}">
+            <view class="benefit-item" wx:for="{{showList}}" wx:key="key">
+                <text class="badge" wx:if="{{item.key==='experienceCard'&&unTakeVisible}}">待领取</text>
+                <text class="badge coupon-badge" wx:if="{{item.key==='coupon'&&item.total}}">{{item.total}}张</text>
+                <text class="badge coupon-badge" wx:if="{{item.badge}}">{{item.badge}}</text>
+                <view bindtap="toBenefitLink" class="benefit_item-wrapper" data-index="{{index}}">
+                    <image class="icon-img" src="{{item.icon}}" wx:if="{{item.icon}}"></image>
+                    <view class="icon-num" wx:elif="{{item.benefitCount>0}}">{{item.benefitCount}}<text class="icon-unit">项</text>
+                    </view>
+                    <image class="icon-img" src="//img01.yzcdn.cn/memberlevel/v2/{{item.name}}@2x.png" wx:else></image>
+                    <text class="icon-name" style="{{customNameColor}}">{{item.facadeShowName||item.appName||item.pluginName||item.title}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

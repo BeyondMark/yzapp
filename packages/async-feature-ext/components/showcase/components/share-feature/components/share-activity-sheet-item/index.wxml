@@ -1,0 +1,13 @@
+<view class="share-activity" wx:if="{{hasShareActivity}}">
+    <view class="share-activity__main">
+        <a color="#DE373E" name="https://b.yzcdn.cn/public_files/4be833507d5d019bc3fde956b2588392.png" size="18px"></a>
+        <text class="share-activity__main-text">分享{{activityInfo.shareNum}}位好友可得<text class="share-activity__text--red">{{activityInfo.rewardText}}</text>{{activityInfo.rewardName}}</text>
+    </view>
+    <view class="share-activity__action">
+        <text bindtap="goDetailPage" class="share-activity__action-desc" wx:if="{{hasLogin}}">{{activityInfo.rewardTimesLimitText?activityInfo.rewardTimesLimitText+'，':''}}查看详情</text>
+        <b authTypeList="{{['mobile']}}" bind:next="onLoginClick" wx:else>
+            <text class="share-activity__action-login">立即登录</text>
+        </b>
+        <a color="#969799" name="arrow" size="14px"></a>
+    </view>
+</view>

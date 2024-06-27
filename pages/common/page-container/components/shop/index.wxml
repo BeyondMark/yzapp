@@ -1,0 +1,8 @@
+<a statusText="{{shop.service.status_text}}" wx:if="{{showServiceDue&&shop.isServiceDue}}"></a>
+<block wx:if="{{showStoreSwitch}}">
+    <d info="{{shop.chainStoreInfo}}" pageOptions="{{switchPageOptions}}" tableBooking="{{tableBooking}}" useImmersion="{{navigationbarConfigData.navigationbar_config_type!=='global'&&navigationbarConfigData.navigationbar_type==='immersion'}}" wx:if="{{shop.chainStoreInfo.isMultiOnlineShop}}"></d>
+    <block wx:else>
+        <c buyerAddress="{{buyerAddress}}" storeImage="{{shop.store.image}}" storeName="{{shop.store.name}}" storeSwitch="{{shop.multiStoreSwitch}}" wx:if="{{shop.isMultiStore}}"></c>
+    </block>
+</block>
+<b businessTime="{{shopClosedDesc}}" isMultiStore="{{shop.isMultiStore}}" wx:if="{{showShopStatus&&isShopClosed&&!isRetailShelf}}"></b>

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../coupon-description/index",
+    "_": "../../../../../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "会员卡拼团",
+  "usingComponents": {
+    "a": "/components/znb-web-view/index",
+    "_": "../../../components/_/index"
+  }
+}

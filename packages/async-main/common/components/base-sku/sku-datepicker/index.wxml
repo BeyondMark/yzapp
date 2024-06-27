@@ -1,0 +1,3 @@
+<a bind:after-leave="hidePicker" bind:close="closeDateTimePicker" position="bottom" round="{{true}}" show="{{show}}" zIndex="{{zIndex}}">
+    <b bind:cancel="closeDateTimePicker" bind:confirm="confirmDateTimePicker" formatter="{{formatter}}" minDate="{{minDate}}" title="{{title}}" type="{{type}}" value="{{currentDate}}" wx:if="{{showPicker}}"></b>
+</a>

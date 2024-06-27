@@ -1,0 +1,75 @@
+<c bind:_init="_tic" bind:close="_p" customClass="a4f0b" customStyle="height: 70vh;" data-t="{{ close:{en:'onClose'} }}" position="bottom" round="" safeAreaInsetBottom="" show="{{show}}">
+    <view class="a54e9" wx:if="{{giftPacks.length>1}}">
+        <view class="c08a1b">
+      充值 {{amount2Render}} 元送一个礼包
+      <d bind:_init="_tic" bind:tap="_p" customClass="c0af00" data-t="{{ tap:{en:'onClose'} }}" name="cross" size="12px"></d>
+        </view>
+        <view class="d1812" wx:for="{{giftPack2Render}}" wx:for-index="idx" wx:for-item="giftPack" wx:key="idx">
+            <view bind:tap="_p" class="a2e46" data-t="{{ tap:{ en:'handleSelect',args:[idx] } }}">
+                <view>
+                    <view class="f49ee">
+                        <d bind:_init="_tic" name="point-gift-o" size="24px"></d>
+                        <view class="c89585" style="margin-left:4px">充值{{giftPack.showAmount}}元礼包</view>
+                    </view>
+                    <view class="c23f0a">
+                        <view class="b63ec">
+                            <b bind:_init="_tic" giftPack="{{giftPack}}"></b>
+                        </view>
+                    </view>
+                </view>
+                <view class="check-icon">
+                    <d bind:_init="_tic" color="{{idx===selectedIndex?generalThemeColor:'#e0e0e0'}}" name="{{idx===selectedIndex?'checked':'circle'}}" size="22px"></d>
+                </view>
+            </view>
+            <f bind:_init="_tic" hairline="" style="border-color:#e0e0e0"></f>
+        </view>
+    </view>
+    <view class="a54e9" wx:if="{{giftPacks.length<=1}}">
+        <view class="c08a1b">
+            <d bind:_init="_tic" bind:tap="_p" customClass="c0af00" data-t="{{ tap:{en:'onClose'} }}" name="cross" size="12px"></d>
+        </view>
+        <view class="c0afae">充值{{amount2Render}}元</view>
+        <view class="d1812">
+            <f bind:_init="_tic" hairline="" style="border-color:#e0e0e0"></f>
+            <view class="rule-rights" wx:if="{{giftPacks.length===1}}">
+                <view class="ccb1b">赠送内容
+          <view class="c98294 c89585" wx:if="{{singleRights.periodText}}">｜{{singleRights.periodText}}</view>
+                </view>
+                <view class="c98275">
+                    <view class="rule-rights__item" wx:for="{{singleRights.list}}" wx:for-index="idx" wx:key="idx">
+                        <view class="c868a">
+                            <view class="c5386c"> {{item.key}} <view class="c98294 c89585" wx:if="{{item.suffix}}">
+                  ｜{{item.suffix}} </view>
+                            </view>
+                            <view class="c20a6a"> {{item.value}} </view>
+                        </view>
+                        <view class="c84b5e" wx:for="{{item.list}}" wx:for-index="idx2" wx:for-item="coupon" wx:key="idx2">
+                            <view class="c2276c">
+                                <view class="a12e5">
+                                    <view class="{{!coupon.unit?'fe586':'c1c090'}} c89585" style="font-size:{{coupon.fontSize}}"> {{coupon.value}} </view>
+                                    <view class="c6ab48 c89585" wx:if="{{coupon.unit}}"> {{coupon.unit}} </view>
+                                </view>
+                                <view class="afd8e">{{coupon.condition}}</view>
+                            </view>
+                            <view class="a026d">
+                                <view class="c3cfb0">{{coupon.name}} <view class="c96e9 c89585" wx:if="{{coupon.count>1}}">x{{coupon.count}}</view>
+                                </view>
+                                <view class="de197">{{coupon.validTimeCopywriting}}</view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="c8339b" wx:else>
+                <image class="c5fb0d bd231" lazyLoad="true" src="https://b.yzcdn.cn/wsc-h5-assets/card/none-gift-pack.png"></image>
+                <view class="c7b059">
+                    <view>暂无礼包可赠送</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="c70401">
+        <e bind:_init="_tic" kdtId="{{kdtId}}" mg=""></e>
+        <a bind:_init="_tic" bind:tap="_p" color="{{generalThemeColor}}" customClass="c3ee7" data-t="{{ tap:{en:'onRechargeClick'} }}" loading="{{isRecharging}}" round="" safeAreaInsetBottom="" type="danger"> {{btnText}} </a>
+    </view>
+</c>

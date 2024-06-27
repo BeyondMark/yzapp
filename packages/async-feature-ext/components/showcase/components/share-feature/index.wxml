@@ -1,0 +1,22 @@
+<b customClass="share-image__popup is-white" customStyle="{{popStyle}}" show="{{showModal}}" wx:if="{{showWhitePop}}">
+    <view class="share-image__container is-white" style="{{containerStyle}}">
+        <c bind:click="closeShareImageModal" class="share-image-white__close-btn" name="close" size="24"></c>
+        <image class="share-image--preview is-white" src="{{src}}" style="{{posterStyle}}"></image>
+        <d bind:click="clickSaveImage" color="#fff" customClass="share-image-white__btn">保存海报</d>
+    </view>
+</b>
+<b customClass="share-image__popup" show="{{showModal}}" wx:else>
+    <view class="share-image__container">
+        <view bindtap="closeShareImageModal" class="share-image__close-btn"></view>
+        <image class="share-image--preview" src="{{src}}"></image>
+        <d bind:click="clickSaveImage" customClass="share-image__btn" type="danger">保存图片</d>
+    </view>
+</b>
+<e bind:cancel="closeActionSheet" bind:close="closeActionSheet" closeOnClickOverlay="{{sheet.closeOnClickOverlay}}" overlay="{{sheet.overlay}}" round="{{true}}" show="{{sheet.show}}">
+    <view>
+        <a bind:update-share-status="updateShareStatus" bind:update-share-tag="updateShareTag" featureAlias="{{featureAlias}}"></a>
+        <button bind:tap="onShareCallback" class="action-sheet__item van-hairline--bottom" data-activity-alias="{{activityAlias}}" data-share-tag="{{shareTag}}" hoverClass="action-sheet__item--hover" openType="share">发送给朋友</button>
+        <button bind:tap="onPosterCallback" class="action-sheet__item van-hairline--bottom" hoverClass="action-sheet__item--hover">生成海报</button>
+    </view>
+    <view bind:tap="closeActionSheet" class="action-sheet__cancel" hoverClass="action-sheet__cancel--hover" hoverStayTime="70" style="padding-bottom: {{paddingBottom}}px">取消</view>
+</e>

@@ -1,0 +1,7 @@
+<view class="contact" style="{{themeCSS}}" wx:if="{{contact.required}}">
+    <c bind:_init="_tic" bind:tap="_p" center="{{true}}" class="contact__head long-cell" data-ref="contactCell" data-t="{{ tap:{en:'onClick'} }}" title="填写联系人" titleClass="e5a89" valueClass="d9313"> {{cellValue}} <d bind:_init="_tic" class="b4707" name="arrow"></d>
+    </c>
+    <b bind:_init="_tic" bind:focus="_p" bind:input="_p" customClass="long-cell contact__cell" data-t="{{ input:{en:'setUserName'},focus:{en:'onFocus'} }}" errorMessage="{{errorInfo.userName?'请输入正确的姓名':''}}" label="姓名" placeholder="请填写联系人姓名" value="{{userName}}" valueClass="c24117"></b>
+    <b bind:_init="_tic" bind:focus="_p" bind:input="_p" border="{{false}}" customClass="long-cell contact__cell" data-t="{{ input:{en:'setTelephone'},focus:{en:'onFocus'} }}" errorMessage="{{errorInfo.telephone?'请输入正确的手机号':''}}" label="手机号码" placeholder="请填写手机号码" value="{{telephone}}"></b>
+    <a addText="新增联系人" bind:_init="_tic" bind:add="_p" bind:close="_p" bind:edit="_p" bind:select="_p" data-t="{{ close:{en:'onContactListClose'},select:{en:'onChange'},add:{en:'onListEdit'},edit:{en:'onListEdit'} }}" id="contact-list" rmId="b36-43" show="{{showContactList}}" title="选择联系人" wx:if="{{rmId==='b36-28'}}"></a>
+</view>

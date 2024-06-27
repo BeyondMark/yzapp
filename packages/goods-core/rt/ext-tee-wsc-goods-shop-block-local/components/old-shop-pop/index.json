@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y-open/vt/dist/popup/index.weapp",
+    "b": "./../shop-base-info/index",
+    "_": "../../../../../../components/_/index"
+  }
+}

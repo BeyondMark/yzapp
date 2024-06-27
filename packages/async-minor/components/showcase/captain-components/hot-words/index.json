@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-main/@vant/weapp/dist/icon/index",
+    "b": "./components/hot-words-item/index",
+    "_": "../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

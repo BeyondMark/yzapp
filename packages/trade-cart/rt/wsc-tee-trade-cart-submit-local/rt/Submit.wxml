@@ -1,0 +1,41 @@
+<view class="{{rootClass.root}}" style="{{themeStyle+wrapperStyle}}" wx:if="{{!showEmptyCart&&dataLoaded}}">
+    <g bind:_init="_tic" bind:select="_p" data-t="{{ select:{en:'selectBestPrice'} }}" info="{{recommendPromotionInfoList}}"></g>
+    <view class="d2ec8">
+        <view class="ce25d"></view>
+        <view class="c85340">
+            <view class="c9fced">
+                <a bind:_init="_tic" bind:tap="_p" customClass="{{iconCustomClass}}" data-t="{{ tap:{en:'handleCheckAllGoods'} }}" name="{{iconName}}" size="20px"></a>
+            </view>
+            <view bind:tap="_p" class="c1dee8" data-t="{{ tap:{en:'handleCheckAllGoods'} }}">
+                <view>全选</view>
+            </view>
+        </view>
+        <view class="c8e0d0 t-clearfix">
+            <view class="c46ead" wx:if="{{!isEditMode}}">
+                <view class="f5aac">
+                    <view class="c1dee8 c89585" wx:if="{{isShowDiscountBar}}"> {{cartBottomData.desc}} </view>
+                    <view class="c43c9b c89585">
+                        <view class="c5e427 c89585">合计：</view>
+                        <d bind:_init="_tic" class="c78a5e-inner {{cartBottomData.totalPrice>0?'active':''}}" price="{{cartBottomData.totalPrice}}"></d>
+                    </view>
+                </view>
+                <view class="discount-c1dee8">
+                    <view class="c1dee8" wx:if="{{isShowDiscountBar}}">
+                        <view class="c89585">共优惠：<view class="c363a0 c89585">￥{{discountValue}}</view>
+                        </view>
+                        <c bind:_init="_tic" bind:tap="_p" class="c2f090" color="#f2f3f5" data-t="{{ tap:{ en:'clickDiscountDetail',args:[!discountDetailVisible] } }}" textColor="#323233">
+                            <view class="c89585">优惠明细</view>
+                            <a bind:_init="_tic" name="{{arrowClassName}}"></a>
+                        </c>
+                    </view>
+                    <view class="c1dee8" wx:else> {{cartBottomData.desc}} </view>
+                </view>
+            </view>
+            <view class="c5ae10">
+                <b bind:_init="_tic" bind:tap="_p" block="{{true}}" customClass="{{submitBtnClass}}" data-t="{{ tap:{en:'handleBtnTap'} }}" disabled="{{!totalNum}}" loading="{{loading}}"> {{buttonText}} </b>
+            </view>
+        </view>
+    </view>
+    <f bind:_init="_tic" bind:buy="_p" bind:close-separate-buy-popup="_p" data-t="{{ buy:{en:'buyWithGoods'},closeSeparateBuyPopup:{en:'handleCloseSeparateBuyPopup'} }}" separateBuy="{{separateBuy}}" themeCss="{{themeCSS}}" wx:if="{{separateBuy.show}}"></f>
+    <e bind:_init="_tic" bind:click-discount-detail="_p" bind:select="_p" data-ref="discountDetailPopup" data-t="{{ clickDiscountDetail:{en:'clickDiscountDetail'},select:{en:'showPromotionPopup'} }}" goodsTotalPrice="{{cartBottomData.goodsTotalPrice}}" promotionDetails="{{cartBottomData.promotionDetails}}" promotionInfo="{{recommendPromotionInfoList}}" totalDiscount="{{cartBottomData.totalDiscount}}" totalPrice="{{cartBottomData.totalPrice}}" visible="{{discountDetailVisible}}"></e>
+</view>

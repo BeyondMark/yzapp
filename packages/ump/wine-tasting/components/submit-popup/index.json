@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@vant/weapp/dist/popup/index",
+    "b": "../../../@vant/weapp/dist/cell-group/index",
+    "c": "../../../@vant/weapp/dist/field/index",
+    "d": "../../../@vant/weapp/dist/button/index",
+    "_": "../../../../../components/_/index"
+  }
+}

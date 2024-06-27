@@ -1,0 +1,3 @@
+<view class="order-cell-group">
+    <slot></slot>
+</view>

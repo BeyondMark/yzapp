@@ -1,0 +1,26 @@
+<a bind:_init="_tic" customStyle="{{themeBackground5Style}}" isWxReceipt="{{isWxReceipt}}">
+    <view class="d6e16">
+        <view class="c59da8" style="{{isWxReceipt?'padding-left: 0;':''}}">
+            <view class="c64bc4">
+                <view class="{{'c66d06-pack'}} {{index>0?'c84c17':''}}" wx:for="{{curCoupons}}" wx:key="index">
+                    <view class="a0868">
+                        <view class="c66d06" style="{{themeBorder30Style}}">
+                            <view class="c78a5e">
+                                <c bind:_init="_tic" color="var(--ump-price, #323233)" curFontSize="{{30}}" isSkyline="{{isSkyline}}" item="{{item}}" minFontSize="{{12}}"></c>
+                            </view>
+                            <view class="aa9f7" style="{{themeBorder30Style}}">
+                                <view class="c8a887 c50ea4" style="{{themeBackground5Style+themeBorder30Style}}"></view>
+                                <view class="c8a887 c752d1" style="{{themeBorder30Style+themeBackground5Style}}"></view> {{item.thresholdCopywriting}} </view>
+                        </view>
+                    </view>
+                    <view class="c9277d" style="{{themeBackground5Style+themeBorder20Style}}"></view>
+                </view>
+            </view>
+        </view>
+        <view class="c56e03">
+            <view class="c95dd7 c6468f c89585" style="{{themeColorStyle}}">优惠券卡包</view>
+            <view class="c1fd7a c6468f c89585">共{{info.total}}张优惠券</view>
+            <b bind:_init="_tic" bind:tap="_p" customClass="ce50a" data-t="{{ tap:{en:'clickBtn'} }}" round="{{true}}" size="small">{{receiveStatus?'立即使用':'立即领取'}}</b>
+        </view>
+    </view>
+</a>

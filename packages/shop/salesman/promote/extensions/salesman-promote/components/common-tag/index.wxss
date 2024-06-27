@@ -1,0 +1,24 @@
+.common-tag {
+  padding: 0;
+  margin: 0;
+}
+.common-tag,
+.common-tag__container {
+  position: relative;
+  display: inline-block;
+}
+.common-tag__container {
+  font-size: 12px;
+  text-align: center;
+  white-space: nowrap;
+}
+.common-tag__inner {
+  line-height: 16px;
+  font-size: 12px;
+  padding: 0 4px;
+  border-radius: 1rem;
+  height: 15px;
+}
+.common-tag__info-tag {
+  border-radius: 2px;
+}

@@ -1,0 +1,15 @@
+<a bind:_init="_tic" bind:click-overlay="_p" closeOnClickOverlay="{{true}}" customClass="c7a6ca" data-t="{{ clickOverlay:{en:'handleClose'} }}" show="{{visible}}">
+    <view bind:tap="_p" class="c7251d" data-t="{{ tap:{en:'handleClose'} }}"></view>
+    <view class="c76bee">
+        <view class="c91680">
+            <view class="c6d993">
+                <c amount="{{activityInfo.valueDesc}}" bind:_init="_tic" prefix="{{activityInfo.preDesc}}" quantity="{{activityInfo.quantity}}" unit="{{activityInfo.unitDesc}}"></c>
+                <b bind:_init="_tic" class="f0e6e" color="#fde2c4" round="{{true}}" textColor="#ff4444">优惠券礼包</b>
+                <view class="c18221">
+                    <button bind:tap="_p" class="c85e47" data-detail="fission" data-t="{{ tap:{en:'selfShareClick'} }}" openType="share">            分享给好友立即领取
+          </button>
+                </view>
+            </view>
+        </view>
+    </view>
+</a>

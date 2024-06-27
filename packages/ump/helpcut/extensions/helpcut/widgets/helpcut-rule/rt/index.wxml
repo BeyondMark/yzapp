@@ -1,0 +1,6 @@
+<view>
+    <view class="rules">
+        <view class="rules-detail" wx:for="{{showRules}}" wx:for-item="rule" wx:key="{{ key }}">{{rule}}</view>
+    </view>
+    <image class="rule-image" src="{{showRuleImage}}"></image>
+</view>

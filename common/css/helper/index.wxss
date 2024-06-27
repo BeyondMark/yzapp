@@ -1,0 +1,74 @@
+@import "/@vant/weapp/dist/common/index.wxss";
+@import "/common/css/helper/zanui.wxss";
+.van-pull-left {
+  float: left;
+}
+.van-pull-right {
+  float: right;
+}
+.van-center {
+  text-align: center;
+}
+.van-right {
+  text-align: right;
+}
+.van-text-deleted {
+  text-decoration: line-through;
+}
+.van-font-10 {
+  font-size: 10px;
+}
+.van-font-12 {
+  font-size: 12px;
+}
+.van-font-14 {
+  font-size: 14px;
+}
+.van-font-16 {
+  font-size: 16px;
+}
+.van-font-18 {
+  font-size: 18px;
+}
+.van-font-20 {
+  font-size: 20px;
+}
+.van-font-22 {
+  font-size: 22px;
+}
+.van-font-bold {
+  font-weight: 700;
+}
+.van-arrow {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+  border-color: #c8c8c8;
+  border-style: solid;
+  border-width: 2px 2px 0 0;
+  transform: translateY(-50%) matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+}
+.van-c-333 {
+  color: #333;
+}
+.van-c-red {
+  color: #f44;
+}
+.van-c-black {
+  color: #000;
+}
+.van-c-blue {
+  color: #38f;
+}
+.van-c-gray {
+  color: #c9c9c9;
+}
+.van-c-gray-dark {
+  color: #999;
+}
+.van-c-gray-darker {
+  color: #666;
+}

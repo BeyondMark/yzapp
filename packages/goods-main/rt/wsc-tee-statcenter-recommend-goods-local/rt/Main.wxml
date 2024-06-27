@@ -1,0 +1,6 @@
+<view class="c48d9f" style="{{themeCSS}}" wx:if="{{isShow}}">
+    <b bind:_init="_tic" bind:load="_p" data-t="{{ load:{en:'onLoad'} }}" finished="{{finished}}" finishedText="没有更多了" loading="{{loading}}">
+        <a bind:_init="_tic" recommendTitle="{{title}}" rmId="{{i[0]}}" wx:if="{{i[1]}}" wx:for="{{[ [rmId,rmId==='b18-8'],['b18-19',rmId==='b18-8'],['b18-8',rmId==='b18-19'],[rmId,rmId==='b18-19'],[rmId,rmId==='b18-52'||rmId==='b4-1'||rmId==='b39-11'||rmId==='b21-11'||rmId==='b20-3'||rmId==='b19-10'],[rmId,rmId==='b7-31'] ]}}" wx:for-item="i" wx:key="0"></a>
+        <c bind:_init="_tic" isSkyline="{{isSkyline}}" layoutConfig="{{layoutConfig}}" list="{{recommendList}}" logger="{{logger}}" themeColors="{{themeColors}}"></c>
+    </b>
+</view>

@@ -1,0 +1,16 @@
+<view class="t-calendar__month" style="{{monthStyle}}">
+    <view class="t-calendar__month-title" wx:if="{{showMonthTitle}}"> {{monthTitle}} </view>
+    <view class="t-calendar__days" wx:if="{{visible}}">
+        <view class="t-calendar__month-mark" wx:if="{{showMark}}"> {{mark}} </view>
+        <view catch:tap="_p" class="{{item.class}} {{item.className}}" data-index="{{index}}" data-t="{{ tap:{en:'onClick',et:'stop'} }}" style="{{item.style}}" wx:for="{{days}}" wx:key="index">
+            <view class="t-calendar__selected-day" style="{{selectStyle}}" wx:if="{{item.type==='selected'}}">
+                <view class="t-calendar__top-info" wx:if="{{item.topInfo}}">{{item.topInfo}}</view> {{item.text}} <view class="t-calendar__bottom-info" wx:if="{{item.bottomInfo}}"> {{item.bottomInfo}} </view>
+            </view>
+            <view wx:else>
+                <view class="t-calendar__top-info" wx:if="{{item.topInfo}}">{{item.topInfo}}</view>
+                <view hidden="{{!!(item.type==='selected')}}"> {{item.text}} </view>
+                <view class="t-calendar__bottom-info" wx:if="{{item.bottomInfo}}"> {{item.bottomInfo}} </view>
+            </view>
+        </view>
+    </view>
+</view>

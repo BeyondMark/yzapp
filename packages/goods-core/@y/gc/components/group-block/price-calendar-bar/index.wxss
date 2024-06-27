@@ -1,0 +1,14 @@
+.c2fb27 {
+  display: flex;
+  padding: 0 var(--theme-page-outline-margin-top, 10px)
+    var(--theme-page-outline-margin-top, 10px)
+    var(--theme-page-outline-margin-top, 10px);
+  background: #fff;
+}
+.c6fc04 {
+  margin-right: 10px;
+  width: calc(25% - 8.75px);
+}
+.c6fc04:nth-child(4) {
+  margin-right: 0;
+}

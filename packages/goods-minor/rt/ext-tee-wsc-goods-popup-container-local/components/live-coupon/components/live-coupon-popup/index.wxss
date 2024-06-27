@@ -1,0 +1,131 @@
+.t-text {
+  display: inline-block;
+  text-decoration: inherit;
+}
+@keyframes breath {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.03);
+  }
+  40% {
+    transform: scale(1.06);
+  }
+  60% {
+    transform: scale(1.03);
+  }
+  80% {
+    transform: scale(1);
+  }
+}
+.live-coupon-container {
+  padding: 0 16px;
+  width: 311px;
+  min-height: 316px;
+  position: relative;
+}
+.live-coupon-close-icon {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  transform: translateY(-100%);
+  width: 32px;
+  height: 32px;
+  background-image: url(https://img01.yzcdn.cn/public_files/75e5c7bcee301fde8e54d5c4790568d0.png!small.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.live-coupon-title {
+  font-size: 16px;
+  color: #323233;
+  text-align: center;
+  height: 94px;
+  line-height: 94px;
+}
+.live-coupon-card {
+  height: 84px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  background-color: #fff6f6;
+  border: 1px solid #fcc;
+  color: #fa1919;
+}
+.live-coupon-card.received {
+  background-image: url(https://img01.yzcdn.cn/public_files/fca2ca948329b760617e520a20bd0e0d.png!small.png);
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 30px;
+}
+.live-coupon-card__price {
+  flex-shrink: 0;
+  width: 130px;
+  line-height: 30px;
+  font-size: 32px;
+  text-align: center;
+  font-weight: 700;
+}
+.live-coupon-card__price.price-length-1,
+.live-coupon-card__price.price-length-2,
+.live-coupon-card__price.price-length-3,
+.live-coupon-card__price.price-length-4 {
+  font-size: 32px;
+}
+.live-coupon-card__price.price-length-5 {
+  font-size: 26px;
+}
+.live-coupon-card__price.price-length-6 {
+  font-size: 20px;
+}
+.live-coupon-card__price.price-length-7 {
+  font-size: 18px;
+}
+.live-coupon-card__price.price-length-8 {
+  font-size: 16px;
+}
+.live-coupon-card__price.price-length-9 {
+  font-size: 14px;
+}
+.live-coupon-card__price--unit {
+  flex: 1;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  margin-left: 2px;
+}
+.live-coupon-card__desc {
+  margin-left: 12px;
+}
+.live-coupon-card__limit {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #323233;
+  line-height: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.live-coupon-card__countdown,
+.live-coupon-card__time {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 16px;
+  color: #f44;
+}
+.live-coupon-button {
+  margin: 30px auto 0;
+  width: 260px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 24px;
+  transform-origin: center;
+  background-image: linear-gradient(270deg, #ff572f, #ff0438);
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+}
+.live-coupon-button.breath {
+  animation: breath 0.8s linear infinite;
+}

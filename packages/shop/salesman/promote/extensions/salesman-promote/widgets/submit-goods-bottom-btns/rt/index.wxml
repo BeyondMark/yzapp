@@ -1,0 +1,21 @@
+<view class="goods-buttons">
+    <a bind:tap="handleToGoodsDetail" class="self-buy-btn" data-query="{{jumpGoodsDetailQuery}}" round="{{true}}" type="default" wx:if="{{!disabledBtnTextInfo}}">
+        <view class="btn-title self-buy-btn-title">{{buyBtnTextInfo.btnText}}</view>
+        <view class="btn-desc" wx:if="{{buyBtnTextInfo.btnDesc}}">{{buyBtnTextInfo.btnDesc}}</view>
+    </a>
+    <block wx:if="{{!disabledBtnTextInfo&&cubeGoodsInfo}}">
+        <c class="share-btn" customIcon="{{true}}" hideGoodsPoster="{{false}}" needBindRelation="{{false}}" rmId="b29-5" scenes="item_promote" wx:if="{{rmId==='b29-0'}}">
+            <a class="share-btn" color="{{mainColor}}" round="{{true}}" slot="custom-icon" wx:if="{{!disabledBtnTextInfo}}">
+                <view class="btn-title">{{shareBtnTextInfo.btnText}}</view>
+                <view class="btn-desc" wx:if="{{shareBtnTextInfo.btnDesc}}">{{shareBtnTextInfo.btnDesc}}</view>
+            </a>
+        </c>
+    </block>
+    <a bind:tap="handleJumpHome" class="disabled-btn theme__button--main" color="{{mainColor}}" round="{{true}}" wx:if="{{disabledBtnTextInfo}}">
+        <view class="btn-title">{{disabledBtnTextInfo.btnText}}</view>
+        <view class="btn-desc" wx:if="{{disabledBtnTextInfo.btnDesc}}">{{disabledBtnTextInfo.btnDesc}}</view>
+    </a>
+    <block wx:if="{{taskAwardData.hasRunningTask&&taskAwardData.nextAwardGap}}">
+        <b rmId="{{rmId}}" wx:if="{{rmId==='b29-0'}}"></b>
+    </block>
+</view>

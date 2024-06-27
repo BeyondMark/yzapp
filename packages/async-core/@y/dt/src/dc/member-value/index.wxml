@@ -1,0 +1,4 @@
+<view class="dc-member-value">
+    <b bgColor="{{opt.bg_color}}" bind:_init="_tic" cardBgColor="{{opt.card_bg_color}}" cardBorderRadius="{{opt.card_border_radius}}" kdtId="{{kdtId}}" memberTemplateType="{{opt.member_template_type}}" pageMargin="{{opt.page_margin}}" rechargeRules="{{opt.recharge_rule}}" ruleCardColor="{{opt.rule_color}}" themeColors="{{themeColors}}" wx:if="{{opt.member_value_type==='0'}}"></b>
+    <a bind:_init="_tic" kdtId="{{kdtId}}" list="{{opt.gift_card_list}}" themeColors="{{themeColors}}" wx:if="{{opt.member_value_type==='1'}}"></a>
+</view>

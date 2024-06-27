@@ -1,0 +1,20 @@
+<c bind:_init="_tic" bind:close="_p" class="c90f97" closeable="{{true}}" customStyle="{{wrapperStyle}}" data-t="{{ close:{en:'handleClose'} }}" getContainer="body" position="bottom" round="{{true}}" safeAreaInsetBottom="{{true}}" show="{{show}}" wx:if="{{initialShow}}">
+    <view>
+        <view class="a794b">挑选赠品</view>
+        <view class="e319f">
+            <view class="c9c18c">可选{{selectablePresentNum}}种赠品</view>
+            <view class="c38f53" style="{{disabledConfirm?'padding-bottom: 40px;':''}}">
+                <a activityId="{{activityId}}" bind:_init="_tic" bind:change-item-checked="_p" bind:change-sku="_p" customStyle="border-radius: var(--theme-radius-card,16px); margin-bottom: 8px; overflow: hidden;" data-t="{{ changeItemChecked:{en:'handleCheckedGoods'},changeSku:{en:'handleChangeSku'} }}" goods="{{gds}}" isCanChoose="{{true}}" isChoose="{{!!checkedGoodsMap[gds.skuId]}}" isPop="{{true}}" mustChoose="{{selectablePresentNum===goodsList.length}}" rmId="b36-26" wx:if="{{rmId==='b36-14'}}" wx:for="{{goodsList}}" wx:for-item="gds" wx:key="skuId"></a>
+            </view>
+        </view>
+        <view class="c86ba4">
+            <view class="c24aa0" wx:if="{{disabledConfirm}}">        最多可选{{selectablePresentNum}}种赠品
+      </view>
+        </view>
+        <view class="c164ca">
+            <view class="c89585">已选：{{checkedGoodsList.length}}</view>
+            <b bind:_init="_tic" bind:tap="_p" color="{{themeGeneralColor}}" customStyle="border-radius: var(--theme-radius-button,18px);color: #fff;height: 36px;width: 96px;" data-t="{{ tap:{en:'handleConfirm'} }}" disabled="{{disabledConfirm}}">        确定
+      </b>
+        </view>
+    </view>
+</c>

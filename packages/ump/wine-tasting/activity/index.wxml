@@ -1,0 +1,35 @@
+<page-meta pageStyle="overflow: {{pageOverflow}}">
+    <view class="wine-tasting-activity" hidden="{{hiddenPage}}" style="--theme-main-color: {{themeColor}};--cs-nav-bar-height: {{navBarHeight}}px; --cs-bg-img-position: {{bgImgPosition}};--main-bg-color:{{error.show?'#f7f8fa':'#fff'}}">
+        <b border="{{false}}" customClass="nav-bar {{showNavBar||error.show?'show':''}}" fixed="{{true}}" id="nav-bar" title="{{showNavBar||error.show?'品鉴会活动':''}}" zIndex="98">
+            <i bind:click="goHome" class="nav-bar-home" name="wap-home-o" slot="left"></i>
+        </b>
+        <e tips="{{error.tips}}" wx:if="{{error.show}}"></e>
+        <block wx:else>
+            <view class="wine-tasting-image-view">
+                <a class="wine-tasting-img" customClass="wine-tasting-img-bg" fit="contain" height="1000rpx" src="{{info.coverPicUrlStr}}" style="background-image: url({{info.coverPicUrlStr}})" width="100vw"></a>
+            </view>
+            <view class="wine-tasting-activity-content {{contentRadius?'radius':''}}" id="activity-content">
+                <view class="content-top {{info.content?'border':''}}">
+                    <view class="content-title">{{info.title}}</view>
+                    <d info="{{info}}"></d>
+                </view>
+                <view class="content-info" wx:if="{{info.content}}">
+                    <view class="content-info-title">活动详情</view>
+                    <view>
+                        <h componentData="{{info}}"></h>
+                    </view>
+                </view>
+            </view>
+            <view class="wine-tasting-activity-footer" wx:if="{{promoterId}}">
+                <j customClass="button-submit disabled" wx:if="{{info.submitButtonDisabled}}">{{info.submitButtonStr}}</j>
+                <j bind:click="showSubmitPopup" customClass="button-submit apply" data-flag="{{true}}" wx:elif="{{mobile}}">{{info.submitButtonStr}}</j>
+                <k authTypeList="{{['mobile']}}" bind:next="showSubmitPopup" btnClass="wine-tasting-userinfo" data-flag="{{true}}" wx:else>
+                    <j customClass="button-submit apply">{{info.submitButtonStr}}</j>
+                </k>
+            </view>
+        </block>
+    </view>
+    <g></g>
+    <f bind:close="appliedPopupClose" show="{{appliedPopupShow}}"></f>
+    <c activityInfo="{{applyPopup.info}}" bind:afterSubmit="afterSubmit" bind:close="showSubmitPopup" data-flag="{{false}}" show="{{applyPopup.show}}"></c>
+</page-meta>

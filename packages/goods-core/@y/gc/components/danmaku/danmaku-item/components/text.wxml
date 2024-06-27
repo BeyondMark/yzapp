@@ -1,0 +1,3 @@
+<a bind:_init="_tic" bind:update="_p" bulletKey="{{bulletKey}}" customClass="{{'text-danmaku '+(emotionUrl?'c90db6 ':' ')+customClass}}" data-t="{{ update:{en:'updateBullet'} }}" isPlaying="{{isPlaying}}" left="{{left}}" maxTextLength="{{maxTextLength}}" offsetWidth="{{emotionUrl?9:0}}" sourceData="{{sourceData}}" top="{{top}}">
+    <view class="c9a601" slot="header" style="background-image:{{'url('+emotionUrl+')'}}" wx:if="{{emotionUrl}}"></view>
+</a>

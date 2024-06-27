@@ -1,0 +1,7 @@
+<view style="{{themeVars}}" wx:if="{{showTopNavBar}}">
+    <view class="c4f03b" hidden="{{!(opacityVal>0)}}" style="opacity:{{opacityVal}}; top:{{topNavHeight+'px'}}">
+        <a active="{{activeIndex}}" bind:_init="_tic" bind:tap="_p" border="{{false}}" color="var(--general)" data-t="{{ tap:{en:'goAnchor'} }}" lineClass="f9264" lineWidth="26" navClass="nav-wrapper" pid="{{pid}}" tabActiveClass="c4bdbf" tabClass="c44a4d">
+            <b bind:_init="_tic" pid="{{pid}}" title="{{item.name}}" wx:for="{{navTabList}}" wx:key="name"></b>
+        </a>
+    </view>
+</view>

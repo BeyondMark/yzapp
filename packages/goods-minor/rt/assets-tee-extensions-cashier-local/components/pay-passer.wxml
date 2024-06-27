@@ -1,0 +1,13 @@
+<a bind:_init="_tic" bind:close="_p" closeOnClickOverlay="{{false}}" closeable="{{true}}" customClass="pay-passer__root" data-t="{{ close:{ en:'$emit',args:['close'] } }}" overlay="{{overlay}}" position="bottom" round="{{round}}" safeAreaInsetBottom="{{true}}" show="{{show}}">
+    <view class="{{true?'pay-passer__container':''}} {{cashierType==='B'?'pay-passer__container--b':''}}">
+        <view class="zan-pay__header">
+            <view class="zan-pay__title t-text"> 请输入支付密码 </view>
+        </view>
+        <view class="pay-passer__content">
+            <b bind:_init="_tic" length="{{length}}"></b>
+            <view bind:tap="_p" class="pay-passer__forget-link" data-t="{{ tap:{ en:'$emit',args:['forget-pass'] } }}">        忘记密码?
+      </view>
+            <c bind:_init="_tic" bind:delete="_p" bind:input="_p" data-t="{{ input:{en:'onInput'},delete:{en:'onDelete'} }}" overlay="{{false}}" show="{{true}}"></c>
+        </view>
+    </view>
+</a>

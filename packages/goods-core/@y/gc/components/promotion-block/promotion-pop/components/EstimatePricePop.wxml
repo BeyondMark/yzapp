@@ -1,0 +1,31 @@
+<view class="c761d1">
+    <view bind:tap="_p" class="c68117" data-t="{{ tap:{en:'toggle'} }}">
+        <view class="c017e4">
+            <view class="c234a5" wx:if="{{goodsEstimatePriceData.num===1}}">使用以下优惠，预计到手
+        <view class="eb125">¥{{goodsEstimatePriceData.estimatedPrice}}</view>，
+        <view class="c6a6c4 c89585">          优惠明细
+                    <b bind:_init="_tic" customClass="{{vanIconClass}}" name="arrow"></b>
+                </view>
+            </view>
+            <view class="c234a5" wx:else>使用以下优惠，买{{' '+goodsEstimatePriceData.num+' '}}件预计{{goodsSpe>1?'最低':''}}单价<view class="eb125">￥{{goodsEstimatePriceData.estimatedPrice}}</view>，
+        <view class="c6a6c4 c89585">          优惠明细
+                    <b bind:_init="_tic" customClass="{{vanIconClass}}" name="arrow"></b>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="c7471d c0fba3" hidden="{{!show}}">
+        <view class="c5f04e">
+            <view class="c96648"> {{totalPriceWords}}{{goodsEstimatePriceData.num>1?'('+goodsEstimatePriceData.num+'件)：':'：'}} </view>
+            <view class="e3c64">¥{{goodsEstimatePriceData.totalPrice||goodsEstimatePriceData.totalOriginalPrice}}</view>
+        </view>
+        <view wx:for="{{promotionList}}" wx:for-item="activity" wx:key="index">
+            <view class="c5f04e">
+                <view class="c96648">{{activity.activityNameTag||activity.activityName}}：{{activity.promotionContent}}</view>
+                <view class="e3c64">- ¥{{activity.totalDecreaseAmount}}</view>
+            </view>
+        </view>
+    </view>
+    <a bind:_init="_tic" bind:tap="_p" coupon="{{estimateCouponShowList[0]}}" data-t="{{ tap:{en:'handleUmpCouponClick'} }}" isGrayText="{{true}}" kdtId="{{kdtId}}" wx:if="{{isShowOptimalCoupon}}"></a>
+    <c bind:_init="_tic"></c>
+</view>

@@ -1,0 +1,41 @@
+.dc-course-group-list .knowleadge-container.template-type1 {
+  background-color: #fff;
+}
+.dc-course-group-list .knowleadge-item-container {
+  position: relative;
+  width: 100%;
+  overflow: auto;
+}
+.dc-course-group-list .knowleadge-item-container .knowleadge-scroll-wrap {
+  display: -webkit-flex;
+  display: flex;
+  overflow: visible;
+}
+.dc-course-group-list .knowleadge-item-container .cap-knowleadge-wrap {
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: wrap;
+}
+.dc-course-group-list .knowleadge-item-container .knowledge-good-item-mode0 {
+  width: 100%;
+}
+.dc-course-group-list .knowleadge-item-container .knowledge-good-item-mode1 {
+  width: 50%;
+}
+.dc-course-group-list .knowleadge-item-container .knowledge-good-item-mode2 {
+  width: 33.3%;
+}
+.dc-course-group-list .knowleadge-item-container .knowledge-good-item-mode3,
+.dc-course-group-list
+  .knowleadge-item-container
+  .knowledge-good-item-mode4.big {
+  width: 100%;
+}
+.dc-course-group-list
+  .knowleadge-item-container
+  .knowledge-good-item-mode4.small {
+  width: 50%;
+}
+.dc-course-group-list .knowleadge-item-container .knowledge-good-item-mode5 {
+  min-width: 40%;
+}

@@ -1,0 +1,26 @@
+<view class="d2a95 {{customClass}}">
+    <view class="c813ea">
+        <block wx:if="{{previewImage}}">
+            <view bind:tap="_p" class="c038c9" data-t="{{ tap:{ en:'onClickPreview',args:[index] } }}" wx:for="{{lists}}" wx:key="index">
+                <image bind:tap="_p" class="ca8bb bd231" data-t="{{ tap:{ en:'onPreviewImage',args:[index] } }}" lazyLoad="true" mode="{{imageFit}}" src="{{item.thumb||item.url||item}}" style="{{item.style}}" wx:if="{{item.isImage}}"></image>
+                <view class="ac9e4" wx:if="{{item.status==='uploading'||item.status==='failed'}}">
+                    <a bind:_init="_tic" class="c070ed" name="close" wx:if="{{item.status==='failed'}}"></a>
+                    <b bind:_init="_tic" customClass="f2bf0" wx:else></b>
+                    <view class="c34979 c89585" wx:if="{{item.message}}"> {{item.message}} </view>
+                </view>
+                <view bind:tap="_p" class="c0e1c7" data-t="{{ tap:{ en:'deleteItem',args:[index] } }}" wx:if="{{deletable&&item.deletable}}">
+                    <a bind:_init="_tic" class="c1af6c" name="cross"></a>
+                </view>
+            </view>
+        </block>
+        <block wx:if="{{isInCount}}">
+            <view bind:tap="_p" class="c4580 {{slotClass}}" data-t="{{ tap:{en:'startUpload'} }}">
+                <slot></slot>
+            </view>
+            <view bind:tap="_p" class="{{'dc37c'}} {{disabled?'c3710c':''}}" data-t="{{ tap:{en:'startUpload'} }}" style="{{previewStyle}}" wx:if="{{showUpload}}">
+                <a bind:_init="_tic" class="c31206" name="{{uploadIcon}}"></a>
+                <view class="a7a18 c89585" wx:if="{{uploadText}}"> {{uploadText}} </view>
+            </view>
+        </block>
+    </view>
+</view>

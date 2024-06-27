@@ -1,0 +1,31 @@
+{
+  "navigationBarTitleText": "权益卡",
+  "navigationBarBackgroundColor": "#FFF",
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "van-cell": "../@vant/weapp/dist/cell/index",
+    "van-cell-group": "../@vant/weapp/dist/cell-group/index",
+    "van-icon": "../../async-main/@vant/weapp/dist/icon/index",
+    "page-container": "/pages/common/page-container/index",
+    "salesman-cube": "../../async-main/components/showcase/components/salesman-cube/index",
+    "card": "./components/card/index",
+    "action-btn": "./components/action-btn/index",
+    "addition-action": "./components/addition-action/index",
+    "select-shop": "./components/select-shop/index",
+    "recommend-goods": "./components/recommend-goods/index",
+    "navigation-bar": "./components/navigation-bar/index",
+    "exclusive-container": "./components/exclusive-container/index",
+    "van-loading": "../../async-main/@vant/weapp/dist/loading/index",
+    "van-toast": "../../async-main/@vant/weapp/dist/toast/index",
+    "van-dialog": "../../async-main/@vant/weapp/dist/dialog/index",
+    "_": "../../../components/_/index"
+  },
+  "componentPlaceholder": {
+    "van-icon": "_",
+    "salesman-cube": "_",
+    "van-loading": "_",
+    "van-toast": "_",
+    "van-dialog": "_"
+  }
+}

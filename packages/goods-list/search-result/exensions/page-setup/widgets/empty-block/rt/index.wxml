@@ -1,0 +1,7 @@
+<view bindtap="handleRootTap" class="c5bfc" style="{{goodsOpt.layoutOpt.type==='list'?'; background: #fff':'; background: linear-gradient(180deg, #FFF 20vh, #F5F5F5 50vh)'}}" wx:if="{{isShowProducts&&isEmpty}}">
+    <image class="c23c7" src="https://img01.yzcdn.cn/public_files/123c352d876be85e960ca5c78dd910a6.png"></image>
+    <view class="c56a5a">
+        <view>没有找到你想要的商品</view>
+        <view>换个搜索词试试</view>
+    </view>
+</view>

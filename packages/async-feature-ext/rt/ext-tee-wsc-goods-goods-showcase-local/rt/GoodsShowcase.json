@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../statcenter/goods-showcase/Widget",
+    "_": "../../../../../components/_/index"
+  }
+}

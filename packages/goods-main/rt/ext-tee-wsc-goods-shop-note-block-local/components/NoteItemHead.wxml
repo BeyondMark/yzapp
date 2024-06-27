@@ -1,0 +1,6 @@
+<view bind:tap="_p" class="ef78f" data-t="{{ tap:{en:'handleItemClick'} }}">
+    <view class="d709e"></view>
+    <a bind:_init="_tic" noteType="{{note.noteType}}"></a>
+    <image class="ca5bf bd231" lazyLoad="true" mode="aspectFill" src="{{note.headImageUrl}}"></image>
+    <view class="f70ae t-ellipsis"> {{note.title}} </view>
+</view>

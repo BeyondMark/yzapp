@@ -1,0 +1,20 @@
+<view class="{{true?'plus-buy-card':''}} {{isOne?'plus-buy-card-one':''}}" style="{{themeCSS}}">
+    <view bind:tap="_p" class="c" data-t="{{ tap:{en:'onClickCard'} }}">
+        <image class="c__thumb tee-image" lazyLoad="true" src="{{goodsData.picture}}"></image>
+        <view class="c__content">
+            <view>
+                <view class="c__title">{{goodsData.title}}</view>
+                <view catch:tap="_p" class="c__desc" data-t="{{ tap:{en:'showSku',et:'stop'} }}" wx:if="{{goodsData.desc&&isOne}}">
+                    <view class="c__desc__text">{{goodsData.desc}}</view>
+                </view>
+            </view>
+            <view class="c__price__box">
+                <view class="price-left">
+                    <view class="price-pay t-text">¥ {{goodsData.price}}</view>
+                    <view class="price-origin-pay t-text">¥{{goodsData.originalPrice}}</view>
+                </view>
+                <a bind:_init="_tic" checkedColor="{{themeColors.general}}" class="price-right" customClass="checkbox" iconSize="20px" value="{{checked}}"></a>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,6 @@
+<view class="box {{isIphoneX?'is-new-phone':''}}">
+    <view class="button-wrapper">
+        <view class="tip">已经是会员啦，可以直接进入下一步</view>
+        <view bindtap="nextStep" class="button">下一步</view>
+    </view>
+</view>

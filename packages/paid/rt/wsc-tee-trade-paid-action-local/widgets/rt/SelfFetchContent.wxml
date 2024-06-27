@@ -1,0 +1,32 @@
+<view class="a67a2" style="{{themeCSS}}">
+    <view class="b5378">{{selfFetchCodeName}}</view>
+    <block wx:if="{{selfFetch.hasError}}">
+        <image class="c6f51b bd231" lazyLoad="true" src="https://img01.yzcdn.cn/upload_files/2020/03/12/FoFlIZNte-bq-nCcHIiZHDdvdwNa.png"></image>
+        <view class="a4efa"> {{selfFetchCodeName}}生成失败，请稍后再试或前往订单详情查看
+    </view>
+    </block>
+    <block wx:else>
+        <view class="c07ea0" wx:if="{{selfFetch.loading}}">
+            <a bind:_init="_tic" class="d217a" type="spinner"></a>
+        </view>
+        <view class="c5b767" wx:else>
+            <image class="c1be47 bd231" lazyLoad="true" src="{{selfFetch.selfFetchQRCode}}"></image>
+        </view>
+        <view class="c94275"> {{selfFetch.loading?'加载中':selfFetch.selfFetchNo}} </view>
+        <view class="c6e8ad">为了保证你的权益，请勿提前提供给商家</view>
+        <view class="bc4d3">
+            <view>
+                <view class="c1055a" wx:if="{{isScanBuyOrder}}">请将核销码出示给收银员</view>
+                <view class="c1055a" wx:else>
+                    <view class="c1055a-c447b7">
+                        <view class="title">提货地址：</view>{{selfFetch.loading?'加载中':selfFetch.addressDetail}}</view>
+                    <view class="c1055a-c447b7">
+                        <view class="title">提货时间：</view>{{selfFetch.loading?'加载中':selfFetch.userTime}}</view>
+                </view>
+            </view>
+            <view wx:if="{{!selfFetch.loading}}">
+                <image bind:tap="_p" class="c48c9 bd231" data-t="{{ tap:{en:'saveToLocal'} }}" lazyLoad="true" src="https://img01.yzcdn.cn/upload_files/2022/12/05/FqcqGanXP86ET4ezE1B36IdJEOEY.png"></image>
+            </view>
+        </view>
+    </block>
+</view>

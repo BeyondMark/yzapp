@@ -1,0 +1,6 @@
+<a authTypeList="{{['nicknameAndAvatar']}}" bind:next="handleBtnClick" btnClass="btn-class" scene="{{scene}}" wx:if="{{scene}}">
+    <slot></slot>
+</a>
+<view bind:tap="handleBtnClick" class="btn-class" wx:else>
+    <slot></slot>
+</view>

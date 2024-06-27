@@ -1,0 +1,7 @@
+<view class="dc-venue-banner">
+    <view class="dc-venue-banner-title_container" wx:if="{{showTitle}}">
+        <view class="dc-venue-banner-title">{{opt.title}}</view>
+        <view class="dc-venue-banner-subtitle">{{opt.subTitle}}</view>
+    </view>
+    <a _opt="{{imagesOpt}}" bind:_init="_tic" class="dc-venue-banner-bg"></a>
+</view>

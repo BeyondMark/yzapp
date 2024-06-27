@@ -1,0 +1,14 @@
+<view class="ssp" wx:if="{{hideStore&&isHomePage}}">
+    <a class="van-font-14" path="/packages/shop/multi-store/select-poi/index/index">
+        <image class="icon-poi" src="{{iconUrl}}ba1d3e50fdf5364ba827ccc39eb65f9c.png"></image>
+        <view class="poi-info">{{buyerAddress||poiInfo}}</view>
+        <image class="icon-arrow-down" src="{{iconUrl}}f13059e35152241c8e9dedf6ff16ff86.png"></image>
+    </a>
+</view>
+<view class="ms-header" wx:elif="{{!hideStore&&storeName&&(!hideTopBar||storeSwitch)}}">
+    <image src="{{storeImage}}"></image>
+    <a class="van-font-14 van-c-gray" path="/packages/home/dashboard/index" style="overflow: hidden;" type="switchTab">
+        <view class="text-ellipsis">{{storeName}}</view>
+    </a>
+    <a class="van-font-14" path="/packages/shop/multi-store/index/index" style="color: #666;margin-left: 10px;flex-shrink: 0;" wx:if="{{storeName&&storeSwitch}}">[切换]</a>
+</view>

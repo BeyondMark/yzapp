@@ -1,0 +1,7 @@
+<view class="r flex sb ac">
+    <view class="flex ac">
+        <a channel="{{channel}}" scale="0.8"></a>
+        <view class="text">{{channel.channelNotice}}</view>
+    </view>
+    <text bind:tap="emit" class="action" data-en="click" style="color: {{tc}}">立即使用</text>
+</view>

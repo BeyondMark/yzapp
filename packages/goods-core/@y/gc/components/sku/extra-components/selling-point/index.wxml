@@ -1,0 +1,6 @@
+<view class="c24cbb" wx:if="{{pointInfo}}">
+    <view class="c3a6f2">
+        <a bind:_init="_tic" class="b7294 ff4b8" color="#646566" name="{{pointInfo.icon}}" size="16px"></a>
+        <view class="c1000">{{pointInfo.content}}</view>
+    </view>
+</view>

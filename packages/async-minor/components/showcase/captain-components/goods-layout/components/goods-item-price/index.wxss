@@ -1,0 +1,225 @@
+.c-goods-layout__info-price {
+  position: relative;
+  width: 100%;
+}
+.c-goods-layout__info-price .price-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  vertical-align: initial;
+}
+.c-goods-layout__info-price .buy-button {
+  display: inline-block;
+  position: absolute;
+  font-size: 0;
+  top: 12px;
+  right: 0;
+}
+.c-goods-layout__info-price .buy-button--promotion {
+  top: 0;
+  right: -10px;
+}
+.c-goods-layout__info-price.size--big .price-info {
+  height: 44px;
+}
+.c-goods-layout__info-price.size--big .buy-button {
+  top: 10px;
+}
+.c-goods-layout__info-price.size--small .price-info {
+  height: 44px;
+}
+.c-goods-layout__info-price.member-goods.big .member-tag,
+.c-goods-layout__info-price.member-goods.hybrid.size--big .member-tag {
+  margin-top: 3px;
+}
+.c-goods-layout__info-price.member-goods.center .member-tag {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.c-goods-layout__info-price.member-goods .sale-price {
+  white-space: nowrap;
+  margin-right: 8px;
+}
+.c-goods-layout__info-price.member-goods .sale-price > view {
+  display: inline;
+}
+.c-goods-layout__info-price.small .sale-price {
+  font-size: 18px;
+  line-height: 18px;
+  height: 18px;
+}
+.c-goods-layout__info-price.small .price-tag,
+.c-goods-layout__info-price.small .price-unit {
+  font-size: 12px;
+}
+.c-goods-layout__info-price.swipe,
+.c-goods-layout__info-price.three {
+  min-height: 42px;
+}
+.c-goods-layout__info-price.swipe .price-info,
+.c-goods-layout__info-price.three .price-info {
+  height: 42px;
+}
+.c-goods-layout__info-price.swipe .sale-price,
+.c-goods-layout__info-price.three .sale-price {
+  font-size: 16px;
+  line-height: 16px;
+  height: 16px;
+}
+.c-goods-layout__info-price.swipe .price-tag,
+.c-goods-layout__info-price.swipe .price-unit,
+.c-goods-layout__info-price.swipe .sale-price__origin,
+.c-goods-layout__info-price.three .price-tag,
+.c-goods-layout__info-price.three .price-unit,
+.c-goods-layout__info-price.three .sale-price__origin {
+  font-size: 11px;
+}
+.c-goods-layout__info-price.swipe.center .sale-price,
+.c-goods-layout__info-price.three.center .sale-price {
+  justify-content: center;
+}
+.c-goods-layout__info-price.swipe .price-tag,
+.c-goods-layout__info-price.swipe .price-unit,
+.c-goods-layout__info-price.swipe .sale-price__origin,
+.c-goods-layout__info-price.three .price-tag,
+.c-goods-layout__info-price.three .price-unit,
+.c-goods-layout__info-price.three .sale-price__origin {
+  font-size: 11px;
+}
+.c-goods-layout__info-price.list .price-tag,
+.c-goods-layout__info-price.list .price-unit,
+.c-goods-layout__info-price.list .sale-price__origin,
+.c-goods-layout__info-price.small .price-tag,
+.c-goods-layout__info-price.small .price-unit,
+.c-goods-layout__info-price.small .sale-price__origin {
+  font-size: 12px;
+}
+.c-goods-layout__info-price.list .sale-price,
+.c-goods-layout__info-price.small .sale-price {
+  height: 18px;
+  font-size: 18px;
+  line-height: 18px;
+}
+.c-goods-layout__info-price.list {
+  bottom: 0 !important;
+  position: absolute;
+}
+.c-goods-layout__info-price.list .price-info {
+  transform: translateY(4px);
+}
+.c-goods-layout__info-price.list .sale-price {
+  font-size: 18px;
+  height: 18px;
+  line-height: 18px;
+}
+.c-goods-layout__info-price.list .price-tag,
+.c-goods-layout__info-price.list .price-unit,
+.c-goods-layout__info-price.list .sale-price__origin {
+  font-size: 12px;
+}
+.c-goods-layout__info-price.list .sale-price__origin {
+  transform: translateY(-2px);
+}
+.c-goods-layout__info-price.center {
+  text-align: center;
+}
+.c-goods-layout__info-price.center .price-info {
+  height: 44px;
+  justify-content: center;
+}
+.c-goods-layout__info-price.center .buy-button {
+  margin-top: 0;
+  position: relative;
+  top: 0;
+  margin-bottom: 10px;
+  display: block;
+}
+.sale-price,
+.sale-price__origin {
+  height: 20px;
+  color: #f44;
+  font-size: 20px;
+  line-height: 20px;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.sale-price {
+  line-height: 20px;
+  font-size: 20px;
+}
+.sale-price,
+.sale-price__origin {
+  height: 20px;
+  vertical-align: initial;
+}
+.sale-price__origin {
+  line-height: 24px;
+  font-size: 12px;
+  color: #c8c9cc;
+  font-weight: 400;
+  text-decoration: line-through;
+  font-weight: 400 !important;
+}
+.sale-price__min {
+  font-size: 12px;
+}
+.sale-price .free {
+  font-size: 14px;
+}
+.price-tag,
+.price-unit {
+  height: 14px;
+  align-self: center;
+  font-size: 14px;
+  margin-right: 2px;
+  position: relative;
+  bottom: 0.05em;
+}
+.price-unit {
+  margin-right: 0 !important;
+  margin-left: 2px;
+}
+.price-sign {
+  display: inline-block;
+  padding: 0 4px;
+  vertical-align: middle;
+  line-height: 16px;
+  text-align: center;
+  border-radius: 2px;
+  background-color: #fde6e9;
+}
+.price-sign,
+.sold-num {
+  margin-left: 4px;
+  font-size: 12px;
+}
+.sold-num {
+  color: #9b9b9b;
+}
+.points-price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  line-height: 12px;
+  min-height: 20px;
+}
+.points-price .van-icon-exchange {
+  font-size: 12px;
+  color: #999;
+  position: relative;
+  top: 1px;
+  margin-right: 1px;
+}
+.points-price__unit {
+  font-size: 12px;
+  color: #999;
+}
+.points-price__value {
+  font-size: 14px;
+  color: #f44;
+}

@@ -1,0 +1,15 @@
+<view class="edu-widgets--classic">
+    <block wx:for="{{widgetGroups}}" wx:for-item="widgetGroup" wx:key="{{ index }}">
+        <view class="widget-group" wx:if="{{widgetGroup.type==='widget-group'}}">
+            <view bindtap="handleWidgetClicked" class="widget" data-key="{{widget.key}}" wx:for="{{widgetGroup.widgets}}" wx:for-item="widget" wx:key="{{ widget.key + index }}">
+                <a border="{{false}}" customClass="custom-van-cell" isLink="{{true}}" title="{{widget.title}}">
+                    <image class="icon" mode="aspectFit" slot="icon" src="{{widget.icon}}"></image>
+                    <view class="{{'badge--'+util.getBadgesType(badges,widget.key)}}" wx:if="{{badges[widget.key].value}}">{{util.getBadgesContent(badges,widget.key)}}</view>
+                </a>
+            </view>
+        </view>
+        <view wx:else>
+            <view class="whitespace" wx:for="{{widgetGroup.widgets}}" wx:key="{{ widget.key + index }}"></view>
+        </view>
+    </block>
+</view>

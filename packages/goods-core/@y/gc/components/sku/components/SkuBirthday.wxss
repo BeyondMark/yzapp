@@ -1,0 +1,101 @@
+.c82028 {
+  padding: 0 16px var(--theme-goods-sku-row-padding-bottom, 0);
+  position: relative;
+}
+.c82028:after {
+  position: absolute;
+  box-sizing: border-box;
+  content: " ";
+  pointer-events: none;
+  top: -50%;
+  right: calc(-50% + 32px);
+  bottom: -50%;
+  left: calc(-50% + 32px);
+  border: 0 solid #ebedf0;
+  transform: scale(0.5);
+  border-bottom-width: 1px;
+}
+.c2e5a4 {
+  padding: var(--theme-goods-sku-normal-margin, 12px) 16px;
+  position: relative;
+  display: flex;
+}
+.c2e5a4:before {
+  position: absolute;
+  box-sizing: border-box;
+  content: " ";
+  pointer-events: none;
+  top: -50%;
+  right: calc(-50% + 32px);
+  bottom: -50%;
+  left: calc(-50% + 32px);
+  border: 0 solid #ebedf0;
+  transform: scale(0.5);
+  border-top-width: 1px;
+}
+.c813de {
+  color: #969799;
+  padding-left: 4px;
+}
+.sku-birthday__image-cell-label {
+  color: #969799;
+  font-size: 12px;
+  line-height: 18px;
+}
+.sku-birthday__image-cell-value {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 55px;
+  background-color: #f7f8fa;
+}
+.sku-birthday__image-cell-value-wrap {
+  padding-left: 7px;
+  text-align: left;
+}
+.sku-birthday__image-cell-img {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.sku-birthday__image-cell-close {
+  position: absolute;
+  top: -4px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  background: #333;
+  border-radius: 50%;
+  display: none;
+}
+.sku-birthday__image-cell--active .sku-messages__image-cell-close,
+.sku-birthday__image-cell--active .sku-messages__image-cell-img {
+  display: block;
+}
+.sku-birthday_id-card-field {
+  padding-bottom: 8px;
+}
+.sku-birthday_id-card-msg {
+  position: relative;
+  padding: 0 16px 10px 16px;
+  line-height: 16px;
+  font-size: 12px;
+  color: #969799;
+}
+.sku-birthday_id-card-msg:after {
+  position: absolute;
+  box-sizing: border-box;
+  content: " ";
+  pointer-events: none;
+  right: 16px;
+  bottom: 0;
+  left: 16px;
+  border-bottom: 1px solid #ebedf0;
+  transform: scaleY(0.5);
+}

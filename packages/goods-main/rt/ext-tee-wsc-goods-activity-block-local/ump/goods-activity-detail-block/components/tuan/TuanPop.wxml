@@ -1,0 +1,8 @@
+<view class="tuan-popup">
+    <view class="c942f9">
+        <view class="c866c7 c89585">【返现规则】</view> {{activity.startTime}}至{{activity.endTime}}购买该团购商品，你除了能享受到团购折扣价以外，根据售出件数，还将获得以下返现:
+    <view class="c2dd15" wx:for="{{tuanIntroRules}}" wx:key="index">      售出达{{item.min}}件，每件返现{{item.value}}元
+    </view>
+    </view>
+    <view class="bb99f" wx:for="{{tuanIntroRulesDetail}}" wx:key="index"> {{item}} </view>
+</view>

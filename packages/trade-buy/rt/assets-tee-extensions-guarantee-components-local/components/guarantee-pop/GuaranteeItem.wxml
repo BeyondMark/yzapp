@@ -1,0 +1,10 @@
+<view class="guarantee-item">
+    <image class="guarantee-item__icon tee-image" lazyLoad="true" src="{{icon}}"></image>
+    <view class="guarantee-item__right">
+        <view bind:tap="_p" class="guarantee-item__title" data-t="{{ tap:{en:'onClick'} }}">
+            <view class="t-text">{{content.title}}</view>
+            <a bind:_init="_tic" class="guarantee-item__title-icon" name="arrow" wx:if="{{hasClickEvent}}"></a>
+        </view>
+        <view class="guarantee-item__detail t-text">{{content.content}}</view>
+    </view>
+</view>

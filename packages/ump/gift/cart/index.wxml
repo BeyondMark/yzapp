@@ -1,0 +1,74 @@
+<a fixedBottom="{{!totalPrice}}" pageContainerClass="gift-cart__container" wx:if="{{!isFetching}}">
+    <c>
+        <view class="gift-cart__header-title van-font-22 van-font-bold">送礼新方式</view>
+        <view class="gift-cart__header-guide">
+            <view class="gift-cart__header-guide-wrap van-font-14">留言并付款<text class="icon-guide-arrow"></text>分享给好友<text class="icon-guide-arrow"></text>成功领取</view>
+        </view>
+    </c>
+    <view class="gift-cart__body-wrap">
+        <view class="gift-cart__body">
+            <view bindtap="handlePickGoodsClick" class="gift-cart__body--empty" wx:if="{{!goodsList.length&&!invalidGoodsList.length}}">
+                <image class="gift-cart__body-gift-icon" src="https://img01.yzcdn.cn/weapp/image/choose-gift.png"></image>
+                <view class="van-inline-block gift-cart__body--empty-text">
+                    <view class="van-font-18" style="margin-bottom: 6px;">挑选礼物</view>
+                    <view class="van-font-12 van-c-gray-darker">点击这里 挑选喜欢的礼物</view>
+                </view>
+                <view class="gift-cart__body--empty-arrow"></view>
+            </view>
+            <block wx:else>
+                <view class="gift-cart__goods-list" wx:if="{{goodsList.length}}">
+                    <b bind:change="handleGoodsChange" data-index="{{index}}" goodsItem="{{item}}" noHairLine="{{!showAllCartGoods&&goodsList.length>3?index+1===3:index+1===goodsList.length}}" wx:if="{{showAllCartGoods||index<3}}" wx:for="{{goodsList}}" wx:key="{{ index }}"></b>
+                    <view class="gift-cart__view-all van-font-12">共 {{allGiftNum}} 件礼物<text bindtap="handleshowAllCartGoods" wx:if="{{goodsList.length>3&&!showAllCartGoods}}">查看全部</text>
+                        <text bindtap="handleshowAllCartGoods" wx:if="{{goodsList.length>3&&showAllCartGoods}}">收起</text>
+                        <text bindtap="handlePickGoodsClick" class="van-pull-right add-more">继续添加<text class="view-all-arrow"></text>
+                        </text>
+                    </view>
+                </view>
+                <block wx:if="{{invalidGoodsList.length}}">
+                    <view class="gift-cart__body-gap-line van-hairline--top"></view>
+                    <view class="gift-cart__invalid-goods">
+                        <view class="gift-cart__invalid-goods--title">
+                            <view class="van-font-12 van-c-black van-pull-left">以下商品无法一起购买</view>
+                            <view bindtap="clearInvalidGoods" class="van-font-12 gift-cart__clear-btn van-pull-right">清空失效商品</view>
+                        </view>
+                        <b bind:change="handleGoodsChange" data-index="{{index}}" goodsItem="{{item}}" noHairLine="{{true}}" wx:for="{{invalidGoodsList}}" wx:key="{{ index }}"></b>
+                    </view>
+                </block>
+            </block>
+        </view>
+    </view>
+    <view class="gift-cart__methods">
+        <view class="gift-cart__methods-desc">
+            <text wx:if="{{gameType===1}}">先到先得</text>
+            <text wx:else>定时开奖 到达设定时间自动开奖</text>
+            <view bindtap="changeGameType" class="gift-cart__methods-change">更改玩法</view>
+        </view>
+        <view bindtap="changeGameType" class="gift-cart__methods-content" wx:if="{{gameType===1}}">每人最多可领一份礼物</view>
+        <picker bindchange="handlePickerTimeChange" class="time-picker" mode="multiSelector" range="{{timePickerRange}}" value="{{defaultPickerValue}}" wx:else>
+            <view class="gift-cart__methods-content">
+                <view class="gift-cart__methods-content-detail van-pull-left">开奖时间</view>
+                <view class="gift-cart__methods-content-detail van-pull-right">{{lotteryTimeStr}}</view>
+            </view>
+        </picker>
+    </view>
+    <view class="gift-cart__message">
+        <view class="gift-cart__message-title">传达心意，写祝福语</view>
+        <textarea bindblur="handleTextareaInput" bindfocus="handleTextareaFocus" class="gift-cart__message-textarea van-font-14" maxlength="20" placeholder="{{giftActivityInfo.defaultPrompt}}" placeholderStyle="color: #ccc;" showConfirmBar="{{false}}"></textarea>
+    </view>
+    <view class="gift-cart__bottom {{totalPrice?'':'gift-cart__bottom--empty'}}">
+        <view class="gift-cart__bottom-anonymous">
+            <checkbox bindtap="handleCheckboxClick" checked="{{anonymous}}" class="checkbox" color="#fff"></checkbox>
+            <text bindtap="handleCheckboxClick" class="van-font-14 van-c-black gift-cart__bottom-anonymous-text">匿名收礼</text>
+        </view>
+        <view class="{{longScreen?'gift-cart__bottom-price-wrap':''}}">
+            <view class="gift-cart__bottom-price">
+                <text class="van-font-18 van-font-bold">￥</text>{{totalPriceStr}}</view>
+            <view bindtap="goPay" class="gift-cart__bottom-btn van-font-18">立即送礼</view>
+            <view class="gift-cart__bottom-links">
+                <text bindtap="handleUsingTipsClick" class="van-font-12">使用说明</text>
+                <text bindtap="handleUsingRulesClick" class="van-font-12">用户规则</text>
+                <text bindtap="handleGiftListClick" class="van-font-12">礼物记录</text>
+            </view>
+        </view>
+    </view>
+</a>

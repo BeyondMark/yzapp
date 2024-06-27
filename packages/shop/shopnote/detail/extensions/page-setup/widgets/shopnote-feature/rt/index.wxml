@@ -1,0 +1,5 @@
+<view>
+    <b rmId="b34-4" wx:if="{{rmId==='b34-0'}}"></b>
+    <a id="van-toast"></a>
+    <c id="van-notify"></c>
+</view>

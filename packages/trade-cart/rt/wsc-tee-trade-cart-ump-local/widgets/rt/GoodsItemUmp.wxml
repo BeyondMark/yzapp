@@ -1,0 +1,6 @@
+<view class="c56a48" wx:if="{{orderSuccessCounter.length}}">
+    <view class="a5fff c89585">{{goodsItem.activityTag}}</view>  还剩
+  <view class="c89585" wx:for="{{orderSuccessCounter}}" wx:key="type">
+        <view class="order-countdown c89585" style="{{'width:'+item.width}}">{{item.value}}</view>
+        <view class="c89585">{{item.text}}</view>
+    </view>  结束</view>

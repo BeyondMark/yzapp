@@ -1,0 +1,20 @@
+<view class="notice">
+    <view class="head">
+        <slot name="head"></slot>
+    </view>
+    <view class="title">恭喜你成为会员</view>
+    <view class="subtitle">
+        <block wx:if="{{renderedBenefits.length>0}}">
+            <view class="item" wx:for="{{renderedBenefits}}" wx:key="{{label}}">
+                <text class="label">
+                    <text class="icon {{item.icon}}"></text>{{item.label}}</text>
+                <text class="highlight" decode="{{true}}">
+                    <block wx:if="{{item.operator!==false}}">x&nbsp;</block>{{item.count}}</text>
+            </view>
+        </block>
+    </view>
+    <view bindtap="handleConfirm" class="actions {{renderedBenefits.length>=3?'sm-bg':''}}">
+        <view class="action {{item.type}}" data-url="{{item.url}}" wx:for="{{buttons}}" wx:key="label">{{item.label}}</view>
+    </view>
+    <text class="desc" wx:if="{{renderedBenefits.length>1}}">可到会员中心解锁更多权益</text>
+</view>

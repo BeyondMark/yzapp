@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-tee/@y-open/vt/dist/notice-bar/index",
+    "b": "/@y-open/vt/dist/tab/index",
+    "c": "/@y-open/vt/dist/tabs/index",
+    "d": "./PrepayCardBalance",
+    "e": "./PrepayCardList",
+    "f": "./SubmitBar",
+    "_": "../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

@@ -1,0 +1,26 @@
+.c10c7a {
+  width: calc(100vw - 40px);
+  padding: 24px 0;
+  border-radius: 12px;
+  text-align: center;
+  margin: 0-4px;
+  background-color: #fff;
+}
+.dd472 {
+  font-size: 14px;
+  color: #333;
+  line-height: 20px;
+}
+.c8849c {
+  margin: 2px auto 6px;
+  color: var(--general, #333);
+  font-size: 36px;
+  line-height: 50px;
+  font-weight: 600;
+}
+.c5d33d {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #999;
+}

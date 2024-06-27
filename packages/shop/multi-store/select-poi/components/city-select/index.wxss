@@ -1,0 +1,166 @@
+.city-select {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+}
+.city-select .flex-wrapper {
+  display: flex;
+}
+.city-select .item:first-child {
+  border-top: 0;
+}
+.city-select .important-text {
+  color: #f44;
+  display: inline-block;
+}
+.city-select .icon-arrow {
+  width: 8px;
+  height: 5px;
+  display: inline-block;
+  padding: 0 10px 0 4px;
+  margin-top: 13px;
+}
+.city-select .icon-search {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  margin: 8px 8px 0 0;
+}
+.city-select .city-name {
+  max-width: 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 30px;
+  display: inline-block;
+  font-size: 14px;
+}
+.city-select .icon-clear {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  margin: 8px 10px 0 0;
+}
+.city-select .top {
+  padding: 6px 15px;
+  position: relative;
+  background-color: #fafafa;
+}
+.city-select .top:after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  width: 200%;
+  height: 200%;
+  left: 0;
+  transform: scale(0.5);
+  transform-origin: left top;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+  border-bottom: 1px solid #e5e5e5;
+  top: -0.5px;
+}
+.city-select.full-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  padding: 0;
+}
+.city-select.full-screen .search {
+  overflow: auto;
+  background-color: #fff;
+}
+.city-select.full-screen .search .poi {
+  line-height: 14px;
+  padding: 15px;
+}
+.city-select.full-screen .search .h4 {
+  font-size: 12px;
+  color: #999;
+  flex: 1;
+}
+.city-select .select {
+  overflow: hidden;
+  flex: 1;
+  height: 30px;
+  background-color: #fff;
+  padding-left: 10px;
+  position: relative;
+}
+.city-select .select:after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  width: 200%;
+  height: 200%;
+  left: 0;
+  transform: scale(0.5);
+  transform-origin: left top;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+}
+.city-select .select.flex {
+  justify-content: flex-start;
+  display: flex;
+  flex: 1;
+}
+.city-select .select .arrow-down {
+  transform: rotate(90deg) scale(0.8);
+  font-size: 12px;
+  margin: 0 10px 0 5px;
+  display: none;
+}
+.city-select .select .field {
+  height: 20px;
+  padding: 0 10px;
+  flex: 1;
+}
+.city-select .cancel {
+  text-align: center;
+  line-height: 32px;
+  float: right;
+  z-index: 5;
+  padding-left: 15px;
+  font-size: 12px;
+  color: #666;
+}
+.city-select .suggetion-poi__address-name {
+  line-height: 14px;
+  font-size: 14px;
+}
+.city-select .suggestion-poi__address-detail {
+  font-size: 12px;
+  color: #999;
+  line-height: 12px;
+  min-height: 12px;
+  margin-top: 5px;
+}
+.city-select .suggestion-poi__no-data__text {
+  font-size: 14px;
+  line-height: 20px;
+  color: #999;
+  margin-top: 133px;
+  text-align: center;
+}
+.clear-history-confirm .van-dialog__message {
+  text-align: center;
+  padding: 20px 0;
+}
+input {
+  flex: 1;
+  height: 100%;
+  font-size: 14px;
+  padding-right: 5px;
+}
+.city-select__input__placeholder {
+  color: #ccc;
+}

@@ -1,0 +1,11 @@
+<view class="experience-log">
+    <view class="log-list">
+        <view class="log-item" wx:for="{{experienceLog}}" wx:key="{{ item.cardNo }}">
+            <view class="avatar">
+                <image alt="头像" class="taked" src="{{item.avatar||'https://img01.yzcdn.cn/upload_files/avatar.png'}}" wx:if="{{item.userId}}"></image>
+                <view class="untake" wx:else>?</view>
+            </view>
+            <view class="reward-tips" wx:if="{{item.userId}}">{{rewardTip}}</view>
+        </view>
+    </view>
+</view>

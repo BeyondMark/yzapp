@@ -1,0 +1,18 @@
+<a bind:close="emit" closeOnClickOverlay="{{false}}" data-en="close" overlay="{{true}}" round="{{true}}" show="{{show}}" zIndex="{{zIndex}}">
+    <view class="root">
+        <view class="header">
+            <view class="header">安全验证</view>
+            <c bind:click="emit" customStyle="position: absolute; color: #969799; top: 15px; right: 15px;" data-en="close" name="close" size="20px"></c>
+        </view>
+        <view class="content">
+            <view class="lint">为了保障你的账户安全，请输入手机账号{{mobile}}的登录密码</view>
+            <view class="input-wrapper surround">
+                <input bindinput="onLoginPassChange" class="input" focus="{{show}}" password="{{true}}" placeholder="请输入登录密码" value="{{login}}"></input>
+            </view>
+        </view>
+        <b bind:click="onPayLoginSubmit" block="{{true}}" customClass="btn" size="normal" type="primary">支付</b>
+        <view class="footer">
+            <view bind:tap="emit" class="forget" data-en="forget">忘记密码?</view>
+        </view>
+    </view>
+</a>

@@ -1,0 +1,3 @@
+<view wx:if="{{isShow}}">
+    <a bind:_init="_tic" bind:close-pop="_p" bind:subscribe-message="_p" data-t="{{ closePop:{en:'handleClose'},subscribeMessage:{en:'subscribeMessage'} }}" getUserInfo="{{getUserInfo}}" hideProtocol="{{1}}" kdtId="{{kdtId}}" rmId="{{i[0]}}" source="{{2}}" wx:if="{{i[1]}}" wx:for="{{[ [rmId,rmId==='b7-39'],[rmId,rmId==='b33-5'] ]}}" wx:for-item="i" wx:key="0"></a>
+</view>

@@ -1,0 +1,16 @@
+<view class="{{'registration-guide-coupon-container'}} {{styleType}}">
+    <view class="discount-box">
+        <view class="discount-body">
+            <view class="discount-body-prefix">{{coupon.prefix}}</view>
+            <view class="discount-body-value" style="{{valueStyle}}">{{coupon.value}}</view>
+            <view class="discount-body-unit">{{coupon.unit}}</view>
+        </view>
+        <a bind:_init="_tic" description="{{coupon.description}}" wx:if="{{styleType}}"></a>
+        <view class="amount" wx:if="{{coupon.count>1&&styleType}}">{{coupon.count}}张</view>
+    </view>
+    <view class="content-box" wx:if="{{!styleType}}">
+        <view class="content-body-content">{{coupon.content}}</view>
+        <a bind:_init="_tic" description="{{coupon.description}}"></a>
+        <view class="amount" wx:if="{{coupon.count>1}}">{{coupon.count}}张</view>
+    </view>
+</view>

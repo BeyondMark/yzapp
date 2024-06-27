@@ -1,0 +1,11 @@
+@import "/common/css/helper/index.wxss";
+.empty-view__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.empty-view__container image {
+  width: 80px;
+  height: 84px;
+  margin: 80px 0 20px;
+}

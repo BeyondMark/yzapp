@@ -1,0 +1,67 @@
+.tee-image {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.sn-thumb-view {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #969799;
+  line-height: 18px;
+  height: 18px;
+}
+.sn-thumb-view .browse {
+  flex: 1;
+}
+.sn-thumb-view .praise {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+}
+.sn-thumb-view .praise image {
+  width: 14px;
+  height: 14px;
+  margin-bottom: 2px;
+}
+.sn-thumb-view .praise-count {
+  margin-left: 3px;
+}
+.sn-thumb-white .sn-thumb-view {
+  color: #fff;
+  width: 130px;
+}
+.sn-thumb-left {
+  text-align: left;
+}
+.sn-thumb-left .browse {
+  flex: 0;
+}
+.sn-thumb-left .praise {
+  flex: 1;
+}
+.sn-thumb-right {
+  text-align: right;
+}
+.sn-thumb-right .browse {
+  flex: 1;
+}
+.sn-thumb-right .praise {
+  flex: 0;
+}
+.sn-thumb-view-big {
+  margin-top: 12px;
+}
+.sn-thumb-view-common {
+  float: right;
+}
+.sn-thumb-view-detail {
+  width: 130px;
+}
+.custom-style-1 .sn-thumb-view {
+  margin-top: 8px;
+}
+.custom-style-2 .sn-thumb-view {
+  width: 130px;
+}

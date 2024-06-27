@@ -1,0 +1,31 @@
+<view class="level-info-wrap" wx:if="{{showLevelBlock}}">
+    <a bind:tap="goLevelCenter" customClass="level-van-cell" isLink="{{true}}">
+        <view slot="title">
+            <view class="level-info__info-wrap" wx:if="{{levelUpgradeTextData.showNextLevelRate}}">
+                <view class="level-info__desc" wx:if="{{levelUpgradeTextData.nextLevelName&&!commissionInfo.inKeepLevel}}">
+                    <view class="level-info__desc">升级至{{levelUpgradeTextData.nextLevelName}}</view>
+                </view>
+                <view class="level-info__desc" wx:else>
+                    <view class="level-info__desc">当前为{{commissionInfo.levelName}}</view>
+                </view>
+                <view class="level-info__desc" wx:if="{{levelUpgradeTextData.nextLevelProfit}}">
+                    <view class="level-info__desc">
+                        <view class="level-info__desc">，佣金最高赚</view>
+                        <view class="level-info__commission">{{levelUpgradeTextData.nextLevelProfit}}</view>
+                    </view>
+                </view>
+                <view class="level-info__desc" wx:else>
+                    <view class="level-info__desc">佣金提升至</view>
+                    <view class="level-info__commission-rate">{{levelUpgradeTextData.nextLevelCpsRate}}</view>
+                    <view class="level-info__desc" wx:if="{{levelUpgradeTextData.nextLevelProfit}}">
+                        <view class="level-info__desc">，佣金最高赚</view>
+                        <view class="level-info__commission">{{levelUpgradeTextData.nextLevelProfit}}</view>
+                    </view>
+                </view>
+            </view>
+            <view class="level-info__info-wrap" wx:else>
+                <view class="level-info__desc">{{commissionInfo.levelUpgradeInfo}}</view>
+            </view>
+        </view>
+    </a>
+</view>

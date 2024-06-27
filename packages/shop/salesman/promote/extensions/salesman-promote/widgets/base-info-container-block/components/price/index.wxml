@@ -1,0 +1,12 @@
+<view class="goods-price">
+    <b class="goods-price__current" color="general">
+        <view>
+            <text class="goods-price__current-label">¥</text>
+            <text class="goods-price__current-price">{{goods.price}}</text>
+        </view>
+    </b>
+    <view class="goods-price__origin" wx:if="{{showOriginPrice&&showOriginPrice.price}}">
+        <text class="goods-price__origin-price">{{showOriginPrice.price}}</text>
+    </view>
+    <a commissionData="{{commissionData}}"></a>
+</view>

@@ -1,0 +1,12 @@
+<view class="dc510">
+    <view class="c5a316">
+        <slot name="prefix"></slot>
+    </view>
+    <view class="{{btnBoxCls}}" style="{{btnType?'':themeMainBgStyle}}" wx:if="{{btnText}}">
+        <view catch:tap="handleClickBtn" class="c274d2">{{btnText}}</view>
+        <a customClass="a9c06" name="{{icon}}" wx:if="{{hasIcon}}"></a>
+    </view>
+    <view class="c5a316">
+        <slot name="suffix"></slot>
+    </view>
+</view>

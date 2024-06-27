@@ -1,0 +1,19 @@
+<view class="c656af" style="{{themeVars}}" wx:if="{{!hideBlock}}">
+    <view class="{{showPublicBenefit?'c46bcc':''}}" style="{{shopBgStyle}}">
+        <c bind:_init="_tic" customStyle="{{publicBenefitStyle}}" goodsDetailLogoUrl="{{goodsDetailLogoUrl}}" multistore="{{multistore}}" shopConfig="{{shopConfig}}" shopInfo="{{shopInfo}}" showOldShopBadge="{{showOldShopBadge}}" theme="{{theme}}" themeVars="{{themeVars}}">
+            <view slot="right" wx:if="{{showPublicBenefit}}">
+                <e benefitDesc="{{staticConfig.benefitDesc}}" bind:_init="_tic" wx:if="{{showPublicBenefit}}"></e>
+            </view>
+            <d bind:_init="_tic" bind:follow-shop="_p" data-t="{{ followShop:{en:'followShop'} }}" isIconInBottom="{{showPublicBenefit}}" kdtId="{{shopInfo.kdtId}}" multistore="{{multistore}}" shopMpInfo="{{shopMpInfo}}" slot="{{showPublicBenefit?'bottom':'right'}}" spm="{{spm}}"></d>
+            <view slot="shop-tags" wx:if="{{existsTags}}">
+                <a bind:_init="_tic" kdtId="{{shopInfo.kdtId}}" rmId="{{rmId}}" showShopBrandTag="{{showShopBrandTag}}" showShopOfficialTag="{{showShopOfficialTag}}" wx:if="{{rmId==='b7-7'}}">
+                    <view bind:tap="_p" data-t="{{ tap:{en:'toggleOldShop'} }}" slot="tags">
+                        <image class="c227e bd231" lazyLoad="true" mode="aspectFit" src="{{oldShopImage.src}}" style="width:{{oldShopImage.width+'px'}}" wx:if="{{showOldShopBadge}}"></image>
+                    </view>
+                </a>
+            </view>
+        </c>
+    </view>
+    <f bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'toggleOldShop'} }}" multistore="{{multistore}}" oldShopDesc="{{staticConfig.oldShopDesc}}" shopConfig="{{shopConfig}}" shopInfo="{{shopInfo}}" show="{{showOldShopPop}}"></f>
+    <b bind:_init="_tic" kdtId="{{shopInfo.kdtId}}" multistore="{{multistore}}" physicalStores="{{physicalStores}}" retail="{{retail}}" shopConfig="{{shopConfig}}"></b>
+</view>

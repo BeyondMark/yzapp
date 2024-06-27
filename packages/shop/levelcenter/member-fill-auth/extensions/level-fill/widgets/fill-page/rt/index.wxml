@@ -1,0 +1,41 @@
+<view class="wx-login">
+    <a authTypeList="{{['mobile']}}" bind:next="afterAuthorize" bizDataMap="{{bizDataMap}}" wx:if="{{ready}}">
+        <view class="container">
+            <view class="card-block" style="height: calc(var(--card-width) / (343 / 180)); width: var(--card-width);" wx:if="{{!isLogoHeader}}">
+                <image class="image" src="{{coverUrl}}" wx:if="{{coverUrl}}"></image>
+                <view class="level-bg-mask" style="{{bgStyle}}" wx:else></view>
+                <view class="level-name">{{levelName}}</view>
+            </view>
+            <view class="logo-block" wx:else>
+                <image class="logo" src="{{shopInfo.shopLogo}}" wx:if="{{shopInfo.shopLogo}}"></image>
+                <view class="title">欢迎加入{{shopInfo.shopName}}</view>
+                <view class="sub-title">完善资料，立即入会</view>
+            </view>
+            <view class="content-wrapper-container">
+                <view class="benefit-block" wx:if="{{!isLogoHeader}}">
+                    <view class="benefit-container ">
+                        <view class="benefit-desc">
+                            <span class="be-member">成为会员</span>
+                            <view wx:for="{{benefitRenderArr}}" wx:for-item="benefit">
+                                <span>，{{benefit.prefix}}<span class="highlight" wx:if="benefit.content">{{benefit.content}}</span>{{benefit.suffix}}</span>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="fill-customer-info">
+                    <view class="cell-group" wx:for="{{attributeList}}" wx:key="title">
+                        <view class="base-info-cell">
+                            <view class="cell-title">{{item.title}}</view>
+                            <image class="avatar" src="{{item.value||'//b.yzcdn.cn/showcase/membercenter/2018/08/06/default_avatar@2x.png'}}" wx:if="{{item.isAvatar}}"></image>
+                            <view class="cell-value {{item.isRealValue?'real-value':''}}" wx:else>{{item.value}}<view class="btn" wx:if="{{item.isMobile}}">一键授权</view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="footer-wrapper">
+                <view class="footer-btn">提交</view>
+            </view>
+        </view>
+    </a>
+</view>

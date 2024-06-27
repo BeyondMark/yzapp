@@ -1,0 +1,5 @@
+<view>
+    <view class="c718b2 a34b9" wx:if="{{!opt.hideStock}}">    剩余
+    <view class="c38ee4 {{opt.stockNum<opt.stockThreshold?'d70bc':''}} c89585">{{opt.stockNum}}</view> {{opt.stockUnit}} </view>
+    <view class="c718b2" wx:if="{{opt.selectedText}}"> {{opt.selectedText}} </view>
+</view>

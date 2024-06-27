@@ -1,0 +1,8 @@
+<view class="{{themeClass}} van-sku-actions">
+    <b allowDeny="{{allowDeny}}" bind:next="onAddCartClicked" class="van-sku-actions__btn-wrap {{showAddCartBtn?'btn-first':''}}" popupCustomStyle="{{popupCustomStyle}}" scene="add_shopping_car" wx:if="{{showAddCartBtn}}">
+        <a bg="vice-bg" color="vice-text" customClass="van-sku-actions__btn van-sku-actions__btn--vice">{{cartBtnText}}</a>
+    </b>
+    <b allowDeny="{{allowDeny}}" bind:next="onBuyClicked" class="van-sku-actions__btn-wrap {{!showAddCartBtn?'btn-first':''}}" popupCustomStyle="{{popupCustomStyle}}" scene="click_buy_now" wx:if="{{showBuyBtn}}">
+        <a bg="main-bg" customClass="van-sku-actions__btn van-sku-actions__btn--main">{{buyBtnText}}</a>
+    </b>
+</view>

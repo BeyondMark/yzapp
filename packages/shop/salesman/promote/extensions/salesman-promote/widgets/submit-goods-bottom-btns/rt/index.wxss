@@ -1,0 +1,106 @@
+.goods-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 8px;
+  height: 50px;
+}
+.goods-buttons:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  border: 0 solid #e5e5e5;
+  border-bottom-width: 1px;
+}
+.goods-buttons .self-buy-btn {
+  width: 40vw;
+  height: 42px;
+  margin-right: 8px;
+}
+.goods-buttons .self-buy-btn button {
+  width: 100%;
+}
+.goods-buttons .self-buy-btn .btn-desc {
+  color: #969799;
+}
+.goods-buttons .self-buy-btn-title {
+  color: #646566;
+}
+.goods-buttons .share-btn {
+  width: 53vw;
+  height: 42px;
+}
+.goods-buttons .share-btn button {
+  width: 100%;
+}
+.goods-buttons .disabled-btn {
+  width: 91vw;
+  height: 42px;
+}
+.goods-buttons .disabled-btn button {
+  width: 100%;
+}
+.goods-buttons .btn-title {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 18px;
+  margin-bottom: 2px;
+}
+.goods-buttons .btn-desc {
+  font-size: 10px;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 12px;
+}
+.goods-buttons__big .van-button__text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.goods-buttons__big-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  font-size: 12px;
+  line-height: 1.2;
+}
+.goods-buttons__font-xl {
+  font-size: 16px;
+}
+.goods-buttons__font--s {
+  transform: scale(0.83);
+  transform-origin: center bottom;
+}
+.goods-buttons .goods-buttons--disabled {
+  background: #ebedf0 !important;
+  color: #969799 !important;
+}
+.goods-buttons .van-goods-action-mini-btn {
+  min-width: auto;
+}
+.goods-buttons .buyer-icon img {
+  border-radius: 20px;
+  object-fit: cover !important;
+}
+@media screen and (max-width: 320px) {
+  .goods-buttons .goods-buttons__mini--1,
+  .goods-buttons .goods-buttons__mini--2 {
+    width: 60px;
+  }
+  .goods-buttons .goods-buttons__mini--3,
+  .goods-buttons .goods-buttons__mini--4 {
+    width: 43px;
+  }
+}

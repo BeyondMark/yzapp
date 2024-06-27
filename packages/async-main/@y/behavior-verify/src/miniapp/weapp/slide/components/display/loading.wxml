@@ -1,0 +1,8 @@
+<template name="loading">
+    <view class="component-display__loading">
+        <view class="component-display__loading-icon">
+            <view class="component-display__loading-icon--before"></view>
+        </view>
+        <text>加载中</text>
+    </view>
+</template>

@@ -1,0 +1,11 @@
+<button bind:contact="_p" businessId="{{extra.businessId||''}}" class="navigator btn class weapp-chat-btn" data-t="{{ contact:{en:'handleContactBack'} }}" disabled="{{!extra.sourceParam}}" openType="contact" sessionFrom="{{extra.sourceParam||''}}" style="{{customStyle}}" wx:if="{{item.linkType==='chat'}}">
+    <slot></slot>
+</button>
+<a authorizeScene="get_coupon" beforGuide="{{beforGuide}}" bind:_init="_tic" bind:afterGetGuide="_p" data-ref="{{'guide-button'}}" data-t="{{ afterGetGuide:{en:'openGuideDialog'} }}" guideType="coupon" isAutoGuide="{{false}}" kdtId="{{kdtId}}" redirectUrl="{{redirectUrl}}" requestParam="{{voucherActivityId:voucherActivityId}}" wx:elif="{{item.linkType==='coupon'||item.linkType==='platform_coupon'}}">
+    <view class="navigator class" style="{{customStyle}}">
+        <slot></slot>
+    </view>
+</a>
+<view bind:tap="_p" class="navigator class" data-t="{{ tap:{en:'handleTap'} }}" style="{{customStyle}}" wx:else>
+    <slot></slot>
+</view>

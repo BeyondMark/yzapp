@@ -1,0 +1,90 @@
+.activity-records {
+  font-size: 14px;
+  margin: 20px 15px;
+}
+.activity-records .loading {
+  width: 24px;
+  margin: 0 auto;
+  display: block;
+}
+.activity-records .title {
+  color: #f72a3e;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.activity-records .tab {
+  background: linear-gradient(180deg, #bf2b2a, #bf412a);
+  text-align: center;
+  height: 16px;
+  border-radius: 8px;
+}
+.activity-records .content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px 15px 15px;
+  margin: -8px 10px 0 10px;
+  background: #fff;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.activity-records .record {
+  display: flex;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 9px;
+  flex-shrink: 0;
+}
+.activity-records .profile-image {
+  width: 30px;
+  flex-shrink: 0;
+  height: 30px;
+  background: grey;
+  border-radius: 15px;
+}
+.activity-records .sponsor-name {
+  margin-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 20px;
+}
+.activity-records .bargain-count {
+  flex-grow: 1;
+  flex-shrink: 0;
+  text-align: right;
+}
+.activity-records .show-all-button {
+  color: #f72a3e;
+  text-align: center;
+}
+.activity-records .records-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 99999px;
+  transition: max-height 0.25s;
+}
+.activity-records .collapse {
+  max-height: 115px;
+}
+.activity-records .empty-records {
+  font-size: 12px;
+  text-align: center;
+  color: #999;
+}
+.activity-records .icon-arrow {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  background-image: url(https://img01.yzcdn.cn/wsc/20180823/images/arrow.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 0.25s;
+  background-position: 50%;
+}
+.activity-records .icon-arrow-up {
+  transform: rotate(180deg);
+}
+.activity-records .cut-price {
+  color: #f72a3e;
+}

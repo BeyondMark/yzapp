@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../../components/InfoCard",
+    "b": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "c": "/packages/async-tee/@y-open/vt/dist/tag/index",
+    "_": "../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_", "c": "_" }
+}

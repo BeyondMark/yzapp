@@ -1,0 +1,4 @@
+<view class="e0d4f" style="{{themeStyle}}" wx:if="{{showEmptyCart}}">
+    <a bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b4-5'}}"></a>
+    <view bind:tap="_p" class="c11529" data-t="{{ tap:{en:'toAuth'} }}" wx:if="{{!isAuthProtocol}}"></view>
+</view>

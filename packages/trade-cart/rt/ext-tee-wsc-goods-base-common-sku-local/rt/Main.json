@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../components/common-sku-view",
+    "_": "../../../../../components/_/index"
+  }
+}

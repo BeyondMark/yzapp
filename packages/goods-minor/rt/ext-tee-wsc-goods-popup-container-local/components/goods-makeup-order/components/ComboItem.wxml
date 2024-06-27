@@ -1,0 +1,32 @@
+<view class="c54939 J-viewlog" data-viewlog="{{combo.comboViewLog}}">
+    <view class="e3d5b">
+        <view class="d3ab5">
+            <a bind:_init="_tic" class="c6ca28" name="{{combo.comboTitleIcon}}"></a>
+        </view>
+        <view class="c66ce1">{{combo.comboTitleText}} </view>
+    </view>
+    <view class="c35b70">
+        <view class="c47b55">
+            <view class="c92689">
+                <b bind:_init="_tic" bind:popup-close="_p" class="c4de5e J-viewlog" ctx="{{ctx}}" data-t="{{ popupClose:{en:'handlePopupClose'} }}" data-viewlog="{{justAddGoods.goodsViewLog||''}}" goods="{{justAddGoods}}"></b>
+                <a bind:_init="_tic" class="c325a6" color="#DCDEE0" name="plus" size="12px"></a>
+            </view>
+            <b bind:_init="_tic" bind:change-checked="_p" bind:popup-close="_p" class="c4de5e J-viewlog" ctx="{{ctx}}" data-t="{{ changeChecked:{en:'handleCheckedChange'},popupClose:{en:'handlePopupClose'} }}" data-viewlog="{{item.goodsViewLog||''}}" goods="{{item}}" wx:for="{{comboGoodsList}}" wx:key="id"></b>
+        </view>
+    </view>
+    <view class="f8b60">
+        <view class="a6e7a">
+            <view class="bec90">
+                <view class="total-num c89585">共 {{totalNum}} 件，</view>
+                <view class="c25777 c89585">合计：</view>
+                <view class="c46ead c89585">￥{{sumPromotionTotalPriceFmt}}</view>
+                <view class="b78fb c89585" wx:if="{{!totalDecrease&&originPrice&&originPrice>sumPromotionTotalPrice}}">￥{{originPriceFmt}} </view>
+            </view>
+            <view class="{{'dc778'}} {{combo.priceDecreaseViewLog?'J-viewlog':''}}" data-viewlog="{{combo.priceDecreaseViewLog||''}}" wx:if="{{totalDecrease}}">        已优惠￥{{totalDecreaseFmt}} </view>
+        </view>
+        <button bind:tap="_p" class="c940a4" data-t="{{ tap:{en:'handleGoCart'} }}" wx:if="{{inCartGoods.length===goodsItems.length}}">      去购物车结算
+    </button>
+        <button bind:tap="_p" class="{{'c940a4'}} {{addCartDisabled?'c075ae':''}}" data-t="{{ tap:{en:'handleAddCart'} }}" wx:else>      加入购物车
+    </button>
+    </view>
+</view>

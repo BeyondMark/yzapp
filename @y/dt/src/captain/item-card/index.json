@@ -1,0 +1,24 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "b": "/packages/async-core/@y/dt/src/captain/countdown/index",
+    "c": "/packages/async-core/@y/dt/src/captain/sold-num/index",
+    "d": "/packages/async-tee/@y-open/vt/dist/skeleton/index",
+    "e": "/packages/async-tee/@y-open/vt/dist/badge/index",
+    "f": "./components/tags/index",
+    "g": "./components/extra-info/index",
+    "h": "./components/progress-info/index",
+    "i": "/packages/async-core/@y/dt/src/captain/item-card/components/coupon-style/index",
+    "j": "./components/ellipsis-wrapper/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": {
+    "a": "_",
+    "b": "_",
+    "c": "_",
+    "d": "_",
+    "e": "_",
+    "i": "_"
+  }
+}

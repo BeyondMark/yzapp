@@ -1,0 +1,5 @@
+<view>
+    <a bind:_init="_tic" bind:tap="_p" border="{{false}}" customClass="{{'d5a4c'}}" data-t="{{ tap:{en:'onClick'} }}" isLink="{{true}}" title="活动优惠" valueClass="dc895">
+        <view style="color:{{themeColors['main-bg']}}; font-weight:var(--theme-common-price-font-weight, 800)">{{activityValue}}</view>
+    </a>
+</view>

@@ -1,0 +1,11 @@
+<a bind:_init="_tic" customStyle="{{themeBackground5Style}}" isWxReceipt="{{isWxReceipt}}">
+    <image class="fc966 bd231" lazyLoad="true" src="{{curInfo.imgUrl}}"></image>
+    <view class="fa34c">
+        <view class="c3cf16 c86414">
+            <view class="c0ee6a">赠品</view> {{curInfo.title}} </view>
+        <view class="c9a036">
+            <c bind:_init="_tic" customStyle="{{themeColorStyle}}" isSkyline="{{isSkyline}}" prefix="价值" price="{{curGoodsPrice}}"></c>
+            <b bind:_init="_tic" bind:tap="_p" color="var(--ump-main-bg, #323233)" customClass="ce50a" data-t="{{ tap:{en:'clickBtn'} }}" round="{{true}}" size="small" textStyle="color: var(--ump-main-text, #fff)">0元领取</b>
+        </view>
+    </view>
+</a>

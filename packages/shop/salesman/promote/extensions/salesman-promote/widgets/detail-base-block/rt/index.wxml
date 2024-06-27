@@ -1,0 +1,34 @@
+<template name="spread-slot">
+    <slot name="{{item}}" wx:for="{{item.slots}}" wx:key="*this"></slot>
+</template>
+<view class="feature-page__top-hook"></view>
+<view class="page-goods" hidden="{{loading}}">
+    <block wx:for="{{design}}" wx:key="type">
+        <block wx:if="{{item.type=='image-block'}}">
+            <b rmId="{{rmId}}" wx:if="{{rmId==='b29-0'}}"></b>
+        </block>
+        <block wx:if="{{item.type=='base-info-block'}}">
+            <c rmId="{{rmId}}" wx:if="{{rmId==='b29-0'}}"></c>
+        </block>
+        <block wx:if="{{item.type=='coupon-block'}}">
+            <d rmId="{{rmId}}" wx:if="{{rmId==='b29-0'}}"></d>
+        </block>
+        <block wx:if="{{item.type=='goods-detail-block'}}">
+            <e rmId="{{rmId}}" wx:if="{{rmId==='b29-0'}}"></e>
+        </block>
+        <block wx:if="{{item.type=='task-award-block'}}">
+            <f rmId="{{rmId}}" wx:if="{{rmId==='b29-0'}}"></f>
+        </block>
+        <block wx:if="{{item.type=='price-intro-block'}}">
+            <g rmId="{{rmId}}" wx:if="{{rmId==='b29-0'}}"></g>
+        </block>
+        <block wx:if="{{item.type=='trade-carousel'}}">
+            <h rmId="{{rmId}}" wx:if="{{rmId==='b29-0'}}"></h>
+        </block>
+        <block wx:if="{{item.type==='fixed-bottom-block'}}">
+            <i rmId="{{rmId}}" wx:if="{{rmId==='b29-0'}}"></i>
+        </block>
+    </block>
+</view>
+<a source="{{2}}" wx:if="{{showShopPopManager}}"></a>
+<slot name="detail-base-footer"></slot>

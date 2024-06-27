@@ -1,0 +1,3 @@
+<view wx:if="{{alias}}">
+    <a src="/wscuser/scrm/benefitcard/active?alias={{alias}}&sub_type={{subType}}&card_no={{cardNo}}&guideType={{guideType}}&redirectUrl={{redirectUrl}}"></a>
+</view>

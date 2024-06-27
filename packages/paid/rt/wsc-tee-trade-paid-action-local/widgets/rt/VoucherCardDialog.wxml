@@ -1,0 +1,14 @@
+<view>
+    <b bind:_init="_tic" bind:click-overlay="_p" closeOnClickOverlay="{{true}}" customStyle="{{customPopupStyle}}" data-t="{{ clickOverlay:{en:'onClose'} }}" position="bottom" show="{{visible}}">
+        <view class="fb2a0">电子卡券码</view>
+        <image class="c01b95 bd231" lazyLoad="true" src="{{voucherCard.barcode}}"></image>
+        <image class="c69c49 bd231" lazyLoad="true" src="{{voucherCard.qrcode}}"></image>
+        <view class="c9cff9">统一核销码：{{voucherCard.code}}</view>
+        <view class="c945ef c89585">为保障您的权益，未消费前请不要将二维码/条形码提供给商家</view>
+        <view class="d3d91">
+            <a bind:_init="_tic" bind:tap="_p" customClass="c731eb" customStyle="{{themeCSS}}" data-t="{{ tap:{en:'saveToLocal'} }}">        保存到相册
+      </a>
+            <a bind:_init="_tic" bind:tap="_p" customClass="c39fc1" data-t="{{ tap:{en:'onClose'} }}"> 我知道了 </a>
+        </view>
+    </b>
+</view>

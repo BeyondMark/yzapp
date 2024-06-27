@@ -1,0 +1,5 @@
+<view>
+    <view class="goods-bottom-bar" wx:if="{{goodsBottomDisabledTip.text}}">
+        <navigator class="{{!goodsBottomDisabledTip.url?'diabled':''}}" url="{{goodsBottomDisabledTip.url}}">{{goodsBottomDisabledTip.text}}</navigator>
+    </view>
+</view>

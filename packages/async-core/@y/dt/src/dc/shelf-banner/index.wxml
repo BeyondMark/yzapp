@@ -1,0 +1,37 @@
+<view class="banner">
+    <d autoplay="{{opt.bannerImages.length>1?3000:0}}" bind:_init="_tic" circular="{{true}}" loop="{{true}}" pid="{{vanSwiperKey}}" style="height:{{autoHeight?swiperHeight:'160px'}}" touchable="{{opt.bannerImages.length>1}}" wx:if="{{opt.bannerImages&&opt.bannerImages.length}}">
+        <view wx:for="{{opt.bannerImages}}" wx:key="index">
+            <c bind:_init="_tic" pid="{{vanSwiperKey}}" wx:if="{{item.link_type==='chat'}}">
+                <button businessId="{{extraData.businessId||''}}" class="contact-button" openType="contact" sessionFrom="{{extraData.sourceParam||''}}">
+                    <image class="banner-image tee-image" lazyLoad="true" mode="{{autoHeight?'widthFix':'aspectFill'}}" src="{{item.image_url}}" style="height:{{autoHeight?swiperHeight:'160px'}}"></image>
+                </button>
+            </c>
+            <c bind:_init="_tic" pid="{{vanSwiperKey}}" wx:else>
+                <image bind:tap="_p" class="banner-image tee-image" data-item="{{item}}" data-t="{{ tap:{ en:'handleNavigation',args:[item] } }}" lazyLoad="true" mode="{{autoHeight?'widthFix':'aspectFill'}}" src="{{item.image_url}}" style="height:{{autoHeight?swiperHeight:'160px'}}"></image>
+            </c>
+        </view>
+    </d>
+    <image class="banner-image {{autoHeight?'auto':''}} tee-image" lazyLoad="true" mode="{{autoHeight?'widthFix':'aspectFill'}}" src="{{opt.bannerImage}}" wx:else></image>
+    <view class="banner-center {{alignCenter?'center':''}} {{'card-type-'+cardType}} {{'banner-border-'+borderRadiusType}}">
+        <view class="banner-mark {{!alignCenter?'right':''}}">
+            <image class="banner-mark__icon tee-image" lazyLoad="true" src="{{logo||CURRENT_GLOBAL_SHOP.logo}}" style="background-color:transparent"></image>
+        </view>
+        <block wx:if="{{enterShopMode===1||enterShopMode===2||!userLocation}}">
+            <view bind:tap="_p" class="banner-shop {{alignCenter?'center':'right'}}" data-t="{{ tap:{en:'handleChangeShop'} }}">
+                <view class="banner-shop-title">{{shopName||CURRENT_GLOBAL_SHOP.shop_name}}</view>
+                <a bind:_init="_tic" class="banner-shop-icon" color="#323233" name="arrow" wx:if="{{showOnlineShopSwitch}}"></a>
+            </view>
+            <view bind:tap="_p" class="banner-address {{alignCenter?'center':''}}" data-t="{{ tap:{en:'handleChangeShop'} }}" wx:if="{{shopAddress}}">
+                <a bind:_init="_tic" class="banner-address-icon" name="location-o" size="16"></a>
+                <view class="t-text">{{shopAddress}}</view>
+            </view>
+        </block>
+        <view bind:tap="_p" class="banner-address {{alignCenter?'center':''}}" data-t="{{ tap:{en:'handleChangeShop'} }}" wx:else>
+            <a bind:_init="_tic" class="banner-address-icon" name="location-o" size="16"></a>
+            <view class="banner-address-text t-text">{{userLocation}}</view>
+            <a bind:_init="_tic" class="banner-address-icon" name="arrow" size="16" wx:if="{{showOnlineShopSwitch}}"></a>
+        </view>
+        <b bind:_init="_tic" bind:subscribeGuide="_p" bind:takeCoupon="_p" data-t="{{ subscribeGuide:{en:'handleShowSubscribeGuide'},takeCoupon:{en:'handleCouponTake'} }}" isTabPage="{{true}}" shopAnnouncementText="{{showNotice&&opt.notice}}" shopName="{{shopName||CURRENT_GLOBAL_SHOP.shop_name}}" showUmp="{{showUmp}}" themeColor="{{themeColors.general}}" themeRgbColor="{{themeRgbColor}}" umpData="{{umpData}}"></b>
+    </view>
+    <subscribe-guide bind:_init="_tic" show="{{true}}" zIndex="110" wx:if="{{showSubscribeGuide}}"></subscribe-guide>
+</view>

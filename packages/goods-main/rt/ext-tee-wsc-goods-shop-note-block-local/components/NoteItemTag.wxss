@@ -1,0 +1,13 @@
+.c436f5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  padding: 2px 4px;
+  font-size: 10px;
+  color: #fff;
+  border-radius: 0 0 2px 0;
+}
+.c7a1ac {
+  background-color: var(--main-bg);
+}

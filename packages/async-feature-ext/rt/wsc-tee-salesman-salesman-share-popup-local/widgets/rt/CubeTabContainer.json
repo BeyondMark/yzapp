@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./CubeTabPoster",
+    "b": "./CubeTabPromote",
+    "c": "./CloudSalesmanSharePopupCustomTabContent",
+    "d": "/@y-open/vt/dist/tabs/index",
+    "e": "/@y-open/vt/dist/tab/index",
+    "_": "../../../../../../components/_/index"
+  }
+}

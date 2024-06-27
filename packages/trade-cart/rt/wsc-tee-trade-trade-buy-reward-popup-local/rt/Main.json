@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../wsc-tee-trade-common-widgets-local/widgets/coupon-item/rt/index",
+    "b": "./../../wsc-tee-trade-common-widgets-local/rt/PresentGoods",
+    "c": "/@y-open/vt/dist/popup/index.weapp",
+    "d": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "d": "_" }
+}

@@ -1,0 +1,31 @@
+<view class="e6fc7">
+    <a bind:_init="_tic" position="bottom" round="{{true}}" show="{{showDatePicker}}" wx:if="{{messagesOpt.needPicker}}">
+        <b bind:_init="_tic" bind:cancel="_p" bind:confirm="_p" data-t="{{ cancel:{en:'onPickerCancel'},confirm:{en:'onPickerConfirm'} }}" minDate="{{pickerOpts.minDate}}" title="{{pickerOpts.title}}" type="{{pickerOpts.type}}" value="{{pickerOpts.value}}" wx:if="{{showDatePicker}}"></b>
+    </a>
+    <view class="bd371">
+        <view class="c5e979">
+            <slot name="sku-header"></slot>
+        </view>
+        <view class="c21f9">
+            <c bind:_init="_tic" bind:preview="_p" data-t="{{ preview:{en:'onPreview'} }}" opt="{{headerOpt}}"></c>
+            <view class="d7e0c">
+                <d bind:_init="_tic" opt="{{headerOpt}}" themeTag="{{themeTag}}"></d>
+                <slot name="sku-price-extra"></slot>
+                <e bind:_init="_tic" opt="{{headerOpt}}"></e>
+            </view>
+        </view>
+    </view>
+    <view class="c7006b">
+        <slot name="sku-group-header"></slot>
+        <view class="{{'c4fcbd'}} {{skeletonInfo.class}}" style="{{'height:'+skeletonInfo.height}}" wx:if="{{rowOpt.show&&showRowSkeleton}}"></view>
+        <f bind:_init="_tic" bind:preview="_p" bind:select="_p" data-t="{{ preview:{en:'onPreview'},select:{en:'onSelect'} }}" opt="{{rowOpt}}" selected="{{selected}}" wx:if="{{rowOpt.show&&showRowBlock}}"></f>
+        <slot name="sku-group-main"></slot>
+        <j bind:_init="_tic" bind:change="_p" bind:over-limit="_p" data-t="{{ change:{en:'onStepperChange'},overLimit:{en:'onVerLimit'} }}" opt="{{stepperOpt}}" wx:if="{{stepperOpt.show}}"></j>
+        <h bind:_init="_tic" bind:change="_p" data-t="{{ change:{en:'onBirthdayChange'} }}" opt="{{birtydayInfo}}" wx:if="{{birtydayInfo.customerRelation}}"></h>
+        <slot name="sku-group-footer"></slot>
+        <g bind:_init="_tic" bind:change="_p" bind:date-click="_p" data-ref="messages" data-t="{{ dateClick:{en:'onDateTimeClick'},change:{en:'onMessageChange'} }}" opt="{{messagesOpt}}" skuId="{{sku.skuId}}" wx:if="{{messagesOpt.show}}"></g>
+        <slot name="sku-group-goods-detail"></slot>
+    </view>
+    <slot name="sku-footer-info"></slot>
+    <i bind:_init="_tic" bind:auth-click="_p" bind:user-authorize-show="_p" data-t="{{ authClick:{en:'onSubmit'},userAuthorizeShow:{en:'onUserAuthorizeShow'} }}" opt="{{footerOpt}}"></i>
+</view>

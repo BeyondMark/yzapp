@@ -1,0 +1,11 @@
+<view class="salesman-commission" wx:if="{{commissionData.value}}">
+    <view class="salesman-commission-banner">
+        <a class="banner-theme" customClass="banner-theme-custom" gradient="{{true}}" gradientDeg="45">
+            <image class="banner-image" src="https://b.yzcdn.cn/public_files/07662a651dd63e97555da0ec5bf5bbb1.png"></image>
+            <view class="salesman-commission__label">
+                <text class="salesman-commission__label-desc">{{commissionData.text}}</text>
+                <text class="salesman-commission__label-commission">{{commissionData.value}}</text>
+            </view>
+        </a>
+    </view>
+</view>

@@ -1,0 +1,37 @@
+<c bind:_init="_tic" customClass="c71806" position="bottom" safeAreaInsetBottom="{{true}}" show="{{isShowAddressDeliveryPopup}}">
+    <view class="c80d9e">
+        <i active="{{active}}" bind:_init="_tic" bind:change="_p" color="var(--main-bg, #ee0a24)" customClass="c2fd40" data-t="{{ change:{en:'onTabChange'} }}" pid="address-delivery-popup__tabs" wx:if="{{showAddressTab}}">
+            <h bind:_init="_tic" name="{{item.id}}" pid="address-delivery-popup__tabs" title="{{item.text}}" wx:for="{{tabList}}" wx:key="id"></h>
+        </i>
+        <view class="c62452" wx:elif="{{isShowSelfFetch}}">选择提货地址</view>
+        <view class="c62452" wx:elif="{{isShowExpress&&isShowExpressWayList}}">选择配送方式</view>
+        <view class="c62452" wx:elif="{{isShowExpress&&!isShowExpressWayList}}">选择收货地址</view>
+        <d bind:_init="_tic" bind:tap="_p" customClass="c9a6c0" data-t="{{ tap:{en:'onPopupClose'} }}" name="cross"></d>
+    </view>
+    <view class="c23e8c" wx:if="{{!isOnlySuportSelfFetch&&active===0}}">
+        <view class="c23e8c-way" wx:if="{{isShowExpressWayList}}">
+            <view class="c3e91c"> 配送方式 </view>
+            <view class="c82edd">
+                <f bind:_init="_tic" border="{{false}}" customClass="c53d46" wx:for="{{expressPostageItems}}" wx:key="index">
+                    <e bind:_init="_tic" bind:change="_p" checkedColor="var(--main-bg, #323233)" customClass="c92876" data-t="{{ change:{en:'onExpressWayChange'} }}" disabled="{{!item.available}}" iconSize="16px" labelClass="c943c5" name="{{item.expressType}}" value="{{currentExpressWay}}">
+                        <view class="c89585">{{item.cellTitle}}</view>
+                        <view class="c89585" wx:if="{{item.postageWarnDesc}}">（{{item.postageWarnDesc}}）</view>
+                    </e>
+                </f>
+            </view>
+        </view>
+        <view class="c76987">
+            <view class="{{'c3e91c'}} {{isShowExpressWayList?'c5f658':''}}">        收货地址
+      </view>
+            <a bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'onPopupClose'} }}" rmId="{{rmId}}" wx:if="{{rmId==='b7-42'}}"></a>
+        </view>
+    </view>
+    <view class="fdb2c" wx:if="{{active===1||isOnlySuportSelfFetch}}">
+        <block wx:if="{{prepareIsReady}}">
+            <b bind:_init="_tic" initData="{{selfFetchInitData}}" isHideInStock="{{true}}" rmId="b7-71" wx:if="{{rmId==='b7-42'}}"></b>
+        </block>
+        <view class="c9a0d8" wx:else>
+            <g bind:_init="_tic" description="请补充商品规格及相关信息后查看"></g>
+        </view>
+    </view>
+</c>

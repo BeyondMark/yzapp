@@ -1,0 +1,2 @@
+<b id="{{selector}}"></b>
+<a bind:closeAccountLogin="handleCloseAccountLogin" bind:loginFail="loginFail" bind:loginSuccess="loginSuccess" forbidClose="{{forbidClose}}" isFromAuthComponent="{{isFromAuthComponent}}" show="{{accountLogin}}" wx:if="{{accountLogin}}"></a>

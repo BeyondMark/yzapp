@@ -1,0 +1,21 @@
+.bd231 {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.c49e20 {
+  display: flex;
+  height: 88px;
+  box-sizing: initial;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+  font-size: 0;
+  width: calc(100vw - 24px);
+}
+.abde0 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}

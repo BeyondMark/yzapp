@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@vant/weapp/dist/popup/index",
+    "b": "../../../@vant/weapp/dist/dialog/index",
+    "c": "../../../@vant/weapp/dist/icon/index",
+    "d": "./components/passer/index",
+    "e": "./components/method/index",
+    "f": "./components/login/index",
+    "g": "./components/home/index",
+    "h": "./components/all/index",
+    "_": "../../../../../components/_/index"
+  }
+}

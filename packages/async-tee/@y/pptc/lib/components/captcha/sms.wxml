@@ -1,0 +1,14 @@
+<view class="account-captcha__inputs">
+    <view class="row">
+        <view class="row-input">
+            <a bind:_init="_tic" bind:input="_p" border="{{false}}" cursorSpacing="{{240}}" data-t="{{ input:{en:'handleMobileInput'} }}" enableNative="{{true}}" maxlength="{{11}}" placeholder="请输入手机号" type="number" value="{{mobile}}"></a>
+        </view>
+    </view>
+    <view class="row flex-row">
+        <view class="row-input">
+            <a bind:_init="_tic" bind:input="_p" border="{{false}}" cursorSpacing="{{194}}" data-t="{{ input:{en:'handleCodeInput'} }}" enableNative="{{true}}" maxlength="{{6}}" placeholder="请输入6位验证码" type="number" value="{{code}}"></a>
+        </view>
+        <view bind:tap="_p" class="{{smsBtnClass}}" data-t="{{ tap:{en:'handleSendSmsValidate'} }}"> {{smsBtnText}} </view>
+    </view>
+    <b bind:_init="_tic" bind:on-change="_p" bind:on-mode-change="_p" bind:on-submit="_p" bind:on-toast="_p" bind:on-view-agreement="_p" data-t="{{ onChange:{en:'handleChangeProtocol'},onModeChange:{en:'handleChangeMode'},onViewAgreement:{en:'handleViewAgreement'},onSubmit:{en:'handleSubmit'},onToast:{en:'showToast'} }}" disabled="{{!loginEnable}}" loading="{{loading}}" modeChangeText="账号密码登录" theme="{{theme}}"></b>
+</view>

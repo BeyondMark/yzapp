@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../list-item/index",
+    "b": "../experience-card/index",
+    "_": "../../../../../components/_/index"
+  }
+}

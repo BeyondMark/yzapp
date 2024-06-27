@@ -1,0 +1,37 @@
+<view class="level-wrap" style="{{bgStyle}}">
+    <view class="reflective" style="{{reflectiveStyle}}"></view>
+    <view class="level-top">
+        <view class="card-level">
+            <view class="level-name-wrap">
+                <text class="level-name">{{card.name}}</text>
+                <text class="expiry" wx:if="{{expiryDesc}}">{{expiryDesc}}</text>
+            </view>
+        </view>
+        <view class="right-wrap" wx:if="{{hasCurrentLevel}}">当前等级<view bindtap="handleQRClick" class="card-code" wx:if="{{!disabled}}">
+                <view class="QR icon"></view>
+            </view>
+        </view>
+    </view>
+    <view class="level-bottom">
+        <view class="bot-right-wrap">
+            <a bindtap="goToPrepaid" block="{{true}}" plain="{{true}}" round="{{true}}" size="small" type="default" wx:if="{{showGoPrepaidBtn}}">去充值</a>
+        </view>
+        <view class="card-level-container" wx:if="{{memberCenterLogoUrl&&!card.image&&!showGoPrepaidBtn}}">
+            <image class="card-level-container-logo" src="{{memberCenterLogoUrl}}"></image>
+        </view>
+        <view wx:if="{{hasCurrentLevel}}">
+            <view bindtap="goToPointsStore" class="points-info" wx:if="{{curLevelBottomLeft}}">
+                <text class="bigger">{{curLevelBottomLeft.val}}</text>
+                <text>{{curLevelBottomLeft.suffix}}</text>
+            </view>
+        </view>
+        <view wx:else>
+            <view wx:if="{{bottomText.showHtmlSnip}}">
+                <rich-text class="need" nodes="{{bottomText.htmlSnip}}"></rich-text>
+            </view>
+            <view wx:else>
+                <text>{{bottomText.desc}}</text>
+            </view>
+        </view>
+    </view>
+</view>

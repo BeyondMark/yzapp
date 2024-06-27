@@ -1,0 +1,5 @@
+.coupon-status {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 16px;
+}

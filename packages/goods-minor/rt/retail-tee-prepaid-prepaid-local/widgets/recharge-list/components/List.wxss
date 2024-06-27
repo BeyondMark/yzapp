@@ -1,0 +1,134 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.c572dc {
+  display: flex;
+  overflow-x: auto;
+}
+.c572dc::-webkit-scrollbar {
+  display: none;
+}
+.b4acf {
+  padding: 12px;
+  padding-top: 2px;
+  background-color: #fff;
+}
+.c40e3c {
+  width: 35px;
+  height: 82px;
+  background: linear-gradient(270deg, #fff, hsla(0, 0%, 100%, 0));
+  position: absolute;
+  right: 12px;
+}
+.dc7fe {
+  position: relative;
+  height: 82px;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 0 54.5%;
+  padding: 0 12px;
+  border: 2px solid transparent;
+  max-width: 54.5%;
+}
+.dc7fe:nth-child(n + 2) {
+  margin-left: 8px;
+}
+.dc7fe:only-child {
+  background: #f5f5f5
+    url(https://img01.yzcdn.cn/upload_files/2023/10/11/Fm9Bi0BmGjFeicFvOrVMDYtVHU5F.png)
+    100% / contain no-repeat;
+  max-width: 100%;
+  align-items: start;
+}
+.f8404 {
+  background-color: #fff !important;
+  border: 2px solid var(--general);
+}
+.dc7fe--full {
+  max-width: 50%;
+}
+.c3d0e3 {
+  color: #111;
+  font-size: 16px;
+  font-weight: 500;
+}
+.bf4e8 {
+  color: #999;
+  font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+.c86177 {
+  color: var(--general);
+  font-size: 14px;
+}
+.b30b6 {
+  position: absolute;
+  right: -2px;
+  top: 0;
+  font-size: 12px;
+  height: 18px;
+  border-bottom-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.c0261b {
+  line-height: 18px;
+  top: -1px;
+  width: 20px;
+  color: #fff;
+  background-color: var(--general);
+}
+.c130af {
+  width: 40px;
+  top: -2px;
+  color: var(--general);
+  background-color: #ededed;
+}
+.c0b4b6 {
+  color: #f4991e;
+  background-color: #fbf2e5;
+  border-radius: 8px;
+  font-size: 12px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  position: relative;
+  box-sizing: border-box;
+  height: 28px;
+}
+.c16447 {
+  font-weight: 600;
+  margin-left: 4px;
+}
+.c5799b {
+  display: inline-block;
+  width: 81px;
+  height: 100%;
+  background: url(https://img01.yzcdn.cn/upload_files/2023/11/16/Fl8ikF7crkieX_SXFxIPU4mvrzDu.png)
+    50%/100% 100%;
+  position: absolute;
+  right: 0;
+}
+.c69337 {
+  left: 16px;
+  bottom: 0;
+  border-bottom-width: 0;
+  transform: translate(-50%, 100%);
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-top-color: #fbf2e5;
+  border-style: solid;
+  border-width: 4px;
+}

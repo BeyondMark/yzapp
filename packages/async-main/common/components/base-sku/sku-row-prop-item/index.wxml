@@ -1,0 +1,1 @@
+<a bg="{{isActive?'main-bg':''}}" bindtap="onPropSelect" color="{{isActive?'general':''}}" customClass="{{rowItemClass}}" opacity="0.1">{{skuValue.name}}</a>

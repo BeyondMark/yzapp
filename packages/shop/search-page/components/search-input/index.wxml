@@ -1,0 +1,10 @@
+<view class="deco-search-input-wrap">
+    <b bind:change="handleInput" bind:search="handleSearch" focus="{{focus}}" inputClass="search-page-input" placeholder="搜索商品" shape="round" useActionSlot="{{true}}" value="{{defaultValue}}">
+        <view bind:tap="handleSearch" class="text-action" slot="action">搜索</view>
+    </b>
+    <view class="automated-words-list" wx:if="{{automatedWordsList.length>0}}">
+        <view bind:tap="handleAutomatedWordClick" class="automated-words-list__item" data-item="{{item}}" wx:for="{{automatedWordsList}}" wx:key="*this">
+            <a color="#969799" highlightColor="#323233" highlightText="{{searchText}}" text="{{item}}"></a>
+        </view>
+    </view>
+</view>

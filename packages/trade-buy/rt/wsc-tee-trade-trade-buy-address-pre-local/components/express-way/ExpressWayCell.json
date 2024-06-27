@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../../@y/wsc-tee-trade-common/components/OrderActionSheet",
+    "b": "/@y-open/vt/dist/cell/index",
+    "c": "/@y-open/vt/dist/cell-group/index",
+    "d": "/packages/async-tee/@y-open/vt/dist/radio/index",
+    "_": "../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "d": "_" }
+}

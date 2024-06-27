@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./FastJoinHeader",
+    "b": "./../../../@y/tuc/src/fast-join/index",
+    "_": "../../../../../components/_/index"
+  }
+}

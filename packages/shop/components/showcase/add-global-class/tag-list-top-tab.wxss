@@ -1,0 +1,57 @@
+.th_vw-t-t .van-tab {
+  color: #646566;
+}
+.th_vw-t-t.tags-tab--fixed .van-tabs__wrap {
+  transition: top 0.3s linear;
+}
+.th_vw-t-t.th_vw-s-0 .van-tabs__line {
+  display: block;
+}
+.th_vw-t-t.th_vw-s-0 .van-tab--active .van-tab__title {
+  color: #f44;
+  background: #fff !important;
+}
+.th_vw-t-t .van-tabs--card {
+  padding-top: 44px;
+  margin: 0;
+}
+.th_vw-t-t .van-tabs--card .van-tabs__wrap,
+.th_vw-t-t .van-tabs__nav--card {
+  height: 44px;
+}
+.th_vw-t-t .van-tabs__nav--card .van-tab {
+  border: none;
+  line-height: 44px;
+}
+.th_vw-t-t .van-tabs__scroll--card {
+  border: none;
+}
+.th_vw-t-t.th_vw-s-1 .van-tab__title {
+  height: 20px;
+  margin-top: 8px;
+  line-height: 20px;
+  padding: 4px 2px;
+  color: #7d7e80;
+  border-radius: 15px;
+}
+.th_vw-t-t.th_vw-s-1 .van-tab--active .van-tab__title {
+  color: #fff !important;
+  box-shadow: 0 0 0 20px #fff;
+}
+.th_vw-t-t.th_vw-s-2 .van-tabs__scroll--card {
+  height: 50px;
+}
+.th_vw-t-t.th_vw-s-2 .van-tab__title {
+  color: #7d7e80;
+}
+.th_vw-t-t.th_vw-s-2 .van-tab--active {
+  position: relative;
+  overflow: visible;
+}
+.th_vw-t-t.th_vw-s-2 .van-tab--active .van-tab__title {
+  color: #fff !important;
+}
+.th_vw-t-t.tags-tab--normal .van-tabs__wrap {
+  top: 0 !important;
+  box-shadow: 0 2px 12px rgba(100, 101, 102, 0.12);
+}

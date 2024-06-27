@@ -1,0 +1,4 @@
+<view class="custom-class {{utils.bem( 'tag',[ type,size,{mark:mark,plain:plain,round:round} ] )}}" style="{{computed.rootStyle( {plain:plain,color:color,textColor:textColor} )}}">
+    <slot></slot>
+    <a bind:click="onClose" customClass="c7af16" name="cross" wx:if="{{closeable}}"></a>
+</view>

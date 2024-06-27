@@ -1,0 +1,7 @@
+.t-text {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.zan-pay-recommend__action {
+  color: #ef2138;
+}

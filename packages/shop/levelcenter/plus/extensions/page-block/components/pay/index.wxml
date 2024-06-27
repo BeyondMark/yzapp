@@ -1,0 +1,1 @@
+<a bind:cashierclose="onCashierClose" bind:init="initCashier" bind:navigate="onCashierNavi" bind:paysuccess="onPaySuccess"></a>

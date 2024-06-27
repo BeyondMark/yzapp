@@ -1,0 +1,9 @@
+<b customClass="qr-popup" round="{{true}}" show="{{show}}">
+    <view class="qr-popup__title">加好友，赢大奖</view>
+    <view class="qr-popup__desc">动动手指，丰富奖品等你来拿</view>
+    <view class="qr-popup__image_container">
+        <image class="qr-popup__image" draggable="false" mode="aspectFit" showMenuByLongpress="{{true}}" src="{{wecomCustomerQrCode}}"></image>
+    </view>
+    <view class="qr-popup__tap">长按识别二维码</view>
+    <a bind:click="close" class="close-btn" name="cross"></a>
+</b>

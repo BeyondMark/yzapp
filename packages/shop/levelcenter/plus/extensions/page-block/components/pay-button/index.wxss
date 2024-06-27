@@ -1,0 +1,136 @@
+.mobile-check-action {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 7px 16px;
+  font-weight: 700;
+  background-color: #fff;
+  box-shadow: 0-2px 10px 0 rgba(150, 151, 153, 0.12);
+}
+.check-full-btn {
+  width: 100%;
+  border: none;
+}
+.check-full-btn,
+.check-full-btn button {
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+}
+.check-btn,
+.check-full-btn button {
+  background: linear-gradient(90deg, #e2bb7c, #e8c388);
+  color: #724804;
+}
+.check-btn {
+  height: 36px;
+  line-height: 36px;
+  font-size: 14px;
+  border: none;
+  box-sizing: border-box;
+  width: 60%;
+  border-radius: 999px 0 0 999px;
+  text-align: center;
+}
+.button-wrapper {
+  display: flex;
+}
+.promot-info {
+  width: 40%;
+  font-size: 14px;
+  background-image: linear-gradient(121deg, #2f2d2a, #393530);
+  border-radius: 0 20px 20px 0;
+  text-align: center;
+  line-height: 36px;
+}
+.promot-info .experience-price {
+  color: #fdcb7a;
+}
+.read-wrapper {
+  width: 100%;
+  font-size: 14px;
+  padding: 5px 0;
+  justify-content: center;
+}
+.limit-discount,
+.read-wrapper {
+  display: flex;
+  align-items: center;
+}
+.limit-discount {
+  position: absolute;
+  top: -30px;
+  right: 70px;
+  font-size: 12px;
+  border-radius: 10px 2px;
+  padding: 0 10px;
+  background: linear-gradient(90deg, #ff4747, #ff8d44);
+  height: 26px;
+  color: #fff;
+}
+.first-limit {
+  top: 0;
+  right: 14px;
+}
+.limit-discount:after {
+  content: "";
+  border-right: 8px solid;
+  border-left: 0 solid;
+  border-bottom-right-radius: 10px 6px;
+  height: 5px;
+  width: 6px;
+  position: absolute;
+  bottom: -4px;
+  left: 15px;
+  border-color: #ff4747;
+}
+.is-new-phone {
+  padding-bottom: 7px;
+  padding-bottom: calc(7px + constant(safe-area-inset-bottom));
+  padding-bottom: calc(7px + env(safe-area-inset-bottom));
+}
+.can-not-promot {
+  color: #969799;
+  font-size: 12px;
+  margin: 3px 16px 8px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.can-not-promot .text-line {
+  display: inline;
+  margin-bottom: 4px;
+}
+.check-text {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+  padding: 0 0 8px;
+  justify-content: center;
+  align-items: center;
+  color: #969799;
+  line-height: 24px;
+}
+.check-text.check-text-left {
+  justify-content: flex-start;
+  margin-left: 8px;
+}
+.check-text .link {
+  color: #323233;
+}
+.check-text .promot-info {
+  color: #969799;
+  font-size: 12px;
+  margin-left: 5px;
+}
+.check-text .agreement {
+  padding-top: 3px;
+  display: inline-flex;
+}
+.upgrade-text {
+  margin-top: 8px;
+  padding: 0;
+}

@@ -1,0 +1,19 @@
+<view class="receiver-list-wrap user-class">
+    <view class="receive-info van-font-14 van-c-black {{receiverList.length?'van-hairline--bottom':''}}">
+        <block wx:if="{{gameType===1}}">已领取{{givenNum}}份，共{{giftNum}}份</block>
+        <block wx:elif="{{gameType===2&&lotteryInfo.isEnd}}">共{{lotteryInfo.engageNum}}人参与, {{lotteryInfo.awardNum}}中奖</block>
+        <block wx:else>已参与{{lotteryInfo.engageNum}} 人</block>
+    </view>
+    <view class="receiver-list" wx:if="{{receiverList.length}}">
+        <view class="receiver van-clearfix" wx:if="{{gameType===2&&!lotteryInfo.isEnd}}">
+            <image class="receiver-avatar receiver-avatar-lottery van-pull-left" src="{{user.avatar}}" wx:for="{{receiverList}}" wx:for-item="user" wx:key="{{ index }}"></image>
+        </view>
+        <block wx:else>
+            <view class="receiver van-clearfix" wx:for="{{receiverList}}" wx:for-item="user" wx:key="{{ index }}">
+                <image class="receiver-avatar van-pull-left" src="{{user.avatar}}"></image>
+                <view class="receiver-name van-font-12 van-c-black van-ellipsis">{{user.nickName}}</view>
+                <view class="receiver-goods van-font-12 van-c-black van-pull-right van-ellipsis">{{user.goodsName}}</view>
+            </view>
+        </block>
+    </view>
+</view>

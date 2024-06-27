@@ -1,0 +1,16 @@
+<view class="container">
+    <view class="head">
+        <slot name="head"></slot>
+    </view>
+    <view class="title">入会仅剩一步</view>
+    <view class="subtitle">
+        <block wx:if="{{thresholdType===3}}">达到消费门槛</block>
+        <block wx:elif="{{thresholdType===4}}">充值<text class="highlight" decode="{{true}}">&nbsp;{{serializedThresholdValue}}元</text>
+        </block>
+        <block wx:else>完成任务</block>，解锁会员权益</view>
+    <view bindtap="handleAction" class="action">
+        <block wx:if="{{thresholdType===3}}">查看详情</block>
+        <block wx:elif="{{thresholdType===4}}">去充值</block>
+        <block wx:else>查看任务</block>
+    </view>
+</view>

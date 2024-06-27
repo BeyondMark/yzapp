@@ -1,0 +1,3 @@
+<view class="zan-pay__protocol" wx:if="{{protocol}}"> {{protocol.prefix}} <block wx:if="{{protocol.links&&protocol.links.length}}">
+        <view bind:tap="_p" class="zan-pay__protocol-link t-text" data-t="{{ tap:{ en:'navigate',args:[link] } }}" wx:for="{{protocol.links}}" wx:for-item="link" wx:key="name"> {{link.name}} </view>
+    </block> {{protocol.suffix}}</view>

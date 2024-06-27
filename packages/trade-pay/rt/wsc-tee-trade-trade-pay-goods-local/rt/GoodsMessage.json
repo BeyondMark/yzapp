@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y-open/vt/dist/cell/index",
+    "b": "../../../@y/wsc-tee-trade-common/components/OrderActionSheet",
+    "c": "/@y-open/vt/dist/cell-group/index",
+    "_": "../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,20 @@
+<view>
+    <a bind:_init="_tic" bind:tap="_p" border="{{false}}" data-t="{{ tap:{en:'onClick'} }}" useLabelSlot="{{!!channelNotice}}">
+        <view class="{{'flex-block'}} {{cx.channel}}" slot="title">
+            <view class="cashier-pre__icon-container">
+                <c bind:_init="_tic" channel="{{channel}}" customStyle="{{channel.available?'':'opacity: 0.5'}}" style="height: 20px"></c>
+            </view>
+            <view style="margin-left: 8px">
+                <view class="cashier-pre__flex cashier-pre__flex--align-center">
+                    <view class="t-text">{{channel.payChannelName}}</view>
+                    <view class="t-text" wx:if="{{balance}}">（剩余 ¥ {{balance}}）</view>
+                    <block wx:elif="{{channel.tags}}">
+                        <b bind:_init="_tic" color="rgba(238,10,36, .1)" customClass="cashier-pre__tag" textColor="#EE0A24" wx:for="{{channel.tags}}" wx:for-item="tag" wx:key="tag"> {{tag}} </b>
+                    </block>
+                </view>
+                <d bind:_init="_tic" context="{{channelNoticeContext}}" customClass="{{true}}" customStyle="{{'font-size: 12px; line-height: 16px; margin-top: 6px; padding-left: 0px; color: '+(channel.available?'#646566':'#c8c9cc')}}" segments="{{channelNotice}}" wx:if="{{channelNotice}}"></d>
+            </view>
+        </view>
+        <e bind:_init="_tic" checkedColor="{{themeColors.general}}" class="{{cx.rightIcon}}" slot="right-icon" value="{{!!selected&&selected.payChannel===channel.payChannel}}" wx:if="{{channel.available}}"></e>
+    </a>
+</view>

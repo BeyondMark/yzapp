@@ -1,0 +1,32 @@
+<view bind:tap="_p" class="{{containerConfig.class}}" data-t="{{ tap:{en:'handleTitleClick'} }}" style="{{containerConfig.style}}">
+    <view class="wrap {{opt.showDivider?'divider':''}}" style="{{wrapStyle}}">
+        <view class="content {{skeletonContent}}">
+            <view class="main {{opt.titleAfterTags&&opt.titleAfterTags.length!==0?'main-with-after':''}}" style="{{titleConfig.style}}" wx:if="{{opt.title||!opt.skeleton}}">
+                <view class="icon-or-tag" wx:for="{{tagsConfig}}" wx:key="index">
+                    <a bind:_init="_tic" class="icon" customStyle="{{titleConfig.iconStyle}}" name="{{item.icon}}" size="14" wx:if="{{item.type==='icon'}}"></a>
+                    <view class="tag" style="{{item.colorStyle}}" wx:elif="{{item.type==='text'}}">
+                        <view class="tag-text t-text">{{item.text}}</view>
+                        <view class="tag-bg" style="{{item.bgStyle}}"></view>
+                    </view>
+                </view>
+                <view class="title" style="{{titleConfig.style}}">{{opt.title}}</view>
+                <view class="title-after-tag" wx:for="{{opt.titleAfterTags}}" wx:key="index">
+                    <b bind:_init="_tic" class="after-tag" type="{{item.tagType}}"> {{item.text}} </b>
+                </view>
+            </view>
+            <c bind:_init="_tic" row="{{1}}" rowClass="{{opt.skeletonType==1?'skeleton-100':'skeleton-70'}}" wx:else></c>
+            <view class="sub" style="{{descConfig.style}}" wx:if="{{descConfig.show}}">
+                <view class="desc" wx:if="{{descConfig.isWxTitle}}">
+                    <view class="desc-date t-text" wx:if="{{opt.desc.wxDate}}"> {{opt.desc.wxDate}} </view>
+                    <view class="desc-author t-text" wx:if="{{opt.desc.wxAuthor}}"> {{opt.desc.wxAuthor}} </view>
+                    <view class="desc-title t-text" wx:if="{{opt.desc.wxLinkTitle}}"> {{opt.desc.wxLinkTitle}} </view>
+                </view>
+                <view class="desc" wx:else>{{opt.desc}}</view>
+            </view>
+        </view>
+        <view class="link" style="{{linkConfig.style}}" wx:if="{{opt.showLink}}">
+            <view class="link-text t-text" wx:if="{{linkConfig.showText}}"> {{opt.linkText}} </view>
+            <a bind:_init="_tic" class="arrow" customStyle="{{linkConfig.iconStyle}}" name="{{linkConfig.iconName}}" size="12" wx:if="{{linkConfig.showIcon}}"></a>
+        </view>
+    </view>
+</view>

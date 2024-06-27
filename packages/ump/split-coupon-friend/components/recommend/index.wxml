@@ -1,0 +1,15 @@
+<view class="recommend" wx:if="{{formatRecommendGoods&&formatRecommendGoods.length}}">
+    <view class="recommend-title">推荐更多商品</view>
+    <view class="recommend__list">
+        <view bindtap="gotoGoodsDetail" class="recommend-goods" data-index="{{index}}" data-item="{{item}}" wx:for="{{formatRecommendGoods}}" wx:key="index">
+            <view class="recommend-goods__img">
+                <image class="goods-image" lazyLoad="true" mode="aspectFit" src="{{item.imgUrl}}"></image>
+            </view>
+            <view class="recommend-goods__title recommend-goods__info">{{item.title}}</view>
+            <view class="recommend-goods__desc recommend-goods__info">
+                <view class="price">¥{{item.price}}</view>
+                <view class="tag" wx:if="{{item.showCouponTag}}">可用券</view>
+            </view>
+        </view>
+    </view>
+</view>

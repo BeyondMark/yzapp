@@ -1,0 +1,4 @@
+<view bind:tap="_p" class="c5fab8" data-t="{{ tap:{en:'onClick'} }}" style="{{customStyle}}">
+    <slot></slot>
+    <a bind:_init="_tic" class="c37981" color="#969799" name="arrow" size="16px" wx:if="{{showArrow}}"></a>
+</view>

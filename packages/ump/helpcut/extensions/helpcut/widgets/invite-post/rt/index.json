@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/ump/@vant/weapp/dist/action-sheet/index",
+    "b": "/@vant/weapp/dist/popup/index",
+    "c": "/packages/async-main/@vant/weapp/dist/icon/index",
+    "_": "../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "c": "_" }
+}

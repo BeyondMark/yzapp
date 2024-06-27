@@ -1,0 +1,39 @@
+<view class="pre-pay-card-wrapper" id="prepayCardCell" style="{{styleVar}}" wx:if="{{showPrepayCardCell}}">
+    <b bind:_init="_tic" border="{{false}}" center="{{true}}" customClass="prepay-card__cell" titleClass="prepay-card__cell-title">
+        <view bind:tap="_p" data-t="{{ tap:{en:'onCellClick'} }}" slot="title">
+            <view class="title-block">
+                <view class="t-text">余额/卡</view>
+                <view class="t-text" style="color:{{amountColor}}">（可用 ¥ {{usableAmount}}） </view>
+                <c bind:_init="_tic" color="#646566" name="arrow" style="font-weight:{{600}}; margin-left:-6px" wx:if="{{!value.noSign}}"></c>
+            </view>
+        </view>
+        <view bind:tap="_p" class="{{value.class}}" data-t="{{ tap:{en:'handleNoSignClick'} }}">{{value.text}} </view>
+        <view bind:tap="_p" class="prepay-cards__action prepay-cards__action--checked" data-t="{{ tap:{en:'handleSelectAllPrepayCards'} }}" slot="right-icon" wx:if="{{!value.noSign}}">
+            <c bind:_init="_tic" color="{{themeGeneralColor}}" name="checked" wx:if="{{isSelectedPrepayCards}}"></c>
+            <view class="prepay-cards__checked {{value.disabled?'prepay-cards__checked--disabled':''}}" wx:if="{{!isSelectedPrepayCards}}"></view>
+        </view>
+        <view bind:tap="_p" class="prepay-cards__action" data-t="{{ tap:{en:'onCellClick'} }}" slot="right-icon" wx:else>
+            <c bind:_init="_tic" color="#646566" name="arrow" style="font-weight:{{600}}"></c>
+        </view>
+    </b>
+    <a bind:_init="_tic" bind:updateValueCard="_p" data-t="{{ updateValueCard:{en:'handleRecommendSelect'} }}" decrease="{{prepayCardDecrease}}" newRecommend="{{newRecommend}}" originPay="{{originPay}}" realPay="{{realPay}}" recommendDetaid="{{recommendDetaid}}" rmId="b7-66" useStoreBalancePayInFull="{{useStoreBalancePayInFull}}" useStoredMemberCustomerDiscount="{{useStoredMemberCustomerDiscount}}" valueCard="{{valueCard}}" wx:if="{{rmId==='b7-64'}}"></a>
+    <view class="{{showDiscountTip.classBg}}" wx:if="{{openStoredDiscount&&hasDiscount}}">
+        <view class="{{showDiscountTip.classWrap}}">
+            <view class="discount-cell">
+                <view class="discount-cell__text">
+                    <image class="discount-cell__img tee-image" lazyLoad="true" src="https://b.yzcdn.cn/public_files/8fb0cd0d257b044755997438f33519bd.png"></image>
+                    <view class="t-text">储值专享折扣</view>
+                    <c bind:_init="_tic" bind:tap="_p" class="prepay-card__info" data-t="{{ tap:{en:'onShowTip'} }}" name="info-o"></c>
+                </view>
+                <view class="{{'discount-cell__discount'}} {{discount.class}}"> {{discount.text}} </view>
+            </view>
+            <view class="discount-explain" wx:if="{{showDiscountTip.value}}">
+                <view class="discount-explain__tip">{{showDiscountTip.text}}</view>
+                <view bind:tap="_p" class="discount-explain__recharge-wrapper" data-t="{{ tap:{en:'goRecommendRecharge'} }}" wx:if="{{showRechargeEntry}}">
+                    <view class="discount-explain__recharge"> 去充值 </view>
+                    <c bind:_init="_tic" class="discount-explain__info" name="arrow"></c>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

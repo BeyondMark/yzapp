@@ -1,0 +1,49 @@
+.collect-tip {
+  position: fixed;
+  top: 71px;
+  right: 15px;
+  width: 230px;
+  z-index: 151;
+  background: #fff;
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+.collect-tip--retail {
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 24px;
+  width: auto;
+  padding: 8px 12px;
+}
+.collect-tip--retail .collect-tip__line {
+  font-size: 12px;
+  font-weight: 400;
+  color: #fff;
+}
+.collect-tip--retail:before {
+  border-bottom-color: #222121 !important;
+}
+.collect-tip--hide {
+  visibility: hidden;
+  opacity: 0;
+}
+.collect-tip:before {
+  content: "";
+  position: absolute;
+  border: 7px solid transparent;
+  border-bottom-color: #fff;
+  top: -14px;
+  right: 49px;
+}
+.collect-tip .share-icon {
+  display: inline;
+  font-size: 20px;
+  line-height: 12px;
+  position: relative;
+  top: 4px;
+}
+.collect-tip__line {
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+}

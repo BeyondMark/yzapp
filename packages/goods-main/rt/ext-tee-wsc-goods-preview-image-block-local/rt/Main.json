@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./NormalCover",
+    "b": "/@y-open/vt/dist/popup/index.weapp",
+    "c": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "d": "/packages/async-tee/@y-open/vt/dist/swipe/index",
+    "e": "../../../@y-open/vt/dist/image-preview-swipe-item/index",
+    "f": "./../components/sku-cover/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "c": "_", "d": "_" }
+}

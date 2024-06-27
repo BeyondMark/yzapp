@@ -1,0 +1,18 @@
+<b bind:_init="_tic" bind:click-overlay="_p" closeOnClickOverlay="{{true}}" customStyle="{{customPopupStyle}}" data-t="{{ clickOverlay:{en:'onClose'} }}" position="bottom" show="{{visible}}">
+    <view class="c34670">订阅物流</view>
+    <view class="subscription-dialog__content">
+        <block wx:if="{{subscriptionModel[0]&&subscriptionModel[0].length}}">
+            <view class="{{isSubscriptionShow?'c6ef07':'c1c5b1'}}" wx:for="{{subscriptionModel[0]}}" wx:key="index"> {{item}} </view>
+        </block>
+        <block wx:if="{{subscriptionModel[1]&&subscriptionModel[1].length}}">
+            <image bind:error="_p" class="ea039 bd231" data-t="{{ error:{en:'onImgError'} }}" lazyLoad="true" src="{{item}}" wx:for="{{subscriptionModel[1]}}" wx:key="item"></image>
+        </block>
+        <block wx:if="{{subscriptionModel[2]&&subscriptionModel[2].length}}">
+            <view class="c1c5b1" wx:for="{{subscriptionModel[2]}}" wx:key="index"> {{item}} </view>
+        </block>
+    </view>
+    <view class="c0da0e">
+        <a bind:_init="_tic" bind:tap="_p" block="{{true}}" customClass="e6602" customStyle="{{btnCustomStyle}}" data-t="{{ tap:{en:'onManualClose'} }}">      我知道了
+    </a>
+    </view>
+</b>

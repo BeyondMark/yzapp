@@ -1,0 +1,26 @@
+<view class="info-header">
+    <block wx:if="{{hasAuth}}">
+        <view class="info-avatar">
+            <image src="{{userInfo.avatarUrl||'//img01.yzcdn.cn/public_files/aa912255b9328b35a53d548b0979086d.png'}}"></image>
+        </view>
+        <view class="person-info">
+            <view class="person_title">
+                <view class="person_name">{{userInfo.nickName}}<b currentFreeLevel="{{currentFreeLevel}}" currentPlusLevel="{{currentPlusLevel}}"></b>
+                </view>
+                <view class="value-link" wx:if="{{!!linkText}}">
+                    <text bindtap="linkTo">{{linkText}}</text>
+                    <a name="arrow"></a>
+                </view>
+            </view>
+            <view bindtap="descLinkTo" class="person_desc">{{desc}}</view>
+        </view>
+    </block>
+    <c authTypeList="{{['nicknameAndAvatar']}}" bindgetuserinfo="onGetUserInfo" bizDataMap="{{bizDataMap}}" data-nav="authorize" wx:else>
+        <view class="info-authorize">
+            <view class="info-avatar">
+                <image src="{{userInfo.avatarUrl||'https://img01.yzcdn.cn/public_files/aa912255b9328b35a53d548b0979086d.png'}}"></image>
+            </view>
+            <view class="info-promot">点击显示微信头像</view>
+        </view>
+    </c>
+</view>

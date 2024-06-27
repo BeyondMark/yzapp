@@ -1,0 +1,285 @@
+.goods-item--big .photo:after {
+  background-size: 100px 100px;
+}
+.goods-item--big .corner-mark--0 {
+  top: 11px;
+}
+.goods-item--big .corner-back--0 {
+  top: 20px;
+}
+.goods-item--big .corner-mark--2 {
+  left: 10px;
+}
+.goods-item--big .corner-back--2 {
+  left: 18px;
+}
+.goods-item--big .corner-mark--3 {
+  top: 10px;
+  left: 10px;
+}
+.goods-item--big .corner-back--3 {
+  top: 22px;
+  left: 18px;
+}
+.layout-container--small {
+  overflow: hidden;
+}
+.layout-container--small .goods-wrap {
+  width: 50%;
+}
+.goods-item--small .photo:after {
+  background-size: 88px 88px;
+}
+.goods-item--small.waterfall .photo {
+  height: auto;
+  min-height: 100px;
+}
+.goods-item--small.waterfall .photo__image {
+  position: relative;
+}
+.layout-container--hybrid {
+  overflow: hidden;
+}
+.layout-container--hybrid .goods-wrap:nth-child(3n + 1) {
+  width: 100%;
+}
+.layout-container--hybrid .goods-wrap:nth-child(3n + 1) .photo:after {
+  background-size: 100px 100px;
+}
+.layout-container--hybrid .goods-wrap:nth-child(3n + 1) .corner-mark--0 {
+  top: 11px;
+}
+.layout-container--hybrid .goods-wrap:nth-child(3n + 1) .corner-back--0 {
+  top: 20px;
+}
+.layout-container--hybrid .goods-wrap:nth-child(3n + 1) .corner-mark--2 {
+  left: 10px;
+}
+.layout-container--hybrid .goods-wrap:nth-child(3n + 1) .corner-back--2 {
+  left: 18px;
+}
+.layout-container--hybrid .goods-wrap:nth-child(3n + 1) .corner-mark--3 {
+  top: 10px;
+  left: 10px;
+}
+.layout-container--hybrid .goods-wrap:nth-child(3n + 1) .corner-back--3 {
+  top: 22px;
+  left: 18px;
+}
+.layout-container--hybrid .goods-wrap:nth-child(3n),
+.layout-container--hybrid .goods-wrap:nth-child(3n + 2) {
+  width: 50%;
+}
+.layout-container--hybrid .goods-wrap:nth-child(3n) .photo:after,
+.layout-container--hybrid .goods-wrap:nth-child(3n + 2) .photo:after {
+  background-size: 60px 60px;
+}
+.layout-container--three {
+  overflow: hidden;
+}
+.layout-container--three .goods-wrap {
+  width: 33.33%;
+}
+.layout-container--swipe {
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 10px;
+  margin-bottom: -10px;
+  box-sizing: border-box;
+}
+.layout-container--swipe .goods-wrap,
+.layout-container--swipe .more-button--6 {
+  flex: 0 0 30%;
+  width: 30%;
+}
+.layout-container--swipe .goods-item {
+  white-space: normal;
+}
+.goods-item--swipe .photo:after,
+.goods-item--three .photo:after {
+  background-size: 60px 60px;
+}
+.goods-item--swipe .corner-mark--0,
+.goods-item--swipe .corner-mark--1,
+.goods-item--three .corner-mark--0,
+.goods-item--three .corner-mark--1 {
+  font-size: 28px;
+  height: 28px;
+  width: 28px;
+}
+.goods-item--swipe .corner-back--0,
+.goods-item--three .corner-back--0 {
+  width: 26px;
+  height: 12px;
+  top: 8px;
+}
+.goods-item--swipe .corner-back--1,
+.goods-item--three .corner-back--1 {
+  width: 12px;
+  height: 26px;
+  left: 8px;
+}
+.goods-item--swipe .corner-mark--2,
+.goods-item--three .corner-mark--2 {
+  font-size: 28px;
+  height: 28px;
+  width: 28px;
+}
+.goods-item--swipe .corner-back--2,
+.goods-item--three .corner-back--2 {
+  width: 16px;
+  height: 16px;
+  left: 11px;
+}
+.goods-item--swipe .corner-mark--3,
+.goods-item--three .corner-mark--3 {
+  font-size: 28px;
+  height: 28px;
+  width: 28px;
+}
+.goods-item--swipe .corner-back--3,
+.goods-item--three .corner-back--3 {
+  width: 18px;
+  height: 12px;
+  top: 12px;
+  left: 10px;
+}
+.layout-container--list .photo {
+  float: left;
+  padding-top: 0 !important;
+}
+.layout-container--list .photo:after {
+  background-size: 60px 60px;
+}
+.layout-container--list.tag-left .photo:after {
+  background-size: 35px 35px;
+}
+.goods-item--list {
+  background: #fff;
+}
+.goods-item--list .c-goods-layout__info {
+  position: relative;
+  padding: 0 10px 0 0;
+  margin: 0 12px 0 151px !important;
+  overflow: hidden;
+  background-color: inherit;
+}
+.goods-item--list .c-goods-layout__info-price {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  margin: 0;
+  right: 0;
+}
+.goods-item--list .photo {
+  width: 145px;
+  height: 145px;
+  margin-right: 10px;
+}
+.goods-item--list .photo__image {
+  max-width: 145px;
+  max-height: 145px;
+}
+.goods-item--list.tag-left {
+  background-color: inherit;
+}
+.goods-item--list.tag-left .c-goods-layout__info {
+  margin: 0 10px 0 98px !important;
+  height: 88px;
+}
+.goods-item--list.tag-left .c-goods-layout__info-price {
+  bottom: 0;
+}
+.goods-item--list.tag-left .photo {
+  width: 88px;
+  height: 88px;
+}
+.goods-item--list.tag-left .photo__image {
+  max-width: 88px;
+  max-height: 88px;
+}
+.c-goods-layout,
+.goods-wrap {
+  overflow: hidden;
+}
+.c-goods-layout__info {
+  padding: 0 12px 4px;
+  position: relative;
+}
+.c-goods-layout__info-size2 {
+  padding: 0;
+}
+.c-goods-layout__info-layout5,
+.c-goods-layout__info-layout6 {
+  padding: 0 8px 2px;
+}
+.goods-item {
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
+}
+.goods-item.card-shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+.goods-item.card2 {
+  border: 1px solid rgba(50, 50, 51, 0.1);
+}
+.goods-item.simple {
+  background-color: inherit;
+}
+.goods-item.simple .c-goods-layout__info {
+  margin: 0;
+  padding: 0;
+}
+.goods-item.goods-item--list .c-goods-layout__info {
+  padding: 0 10px 0 0;
+  min-height: 145px;
+}
+.goods-item.circle {
+  border-radius: 8px;
+}
+.goods-item.circle .photo {
+  border-radius: 8px 8px 0 0;
+}
+.goods-item.circle.goods-item--list .photo {
+  border-radius: 8px 0 0 0;
+}
+.goods-item.circle.simple {
+  border-radius: 8px 8px 0 0;
+}
+.goods-item.circle.simple .photo {
+  border-radius: 0 0 8px 8px;
+}
+.goods-item.circle .label {
+  border-top-left-radius: 8px;
+}
+.goods-item .label {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  padding: 0 4px;
+  height: 24px;
+  font-size: 16px;
+  color: #fff;
+  line-height: 24px;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+  border-bottom-right-radius: 8px;
+}
+.layout-container--hybrid .goods-wrap,
+.layout-container--small .goods-wrap,
+.layout-container--three .goods-wrap {
+  overflow: hidden;
+  float: left;
+}
+.layout-container--swipe .label,
+.layout-container--three .label {
+  font-size: 12px !important;
+  height: 16px !important;
+  line-height: 16px !important;
+}

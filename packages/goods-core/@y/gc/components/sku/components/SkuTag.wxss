@@ -1,0 +1,31 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.c70c8 {
+  --tag-padding: 0;
+  margin: 8px 8px 0 0;
+  background-color: transparent !important;
+  color: var(--theme-tag-color, #323233) !important;
+}
+.c70c8:after {
+  border-radius: var(--theme-radius-tag, 1rem) !important;
+  border-color: var(--theme-tag-border-color, transparent) !important;
+}
+.e5a59 {
+  position: relative;
+  display: inline-block;
+  border-radius: var(--theme-radius-tag, 999px);
+  color: var(--theme-tag-color, #323233);
+  background: var(--theme-tag-bg-color, #f2f2ff);
+}
+.c772a4 {
+  position: relative;
+  z-index: 2;
+  font-size: 12px;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 16px;
+  padding: 0 4px;
+  height: 16px;
+}

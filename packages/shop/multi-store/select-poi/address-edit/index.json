@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "a": "/packages/async-main/@vant/weapp/dist/toast/index",
+    "b": "/packages/async-main/@vant/weapp/dist/icon/index",
+    "c": "../../../@vant/weapp/dist/cell-group/index",
+    "d": "../../../@vant/weapp/dist/cell/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_", "b": "_" }
+}

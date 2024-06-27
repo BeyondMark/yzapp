@@ -1,0 +1,50 @@
+.t-text {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.zan-pay__option {
+  line-height: 20px !important;
+  padding: 14px 16px !important;
+}
+.zan-pay__option--disabled,
+.zan-pay__option--disabled .zan-pay__label {
+  color: #c8c9cc;
+}
+.zan-pay__option:not(:last-child):after {
+  left: 48px;
+}
+.zan-pay__active-sign {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.zan-pay__title {
+  display: flex;
+}
+.zan-pay__label {
+  font-size: 12px;
+  line-height: 16px;
+  color: #ffa444;
+  margin-top: 6px;
+  padding-left: 28px;
+}
+.zan-pay__label--recommend {
+  display: inline-block;
+  padding: 1px 4px;
+  position: relative;
+  background: rgba(7, 193, 96, 0.1);
+  font-size: 10px;
+  line-height: 14px;
+  color: #07c160;
+  border-radius: 2px;
+  font-weight: 400 !important;
+}
+.zan-pay__instalment {
+  padding-left: 44px !important;
+}
+.zan-pay__label--recommend + .zan-pay__label--recommend {
+  margin-left: 6px;
+}
+.zan-pay__label--normal {
+  color: #646566;
+}

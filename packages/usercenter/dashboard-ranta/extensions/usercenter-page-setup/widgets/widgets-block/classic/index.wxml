@@ -1,0 +1,28 @@
+<template name="widget-group">
+    <view class="classic-group">
+        <view class="classic-group__item" wx:for="{{widgets}}" wx:for-item="widget" wx:key="{{ widget.key + index }}">
+            <view class="message__contact-container" wx:if="{{widget.key==='customerServiceChat'}}">
+                <b customClass="icon" name="{{widget.icon}}"></b>
+                <d bindcontact="onContactBack" businessId="{{extra.businessId}}" contactClass="message__contact-button" openType="contact" sessionFrom="{{extra.sourceParam}}" style="width: 100%;">客服聊天</d>
+                <b color="#999" name="arrow"></b>
+            </view>
+            <e authTypeList="{{['nicknameAndAvatar']}}" bind:next="handlePluginAuthorize" bindgetuserinfo="handleBindGetUserInfo" btnClass="authorize-userinfo" data-key="{{widget.key}}" wx:else>
+                <a border="{{false}}" customClass="classic-group__arrow" isLink="{{true}}" title="{{widget.title||widget.text}}">
+                    <b customClass="icon" name="{{widget.icon}}" slot="icon"></b>
+                    <c customStyle="right: 50px;top: 14px;" info="{{userAgreePrivacy?pluginValues.cart>99?'99+':pluginValues.cart:''}}" wx:if="{{widget.key==='cart'&&pluginValues.cart}}"></c>
+                    <c customStyle="right: 50px;top: 21px;" info="{{userAgreePrivacy?pluginValues.drugList>99?'99+':pluginValues.drugList:''}}" wx:if="{{widget.key==='drugList'&&pluginValues.drugList}}"></c>
+                    <text class="classic-group__item--gifts" wx:if="{{widget.key==='giftsCommunityVer'&&pluginValues[widget.key]&&userAgreePrivacy}}">{{pluginValues[widget.key]}}件未领取</text>
+                    <text class="classic-group__item--gifts" wx:if="{{widget.value&&widget.isCloud}}">{{widget.value}}</text>
+                </a>
+            </e>
+        </view>
+    </view>
+</template>
+<template name="blank-group">
+    <view class="classic-group__item-group-empty">
+        <view class="classic-group__whitespace" wx:for="{{widgets}}" wx:key="{{ widget.key + index }}"></view>
+    </view>
+</template>
+<view class="classic-group-wrapper">
+    <template is="{{widgetGroup.type}}" data="{{...widgetGroup,pluginValues:pluginValues,extra:extra}}" wx:for="{{widgetGroups}}" wx:for-item="widgetGroup" wx:key="{{ index }}"></template>
+</view>

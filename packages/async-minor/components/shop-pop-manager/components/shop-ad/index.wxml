@@ -1,0 +1,39 @@
+<template name="ad-image">
+    <image bind:tap="handleClickAdPop" class="ad-image" data-is-swipe="{{isSwipe||isSlide}}" data-swipe-data="{{swipeItemData}}" mode="{{isSwipe||isSlide?'aspectFill':''}}" src="{{adImage}}" style="{{imageStyle}}" wx:if="{{!isImLink}}"></image>
+    <b bind:contact="onContactBack" businessId="{{im.businessId}}" contactClass="ad-button" openType="contact" sessionFrom="{{im.sourceParam}}" wx:else>
+        <image class="ad-image" src="{{adImage}}" style="{{imageStyle}}"></image>
+    </b>
+</template>
+<template name="ad-hot-area">
+    <image class="ad-image" mode="{{isSwipe||isSlide?'aspectFill':''}}" src="{{adImage}}" style="{{imageStyle}}"></image>
+    <view wx:for="{{hotAreas}}" wx:for-item="area">
+        <view bind:tap="handleAreClick" class="hotare-view" data-area="{{area}}" style="width:{{area.width}}px;height:{{area.height}}px;top:{{area.top}}px;left:{{area.left}}px" wx:if="{{area.link_type!=='chat'}}"></view>
+        <view class="hotare-view" style="width:{{area.width}}px;height:{{area.height}}px;top:{{area.top}}px;left:{{area.left}}px" wx:else>
+            <b bind:contact="onContactBack" businessId="{{im.businessId}}" contactClass="ad-button" openType="contact" sessionFrom="{{im.sourceParam}}">
+                <view style="width:{{area.width}}px;height:{{area.height}}px"></view>
+            </b>
+        </view>
+    </view>
+</template>
+<view wx:if="{{adImage||isSwipe||isSlide}}">
+    <a bind:close="closeAdPop" class="ad-popup" customStyle="background: transparent;overflow-y: unset;" show="{{visible}}" zIndex="170">
+        <view bind:tap="closeAdPop" class="close-icon"></view>
+        <view wx:if="{{isSwipe||isSlide}}">
+            <swiper autoplay="{{isSlide&&autoPlay!==1?false:true}}" bindchange="handleSwiperChange" circular="{{true}}" duration="{{500}}" indicatorDots="{{!isSlide}}" interval="{{swipeTime}}" nextMargin="{{slideStyleInfo.swipePreOrNextMargin}}" previousMargin="{{slideStyleInfo.swipePreOrNextMargin}}" style="{{isSlide?slideStyleInfo.swipeStyle:imageStyle}}">
+                <swiper-item wx:for="{{swipeResource}}">
+                    <template is="ad-image" data="{{isSwipe:isSwipe,isSlide:isSlide,isImLink:item.link_type==='chat',adImage:item.image_url,imageStyle:imageStyle,im:im,swipeItemData:item}}" wx:if="{{!item.isHotArea}}"></template>
+                    <template is="ad-hot-area" data="{{isSwipe:isSwipe,isSlide:isSlide,adImage:item.image_url,imageStyle:imageStyle,im:im,hotAreas:item.hot_areas}}" wx:else></template>
+                </swiper-item>
+            </swiper>
+            <view class="dots" wx:if="{{isSlide}}">
+                <view class="{{swipeIndex===index?'active-dot':'dot'}}" wx:for="{{swipeResource}}"></view>
+            </view>
+        </view>
+        <view class="hotare-view-container" wx:elif="{{isShowHotArea}}">
+            <template is="ad-hot-area" data="{{isSwipe:isSwipe,isSlide:isSlide,isImLink:isImLink,adImage:adImage,imageStyle:imageStyle,hotAreas:adResource.hot_areas,im:im}}"></template>
+        </view>
+        <view wx:else>
+            <template is="ad-image" data="{{isSwipe:isSwipe,isSlide:isSlide,isImLink:isImLink,adImage:adImage,imageStyle:imageStyle,im:im}}"></template>
+        </view>
+    </a>
+</view>

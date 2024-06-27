@@ -1,0 +1,36 @@
+<view class="shop-list-item">
+    <image class="shop-pic tee-image" lazyLoad="true" src="{{shopImg}}" wx:if="{{showShopImg}}"></image>
+    <view class="shop-info">
+        <view class="info-left">
+            <view catch:tap="_p" class="name-wrap" data-t="{{ tap:{en:'handleNameClick',et:'stop'} }}">
+                <view class="name">{{item.storeName}}</view>
+                <a bind:_init="_tic" name="arrow"></a>
+            </view>
+            <view class="location">
+                <image class="label-icon tee-image" lazyLoad="true" src="{{locationImg}}"></image>
+                <view class="info">{{item.address}}</view>
+            </view>
+            <view class="time">
+                <image class="label-icon tee-image" lazyLoad="true" src="{{timeImg}}"></image>
+                <view class="info">
+                    <view class="time-label t-text">营业时间</view>{{onBusinessHours}} </view>
+            </view>
+        </view>
+        <view class="info-right">
+            <view class="distance">
+                <view class="t-text" wx:if="{{item.distance}}">距离 {{formatDistance}}</view>
+                <view class="t-text" wx:else>无法估算距离</view>
+            </view>
+            <view class="action">
+                <view catch:tap="_p" class="action-container" data-t="{{ tap:{en:'handlePhoneClick',et:'stop'} }}" style="color:{{themeColor}}">
+                    <view class="container-color" style="background-color:{{themeColor}}"></view>
+                    <a bind:_init="_tic" name="phone-o"></a>
+                </view>
+                <view catch:tap="_p" class="action-container" data-t="{{ tap:{en:'handleGuideClick',et:'stop'} }}" style="color:{{themeColor}}">
+                    <view class="container-color" style="background-color:{{themeColor}}"></view>
+                    <a bind:_init="_tic" name="guide-o"></a>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

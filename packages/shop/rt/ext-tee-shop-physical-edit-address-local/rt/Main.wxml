@@ -1,0 +1,9 @@
+<view>
+    <view wx:if="{{showBlockTip}}">
+        <view class="extra-tip">
+            <view class="t-text">搜索并选择你想要收货的小区、大楼、学校等，
+        我们给你推荐附近的门店</view>
+        </view>
+    </view>
+    <a addressList="{{addressList}}" addressTitle="{{addressTitle}}" bind:_init="_tic" bind:item-click="_p" data-t="{{ itemClick:{en:'handleClickItem'} }}"></a>
+</view>

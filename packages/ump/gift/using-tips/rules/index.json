@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "用户规则",
+  "navigationBarBackgroundColor": "#e0493f",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "a": "/pages/common/page-container/index",
+    "_": "../../../../../components/_/index"
+  }
+}

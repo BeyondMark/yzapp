@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "邀请好友参团",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#2c2d31",
+  "componentPlaceholder": {
+    "van-toast": "_",
+    "van-notify": "_",
+    "van-icon": "_"
+  }
+}

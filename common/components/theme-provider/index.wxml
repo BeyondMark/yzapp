@@ -1,0 +1,3 @@
+<view style="{{style}}">
+    <slot></slot>
+</view>

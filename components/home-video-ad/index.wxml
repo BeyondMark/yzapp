@@ -1,0 +1,12 @@
+<view animation="{{animationData}}" bind:transitionend="animationend" class="bdee1" wx:if="{{videoSource===0||videoSource===1||videoSource===2}}">
+    <video autoplay="{{true}}" bindended="handEnded" controls="{{false}}" id="homepageVideo" muted="{{videoMute}}" objectFit="cover" showBottomProgress="{{false}}" showMuteBtn="{{true}}" src="{{videoSrc}}" wx:if="{{videoSource===0}}"></video>
+    <channel-video autoplay="{{true}}" binderror="handEnded" class="b6980" feedId="{{videoId}}" finderUserName="{{videoChannelId}}" loop="{{true}}" objectFit="contain" wx:elif="{{videoSource===1&&videoChannelId&&videoId}}"></channel-video>
+    <image bindtap="handleImageClick" class="bb76e" mode="aspectFill" src="{{imageUrl}}" wx:elif="{{videoSource===2&&imageUrl}}"></image>
+    <a bind:video-ended="handEnded" linkConfig="{{linkConfig}}" linkType="{{linkType}}"></a>
+    <view class="c3af84">
+        <view bindtap="onMutedClick" class="e7fdc" wx:if="{{videoSource===0}}">
+            <image src="{{videoMute?'https://img01.yzcdn.cn/upload_files/2022/10/13/Fnw_HxN0eXXCGciI1Oulbwk68aZz.png':'https://img01.yzcdn.cn/upload_files/2022/10/13/FkrnH6xtEu4nDpY2KL7Ih4Rbuj9o.png'}}"></image>
+        </view>
+        <view bind:tap="handleSkipClick" class="c4b8d4">{{timeNum}}s 跳过</view>
+    </view>
+</view>

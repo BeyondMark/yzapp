@@ -1,0 +1,25 @@
+.t-text {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.sn-more-button {
+  max-width: 127px;
+  min-width: 127px;
+  height: 217px;
+  margin-bottom: 10px;
+}
+.sn-more-button .wrap {
+  vertical-align: middle;
+  margin-top: 6px;
+  height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 127px;
+  max-width: 127px;
+  color: #969799;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}

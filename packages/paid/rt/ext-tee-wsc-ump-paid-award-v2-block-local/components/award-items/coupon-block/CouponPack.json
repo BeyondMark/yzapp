@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../Container",
+    "b": "/@y-open/vt/dist/button/index.weapp",
+    "c": "./../../widgets/FontCalculate",
+    "_": "../../../../../../../components/_/index"
+  }
+}

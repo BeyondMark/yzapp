@@ -1,0 +1,9 @@
+<view class="dc-unicashier">
+    <view class="desc">
+        <view class="title">到店消费</view>
+        <view class="activity" wx:if="{{opt.activity}}"> {{opt.activity}} </view>
+    </view>
+    <view>
+        <a bind:_init="_tic" bind:tap="_p" data-t="{{ tap:{en:'goBuy'} }}" size="small" type="danger">买单</a>
+    </view>
+</view>

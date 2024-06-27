@@ -1,0 +1,69 @@
+.c86b3d {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.caf9b {
+  height: 32px;
+  background-color: #fff;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 8px 8px;
+}
+.caf9b,
+.fb54f {
+  display: flex;
+}
+.fb54f {
+  height: 16px;
+  color: #646566;
+}
+.c8c82 {
+  height: 16px;
+  width: 16px;
+  background-image: url(https://img01.yzcdn.cn/upload_files/shop2.png?imageView2%2F2%2Fw%2F80%2Fh%2F80%2Fq%2F75%2Fformat%2Fwebp=);
+  background-size: 16px 16px;
+}
+.c0574a {
+  font-size: 12px;
+  height: 12px;
+  line-height: 12px;
+  margin-left: 8px;
+  align-self: center;
+}
+.c97bc5 {
+  font-size: 12px;
+  height: 16px;
+  color: #646566;
+  justify-self: right;
+  line-height: 16px;
+}
+.c815e4 {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 0 16px;
+  color: #323233;
+  font-size: 14px;
+  height: 18px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.ae077 {
+  display: flex;
+  margin: 8px 16px 16px;
+  padding: 0 16px 0 12px;
+  color: #646566;
+  height: 28px;
+  background: #f7f8fa;
+  font-size: 12px;
+  align-items: center;
+  border-radius: 4px;
+}
+.eaaad {
+  box-sizing: border-box;
+  border-radius: 0 0 20px 20px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}

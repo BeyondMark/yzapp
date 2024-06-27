@@ -1,0 +1,118 @@
+.help__title {
+  position: relative;
+  font-size: 12px;
+  height: 20px;
+  color: #969799;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.help__title .title {
+  position: absolute;
+  padding: 0 12px;
+  background: #fff;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 3;
+}
+.help__title:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #ebedf0;
+  top: 8px;
+  left: 0;
+}
+.help__item {
+  font-size: 15px;
+  padding: 15px 12px 7px;
+  color: #323233;
+  border-bottom: 1px solid #e5e5e5;
+}
+.help__item-text {
+  display: inline-block;
+  margin-left: 8px;
+}
+.help__btn {
+  margin-top: -1px;
+  border-top: 1px solid #e5e5e5;
+  padding: 16px;
+  text-align: center;
+  color: #06bf04;
+}
+.fission-goods-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.fission-goods-container > .empty {
+  width: 100%;
+  background: no-repeat
+    url(https://b.yzcdn.cn/public_files/fb91527a456e7dee1ba339f524d228e0.png)
+    50%;
+  background-size: contain;
+  height: 160px;
+}
+.goods-item {
+  flex: 1;
+  background: #f7f8fa;
+  border-radius: 4px;
+  margin-left: 8px;
+}
+.goods-item .pic {
+  position: relative;
+  width: 100%;
+  object-fit: cover;
+  padding-top: 100%;
+  border-radius: 4px 4px 0 0;
+}
+.goods-item .pic .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px 4px 0 0;
+}
+.goods-item .title {
+  color: #323233;
+  word-break: break-all;
+  margin-top: 6px;
+  margin-bottom: 4px;
+  line-height: 17px;
+  height: 34px;
+  font-size: 13px;
+}
+.goods-item:first-child {
+  margin-left: 0;
+}
+.goods-item-single {
+  width: 100%;
+}
+.goods-item-single .pic {
+  width: 100%;
+  padding-top: 0;
+  height: 160px;
+}
+.goods-context {
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  color: #ff5f00;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.margin-top {
+  margin-top: 24px;
+}
+.vicebtn {
+  width: 260px;
+  font-size: 14px;
+  color: #ff1c00;
+  line-height: 36px;
+  border: 1px solid #ff1c00;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 24px;
+}

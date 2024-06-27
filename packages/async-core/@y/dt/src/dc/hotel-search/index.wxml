@@ -1,0 +1,4 @@
+<view class="dc-hotel-search">
+    <a alias="{{alias}}" bind:_init="_tic" city="{{city}}" kdtId="{{kdtId}}" searchData="{{opt}}" themeColors="{{themeColors}}" wx:if="{{serachType}}"></a>
+    <b alias="{{alias}}" bind:_init="_tic" city="{{city}}" kdtId="{{kdtId}}" searchData="{{opt}}" themeColors="{{themeColors}}" wx:else></b>
+</view>

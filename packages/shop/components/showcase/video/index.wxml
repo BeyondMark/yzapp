@@ -1,0 +1,1 @@
+<a bindended="sendStopLogger" bindpause="sendStopLogger" bindplay="handlePlay" bindtimeupdate="handleUpdateTime" class="capVideo" poster="{{poster}}" src="{{src}}"></a>

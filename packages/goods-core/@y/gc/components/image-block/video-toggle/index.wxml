@@ -1,0 +1,5 @@
+<view class="c5fb11">
+    <image class="bd231" hidden="{{!false}}" lazyLoad="true" src="{{url}}" wx:for="{{imageUrls}}" wx:for-item="url" wx:key="url"></image>
+    <a bind:_init="_tic" bind:tap="_p" class="c67678" data-t="{{ tap:{ en:'$emit',args:['t-muted'] } }}" name="{{muted?volumeOff:volumeOn}}"></a>
+    <a bind:_init="_tic" bind:tap="_p" class="c67678" data-t="{{ tap:{ en:'$emit',args:['t-fullscreen'] } }}" name="{{fullscreen?'shrink':'expand-o'}}" wx:if="{{isShowFullToggle}}"></a>
+</view>

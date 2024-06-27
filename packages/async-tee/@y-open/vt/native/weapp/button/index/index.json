@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../icon/index/index",
+    "b": "../../loading/index/index",
+    "_": "../../../../../../../../components/_/index"
+  }
+}

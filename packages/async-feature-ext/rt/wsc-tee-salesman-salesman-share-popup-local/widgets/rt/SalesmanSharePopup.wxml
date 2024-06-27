@@ -1,0 +1,37 @@
+<view>
+    <view bind:tap="_p" data-t="{{ tap:{en:'handleIconClick'} }}">
+        <slot name="icon" wx:if="{{customIcon}}"></slot>
+        <i bind:_init="_tic" cubeIconData="{{cubeIconData}}" customStyle="{{iconStyle}}" iconUrl="{{shareData.iconUrl}}" wx:elif="{{earnIconShow}}"></i>
+    </view>
+    <block wx:if="{{sharePopupIsCloudSlot&&mainFrameVisible}}">
+        <e bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='@wsc-tee-salesman/salesman-share-popup~YPDZkFWW'}}"></e>
+    </block>
+    <block wx:else>
+        <d bind:_init="_tic" customStyle="{{popCustomStyle}}" rmId="{{rmId}}" show="{{mainFrameVisible}}" showGoodsDetail="{{showGoodsDetail}}" wx:if="{{rmId==='@wsc-tee-salesman/salesman-share-popup~YPDZkFWW'}}">
+            <view slot="cubeHeader" wx:if="{{sharePopupHeaderIsCloudSlot}}">
+                <f bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='@wsc-tee-salesman/salesman-share-popup~YPDZkFWW'}}"></f>
+            </view>
+            <block wx:else>
+                <a bind:_init="_tic" bind:close-main-frame="_p" cloudShareMoneyInfo="{{cloudShareMoneyInfo}}" data-t="{{ closeMainFrame:{en:'closeMainFrame'} }}" rmId="{{rmId}}" shareData="{{shareData}}" shareMoney="{{shareMoney}}" shareMoneyInfo="{{shareMoneyInfo}}" slot="cubeHeader" wx:if="{{rmId==='@wsc-tee-salesman/salesman-share-popup~YPDZkFWW'}}"></a>
+            </block>
+            <view slot="cubeTab" wx:if="{{sharePopupTabsIsCloudSlot}}">
+                <g bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='@wsc-tee-salesman/salesman-share-popup~YPDZkFWW'}}"></g>
+            </view>
+            <block wx:else>
+                <b bind:_init="_tic" bind:close-main-frame="_p" bind:handle-update-auth="_p" bind:open-assistant="_p" bind:promote-tip="_p" bind:tab-change="_p" data-t="{{ closeMainFrame:{en:'closeMainFrame'},openAssistant:{en:'openAssistant'},promoteTip:{en:'showPromoteTip'},tabChange:{en:'handleTabChange'},handleUpdateAuth:{en:'handleUpdateAuth'} }}" goodsInfo="{{goodsInfo}}" goodsPosterInfo="{{goodsPosterInfo}}" hasAuth="{{hasAuth}}" instanceId="{{instanceId}}" isShareStyle="{{isShareStyle}}" isWxShareImg="{{isWxShareImg}}" kdtId="{{kdtId}}" rmId="{{rmId}}" salesmanPopupTabs="{{salesmanPopupTabs}}" shareData="{{shareData}}" shopRights="{{shopRights}}" shortLinkPromoteUrl="{{shortLinkPromoteUrl}}" shortPromoteUrl="{{shortPromoteUrl}}" show="{{mainFrameVisible}}" slot="cubeTab" smartTextData="{{smartTextData}}" wx:if="{{rmId==='@wsc-tee-salesman/salesman-share-popup~YPDZkFWW'}}"></b>
+            </block>
+            <view slot="cubeFooter" wx:if="{{sharePopupFooterIsCloudSlot}}">
+                <h bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='@wsc-tee-salesman/salesman-share-popup~YPDZkFWW'}}"></h>
+            </view>
+            <block wx:else>
+                <c activeTab="{{activeTab}}" bind:_init="_tic" bind:close-main-frame="_p" bind:customHandle="_p" bind:share-mask="_p" bind:show-poster-pop="_p" copyShortLink="{{shortLinkCopyText}}" copyText="{{copyLinkText}}" customOptionListConfig="{{customOptionListConfig}}" data-t="{{ customHandle:{en:'handleCustomEvent'},closeMainFrame:{en:'closeMainFrame'},showPosterPop:{en:'showPosterPop'},shareMask:{en:'showShareMask'} }}" featureDataParams="{{dataParams}}" goodsInfo="{{goodsInfo}}" hasGuideMaterial="{{hasGuideMaterial}}" instanceId="{{instanceId}}" isWxShareImg="{{isWxShareImg}}" rmId="{{rmId}}" sceneParams="{{sceneParams}}" scenes="{{scenes}}" shareData="{{shareData}}" shareInfo="{{shareInfo}}" showGoodsDetail="{{showGoodsDetail}}" slot="cubeFooter" wx:if="{{rmId==='@wsc-tee-salesman/salesman-share-popup~YPDZkFWW'}}"></c>
+            </block>
+        </d>
+    </block>
+    <j bind:_init="_tic" data-ref="tax_sign_pop"></j>
+    <k bind:_init="_tic" customOptionListConfig="{{customOptionListConfig}}" data-ref="new_begin_pop" showGoodsDetail="{{showGoodsDetail}}"></k>
+    <m bind:_init="_tic" data-ref="assistant_pop"></m>
+    <l bind:_init="_tic" bind:open-assistant="_p" data-ref="poster_pop" data-t="{{ openAssistant:{en:'openAssistant'} }}"></l>
+    <n bind:_init="_tic" bind:close-main-frame="_p" bind:open-assistant="_p" data-ref="promote_tip" data-t="{{ closeMainFrame:{en:'closeMainFrame'},openAssistant:{en:'openAssistant'} }}"></n>
+    <van-toast bind:_init="_tic" data-ref="van-toast"></van-toast>
+</view>

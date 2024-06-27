@@ -1,0 +1,4 @@
+<view class="font-calculate" wx:if="{{price===''}}"></view>
+<view class="c2063c {{isSkyline?'fd77b':''}}" style="{{customStyle}}" wx:else>
+    <view class="c851f5">{{prefix}}￥</view>{{integer}}<view class="bdaa3" wx:if="{{decimal}}">.{{decimal}}</view>
+</view>

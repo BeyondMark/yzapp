@@ -1,0 +1,5 @@
+<view bind:tap="handlePreviewImage" class="gallery custom-gallery {{galleryClass}}">
+    <view class="gallery__img-wrap {{galleryTianClass}}" wx:for="{{galleryImgList}}" wx:for-item="img" wx:key="*this">
+        <image bind:load="_handleLoad" class="{{imgClass}}" data-current="{{index}}" mode="{{galleryImgList.length>1?'aspectFill':'aspectFit'}}" src="{{img}}" style="width: {{imageWidth||'100%'}};height: {{imageHeight||'100%'}}"></image>
+    </view>
+</view>

@@ -1,0 +1,1 @@
+<view class="a38ba" wx:if="{{showPlaceholder}}"></view>

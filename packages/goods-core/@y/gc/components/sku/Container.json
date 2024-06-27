@@ -1,0 +1,17 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y-open/vt/dist/popup/index.weapp",
+    "b": "/packages/async-tee/@y-open/vt/dist/datetime-picker/index",
+    "c": "./components/SkuImage",
+    "d": "./components/SkuPrice",
+    "e": "./components/SkuStock",
+    "f": "./components/SkuRowWrap",
+    "g": "./components/SkuMessage",
+    "h": "./components/SkuBirthday",
+    "i": "./components/SkuAction",
+    "j": "./components/SkuStepper",
+    "_": "../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_" }
+}

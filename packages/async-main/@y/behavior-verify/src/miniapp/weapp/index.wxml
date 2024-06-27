@@ -1,0 +1,5 @@
+<view capture-bind:tap="handlerTap" capture-bind:touchstart="handleTouchStart">
+    <slot></slot>
+    <a id="slide-captcha"></a>
+    <b id="number-captcha"></b>
+</view>

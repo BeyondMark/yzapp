@@ -1,0 +1,17 @@
+.pay-immediately-btn {
+  width: 279px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: var(--theme-radius-button, 16px);
+}
+.later {
+  line-height: 20px;
+  text-align: center;
+  margin-top: 16px;
+}
+.later-btn {
+  font-size: 16px;
+  color: #969799;
+}

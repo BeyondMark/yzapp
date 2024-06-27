@@ -1,0 +1,10 @@
+<view class="trade-carousel" style="top: 15px">
+    <view class="trade-carousel__swipe">
+        <view class="trade-carousel__swipe-item {{tradeRecord.showEnter?'move-enter-active':''}} {{tradeRecord.showLeave?'move-leave-active':''}} " wx:if="{{tradeRecord.showEnter||tradeRecord.showLeave}}" wx:for="{{tradeRecords}}" wx:for-item="tradeRecord" wx:key="{{ index }}">
+            <view class="trade-carousel__swipe-avatar">
+                <image src="{{tradeRecord.avatar}}"></image>
+            </view>
+            <text class="trade-carousel__swipe-text">{{tradeRecord.nickname}}同学 获得<text class="money">{{tradeRecord.divideMoney}}</text>元优惠券</text>
+        </view>
+    </view>
+</view>

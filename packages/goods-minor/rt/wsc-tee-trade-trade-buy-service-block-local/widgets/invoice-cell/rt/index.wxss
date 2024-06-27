@@ -1,0 +1,28 @@
+.d5a4c {
+  padding: var(--theme-page-cell-padding-top, 10px)
+    var(--theme-page-cell-padding-right, 12px)
+    var(--theme-page-cell-padding-bottom, 10px)
+    var(--theme-page-cell-padding-left, 12px) !important;
+}
+.e820a {
+  color: #323233;
+  flex: 2;
+  overflow: hidden;
+  font-weight: var(--theme-common-field-font-weight, 500);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.new-invoice-cell__disable--value {
+  font-weight: 400 !important;
+  color: #969799 !important;
+}
+.new-invoice__title {
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+}
+.new-invoice__popup {
+  min-height: 450px;
+  border-radius: var(--theme-radius-dialog, 16px)
+    var(--theme-radius-dialog, 16px) 0 0 !important;
+}

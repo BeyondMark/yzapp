@@ -1,0 +1,9 @@
+.award-container {
+  border-radius: var(--theme-radius-card, 8px);
+  width: calc(100vw - 48px);
+  box-sizing: border-box;
+  margin-top: 12px;
+}
+.award-container + .award-container {
+  margin-top: 12px;
+}

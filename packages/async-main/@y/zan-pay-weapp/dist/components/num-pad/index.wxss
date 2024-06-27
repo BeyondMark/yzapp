@@ -1,0 +1,58 @@
+.root {
+  height: 40px;
+}
+.container,
+.pad {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pad {
+  width: 14.3581%;
+  position: relative;
+  display: inline-block;
+}
+.pad:after {
+  content: " ";
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #c8c9cc;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.occupied:after {
+  background-color: #323233;
+}
+.occupied:before {
+  content: " ";
+  position: absolute;
+  width: 18px;
+  height: 17px;
+  background-size: 18px 17px;
+  background-image: url(https://b.yzcdn.cn/zan-pay/star.png);
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.blink:after {
+  animation: blink 1s ease-in-out infinite;
+}
+@keyframes blink {
+  0% {
+    background-color: #c8c9cc;
+  }
+  50% {
+    background-color: #323233;
+  }
+  to {
+    background-color: #c8c9cc;
+  }
+}

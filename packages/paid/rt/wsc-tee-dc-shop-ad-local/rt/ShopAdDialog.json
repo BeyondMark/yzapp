@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../widgets/rt/AdImage",
+    "b": "/@y-open/vt/dist/popup/index.weapp",
+    "_": "../../../../../components/_/index"
+  }
+}

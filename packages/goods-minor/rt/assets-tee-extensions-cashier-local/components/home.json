@@ -1,0 +1,17 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "b": "/@y-open/vt/dist/button/index.weapp",
+    "c": "./channel",
+    "d": "./protocol",
+    "e": "./recommend-default",
+    "f": "./recommend-a",
+    "g": "./recommend-b",
+    "h": "./selected-bar",
+    "i": "/packages/async-tee/@y-open/vt/dist/notice-bar/index",
+    "j": "./home-skeleton",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_", "i": "_" }
+}

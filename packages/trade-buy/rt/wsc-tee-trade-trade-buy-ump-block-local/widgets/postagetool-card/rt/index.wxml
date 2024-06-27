@@ -1,0 +1,25 @@
+<view class="c25292" wx:if="{{goodsData}}">
+    <view class="eee32">
+        <image class="e85ea bd231" lazyLoad="true" mode="aspectFit" src="{{goodsData.imageUrl}}"></image>
+    </view>
+    <view class="c19b26">
+        <view>
+            <view class="c9951c t-multi-ellipsis--l2"> {{goodsData.title}} </view>
+            <view bind:tap="_p" class="fd8b5" data-t="{{ tap:{en:'onClickCard'} }}" wx:if="{{specification}}"> {{specification}} <b bind:_init="_tic" class="cf0a8" name="arrow-down" size="16"></b>
+            </view>
+            <view class="c5e427" wx:if="{{priceLabel}}"> {{priceLabel}} </view>
+        </view>
+        <view class="f0bf8">
+            <view class="left-block">
+                <a bind:_init="_tic" class="c78a5e" originPrice="{{goodsData.price}}" price="{{showPrice}}" rmId="b36-26" wx:if="{{rmId==='b36-27'}}"></a>
+                <view class="c1bcd8" wx:if="{{goodsTags}}">{{goodsTags}}</view>
+            </view>
+            <view class="c2c451">
+                <view bind:tap="_p" class="c34ec7--round c34ec7" data-t="{{ tap:{en:'onClickCard'} }}" wx:if="{{!selectedInfo||!selectedInfo.num}}">
+                    <view class="c03a72"></view>
+                </view>
+                <c asyncChange="{{true}}" bind:_init="_tic" bind:blur="_p" bind:minus="_p" bind:overlimit="_p" bind:plus="_p" customClass="c5ce10" data-t="{{ minus:{en:'handleStepMinus'},plus:{en:'handleStepPlus'},blur:{en:'handleStepChange'},overlimit:{en:'handleOverLimit'} }}" inputClass="d7af6" integer="{{true}}" longPress="{{false}}" max="{{maxSaleNum}}" min="{{0}}" minusClass="b27df" plusClass="b27df" step="{{1}}" theme="round" value="{{selectedInfo.num}}" wx:else></c>
+            </view>
+        </view>
+    </view>
+</view>

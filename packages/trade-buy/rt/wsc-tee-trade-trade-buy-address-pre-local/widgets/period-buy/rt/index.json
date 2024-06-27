@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../PeriodBuyInfo",
+    "b": "./../PeriodBuyTime",
+    "_": "../../../../../../../components/_/index"
+  }
+}

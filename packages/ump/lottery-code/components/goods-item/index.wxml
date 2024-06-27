@@ -1,0 +1,14 @@
+<view bind:tap="onAddGoods" class="goods-item">
+    <view class="goods-item__thumb">
+        <image class="goods-item__img" src="{{goods.imageUrl}}"></image>
+    </view>
+    <view class="goods-item__content">
+        <view class="goods-item__title">{{goods.title}}</view>
+        <view class="goods-item__bottom">
+            <view>
+                <text class="goods-item__price">￥<text class="strong">{{goods.priceInYuan}}</text>.{{goods.priceInFen}}</text>
+            </view>
+            <view bind:tap="onAddGoods" class="add-cart-btn"></view>
+        </view>
+    </view>
+</view>

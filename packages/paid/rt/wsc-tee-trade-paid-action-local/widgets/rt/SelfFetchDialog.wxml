@@ -1,0 +1,37 @@
+<view style="{{themeCSS}}">
+    <b bind:_init="_tic" bind:click-overlay="_p" closeOnClickOverlay="{{true}}" customStyle="{{customPopupStyle}}" data-t="{{ clickOverlay:{en:'onClose'} }}" position="bottom" show="{{visible}}">
+        <view class="c9c9a9">{{selfFetchCodeName}}</view>
+        <block wx:if="{{selfFetch.hasError}}">
+            <view class="c293bd">
+                <image class="c4d028 bd231" lazyLoad="true" src="https://img01.yzcdn.cn/upload_files/2020/03/12/FoFlIZNte-bq-nCcHIiZHDdvdwNa.png"></image>
+                <view class="de848">{{selfFetchCodeName}}生成失败，请稍后再试或前往订单详情查看</view>
+            </view>
+            <view class="e4962">
+                <a bg="general" bind:_init="_tic" bind:tap="_p" customClass="ee1cd" data-t="{{ tap:{en:'onClose'} }}">稍后再试</a>
+            </view>
+        </block>
+        <block wx:else>
+            <view class="c08dd" wx:if="{{selfFetch.loading}}">
+                <c bind:_init="_tic" class="a6dce"></c>
+                <view class="c5f176">正在生成{{selfFetchCodeName}}...</view>
+            </view>
+            <block wx:else>
+                <view class="c23966" wx:if="{{isScanBuyOrder}}">请将核销码出示给收银员</view>
+                <view class="d92f3" wx:else>
+                    <view>提货地址：{{selfFetch.province+selfFetch.city+selfFetch.county+selfFetch.addressDetail}}</view>
+                    <view>提货时间：{{selfFetch.userTime}}</view>
+                </view>
+                <image class="f29e3 bd231" lazyLoad="true" src="{{selfFetch.selfFetchQRCode}}"></image>
+                <view class="c6a3dc"> {{selfFetch.selfFetchNo}} </view>
+            </block>
+            <view class="c485c0 c89585">为保障您的权益，未到店提货前请不要将二维码/数字券号提供给商家</view>
+            <view class="e4962">
+                <a bind:_init="_tic" bind:tap="_p" customClass="c8c55" data-t="{{ tap:{en:'onClose'} }}" wx:if="{{selfFetch.loading}}">          保存到相册
+        </a>
+                <a bind:_init="_tic" bind:tap="_p" customClass="ee1cd" data-t="{{ tap:{en:'saveToLocal'} }}" wx:else>保存到相册</a>
+                <a bind:_init="_tic" bind:tap="_p" customClass="c0682c" data-t="{{ tap:{en:'onClose'} }}" wx:if="{{!selfFetch.loading}}">          我知道了
+        </a>
+            </view>
+        </block>
+    </b>
+</view>

@@ -1,0 +1,13 @@
+<view wx:if="{{!isWebviewFeature}}">
+    <a bind:_init="_tic"></a>
+    <b bind:_init="_tic"></b>
+    <c bind:_init="_tic" shareTag="{{shareTag}}" wx:if="{{shareTag}}"></c>
+    <d bind:_init="_tic" customPosition="{{true}}" pBottom="{{giftIconData.bottom+'px;'}}" pGoaway="{{giftIconData.goaway}}" zIndex="{{10}}"></d>
+    <i bind:_init="_tic" customPosition="{{true}}" pBottom="{{marketingIconData.bottom+'px;'}}" pGoaway="{{marketingIconData.goaway}}"></i>
+    <e bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'handleCloseSceneMarketSubscribe'} }}" fromPage="homeOrFeature" planId="{{crmFromScenePlanId}}" wx:if="{{showSceneMarketSubscribe&&canShowSceneMarketSubscribe}}"></e>
+    <f bind:_init="_tic" featureId="{{extraData.pageId}}" source="{{isHomePage?1:4}}" wx:if="{{showShopPopManager&&!showSceneMarketSubscribe}}"></f>
+    <g bind:_init="_tic"></g>
+    <h bind:_init="_tic" bind:onProtocolInitListen="_p" data-t="{{ onProtocolInitListen:{en:'onProtocolInitListen'} }}" noAutoAuth="{{false}}" zIndex="{{99999}}"></h>
+    <j bind:_init="_tic" wx:if="{{showLotteryCode}}"></j>
+    <k bind:_init="_tic" rmId="{{i[0]}}" wx:if="{{i[1]}}" wx:for="{{[ ['b1-21',rmId==='b1-16'],['b0-21',rmId==='b0-16'] ]}}" wx:for-item="i" wx:key="0"></k>
+</view>

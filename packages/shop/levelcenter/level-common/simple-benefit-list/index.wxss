@@ -1,0 +1,73 @@
+.benefit-list-flex-center {
+  justify-content: center;
+}
+.benefit-list-flex-start {
+  justify-content: flex-start;
+}
+.benefit-list {
+  display: flex;
+  text-align: center;
+  background-color: #fff;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.benefit-list .benefit-item {
+  position: relative;
+  width: 25%;
+  margin-bottom: 8px;
+}
+.benefit-list .benefit-item .benefit_item-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.benefit-list .benefit-item .icon-name {
+  max-width: 100%;
+  margin: 5px auto 0;
+  font-size: 12px;
+  line-height: 17px;
+  color: #323233;
+}
+.benefit-list .benefit-item .icon-img {
+  width: 40px;
+  height: 40px;
+}
+.benefit-list .benefit-item .icon-num {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(17, 18, 41, 0.8);
+  color: #f9e5d0;
+  box-shadow: inset 0 0 8px 0 hsla(0, 0%, 100%, 0.3);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 18px;
+}
+.benefit-list .benefit-item .icon-num .icon-unit {
+  font-size: 10px;
+  font-weight: 500;
+  padding-top: 6px;
+}
+.benefit-list .benefit-item .badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: inline-block;
+  width: 45px;
+  height: 16px;
+  line-height: 16px;
+  background-image: linear-gradient(90deg, #ffaf79, #f44);
+  border-radius: 9px 9px 9px 0;
+  color: #fff;
+  font-size: 12px;
+  transform: scale(0.83);
+}
+.benefit-list .benefit-item .coupon-badge {
+  margin-left: -4px;
+  width: 32px;
+  border-radius: 9px;
+}

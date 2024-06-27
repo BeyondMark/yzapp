@@ -1,0 +1,8 @@
+.user-authorize__comnponent {
+  display: block;
+  height: 100%;
+  text-align: inherit;
+}
+.user-authorize__popup {
+  display: block;
+}

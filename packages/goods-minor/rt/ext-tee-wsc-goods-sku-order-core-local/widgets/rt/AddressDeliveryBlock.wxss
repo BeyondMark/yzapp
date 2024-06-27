@@ -1,0 +1,22 @@
+.c4834f {
+  width: 100%;
+  border-radius: var(--theme-radius-dialog, 8px);
+  overflow: hidden;
+}
+.c4834f .c52b00 {
+  background: var(
+    --theme-goods-direct-order-popup-address-tips-background-color,
+    #fffbe8
+  );
+  border-radius: 14px;
+  font-size: 12px;
+  color: #ed6a0c;
+  line-height: 16px;
+  padding: 6px 8px;
+  margin: 0 var(--theme-page-card-padding-right, 8px)
+    var(--theme-page-card-padding-bottom, 6px)
+    var(--theme-page-card-padding-left, 8px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

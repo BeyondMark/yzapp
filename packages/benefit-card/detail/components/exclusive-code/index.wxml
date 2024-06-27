@@ -1,0 +1,20 @@
+<view class="co-btn-wra">
+    <view bindtap="changePopup" class="code-btn">
+        <view style="color: {{themeGeneral}}">{{isRecord?'核销记录':'立即使用'}}<b class="arr-ic" name="arrow"></b>
+        </view>
+    </view>
+    <a class="co-po-wra" closeOnClickOverlay="{{false}}" customStyle="height: 600px;border-radius: 20px 20px 0 0;" position="bottom" round="{{true}}" show="{{show}}">
+        <view class="co-po">
+            <view class="cont">
+                <b bindtap="changePopup" class="close-pop-icon" color="#969799" name="cross" size="18px"></b>
+                <view class="van-dialog__header">向商家展示会员码</view>
+                <image class="barcode" src="{{bar_code}}"></image>
+                <image class="qrcode" src="{{qr_code}}"></image>
+            </view>
+        </view>
+        <view class="use-rest-info">
+            <text class="info">当前剩余<text class="stock-num" style="color: {{themeGeneral}}">{{stockNum}}</text>次</text>
+        </view>
+        <view class="use-rest-info">使用时，出示此码</view>
+    </a>
+</view>

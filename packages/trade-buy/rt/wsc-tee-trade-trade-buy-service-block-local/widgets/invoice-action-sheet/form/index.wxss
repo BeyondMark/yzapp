@@ -1,0 +1,30 @@
+.long-cell {
+  padding: var(--theme-page-cell-padding-top, 10px)
+    var(--theme-page-cell-padding-right, 12px)
+    var(--theme-page-cell-padding-bottom, 10px)
+    var(--theme-page-cell-padding-left, 12px) !important;
+}
+.new-invoice__popup__title {
+  height: 44px;
+  text-align: center;
+  line-height: 44px;
+  font-size: 16px;
+  color: #323233;
+  font-weight: 500;
+}
+.f71bb {
+  height: 100%;
+}
+.new-invoice__submit-bar {
+  padding: 5px 16px;
+}
+.new-invoice__submit-bar__btn {
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+}
+.c1398e {
+  padding: 16px;
+  color: #000;
+  font-size: 14px;
+}

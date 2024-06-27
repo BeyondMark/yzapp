@@ -1,0 +1,12 @@
+{
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": true,
+  "singlePage": { "navigationBarFit": "squeezed" },
+  "usingComponents": {
+    "a": "/pages/home/feature/index",
+    "b": "/packages/async-main/@vant/weapp/dist/toast/index",
+    "c": "/packages/async-main/@vant/weapp/dist/notify/index",
+    "_": "../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_", "c": "_" }
+}

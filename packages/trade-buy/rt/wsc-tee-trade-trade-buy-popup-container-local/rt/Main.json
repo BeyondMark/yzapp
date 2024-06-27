@@ -1,0 +1,16 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../wsc-tee-trade-trade-buy-ump-block-local/widgets/postagetool/rt/index",
+    "b": "./../../wsc-tee-trade-trade-buy-ump-block-local/widgets/coupon-list/rt/index",
+    "c": "./../../wsc-tee-trade-trade-buy-ump-block-local/widgets/membership-dialog/rt/index",
+    "d": "./../../wsc-tee-trade-trade-buy-ump-block-local/widgets/prepay-card-popup/rt/index",
+    "e": "./../../wsc-tee-trade-trade-buy-ump-block-local/widgets/activity-dialog/rt/index",
+    "f": "./../../wsc-tee-trade-trade-buy-service-block-local/widgets/invoice-action-sheet/rt/index",
+    "g": "./../../wsc-tee-trade-trade-buy-ump-block-local/widgets/point-deduction-popup/rt/index",
+    "h": "/packages/goods-minor/rt/retail-tee-prepaid-prepaid-local/widgets/recharge-gift-pack/rt/index",
+    "i": "./../../wsc-tee-trade-trade-buy-ump-block-local/widgets/point-warn-popup/rt/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "h": "_" }
+}

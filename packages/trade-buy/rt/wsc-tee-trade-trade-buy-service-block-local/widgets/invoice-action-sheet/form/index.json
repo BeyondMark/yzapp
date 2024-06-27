@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-tee/@y-open/vt/native/weapp/toast/index/index",
+    "b": "./content",
+    "c": "./goods-tips",
+    "d": "./category",
+    "e": "./message",
+    "_": "../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

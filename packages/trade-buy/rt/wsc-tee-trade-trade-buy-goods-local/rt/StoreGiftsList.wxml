@@ -1,0 +1,6 @@
+<view class="ff941">
+    <view class="c3fc39 ce25d">
+        <view class="dd1ce c89585">到店自提专享</view>
+        <a bind:_init="_tic" storeGiftsInfo="{{storeGiftsInfo}}"></a>
+    </view>
+</view>

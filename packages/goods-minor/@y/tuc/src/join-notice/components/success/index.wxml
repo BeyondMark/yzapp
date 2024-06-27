@@ -1,0 +1,24 @@
+<view class="c1b86f">
+    <view class="c8f96a">入会成功</view>
+    <view class="b8722">入会礼包已发放至账户</view>
+    <view class="c4f966">
+        <view class="c6a31e" wx:if="{{showGift}}">
+            <b bind:_init="_tic" customClass="f61eb" name="point-gift-o"></b>
+            <view class="c9f85c">赠品</view>
+            <view class="a74d7"> x{{giftCount}} </view>
+        </view>
+        <view class="c6a31e" wx:if="{{showCoupon}}">
+            <b bind:_init="_tic" customClass="f61eb" name="coupon-o"></b>
+            <view class="c9f85c">优惠券</view>
+            <view class="a74d7"> x{{couponCount}} </view>
+        </view>
+        <view class="c6a31e" wx:if="{{showPoint}}">
+            <b bind:_init="_tic" customClass="f61eb" name="points"></b>
+            <view class="c9f85c">积分</view>
+            <view class="a74d7"> {{pointCount}} </view>
+        </view>
+    </view>
+    <view class="ce037"> 仅在首次入会时发放 </view>
+    <a bind:_init="_tic" bind:tap="_p" customClass="e754e" data-t="{{ tap:{en:'handleConfirm'} }}">    我知道了
+  </a>
+</view>

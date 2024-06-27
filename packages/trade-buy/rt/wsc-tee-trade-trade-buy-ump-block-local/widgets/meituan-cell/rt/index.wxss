@@ -1,0 +1,221 @@
+.c89585 {
+  text-decoration: inherit;
+}
+.c89585,
+.bd231 {
+  display: inline-block;
+}
+.bd231 {
+  width: 100%;
+  height: 100%;
+}
+.d5a4c {
+  padding: var(--theme-page-cell-padding-top, 10px)
+    var(--theme-page-cell-padding-right, 12px)
+    var(--theme-page-cell-padding-bottom, 10px)
+    var(--theme-page-cell-padding-left, 12px) !important;
+}
+.d5a4c > .t-cell__d5d3d {
+  flex: none;
+}
+.d5a4c > .t-cell__value {
+  color: #323233;
+  font-weight: var(--theme-common-price-font-weight, 800);
+}
+.d5a4c > .t-cell__value .t-field__control::-webkit-input-placeholder {
+  font-weight: 400;
+  text-align: right;
+}
+.d5a4c > .t-cell__value .t-field__control::placeholder {
+  font-weight: 400;
+  text-align: right;
+}
+.d5a4c:not(:last-child):not(.t-cell--borderless):after {
+  left: 12px;
+  right: 12px;
+}
+.c5f7d0 {
+  color: var(--general, #f44) !important;
+  font-weight: 400 !important;
+}
+.d6e16-cell--value {
+  color: #323233;
+  font-weight: var(--theme-common-price-font-weight, 800) !important;
+  font-family: Avenir;
+}
+.ccfc5 {
+  display: flex;
+  align-items: center;
+}
+.d5d3d {
+  margin-left: 6px;
+}
+.c521bb {
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.a2f92 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 12px;
+  color: #c8c9cc;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.c00584 {
+  min-height: 250px;
+  min-height: 40vh;
+  max-height: 400px;
+  max-height: 70vh;
+  overflow-y: auto;
+  background: #f7f8fa;
+}
+.action-sheet__bottom {
+  padding: 5px 16px;
+}
+.action-sheet__button {
+  height: 40px !important;
+}
+.c1805c {
+  padding: 5px 12px calc(5px + env(safe-area-inset-bottom));
+  display: flex;
+  background-color: #fff;
+}
+.c1805c .c036e0 {
+  width: 50%;
+}
+.c1805c .c049a0 {
+  flex: 1;
+  height: 40px !important;
+  font-weight: 500;
+  font-size: 14px;
+  border: none;
+  border-radius: 0;
+  line-height: 40px;
+}
+.c1805c .a334d {
+  margin-left: 5px;
+  border-top-left-radius: 999px !important;
+  border-bottom-left-radius: 999px !important;
+  background: var(--vice-bg);
+  color: var(--vice-text);
+}
+.c1805c .c709e6 {
+  margin-right: 5px;
+  border-top-right-radius: 999px !important;
+  border-bottom-right-radius: 999px !important;
+  background: var(--main-bg);
+  color: var(--main-text);
+}
+.a2e48 {
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+}
+.a6e8f {
+  margin: 16px 0;
+  color: #969799;
+  font-size: 14px;
+  line-height: 20px;
+}
+.c835ac {
+  width: 200px;
+  height: 200px;
+}
+.c390f2 {
+  margin: 12px 12px 0;
+  background-color: #fff;
+  border-radius: var(--theme-radius-card, 8px);
+}
+.d6e16,
+.c390f2 {
+  box-sizing: border-box;
+}
+.d6e16 {
+  position: relative;
+  display: flex;
+  padding: 12px 0;
+  min-height: 84px;
+}
+.e9f40 {
+  display: flex;
+  padding: 0 14px;
+  flex-shrink: 0;
+  font-weight: 500;
+  font-size: 24px;
+  align-self: center;
+  align-items: baseline;
+  font-family: Avenir;
+  color: var(--ump-icon, #ee0a24);
+}
+.c3e34b {
+  display: inline-block;
+  font-size: 40%;
+  font-weight: 600;
+}
+.d93ec {
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 2px;
+  font-family: Avenir;
+}
+.bdaa3 {
+  font-size: 14px;
+  font-weight: 500;
+}
+.c75da6 {
+  overflow: hidden;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.c77093 {
+  font-weight: 500;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.c77093,
+.c6459f {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.c6459f {
+  white-space: pre-wrap;
+  font-size: 12px;
+  color: #969799;
+}
+.d304b {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 1px 8px;
+  border-radius: var(--theme-radius-tag, 4px) 0 var(--theme-radius-tag, 4px) 0;
+  font-size: 10px;
+  line-height: 14px;
+  background: #ffbd00;
+  color: #000;
+}
+.c9fced {
+  display: flex;
+  padding: 0 14px;
+  align-items: center;
+}
+.c075ae .e9f40,
+.c075ae .c77093,
+.c075ae .c6459f,
+.c40bea {
+  color: #969799;
+}
+.c40bea {
+  font-size: 12px;
+  padding: 5px 12px;
+}

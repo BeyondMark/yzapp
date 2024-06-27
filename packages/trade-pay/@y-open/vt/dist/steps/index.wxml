@@ -1,0 +1,18 @@
+<view class="{{'c70607'}} {{direction?'c70607--'+direction:''}} {{customClass||''}}">
+    <view class="c71915">
+        <view bind:tap="_p" class="t-hairline {{item.class}}" data-t="{{ tap:{ en:'onClick',args:[index] } }}" style="{{item.status==='inactive'?'color: '+inactiveTextColor:''}}" wx:for="{{innerSteps}}" wx:key="index">
+            <view class="c2b9f5" style="{{index===active?'color: '+activeColor:''}}">
+                <view>{{item.text}}</view>
+                <view class="{{descClass}}">{{item.desc}}</view>
+            </view>
+            <view class="c90547">
+                <block wx:if="{{index!==active}}">
+                    <a bind:_init="_tic" color="{{item.status==='inactive'?inactiveTextColor:activeColor}}" customClass="c8b9e6" name="{{item.inactiveIcon||inactiveIcon}}" wx:if="{{item.inactiveIcon||inactiveIcon}}"></a>
+                    <view class="f75e6" style="{{item.style}}" wx:else></view>
+                </block>
+                <a bind:_init="_tic" color="{{activeColor}}" customClass="c8b9e6" name="{{item.activeIcon||activeIcon}}" wx:else></a>
+            </view>
+            <view class="c310f9" style="{{item.lineStyle||item.style}}" wx:if="{{index!==steps.length-1}}"></view>
+        </view>
+    </view>
+</view>

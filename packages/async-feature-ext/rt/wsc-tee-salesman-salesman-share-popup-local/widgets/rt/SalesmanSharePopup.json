@@ -1,0 +1,20 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./CubeHeader",
+    "b": "./CubeTabContainer",
+    "c": "./../cube-footer/rt/index",
+    "d": "./../main-frame/rt/index",
+    "e": "./CloudSalesmanSharePopup",
+    "f": "./CloudSalesmanSharePopupHeader",
+    "g": "./CloudSalesmanSharePopupTabs",
+    "h": "./CloudSalesmanSharePopupFooter",
+    "i": "./../../components/earn-icon/index",
+    "j": "./../../components/tax-sign-pop/index",
+    "k": "./../../components/new-begin-pop/index",
+    "l": "./../../components/poster-pop/index",
+    "m": "./../../components/assistant-pop/index",
+    "n": "./../../components/promote-tip/index",
+    "_": "../../../../../../components/_/index"
+  }
+}

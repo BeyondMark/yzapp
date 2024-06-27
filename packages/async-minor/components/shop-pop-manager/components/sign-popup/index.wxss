@@ -1,0 +1,60 @@
+.sign-popup-content {
+  padding: 0;
+}
+.l-popup__close {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 10px;
+}
+.c-close__img {
+  width: 24px;
+  height: 24px;
+}
+.l-popup__custom {
+  width: 260px;
+  border-radius: 16px;
+  text-align: center;
+}
+.custom-image {
+  width: 260px;
+}
+.l-popup__container {
+  width: 260px;
+  border-radius: 16px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.l-popup__footer {
+  padding: 0 25px 25px;
+  width: 210px;
+}
+.c-sign__img {
+  width: 260px;
+  height: 188px;
+  display: block;
+}
+.c-sign__text {
+  font-family: PingFangSC-Medium;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 700;
+  color: #a25700;
+  margin-top: 11px;
+}
+.c-sign__form {
+  width: 100%;
+}
+.c-sign__btn {
+  background-image: linear-gradient(-180deg, #ffa428 3%, #ff9300);
+  width: 100%;
+  border-radius: 23px;
+  font-family: PingFangSC-Semibold;
+  color: #fafafc;
+  font-size: 16px;
+  line-height: 46px;
+  height: 46px;
+  margin-top: 24px;
+}

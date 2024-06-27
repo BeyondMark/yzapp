@@ -1,0 +1,43 @@
+<view class="e44d9">
+    <view class="b73df">
+        <b bind:_init="_tic" imageList="{{imageList}}" wx:if="{{imageList.length}}"></b>
+        <view class="c3618e">
+            <view class="c78a5e" wx:if="{{price}}">
+                <view class="c5e427 c89585">￥</view> {{price}} </view>
+            <view class="d5d3d"> {{title}} </view>
+            <view class="c6512" wx:if="{{goodsBaseInfo.sellPoint}}"> {{goodsBaseInfo.sellPoint}} </view>
+            <view class="c19e95" wx:if="{{originPrice&&originPrice!=='0.00'}}">        ￥{{originPrice}} </view>
+        </view>
+        <view class="b4b2b">
+            <view class="c5010b">
+                <image class="e38a8 bd231" lazyLoad="true" src="{{shopInfo.logo}}"></image>
+            </view>
+            <view class="a6896">
+                <view class="c86c9e">
+                    <view class="c80df6">
+                        <view class="c0574a"> {{shopInfo.shopName}} </view>
+                    </view>
+                </view>
+                <view class="c627fc" wx:if="{{existsTags}}">
+                    <view class="e2c10" wx:if="{{shopBrandTag}}"></view>
+                    <view class="c1c38a" wx:if="{{shopOfficialTag}}"></view>
+                </view>
+            </view>
+        </view>
+        <view class="adc0f" wx:if="{{goodsStockOpt.showBlock}}">
+            <a bind:_init="_tic" border="{{false}}">
+                <view class="e342b">
+                    <view class="c45e42 c89585">运费</view>
+                    <view class="c4c00f">
+                        <view>{{postageText}}</view>
+                        <view class="c722f7" wx:if="{{goodsStockOpt.showSoldNum}}">
+                            <view class="c89585" style="margin-right: 4px">已售</view>
+                            <view class="c89585">{{goodsStockOpt.soldNumText}}</view>
+                        </view>
+                    </view>
+                </view>
+            </a>
+        </view>
+    </view>
+    <view class="a2984"> 点击“前往小程序”查看和购买商品 </view>
+</view>

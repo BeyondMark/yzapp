@@ -1,0 +1,17 @@
+.tee-image {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.seller-icon {
+  position: fixed;
+  right: 10px;
+  width: 48px;
+  height: 48px;
+  z-index: 98;
+  cursor: pointer;
+}
+.seller-icon .earn-icon {
+  width: 100%;
+  height: 100%;
+}

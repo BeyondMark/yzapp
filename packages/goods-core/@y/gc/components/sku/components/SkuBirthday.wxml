@@ -1,0 +1,10 @@
+<view class="sku-birthday">
+    <view class="c2e5a4">
+        <view>{{opt.greetingCardName}}</view>
+        <view class="c813de">{{subTitleText}}</view>
+    </view>
+    <view class="c82028">
+        <b bind:_init="_tic" bind:select="_p" data-t="{{ select:{en:'onSelect'} }}" index="{{i}}" itemKey="{{key}}" name="{{val}}" selectedKey="{{birthdayKey}}" wx:for="{{optVals}}" wx:for-index="key" wx:for-item="val" wx:key="key"></b>
+    </view>
+    <a alwaysEmbed="{{true}}" bind:_init="_tic" bind:input="_p" class="birthday-input" data-t="{{ input:{en:'onMessage'} }}" label="祝福语" maxlength="100" placeholder="请填写祝福语" value="{{birthdayText}}" wx:if="{{birthdayKey&&isShowBirthdayText}}"></a>
+</view>

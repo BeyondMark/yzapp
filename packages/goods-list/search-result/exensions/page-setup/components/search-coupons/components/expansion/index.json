@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../../../../../components/ump/coupon/index",
+    "b": "../../../../../../../@vant/weapp/dist/count-down/index",
+    "c": "/packages/async-main/@vant/weapp/dist/icon/index",
+    "d": "/components/account/user-authorize/index",
+    "e": "../../../../../../../common/components/theme-view/index",
+    "_": "../../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "c": "_" }
+}

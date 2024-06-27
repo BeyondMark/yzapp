@@ -1,0 +1,154 @@
+.c18b2c {
+  border-radius: 4px;
+  background-color: #fff;
+  margin: 12px 15px 0;
+}
+.edef3 {
+  display: flex;
+}
+.c96807 {
+  height: 84px;
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
+  box-sizing: border-box;
+  display: flex;
+}
+.c83fbf {
+  position: relative;
+  margin-bottom: 10px;
+  height: 18px;
+  font-size: 14px;
+  line-height: 1.29;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+.c46ed0 {
+  color: #fff;
+}
+.c656aa {
+  color: #323233;
+}
+.c83fbf image {
+  left: 0;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+}
+.c906d0 {
+  height: 28px;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 130px;
+  min-width: 130px;
+  display: flex;
+  align-items: flex-end;
+}
+.bcf02 {
+  margin-bottom: 0;
+  opacity: 0.4;
+}
+.c9ace0 {
+  border-radius: 4px 4px 0 0;
+}
+.c437ef {
+  border-radius: 4px;
+}
+.f60c6 {
+  font-size: 12px;
+  padding: 8px 12px;
+  background-color: #fff;
+  border-radius: 0 0 4px 4px;
+  position: relative;
+  color: #646566;
+}
+.d2b9f:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: calc(100% - 24px);
+  height: 1px;
+  background-image: repeating-linear-gradient(
+    -90deg,
+    transparent,
+    transparent 3px,
+    #ebedf0 0,
+    #ebedf0 10px
+  );
+}
+.c300d {
+  width: 100%;
+  height: 55px;
+  position: absolute;
+  bottom: 0;
+  background-image: linear-gradient(
+    180deg,
+    transparent 9%,
+    rgba(0, 0, 0, 0.24)
+  );
+}
+.b1120 {
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 14px 0 14px 12px;
+}
+.c30d11 {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  padding: 0 24px;
+}
+.c01172 {
+  color: #fff;
+}
+.c9e96 {
+  color: #969799;
+}
+.f61af {
+  height: 28px;
+  font-weight: 600;
+  line-height: 0.93;
+  flex: 1;
+}
+.c35373 {
+  color: #fff;
+}
+.d5412 {
+  color: #323233;
+}
+.c561ef {
+  font-size: 14px;
+  display: inline-block;
+}
+.c8824 {
+  font-weight: 600;
+  display: inline-block;
+  height: 28px;
+  line-height: 28px;
+}
+.c6abdd {
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-block;
+}
+.c96807__desc-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+.c504c8 {
+  font-size: 12px;
+  color: #969799;
+  width: 100%;
+  text-align: right;
+}
+.c3a94b {
+  color: #ee0a24;
+}
+.f1434 {
+  color: #fff;
+}

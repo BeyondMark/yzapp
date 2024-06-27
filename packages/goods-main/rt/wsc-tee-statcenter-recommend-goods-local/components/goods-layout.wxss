@@ -1,0 +1,127 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.ded2e__container.small {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+.ded2e__container.small .c59b06 {
+  width: 50%;
+}
+.c56c9f.small .ded2e__buy-btn-wrapper.type-9 {
+  top: -10px;
+  right: -10px;
+}
+.ded2e__container.hybrid {
+  overflow: hidden;
+}
+.ded2e__container.hybrid .c59b06 {
+  float: left;
+}
+.ded2e__container.hybrid .c59b06:nth-child(3n + 1) {
+  width: 100%;
+}
+.ded2e__container.hybrid .c59b06:nth-child(3n),
+.ded2e__container.hybrid .c59b06:nth-child(3n + 2) {
+  width: 50%;
+}
+.c56c9f.list {
+  overflow: hidden;
+}
+.ded2e__container.three {
+  display: flex;
+  flex-wrap: wrap;
+}
+.ded2e__container.three .c59b06 {
+  width: 33.33%;
+}
+.ded2e__container.three .cap-goods__photo {
+  border-radius: 8px;
+}
+.ded2e__container.c911b1 .c534bb {
+  float: left;
+}
+.ded2e__container.c32ec5 .c534bb {
+  width: 50%;
+}
+.ded2e__container.c911b1-3 .c534bb {
+  width: 33.33%;
+}
+.ded2e,
+.c59b06 {
+  overflow: hidden;
+}
+.c56c9f {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  min-height: 50px;
+  overflow: hidden;
+  color: #333;
+  background-color: #fff;
+  height: calc(100% - 8px);
+}
+.c56c9f.card-shadow {
+  box-shadow: 0 2px 8px rgba(93, 113, 127, 0.08);
+}
+.c56c9f.card2 {
+  border: 1px solid rgba(50, 50, 51, 0.1);
+}
+.c56c9f.simple {
+  background-color: inherit;
+}
+.c56c9f.circle {
+  border-radius: var(--theme-radius-card, 8px);
+}
+.c56c9f.circle.simple {
+  border-radius: var(--theme-radius-card, 8px) var(--theme-radius-card, 8px) 0 0;
+  -webkit-mask-image: -webkit-radial-gradient(#fff, #000);
+}
+.c56c9f.circle.simple .cap-goods__image-wrap {
+  border-radius: 0 0 var(--theme-radius-card, 8px) var(--theme-radius-card, 8px);
+  -webkit-mask-image: -webkit-radial-gradient(#fff, #000);
+}
+.ded2e__info {
+  position: relative;
+  padding: 0 10px;
+}
+.ded2e__info.list {
+  height: 145px;
+  margin-left: 155px;
+  padding: 0 10px 0 0;
+  overflow: hidden;
+}
+.sales-wrap {
+  width: 100px;
+}
+.cap-goods-list__presale-tag {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  background: var(--general, #f44);
+}
+.recommend-coupon {
+  background: linear-gradient(180deg, #ffcec7, #ffe7e4);
+}
+.c56c9f .cap-title {
+  padding: 0 !important;
+}
+.b861b {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  line-height: 40px;
+  font-size: 12px;
+  color: #f44;
+  color: var(--general, #f44);
+}
+.c09bf2 {
+  transform-origin: right;
+}

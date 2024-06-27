@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "礼物记录",
+  "enablePullDownRefresh": true,
+  "navigationBarBackgroundColor": "#e0493f",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "a": "/pages/common/page-container/index",
+    "b": "../components/order-cell-group/index",
+    "c": "../components/order-cell/index",
+    "d": "../../@vant/weapp/dist/tabs/index",
+    "e": "../../@vant/weapp/dist/tab/index",
+    "f": "../../components/empty/index",
+    "_": "../../../../components/_/index"
+  }
+}

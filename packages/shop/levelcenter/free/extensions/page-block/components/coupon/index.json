@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/shop/@vant/weapp/dist/count-down/index",
+    "b": "/packages/shop/@vant/weapp/dist/button/index",
+    "_": "../../../../../../../../components/_/index"
+  }
+}

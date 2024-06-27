@@ -1,0 +1,16 @@
+<b bind:_init="_tic" bind:before-enter="_p" bind:close="_p" closeOnClickOverlay="{{false}}" closeable="{{true}}" data-t="{{ beforeEnter:{en:'init'},close:{en:'onClose'} }}" overlayStyle="{{overlay?'':'opacity: 0'}}" position="bottom" round="{{true}}" safeAreaInsetBottom="{{true}}" show="{{show}}">
+    <view class="ctc-captcha-pad__container" style="height:{{height||'80vh'}}">
+        <view class="c8d790">短信验证</view>
+        <view class="e8440">
+            <view class="c0f71a">        短信验证码已发送至{{maskedPhone}} </view>
+            <view class="c20b9a">
+                <view class="c72a1f c89585"> {{captcha}} <view class="c523b8" style="background-color:{{themeColor||'#0f57d7'}}" wx:if="{{captcha.length<6}}"></view>
+                </view>
+                <view bind:tap="_p" class="{{'c8a342'}} {{timeout?'c6e2e9':''}}" data-t="{{ tap:{en:'refetch'} }}"> {{actionText}} </view>
+            </view>
+            <a bind:_init="_tic" bind:tap="_p" block="{{true}}" class="c19b0b" color="{{themeColor}}" data-t="{{ tap:{ en:'$emit',args:['submit',captcha] } }}" disabled="{{captcha.length<6}}" round="{{true}}" type="danger">        确定
+      </a>
+            <c bind:_init="_tic" bind:delete="_p" bind:input="_p" data-t="{{ input:{en:'onInput'},delete:{en:'onDelete'} }}" overlay="{{false}}" show="{{true}}"></c>
+        </view>
+    </view>
+</b>

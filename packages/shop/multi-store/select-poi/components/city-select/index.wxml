@@ -1,0 +1,31 @@
+<view class="{{showkeyWordList||showSearchedPoi?'city-select full-screen':'city-select'}}">
+    <view class="flex-wrapper top flex">
+        <view class="select flex flex-wrapper">
+            <view bindtap="goCityList" class="city-name">{{selectedCity||(current===null?'定位中':current&&current.name||'北京市')}}</view>
+            <image class="icon-arrow" src="https://b.yzcdn.cn/public_files/2018/08/28/3fb991dc090274931be8a1cf807c62b5.png"></image>
+            <image class="icon-search" src="https://b.yzcdn.cn/public_files/2018/08/28/e0bbd3e69bc136b8bf2e9d8820753372.png"></image>
+            <input bindfocus="showkeyWord" bindinput="getPoi" placeholder="输入收货地址，匹配周边门店" placeholderClass="city-select__input__placeholder" value="{{keyWord}}"></input>
+            <image bindtap="clearKeyword" class="icon-clear" src="https://b.yzcdn.cn/public_files/2018/08/28/b1a0da9510f2ed278bd284a1b7cc61d3.png" wx:if="{{keyWord}}"></image>
+        </view>
+        <view bindtap="closePop" class="cancel" wx:if="{{showkeyWordList||showSearchedPoi}}">取消</view>
+    </view>
+    <view class="list search" wx:if="{{showkeyWordList||showSearchedPoi}}">
+        <block wx:if="{{historySearchList.length>0&&showkeyWordList}}">
+            <view class="flex">
+                <view class="h4">历史搜索</view>
+                <b bindtap="clearHistorySearchList" color="#666666" name="delete"></b>
+            </view>
+            <view bindtap="getPoi" class="item" data-keyword="{{item}}" data-type="history" wx:for="{{historySearchList}}" wx:key="index">{{item}}</view>
+        </block>
+        <c border="{{false}}" vIf="searchedPoiList.length > 0 && showSearchedPoi">
+            <d bindtap="handleClick" border="{{index!==searchedPoiList.length-1}}" customerClass="poi" data-item="{{item}}" wx:for="{{searchedPoiList}}" wx:key="index">
+                <view slot="title">
+                    <view class="suggetion-poi__address-name">{{item.beforeText}}<view class="important-text">{{item.redText}}</view>{{item.afterText}}</view>
+                    <view class="suggestion-poi__address-detail">{{item.address}}</view>
+                </view>
+            </d>
+        </c>
+    </view>
+    <view class="suggestion-poi__no-data__text" wx:if="{{searchEd&&searchedPoiList.length==0}}">未找到信息～，换个关键词试试吧</view>
+    <a bindselected="handleSelectCity" class="city-list" currentCity="{{current}}" wx:if="{{showCityList}}"></a>
+</view>

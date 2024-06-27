@@ -1,0 +1,17 @@
+<view catch:tap="_p" class="c9bebd" data-t="{{ tap:{ en:'$emit',et:'stop',args:['open-combo-popup'] } }}">
+    <view class="d5d3d">
+        <view class="left">套餐包含以下商品</view>
+        <view class="c7c4f2">
+            <view class="c89585">详情</view>
+            <a bind:_init="_tic" name="arrow"></a>
+        </view>
+    </view>
+    <scroll-view bind:touchend="_p" bind:touchstart="_p" class="c7c275" data-t="{{ touchstart:{ en:'$emit',args:['change-swipe-status',true] },touchend:{ en:'$emit',args:['change-swipe-status',false] } }}" scrollX="{{true}}">
+        <view class="c4849c">
+            <view class="c447b7" wx:for="{{comboDetail}}" wx:key="index">
+                <image class="c37808 bd231" lazyLoad="{{true}}" mode="aspectFill" src="{{item.src}}"></image>
+                <view class="e4aa0 c89585">x{{item.num}}</view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

@@ -1,0 +1,7 @@
+<view class="edu-widgets--cube">
+    <view bindtap="handleWidgetClicked" class="widget" data-key="{{widget.key}}" wx:for="{{widgets}}" wx:for-item="widget" wx:key="{{ widget.key }}">
+        <image class="widget__icon" mode="aspectFit" src="{{widget.icon}}"></image>
+        <view class="widget__badge {{'widget__badge--'+util.getBadgesType(badges,widget.key)}}" wx:if="{{util.isShowBadge(badges,widget.key)}}">{{util.getBadgesContent(badges,widget.key)}}</view>
+        <view class="widget__title">{{widget.title}}</view>
+    </view>
+</view>

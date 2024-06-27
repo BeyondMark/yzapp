@@ -1,0 +1,5 @@
+<view bind:tap="_p" class="{{switchClass.root}}" data-t="{{ tap:{en:'onClick'} }}" style="{{switchStyle}}">
+    <view class="c2ffa node-class">
+        <a bind:_init="_tic" class="c01ec7" color="{{loadingColor}}" size="{{loadingSize}}" wx:if="{{loading}}"></a>
+    </view>
+</view>

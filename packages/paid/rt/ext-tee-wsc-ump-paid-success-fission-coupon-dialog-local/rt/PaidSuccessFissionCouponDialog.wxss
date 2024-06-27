@@ -1,0 +1,94 @@
+.c7a6ca {
+  padding: 68px 0 0;
+  width: 320px;
+  max-width: 320px;
+  background-color: transparent !important;
+  background-image: url(https://img01.yzcdn.cn/upload_files/2021/07/08/Fs14mVo8a6WUxn7gQXSjFRwI4iz0.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position-y: -33px;
+}
+.c7251d {
+  position: absolute;
+  right: 16px;
+  top: 30px;
+  width: 32px;
+  height: 32px;
+  background-image: url(https://img01.yzcdn.cn/public_files/2018/05/16/c29879b23772965a3af7f5689ee61f58.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.c76bee {
+  text-align: center;
+  color: red;
+  margin: 0 auto;
+  width: 310px;
+}
+.c76bee .c91680 {
+  position: relative;
+  background-color: transparent;
+  background-image: url(https://img01.yzcdn.cn/public_files/8d9370460dbefcb8c59a870fa460aab0.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 367px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+.c76bee .c91680 .c18221 {
+  width: 100%;
+  position: absolute;
+  bottom: -159px;
+}
+.c76bee .c91680 .c85e47 {
+  color: #ee0a24;
+  background-image: url(https://b.yzcdn.cn/public_files/05e0c88ab7ea4d9884679b7239ed7bc4.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 72%;
+  height: 58px;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  line-height: 58px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.c76bee .c91680 .c85e47:after {
+  border: none;
+}
+.c76bee .c91680 .c6d993 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.c76bee .c91680 .c6d993 .send {
+  color: #f83c2d;
+  font-size: 28px;
+  padding-top: 60px;
+  font-weight: 700;
+  line-height: 40px;
+}
+.c76bee .c91680 .c6d993 .taken {
+  color: #333;
+  margin-top: 15px;
+  font-size: 18px;
+  line-height: 25px;
+}
+.c76bee .c91680 .c6d993 .taken .taken-num {
+  color: #f83c2d;
+}
+.c76bee .c91680 .c6d993 .f0e6e {
+  padding: 4px 10px;
+  font-size: 14px;
+}
+.c76bee .c91680 .c6d993 .valid-date {
+  color: #969799;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 12px;
+}

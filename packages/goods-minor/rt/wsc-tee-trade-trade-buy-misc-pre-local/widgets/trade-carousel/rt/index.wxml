@@ -1,0 +1,15 @@
+<view class="c457a1" style="{{tradeCarouselStyle}}" wx:if="{{show}}">
+    <a autoplay="1500" bind:_init="_tic" height="20px" pid="1" showIndicators="{{false}}" vertical="{{true}}" wx:if="{{tradeRecords.length>0}}">
+        <b bind:_init="_tic" pid="1" wx:for="{{tradeRecords}}" wx:for-item="tradeRecord" wx:key="index">
+            <view class="c345a0">
+                <image class="c387df bd231" lazyLoad="true" src="{{tradeRecord.avatar}}" wx:if="{{tradeRecord.avatar}}"></image>
+                <view class="c8e229">
+                    <view class="{{tradeRecord.class}}">{{tradeRecord.content}} <block wx:if="{{tradeRecord.ranking}}">              第
+              <view class="c655c4 c89585">{{tradeRecord.ranking}}</view>              名</block>
+                    </view>
+                </view>
+            </view>
+        </b>
+    </a>
+    <view style="font-size: 16px" wx:if="{{tradeRecords.length===0&&navBarText}}">{{navBarText}}</view>
+</view>

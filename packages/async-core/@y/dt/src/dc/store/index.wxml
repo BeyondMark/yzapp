@@ -1,0 +1,21 @@
+<view class="dc-store-empty" wx:if="{{opt.isEmptyStore}}">
+    <view class="dc-store-empty-title">当前无门店信息</view>
+    <view class="dc-store-empty-sub-title">请先添加门店</view>
+</view>
+<view class="dc-store" wx:elif="{{!opt.isEmptyStore}}">
+    <view class="header">
+        <c autoplay="{{3000}}" bind:_init="_tic" height="150" indicatorColor="white" pid="{{vanSwiperKey}}">
+            <b bind:_init="_tic" class="shop-img-wrap" pid="{{vanSwiperKey}}" wx:for="{{bannerImages}}" wx:for-item="image" wx:key="image">
+                <view class="shop-img" style="width:100%; background-image:{{'url('+image+')'}}; background-size:cover; background-position:center center"></view>
+            </b>
+        </c>
+    </view>
+    <view class="body">
+        <view class="logo-box" style="{{'text-align: '+opt.align}}">
+            <view class="logo" style="{{logoImage}}"></view>
+        </view>
+        <a _opt="{{opt.storeInfo}}" bind:_init="_tic" bind:btn-click="_p" data-t="{{ btnClick:{en:'handlePhone'} }}"></a>
+        <a _opt="{{opt.addressInfo}}" bind:_init="_tic" bind:btn-click="_p" data-t="{{ btnClick:{en:'handleOpenLocation'} }}"></a>
+        <a _opt="{{opt.businessInfo}}" bind:_init="_tic"></a>
+    </view>
+</view>

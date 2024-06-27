@@ -1,0 +1,17 @@
+.order-pay-prompt-popup {
+  border-radius: var(----theme-radius-dialog, 16px);
+}
+.order-pay-prompt-popup-container {
+  background-color: #fff;
+  padding: 24px;
+  text-align: center;
+}
+.order-pay-prompt-popup-title {
+  margin-bottom: 8px;
+}
+.order-pay-prompt-popup-title_text {
+  font-size: 16px;
+  line-height: 20px;
+  color: #323233;
+  font-weight: 700;
+}

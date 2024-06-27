@@ -1,0 +1,5 @@
+<view>
+    <a bind:_init="_tic" bind:tap="_p" border="{{false}}" customClass="{{isAddressFixed?'c6e035':'c52503'}}" data-t="{{ tap:{en:'onCellClick'} }}" isLink="{{true}}" title="{{labelTitle||'联系人'}}" titleClass="c1632">
+        <view class="{{value.class}}">{{value.text}}</view>
+    </a>
+</view>

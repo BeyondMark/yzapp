@@ -1,0 +1,12 @@
+.b2134 {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-top: var(--theme-page-ext-margin-top, 8px);
+  padding: 0;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.b2134 .nav-wrapper.t-tabs__nav.t-tabs__nav--line {
+  width: 100%;
+}

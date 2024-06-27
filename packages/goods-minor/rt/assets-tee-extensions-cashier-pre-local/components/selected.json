@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./cashier-icon",
+    "b": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_" }
+}

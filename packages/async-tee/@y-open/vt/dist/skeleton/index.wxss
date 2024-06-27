@@ -1,0 +1,55 @@
+.t-skeleton {
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 16px;
+  padding: var(--skeleton-padding, 0 16px);
+}
+.t-skeleton__avatar {
+  flex-shrink: 0;
+  margin-right: 16px;
+  margin-right: var(--padding-md, 16px);
+  background-color: #f2f3f5;
+  background-color: var(--skeleton-avatar-background-color, #f2f3f5);
+}
+.t-skeleton__avatar--round {
+  border-radius: 100%;
+}
+.t-skeleton__content {
+  flex: 1;
+}
+.t-skeleton__avatar + .t-skeleton__content {
+  padding-top: 8px;
+  padding-top: var(--padding-xs, 8px);
+}
+.t-skeleton__row,
+.t-skeleton__title {
+  height: 16px;
+  height: var(--skeleton-row-height, 16px);
+  background-color: #f2f3f5;
+  background-color: var(--skeleton-row-background-color, #f2f3f5);
+}
+.t-skeleton__title {
+  margin: 0;
+}
+.t-skeleton__row:not(:first-child) {
+  margin-top: 12px;
+  margin-top: var(--skeleton-row-margin-top, 12px);
+}
+.t-skeleton__title + .t-skeleton__row {
+  margin-top: 20px;
+}
+.t-skeleton--animate {
+  animation: t-skeleton-blink 1.2s ease-in-out infinite;
+}
+@-webkit-keyframes t-skeleton-blink {
+  50% {
+    opacity: 0.6;
+  }
+}
+@keyframes t-skeleton-blink {
+  50% {
+    opacity: 0.6;
+  }
+}

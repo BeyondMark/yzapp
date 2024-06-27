@@ -1,0 +1,21 @@
+<a bind:click-overlay="closePop" customClass="friend-popup" show="{{friendShow}}">
+    <view class="friend-popup__close">
+        <b bind:tap="closePop" color="#fff" name="close" size="21px"></b>
+    </view>
+    <view class="friend-popup__main">
+        <image class="friend-popup__top" src="{{statusInfo.topImg}}"></image>
+        <view class="friend-popup__text" wx:if="{{statusInfo.mainText.length}}">
+            <text bindtap="handleMainTextClick" data-index="{{index}}" wx:for="{{statusInfo.mainText}}" wx:key="item">{{item}}</text>
+        </view>
+        <view class="friend-popup__coupon">
+            <d autoFormatValue="true" bind:click-btn="handleClickCoupon" btnIcon="{{false}}" btnText="去使用" coupon="{{coupon}}" displayType="flat" wx:if="{{statusInfo.isShowCoupon&&helpResult.winCoupon}}"></d>
+        </view>
+        <view class="friend-popup__btn-wrap" style="{{statusInfo.buttonWrapStyle||''}}">
+            <e bind:next="handleHelp" scene="get_coupon" wx:if="{{statusInfo.button.type==='help'}}">
+                <c customClass="friend-popup__btn" round="{{true}}" size="large" type="danger">{{statusInfo.button.text}}</c>
+            </e>
+            <c bind:tap="hendleBtnClick" customClass="friend-popup__btn" data-button="{{statusInfo.button}}" round="{{true}}" size="large" type="danger" wx:else>{{statusInfo.button.text}}</c>
+        </view>
+        <view bind:tap="handleSubButtonClick" class="friend-popup__gohome" data-button="{{statusInfo.subButton}}" wx:if="{{statusInfo.subButton}}">{{statusInfo.subButton.text}}</view>
+    </view>
+</a>

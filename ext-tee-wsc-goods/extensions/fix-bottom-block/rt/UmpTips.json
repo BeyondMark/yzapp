@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/goods-core/@y/gc/components/fix-bottom-block/ump-tips-block/index",
+    "_": "../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

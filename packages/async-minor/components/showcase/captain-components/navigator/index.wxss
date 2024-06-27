@@ -1,0 +1,9 @@
+.btn {
+  padding: 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+.btn:after,
+.btn:before {
+  border: none;
+}

@@ -1,0 +1,1 @@
+<a bind:_init="_tic" fastJoinHeaderInfo="{{fastJoinHeaderInfo}}" shopInfo="{{shopInfo}}"></a>

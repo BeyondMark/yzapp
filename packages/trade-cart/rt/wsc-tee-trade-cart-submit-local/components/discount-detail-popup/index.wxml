@@ -1,0 +1,32 @@
+<b bind:_init="_tic" bind:close="_p" closeable="{{true}}" customClass="a4a61" data-t="{{ close:{en:'onClose'} }}" overlayStyle="z-index: 97 !important;" position="bottom" safeAreaInsetBottom="{{true}}" show="{{visible}}">
+    <view class="c2dff4">优惠明细</view>
+    <view class="c26d31">
+        <view class="c19de4">
+            <view class="c4b8ac">商品总额</view>
+            <view class="c5fa00">￥{{goodsTotalPriceFormat}}</view>
+        </view>
+        <view class="c19de4 c2a165">
+            <view class="c4b8ac">共优惠</view>
+            <view class="c5fa00 a49b5">
+                <view class="e4d23 c89585" wx:if="{{isBest}}">最佳优惠</view>        -￥{{totalDiscountFormat}} </view>
+        </view>
+        <view class="e61ab c653c7" wx:for="{{promotionDetailsFormat}}" wx:key="appType">
+            <view class="c4b8ac">{{item.appName==='优惠卡券'?'优惠券':item.appType===115?item.promotionTag||item.appName:item.appName}}</view>
+            <view class="c5fa00">-￥{{item.preferentialValue}}</view>
+        </view>
+        <view bind:tap="_p" class="c4e4f4" data-t="{{ tap:{en:'select'} }}" wx:if="{{isBest}}">
+            <view class="c1c65e">更换活动</view>
+            <view class="afc45">
+                <view class="d0a36">{{recommendPromotion}}</view>
+                <a bind:_init="_tic" name="arrow"></a>
+            </view>
+        </view>
+        <view class="b5a80">
+            <view class="c4b8ac a9c8a">合计</view>
+            <view class="c5fa00 c1db89">
+                <view class="c89585">￥{{totalPriceFormat}}</view>
+            </view>
+        </view>
+        <view class="c0c31b">以上优惠不包含运费，实际优惠金额请以确认订单页为准</view>
+    </view>
+</b>

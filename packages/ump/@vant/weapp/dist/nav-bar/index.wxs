@@ -1,0 +1,8 @@
+var style = require("p_./@vant/weapp/dist/wxs/style.wxs");
+function barStyle(data) {
+  return style({
+    "z-index": data.zIndex,
+    "padding-top": data.safeAreaInsetTop ? data.statusBarHeight + "px" : 0,
+  });
+}
+module.exports = { barStyle: barStyle };

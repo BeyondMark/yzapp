@@ -1,0 +1,15 @@
+function cent2yuan(value) {
+  return Number(value / 100).toFixed(2);
+}
+function getGoodsPrice(selectedSkuComb, sku) {
+  if (!sku) return;
+  var result = sku.price;
+  if (selectedSkuComb) {
+    var price = selectedSkuComb.price;
+    var propertyPrice = selectedSkuComb.propertyPrice || 0;
+    result =
+      typeof price === "number" ? cent2yuan(price + propertyPrice) : price;
+  }
+  return result;
+}
+module.exports = { getGoodsPrice: getGoodsPrice };

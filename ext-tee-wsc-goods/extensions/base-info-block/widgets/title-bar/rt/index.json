@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/goods-core/@y/gc/components/base-info-block/title-block/period/index",
+    "b": "/packages/goods-core/@y/gc/components/base-info-block/title-block/enjoy-buy/index",
+    "c": "./../components/title/index",
+    "_": "../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_", "b": "_" }
+}

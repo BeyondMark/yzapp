@@ -1,0 +1,5 @@
+<a bind:click="handleOnClick" border="{{false}}" center="{{isLink}}" customClass="list-item" isLink="{{isLink}}" label="{{benefit.label}}" title="{{benefit.appName}}">
+    <view class="list-item__icon" slot="icon">
+        <image class="icon-pic" src="{{benefit.icon}}"></image>
+    </view>
+</a>

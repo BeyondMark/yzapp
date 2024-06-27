@@ -1,0 +1,52 @@
+<t show="{{loading}}" wx:if="{{globalCustomLoading}}"></t>
+<view wx:elif="{{loading}}">
+    <a></a>
+</view>
+<view class="page-container page-container--tab-bottom {{deviceType}}" style="background-color: {{backgroundColor}};">
+    <p rmId="b39-2" wx:if="{{rmId==='b39-1'}}"></p>
+    <view wx:if="{{isDiyByFeature}}">
+        <r rmId="b39-5" wx:if="{{rmId==='b39-1'}}"></r>
+    </view>
+    <view wx:else>
+        <e hiddenInfoCompleted="{{hiddenInfoCompleted}}" isImmersive="{{isImmersive}}" kdtId="{{kdtId}}" levelGrowth="{{levelGrowth}}" rmId="{{rmId}}" userAgreePrivacy="{{userAgreePrivacy}}" wx:if="{{rmId==='b39-1'}}"></e>
+        <block wx:for="{{userCenterComponents}}" wx:for-item="component" wx:key="index">
+            <block wx:if="{{component.type==='uc_user_info'}}">
+                <f align="{{component.align}}" avatar="{{userInfo.avatar}}" backgroundImage="{{component.backgroundImage}}" benefitText="{{levelGrowth.benefitDesc}}" bindTips="{{bindTips}}" bind:bindGetUserInfo="onGetUserInfo" bind:onAccountSuccess="onAccountSuccess" bind:tapLevel="handleTapUserInfo" bind:tapSign="handleSign" bind:tapUserInfo="handleTapUserInfo" grade="{{memberLevelGradeText}}" gradient="{{component.gradient}}" growthValue="{{levelGrowth.growthValue}}" isImmersive="{{isImmersive}}" isMember="{{isMember}}" isNotValid="{{isNotValid}}" isSigned="{{isSigned}}" isSupportGrowthValue="{{isSupportGrowthValue}}" isSupportSign="{{isSupportSign}}" levelIconType="{{levelGrowth.payLevelName||levelGrowth.payBenefitDesc?1:0}}" levelValue="{{levelGrowth.levelValue}}" links="{{baseLinks}}" memberType="{{component.memberType}}" rmId="{{rmId}}" showBindUser="{{showBindPhoneNumber}}" showGrowth="{{levelGrowth.showGrowthValue}}" showInfoCompleted="{{levelGrowth.showInfoCompleted&&userAgreePrivacy&&hiddenInfoCompleted}}" showLevel="{{showLevel}}" userName="{{userInfo.nickName}}" userNameColor="{{component.userNameColor}}" userAgreePrivacy="{{userAgreePrivacy}}" wx:if="{{rmId==='b39-1'}}"></f>
+            </block>
+            <block wx:elif="{{component.type==='edu_services'&&userAgreePrivacy}}">
+                <g appointments="{{appointments}}" canShowMomentsFlag="{{canShowMomentsFlag}}" iconMode="{{component.iconMode}}" isReadWorkset="{{isReadWorkset}}" isYzEdu="{{isYzEdu}}" mode="{{component.mode}}" momentsName="{{momentsName}}" noViewNum="{{noViewNum}}" reviewToReadNum="{{reviewToReadNum}}" rmId="{{rmId}}" services="{{component.plugins}}" waitRewardCount="{{waitRewardCount}}" wx:if="{{rmId==='b39-1'}}"></g>
+            </block>
+            <block wx:elif="{{component.type==='uc_image_ad'&&component.images.length>0}}">
+                <h bind:contactback="handleContactBack" bind:imageChange="handleImageChange" bind:jumpToLink="jumpToLink" images="{{component.images}}" rmId="{{rmId}}" template="{{component.template}}" wx:if="{{rmId==='b39-1'}}"></h>
+            </block>
+            <block wx:elif="{{component.type==='uc_stats'}}">
+                <i balance="{{stats.balance}}" bind:bindGetUserInfo="onGetUserInfo" bind:statsItemClicked="statsItemClicked" cards="{{stats.cards}}" coupons="{{stats.coupons}}" isNotValid="{{isNotValid}}" links="{{baseLinks}}" points="{{stats.points}}" rmId="{{rmId}}" showCardDot="{{stats.showCardDot}}" showCouponDot="{{stats.showCouponDot}}" statsList="{{statsList}}" statsNames="{{statsNames}}" statsShowInfo="{{statsShowInfo}}" userAgreePrivacy="{{userAgreePrivacy}}" wx:if="{{rmId==='b39-1'}}"></i>
+            </block>
+            <block wx:elif="{{component.type==='uc_benefit'}}">
+                <j benefitReminds="{{benefitReminds}}" rmId="{{rmId}}" wx:if="{{rmId==='b39-1'}}"></j>
+            </block>
+            <block wx:elif="{{component.type==='uc_order'}}">
+                <k bind:bindGetUserInfo="onGetUserInfo" bind:pluginItemClicked="onPluginItemClicked" confirm="{{orders.confirm}}" evaluate="{{orders.evaluate}}" feedback="{{orders.feedback}}" isNotValid="{{isNotValid}}" isPureWscSingleStore="{{isPureWscSingleStore}}" links="{{orderLinks}}" paid="{{orders.paid}}" promptOrderEvaluation="{{promptOrderEvaluation}}" promptOrderPay="{{promptOrderPay}}" rmId="{{rmId}}" sent="{{orders.sent}}" toPay="{{orders.toPay}}" userAgreePrivacy="{{userAgreePrivacy}}" wx:if="{{rmId==='b39-1'}}"></k>
+            </block>
+            <block wx:elif="{{component.type==='uc_widgets'}}">
+                <l bind:bindGetUserInfo="onGetUserInfo" bind:pluginItemClicked="onPluginItemClicked" iconMode="{{component.iconMode}}" isNotValid="{{isNotValid}}" links="{{pluginLinks}}" mode="{{component.mode}}" plugins="{{plugins}}" rmId="{{rmId}}" userAgreePrivacy="{{userAgreePrivacy}}" values="{{pluginValues}}" wx:if="{{rmId==='b39-1'}}"></l>
+            </block>
+            <block wx:elif="{{component.type==='uc_introduction'}}">
+                <m introduction="{{introduction}}" rmId="{{rmId}}" wx:if="{{rmId==='b39-1'}}"></m>
+            </block>
+            <block wx:elif="{{component.type==='uc_flow_entrance'}}">
+                <n rmId="{{rmId}}" wx:if="{{rmId==='b39-1'}}"></n>
+            </block>
+        </block>
+        <r rmId="b39-5" wx:if="{{rmId==='b39-1'}}"></r>
+        <block wx:if="{{showActivatePop}}">
+            <o benefitcard="{{benefitcard}}" rmId="{{rmId}}" wx:if="{{rmId==='b39-1'}}"></o>
+        </block>
+        <b cpsConfigKey="cps_goods_recommend_usercenter"></b>
+        <s rmId="b39-11" wx:if="{{rmId==='b39-1'}}"></s>
+    </view>
+    <q rmId="b39-4" wx:if="{{rmId==='b39-1'}}"></q>
+</view>
+<view bind:tap="onProtocolInitListen" class="user-center-rivacy-agreement-page" wx:if="{{showUserAgreeMask}}"></view>
+<d bind:onProtocolInitListen="onProtocolInitListen" noAutoAuth="{{true}}" zIndex="{{99999}}"></d>
+<c forceShow="{{true}}"></c>

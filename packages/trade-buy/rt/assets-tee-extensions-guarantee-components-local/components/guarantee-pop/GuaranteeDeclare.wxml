@@ -1,0 +1,20 @@
+<a bind:_init="_tic" bind:close="_p" closeIcon="arrow-left" closeIconPosition="top-left" closeable="{{true}}" data-t="{{ close:{en:'onClose'} }}" position="bottom" round="{{true}}" show="{{value}}" zIndex="{{zIndex}}">
+    <view class="guarantee-declare" wx:if="{{value}}">
+        <view class="guarantee-declare__container" wx:if="{{data}}">
+            <view class="guarantee-declare__title">{{data.title}}</view>
+            <view class="guarantee-declare__content">
+                <view wx:for="{{data.content}}" wx:for-item="c" wx:key="index">
+                    <view class="guarantee-declare__sub-title" wx:if="{{c.subTitle}}"> {{c.subTitle}} </view>
+                    <view class="guarantee-declare__text {{c.textAlignRight?'textAlignRight':''}}">
+                        <block wx:for="{{c.text}}" wx:for-index="rindex" wx:for-item="row">
+                            <view class="text-inline {{row.isBold?'bold':''}}" style="display: inline" wx:if="{{row.isSpanTag}}">{{row.content}}</view>
+                            <image class="tee-image" lazyLoad="true" src="{{row.content}}" style="{{row.style}}" wx:elif="{{row.isImageTag}}"></image>
+                            <view class="guarantee-declare__sub-category" wx:elif="{{row.isCategory}}">{{row.content}}</view>
+                            <view class="{{row.isBold?'bold':''}}" wx:else>{{row.content}}</view>
+                        </block>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</a>

@@ -1,0 +1,13 @@
+<view class="punch-item {{mode==='card'?'punch-item--card':''}}">
+    <a externalClass="punch-item__item" slots="{{slots}}" statusList="{{statusList}}" supportsMultiLines="{{true}}" themeClass="{{themeClass}}" thumbnail="{{punch.coverUrl}}" thumbnailHeight="{{56}}" thumbnailWidth="{{98}}" title="{{punch.name}}" topCornerText="{{price?'￥'+price/100:''}}" url="{{url}}">
+        <view class="punch-item__tag {{punch.proceedStatus===2&&punch.status!==0?'punch-item__tag--green':''}}" slot="icon">{{tagText}}</view>
+    </a>
+    <view class="punch-item__footer" wx:if="{{mode==='card'}}">
+        <view bindtap="onMyPunchTap" class="punch-item__btn">
+            <image class="punch-item__btn-icon icon-punch" src="https://img01.yzcdn.cn/punch/image/icon-punch.png"></image>我的打卡</view>
+        <button class="punch-item__btn" data-alias="{{punch.alias}}" data-punch="1" data-title="{{punch.name}}" hoverClass="none" openType="share" plain="{{true}}">
+            <image class="punch-item__btn-icon icon-invite" src="https://img01.yzcdn.cn/punch/image/icon-invite.png"></image>邀请好友</button>
+        <view bindtap="onIntroTap" class="punch-item__btn">
+            <image class="punch-item__btn-icon icon-intro" src="https://img01.yzcdn.cn/punch/image/icon-intro.png"></image>打卡介绍</view>
+    </view>
+</view>

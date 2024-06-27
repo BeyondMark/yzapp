@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "完善基本信息",
+  "navigationBarBackgroundColor": "#FFF",
+  "usingComponents": {
+    "a": "/components/znb-web-view/index",
+    "_": "../../../components/_/index"
+  }
+}

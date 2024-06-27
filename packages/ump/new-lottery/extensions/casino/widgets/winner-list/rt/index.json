@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../components/winner/index",
+    "b": "../../../components/list-container/index",
+    "_": "../../../../../../../../components/_/index"
+  }
+}

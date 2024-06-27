@@ -1,0 +1,7 @@
+.extra-tip {
+  text-align: center;
+  font-size: 14px;
+  color: #bbb;
+  height: 66px;
+  box-sizing: border-box;
+}

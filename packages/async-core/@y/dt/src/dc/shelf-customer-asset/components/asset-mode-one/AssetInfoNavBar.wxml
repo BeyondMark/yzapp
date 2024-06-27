@@ -1,0 +1,13 @@
+<view class="asset-info-nav">
+    <view catch:tap="_p" class="info-container" data-t="{{ tap:{ en:'handleClick',et:'stop',args:[infoSetting.type] } }}">
+        <view class="asset-name">      我的{{titleMap[infoSetting.type]}} <view class="ml-4" style="color:{{numberColor}}" wx:if="{{infoSetting.type==='integral'||infoSetting.type==='setPoint'}}"> {{itemValue}} </view>
+            <view class="t-text" wx:if="{{infoSetting.type==='coupon'||infoSetting.type==='rights'}}">        (<view class="t-text" style="color:{{numberColor}}">{{itemValue}}</view>)
+      </view>
+            <view class="ml-4 t-text" style="color:{{numberColor}}" wx:if="{{infoSetting.type==='balance'}}">￥{{itemValue}}</view>
+        </view>
+        <view class="asset-desc" wx:if="{{infoSetting.description}}">
+            <view class="align-middle t-text">{{infoSetting.description}}</view>
+            <a bind:_init="_tic" customClass="align-middle" name="arrow" size="14px"></a>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,1 @@
+<a bind:_init="_tic" bind:tap="_p" border="{{false}}" center="{{true}}" customClass="c8c4ec" data-t="{{ tap:{en:'onClickTime'} }}" isLink="{{isLink}}" title="提货时间" titleStyle="flex-grow: 0;flex-shrink: 0;min-width: 60px;" titleWidth="70px" value="{{value}}" valueClass="{{valueClass}}" wx:if="{{show}}"></a>

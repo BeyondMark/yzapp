@@ -1,0 +1,19 @@
+.c5074e {
+  position: relative;
+  box-sizing: border-box;
+  padding: 8px 10px 8px 0;
+  color: #fff;
+}
+.ee902 {
+  font-size: 16px;
+  height: 40px;
+  line-height: 40px;
+  text-align: right;
+}
+.c22ae {
+  width: 132px;
+  background: url(https://img01.yzcdn.cn/upload_files/2021/05/11/FgPvAcpo9rM6wn1PgHPmFqUoWjKB.png)
+    no-repeat;
+  background-size: cover;
+  color: var(--general);
+}

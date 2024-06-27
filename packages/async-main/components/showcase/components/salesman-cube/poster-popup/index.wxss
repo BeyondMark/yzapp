@@ -1,0 +1,48 @@
+.poster-container,
+.weappcode-container {
+  text-align: center;
+}
+.poster-container__body,
+.weappcode-container__body {
+  position: relative;
+  margin-bottom: 24px;
+  text-align: center;
+  width: 260px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+.poster-container__body-text,
+.weappcode-container__body-text {
+  margin-top: 12px;
+  line-height: 16px;
+  font-size: 12px;
+  color: #969799;
+}
+.poster-container__button,
+.weappcode-container__button {
+  margin-top: 24px;
+}
+.poster-container--close,
+.weappcode-container--close {
+  position: absolute !important;
+  top: -17px;
+  right: 0;
+  font-size: 24px !important;
+  color: #fff;
+}
+.weappcode-container__body image {
+  width: 236px;
+  height: 236px;
+  padding: 17px 12px 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(50, 50, 51, 0.1);
+}
+.poster-container__body {
+  padding: 16px;
+}
+.poster-container__body image {
+  width: 260px;
+  height: 396px;
+  vertical-align: bottom;
+}

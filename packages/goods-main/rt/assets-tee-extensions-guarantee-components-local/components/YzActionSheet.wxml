@@ -1,0 +1,14 @@
+<a bind:_init="_tic" bind:close="_p" closeable="{{closeable}}" customClass="{{['yz_action-sheet',popupClass]}}" customStyle="{{customStyle}}" data-t="{{ close:{en:'onClose'} }}" position="bottom" safeAreaInsetBottom="{{true}}" show="{{show}}" wx:if="{{initialShow}}">
+    <view class="yz_action-sheet__title">
+        <view class="t-text" wx:if="{{title}}">{{title}}</view>
+        <slot name="title" wx:else></slot>
+        <b bind:_init="_tic" bind:tap="_p" class="yz_action-sheet__close" data-t="{{ tap:{en:'onClose'} }}" name="cross" wx:if="{{showClose}}"></b>
+    </view>
+    <view class="{{'yz_action-sheet__body'}} {{scroll?'yz_action-sheet__body--scroll':''}}" style="background-color: #fff">
+        <slot></slot>
+    </view>
+    <view class="yz_action-sheet__bottom" wx:if="{{buttonText||useBottomSlot}}">
+        <slot name="bottom" wx:if="{{useBottomSlot}}"></slot>
+        <view bind:tap="_p" class="yz_action-sheet__button" data-t="{{ tap:{en:'onConfirm'} }}" style="{{themeStyle}}"> {{buttonText}} </view>
+    </view>
+</a>

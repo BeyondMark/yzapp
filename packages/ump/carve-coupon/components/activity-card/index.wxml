@@ -1,0 +1,18 @@
+<view class="activity-card {{activityCardInfo.cardClass}}">
+    <text class="money-icon"></text>
+    <image class="fail-icon" src="{{failIcon}}" wx:if="{{activityCardInfo.isFail}}"></image>
+    <slot name="top"></slot>
+    <view class="activity-title" wx:if="{{!activityCardInfo.showNumTitle}}">{{activityCardInfo.title}}</view>
+    <view class="activity-title" wx:else>仅差<text class="strong">{{remainNum}}</text>人，即可瓜分<text class="strong">{{activity.totalMoney}}</text>元优惠红包</view>
+    <view class="activity-money" wx:if="{{activityCardInfo.showMoney}}">
+        <text class="strong">{{currentUserMoney||activity.totalMoney}}</text>元</view>
+    <view class="activity-desc" wx:if="{{activityCardInfo.desc}}">{{activityCardInfo.desc}}</view>
+    <view class="time" wx:if="{{countDown&&activityCardInfo.showTime}}">距结束 {{countDown}}</view>
+    <slot name="bottom"></slot>
+    <block wx:if="{{activityCardInfo.btns.length}}">
+        <view wx:for="{{activityCardInfo.btns}}" wx:for-item="btn" wx:key="{{ btn.key }}">
+            <a bind:next="handleBtnClick" btnClass="btn {{btn.btnClass}}" data-item="{{btn}}" scene="share_ticket" subscribeScene="splitcoupon" wx:if="{{btn.type==='FETCH_NEW'||btn.type==='FETCH_OLD'}}">{{btn.text}}</a>
+            <button bind:tap="handleBtnClick" class="btn-text btn {{btn.btnClass}}" data-item="{{btn}}" openType="{{btn.type==='SHARE'?'share':''}}" wx:else>{{btn.text}}</button>
+        </view>
+    </block>
+</view>

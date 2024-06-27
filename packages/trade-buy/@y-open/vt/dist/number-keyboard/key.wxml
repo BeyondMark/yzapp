@@ -1,0 +1,8 @@
+<view bind:tap="_p" data-t="{{ tap:{en:'onClick'} }}">
+    <view class="be30a {{classes.key}}" style="{{customStyle}}">
+        <a bind:_init="_tic" customClass="c724f0" wx:if="{{loading}}"></a>
+        <image class="c62abd bd231" lazyLoad="true" mode="aspectFit" src="https://img01.yzcdn.cn/public_files/2021/01/18/29270d14b3823734f8b10c52d9f4541c.png" wx:elif="{{type==='delete'&&!text}}"></image>
+        <image class="c3b498 bd231" lazyLoad="true" mode="aspectFit" src="https://img01.yzcdn.cn/public_files/2021/01/18/ee822ccad0925c9da9483da7392f3bb4.png" wx:elif="{{type==='extra'&&!text}}"></image>
+        <block wx:else>{{text}}</block>
+    </view>
+</view>

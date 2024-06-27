@@ -1,0 +1,11 @@
+<view class="more-btn" style="{{wrapStyle}}">
+    <view bind:tap="_p" class="{{'more-btn-text'}} {{opt.corner}}" data-t="{{ tap:{en:'handleClick'} }}" style="{{itemStyle}}" wx:if="{{opt.isSwipe}}">
+        <b bind:_init="_tic" wx:if="{{opt.loading}}"></b>
+        <view class="{{opt.corner}}" wx:else>
+            <view class="t-text">{{opt.text}}</view>
+            <c bind:_init="_tic" name="arrow" size="10px"></c>
+        </view>
+    </view>
+    <a bind:_init="_tic" bind:tap="_p" block="{{true}}" data-t="{{ tap:{en:'handleClick'} }}" type="default" wx:else>    查看更多
+  </a>
+</view>

@@ -1,0 +1,110 @@
+.close-icon {
+  top: 12px !important;
+}
+.popup-safe-bottom {
+  padding-bottom: 34px;
+}
+.coupon-popup {
+  width: 100%;
+  min-height: 50vh;
+  max-height: 80vh !important;
+  border-top-left-radius: var(--theme-radius-dialog, 20px);
+  border-top-right-radius: var(--theme-radius-dialog, 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.coupon-popup__title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #323233;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  position: relative;
+}
+.coupon-popup__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.coupon-popup__content {
+  padding: 16px 16px 32px;
+  overflow: scroll;
+  font-size: 13px;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  z-index: 1;
+  position: relative;
+  flex: 1;
+}
+.coupon-popup__content > p {
+  margin-bottom: 15px;
+}
+.coupon-popup .cap-couponbox__block-des {
+  margin: 0 8px !important;
+}
+.coupon-popup .coupon-addon-extra {
+  width: 100%;
+}
+.coupon-popup .coupon-addon-extra .t-checkbox__icon .t-icon {
+  width: 16px;
+  height: 16px;
+  background: #fff;
+}
+.coupon-popup .coupon-addon-extra .extra-action {
+  border-radius: 0 0 4px 0;
+  position: absolute;
+  right: -8px;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-family: PingFangSC-Regular, sans-serif;
+  font-size: 12px;
+  width: 68px;
+  justify-content: center;
+  padding-right: 5px;
+}
+.coupon-popup .coupon-addon-extra .cart-item-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.coupon-popup .coupon-addon-extra .cart-item-list .cart-item {
+  width: 56px;
+  height: 84px;
+  padding-right: 8px;
+  position: relative;
+}
+.coupon-popup .coupon-addon-extra .cart-item-list .item-thumb {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--theme-radius-card, 4px);
+}
+.coupon-popup .coupon-addon-extra .cart-item-list .item-price {
+  font-family: PingFangSC-Medium, sans-serif;
+  font-size: 10px;
+  color: #323233;
+  height: 14px;
+  text-align: center;
+}
+.coupon-popup .coupon-addon-extra .cart-item-list .item-num {
+  font-family: PingFangSC-Regular, sans-serif;
+  font-size: 10px;
+  color: #969799;
+  height: 14px;
+  text-align: center;
+}
+.coupon-popup .coupon-addon-extra .cart-item-list .item-check {
+  position: absolute;
+  left: 2px;
+  top: 2px;
+}

@@ -1,0 +1,10 @@
+<view class="t-tree-select" style="{{styles.root}}">
+    <scroll-view class="t-tree-select__nav" scrollY="{{true}}">
+        <view bind:tap="_p" class="t-ellipsis t-tree-select__nitem {{mainItemClass}} {{mainActiveIndex===index?styles.mainActive:''}} {{item.disabled?styles.mainDisabled:''}}" data-t="{{ tap:{ en:'onClickNav',args:[index] } }}" wx:for="{{items}}" wx:key="index"> {{item.text}} </view>
+    </scroll-view>
+    <scroll-view class="t-tree-select__content" scrollY="{{true}}">
+        <slot name="content"></slot>
+        <view bind:tap="_p" class="t-ellipsis t-hairline--bottom t-tree-select__item {{contentItemClass}} {{item.active?styles.contentActive:''}} {{item.disabled?styles.contentDisabled:''}}" data-t="{{ tap:{ en:'onSelectItem',args:[item] } }}" wx:for="{{subItems}}" wx:key="id"> {{item.text}} <a bind:_init="_tic" class="t-tree-select__selected" name="checked" size="16px" wx:if="{{item.active}}"></a>
+        </view>
+    </scroll-view>
+</view>

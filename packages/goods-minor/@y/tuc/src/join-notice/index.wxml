@@ -1,0 +1,7 @@
+<view>
+    <a bind:_init="_tic" bind:close="_p" closeable="{{true}}" customClass="ab53e" data-t="{{ close:{en:'onClose'} }}" show="{{show}}">
+        <c bind:_init="_tic" bind:onConfirm="_p" data-t="{{ onConfirm:{en:'handleSuccessConfirm'} }}" giftBag="{{giftBag}}" wx:if="{{joinSuccess}}"></c>
+        <d bind:_init="_tic" levelGapInfo="{{levelGapInfo}}" missionList="{{missionList}}" mode="{{levelGroupMode}}" wx:if="{{!joinSuccess}}"></d>
+    </a>
+    <b bind:_init="_tic" data-ref="van-toast"></b>
+</view>

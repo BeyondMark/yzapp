@@ -1,0 +1,32 @@
+<view class="c63ea0 {{customClass}}">
+    <view class="{{'c85aeb'}} {{centered?'e00c7':''}}">
+        <view bind:tap="_p" class="c3e59" data-t="{{ tap:{en:'onClickThumb'} }}">
+            <image class="c8c5b9 {{thumbClass}} bd231" lazyLoad="{{lazyLoad}}" mode="{{thumbMode}}" src="{{thumb}}" wx:if="{{thumb}}"></image>
+            <slot name="thumb"></slot>
+            <a bind:_init="_tic" class="d2a57" mark="{{true}}" type="danger" wx:if="{{tag}}"> {{tag}} </a>
+        </view>
+        <view class="{{'f3b91'}} {{centered?'c62a20':''}}">
+            <view>
+                <view class="c3ac7f {{titleClass}}" wx:if="{{title}}"> {{title}} </view>
+                <slot name="title" wx:else></slot>
+                <view class="d6409 {{descClass}}" wx:if="{{desc}}"> {{desc}} </view>
+                <slot name="desc" wx:else></slot>
+                <slot name="tags"></slot>
+            </view>
+            <view class="c5abe8">
+                <slot name="price-top"></slot>
+                <view class="c7489a {{priceClass}}" wx:if="{{price||price===0}}"> {{currency}} <view class="c22382 c495dd">{{integerStr}}</view>
+                    <view class="c0c6c4 c495dd">{{decimalStr}}</view>
+                </view>
+                <slot name="price" wx:else></slot>
+                <view class="c260c7 {{originPriceClass}}" wx:if="{{originPrice||originPrice===0}}">{{currency}} {{originPrice}}</view>
+                <view class="c558a {{numClass}}" wx:if="{{num}}">x {{num}}</view>
+                <slot name="num" wx:else></slot>
+                <slot name="bottom"></slot>
+            </view>
+        </view>
+    </view>
+    <view class="c9c823">
+        <slot name="footer"></slot>
+    </view>
+</view>

@@ -1,0 +1,8 @@
+<a bind:_init="_tic" customClass="pt-tag pt-list" hairline="{{themeTag.plain}}" plain="{{themeTag.plain}}">
+    <view class="t-text" wx:if="{{item.title}}">
+        <view class="l_guide t-text" wx:if="{{item.guide}}">{{item.title}}</view>
+        <view class="l_coupon t-text" wx:else>{{item.title}}</view>
+        <view class="{{true?'l_dashed':''}} {{item.guide?'l_dashed_vip':''}} t-text" style="background:{{dashStyle}}"></view>
+    </view>
+    <view class="{{item.title?'right_space':''}} t-text">{{item.cont}}</view>
+</a>

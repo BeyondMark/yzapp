@@ -1,0 +1,3 @@
+<view class="seller-icon" style="{{iconStyle}}">
+    <image class="earn-icon tee-image" lazyLoad="true" src="{{iconFullUrl}}"></image>
+</view>

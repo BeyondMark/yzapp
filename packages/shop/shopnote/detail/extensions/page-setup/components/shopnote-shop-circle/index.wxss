@@ -1,0 +1,6 @@
+.shopnote-shop-circle {
+  padding: 0 15px;
+}
+.shopnote-shop-circle__content--goods {
+  margin-top: 15px;
+}

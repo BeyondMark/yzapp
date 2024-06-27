@@ -1,0 +1,3 @@
+<view bind:tap="_p" class="{{'c31113'}} {{isChoosed?'dd215':''}} {{disabled?'c28fea':''}}" data-t="{{ tap:{en:'onSelect'} }}">
+    <view class="c8954a c89585"> {{skuValue.name}} </view>
+</view>

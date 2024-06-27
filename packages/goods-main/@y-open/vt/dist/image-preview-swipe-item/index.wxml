@@ -1,0 +1,4 @@
+<a bind:_init="_tic" bind:tap="_p" bind:touchcancel="_p" bind:touchend="_p" bind:touchmove="_p" bind:touchstart="_p" class="{{classes.root}}" customClass="{{classes.root}}" customStyle="{{itemStyle}}" data-t="{{ tap:{en:'click'},touchstart:{en:'onTouchStart'},touchmove:{en:'onTouchMove'},touchend:{en:'onTouchEnd'},touchcancel:{en:'onTouchEnd'} }}">
+    <image bind:load="_p" class="{{classes.image}} bd231" data-t="{{ load:{en:'onLoad'} }}" lazyLoad="true" mode="aspectFit" showMenuByLongpress="{{showMenuByLongpress}}" src="{{item.url||src}}" style="{{imageStyle}}" wx:if="{{item.type==='image'||src}}"></image>
+    <b bind:_init="_tic" data-ref="videoPlayer" poster="{{item.poster}}" src="{{item.url}}" style="{{videoStyle}}" wx:if="{{innerShow&&item.type==='video'}}"></b>
+</a>

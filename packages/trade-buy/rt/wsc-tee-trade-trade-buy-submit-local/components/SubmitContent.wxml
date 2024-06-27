@@ -1,0 +1,26 @@
+<view class="new-sb__content">
+    <view class="d5045">
+        <view class="d5045__label c89585">{{priceLabel}}</view>
+        <view class="c610ff" style="color:{{themeColors.icon}}">
+            <block wx:if="{{pointStr}}">
+                <view class="c99688 c89585">{{pointStr[0]}}</view>{{pointStr[1]}} +
+          <view class="c99688 c89585"> {{formatPriceArray[0]}}.</view>
+                <view class="ee7d7 c89585">{{formatPriceArray[1]}}</view>元
+        </block>
+            <block wx:else>          ¥<view class="c99688 c7726c c89585">{{formatPriceArray[0]}}.</view>
+                <view class="c89585">{{formatPriceArray[1]}}</view>
+            </block>
+        </view>
+    </view>
+    <view class="a6d31" style="color:{{themeColors.general}}" wx:if="{{payRechargeInfo&&payRechargeInfo.tips}}"> {{payRechargeInfo.tips}}</view>
+    <block wx:else>
+        <view class="c7a76b" wx:if="{{showPriorUseSummary}}">
+            <view class="c89585">收货满意后再付款 ¥ {{orderFinalPrice}}</view>
+        </view>
+        <view class="c7a76b" wx:if="{{!showPriorUseSummary&&(showPostage||showDisplayCardPrice)}}">
+            <view class="c89585" wx:if="{{showPostage}}">含运费¥{{payPostage}}</view>
+            <view class="c89585" wx:if="{{showComma}}">，</view>
+            <view class="c89585" wx:if="{{showDisplayCardPrice}}">付费卡¥{{displayPrice}}</view>
+        </view>
+    </block>
+</view>

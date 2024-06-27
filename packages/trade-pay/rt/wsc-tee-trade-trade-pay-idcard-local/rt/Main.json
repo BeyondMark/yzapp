@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./IdcardPopup",
+    "b": "/packages/async-tee/@y-open/vt/native/weapp/field/index/index",
+    "c": "/packages/async-tee/@y-open/vt/native/weapp/dialog/index/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_", "c": "_" }
+}

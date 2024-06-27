@@ -1,0 +1,19 @@
+<a bind:close="onClose" closeOnClickOverlay="{{!spp}}" closeable="{{B&&!showAll}}" position="bottom" round="{{B}}" show="{{show}}" zIndex="{{110}}">
+    <view class="container {{B?'b':''}}">
+        <block wx:if="{{cashierType==='A'}}">
+            <e bind:click="onChannelClick" channel="{{channel.payChannel}}" color="{{channel.color}}" desc="{{channel.availableDesc}}" disabled="{{!channel.available}}" emphasize="{{channel.payChannelName==='微信支付'}}" hairline="{{index!==0}}" loading="{{channel.loading}}" name="{{channel.payChannelName}}" r="{{channel.recommend}}" saleRight="{{channel.saleRight&&channel.saleRight.rightContent}}" wx:for="{{exposedPayChannels}}" wx:for-item="channel" wx:key="payChannel"></e>
+            <view bind:tap="toggleMoreChannels" class="show-more" wx:if="{{showMoreChannelsToggle}}">更多支付</view>
+        </block>
+        <block wx:else>
+            <view class="header">
+                <c bind:click="onBack" class="header-icon header-icon--left" name="arrow-left" size="22" wx:if="{{showAll}}"></c>
+                <text class="header-title">{{title}}</text>
+            </view>
+            <g a="{{a}}" bind:change="onChannelChange" bind:navigate="onNavigate" bind:pay="onPay" bind:r-click="onRecommendClick" bind:show-all="doShowAll" class="home {{showAll?'':'show'}}" i="{{i}}" info="{{info}}" pi="{{pi}}" r="{{r}}" sg="{{sg}}" style="height: calc(100% - 44px)" tc="{{tc}}"></g>
+            <h a="{{a}}" bind:change="onChannelChange" channels="{{payChannels}}" class="all {{showAll?'show':''}}" i="{{i}}" loading="{{!allFetched}}" style="height: calc(100% - 44px)" tc="{{tc}}"></h>
+        </block>
+    </view>
+</a>
+<d bind:close="onPayPassClose" bind:full="onPayPassCheck" bind:update="onPayPassUpdate" cashierType="{{cashierType}}" overlay="{{!show}}" password="{{paypass}}" show="{{spp}}" zIndex="{{120}}"></d>
+<b bind:cancel="onDialogCancel" bind:close="onDialogClose" bind:confirm="onDialogConfirm" cancelButtonText="{{dialogOptions.cancelButtonText}}" confirmButtonText="{{dialogOptions.confirmButtonText}}" message="{{dialogOptions.message}}" messageAlign="center" overlay="{{true}}" show="{{showDialog}}" showCancelButton="{{dialogOptions.showCancelButton}}" zIndex="{{130}}"></b>
+<f bind:change="onPayLoginChange" bind:close="onPayLoginClose" bind:forget="onPayLoginForget" bind:submit="onPayLoginSubmit" login="{{paylogin}}" mobile="{{mobile}}" show="{{sli}}" zIndex="{{120}}"></f>

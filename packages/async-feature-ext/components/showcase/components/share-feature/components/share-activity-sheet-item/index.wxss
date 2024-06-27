@@ -1,0 +1,36 @@
+.share-activity {
+  padding: 16px;
+}
+.share-activity__main {
+  display: flex;
+  align-items: center;
+}
+.share-activity__main-text {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 4px;
+  font-size: 16px;
+  color: #323233;
+  text-align: left;
+}
+.share-activity__text--red {
+  color: #ee0a24;
+  font-size: 20px;
+  margin: 0 2px;
+  font-weight: 500;
+}
+.share-activity__action {
+  display: flex;
+  align-items: center;
+  padding-left: 22px;
+  padding-top: 8px;
+  font-size: 14px;
+}
+.share-activity__action-desc {
+  color: #969799;
+  margin-right: 4px;
+}
+.share-activity__action-login {
+  color: #576b95;
+  margin-right: 4px;
+}

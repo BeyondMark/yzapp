@@ -1,0 +1,9 @@
+<view class="zan-pay-skeleton-info">
+    <a bind:_init="_tic" class="zan-pay-skeleton-info__notice-bar" title="{{true}}" titleWidth="100%"></a>
+    <a bind:_init="_tic" class="zan-pay-skeleton-info__pay-info" title="{{true}}" titleWidth="100%"></a>
+    <view class="zan-pay-skeleton-info__pay-channel">
+        <a bind:_init="_tic" class="zan-pay-skeleton-info__pay-channel-key" title="{{true}}" titleWidth="100%"></a>
+        <a bind:_init="_tic" class="zan-pay-skeleton-info__pay-channel-value" title="{{true}}" titleWidth="100%"></a>
+    </view>
+    <a bind:_init="_tic" class="zan-pay-skeleton-info__submit" round="{{true}}" title="{{true}}" titleWidth="100%"></a>
+</view>

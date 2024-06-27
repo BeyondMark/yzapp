@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./Search",
+    "b": "/@y-open/vt/dist/button/index.weapp",
+    "c": "/@y-open/vt/dist/popup/index.weapp",
+    "d": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "e": "/packages/async-tee/@y-open/vt/native/weapp/loading/index/index",
+    "f": "/packages/async-tee/@y-open/vt/dist/picker/index",
+    "g": "./../components/AuthDialog",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "d": "_", "e": "_", "f": "_" }
+}

@@ -1,0 +1,19 @@
+<view class="sub-item-warp">
+    <view wx:if="{{item.navType===typeMap.SHARE}}">
+        <button bind:contact="_p" bind:tap="_p" businessId="{{im.businessId}}" class="{{'item'}} {{'sub'}} {{'share-item'}} {{item.independent?'independent':''}} {{lineOnlyIndependent?'line-only-independent':''}} {{shareBlockStyle}}" data-nav-type="{{item.navType}}" data-t="{{ tap:{en:'handleNavTap'},contact:{en:'onContactBack'} }}" hoverClass="none" id="newButton" openType="{{forbidShare?'':'share'}}" sessionFrom="{{im.sourceParam}}" style="{{itemBgStyle}}">
+            <view class="{{shareCornerClass}}" wx:if="{{hasShareActivity}}">领</view>
+        </button>
+        <view class="share-block-bg" style="{{subBgColorStyle}}">
+            <b bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b1-5'||rmId==='b7-25'||rmId==='b9-6'||rmId==='b0-5'||rmId==='b10-9'}}"></b>
+        </view>
+    </view>
+    <block wx:elif="{{item.navType===typeMap.CONTACT}}">
+        <a bind:_init="_tic" bind:contact="_p" bind:tap="_p" businessId="{{im.businessId}}" class="{{'asd'}} {{'item'}} {{'sub'}} {{item.independent?'independent':''}} {{lineOnlyIndependent?'line-only-independent':''}}" data-nav-type="{{item.navType}}" data-t="{{ tap:{en:'handleNavTap'},contact:{en:'onContactBack'} }}" hoverClass="none" opacityFull="{{true}}" openType="contact" sessionFrom="{{im.sourceParam}}" style="{{itemBgStyle}}" wx:if="{{rmId==='b1-5'||rmId==='b7-25'||rmId==='b9-6'||rmId==='b0-5'||rmId==='b10-9'}}"></a>
+    </block>
+    <view bind:tap="_p" class="{{'item'}} {{'sub'}} {{item.independent?'independent':''}} {{lineOnlyIndependent?'line-only-independent':''}} {{item.hasBadge?'has-badge':''}} {{item.customClass||''}}" data-nav-type="{{item.navType}}" data-t="{{ tap:{en:'handleNavTap'} }}" style="{{itemBgStyle}}" wx:else>
+        <view class="tag" wx:if="{{item.tag}}">{{item.tag}}</view>
+    </view>
+    <view class="{{'sub'}} {{item.independent?'independent':''}} {{lineOnlyIndependent?'line-only-independent':''}} {{item.hasBadge?'has-badge':''}} {{item.customClass||''}}" style="{{subBgColorStyle}}">
+        <b bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b1-5'||rmId==='b7-25'||rmId==='b9-6'||rmId==='b0-5'||rmId==='b10-9'}}"></b>
+    </view>
+</view>

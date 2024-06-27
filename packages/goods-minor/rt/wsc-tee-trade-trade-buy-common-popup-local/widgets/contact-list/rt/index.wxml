@@ -1,0 +1,8 @@
+<a bind:_init="_tic" bind:close="_p" bind:confirm="_p" btnTextColor="var(--main-text, #fff)" buttonText="{{addText}}" closeOnConfirm="{{false}}" color="var(--main-bg, #323233)" data-t="{{ close:{en:'onClose'},confirm:{en:'onAdd'} }}" disablePadding="{{true}}" overlayStyle="{{overlayStyle}}" popupClass="d467a" show="{{show}}" title="{{title||'选择提货人'}}" wx:if="{{initialShow}}">
+    <view class="c7d685">
+        <b bind:_init="_tic" bind:tap="_p" border="{{false}}" center="{{true}}" customClass="c7193a" data-t="{{ tap:{ en:'onSelect',args:[item] } }}" valueClass="b75aa" wx:for="{{list}}" wx:key="id">
+            <c bind:_init="_tic" catch:tap="_p" customClass="c362c6" data-t="{{ tap:{ en:'onEdit',et:'stop',args:[item] } }}" name="edit" slot="icon"></c> {{item.userName}}，{{item.telephone}} <e bind:_init="_tic" class="c3e7e8" color="var(--tag-bg, #f2f2ff)" customClass="c64758" hairline="{{themeTag.plain}}" plain="{{themeTag.plain}}" textColor="var(--tag-text, #fff)" wx:if="{{item.isDefault&&defaultTagText}}"> {{defaultTagText}} </e>
+            <d bind:_init="_tic" checkedColor="var(--main-bg, #323233)" customClass="aeeb6" iconSize="16px" name="{{item.id}}" slot="right-icon" value="{{selectedId}}"></d>
+        </b>
+    </view>
+</a>

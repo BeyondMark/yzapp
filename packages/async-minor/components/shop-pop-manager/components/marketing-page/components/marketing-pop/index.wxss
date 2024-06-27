@@ -1,0 +1,76 @@
+@font-face {
+  font-family: venue-bit;
+  src: url(https://file.yzcdn.cn/upload_files/yz-file/2021/12/27/Fpk_81AC49surnvhyRV_TS-5kLTA.ttf);
+}
+.marketing-container {
+  padding: 48px 0;
+  width: 320px;
+  max-width: 320px;
+  background-color: transparent !important;
+  z-index: 200;
+}
+.marketing-icon-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  background-image: url(https://img01.yzcdn.cn/public_files/2018/05/16/c29879b23772965a3af7f5689ee61f58.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.marketing-wrap {
+  position: relative;
+  margin: 0 auto;
+  padding: 15px 0 10px;
+  width: 100%;
+}
+.marketing-content {
+  position: absolute;
+  top: 0;
+  right: 8px;
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+}
+.marketing-title {
+  font-family: venue-bit;
+  margin: 45px 0 0 10px;
+  font-size: 60px;
+}
+.marketing-subTitle,
+.marketing-title {
+  text-align: center;
+  color: #fff;
+  word-break: break-word;
+}
+.marketing-subTitle {
+  display: inline-block;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  height: 24px;
+  line-height: 24px;
+  min-width: 200px;
+}
+.marketing-pop-btn {
+  height: 48px;
+  width: 220px;
+  position: absolute;
+  bottom: 64px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  animation: breath 0.6s linear infinite;
+}
+@keyframes breath {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}

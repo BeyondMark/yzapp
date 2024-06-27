@@ -1,0 +1,1 @@
+<web-view binderror="onError" bindload="onLoad" bindmessage="onPostMessage" src="{{completeSrc}}" wx:if="{{completeSrc}}"></web-view>

@@ -1,0 +1,39 @@
+<a class="{{activityEnd?'discount-packages__activity-end':''}} page-{{deviceType}}" fixedBottom="{{true}}" forbidCopyright="{{activityEnd}}" pageBgColor="{{activityEnd?'rgba(0 ,0, 0, .8)':'#f9f9f9'}}">
+    <block wx:if="{{!loading&&!activityEnd}}">
+        <view class="package" wx:for="{{packages}}" wx:for-index="key" wx:key="{{ key }}">
+            <h bind:change="onCheckedListChange" value="{{checkedList}}">
+                <j customClass="goods-list main-goods" wx:if="{{mainGoods}}">
+                    <image class="goods-list-checkbox__icon" slot="icon" src="https://img01.yzcdn.cn/public_files/2019/02/25/b262d4c8683fcae838a5a65152db0dbe.png"></image>
+                    <c bind:show-sku="handleShowSku" goods="{{mainGoods}}" goodsIndex="{{-1}}" isMatchPackage="{{isMatchPackage}}" packageIndex="{{0}}" slot="title" themeClass="{{themeClass}}"></c>
+                </j>
+                <k>
+                    <j bind:click="togglePackage" data-current-package="{{item}}" titleClass="package-title" valueClass="package-value" wx:if="{{packages.length>1}}">
+                        <g catch:tap="packageNoop" class="checkboxes-{{item.activity.idAlias}}" data-current-package="{{item}}" name="{{item.activity.idAlias}}" slot="icon" useIconSlot="{{true}}" value="{{item.checked}}">
+                            <image class="checkbox-icon" slot="icon" src="{{item.checked?icon.active:icon.normal}}"></image>
+                        </g>
+                        <view class="title" slot="title">
+                            <view class="package-tag">固定套餐</view>
+                            <view class="van-ellipsis">{{item.activity.title}}</view>
+                        </view>
+                        <text class="package-save-price">共节省￥{{item.savePrice}}</text>
+                    </j>
+                    <j bind:click="toggleGoods" customClass="goods-list" data-activity="{{item.activity}}" data-goods="{{goods}}" data-index="{{index}}" wx:for="{{item.goodsList}}" wx:for-item="goods" wx:key="{{ goods.id }}">
+                        <g catch:tap="noop" class="checkboxes-{{goods.id}} goods-checkbox" data-activity="{{item.activity}}" data-goods="{{goods}}" data-index="{{index}}" disabled="{{!goods.totalStock}}" name="{{goods.id}}" slot="icon" useIconSlot="{{goods.totalStock}}" value="{{goods.checked}}" wx:if="{{item.activity.type===1}}">
+                            <image class="checkbox-icon" slot="icon" src="{{goods.checked?icon.active:icon.normal}}"></image>
+                        </g>
+                        <c bind:show-sku="handleShowSku" goods="{{goods}}" goodsIndex="{{index}}" isMatchPackage="{{isMatchPackage}}" packageIndex="{{key}}" slot="title" themeClass="{{themeClass}}"></c>
+                    </j>
+                </k>
+            </h>
+        </view>
+        <b bind:go-pay="goPay" isMatchPackage="{{isMatchPackage}}" isStart="{{isStart}}" packagePrice="{{packagePrice}}" payGoodsList="{{payGoodsList}}" submitBarClass="submit-bar-wrapper" themeClass="{{themeClass}}"></b>
+    </block>
+    <view wx:if="{{activityEnd}}">
+        <image src="https://b.yzcdn.cn/v2/image/wap/ump/package_buy/dragon@2x.png"></image>
+        <view class="van-font-16 activity-end-text">哎呀，优惠套餐活动结束了</view>
+        <view bindtap="handleGoHomePage" class="activity-end-text activity-end-btn van-font-14">进店逛逛</view>
+    </view>
+    <i cube="{{[ ['share','tuwenPoster'] ]}}" needBindRelation="{{false}}"></i>
+</a>
+<e bind:buy="handlePickSkuFinish" bind:sku-close="handleCloseSku" bind:sku-selected="onSkuSelected" buyText="确定" extraData="{{skuExtraData}}" goods="{{skuData.goods}}" hideStock="{{true}}" quota="{{skuData.sku.quota}}" quotaUsed="{{skuData.sku.quota_used}}" show="{{showSku}}" showAddCartBtn="{{false}}" sku="{{skuData.sku}}" themeClass="{{themeClass}}" wx:if="{{showSku}}"></e>
+<f id="van-toast"></f>

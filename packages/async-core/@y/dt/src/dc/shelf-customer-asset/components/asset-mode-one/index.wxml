@@ -1,0 +1,25 @@
+<view class="component-container">
+    <view class="customer-asset" style="{{cardStyle}}" wx:if="{{authMobile&&!loadingData}}">
+        <view class="customer-asset-container">
+            <view class="container-line-one">
+                <view class="column-left">
+                    <view class="user-avatar">
+                        <a authTypeList="{{['nicknameAndAvatar']}}" bind:_init="_tic" bind:next="_p" class="auth-block" data-t="{{ next:{en:'handleAuthUserInfo'} }}" kdtId="{{kdtId}}" needUpdateNicknameAndAvatar="{{false}}" type="separate" wx:if="{{!authUser}}"></a>
+                        <view catch:tap="_p" class="avatar" data-t="{{ tap:{en:'handleUserClick',et:'stop'} }}">
+                            <image class="tee-image" lazyLoad="true" mode="aspectFit" src="{{userAvatar}}"></image>
+                        </view>
+                    </view>
+                    <view class="asset-info">
+                        <a authTypeList="{{['mobile']}}" bind:_init="_tic" bind:next="_p" class="auth-block" customStyle="height: 100%" data-t="{{ next:{en:'handleLogin'} }}" kdtId="{{kdtId}}" type="separate" wx:if="{{!authMobile}}"></a>
+                        <view class="auth-tips" wx:if="{{!authMobile}}">点击登录查看资产</view>
+                        <c bind:_init="_tic" bind:jumpToLink="_p" data-t="{{ jumpToLink:{en:'handleNavigate'} }}" infoSetting="{{assetInfoSetting[0]}}" infoValue="{{assetInfoValue}}" numberColor="{{styleSetting.textColor}}" pointName="{{extraData.pointName}}" wx:else></c>
+                    </view>
+                </view>
+                <b bind:_init="_tic" bind:logger="_p" bind:showMemberPop="_p" class="member-code" data-t="{{ showMemberPop:{en:'handleShowMemberPop'},logger:{en:'handleLogger'} }}" wx:if="{{authMobile&&extraSetting.showVIP}}"></b>
+            </view>
+        </view>
+    </view>
+    <view class="customer-asset" style="{{cardStyle}}" wx:else>
+        <slot name="unAuth"></slot>
+    </view>
+</view>

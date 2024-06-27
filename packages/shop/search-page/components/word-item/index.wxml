@@ -1,0 +1,5 @@
+<view bind:tap="handleClick" class="deco-word-item" data-word-item="{{wordItem}}" wx:if="{{wordItem.text}}">
+    <image class="deco-word-item_img" src="{{wordItem.image_url}}" wx:if="{{wordItem.image_url}}"></image>
+    <image class="deco-word-item_img" src="https://b.yzcdn.cn/search-page/hot-fire.png" wx:elif="{{wordItem.hot}}"></image>
+    <text>{{wordItem.text}}</text>
+</view>

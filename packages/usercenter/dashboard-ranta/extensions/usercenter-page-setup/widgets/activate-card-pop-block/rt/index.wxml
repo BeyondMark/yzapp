@@ -1,0 +1,29 @@
+<a class="activate-pop" customStyle="width: 298px;border-radius: var(--theme-radius-card, 0px);background-color: transparent;" show="{{visible}}">
+    <view class="activate-pop-content">
+        <c class="activate-pop-content__bg" height="85" src="{{BGURL}}" width="178"></c>
+        <view class="activate-pop-content__body">
+            <view class="activate-pop-content__body-header">
+                <view class="pop-title">{{name}}</view>
+                <view class="pop-desc">{{desc}}</view>
+            </view>
+            <view class="activate-pop-content__body-content" wx:if="{{benefitList.length}}">
+                <view class="pop-benefit-item" wx:for="{{benefitList}}" wx:key="{{item.key}}">
+                    <c height="40" src="{{item.icon}}" width="40" wx:if="{{item.key!==U_KEY}}"></c>
+                    <view class="pop-benefit-item-num" wx:else>{{item.benefitCountText}}</view>
+                    <view class="pop-benefit-item-text">{{item.showName}}</view>
+                </view>
+            </view>
+            <view class="activate-pop-content__body-empty" wx:else>
+                <c height="160" src="{{EMPTYICON}}" width="214"></c>
+            </view>
+        </view>
+    </view>
+    <view class="activate-pop-content__footer">
+        <d authTypeList="{{['mobile']}}" bind:next="submit">
+            <b block="{{true}}" color="linear-gradient(90deg, #E2BB7C 0%, #E8C388 100%)" customStyle="border-radius: var(--theme-radius-button, 0px);opacity: 0.94;font-weight: 500;font-size: 16px; color: #724804;" round="{{true}}" type="info">立即激活</b>
+        </d>
+        <view class="activate-pop-content__footer-close">
+            <c bind:tap="close" height="32" src="{{CLOSEICON}}" width="32"></c>
+        </view>
+    </view>
+</a>

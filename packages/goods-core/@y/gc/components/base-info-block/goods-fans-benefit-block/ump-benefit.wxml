@@ -1,0 +1,18 @@
+<view style="margin-top: 12px">
+    <view class="c98703" wx:if="{{!benefitData.isFans}}">
+        <view class="c3a8a8">
+            <view class="c45257">{{iconText}}</view>
+            <view class="c89585">{{benefitData.contentNormal}}</view>
+            <view class="b1cc7 c89585">{{benefitData.contentHighLight}}</view>
+        </view>
+        <view bind:tap="_p" class="c9fee5" data-t="{{ tap:{en:'become'} }}">
+            <view class="cab1b c89585">{{actionText}}</view>
+            <a bind:_init="_tic" name="arrow" size="10"></a>
+        </view>
+    </view>
+    <view class="e40e2" wx:else>
+        <view class="c89585">{{identityText}}，</view>
+        <view class="c89585">{{benefitData.contentNormal}}</view>
+        <view class="b1cc7 c89585">{{benefitData.contentHighLight}}</view>
+    </view>
+</view>

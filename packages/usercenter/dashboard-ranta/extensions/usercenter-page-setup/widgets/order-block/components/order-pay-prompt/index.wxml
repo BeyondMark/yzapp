@@ -1,0 +1,9 @@
+<c bind:prompt-click="goPay" btnTxt="去支付" goods="{{goods}}">
+    <view wx:for="{{text}}">
+        <b color="main-bg" key="{{item}}" wx:if="{{'${field1}'===item}}">{{field1}}</b>
+        <a bind:change="handleCountDownChange" key="{{item}}" time="{{remianingSeconds}}" useSlot="{{true}}" wx:elif="{{'${expireTime}'===item}}">
+            <b color="main-bg">{{formattedTime}}</b>
+        </a>
+        <text wx:elif="{{true}}">{{item}}</text>
+    </view>
+</c>

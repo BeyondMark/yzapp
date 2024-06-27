@@ -1,0 +1,3 @@
+<view class="{{'dc-line'}} {{opt.type}}" style="{{lineStyle}}">
+    <view class="border" style="{{borderStyle}}" wx:if="{{opt.type==='line'}}"></view>
+</view>

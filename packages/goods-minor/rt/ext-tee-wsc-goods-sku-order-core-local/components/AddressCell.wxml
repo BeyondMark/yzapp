@@ -1,0 +1,10 @@
+<a bind:_init="_tic" bind:tap="_p" border="{{false}}" center="{{true}}" customClass="{{isAddressFixed?'c3ef15':'c83dcc'}}" data-t="{{ tap:{en:'onCellClick'} }}" isLink="{{true}}">
+    <block wx:if="{{isAddressFixed}}">
+        <b bind:_init="_tic" color="#646566" customStyle="margin-right: 8px;" name="{{value.icon}}" size="16px" slot="icon"></b>
+        <view class="c36b8b">{{value.text}}</view>
+    </block>
+    <view class="c83dcc-content" wx:else>
+        <view class="c97d14">{{value.text}}</view>
+        <view class="ae8d0" wx:if="{{postageMessage&&item}}">{{postageMessage}}</view>
+    </view>
+</a>

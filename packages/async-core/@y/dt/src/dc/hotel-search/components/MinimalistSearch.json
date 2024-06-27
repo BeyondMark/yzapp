@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "b": "/packages/async-tee/@y-open/vt/dist/calendar/index",
+    "c": "./HotelCell",
+    "d": "/packages/async-tee/@y-open/vt/native/weapp/field/index/index",
+    "_": "../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_", "b": "_", "d": "_" }
+}

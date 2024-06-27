@@ -1,0 +1,16 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@vant/weapp/dist/popup/index",
+    "b": "/packages/async-main/@vant/weapp/dist/loading/index",
+    "c": "./guarantee-item/index",
+    "d": "./guarantee-detail/index",
+    "e": "./guarantee-declare/index",
+    "f": "./guarantee-effective/index",
+    "g": "./guarantee-pickup/index",
+    "h": "./guarantee-damage-subsidy/index",
+    "i": "/packages/async-main/@vant/weapp/dist/icon/index",
+    "_": "../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_", "i": "_" }
+}

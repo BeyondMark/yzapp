@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../widgets/rt/FlowChangeUmp",
+    "b": "./../../ext-tee-wsc-ump-paid-coupon-block-local/rt/FissionCouponUmp",
+    "c": "./../../ext-tee-wsc-ump-paid-award-v2-block-local/rt/PaidPromotionBanner",
+    "d": "./../../wsc-tee-trade-paid-action-local/widgets/rt/PaidSubscriptionMsg",
+    "e": "./../../ext-tee-wsc-ump-paid-coupon-block-local/rt/InSourcingCouponUmp",
+    "f": "/ext-tee-passport/extensions/protocol/widgets/rt/ProtocolPopup",
+    "g": "./../widgets/components/MaskBlock",
+    "_": "../../../../../components/_/index"
+  }
+}

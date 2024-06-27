@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-core/@y/dt/src/dc/coupon/guide-dialog",
+    "b": "./indicator/index",
+    "c": "./navigator/index",
+    "d": "./image/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

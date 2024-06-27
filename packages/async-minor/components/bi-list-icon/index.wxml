@@ -1,0 +1,9 @@
+<movable-area class="bi-list-icon__area">
+    <movable-view bind:tap="navigateToSalesPage" bindchange="onChange" class="bi-list-icon {{showGotoCardIcon?'bi-list-icon__return':''}}" direction="vertical" y="{{y}}" wx:if="{{showListIcon||showGotoCardIcon}}">
+        <image class="bi-list-icon__image" src="https://b.yzcdn.cn/retail/img/weapp/icon_card_list@2x.png" wx:if="{{showListIcon}}"></image>
+        <view wx:if="{{showGotoCardIcon}}">
+            <image class="bi-list-icon__card" src="https://b.yzcdn.cn/retail/img/erp/card@2x.png"></image>
+            <view class="bi-list-icon__text">名片</view>
+        </view>
+    </movable-view>
+</movable-area>

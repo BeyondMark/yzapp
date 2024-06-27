@@ -1,0 +1,3 @@
+<view>
+    <a bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b38-11'}}"></a>
+</view>

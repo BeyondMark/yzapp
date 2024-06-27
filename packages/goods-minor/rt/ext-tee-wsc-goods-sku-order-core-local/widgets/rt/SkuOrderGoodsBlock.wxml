@@ -1,0 +1,23 @@
+<view class="c3bd61">
+    <view class="c05a15">
+        <k bind:_init="_tic" headerOptData="{{headerOptData}}" skuBannerData="{{skuBannerData}}" themeType="{{themeType}}" wx:if="{{isShowUmpBanner}}"></k>
+        <view class="c09b21">
+            <d bind:_init="_tic" bind:preview="_p" class="e0f98" customClass="e0f98" data-t="{{ preview:{en:'handleSkuPreview'} }}" opt="{{headerOptData}}" wx:if="{{headerOptData.showImage}}"></d>
+            <view class="c556a3">
+                <g bind:_init="_tic" class="c481f1" customClass="c481f1" customOldPriceStyle="{{oldPriceStyle}}" customTagStyle="{{tagStyle}}" opt="{{headerOptData}}" themeTag="{{themeTag}}"></g>
+                <view style="{{stockStyle}}">
+                    <h bind:_init="_tic" opt="{{headerOptData}}"></h>
+                </view>
+                <f bind:_init="_tic" bind:change="_p" customClass="b3cda" data-t="{{ change:{en:'handleNumChange'} }}" opt="{{orderStepper}}"></f>
+            </view>
+        </view>
+        <c bind:_init="_tic" opt="{{sellingPointOpt}}" wx:if="{{sellingPointOpt.show}}"></c>
+        <e bind:_init="_tic" bind:preview="_p" bind:select="_p" data-t="{{ preview:{en:'handleSkuPreview'},select:{en:'handleSkuSelect'} }}" opt="{{rowOpt}}" selected="{{selected}}" wx:if="{{rowOpt.show}}"></e>
+        <j bind:_init="_tic" bind:change="_p" data-t="{{ change:{en:'onPluginsChange'} }}" opt="{{goodsAttributesOpt}}" wx:if="{{goodsAttributesOpt.show}}"></j>
+        <a bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b7-42'}}"></a>
+        <b bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b7-42'}}"></b>
+        <view class="b9f13">
+            <i bind:_init="_tic" bind:blur="_p" bind:change="_p" bind:date-click="_p" data-ref="messages" data-t="{{ dateClick:{en:'handleDateTimeClick'},change:{en:'handleMessageChange'},blur:{en:'handleMessageBlur'} }}" opt="{{messagesOpt}}" skuId="{{sku.id}}" wx:if="{{messagesOpt.show}}"></i>
+        </view>
+    </view>
+</view>

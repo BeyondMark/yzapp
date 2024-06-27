@@ -1,0 +1,64 @@
+@import "/common/css/helper/index.wxss";
+.order-address--empty__title {
+  font-size: 14px;
+  line-height: 40px;
+}
+.order-address__desc {
+  word-break: break-all;
+  text-align: left;
+}
+.order-address__title {
+  padding-bottom: 3px;
+  overflow: hidden;
+  text-align: left;
+}
+.order-address__uname {
+  margin-right: 90px;
+}
+.order-address__border {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: #fff url(https://b.yzcdn.cn/v2/image/wap/address/border2@2x.png)
+    repeat-x;
+  background-size: 36px 2px;
+}
+.order-address__wrapper {
+  position: relative;
+  background: #fff;
+  border-radius: 5px;
+  margin: 10px 15px 20px;
+}
+.order-address__header {
+  height: 35px;
+  line-height: 35px;
+  padding-left: 10px;
+}
+.order-logistics {
+  display: flex;
+  font-size: 12px !important;
+}
+.order-logistics__icon {
+  margin: -4px 15px 0 0;
+  font-size: 16px !important;
+  display: flex;
+  align-items: center;
+}
+.order-logistics__desc-item:not(:last-child) {
+  margin-bottom: 2px;
+}
+.order-logistics__desc {
+  text-align: left;
+}
+.order-address__detail {
+  display: flex;
+  flex-direction: column;
+}
+.order-address {
+  display: flex;
+}
+.van-c-orange {
+  color: #f60;
+}

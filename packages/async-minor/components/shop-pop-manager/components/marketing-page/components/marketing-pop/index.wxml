@@ -1,0 +1,11 @@
+<a bind:close="onClose" customClass="marketing-container" show="{{show}}" zIndex="{{10000}}">
+    <view bind:tap="onClose" class="marketing-icon-close"></view>
+    <view bind:tap="onGoMarketingPage" class="marketing-wrap">
+        <view class="marketing-content">
+            <view class="marketing-title">{{detail.title}}</view>
+            <view class="marketing-subTitle">{{detail.subTitle}}</view>
+        </view>
+        <image class="marketing-pop-bg" mode="widthFix" src="{{imageUrl}}"></image>
+        <image class="marketing-pop-btn" src="{{btnImageUrl}}"></image>
+    </view>
+</a>

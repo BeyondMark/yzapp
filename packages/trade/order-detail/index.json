@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "订单详情",
+  "enablePullDownRefresh": true,
+  "componentPlaceholder": {
+    "t": "_",
+    "bb": "_",
+    "bc": "_",
+    "bk": "_",
+    "bl": "_"
+  }
+}

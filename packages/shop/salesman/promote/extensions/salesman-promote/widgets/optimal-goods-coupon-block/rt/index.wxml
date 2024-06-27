@@ -1,0 +1,3 @@
+<view class="optimal-goods-coupon" wx:if="{{optimalCouponData.optimismCoupon}}">
+    <a alias="{{optimalCouponData.optimismCoupon.alias}}" availableNum="{{optimalCouponData.optimismCoupon.availableNum}}" condition="{{optimalCouponData.optimismCoupon.condition}}" discountInfo="{{optimalCouponData.optimismCoupon.discountInfo}}" extraCondition="{{coupon.extraCondition}}" rmId="{{rmId}}" timeLimit="{{optimalCouponData.optimismCoupon.timeLimit}}" title="{{optimalCouponData.optimismCoupon.title}}" unit="{{optimalCouponData.optimismCoupon.discountUnit}}" valid="{{optimalCouponData.optimismCoupon.valid}}" wx:if="{{rmId==='b29-0'}}"></a>
+</view>

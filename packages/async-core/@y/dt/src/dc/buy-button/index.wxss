@@ -1,0 +1,32 @@
+.tee-image {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.cap-buy-button {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: var(--bottom-nav-height, 0);
+  z-index: 11;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column-reverse;
+  box-sizing: border-box;
+}
+.cap-buy-button .buy-inner {
+  display: -webkit-flex;
+  display: flex;
+  align-content: center;
+}
+.cap-buy-button .buy-icons {
+  height: 48px;
+}
+.cap-buy-button .buy-icons image {
+  width: 48px;
+  height: 100%;
+}
+.cap-buy-button .buy-btn {
+  text-align: center;
+  flex: 1;
+}

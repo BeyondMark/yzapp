@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./components/tabs/index",
+    "b": "./components/good-list/index",
+    "_": "../../../../../../../components/_/index"
+  }
+}

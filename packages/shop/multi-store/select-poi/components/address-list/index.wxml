@@ -1,0 +1,16 @@
+<view class="container address-list">
+    <view class="h4">我的收货地址</view>
+    <c border="{{false}}">
+        <b bind:click="handleSelect" border="{{index!=renderAddressList.length-1}}" customClass="address-info" data-item="{{item}}" titleWidth="100%" wx:for="{{renderAddressList}}" wx:key="index">
+            <view class="address-info__detail">{{item.province+item.city+item.county+item.addressDetail}}</view>
+            <view class="address-info__user-info">{{item.userName+' '+item.tel}}</view>
+            <view catchtap="handleEditAddress" class="edit" data-item="{{item}}">
+                <a color="#666666" name="edit"></a>
+            </view>
+        </b>
+    </c>
+    <view bindtap="extend" class="extend" wx:if="{{list.length>3}}">
+        <span>{{showAllList?'收起':'展开更多'}}</span>
+        <a customClass="{{showAllList?'icon-arrow-up':'icon-arrow-down'}}" name="arrow"></a>
+    </view>
+</view>

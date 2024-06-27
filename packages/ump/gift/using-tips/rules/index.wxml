@@ -1,0 +1,42 @@
+<a>
+    <view class="page-wrapper">
+        <view class="block van-font-12">感谢你使用“我要送礼”功能，只需轻轻一点即可将你的暖暖心意送达亲友，请仔细阅读以下内容，以下称礼物的购买者、领取者（受赠者），赠送者为“用户”。有赞将根据功能更新不时修改规则，通过有赞官网和论坛公布（www.youzan.com,bbs.youzan.com），你确认已仔细阅读并同意本规则内容。</view>
+        <view class="block">
+            <view class="van-font-bold van-font-12">1.商品</view>
+            <view class="van-font-12 van-c-black content">1.1你根据商家展示的可供购买的礼物（商品详情和库存）进行挑选，购买。如可供购买的商品库存为0或属于季节性商品，则你应主动与商家协商并更换同等价值的商品。</view>
+        </view>
+        <view class="block">
+            <view class="van-font-bold van-font-12">2.领取与赠送</view>
+            <view class="van-font-12 van-c-black content">2.1你挑选商品并支付成功后生成一笔订单，每笔订单每个用户最多可领取一份。</view>
+            <view class="van-font-12 van-c-black content">2.2“我要送礼”支持用户二次赠送。礼物购买者可选择直接领取自己发出的礼物一次，也可通过分享链接选择赠送给其它用户；其它用户可选择直接领取一次，也可领取后通过分享链接选择再次赠送，如此循环，除以下情形：<view class="content">
+                    <view>(1)礼物已被兑换；</view>
+                    <view>(2)礼物超过兑换有效期。</view>
+                </view>2.3用户在个人中心-我的礼物一栏中查看领取情况。</view>
+        </view>
+        <view class="block">
+            <view class="van-font-bold van-font-12">3. 兑换</view>
+            <view class="van-font-12 van-c-black content">
+                <view>3.1你根据商家展示的可供兑换的礼物（商品详情和库存）进行兑换。如可供兑换的商品库存为0或属于季节性商品，则你应主动与商家协商并更换同等价值的商品。</view>
+                <view>3.2兑换有效期由商家确定并展示在商家页面醒目位置。超出兑换有效期的提示：礼物已过期，无法领取。</view>
+                <view>3.3用户在领取后提交地址时系统生成子订单，商家可以进行发货。</view>
+            </view>
+        </view>
+        <view class="block">
+            <view class="van-font-bold van-font-12">4.订单完成和结算</view>
+            <view class="van-font-12 van-c-black content">4.1礼物被领取即表示订单已完成，无法申请退款，另有约定按约定。</view>
+        </view>
+        <view class="block">
+            <view class="van-font-bold van-font-12">5. 退款</view>
+            <view class="van-font-12 van-c-black content">
+                <view>5.1可主动发起退款的情形如下，另有约定按约定：<view class="content">
+                        <view>(1)礼物从未转增；</view>
+                        <view>(2)超过兑换期未填写收货地址。</view>
+                    </view>
+                </view>
+                <view>5.2已填写收货地址的不可退款。</view>
+                <view>5.3针对订单中的每种商品进行退款时，计算未被领取的商品对应的金额作为最大可退金额。进行退款时只能按照最大可退金额全部退款，退款后该商品不能再被兑换和发货。</view>
+                <view>5.4购买者的入口在个人中心的订单，受赠者自行联系甲方协商退款。若达成退</view>
+            </view>
+        </view>
+    </view>
+</a>

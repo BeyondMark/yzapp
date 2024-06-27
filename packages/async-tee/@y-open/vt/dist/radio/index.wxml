@@ -1,0 +1,12 @@
+<view class="{{classes.radio}}">
+    <view bind:tap="_p" class="{{classes.labelClass}}" data-t="{{ tap:{en:'onClickLabel'} }}" wx:if="{{labelPosition==='left'}}">
+        <slot></slot>
+    </view>
+    <view bind:tap="_p" class="t-radio__icon-wrap" data-t="{{ tap:{en:'onChange'} }}" style="{{iconWrapStyle}}" wx:if="{{iconStyle}}">
+        <slot name="icon" wx:if="{{useIconSlot}}"></slot>
+        <a bind:_init="_tic" class="{{classes.iconClass}}" customClass="icon-class" customStyle="{{iconCustomStyle}}" name="success" style="{{iconStyle}}" wx:else></a>
+    </view>
+    <view bind:tap="_p" class="{{classes.labelClass}}" data-t="{{ tap:{en:'onClickLabel'} }}" wx:if="{{labelPosition==='right'}}">
+        <slot></slot>
+    </view>
+</view>

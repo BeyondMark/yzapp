@@ -1,0 +1,7 @@
+<view>
+    <block wx:if="{{rmId==='b21-24'}}">
+        <a bind:_init="_tic" rmId="b21-3"></a>
+        <b bind:_init="_tic" rmId="b21-3"></b>
+        <c bind:_init="_tic" rmId="b21-3"></c>
+    </block>
+</view>

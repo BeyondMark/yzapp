@@ -1,0 +1,14 @@
+<a bind:_init="_tic" bind:click-overlay="_p" class="showcase-popup" customStyle="{{customStyle}}" data-t="{{ clickOverlay:{en:'close'} }}" position="bottom" round="{{true}}" safeAreaInsetBottom="{{true}}" show="{{show}}" wx:if="{{hasGoodsShowcase}}">
+    <view wx:if="{{showComp}}">
+        <view class="showcase-popup__header">      商品橱窗
+      <b bind:_init="_tic" bind:tap="_p" class="showcase-popup__close" color="#c8c9cc" data-t="{{ tap:{en:'close'} }}" name="cross" size="22px"></b>
+        </view>
+        <view class="showcase-popup__scroll--view">
+            <c bind:_init="_tic" bind:item-click="_p" bind:loaded="_p" buyerId="{{buyerId}}" data-t="{{ loaded:{en:'handleLoaded'},itemClick:{en:'handleItemClick'} }}" item="{{item}}" kdtId="{{kdtId}}" loggerParams="{{loggerData.loggerParams}}" loggerSpm="{{loggerData.loggerSpm}}" offlineId="{{offlineId}}" wx:for="{{showcaseItemList}}" wx:key="bizName"></c>
+            <view wx:if="{{isEmpty}}">
+                <image class="showcase-popup__empty-img tee-image" lazyLoad="true" src="https://b.yzcdn.cn/public_files/f10a2f03fbcc0353b0c66fdc7be7b1e2.png"></image>
+                <view class="showcase-popup__empty-text">暂无商品</view>
+            </view>
+        </view>
+    </view>
+</a>

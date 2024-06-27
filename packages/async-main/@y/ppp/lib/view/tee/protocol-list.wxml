@@ -1,0 +1,5 @@
+<view class="protocol-container">
+    <view class="protocol-item" wx:for="{{protocols}}" wx:for-item="protocol" wx:key="agreementTplId">
+        <view bind:tap="_p" class="link" data-t="{{ tap:{ en:'goPage',args:[protocol.url] } }}">      《{{protocol.agreementTplName}}》
+    </view> {{protocol.symbol||''}} </view>
+</view>

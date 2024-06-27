@@ -1,0 +1,16 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-minor/components/shop-pop-manager/index",
+    "b": "../../image-container-block/rt/index",
+    "c": "../../base-info-container-block/rt/index",
+    "d": "../../coupon-container-block/rt/index",
+    "e": "../../goods-detail-container-block/rt/index",
+    "f": "../../task-award-container-block/rt/index",
+    "g": "../../price-intro-container-block/rt/index",
+    "h": "../../trade-carousel-container-block/rt/index",
+    "i": "../../fixed-bottom-container-block/rt/index",
+    "_": "../../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

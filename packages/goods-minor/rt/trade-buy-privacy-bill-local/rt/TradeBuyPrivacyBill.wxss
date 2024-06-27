@@ -1,0 +1,33 @@
+.privacy-bill-block {
+  overflow: hidden;
+  position: relative;
+  margin: var(--theme-page-card-margin-top, 0)
+    var(--theme-page-card-margin-right, 12px)
+    var(--theme-page-card-margin-bottom, 10px)
+    var(--theme-page-card-margin-left, 12px);
+  border-radius: 8px;
+}
+.privacy-bill-block.pay-page {
+  margin-bottom: 10px;
+}
+.privacy-bill-block.order-detail-page {
+  margin: 10px 0 0 0;
+}
+.privacy-bill-block.goods-detail-page__sku-order {
+  margin: 0;
+}
+.privacy-bill {
+  padding: var(--theme-page-cell-padding-top, 10px)
+    var(--theme-page-cell-padding-right, 12px)
+    var(--theme-page-cell-padding-bottom, 10px)
+    var(--theme-page-cell-padding-left, 12px) !important;
+}
+.privacy-bill:after {
+  display: none;
+}
+.privacy-bill-status {
+  margin: auto 0;
+}
+.privacy-bill .gray {
+  color: #969799;
+}

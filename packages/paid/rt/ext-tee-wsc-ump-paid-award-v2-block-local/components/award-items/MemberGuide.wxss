@@ -1,0 +1,113 @@
+.c89585 {
+  text-decoration: inherit;
+}
+.c89585,
+.bd231 {
+  display: inline-block;
+}
+.bd231 {
+  width: 100%;
+  height: 100%;
+}
+.dacd7 {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+}
+.c3e9a0 {
+  background-image: url(https://img01.yzcdn.cn/upload_files/2021/09/26/FtS3HuPQCLPgoxtSQp_QW4PhLdml.png);
+  width: calc(100vw - 48px);
+  background-size: cover;
+  padding: 12px;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+.c76da6 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.cd9df {
+  color: #74410c;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+.c84f5c {
+  max-width: calc(100vw - 290px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.c704b0 {
+  margin-left: 5px;
+}
+.c65331 {
+  width: 82px;
+  height: 24px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #fe9c70, #ff4943);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 14px;
+}
+.d6a51 {
+  display: flex;
+  flex-direction: row;
+  margin-top: 12px;
+  justify-content: space-between;
+}
+.c6e980 {
+  flex-direction: column;
+  height: 54px;
+}
+.c6e980,
+.c40391 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(116, 65, 12, 0.9);
+  font-size: 12px;
+}
+.c40391 {
+  flex-direction: row;
+  height: 32px;
+}
+.c2858e {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: #fff;
+}
+.c96f97 {
+  width: 32px;
+  height: 32px;
+}
+.b3ef7 {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: #fbf6eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #d5a150;
+  font-weight: 700;
+}
+.member-guide-desc {
+  max-width: 65px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.c0ac5b {
+  margin-left: 8px;
+}

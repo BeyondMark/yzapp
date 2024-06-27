@@ -1,0 +1,93 @@
+<b class="block-frameless helpcut-simple-popup" customContainerStyle="background-color: transparent;" customOverlayStyle="background-color: rgba(0, 0, 0, .8);" customPopupStyle="z-index: 16;" show="{{true}}" wx:if="{{popupOptions.type==='initPopup'}}">
+    <view class="popup-frameless" name="solt">
+        <view class="title" wx:if="{{popupOptions.showInitTitle}}">
+            <view class="title-gold" wx:if="{{popupOptions.hasTitle}}">{{popupOptions.initTitle}}</view>
+            <view class="title-gold-creator" wx:else>价值<view class="title-original-price">{{popupOptions.originalPrice}}</view>元商品{{popupOptions.minPrice}}元拿</view>
+        </view>
+        <image class="goods big-goods" mode="aspectFill" src="{{goodsDetail.cover}}" wx:if="{{popupOptions.showInitGoods}}"></image>
+        <c authTypeList="{{['mobile','nicknameAndAvatar']}}" bind:next="toInit" btnClass="frameless-btn a-breath" wx:if="{{popupOptions.showInitBtn}}">{{popupOptions.initBtnText}}</c>
+    </view>
+</b>
+<view wx:else>
+    <d bind:click-overlay="clickFramelessOverlay" customClass="block-frameless" lockScroll="{{true}}" overlayStyle="background-color: var(--overlay-background-color,rgba(0,0,0,0.8))" safeAreaInsetBottom="{{true}}" show="{{framelessShow}}">
+        <slot></slot>
+        <view class="popup-frameless">
+            <view class="tip" wx:if="{{helpPopupOptions.hasTitle||popupOptions.hasTitle}}">
+                <image class="avatar" mode="aspectFill" src="{{bargainDetail.avatar}}"></image>
+                <view>{{popupOptions.title||helpPopupOptions.title}}</view>
+            </view>
+            <view class="title" wx:if="{{helpPopupOptions.showHelpcutRecommend}}">
+                <view class="title-gold">{{helpPopupOptions.cutTitle}}</view>
+            </view>
+            <view class="title help-title" wx:if="{{popupOptions.showRedPacket&&!showRedDetail}}"></view>
+            <view class="red a-fade-show {{!showRedPacket&&showRedDetail?'a-fade-hide':''}}" wx:if="{{popupOptions.showRedPacket&&!showRedDetail}}">
+                <view class="{{newBargainInfo.newShowAvatarList.length>2?'reverse-avatar-block avatar-block':'avatar-block'}}">
+                    <image class="{{newBargainInfo.newShowAvatarList.length>2?'fold-avatar avatar':'avatar'}}" mode="aspectFill" src="{{item}}" wx:for="{{newBargainInfo.newShowAvatarList}}"></image>
+                </view>
+                <view class="nickname">{{newBargainInfo.newShowNickname}}</view>
+                <image bind:tap="openRedPacket" class="btn a-breath" mode="aspectFill" src="https://b.yzcdn.cn/public_files/9258d766ef79fc67d2cc130e2be509cd.png"></image>
+            </view>
+            <view class="red-detail a-fade-show" wx:if="{{showRedDetail&&!showRedPacket}}">
+                <view class="title">{{newBargainInfo.newCutNum}}名好友又砍掉<text>{{bargainRecords.newCutPrice}}</text>元</view>
+                <view class="tip">砍价进度已达</view>
+                <view class="number">{{bargainRecords.cutRate}}%</view>
+                <view class="process">
+                    <view class="block">
+                        <view class="bar" style="width: {{bargainProgressWidth}}%"></view>
+                    </view>
+                </view>
+                <view bind:tap="handleShowShare" class="btn">继续邀请好友帮砍</view>
+            </view>
+            <view class="coupon" wx:if="{{helpPopupOptions.hasCoupon}}">
+                <view class="coupon-block">
+                    <view class="coupon-detail">
+                        <view class="left">
+                            <text class="value">{{helpPopupOptions.couponResult.value}}</text>
+                            <text class="unit">{{helpPopupOptions.couponResult.unit}}</text>
+                        </view>
+                        <view class="right">
+                            <text class="tip">{{helpPopupOptions.couponResult.thresholdAmountMsg}}</text>
+                            <text class="date">{{helpPopupOptions.couponResult.availableDateMsg}}</text>
+                        </view>
+                    </view>
+                    <a data-type="coupon" list="{{couponGoodsList}}" marginTop="{{true}}" title="购买以下商品可用"></a>
+                </view>
+            </view>
+            <view bind:tap="useCoupon" class="frameless-btn a-breath" wx:if="{{helpPopupOptions.hasCoupon}}">立即使用</view>
+            <view class="recommend" wx:if="{{helpPopupOptions.showHelpcutRecommend}}">
+                <view class="item " wx:for="{{helpPopupOptions.allHelpcutList}}">
+                    <view class="block {{index===1?'a-goods-breath-reverse':'a-goods-breath'}}">
+                        <view class="block-border">
+                            <image class="goods" mode="aspectFill" src="{{item.thumbUrl}}"></image>
+                            <view class="name">{{item.goodsTitle}}</view>
+                        </view>
+                    </view>
+                    <view bind:tap="newBargin" class="btn" data-index="{{index}}">{{helpPopupOptions.cutBtn}}</view>
+                </view>
+            </view>
+            <view bind:tap="shop" class="entrance" wx:if="{{helpPopupOptions.showHelpcutRecommend}}">进店逛逛<e class="extrabtn-icon" name="arrow" size="14px"></e>
+            </view>
+        </view>
+    </d>
+    <d bind:close="onClose" closeable="{{true}}" customClass="block-frame" round="{{true}}" show="{{show}}">
+        <slot></slot>
+        <image class="goods" mode="aspectFill" src="{{goodsDetail.cover}}" wx:if="{{popupOptions.needGoodsImg}}"></image>
+        <view class="cut-status" wx:if="{{popupOptions.status}}">{{popupOptions.status}}</view>
+        <view class="helpcut-status" wx:if="{{helpPopupOptions.title}}">{{helpPopupOptions.title}}</view>
+        <view class="title" wx:if="{{popupOptions.tip}}">
+            <text class="{{item.class}}" wx:for="{{popupOptions.tip}}">{{item.content}}</text>
+        </view>
+        <view class="process" wx:if="{{popupOptions.needProcess}}">
+            <view class="block">
+                <view class="bar" style="width: {{bargainProgress*100}}%"></view>
+            </view>
+        </view>
+        <a list="{{recommendGoodsThree}}" marginTop="{{true}}" wx:if="{{helpPopupOptions.showRecommend||popupOptions.showRecommendTop}}"></a>
+        <view bind:tap="{{popupOptions.btn.event}}" class="btn" wx:if="{{popupOptions.btn}}">{{popupOptions.btn.content}}</view>
+        <view bind:tap="{{popupOptions.viceBtn.event}}" class="vicebtn" wx:if="{{popupOptions.viceBtn}}">{{popupOptions.viceBtn.content}}</view>
+        <view bind:tap="{{helpPopupOptions.viceBtn.event}}" class="vicebtn" wx:if="{{helpPopupOptions.viceBtn}}">{{helpPopupOptions.viceBtn.content}}</view>
+        <a list="{{recommendGoodsThree}}" marginTop="{{true}}" wx:if="{{popupOptions.showRecommendBottom}}"></a>
+        <view bind:tap="{{popupOptions.extraBtn.event}}" class="extrabtn" wx:if="{{popupOptions.extraBtn&&popupOptions.extraBtn.need}}">{{popupOptions.extraBtn.content}}<e class="extrabtn-icon" name="arrow" size="14px"></e>
+        </view>
+    </d>
+</view>

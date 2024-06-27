@@ -1,0 +1,32 @@
+.rules-popup {
+  padding: 0 16px;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 20px 20px 0 0;
+  z-index: 300;
+}
+.rules-popup .rules-header {
+  margin-bottom: 15px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  font-family: PingFangSC-Medium;
+  font-size: 16px;
+  color: #39393a;
+}
+.rules-popup .rule {
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+}
+.rules-popup .rules-btn {
+  margin: 46px 0 7px;
+  height: 44px;
+  line-height: 44px;
+  font-size: 16px;
+  border-radius: 100px;
+  color: #fff;
+  text-align: center;
+  background-image: linear-gradient(135deg, #ff5644, #fb1c60);
+}

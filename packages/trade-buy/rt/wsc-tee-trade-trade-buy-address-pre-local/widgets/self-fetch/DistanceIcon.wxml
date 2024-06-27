@@ -1,0 +1,8 @@
+<view class="baec6">
+    <view class="c6a213">距你{{distance}}</view>
+    <view class="ecdf2">
+        <view class="c69f93">
+            <view class="a0e2c"></view>
+        </view>
+    </view>
+</view>

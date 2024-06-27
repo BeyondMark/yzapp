@@ -1,0 +1,24 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.c8b3fb {
+  position: relative;
+  display: flex;
+  height: 36px;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 12px;
+}
+.c8b3fb .b2d6d {
+  position: relative;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.c8b3fb .d8cd8 {
+  width: 64px;
+  height: 6px;
+  margin-right: 8px;
+}

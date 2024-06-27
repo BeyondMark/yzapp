@@ -1,0 +1,9 @@
+<view>
+    <view bind:tap="_p" class="c8a21d" data-t="{{ tap:{en:'handleSelectDate'} }}">
+        <view class="d4165">{{item.name}}</view>
+        <view class="{{'c4cf6a'+(!showValue?' a2e48':'')}}">{{displayValue}}</view>
+    </view>
+    <a bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'handleClose'} }}" position="bottom" show="{{showCalendar}}" zIndex="{{7011}}">
+        <b bind:_init="_tic" bind:cancel="_p" bind:confirm="_p" bind:input="_p" data-t="{{ input:{en:'onInput'},confirm:{en:'handleConfirm'},cancel:{en:'handleClose'} }}" formatter="{{formatter}}" maxDate="{{maxDate}}" minDate="{{minDate}}" type="date" value="{{currentDate}}"></b>
+    </a>
+</view>

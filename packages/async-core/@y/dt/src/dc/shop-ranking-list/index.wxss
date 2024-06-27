@@ -1,0 +1,38 @@
+.dc-shop-ranking-list {
+  background: #fff;
+}
+.dc-shop-ranking-list.radius {
+  border-radius: 8px;
+  overflow: hidden;
+}
+.dc-shop-ranking-list .buy-button-area-desc {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 12px;
+  color: #969799;
+}
+.dc-shop-ranking-list .has-more {
+  font-size: 14px;
+  color: #646566;
+  line-height: 20px;
+  margin: 16px 0;
+  text-align: center;
+  cursor: pointer;
+}
+.dc-shop-ranking-list .ranking-list-tab-line {
+  background-color: var(--tab-line-color, #ee0a24);
+}
+.ranking-tabs-container {
+  background-color: #fff;
+}
+.cap-shop-ranking-list-tab-item {
+  margin-top: 12px;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

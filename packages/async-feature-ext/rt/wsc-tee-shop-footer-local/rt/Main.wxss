@@ -1,0 +1,71 @@
+.footer {
+  padding: 16px 0;
+  text-align: center;
+  line-height: 16px;
+  color: #999;
+  font-size: 0;
+}
+.footer .store-info {
+  color: #999;
+  font-size: 12px;
+  line-height: 17px;
+  background: #f8f8f8;
+  display: flex;
+  align-items: center;
+  padding: 0 15px 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.footer .store-info__text {
+  margin: 0 10px;
+}
+.footer .store-info__left,
+.footer .store-info__right {
+  background: #e5e5e5;
+  height: 1px;
+  flex: 1;
+}
+.footer-nav {
+  padding: 14px 15px 10px;
+}
+.footer-nav__item {
+  display: inline-block;
+  padding: 0 6px;
+  color: #666;
+  font-size: 12px;
+}
+.footer-nav__item:not(:last-child) {
+  border-right: 1px solid #e5e5e5;
+}
+.footer-copyright {
+  display: flex;
+  justify-content: center;
+  color: #bfbfc3;
+  padding: 42px 0 8px;
+  margin: 0 15px;
+  font-size: 12px;
+  background: url(https://img01.yzcdn.cn/public_files/2018/12/19/5941d128d3d3e8a4748c7c9b95bea409.png)
+    center 9px no-repeat;
+  background-size: auto 30px;
+}
+.footer-copyright .yz-logo {
+  padding-left: 14px;
+  position: relative;
+}
+.footer-copyright .yz-logo:before {
+  content: "";
+  background: url(https://img01.yzcdn.cn/public_files/2018/12/19/d444fa8c4b92ed16a2aafc6267611a3d.png)
+    no-repeat;
+  background-size: 10px 12px;
+  width: 10px;
+  height: 12px;
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+}
+.footer .customer-tips {
+  margin-top: 30px;
+}
+.footer .customer-tips-a {
+  margin-top: 13px;
+}

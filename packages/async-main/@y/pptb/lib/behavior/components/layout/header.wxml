@@ -1,0 +1,4 @@
+<view class="slide-captcha-header">
+    <view class="slide-captcha-header-title">请完成安全验证</view>
+    <a bind:_init="_tic" bind:tap="_p" class="slide-captcha-header-close" data-t="{{ tap:{en:'onClose'} }}" name="cross"></a>
+</view>

@@ -1,0 +1,17 @@
+<block wx:if="{{showTip}}">
+    <view bindtap="toBenefitLink" class="birthday-tip-box">
+        <view class="left-part">
+            <view class="icon"></view>
+            <view class="desc">
+                <text>亲爱的</text>
+                <view class="name">{{nickName}}</view>
+                <text>，生日快乐！</text>
+            </view>
+        </view>
+        <view class="right-part">
+            <view>查看生日礼</view>
+            <a class="arrow" color="#969799" name="arrow"></a>
+        </view>
+    </view>
+    <view class="bottom-border"></view>
+</block>

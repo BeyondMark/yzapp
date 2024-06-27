@@ -1,0 +1,40 @@
+.common-popup {
+  width: 100%;
+  min-height: 50vh;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.common-popup__title {
+  font-size: 16px;
+  line-height: 44px;
+  height: 44px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.common-popup__content {
+  margin: 16px 0 0;
+  font-size: 14px;
+  color: #323233;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  z-index: 1;
+  padding: 0 16px;
+}
+.common-popup__button-wrapper {
+  width: 100%;
+  padding: 5px 16px;
+  background: #fff;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.common-popup__button {
+  line-height: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 40px;
+}

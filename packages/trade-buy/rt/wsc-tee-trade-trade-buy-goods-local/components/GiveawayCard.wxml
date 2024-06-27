@@ -1,0 +1,10 @@
+<view class="c580f" wx:if="{{rewardModel.length}}">
+    <view class="df407 ce25d">
+        <view class="c527a4" wx:for="{{rewardModel}}" wx:key="title">
+            <view class="f6734">[{{item.title}}]</view>
+            <view class="c4328b">
+                <view wx:for="{{item.descList}}" wx:for-item="desc" wx:key="desc"> {{desc}} </view>
+            </view>
+        </view>
+    </view>
+</view>

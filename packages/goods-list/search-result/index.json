@@ -1,0 +1,28 @@
+{
+  "navigationBarTitleText": "商品搜索",
+  "usingComponents": {
+    "a": "/packages/goods-list/search-result/exensions/page-setup/widgets/search-result-top/rt/index",
+    "b": "/packages/goods-list/search-result/exensions/page-setup/widgets/empty-block/rt/index",
+    "c": "/packages/goods-list/search-result/exensions/page-setup/widgets/search-result-bottom/rt/index",
+    "d": "/packages/goods-list/tag/exensions/share-floating/widgets/share-floating-main/rt/index",
+    "e": "/packages/async-main/@vant/weapp/dist/toast/index",
+    "f": "/packages/async-main/@vant/weapp/dist/dialog/index",
+    "g": "./../../async-feature-ext/rt/wsc-tee-salesman-salesman-cube-block-local/widgets/rt/Widget",
+    "h": "./../rt/wsc-tee-statcenter-goods-showcase-block-local/rt/GoodsShowcase",
+    "i": "/ext-tee-wsc-dc/extensions/page-style/rt/Main",
+    "j": "./../../async-feature-ext/rt/wsc-tee-dc-feature-user-authorize-popup-local/rt/Main",
+    "k": "./../../async-feature-ext/rt/wsc-tee-dc-jump-link-local/rt/Main",
+    "l": "../../async-tee/@y-open/vt/native/weapp/toast/index/index",
+    "m": "../../async-tee/@y-open/vt/native/weapp/dialog/index/index",
+    "_": "../../../components/_/index"
+  },
+  "componentPlaceholder": {
+    "e": "_",
+    "f": "_",
+    "g": "_",
+    "j": "_",
+    "k": "_",
+    "l": "_",
+    "m": "_"
+  }
+}

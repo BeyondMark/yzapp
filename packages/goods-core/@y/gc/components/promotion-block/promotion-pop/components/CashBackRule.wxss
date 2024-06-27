@@ -1,0 +1,13 @@
+.acffe {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 15px;
+}
+.cashback-popup__red {
+  color: #ee0a24;
+}
+.c84bb4 {
+  font-size: 12px;
+  color: #969799;
+  line-height: 18px;
+}

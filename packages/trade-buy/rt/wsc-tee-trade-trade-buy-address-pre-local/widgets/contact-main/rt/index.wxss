@@ -1,0 +1,18 @@
+.e5a89 {
+  font-weight: var(--theme-common-field-font-weight, bold);
+  font-size: 16px !important;
+}
+.d9313 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: 400 !important;
+  color: #323233 !important;
+}
+.b4707 {
+  font-size: 16px;
+  margin-left: 5px;
+}
+.c24117 {
+  font-weight: 400 !important;
+}

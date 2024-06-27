@@ -1,0 +1,23 @@
+.entry-container {
+  position: fixed;
+  bottom: 115px;
+  right: 9px;
+  width: 48px;
+  height: 48px;
+  z-index: 140;
+  right: 10px;
+  background-size: contain;
+  transition: transform 0.2s;
+}
+.entry-container_close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+.goaway {
+  transform: translate3d(100px, 0, 0);
+}

@@ -1,0 +1,30 @@
+<view class="a83cc bb8c8" wx:if="{{showRoot&&!isPreCashierPay}}">
+    <view wx:if="{{showUnCreate}}">
+        <a bind:_init="_tic" bind:tap="_p" border="{{false}}" clickable="{{true}}" customClass="c93d0c" data-t="{{ tap:{en:'setRadio'} }}" titleClass="f9ba8" valueClass="efac6">
+            <view class="dcc4f" slot="title">
+                <icon bind:_init="_tic" class="baec6"></icon>先用后付</view>
+            <b bind:_init="_tic">
+                <view class="c1d11a">
+                    <view class="c10ad6 c89585" wx:if="{{!disabled}}">            0元下单，确认收货再付款
+          </view>
+                    <view class="c03aed c89585" wx:if="{{disabled}}">{{reason}}</view>
+                    <c bind:_init="_tic" checkedColor="{{themeColors['icon']}}" customClass="c1d11a" disabled="{{disabled}}" iconSize="16px" name="1" value="{{noprepaid?selection:'0'}}"></c>
+                </view>
+            </b>
+            <view class="c7e845" wx:if="{{showProtocol}}">
+                <view class="b3c7d c89585">使用即已阅读并同意</view>
+                <view bind:tap="_p" class="c89585" data-t="{{ tap:{en:'gotoProtocol'} }}">《先用后付服务协议》</view>
+            </view>
+        </a>
+    </view>
+    <view wx:if="{{showCreated}}">
+        <a bind:_init="_tic" border="{{false}}" clickable="{{false}}" customClass="c93d0c" titleClass="f9ba8" valueClass="efac6">
+            <view class="dcc4f" slot="title">
+                <icon bind:_init="_tic" class="baec6"></icon>        先用后付
+      </view>
+            <view class="c1d11a">
+                <view class="c10ad6 c89585">0元下单，确认收货再付款</view>
+            </view>
+        </a>
+    </view>
+</view>

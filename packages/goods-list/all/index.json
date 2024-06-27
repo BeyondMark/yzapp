@@ -1,0 +1,32 @@
+{
+  "navigationBarTitleText": "",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "a": "/packages/goods-list/all/exensions/page-setup/widgets/goods-list-all-page-setup/rt/index",
+    "b": "/packages/async-main/@vant/weapp/dist/toast/index",
+    "c": "/packages/async-main/@vant/weapp/dist/dialog/index",
+    "d": "./../../async-feature-ext/rt/wsc-tee-shop-footer-local/rt/Main",
+    "e": "/ext-tee-wsc-dc/extensions/page-style/rt/Main",
+    "f": "./../../async-feature-ext/rt/wsc-tee-dc-jump-link-local/rt/Main",
+    "g": "./../../async-feature-ext/rt/wsc-tee-dc-floating-nav-local/rt/Main",
+    "h": "./../../async-feature-ext/rt/wsc-tee-salesman-salesman-cube-block-local/widgets/rt/Widget",
+    "i": "./../rt/wsc-tee-statcenter-goods-showcase-block-local/rt/GoodsShowcase",
+    "j": "./../../async-feature-ext/rt/wsc-tee-dc-feature-user-authorize-popup-local/rt/Main",
+    "k": "./../../async-feature-ext/rt/ext-tee-wsc-goods-biz-sku-manage-local/rt/Main",
+    "l": "../../async-tee/@y-open/vt/native/weapp/toast/index/index",
+    "m": "../../async-tee/@y-open/vt/native/weapp/dialog/index/index",
+    "_": "../../../components/_/index"
+  },
+  "componentPlaceholder": {
+    "b": "_",
+    "c": "_",
+    "d": "_",
+    "f": "_",
+    "g": "_",
+    "h": "_",
+    "j": "_",
+    "k": "_",
+    "l": "_",
+    "m": "_"
+  }
+}

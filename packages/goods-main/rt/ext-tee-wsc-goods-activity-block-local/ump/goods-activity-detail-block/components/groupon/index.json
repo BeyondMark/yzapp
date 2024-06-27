@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./GrouponGoingList",
+    "b": "./GrouponIntroBar",
+    "c": "./GrouponGuide",
+    "d": "./../DetailPop",
+    "_": "../../../../../../../../components/_/index"
+  }
+}

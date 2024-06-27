@@ -1,0 +1,24 @@
+.list-item {
+  margin-bottom: 12px;
+}
+.list-item__icon {
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: #f7f8fa;
+  text-align: center;
+}
+.list-item__icon .icon-pic {
+  margin-top: 10px;
+  width: 24px;
+  height: 24px;
+}
+.share-button {
+  background-color: #ffebeb;
+  color: #f44;
+}
+.disabled-button {
+  background-color: #f2f3f5;
+  color: #979797;
+}

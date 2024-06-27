@@ -1,0 +1,20 @@
+.bd231 {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.c7ceb2 {
+  width: 100%;
+  padding: 0 12px;
+  margin-top: 12px;
+  position: relative;
+  background: #f7f8fa;
+  border: none;
+  outline: none;
+  text-align: left;
+  display: flex;
+}
+.c7ceb2:after {
+  content: "";
+  border: none;
+}

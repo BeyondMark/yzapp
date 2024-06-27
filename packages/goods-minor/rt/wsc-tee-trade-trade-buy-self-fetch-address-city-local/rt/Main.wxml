@@ -1,0 +1,24 @@
+<view>
+    <d bind:_init="_tic" bind:cancel="_p" bind:change="_p" bind:focus="_p" bind:search="_p" data-t="{{ focus:{en:'onFocus'},change:{en:'onChange'},search:{en:'onSearch'},cancel:{en:'onCancel'} }}" placeholder="请输入提货城市" showAction="{{inSearch}}" value="{{keyword}}"></d>
+    <view class="c96e89" wx:if="{{!inSearch&&cityCount}}">
+        <view class="c1cb25">当前定位</view>
+        <a bind:_init="_tic" bind:tap="_p" customClass="ce50a" data-t="{{ tap:{en:'onClickButton'} }}"> {{buttonText}} </a>
+        <view class="c1cb25">所有支持自提的城市</view>
+    </view>
+    <block wx:if="{{cityCount>10}}">
+        <view wx:for="{{currentCityMap}}" wx:for-index="key" wx:for-item="list" wx:key="key">
+            <block wx:if="{{list.length}}">
+                <view class="c3c6e0">{{key}}</view>
+                <c bind:_init="_tic">
+                    <b bind:_init="_tic" bind:tap="_p" data-t="{{ tap:{ en:'onClickCity',args:[city] } }}" title="{{city.cityName}}" valueClass="c55422" wx:for="{{list}}" wx:for-item="city" wx:key="cityName"></b>
+                </c>
+            </block>
+        </view>
+    </block>
+    <c bind:_init="_tic" border="{{false}}" wx:elif="{{cityCount}}">
+        <view wx:for="{{currentCityMap}}" wx:for-index="key" wx:for-item="list" wx:key="key">
+            <b bind:_init="_tic" bind:tap="_p" data-t="{{ tap:{ en:'onClickCity',args:[city] } }}" title="{{city.cityName}}" valueClass="c55422" wx:for="{{list}}" wx:for-item="city" wx:key="cityName"></b>
+        </view>
+    </c>
+    <view class="c09eda" wx:elif="{{listLoaded}}"> {{inSearch?cityCount===0&&keyword?'当前搜索城市没有提货点':'':'暂无支持提货的城市'}} </view>
+</view>

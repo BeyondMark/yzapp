@@ -1,0 +1,6 @@
+<view class="dd122" wx:if="{{show}}">
+    <a bind:_init="_tic" bind:onLogger="_p" data-t="{{ onLogger:{en:'logger'} }}" originData="{{originData}}" wx:if="{{isShowCoupon}}"></a>
+    <b bind:_init="_tic" bind:onLogger="_p" data-t="{{ onLogger:{en:'logger'} }}" originData="{{originData}}" wx:if="{{isShowSeckill}}"></b>
+    <c bind:_init="_tic" bind:onLogger="_p" data-t="{{ onLogger:{en:'logger'} }}" originData="{{originData}}" wx:if="{{isShowChoose}}"></c>
+    <d bind:_init="_tic" bind:onLogger="_p" data-t="{{ onLogger:{en:'logger'} }}" originData="{{originData}}" wx:if="{{isShowLottery}}"></d>
+</view>

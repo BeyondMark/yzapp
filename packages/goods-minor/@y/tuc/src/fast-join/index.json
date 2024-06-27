@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y-open/vt/dist/popup/index.weapp",
+    "b": "/packages/async-tee/@y-open/vt/native/weapp/toast/index/index",
+    "c": "./../join-notice/index",
+    "d": "./components/header/index",
+    "e": "./components/info/index",
+    "f": "./components/agreement/index",
+    "g": "./components/submit/index",
+    "_": "../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_" }
+}

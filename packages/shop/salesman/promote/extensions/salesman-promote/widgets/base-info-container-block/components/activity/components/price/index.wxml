@@ -1,0 +1,15 @@
+<view class="activity-price">
+    <view class="activity-price__label">
+        <a color="general">
+            <text class="activity-price__label-xl">
+                <text class="activity-price__current-label">¥</text>{{activityPrice.showPrice[0]}}</text>
+            <text class="activity-price__label-xl" wx:if="{{activityPrice.showPrice[1]}}">.{{activityPrice.showPrice[1]}}</text>
+            <text class="activity-price__label-xs" wx:if="{{activityPrice.isRange}}">起</text>
+        </a>
+    </view>
+    <view class="activity-price__more">
+        <view class="activity-price__more-price" wx:if="{{activityPrice.originPrice}}">
+            <text class="origin-price">￥{{activityOriginPrice}}</text>
+        </view>
+    </view>
+</view>

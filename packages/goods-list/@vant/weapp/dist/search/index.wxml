@@ -1,0 +1,14 @@
+<view class="{{utils.bem( 'search',{withaction:showAction||useActionSlot} )}} custom-class" style="background: {{background}}">
+    <view class="{{utils.bem( 'search__content',[shape] )}}">
+        <view class="f7f65" wx:if="{{label}}">{{label}}</view>
+        <slot name="label" wx:else></slot>
+        <a bind:blur="onBlur" bind:change="onChange" bind:clear="onClear" bind:click-input="onClickInput" bind:confirm="onSearch" bind:focus="onFocus" border="{{false}}" class="d324e field-class" clearIcon="{{clearIcon}}" clearTrigger="{{clearTrigger}}" clearable="{{clearable}}" confirmType="search" cursorSpacing="{{cursorSpacing}}" customStyle="padding: 5px 10px 5px 0; background-color: transparent;" disabled="{{disabled}}" error="{{error}}" focus="{{focus}}" inputAlign="{{inputAlign}}" inputClass="input-class" leftIcon="{{!useLeftIconSlot?leftIcon:''}}" maxlength="{{maxlength}}" placeholder="{{placeholder}}" placeholderStyle="{{placeholderStyle}}" readonly="{{readonly}}" rightIcon="{{!useRightIconSlot?rightIcon:''}}" type="search" value="{{value}}">
+            <slot name="left-icon" slot="left-icon" wx:if="{{useLeftIconSlot}}"></slot>
+            <slot name="right-icon" slot="right-icon" wx:if="{{useRightIconSlot}}"></slot>
+        </a>
+    </view>
+    <view class="c2c649" hoverClass="c11c56" hoverStayTime="70" wx:if="{{showAction||useActionSlot}}">
+        <slot name="action" wx:if="{{useActionSlot}}"></slot>
+        <view bind:tap="onCancel" class="c4d3f3 cancel-class" wx:else>{{actionText}}</view>
+    </view>
+</view>

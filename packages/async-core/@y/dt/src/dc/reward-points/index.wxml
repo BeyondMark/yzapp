@@ -1,0 +1,41 @@
+<view class="dc-reward-points" style="background-color:{{styleSetting.bgColor}}" wx:if="{{show}}">
+    <view class="card-container" style="margin:{{'6px '+styleSetting.pageMargin+'px'}}; border-radius:{{styleSetting.borderRadius+'px'}}; background-color:{{styleSetting.cardBgColor}}">
+        <view bind:tap="_p" class="mode-one reward-card" data-t="{{ tap:{en:'handleClick'} }}" wx:if="{{mode===1}}">
+            <view class="title">集点卡</view>
+            <view class="detail">
+                <block wx:if="{{rewardPointsData.unreceivedCollectionPointPic}}">
+                    <image class="reward-item img tee-image" lazyLoad="true" src="{{rewardPointsData.receivedCollectionPointPic}}" wx:if="{{rewardPointsData.imgType===ImgType.Img}}"></image>
+                    <view class="collect-poinit-iconfont {{rewardPointsData.receivedCollectionPointPic}} t-text" style="{{'font-size: 24px; line-height: 24px; color: '+themeColor}}" wx:if="{{rewardPointsData.imgType===ImgType.Icon}}"></view>
+                </block>
+                <view class="points">
+                    <view class="num t-text">{{rewardPointsData.pointsNum}}</view>
+                    <view class="all t-text">/{{rewardPointsData.costPoints}}</view>
+                </view>
+            </view>
+            <view class="description"> {{description}} </view>
+            <a bind:_init="_tic" color="{{themeColor}}" customClass="process" percentage="{{percentage}}" showPivot="{{false}}" strokeWidth="4"></a>
+            <view class="card-background">
+                <image class="img tee-image" lazyLoad="true" src="{{rewardPointsData.receivedCollectionPointPic}}" wx:if="{{rewardPointsData.imgType===ImgType.Img}}"></image>
+                <view class="collect-poinit-iconfont {{rewardPointsData.receivedCollectionPointPic}} t-text" style="font-size: 150px;color: #f2f2f299" wx:if="{{rewardPointsData.imgType===ImgType.Icon}}"></view>
+            </view>
+        </view>
+        <view bind:tap="_p" class="reward-card mode-two" data-t="{{ tap:{en:'handleClick'} }}" style="--page-margin:{{styleSetting.pageMargin+'px'}}" wx:if="{{mode===2}}">
+            <view class="title">集点卡</view>
+            <view class="detail">
+                <view class="name">{{rewardPointsData.name}}</view>
+                <view class="points">
+                    <view class="num t-text">{{rewardPointsData.pointsNum}}</view>
+                    <view class="all t-text">/{{rewardPointsData.costPoints}}</view>
+                </view>
+            </view>
+            <view class="reward-item-container" wx:if="{{rewardPointsData.unreceivedCollectionPointPic}}">
+                <block wx:if="{{rewardPointsData.imgType===ImgType.Img}}">
+                    <image class="reward-item img tee-image" lazyLoad="true" src="{{item?rewardPointsData.receivedCollectionPointPic:rewardPointsData.unreceivedCollectionPointPic}}" wx:for="{{rewardItemArray}}" wx:key="index"></image>
+                </block>
+                <block wx:if="{{rewardPointsData.imgType===ImgType.Icon}}">
+                    <view class="collect-poinit-iconfont reward-item {{item?rewardPointsData.receivedCollectionPointPic:rewardPointsData.unreceivedCollectionPointPic}} t-text" style="{{'font-size: 30px; color: '+(item?themeColor:'#999999')}}" wx:for="{{rewardItemArray}}" wx:key="index"></view>
+                </block>
+            </view>
+        </view>
+    </view>
+</view>

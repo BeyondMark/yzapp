@@ -1,0 +1,23 @@
+<view bind:tap="_p" data-t="{{ tap:{en:'_tprc'} }}" style="{{_pageStyleStr}}">
+    <view style="{{_pageStyle}}">
+        <view>
+            <view class="r-c">
+                <view class="r-undefined">
+                    <a bind:_init="_tic" nr="true" rmId="b29-0" wx:if="{{RM&&RM['b29-0']}}"></a>
+                    <d bind:_init="_tic" nr="true" rmId="b29-4" wx:if="{{RM&&RM['b29-4']}}"></d>
+                </view>
+            </view>
+            <view class="r-c KMfSzE">
+                <e bind:_init="_tic" nr="true" rmId="b29-2" wx:if="{{RM&&RM['b29-2']}}"></e>
+                <f bind:_init="_tic" nr="true" rmId="b29-1" wx:if="{{RM&&RM['b29-1']}}"></f>
+            </view>
+            <view class="r-c iWHYRp">
+                <g bind:_init="_tic" nr="true" rmId="@wsc-tee-common/app-content-append~VAtrAMhi" wx:if="{{RM&&RM['@wsc-tee-common/app-content-append~VAtrAMhi']}}"></g>
+            </view>
+            <h bind:_init="_tic" data-ref="van-toast" isPageDefault="{{true}}"></h>
+            <i bind:_init="_tic" data-ref="van-dialog" isPageDefault="{{true}}"></i>
+            <b bind:_init="_tic" id="van-toast"></b>
+            <c bind:_init="_tic" id="van-dialog"></c>
+        </view>
+    </view>
+</view>

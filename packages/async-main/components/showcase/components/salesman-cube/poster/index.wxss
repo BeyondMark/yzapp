@@ -1,0 +1,219 @@
+.poster {
+  text-align: center;
+}
+.poster .van-loading {
+  height: 400px;
+}
+.poster-pop {
+  display: flex;
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+  justify-content: center;
+}
+.poster-pop__wrapper {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.poster-pop__wrapper::-webkit-scrollbar {
+  width: 0 !important;
+  display: none;
+}
+.potser-active,
+.potser-pop__list {
+  position: relative;
+  width: 70px;
+  min-width: 70px;
+  height: 70px;
+  margin-right: 12px;
+  overflow: hidden;
+  font: normal normal normal 14px/1 vant-icon;
+}
+.potser-active-img,
+.potser-pop__list-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
+.popup-range {
+  position: relative;
+  background: #ebedf0;
+  width: 40px;
+  margin: 0 auto;
+  border-radius: 2px;
+  overflow: hidden;
+  height: 5px;
+  margin-top: 8px;
+}
+.popup-range__after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #c8c9cc;
+  border-radius: 2px;
+}
+.potser-active:before {
+  content: "";
+  color: #f44;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+}
+.potser-active:after {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 2px solid #f44;
+  height: 100%;
+  box-sizing: border-box;
+}
+.poster-tip {
+  margin: 16px 0;
+  line-height: 18px;
+  font-size: 13px;
+  color: #969799;
+}
+.poster-swiper {
+  width: 100%;
+  height: 100%;
+}
+.poster-swiper .poster-banner,
+.poster-swiper .van-loading {
+  margin-top: 25px;
+}
+.poster-box {
+  display: flex;
+  flex-direction: column;
+}
+.poster-banner__img--error,
+.poster-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  background: rgba(0, 0, 0, 0.3);
+}
+.poster-banner__img--error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 16px;
+}
+.poster-banner {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  padding: 12px 0;
+  border-bottom: 8px solid #f7f8fa;
+  flex: 1;
+  overflow-y: scroll;
+}
+.poster-banner__img {
+  width: 300px;
+  height: 100%;
+  transform: scale(0.85);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.1019607843);
+}
+.poster-banner__img.widthFix {
+  width: 300px;
+}
+.poster-banner__img-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  transform: scale(0.88);
+  box-sizing: border-box;
+}
+.poster-banner__img-container.active {
+  transform: scale(1);
+}
+.poster-banner:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  border: 1px solid #f2f3f5;
+  border-radius: 6px;
+}
+.poster-banner__bottom {
+  position: relative;
+  display: flex;
+  padding: 16px 8px;
+  justify-content: flex-start;
+  align-content: center;
+  background-color: #fff;
+}
+.poster-banner__bottom.single-btn {
+  padding: 16px 16px;
+  justify-content: center;
+}
+.poster-banner__bottom.single-btn .poster-banner__btn {
+  flex-basis: 300px;
+  background: #f44;
+}
+.poster-banner__btn {
+  position: relative;
+  display: flex;
+  flex-basis: 48px;
+  flex-direction: column;
+  width: 300px;
+  line-height: 36px;
+  border-radius: 18px;
+  font-size: 14px;
+  color: #fff;
+}
+.poster-banner__btn--icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 16px;
+  border-radius: 50%;
+}
+.poster-banner__btn--name {
+  max-width: 72px;
+  margin-top: 8px;
+  padding: 0 4px;
+  color: #646566;
+  line-height: 12px;
+  font-size: 12px;
+}
+.poster-authorize {
+  position: relative;
+  width: 100%;
+  color: #999;
+  font-size: 14px;
+}
+.poster-authorize__body {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.poster-authorize__btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 5px 20px;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}

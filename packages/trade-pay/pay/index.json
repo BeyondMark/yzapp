@@ -1,0 +1,37 @@
+{
+  "navigationBarTitleText": "待付款的订单",
+  "navigationStyle": "custom",
+  "backgroundColor": "#f9f9f9",
+  "usingComponents": {
+    "a": "./../rt/wsc-tee-trade-trade-buy-order-keep-local/rt/OrderKeepNavigator",
+    "b": "./../rt/wsc-tee-trade-trade-pay-page-setup-local/rt/Skeleton",
+    "c": "./../rt/wsc-tee-trade-trade-pay-block-container-local/rt/Main",
+    "d": "./../rt/wsc-tee-trade-trade-pay-block-container-local/rt/Main",
+    "e": "./../rt/wsc-tee-trade-trade-pay-block-container-local/rt/Main",
+    "f": "./../rt/wsc-tee-trade-trade-pay-block-container-local/rt/Main",
+    "g": "./../rt/wsc-tee-trade-trade-pay-block-container-local/rt/Main",
+    "h": "./../rt/wsc-tee-trade-trade-pay-block-container-local/rt/Main",
+    "i": "./../../goods-minor/rt/trade-buy-privacy-bill-local/rt/TradeBuyPrivacyBill",
+    "j": "./../rt/wsc-tee-trade-trade-pay-block-container-local/rt/Main",
+    "k": "./../rt/wsc-tee-trade-trade-pay-block-container-local/rt/Main",
+    "l": "./../rt/wsc-tee-trade-trade-pay-block-container-local/rt/Main",
+    "m": "./../rt/assets-tee-extensions-guarantee-ensure-local/rt/GuaranteeEnsure",
+    "n": "./../../async-feature-ext/rt/wsc-tee-shop-footer-local/rt/Main",
+    "o": "./../rt/wsc-tee-trade-trade-pay-submit-local/rt/Main",
+    "p": "./../../goods-main/rt/wsc-tee-shop-shop-rest-local/rt/Main",
+    "q": "./../../goods-minor/rt/assets-tee-extensions-cashier-local/rt/Main",
+    "r": "./../../goods-minor/rt/wsc-tee-trade-trade-buy-pay-view-local/rt/Main",
+    "s": "../../async-tee/@y-open/vt/native/weapp/toast/index/index",
+    "t": "../../async-tee/@y-open/vt/native/weapp/dialog/index/index",
+    "_": "../../../components/_/index"
+  },
+  "componentPlaceholder": {
+    "i": "_",
+    "n": "_",
+    "p": "_",
+    "q": "_",
+    "r": "_",
+    "s": "_",
+    "t": "_"
+  }
+}

@@ -1,0 +1,7 @@
+<view class="e16cd">
+    <view class="c852dd">{{item.name}}</view>
+    <image class="c2603 bd231" lazyLoad="true" src="{{image}}"></image>
+    <a bind:_init="_tic" bind:after-read="_p" data-t="{{ afterRead:{en:'afterRead'} }}" fileList="{{fileList}}" maxCount="{{1}}" previewFullImage="{{false}}">
+        <view class="c1b5b"></view>
+    </a>
+</view>

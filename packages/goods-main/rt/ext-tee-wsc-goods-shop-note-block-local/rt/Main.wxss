@@ -1,0 +1,21 @@
+.c15a5d {
+  box-sizing: border-box;
+  margin-top: var(--theme-page-ext-margin-top, 8px);
+  padding-bottom: var(--theme-page-outline-margin-bottom, 7px);
+  background: #fff;
+}
+.c15a5d:before {
+  content: "";
+  display: block;
+  margin: 0 16px;
+  border-top: var(--theme-page-ext-border-top, 0);
+}
+.c15a5d .c8bb95 {
+  padding-top: var(--theme-page-cell-padding, 10px);
+  padding-bottom: var(--theme-page-cell-padding, 10px);
+}
+.c3f363 {
+  font-size: 14px;
+  font-weight: var(--theme-common-field-font-weight, 500);
+  color: #323233;
+}

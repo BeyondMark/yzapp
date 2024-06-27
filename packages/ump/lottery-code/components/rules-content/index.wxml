@@ -1,0 +1,6 @@
+<view class="{{!isOpenRank&&!showSlide?'rules-content':''}}">
+    <view bind:tap="toggleRules" class="rules-tag {{showSlide?'rules-tag__left':''}}">规则</view>
+    <a bind:close="toggleRules" show="{{rulesVisible}}" title="活动规则">
+        <view class="rule" wx:for="{{rules}}" wx:key="{{ index }}">{{item}}</view>
+    </a>
+</view>

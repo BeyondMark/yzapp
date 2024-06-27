@@ -1,0 +1,16 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./SkuOrderAddressList",
+    "b": "./../../../wsc-tee-trade-trade-buy-self-fetch-address-local/rt/Main",
+    "c": "/@y-open/vt/dist/popup/index.weapp",
+    "d": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "e": "/packages/async-tee/@y-open/vt/dist/radio/index",
+    "f": "/@y-open/vt/dist/cell/index",
+    "g": "/@y-open/vt/dist/empty/index",
+    "h": "/@y-open/vt/dist/tab/index",
+    "i": "/@y-open/vt/dist/tabs/index",
+    "_": "../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "d": "_", "e": "_" }
+}

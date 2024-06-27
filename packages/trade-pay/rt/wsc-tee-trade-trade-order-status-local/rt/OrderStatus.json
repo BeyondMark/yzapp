@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../@y-open/vt/dist/steps/index",
+    "_": "../../../../../components/_/index"
+  }
+}

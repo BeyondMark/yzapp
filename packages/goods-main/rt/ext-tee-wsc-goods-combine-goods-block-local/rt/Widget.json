@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y/dt/src/captain/layout/layout",
+    "b": "/@y/dt/src/captain/layout/layout-item",
+    "c": "/@y/dt/src/captain/item-card/index",
+    "_": "../../../../../components/_/index"
+  }
+}

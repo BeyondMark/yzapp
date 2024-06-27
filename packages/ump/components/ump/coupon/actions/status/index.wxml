@@ -1,0 +1,1 @@
+<view class="coupon-status custom-class" style="{{style}}" wx:if="{{statusData.text}}">{{statusData.text}}</view>

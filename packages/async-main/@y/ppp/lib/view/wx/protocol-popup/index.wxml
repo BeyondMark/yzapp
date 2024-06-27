@@ -1,0 +1,24 @@
+<b bind:after-enter="onPopupEnter" bind:after-leave="onPopupAfterLeave" bind:before-enter="onPopupBeforeEnter" bind:before-leave="onPopupBeforeLeave" bind:click-overlay="onClickOverlay" customStyle="{{popupCustomStyle}}" duration="{{duration}}" position="bottom" rootPortal="{{true}}" round="{{true}}" show="{{show}}" zIndex="{{zIndex}}">
+    <view style="{{contentCustomStyle}}">
+        <view class="passport-protocol">
+            <slot name="ui-component" wx:if="{{useUIComponentSlot}}"></slot>
+            <block wx:else>
+                <view class="title">
+                    <slot name="title"></slot>
+                </view>
+                <view class="content">
+                    <slot name="content"></slot>
+                </view>
+            </block>
+            <view class="{{actionClass}}">
+                <view class="agree__area">
+                    <view bind:tap="onWxAgree" class="native {{loading?'native--disabled':''}}" wx:if="{{useNativeSlot}}">
+                        <slot name="agree-btn"></slot>
+                    </view>
+                    <a bind:agreeprivacyauthorization="onWxPrivacyAgree" bind:tap="onWxAgree" block="{{btnConfig.hideDisagree}}" buttonId="{{agreeBtnId}}" color="{{color}}" customClass="{{agreeBtnCls}}" customStyle="{{btnConfig.customStyle}}" disabled="{{!ready}}" loading="{{loading}}" openType="{{needPlatformPrivacyAuth?'agreePrivacyAuthorization':''}}" type="primary">{{btnConfig.agreeBtn||'允许'}}</a>
+                </view>
+                <a bind:tap="onDisagree" buttonId="{{disagreeBtnId}}" customClass="{{disagreeBtnCls}}" customStyle="{{'color:'+color+';'+btnConfig.customStyle}}" disabled="{{!ready||loading}}" plain="{{true}}" wx:if="{{!btnConfig.hideDisagree}}">{{btnConfig.disagreeBtn||'拒绝'}}</a>
+            </view>
+        </view>
+    </view>
+</b>

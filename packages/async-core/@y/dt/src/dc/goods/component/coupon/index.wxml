@@ -1,0 +1,26 @@
+<view bind:tap="_p" class="recommend-coupon" data-t="{{ tap:{en:'handleClick'} }}">
+    <view class="recommend-coupon__row" wx:if="{{isHorizontalLayout}}">
+        <view class="coupon-fetch"></view>
+        <view class="coupon-detail">
+            <view class="coupon-price">
+                <view class="value t-text"> {{opt.couponOpt.price}} </view>
+                <view class="unit t-text"> {{opt.couponOpt.unit}} </view>
+            </view>
+            <view class="threshold"> {{opt.couponOpt.threshold}} </view>
+        </view>
+    </view>
+    <view class="recommend-coupon__column {{verticalClass}}" wx:else>
+        <view class="coupon-detail">
+            <view class="coupon-price">
+                <view class="value t-text"> {{opt.couponOpt.price}} </view>
+                <view class="unit t-text"> {{opt.couponOpt.unit}} </view>
+            </view>
+            <view class="threshold"> {{threshold}} </view>
+        </view>
+        <view class="coupon-fetch">
+            <view class="title"> {{opt.couponOpt.title}} </view>
+            <view class="valid-time" wx:if="{{couponValidDesc}}"> {{couponValidDesc}} </view>
+            <view class="fetch-btn t-text"> 立即领取 </view>
+        </view>
+    </view>
+</view>

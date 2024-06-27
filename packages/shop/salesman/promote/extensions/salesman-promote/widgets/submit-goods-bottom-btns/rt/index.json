@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/shop/@vant/weapp/dist/button/index",
+    "b": "../../submit-task-award-tips/rt/index",
+    "c": "/packages/async-feature-ext/rt/wsc-tee-salesman-salesman-cube-block-local/widgets/rt/Widget",
+    "_": "../../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "c": "_" }
+}

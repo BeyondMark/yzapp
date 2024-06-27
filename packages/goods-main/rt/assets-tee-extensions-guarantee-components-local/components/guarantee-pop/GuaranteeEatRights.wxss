@@ -1,0 +1,123 @@
+.t-text {
+  text-decoration: inherit;
+}
+.t-text,
+.tee-image {
+  display: inline-block;
+}
+.tee-image {
+  width: 100%;
+  height: 100%;
+}
+.guarantee-eat_rights {
+  height: 80vh;
+}
+.guarantee-eat_rights__container {
+  position: relative;
+  width: 100%;
+  padding: 16px 0;
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+.guarantee-eat_rights__title {
+  font-size: 16px;
+  text-align: center;
+  color: #39393a;
+  font-weight: 700;
+  line-height: 22px;
+}
+.guarantee-eat_rights__content {
+  margin-top: 10px;
+  padding: 16px 12px;
+  overflow-y: auto;
+  flex: auto;
+  background-color: #f7f8fa;
+}
+.guarantee-eat_rights__green {
+  margin-bottom: 16px;
+  padding: 16px;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  background-image: url(https://b.yzcdn.cn/public_files/a4b651ac530eca4e611978112b01f30d.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  line-height: 18px;
+}
+.guarantee-eat_rights__green .icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+.guarantee-eat_rights__green .icon + span {
+  vertical-align: middle;
+}
+.guarantee-eat_rights__desc {
+  padding: 20px 16px;
+  background-color: #fff;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.guarantee-eat_rights__desc .desc1 {
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+}
+.guarantee-eat_rights__desc .desc2 {
+  margin-bottom: 8px;
+  margin-left: 16px;
+  font-size: 14px;
+  line-height: 18px;
+  display: list-item;
+}
+.guarantee-eat_rights__desc .desc2::marker {
+  font-size: 12px;
+  transform: scale(0.83);
+}
+.guarantee-eat_rights__desc .desc3 {
+  font-size: 12px;
+  color: #969799;
+  line-height: 16px;
+}
+.guarantee-eat_rights__support {
+  margin-bottom: 16px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 6px;
+}
+.guarantee-eat_rights__support .support1 {
+  margin-bottom: 32px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+}
+.guarantee-eat_rights__support .support2 {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.guarantee-eat_rights__support .support2 .support-item {
+  flex: 1;
+}
+.guarantee-eat_rights__support .support2 .support-item:not(:last-child) {
+  margin-right: 30px;
+}
+.guarantee-eat_rights__support .support2 .name {
+  margin-top: 10px;
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 14px;
+}
+.guarantee-eat_rights__support .support2 .desc {
+  font-size: 12px;
+  color: #969799;
+  line-height: 16px;
+}
+.guarantee-eat_rights__support .support2 .icon {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+}

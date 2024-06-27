@@ -1,0 +1,11 @@
+<view class="indicator {{cls}}" style="{{style}}">
+    <block wx:if="{{type===2}}">
+        <view class="dot {{index===current?'dot-active':''}} t-text" wx:for="{{imgs}}" wx:key="index"></view>
+    </block>
+    <block wx:elif="{{type===3}}">
+        <view class="dot-active t-text">{{current+1}}</view> /{{imgs.length}} </block>
+    <view class="dot t-text" wx:elif="{{type===4}}">{{current+1}}/{{imgs.length}}</view>
+    <block wx:else>
+        <view class="dot {{index===current?'dot-active':''}} t-text" wx:for="{{imgs}}" wx:key="index"></view>
+    </block>
+</view>

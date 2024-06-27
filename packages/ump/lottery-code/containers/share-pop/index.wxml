@@ -1,0 +1,10 @@
+<view>
+    <a actions="{{actions}}" bind:cancel="onCancel" bind:click-overlay="onCancel" bind:select="onSelect" cancelText="取消" show="{{showSheet}}"></a>
+    <b bind:click-overlay="onClose" customClass="share-popup" show="{{showPoster}}">
+        <view bindtap="onClose" class="share-popup__close"></view>
+        <view class="share-popup__content">
+            <image src="{{posterUrl}}"></image>
+        </view>
+        <view bind:tap="savePoster" class="share-popup__btn">保存图片</view>
+    </b>
+</view>

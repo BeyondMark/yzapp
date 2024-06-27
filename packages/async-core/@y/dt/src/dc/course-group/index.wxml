@@ -1,0 +1,9 @@
+<view class="{{'dc-course-group'}} {{opt.tabsOpt.templateType===0?'wrap':'nowrap'}}" id="{{curId}}">
+    <view style="height: 44px" wx:if="{{isSticky}}"></view>
+    <view class="{{isSticky?'edu-goods-tags-top--fixed':'edu-goods-tags-top--normal'}}" style="{{'top:'+stickyTop+'px; margin-bottom: 7px'+';width: '+tabWidth}}">
+        <a _opt="{{opt.tabsOpt}}" bind:_init="_tic" bind:change="_p" data-t="{{ change:{en:'changeTab'} }}" themeColors="{{themeColors}}"></a>
+    </view>
+    <view class="{{'dc-course-group-goods'}} {{'template_type'+opt.tabsOpt.templateType}}" wx:if="{{showGoodList}}">
+        <b _opt="{{opt.goodListOpt}}" bind:_init="_tic" buyerId="{{buyerId}}" currentGroup="{{currentGroup}}" kdtId="{{kdtId}}" shopInfo="{{shopInfo}}" themeColors="{{themeColors}}"></b>
+    </view>
+</view>

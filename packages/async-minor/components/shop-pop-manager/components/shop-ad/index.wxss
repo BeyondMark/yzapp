@@ -1,0 +1,49 @@
+.ad-popup {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  overflow: hidden;
+}
+.close-icon {
+  position: absolute;
+  width: 29px;
+  height: 29px;
+  background-image: url(https://img01.yzcdn.cn/weapp/wsc/B2MVjv.png);
+  background-repeat: no-repeat;
+  background-size: 29px;
+  left: 50%;
+  bottom: -66px;
+  transform: translateX(-50%);
+}
+.ad-button {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+.ad-button:after {
+  border: none !important;
+}
+.hotare-view-container {
+  position: relative;
+}
+.hotare-view {
+  position: absolute;
+}
+.dots {
+  margin-top: 32rpx;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.dots .dot {
+  background: hsla(0, 0%, 100%, 0.5);
+}
+.dots .active-dot,
+.dots .dot {
+  width: 8rpx;
+  height: 8rpx;
+  border-radius: 50%;
+}
+.dots .active-dot {
+  background: #fff;
+}

@@ -1,0 +1,14 @@
+<view class="captcha-bottom">
+    <view class="links">
+        <b bind:_init="_tic" bind:change="_p" checkedColor="#155bd4" data-t="{{ change:{en:'onChange'} }}" iconSize="16px" value="{{checked}}">
+            <view class="warn t-text">我已经阅读并同意</view>
+            <view bind:tap="_p" class="link t-text" data-t="{{ tap:{en:'handleViewAgreement'} }}">        《用户使用协议》
+      </view>
+        </b>
+    </view>
+    <view class="btns">
+        <a bind:_init="_tic" bind:tap="_p" block="{{true}}" color="{{theme}}" customClass="btns-btn" data-t="{{ tap:{en:'handleSubmit'} }}" disabled="{{disabled}}" loading="{{loading}}">      确定
+    </a>
+    </view>
+    <view bind:tap="_p" class="action" data-t="{{ tap:{en:'handleChangeMode'} }}"> {{modeChangeText}} </view>
+</view>

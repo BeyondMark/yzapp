@@ -1,0 +1,66 @@
+<bh bind:_init="_tic" class="{{pageClassName}} {{pageDeviceClass}}" fixedBottom="{{fixedBottom}}" forbidCopyright="{{true}}" pageBgColor="{{pageBgColor}}" pageContainerItemStyle="{{pageContainerItemStyle}}" pageContainerStyle="{{pageContainerStyle}}">
+    <bi bind:_init="_tic" show="{{!hideSkeleton}}" wx:if="{{globalCustomLoading}}"></bi>
+    <view wx:elif="{{!hideSkeleton}}">
+        <view style="display: flex;position: fixed;width: 100%;height: 100vh;background: #f7f8fa;z-index: 49;"></view>
+        <view style="width:100vw;height:100vh;position: fixed;left: 0;right: 0;bottom: 0;top: 72px;z-index: 50;background: #f7f8fa url('https://img01.yzcdn.cn/public_files/2020/09/21/6274ce7d710084ada330e16f6b6f6157.png');background-size: 100% auto;"></view>
+    </view>
+    <view style="{{_pageStyle}}">
+        <view>
+            <view class="c964a4">
+                <view class="c964a4 xXuuJD">
+                    <a bind:_init="_tic" nr="true" rmId="b36-1" wx:if="{{_normal&&RM&&RM['b36-1']}}"></a>
+                    <b bind:_init="_tic" nr="true" rmId="b36-27" useCustomTitleSlot="{{true}}" wx:if="{{_normal&&RM&&RM['b36-27']}}"></b>
+                    <c bind:_init="_tic" nr="true" rmId="b36-24" wx:if="{{_normal&&RM&&RM['b36-24']}}"></c>
+                    <d bind:_init="_tic" nr="true" rmId="b36-29" wx:if="{{_normal&&RM&&RM['b36-29']}}"></d>
+                    <e bind:_init="_tic" nr="true" rmId="b36-32" wx:if="{{_post&&RM&&RM['b36-32']}}"></e>
+                </view>
+            </view>
+            <view class="c964a4">
+                <view class="c964a4 xKKSLV">
+                    <f bind:_init="_tic" nr="true" rmId="b36-28" wx:if="{{_normal&&RM&&RM['b36-28']}}"></f>
+                </view>
+                <view class="c964a4 zRMKyj">
+                    <g bind:_init="_tic" nr="true" rmId="b36-7" wx:if="{{_normal&&RM&&RM['b36-7']}}"></g>
+                </view>
+                <view class="c964a4 htPYWu">
+                    <h bind:_init="_tic" nr="true" rmId="b36-3" wx:if="{{_normal&&RM&&RM['b36-3']}}"></h>
+                    <i bind:_init="_tic" nr="true" rmId="b36-41" wx:if="{{_normal&&RM&&RM['b36-41']}}"></i>
+                </view>
+                <view class="c964a4 CknbJr">
+                    <j bind:_init="_tic" block="{{true}}" nr="true" rmId="b36-34" wx:if="{{_normal&&RM&&RM['b36-34']}}"></j>
+                </view>
+                <view class="c964a4 YHEecx">
+                    <k bind:_init="_tic" nr="true" rmId="b36-42" wx:if="{{_normal&&RM&&RM['b36-42']}}"></k>
+                    <l bind:_init="_tic" nr="true" rmId="b36-19" wx:if="{{_normal&&RM&&RM['b36-19']}}"></l>
+                    <m bind:_init="_tic" isOrderPage="{{true}}" nr="true" rmId="b36-38" wx:if="{{_normal&&RM&&RM['b36-38']}}"></m>
+                </view>
+                <view class="c964a4 tGOwdQ">
+                    <n bind:_init="_tic" nr="true" rmId="b36-8" wx:if="{{_post&&RM&&RM['b36-8']}}"></n>
+                </view>
+                <view class="c964a4 NyUGsQ">
+                    <o bind:_init="_tic" nr="true" rmId="b36-6" wx:if="{{_post&&RM&&RM['b36-6']}}"></o>
+                    <p bind:_init="_tic" nr="true" rmId="b36-9" wx:if="{{_normal&&RM&&RM['b36-9']}}"></p>
+                    <q bind:_init="_tic" nr="true" rmId="b36-17" wx:if="{{_post&&RM&&RM['b36-17']}}"></q>
+                </view>
+                <view class="c964a4 CvcvSh">
+                    <r bind:_init="_tic" nr="true" rmId="b36-4" wx:if="{{_post&&RM&&RM['b36-4']}}"></r>
+                    <s bind:_init="_tic" nr="true" rmId="b36-31" wx:if="{{_post&&RM&&RM['b36-31']}}"></s>
+                    <t bind:_init="_tic" nr="true" rmId="b36-12" yzGuaranteeEnsureMt="{{32}}" wx:if="{{_post&&RM&&RM['b36-12']}}"></t>
+                    <u bind:_init="_tic" nr="true" rmId="b36-35" wx:if="{{_normal&&RM&&RM['b36-35']}}"></u>
+                    <v bind:_init="_tic" nr="true" rmId="b36-5" wx:if="{{_post&&RM&&RM['b36-5']}}"></v>
+                    <w bind:_init="_tic" nr="true" rmId="b36-16" wx:if="{{_post&&RM&&RM['b36-16']}}"></w>
+                    <x bind:_init="_tic" nr="true" rmId="b36-18" wx:if="{{_post&&RM&&RM['b36-18']}}"></x>
+                    <y bind:_init="_tic" nr="true" rmId="b36-25" wx:if="{{_post&&RM&&RM['b36-25']}}"></y>
+                    <z bind:_init="_tic" nr="true" rmId="b36-36" wx:if="{{_normal&&RM&&RM['b36-36']}}"></z>
+                    <ba bind:_init="_tic" nr="true" rmId="b36-14" wx:if="{{_normal&&RM&&RM['b36-14']}}"></ba>
+                    <bb bind:_init="_tic" nr="true" rmId="b36-0" wx:if="{{RM&&RM['b36-0']}}"></bb>
+                    <bc bind:_init="_tic" isShowNav="{{false}}" nr="true" rmId="b36-37" wx:if="{{_normal&&RM&&RM['b36-37']}}"></bc>
+                    <bd bind:_init="_tic" nr="true" rmId="b36-44" wx:if="{{_normal&&RM&&RM['b36-44']}}"></bd>
+                    <be bind:_init="_tic" nr="true" rmId="b36-33" wx:if="{{_normal&&RM&&RM['b36-33']}}"></be>
+                </view>
+            </view>
+            <bf bind:_init="_tic" data-ref="van-toast" isPageDefault="{{true}}"></bf>
+            <bg bind:_init="_tic" data-ref="van-dialog" isPageDefault="{{true}}"></bg>
+        </view>
+    </view>
+</bh>

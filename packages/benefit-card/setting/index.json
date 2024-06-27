@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "会员信息设置",
+  "usingComponents": {
+    "a": "/pages/common/page-container/index",
+    "b": "../@vant/weapp/dist/cell-group/index",
+    "c": "../@vant/weapp/dist/cell/index",
+    "d": "../@vant/weapp/dist/button/index",
+    "_": "../../../components/_/index"
+  }
+}

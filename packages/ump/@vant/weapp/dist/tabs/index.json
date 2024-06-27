@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../info/index",
+    "b": "../sticky/index",
+    "_": "../../../../../../components/_/index"
+  }
+}

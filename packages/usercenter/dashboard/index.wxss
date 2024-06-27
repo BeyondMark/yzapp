@@ -1,0 +1,20 @@
+.r-c {
+  flex-direction: column;
+}
+.r-c,
+.r-r {
+  display: flex;
+}
+.r-r {
+  flex-direction: row;
+}
+.KUBydD {
+  z-index: 1;
+}
+.kBUEip,
+.KUBydD {
+  position: relative;
+}
+.kBUEip {
+  z-index: 10000;
+}

@@ -1,0 +1,1 @@
+<a bindmessage="onPostMessage" src="{{src}}"></a>

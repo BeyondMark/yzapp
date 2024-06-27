@@ -1,0 +1,12 @@
+<a bind:close="onClose" customClass="code-pop" show="{{showCodePop}}" showBtn="{{false}}" useHeaderSlot="{{true}}">
+    <view class="code-pop__header" slot="header">
+        <view class="header-title">{{currentTickets.title}}</view>
+        <view class="header-desc">码越多，中奖率越大<block wx:if="{{activity.isOpenRank}}">，排名前{{activity.topNum}}名必得奖品</block>
+        </view>
+    </view>
+    <view class="code-list">
+        <view class="code" wx:for="{{currentTickets.tickets}}" wx:for-item="ticket" wx:key="{{ ticket }}">{{ticket}}</view>
+    </view>
+    <view bind:tap="onShare" class="code-pop-btn">邀请好友抽奖，得更多幸运码</view>
+    <view class="btn-tip">每邀请1位好友 奖励<text class="strong">1</text>个</view>
+</a>

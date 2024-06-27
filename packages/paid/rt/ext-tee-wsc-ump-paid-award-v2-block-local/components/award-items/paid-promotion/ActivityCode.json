@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../Container",
+    "b": "./../../widgets/ConcatButton",
+    "c": "/@y-open/vt/dist/button/index.weapp",
+    "_": "../../../../../../../components/_/index"
+  }
+}

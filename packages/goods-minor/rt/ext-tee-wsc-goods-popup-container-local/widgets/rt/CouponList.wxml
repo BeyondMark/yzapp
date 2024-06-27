@@ -1,0 +1,17 @@
+<view class="visit-coupon-list {{couponListClass}}">
+    <view wx:if="{{detail.fetchedCoupons.length>0}}">
+        <view wx:for="{{detail.fetchedCoupons}}" wx:for-item="coupon">
+            <a bind:_init="_tic" bind:close="_p" bind:subscribe-message="_p" coupon="{{coupon}}" data-t="{{ close:{en:'onClose'},subscribeMessage:{en:'subscribeMessage'} }}" disabled="{{false}}" hideProtocol="{{1}}" kdtId="{{detail.kdtId}}" rmId="{{i[0]}}" source="{{source}}" wx:if="{{i[1]}}" wx:for="{{[ [rmId,rmId==='b7-39'],[rmId,rmId==='b33-5'] ]}}" wx:for-item="i" wx:key="0"></a>
+        </view>
+    </view>
+    <view class="visit-coupon-list__tips" wx:if="{{detail.subTitle}}">
+        <view class="tips-content">
+            <view class="text t-text">{{detail.subTitle}}</view>
+        </view>
+    </view>
+    <view wx:if="{{detail.payCoupons.length>0}}">
+        <view wx:for="{{detail.payCoupons}}" wx:for-item="coupon">
+            <a bind:_init="_tic" bind:close="_p" bind:subscribe-message="_p" coupon="{{coupon}}" data-t="{{ close:{en:'onClose'},subscribeMessage:{en:'subscribeMessage'} }}" disabled="{{true}}" hideProtocol="{{1}}" kdtId="{{detail.kdtId}}" rmId="{{i[0]}}" source="{{source}}" wx:if="{{i[1]}}" wx:for="{{[ [rmId,rmId==='b7-39'],[rmId,rmId==='b33-5'] ]}}" wx:for-item="i" wx:key="0"></a>
+        </view>
+    </view>
+</view>

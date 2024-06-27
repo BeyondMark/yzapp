@@ -1,0 +1,5 @@
+<view class="err-info">
+    <view class="err-info__title">{{detail.title}}</view>
+    <view class="err-info__desc" vIf="detail.desc">{{detail.desc}}<navigator class="err-info__btn" url="{{detail.link}}" wx:if="{{detail.link}}">{{detail.btnText}}</navigator>
+    </view>
+</view>

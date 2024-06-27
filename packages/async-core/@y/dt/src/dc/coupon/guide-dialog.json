@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y/ppt/lib/user-authorize/index",
+    "b": "/@y-open/vt/dist/button/index.weapp",
+    "c": "/@y-open/vt/dist/popup/index.weapp",
+    "_": "../../../../../../../components/_/index"
+  }
+}

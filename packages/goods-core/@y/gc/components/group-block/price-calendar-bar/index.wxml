@@ -1,0 +1,3 @@
+<view class="c2fb27">
+    <a bind:_init="_tic" class="c6fc04" item="{{item}}" wx:if="{{item.isEnable||item.price}}" wx:for="{{priceBarList}}"></a>
+</view>

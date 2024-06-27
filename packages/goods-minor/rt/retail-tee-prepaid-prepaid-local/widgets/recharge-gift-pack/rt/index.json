@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../recharge-list/components/GiftPack",
+    "_": "../../../../../../../components/_/index"
+  }
+}

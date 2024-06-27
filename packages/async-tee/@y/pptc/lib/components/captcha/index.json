@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-main/@y/pptb/lib/behavior/index",
+    "b": "/@y-open/vt/dist/popup/index.weapp",
+    "c": "./password",
+    "d": "./sms",
+    "_": "../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

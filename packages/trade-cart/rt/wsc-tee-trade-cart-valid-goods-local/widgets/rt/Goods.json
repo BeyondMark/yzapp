@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../../wsc-tee-trade-common-widgets-local/rt/Price",
+    "b": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "c": "/packages/async-tee/@y-open/vt/dist/tag/index",
+    "d": "/packages/async-tee/@y-open/vt/native/weapp/toast/index/index",
+    "e": "../../../../@y/wsc-tee-trade-common/components/Stepper",
+    "f": "./../../components/SaleCountDown",
+    "g": "./../../components/ComboDetail",
+    "_": "../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_", "c": "_", "d": "_" }
+}

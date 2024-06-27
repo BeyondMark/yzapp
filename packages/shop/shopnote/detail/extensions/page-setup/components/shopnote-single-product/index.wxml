@@ -1,0 +1,9 @@
+<view class="shopnote-single-product">
+    <b headPicUrl="{{headPhoto}}"></b>
+    <view class="shopnote-single-product__content">
+        <a title="{{noteData.title}}"></a>
+        <d list="{{noteData.highLights}}"></d>
+        <e time="{{noteData.publishTime}}" wx:if="{{noteData.showPublishTime}}"></e>
+        <c bind:gotoBuy="gotoBuy" bind:shareclick="shareClick" bind:thumbclick="thumbClick" goodsNum="{{goodsInfo.goods.length}}" showGoodsBtn="{{!!goodsInfo.goods.length}}" single="{{true}}" thumbsStatus="{{thumbsStatus}}"></c>
+    </view>
+</view>

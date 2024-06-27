@@ -1,0 +1,16 @@
+<view bindtap="viewOrderHandle" class="order-pay-prompt-popup-goods">
+    <view class="goods-img">
+        <image class="goods-image" src="{{imgUrl}}"></image>
+    </view>
+    <view class="goods-info">
+        <view class="goods-title">{{goodsName}}</view>
+        <view class="goods-desc">
+            <text class="normal-text">应付</text>
+            <text class="unit-text">¥</text>
+            <text class="price-text-yuan">{{yuan}}</text>
+            <text class="price-text-fen">.</text>
+            <text class="price-text-fen">{{fen}}</text>
+            <text class="rights-text" wx:if="{{service}}">{{service}}</text>
+        </view>
+    </view>
+</view>

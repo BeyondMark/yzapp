@@ -1,0 +1,41 @@
+<view>
+    <view class="self-fetch" wx:if="{{show}}">
+        <k bind:_init="_tic" bind:tap="_p" customStyle="padding: 16px 16px 12px 12px;background-image: url('https://img01.yzcdn.cn/upload_files/2023/04/26/FmC9yYlY7vZECarDjS1PGFUu7zZt.png');background-position: right top;background-size: auto 100%;background-repeat: no-repeat;" data-t="{{ tap:{en:'onClickAddress'} }}" showArrow="{{false}}" wx:if="{{isRetailOrderScene}}">
+            <view class="c13e75">
+                <view class="c51c1d">
+                    <view class="c840aa">
+                        <i bind:_init="_tic" color="var(--tag-bg, #f2f2ff)" customClass="c80b3f" hairline="{{themeTag.plain}}" plain="{{themeTag.plain}}" textColor="var(--tag-text, #323233)" wx:if="{{!showAddressTab}}">自提
+              </i> {{selfFetchShop.name||'选择提货地址'}} <h bind:_init="_tic" class="c66512" color="#969799" name="arrow" size="16px"></h>
+                    </view>
+                    <view class="afeb9 t-multi-bde46--l2 bde46"> {{selfFetchShopStringFormat}} </view>
+                </view>
+                <view class="c1311e">
+                    <l bind:_init="_tic" distance="{{selfFetchShop.distanceStr}}" wx:if="{{selfFetchShop.distanceStr}}"></l>
+                </view>
+            </view>
+            <f bind:_init="_tic" rmId="b36-13" wx:if="{{rmId==='b36-28'}}"></f>
+        </k>
+        <k bind:_init="_tic" bind:tap="_p" data-t="{{ tap:{en:'onClickAddress'} }}" showArrow="{{canSelectSelfFetchAddress}}" wx:else>
+            <view class="c840aa">
+                <i bind:_init="_tic" color="var(--tag-bg, #f2f2ff)" customClass="c80b3f" hairline="{{themeTag.plain}}" plain="{{themeTag.plain}}" textColor="var(--tag-text, #323233)" wx:if="{{!showAddressTab}}">自提
+          </i> {{selfFetchShop.name||'选择提货地址'}} </view>
+            <view class="afeb9 t-multi-bde46--l2"> {{selfFetchShopStringFormat}} </view>
+        </k>
+        <g bind:_init="_tic" bind:tap="_p" border="{{false}}" customClass="d5a4c" data-t="{{ tap:{en:'onClickContact'} }}" isLink="{{true}}" title="{{isRetailOrderScene?'联系人':'提货人'}}" value="{{selfFetchContactStringFormat}}" valueClass="b50f0" wx:if="{{retailSelfFetchContact.showName&&retailSelfFetchContact.showPhone||!isRetailOrderScene}}"></g>
+        <j bind:_init="_tic" bind:change="_p" border="{{false}}" customStyle="padding: 10px 12px" data-t="{{ change:{en:'onChangeRetailContact'} }}" inputAlign="right" label="联系人" placeholder="请输入联系人" value="{{retailSelfFetchContact.name}}" wx:elif="{{retailSelfFetchContact.showName}}"></j>
+        <j bind:_init="_tic" bind:change="_p" border="{{false}}" customStyle="padding: 10px 12px" data-t="{{ change:{en:'onChangeRetailPhone'} }}" errorMessage="{{retailPhoneErrorMsg}}" errorMessageAlign="center" inputAlign="right" label="预留电话" maxlength="{{11}}" placeholder="请输入您的预留电话" type="number" useButtonSlot="{{true}}" value="{{retailSelfFetchContact.phone}}" wx:elif="{{retailSelfFetchContact.showPhone}}">
+            <e bind:_init="_tic" bind:getPhone="_p" customStyle="margin-left: 8px; margin-right: 4px; color: #333;" data-t="{{ getPhone:{en:'getRetailPhone'} }}" rmId="b36-13" slot="button" wx:if="{{rmId==='b36-28'}}"></e>
+        </j>
+        <block wx:if="{{isRetailOrderScene}}">
+            <c bind:_init="_tic" customClass="d5a4c" rmId="b36-13" valueClass="b50f0" wx:if="{{rmId==='b36-28'}}"></c>
+        </block>
+        <g bind:_init="_tic" bind:tap="_p" border="{{false}}" customClass="d5a4c" data-t="{{ tap:{en:'onClickTime'} }}" isLink="{{canSelectSelfFetchTime}}" title="提货时间" titleStyle="flex-grow: 0;flex-shrink: 0;min-width: 60px;" titleWidth="70px" value="{{selfFetchTimeStringFormat}}" valueClass="{{useGeneralClass}}" wx:if="{{showSelfFetchTime}}"></g>
+    </view>
+    <block wx:if="{{initContactList}}">
+        <b addText="新增提货人" bind:_init="_tic" bind:add="_p" bind:close="_p" bind:edit="_p" bind:select="_p" data-ref="contactList" data-t="{{ close:{en:'onCloseContactList'},select:{en:'selectContact'},add:{en:'onAddContact'},edit:{en:'onEditContact'} }}" id="contact-list" rmId="b36-43" show="{{showContactList}}" title="选择提货人" wx:if="{{rmId==='b36-28'}}"></b>
+    </block>
+    <a bind:_init="_tic" bind:close="_p" bind:confirm="_p" config="{{selfFetch}}" data-ref="timePicker" data-t="{{ confirm:{en:'onTimePickerConfirm'},close:{en:'onCloseTimePicker'} }}" id="time-picker" rmId="b36-43" show="{{showTimePicker}}" tips="{{selfFetch.tips}}" titles="{{['选择自提时间','选择自提时间']}}" type="selfFetch" value="{{selfFetch.time}}" wx:if="{{rmId==='b36-28'}}"></a>
+    <block wx:if="{{isRetailOrderScene}}">
+        <d bind:_init="_tic" bind:select-address="_p" data-t="{{ selectAddress:{en:'onClickAddress'} }}" detail="{{selfFetchShopStringFormat}}" distance="{{selfFetchShop.distanceStr}}" name="{{selfFetchShop.name}}" rmId="b36-13" wx:if="{{rmId==='b36-28'}}"></d>
+    </block>
+</view>

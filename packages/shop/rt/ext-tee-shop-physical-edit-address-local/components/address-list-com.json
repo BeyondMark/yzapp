@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./address-item-com",
+    "_": "../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,11 @@
+<view>
+    <b bind:tap="showPopUp" border="{{false}}" customClass="goods-coupon" data-coupons-number="{{couponsNumber}}" isLink="{{couponsNumber>1}}" wx:if="{{couponsNumber>0}}">
+        <view slot="title">
+            <view>
+                <text class="m-promotion__label">发券({{couponsNumber}})</text>
+                <text class="goods-coupon__info">{{optimalCouponData.couponText}}</text>
+            </view>
+        </view>
+    </b>
+    <a bind:close="hidePopUp" rmId="{{rmId}}" show="{{isShow}}" wx:if="{{rmId==='b29-0'}}"></a>
+</view>

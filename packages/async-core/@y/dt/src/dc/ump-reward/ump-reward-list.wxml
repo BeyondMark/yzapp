@@ -1,0 +1,21 @@
+<view class="showcase-meet-reduction">
+    <a bind:_init="_tic" loading="{{loading}}">
+        <b _opt="{{opt.layoutOpt}}" bind:_init="_tic" customClass="{{'cap-layout-'+opt.layoutOpt.type}}">
+            <block wx:for="{{goodsList}}" wx:key="index">
+                <view class="hybrid-line" wx:if="{{item.type==='hybrid-line'}}">
+                    <view class="{{'cap-layout-item'}} {{opt.layoutOpt.type}}" itemIndex="{{subIndex}}" style="{{subItem.layoutItemWrapStyle}}" wx:for="{{item.items}}" wx:for-index="subIndex" wx:for-item="subItem" wx:key="subIndex">
+                        <view style="{{capLayoutItemStyle}}">
+                            <c _opt="{{...subItem,isTagsShow:true}}" bind:_init="_tic" bind:button-click="_p" bind:item-click="_p" data-t="{{ buttonClick:{en:'handleItemClick'},itemClick:{ en:'handleItemClick',args:[index,subItem] } }}"></c>
+                        </view>
+                    </view>
+                </view>
+                <view class="{{'cap-layout-item'}} {{opt.layoutOpt.type}} {{item.isShowOutGoods?'cap-item-sell-out':''}}" style="{{item.layoutItemWrapStyle}}" wx:else>
+                    <view style="{{capLayoutItemStyle}}">
+                        <c _opt="{{...item,isTagsShow:true}}" bind:_init="_tic" bind:button-click="_p" bind:item-click="_p" data-t="{{ buttonClick:{en:'handleItemClick'},itemClick:{ en:'handleItemClick',args:[index,item] } }}"></c>
+                    </view>
+                </view>
+            </block>
+        </b>
+        <d _opt="{{text:'查看更多',iconType:'arrow-right'}}" bind:_init="_tic" bind:load-more="_p" data-t="{{ loadMore:{en:'handleClickViewMore'} }}" iconType="arrow" text="查看更多" wx:if="{{hasMore}}"></d>
+    </a>
+</view>

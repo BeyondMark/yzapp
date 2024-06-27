@@ -1,0 +1,44 @@
+@keyframes open {
+  0% {
+    bottom: -50%;
+  }
+  to {
+    bottom: 0;
+  }
+}
+.ee668 .t-popup {
+  animation: open 0.5s infinite;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.ad1e4 {
+  font-size: 16px;
+  line-height: 44px;
+  height: 44px;
+  text-align: center;
+}
+.cd66d {
+  padding: 16px 16px 32px;
+  overflow: auto;
+  font-size: 13px;
+  color: #323233;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  z-index: 1;
+  position: relative;
+  flex: 1;
+}
+.cd66d > p {
+  margin-bottom: 15px;
+}
+.c41842 {
+  width: 100%;
+  padding: 7px 16px;
+  background: #fff;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.ed658 {
+  line-height: 40px;
+  height: 40px;
+}

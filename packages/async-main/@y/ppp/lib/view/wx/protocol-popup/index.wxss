@@ -1,0 +1,71 @@
+.passport-protocol-popup {
+  border-radius: 16px 16px 0 0 !important;
+}
+.passport-protocol {
+  box-sizing: border-box;
+  color: #000;
+  background: #fff;
+  padding: 24px 24px 0;
+}
+.passport-protocol .title {
+  font-size: 15px;
+  line-height: 24px;
+  text-align: center;
+  font-weight: 400;
+}
+.passport-protocol .content {
+  font-size: 14px;
+  line-height: 26px;
+  text-align: left;
+  max-height: 220px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.passport-protocol .action {
+  margin-top: 24px;
+}
+.passport-protocol .action .agree__area {
+  position: relative;
+}
+.passport-protocol .action .agree__area .native {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: transparent;
+  opacity: 0;
+}
+.passport-protocol .action .agree__area .native--disabled {
+  pointer-events: none;
+}
+.passport-protocol .action .action__btn {
+  width: 100%;
+  margin: 0 0 8px 0;
+  height: 40px !important;
+  border: none !important;
+  border-radius: 4px !important;
+  font-size: 14px !important;
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+}
+.passport-protocol .action .agree-block-preset {
+  color: #155bd4 !important;
+}
+.passport-protocol .action__btn-multiple {
+  margin: 24px 0 0;
+}
+.passport-protocol .action__btn-multiple .disagree {
+  margin-right: 16px;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none;
+}
+.passport-protocol .action__btn-multiple .disagree-block-preset {
+  color: #576b95 !important;
+}
+.web-padding {
+  padding-bottom: 54px;
+}

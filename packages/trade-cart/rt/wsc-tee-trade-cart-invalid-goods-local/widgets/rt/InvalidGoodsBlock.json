@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../rt/InvalidGoods",
+    "_": "../../../../../../components/_/index"
+  }
+}

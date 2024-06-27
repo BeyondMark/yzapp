@@ -1,0 +1,10 @@
+.dc-new-zone {
+  overflow: hidden;
+  border-radius: 8px;
+}
+.dc-new-zone .main {
+  padding: 8px;
+  margin: 0 8px 8px;
+  background-color: #fff;
+  border-radius: 10px;
+}

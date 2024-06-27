@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../../../@y/wsc-tee-trade-common/components/OrderActionSheetPopup",
+    "b": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "c": "/packages/async-tee/@y-open/vt/dist/picker/index",
+    "d": "/packages/async-tee/@y-open/vt/dist/notice-bar/index",
+    "e": "../../../../../@y-open/vt/dist/tree-select/index",
+    "_": "../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_", "c": "_", "d": "_" }
+}

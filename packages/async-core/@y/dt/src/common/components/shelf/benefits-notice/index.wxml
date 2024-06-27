@@ -1,0 +1,7 @@
+<a bind:_init="_tic" bind:close="_p" customStyle="background: transparent" data-t="{{ close:{en:'handleClose'} }}" show="{{afterFetchDataShow}}" zIndex="10000">
+    <view class="container">
+        <b bind:_init="_tic" thresholdType="{{memThresholdType}}" thresholdValue="{{memThresholdValue}}" wx:if="{{registryState===RegistryState.Threshold}}">
+            <view bind:tap="_p" class="pop__close-btn" data-t="{{ tap:{en:'handleClose'} }}" slot="head"></view>
+        </b>
+    </view>
+</a>

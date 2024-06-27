@@ -1,0 +1,19 @@
+<view>
+    <a bind:_init="_tic" class="img-upload-field">
+        <view class="field-label"> {{fieldLabel}} <view class="optional-label" wx:if="{{!fieldInfo.feRequired}}">（选填）</view>
+        </view>
+        <view class="field-input">
+            <view class="upload-wrapper">
+                <b bind:_init="_tic" bind:tap="_p" class="upload-delete-icon" data-t="{{ tap:{en:'deleteImage'} }}" name="clear" wx:if="{{fieldValue}}"></b>
+                <view bind:tap="_p" class="van-uploader" data-t="{{ tap:{en:'uploadImage'} }}">
+                    <image class="uploaded-img tee-image" lazyLoad="true" mode="aspectFit" src="{{fieldValue}}" wx:if="{{fieldValue}}"></image>
+                    <view wx:else>
+                        <c bind:_init="_tic" wx:if="{{isUploading}}"></c>
+                        <b bind:_init="_tic" customClass="van-icon-photograph" name="photograph" wx:else></b>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </a>
+    <d bind:_init="_tic" data-ref="van-toast"></d>
+</view>

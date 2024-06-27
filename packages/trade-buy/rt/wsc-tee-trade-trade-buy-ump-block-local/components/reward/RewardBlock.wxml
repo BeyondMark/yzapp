@@ -1,0 +1,10 @@
+<view>
+    <view bind:tap="_p" class="c886bf c412a1" data-t="{{ tap:{en:'showRewardPopup'} }}" wx:if="{{isBest}}">
+        <view class="c085a4"> {{promotionInfo.promotionTag}} </view>
+        <a bind:_init="_tic" name="arrow" size="12"></a>
+    </view>
+    <view class="c886bf" wx:if="{{isReward}}">
+        <view> {{promotionInfo.promotionTag}} </view>
+        <view bind:tap="_p" class="c8ba99" data-t="{{ tap:{en:'confirmBestPrice'} }}">使用最佳优惠</view>
+    </view>
+</view>

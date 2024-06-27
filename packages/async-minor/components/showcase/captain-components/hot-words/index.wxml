@@ -1,0 +1,7 @@
+<view class="cap-hot-words-box {{isSingle?'cap-hot-words-box-inline':''}}">
+    <view class="hot-words-title" wx:if="{{config.title}}">{{config.title}}</view>
+    <view class="hot-words-fire" wx:if="{{isSingle}}">
+        <a color="#ee0a24" name="fire"></a>热搜</view>
+    <b bind:search="handleSearch" data-index="{{index}}" data-word-item="{{item}}" extraCls="{{extraCls}}" item="{{item}}" showHot="{{config.is_hot}}" themeStyle="{{hotStyle}}" wx:for="{{hot}}" wx:key="{{ index }}"></b>
+    <b bind:search="handleSearch" data-index="{{hot.length+index}}" data-word-item="{{item}}" item="{{item}}" wx:for="{{normal}}" wx:key="{{ index }}"></b>
+</view>

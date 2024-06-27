@@ -1,0 +1,1 @@
+<a bind:_init="_tic" bind:click-handle="_p" data-t="{{ clickHandle:{en:'clickHandle'} }}" info="{{formatInfo}}" isWxReceipt="{{isWxReceipt}}" themeColor="{{themeColor}}"></a>

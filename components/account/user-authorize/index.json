@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y/ppt/lib/user-authorize/index",
+    "b": "/packages/async-main/components/account/protocol/ecloud-custom/index",
+    "_": "../../_/index"
+  },
+  "componentPlaceholder": { "b": "_" }
+}

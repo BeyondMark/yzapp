@@ -1,0 +1,31 @@
+<view class="b4e6d">
+    <view class="c76048 c716ae" wx:if="{{storeGiftsInfo.coupons&&storeGiftsInfo.coupons.length>0}}">
+        <view class="c5ad1 c89585">[送优惠券]</view>
+        <view class="c0edb4">
+            <view class="b878d" wx:for="{{storeGiftsInfo.coupons}}" wx:for-item="items" wx:key="id"> {{index!==storeGiftsInfo.coupons.length-1?items.couponText+';':items.couponText}} </view>
+        </view>
+    </view>
+    <view class="c76774 c716ae" wx:if="{{storeGiftsInfo.couponsCode&&storeGiftsInfo.couponsCode.length>0}}">
+        <view class="c9e6e5 c89585">[送优惠码]</view>
+        <view class="c9bdc9">
+            <view wx:for="{{storeGiftsInfo.couponsCode}}" wx:for-item="items" wx:key="id"> {{index!==storeGiftsInfo.couponsCode.length-1?items.couponText+';':items.couponText}} </view>
+        </view>
+    </view>
+    <view class="e5751 c716ae" wx:if="{{presents.length>0}}">
+        <view class="c6d35b c89585">[送赠品]</view>
+        <view class="c4d0fa">
+            <view class="c0a289" wx:for="{{presents}}" wx:for-item="items" wx:key="goodsId">
+                <view class="c030d9">
+                    <image class="c8a677 bd231" lazyLoad="true" mode="aspectFit" src="{{items.imgUrl}}"></image>
+                </view>
+                <view class="f1001">
+                    <view class="c0469d">{{items.title}}</view>
+                    <view class="c6207a">
+                        <view class="c481e7 c89585">{{items.sku}}</view>
+                        <view class="c9a047 c89585">x{{items.num}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

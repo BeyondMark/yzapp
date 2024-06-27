@@ -1,0 +1,7 @@
+<view class="count-box">
+    <view class="viewport" style="width:{{length-3===index||length<3&&index===0?_options.cellWidth+12:_options.cellWidth}}px;height:{{_options.height}}px;" wx:for="{{columns}}" wx:key="index">
+        <view class="column-wrap" style="transform: translate3d(0, -{{keys[index]*_options.height}}px, 0);transition-duration:{{_options.during}}s; transition-timing-function:{{_options.ease}}">
+            <view class="item" style="color:{{_options.color}};height:{{_options.height}}px;line-height: {{_options.height}}px;{{_options.columnStyle}}" wx:for="{{item}}" wx:for-index="idx" wx:for-item="row" wx:key="idx">{{row}}</view>
+        </view>
+    </view>
+</view>

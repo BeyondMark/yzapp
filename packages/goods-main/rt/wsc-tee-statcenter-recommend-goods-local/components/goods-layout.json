@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y/dt/src/captain/item-card/index",
+    "b": "./extra/note",
+    "c": "./extra/coupon",
+    "_": "../../../../../components/_/index"
+  }
+}

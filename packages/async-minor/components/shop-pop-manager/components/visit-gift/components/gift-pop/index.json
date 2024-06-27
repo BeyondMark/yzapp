@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@vant/weapp/dist/popup/index",
+    "b": "../error-info/index",
+    "c": "../coupon-list/index",
+    "_": "../../../../../../../../components/_/index"
+  }
+}

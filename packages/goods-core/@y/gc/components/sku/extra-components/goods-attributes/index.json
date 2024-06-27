@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./Item",
+    "b": "./../../components/SkuRow",
+    "_": "../../../../../../../../components/_/index"
+  }
+}

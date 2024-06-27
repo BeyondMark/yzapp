@@ -1,0 +1,20 @@
+.c011a8 {
+  display: inline-flex;
+  user-select: none;
+}
+.b0e26 {
+  display: inline-block;
+  margin-right: 4px;
+  position: relative;
+}
+.b0e26:last-child {
+  margin-right: 0;
+}
+.c9982a {
+  position: absolute !important;
+  left: 0;
+  top: 50%;
+  width: 0.5em;
+  overflow: hidden;
+  transform: translateY(-50%);
+}

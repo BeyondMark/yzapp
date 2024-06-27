@@ -1,0 +1,7 @@
+<view class="f885f {{iPhoneX&&!isClose?'c3c97':''}}">
+    <view class="c57a5e {{isPutaway?'e4f8d':''}} {{isClose?'c716f6':''}} {{isExpansion?'c1180a':''}}" wx:if="{{show}}">
+        <a bindonstatus="putawayHandle" bindreceived="receivedHandle" binduse="useHandle" countDownNum="{{countDownNum}}" couponData="{{couponData}}" couponStatus="{{couponStatus}}" logParams="{{logParams}}" searchText="{{searchText}}" themeClass="{{themeClass}}" wx:if="{{!isPutaway&&!isClose&&isGetCoupon}}"></a>
+        <b bindonstatus="closeHandle" bindreceived="receivedHandle" binduse="useHandle" couponData="{{couponData}}" couponStatus="{{couponStatus}}" logParams="{{logParams}}" wx:if="{{isPutaway&&!isClose&&isGetCoupon}}"></b>
+    </view>
+    <c id="van-toast"></c>
+</view>

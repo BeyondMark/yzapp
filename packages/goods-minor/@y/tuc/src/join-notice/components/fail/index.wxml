@@ -1,0 +1,40 @@
+<view class="e98a7">
+    <view class="c3fee2">入会仅剩一步</view>
+    <view class="c81671" wx:if="{{needCompleteRegistrationInfo}}">
+        <view class="f62dc">需要补全注册信息</view>
+    </view>
+    <view class="c81671" wx:if="{{!needCompleteRegistrationInfo&&mode===LevelMode.GROWTH}}">
+        <view class="f90f0">      再获得
+      <view class="c4dd42">{{growthValue}}</view>      成长值，即可成为会员
+    </view>
+        <view class="c29bfe" wx:for="{{missionList}}" wx:key="index">
+            <view class="c4c841">
+                <image class="c40dec bd231" lazyLoad="true" src="{{item.icon}}"></image>
+            </view>
+            <view class="ae15a">
+                <view class="c42f60">{{item.subTitle}}</view>
+                <view class="b82bc">+{{item.reward}}成长值</view>
+            </view>
+            <a bind:_init="_tic" bind:tap="_p" customClass="d92cf" data-t="{{ tap:{ en:'handleGrowthClick',args:[item.urlParams] } }}" size="mini">        去完成
+      </a>
+        </view>
+    </view>
+    <view class="c81671" wx:if="{{!needCompleteRegistrationInfo&&mode===LevelMode.CONSUME}}">
+        <view class="f62dc" wx:if="{{consumeTextObject.isOnceConsume}}">      单笔消费
+      <view class="c4dd42">{{consumeTextObject.price}}元</view>      ，即可成为会员
+    </view>
+        <view class="f62dc" wx:if="{{!consumeTextObject.isOnceConsume}}">      再消费
+      <view class="c4dd42" wx:if="{{consumeTextObject.price}}"> {{consumeTextObject.price}}元
+      </view> {{consumeTextObject.hasOr?' 或 ':''}} <view class="c4dd42" wx:if="{{consumeTextObject.times}}"> {{consumeTextObject.times}}笔
+      </view>      ，即可成为会员
+    </view>
+        <a bind:_init="_tic" bind:tap="_p" customClass="cbda7" data-t="{{ tap:{en:'handleConsumeClick'} }}">      去逛逛
+    </a>
+    </view>
+    <view class="c81671" wx:if="{{!needCompleteRegistrationInfo&&mode===LevelMode.STORE}}">
+        <view class="f62dc">      再充值<view class="c4dd42">{{storeValue}}元</view>，即可成为会员
+    </view>
+        <a bind:_init="_tic" bind:tap="_p" customClass="cbda7" data-t="{{ tap:{en:'handleStoreClick'} }}">      去充值
+    </a>
+    </view>
+</view>

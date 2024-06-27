@@ -1,0 +1,20 @@
+<h template="{{themeTemplate}}">
+    <view capture-bind:tap="handleRootTap" class="page-container {{deviceType}} {{isTabPage||isNativeTabPage?'page-container--tab-bottom':''}} {{fixedBottom?'page-container--fixed-bottom':''}} page-container-class" style="background-color: {{hasSkeleton?'transparent':pageBgColorData}}; {{pageContainerStyle}}">
+        <g bind:onProtocolInitListen="onProtocolInitListen" noAutoAuth="{{noAutoAuth}}" zIndex="{{protocolIndex}}" wx:if="{{!noProtocol}}"></g>
+        <view class="container {{hasSkeleton?'container--skeleton':''}}" style="{{pageContainerItemStyle}}">
+            <slot name="page-top-hook"></slot>
+            <f featureNavConfig="{{true}}" navigationbarConfigData="{{navigationbarConfigData}}" openCustomNav="{{openCustomNav}}" switchPageOptions="{{switchPageOptions}}" titleText="{{titleText}}" wx:if="{{showCanDeferComponent}}"></f>
+            <d buyerAddress="{{buyerAddress}}" isRetailShelf="{{isRetailShelf}}" navigationbarConfigData="{{navigationbarConfigData}}" showServiceDue="{{showServiceDue}}" showShopStatus="{{showShopStatus}}" showStoreSwitch="{{showStoreSwitch}}" switchPageOptions="{{switchPageOptions}}" wx:if="{{shop.hasBase&&showCanDeferComponent}}"></d>
+            <slot></slot>
+        </view>
+        <block wx:if="{{!forbidCopyrightData&&showCanDeferComponent}}">
+            <b extraClipboardData="{{extraClipboardData}}" isShowStoreInfo="{{isShowStoreInfo}}" pageBgColor="{{copyrightBgColor}}" wx:if="{{!customCopyright}}"></b>
+            <slot name="copyright" wx:else></slot>
+        </block>
+        <e wx:if="{{showCanDeferComponent}}"></e>
+        <c wx:if="{{showCanDeferComponent}}"></c>
+        <a wx:if="{{showCanDeferComponent}}"></a>
+        <view class="page-bottom-hook"></view>
+        <slot name="page-bottom-hook"></slot>
+    </view>
+</h>

@@ -1,0 +1,52 @@
+.ranking-mark {
+  position: absolute;
+  left: 4px;
+  width: 28px;
+  height: 29px;
+  line-height: 27px;
+  font-size: 13px;
+  color: #969799;
+  font-weight: 700;
+  font-family: Avenir Next Condensed;
+  text-align: center;
+  background-image: url(https://b.yzcdn.cn/wsc-h5-statcenter/recommend-showcase-page/ranking_marks_sprite.png);
+  background-size: 27px;
+  background-repeat: no-repeat;
+}
+.ranking-mark.rank-1-to-3 {
+  top: 0;
+}
+.ranking-mark.rank-above-3 {
+  top: 3px;
+  height: 27px;
+}
+.ranking-mark--1 {
+  background-position: 0-1px;
+}
+.ranking-mark--2 {
+  background-position: 0-32px;
+}
+.ranking-mark--3 {
+  background-position: 0-63px;
+}
+.ranking-mark--4 {
+  background-position: 0-92px;
+}
+.ranking-mark--5 {
+  background-position: 0-119px;
+}
+.ranking-mark--6 {
+  background-position: 0-146px;
+}
+.ranking-mark--7 {
+  background-position: 0-173px;
+}
+.ranking-mark--8 {
+  background-position: 0-200px;
+}
+.ranking-mark--9 {
+  background-position: 0-227px;
+}
+.ranking-mark--10 {
+  background-position: 0-254px;
+}

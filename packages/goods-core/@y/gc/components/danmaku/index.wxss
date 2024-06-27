@@ -1,0 +1,26 @@
+.a002d {
+  --danmaku-distance: -50000px;
+  --danmaku-duration: 700000ms;
+  position: absolute;
+  top: 8px;
+  left: 100%;
+  will-change: transform;
+  transition: opacity 0.2s ease;
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateZ(0);
+  }
+  to {
+    transform: translate3d(-50000px, 0, 0);
+    transform: translate3d(var(--danmaku-distance, -50000px), 0, 0);
+  }
+}
+.a002d.c09941 {
+  animation: slideLeft linear 1 forwards;
+  animation-duration: 700s;
+  animation-duration: var(--danmaku-duration, 700s);
+}
+.a002d.d13c3 {
+  animation-play-state: paused;
+}

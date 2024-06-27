@@ -1,0 +1,87 @@
+.coupon-box {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  border-radius: 4px;
+  background: linear-gradient(to bottom right, #fff6eb, #fff0db);
+  flex-direction: row;
+  position: relative;
+  margin-bottom: 8px;
+  color: #b66f0f;
+}
+.coupon-box .left-icon,
+.coupon-box .right-icon {
+  top: 26px;
+  width: 6px;
+  height: 12px;
+  background-color: #fff;
+  position: absolute;
+}
+.coupon-box .left-icon {
+  left: 0;
+  border-radius: 0 12px 12px 0;
+}
+.coupon-box .right-icon {
+  right: 0;
+  border-radius: 12px 0 0 12px;
+}
+.coupon-box .left-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  height: 48px;
+  border-right: 1px dashed rgba(182, 111, 15, 0.2);
+  width: 29.1%;
+}
+.coupon-box .left-part .name {
+  font-size: 16px;
+  font-weight: 700;
+}
+.coupon-box .left-part .num {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 700;
+  margin-left: 5px;
+}
+.coupon-box .left-part .unit {
+  margin: 12px 0 0 2px;
+}
+.coupon-box .right-part {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 12px;
+  font-size: 12px;
+  width: 60%;
+}
+.coupon-box .right-part .name {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  line-height: 18px;
+}
+.coupon-box .right-part .name,
+.coupon-box .right-part .use-condition {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.disable-coupon {
+  background: inherit;
+  background-color: #f7f8fa;
+  color: #969799 !important;
+}
+.disable-coupon .left-part {
+  border-right: 1px dashed rgba(150, 151, 153, 0.2);
+}
+.small-size-style .left-part {
+  width: 35.6%;
+}
+.small-size-style .right-part {
+  width: 55%;
+}
+.small-size-style .right-part .max-width-normal {
+  max-width: 122px;
+}

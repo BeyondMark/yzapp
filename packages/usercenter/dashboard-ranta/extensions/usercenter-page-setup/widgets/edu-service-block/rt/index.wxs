@@ -1,0 +1,9 @@
+function updateMomentsName(services, momentsName) {
+  return services.map(function (service) {
+    if (service.type === "moments") {
+      service.title = momentsName;
+    }
+    return service;
+  });
+}
+module.exports = { updateMomentsName: updateMomentsName };

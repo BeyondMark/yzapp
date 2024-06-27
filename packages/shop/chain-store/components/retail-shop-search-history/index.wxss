@@ -1,0 +1,46 @@
+.history-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 32rpx;
+}
+.history-container .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24rpx;
+}
+.history-container .header .title {
+  font-size: 26rpx;
+  color: #646566;
+}
+.history-container .header .delete-img {
+  width: 32rpx;
+  height: 32rpx;
+}
+.history-container .body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.history-container .body .keyword {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12rpx 16rpx;
+  margin-right: 16rpx;
+  margin-bottom: 16rpx;
+  background-color: #f2f3f5;
+  border-radius: 32rpx;
+  flex-grow: 0;
+  max-width: 100%;
+}
+.history-container .body .keyword-content {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 28rpx;
+  color: #323233;
+}

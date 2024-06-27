@@ -1,0 +1,9 @@
+<view class="e31d0">
+    <view class="c9cccd {{'sku-block__btn'}} {{btnItem.disable?'c58929':''}}" wx:for="{{opt.buttons}}" wx:for-item="btnItem" wx:key="index">
+        <a allowDeny="{{btnItem.auth.authAllowDeny}}" authTypeList="{{btnItem.auth.authTypeList}}" bind:_init="_tic" bind:auth-popup-show="_p" bind:next="_p" class="a2636" customStyle="{{btnItem.auth.authStyle}}" data-t="{{ next:{ en:'onBtnClick',args:[btnItem] },authPopupShow:{en:'onPopupShow'} }}" kdtId="{{opt.kdtId}}" scene="{{btnItem.auth.authScene}}" type="separate">
+            <button class="c7b111 {{btnItem.primary?'c0f989':''}}">
+                <view class="c0d7f2 c89585"> {{btnItem.text}}</view>
+            </button>
+        </a>
+    </view>
+</view>

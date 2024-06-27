@@ -1,0 +1,15 @@
+<view class="slide-popup__control slide-popup__control--{{status}}">
+    <view bindtap="handleExceptionRefresh" class="slide-popup__control__placeholder">
+        <view wx:if="{{status==='limit'}}">
+            <a class="icon" name="cross"></a>
+            <text>失败过多，点此重试</text>
+        </view>
+        <view wx:elif="{{status==='exception'}}">
+            <a class="icon" name="info-0"></a>
+            <text>加载失败，请重试</text>
+        </view>
+        <view wx:else>{{statusText}}</view>
+    </view>
+    <slot></slot>
+    <view class="slide-popup__control-mask" style="width: {{slideData.initLeft}}px;"></view>
+</view>

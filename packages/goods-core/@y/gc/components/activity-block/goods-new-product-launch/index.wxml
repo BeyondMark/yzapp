@@ -1,0 +1,12 @@
+<view class="c717c7" style="{{themeVars}}" wx:if="{{isProductLaunch}}">
+    <view class="d5d3d">{{title}}</view>
+    <view class="c37b51">
+        <a bind:_init="_tic" class="c65ec0" color="{{theme['general']}}" percentage="{{!isWaitSold?50:0}}" showPivot="{{false}}" strokeWidth="2" trackColor="#dcdee0"></a>
+        <view class="c9c1de">
+            <view class="c1cb25 ef346">预约</view>
+            <view class="c1cb25 {{!isWaitSold?'ef346':''}}">抢购</view>
+            <view class="c1cb25">发货</view>
+        </view>
+    </view>
+    <view class="c07cc6">{{desc}}</view>
+</view>

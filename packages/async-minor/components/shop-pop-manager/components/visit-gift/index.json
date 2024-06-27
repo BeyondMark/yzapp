@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./components/gift-pop/index",
+    "b": "./components/rule-pop/index",
+    "c": "/components/account/user-authorize/index",
+    "_": "../../../../../../components/_/index"
+  }
+}

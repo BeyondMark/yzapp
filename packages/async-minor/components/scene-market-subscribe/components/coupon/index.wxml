@@ -1,0 +1,15 @@
+<view class="coupon-box {{smallSize?'small-size-style':''}} {{endCount?'disable-coupon':''}}">
+    <view class="left-part">
+        <view class="name" wx:if="{{couponData.couponName}}">{{couponData.couponName}}</view>
+        <view wx:else>
+            <text class="num" style="{{valueStyle}}">{{couponData.value}}</text>
+            <text class="unit">{{couponData.unit}}</text>
+        </view>
+    </view>
+    <view class="right-part">
+        <view class="name {{maxWidthStyle}}">{{couponData.title}}</view>
+        <view class="use-condition {{maxWidthStyle}}" wx:if="{{couponData.useCondition}}">{{couponData.useCondition}}</view>
+    </view>
+    <view class="left-icon"></view>
+    <view class="right-icon"></view>
+</view>

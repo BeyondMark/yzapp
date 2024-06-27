@@ -1,0 +1,19 @@
+<view>
+    <view class="c90f0c" wx:if="{{isUmpBannerV2}}">
+        <view wx:if="{{!isShowImgTitle}}">{{activityTitle}}</view>
+        <image class="c21f0c bd231" lazyLoad="true" mode="heightFix" src="{{bannerTitleImg}}" wx:else></image>
+    </view>
+    <view class="d1d6e {{countDownForced?'c7ab35':''}} {{showCountDownTime?'':'c5bf2'}} {{isUmpBannerV2?'c64e90':''}}" style="{{fontSizeText}}">
+        <view class="c1cb25"> {{remainObj.remainDesc}} </view>
+        <view class="cbbb1" wx:if="{{showCountDownTime}}">
+            <view class="c1203d c89585" wx:if="{{remainObj.day}}">{{remainObj.day}}天</view>
+            <view class="cd961" wx:if="{{!showMilliseconds}}">{{remainObj.hour}}</view>
+            <view class="fe8ea c89585" wx:if="{{!showMilliseconds}}">:</view>
+            <view class="cd961">{{remainObj.minute}}</view>
+            <view class="fe8ea c89585">:</view>
+            <view class="cd961">{{remainObj.second}}</view>
+            <view class="fe8ea c89585" wx:if="{{showMilliseconds}}">.</view>
+            <view class="cd961" wx:if="{{showMilliseconds}}">{{remainObj.milliseconds}}</view>
+        </view>
+    </view>
+</view>

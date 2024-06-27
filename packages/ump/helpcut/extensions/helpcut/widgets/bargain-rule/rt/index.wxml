@@ -1,0 +1,8 @@
+<view class="bargain-rule">
+    <view bind:tap="openRules" class="rule-description">玩法规则</view>
+    <a bind:close="closeRules" customClass="rules-popup" position="bottom" round="{{true}}" show="{{rulesVisible}}">
+        <view class="popup-title">玩法规则</view>
+        <b rmId="{{rmId}}" wx:if="{{rmId==='b13-0'}}"></b>
+        <button bind:tap="closeRules" class="rules-btn">知道了</button>
+    </a>
+</view>

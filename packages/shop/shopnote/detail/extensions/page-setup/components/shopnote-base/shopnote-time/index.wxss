@@ -1,0 +1,6 @@
+.shopnote-time {
+  font-size: 12px;
+  color: #999;
+  line-height: 18px;
+  margin: 20px 0;
+}

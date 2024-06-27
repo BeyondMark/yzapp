@@ -1,0 +1,25 @@
+<view bind:tap="toggleLuckyCode" class="award-content">
+    <text>我的幸运码：{{userDrawResultDTO.codeNum}} 个</text>
+    <text class="award-content__result">{{myCodeDesc}}<text class="code-arrow" wx:if="{{!(status===4&&!userDrawResultDTO.lotteryStatus)}}"></text>
+    </text>
+</view>
+<a bind:close="toggleLuckyCode" customClass="{{isOpenRank&&showBoard?'lucky-code':''}}" show="{{showLuckCode}}" title="{{isOpenRank&&showBoard?'排行榜':'我的幸运码'}}">
+    <text bind:tap="toggleContent" class="back-text" wx:if="{{isOpenRank&&!showBoard}}">返回</text>
+    <view class="leader-board" wx:if="{{isOpenRank&&showBoard}}">
+        <view bind:tap="toggleContent" class="leader-board__cell">
+            <b class="cell-detail" imgUrl="{{avatar}}" label="幸运码数" title="{{nickName}}" value="{{userDrawResultDTO.codeNum}}">
+                <text class="my-codes" slot="desc">{{userDrawResultDTO.ranking}}</text>
+            </b>
+            <c customClass="arrow" name="arrow"></c>
+        </view>
+        <view class="leader-board__title">排行榜，前<text class="strong">{{topNum}}</text>名必中</view>
+        <scroll-view bindscrolltolower="getRankingList" class="leader-board__lists" scrollY="{{true}}">
+            <b customClass="list-detail" imgUrl="{{item.avatar}}" label="幸运码数" title="{{item.nickName}}" value="{{item.weight}}" wx:for="{{leaderBoard}}" wx:key="{{ item.userId }}">
+                <text class="ranking-number {{index<3?'tag-'+index:''}}">{{index>=3?item.ranking:''}}</text>
+            </b>
+        </scroll-view>
+    </view>
+    <scroll-view bindscrolltolower="getCodeList" class="code-list" scrollY="{{true}}" wx:else>
+        <b customClass="code-detail" desc="{{code.timeStr}}" imgUrl="{{code.imgSrc}}" title="{{code.title}}" titleClass="code-detail__title" value="{{code.code}}" wx:for="{{codeList}}" wx:for-item="code" wx:key="code.id"></b>
+    </scroll-view>
+</a>

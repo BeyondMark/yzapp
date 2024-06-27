@@ -1,0 +1,76 @@
+.title-bar {
+  margin: 24px 0 16px;
+  font-family: PingFangSC-Semibold;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #333;
+}
+.title-bar:after,
+.title-bar:before {
+  content: "";
+  display: inline-block;
+  width: 28px;
+  height: 13px;
+  background: url(https://img01.yzcdn.cn/public_files/2018/10/26/af59631fc6797f85c2aaad02bf6440e5.png)
+    50%no-repeat;
+  background-size: 28px 13px;
+}
+.title-bar:before {
+  margin-right: 12px;
+}
+.title-bar:after {
+  transform: rotate(180deg);
+  margin-left: 12px;
+}
+.user-list {
+  margin: 0 16px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 8px;
+}
+.user-list .list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.user-list .list-left {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-family: PingFangSC-Medium;
+}
+.user-list .list-left__img {
+  margin-right: 10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.user-list .list-right {
+  text-align: right;
+}
+.user-list .list-right .money {
+  font-family: PingFangSC-Medium;
+  font-size: 12px;
+  color: #ee0a24;
+}
+.user-list .list-right .money strong {
+  font-size: 18px;
+}
+.user-list .list:last-child {
+  margin-bottom: 0;
+}
+.user-list .has-max-money {
+  margin-top: 2px;
+  font-size: 10px;
+  color: #faab0c;
+}
+.user-list .has-max-money:before {
+  content: "";
+  display: inline-block;
+  background: url(https://b.yzcdn.cn/public_files/0637c9be59ab6230e192c97a2a06b742.png);
+  background-size: 100%;
+  width: 14px;
+  height: 8px;
+}

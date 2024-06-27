@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../../../@y-open/vt/native/weapp/field/index/index",
+    "b": "./bottom",
+    "_": "../../../../../../../components/_/index"
+  }
+}

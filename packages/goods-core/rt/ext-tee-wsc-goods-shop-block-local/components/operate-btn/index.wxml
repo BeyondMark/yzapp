@@ -1,0 +1,5 @@
+<view class="{{'c4f85b'}} {{isIconInBottom?'a3301':''}}">
+    <view bind:tap="_p" class="fc8ac f66f6" data-t="{{ tap:{en:'clickShopBtn'} }}">
+        <view class="c89585">进店逛逛</view>
+    </view>
+</view>

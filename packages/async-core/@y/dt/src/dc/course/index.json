@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../captain/paidcontent/title/index",
+    "b": "./../../captain/paidcontent/knowledge-good/index",
+    "_": "../../../../../../../components/_/index"
+  }
+}

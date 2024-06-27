@@ -1,0 +1,20 @@
+{
+  "navigationBarTextStyle": "white",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "a": "/pages/common/page-container/index",
+    "b": "./containers/navigation-bar/index",
+    "c": "./containers/header-wrap/index",
+    "d": "./containers/task-list/index",
+    "e": "./containers/description-wrap/index",
+    "f": "./containers/winner-list/index",
+    "g": "./containers/goods-list/index",
+    "h": "./containers/prize-pop/index",
+    "i": "./containers/share-pop/index",
+    "j": "./containers/code-pop/index",
+    "k": "./containers/code-sku/index",
+    "l": "./containers/handsel-pop/index",
+    "m": "./containers/end-card/index",
+    "_": "../../../components/_/index"
+  }
+}

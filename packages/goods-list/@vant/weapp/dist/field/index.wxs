@@ -1,0 +1,12 @@
+var style = require("p_./@vant/weapp/dist/wxs/style.wxs");
+var addUnit = require("p_./@vant/weapp/dist/wxs/add-unit.wxs");
+function inputStyle(autosize) {
+  if (autosize && autosize.constructor === "Object") {
+    return style({
+      "min-height": addUnit(autosize.minHeight),
+      "max-height": addUnit(autosize.maxHeight),
+    });
+  }
+  return "";
+}
+module.exports = { inputStyle: inputStyle };

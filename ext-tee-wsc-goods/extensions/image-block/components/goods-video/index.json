@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/goods-core/@y/gc/components/image-block/video-controls/index",
+    "b": "/@y-open/tu/src/video/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "view" }
+}

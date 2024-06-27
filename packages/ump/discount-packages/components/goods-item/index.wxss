@@ -1,0 +1,74 @@
+@import "/common/css/helper/index.wxss";
+.goods-item {
+  display: flex;
+  position: relative;
+  padding: 5px 0;
+  background-color: #fff;
+  text-align: left;
+  color: #323233;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+.goods-item__thumb {
+  margin-right: 10px;
+  width: 90px;
+  height: 90px;
+}
+.goods-item__img {
+  width: 100%;
+  height: 100%;
+}
+.goods-item__content {
+  flex: 1;
+  position: relative;
+  height: 90px;
+}
+.goods-item__title {
+  line-height: 16px;
+  max-height: 32px;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.goods-item__desc {
+  margin-top: 2px;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #666;
+  font-size: 12px;
+}
+.goods-item__bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  line-height: 16px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+.goods-item__price {
+  display: inline-block;
+  margin-right: 12px;
+  color: #f03535;
+}
+.goods-item__origin {
+  color: #666;
+  white-space: nowrap;
+}
+.goods-item__origin--del {
+  text-decoration: line-through;
+  color: #999;
+}
+.goods-item__num {
+  position: absolute;
+  right: 0;
+  color: #666;
+}
+.sku-arrow {
+  position: relative;
+  top: 4px;
+}

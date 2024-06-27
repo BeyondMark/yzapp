@@ -1,0 +1,21 @@
+<e bind:_init="_tic" bind:close="_p" bind:confirm="_p" btnTextColor="var(--general, #323233)" buttonPlain="{{true}}" buttonText="不使用会员优惠" color="var(--general, #323233)" data-t="{{ close:{en:'onClose'},confirm:{ en:'onSelect',args:[''] } }}" disablePadding="{{true}}" popupClass="c713e5" show="{{show}}" showClose="{{true}}" title="会员优惠">
+    <view class="c18375">
+        <view class="c22408" wx:if="{{display.openDisplayCard}}">      当前已勾选购买付费卡，若选择使用已有会员优惠则将会取消购买付费卡。
+    </view>
+        <b bind:_init="_tic" customClass="c21813">
+            <a bind:_init="_tic" bind:tap="_p" border="{{false}}" center="{{true}}" clickable="{{true}}" customClass="c530cd" data-t="{{ tap:{ en:'onSelect',args:[item.id] } }}" label="{{item.desc}}" labelClass="c6c84b" wx:for="{{customerCards.list}}" wx:key="id">
+                <view class="c6e2c7" slot="title"> {{item.name}} <c bind:_init="_tic" class="c3209" color="{{themeTag.plain?'var(--tag-bg)':'var(--tag-bg, #f2f2ff)'}}" customClass="a6a41" hairline="{{themeTag.plain}}" plain="{{themeTag.plain}}" round="{{true}}" textColor="{{themeTag.plain?'var(--tag-text)':'var(--tag-text, #323233)'}}" type="danger" wx:if="{{index===0}}">            推荐
+          </c>
+                </view>
+                <d bind:_init="_tic" checkedColor="{{themeColors['main-bg']}}" customClass="ed9cf" name="{{item.id}}" slot="right-icon" value="{{customerCards.id}}"></d>
+            </a>
+            <view wx:if="{{unavailableCustomerCards.list.length}}">
+                <view class="c752d1">以下权益卡本店不可用</view>
+                <a bind:_init="_tic" border="{{false}}" center="{{true}}" customClass="c530cd" label="{{item.desc}}" labelClass="df893" wx:for="{{unavailableCustomerCards.list}}" wx:key="id">
+                    <view class="c6e2c7 c81c4e" slot="title"> {{item.name}} </view>
+                    <d bind:_init="_tic" customClass="ed9cf" disabled="{{true}}" slot="right-icon"></d>
+                </a>
+            </view>
+        </b>
+    </view>
+</e>

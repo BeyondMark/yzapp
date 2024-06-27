@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y/dt/src/dc/goods/index",
+    "_": "../../../../../components/_/index"
+  }
+}

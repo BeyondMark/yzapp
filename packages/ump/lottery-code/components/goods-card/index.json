@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../my-code/index",
+    "b": "../main-btns/index",
+    "_": "../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,3 @@
+<view class="custom-class {{utils.bem( 'divider',[ {dashed:dashed,hairline:hairline},contentPosition ] )}}" style="{{computed.rootStyle( {borderColor:borderColor,textColor:textColor,fontSize:fontSize,customStyle:customStyle} )}}">
+    <slot></slot>
+</view>

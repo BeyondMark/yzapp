@@ -1,0 +1,29 @@
+<a bind:close="onClose" closeIcon="arrow-left" closeIconPosition="top-left" closeable="{{true}}" position="bottom" round="{{true}}" show="{{value}}" zIndex="{{zIndex}}">
+    <view class="guarantee-pickup">
+        <view class="guarantee-pickup__container">
+            <text class="guarantee-pickup__title">{{data.title}}</text>
+            <view class="guarantee-pickup__content" wx:if="data.content">
+                <view class="guarantee-pickup__green">
+                    <image class="icon" src="{{logo}}"></image>
+                    <text style="font-size: 14px; font-weight: bold">{{data.title}}</text>
+                    <view style="margin-top: 6px; text-align: left">{{data.content.shortDesc}}</view>
+                </view>
+                <view class="guarantee-pickup__desc">
+                    <view>服务简介</view>
+                    <view wx:if="{{!data.content.desc.text}}">{{data.content.desc}}</view>
+                    <view wx:else>
+                        <text style="{{foo.isBold(data.content.desc.strong,rindex)?'font-weight: bold':''}}" wx:for="{{data.content.desc.text}}" wx:for-index="rindex" wx:for-item="row" wx:key="rindex">{{row}}</text>
+                    </view>
+                    <view>{{data.content.grayDesc}}</view>
+                    <view class="guarantee-pickup__support">
+                        <view wx:for="{{data.content.support}}" wx:key="index">
+                            <image src="{{item.icon}}"></image>
+                            <view class="name">{{item.name}}</view>
+                            <view class="desc">{{item.desc}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</a>

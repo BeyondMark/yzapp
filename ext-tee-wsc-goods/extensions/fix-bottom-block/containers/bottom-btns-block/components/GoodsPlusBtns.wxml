@@ -1,0 +1,8 @@
+<view class="c7c9a5 {{show?'f9b41':''}}" wx:if="{{show}}">
+    <view bind:tap="_p" class="c88edb" data-t="{{ tap:{en:'maskClick'} }}"></view>
+    <view class="f909f">
+        <a bind:_init="_tic" bind:btn-click="_p" btn="{{btn}}" class="c20da3" data-t="{{ btnClick:{ en:'minBtnClick',args:[btn] } }}" wx:for="{{buttons}}" wx:for-item="btn" wx:key="type">
+            <slot wx:if="{{btn.type==='im'}}"></slot>
+        </a>
+    </view>
+</view>

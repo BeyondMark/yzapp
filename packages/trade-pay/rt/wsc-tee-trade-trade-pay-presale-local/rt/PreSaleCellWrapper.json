@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./PreSaleCell",
+    "_": "../../../../../components/_/index"
+  }
+}

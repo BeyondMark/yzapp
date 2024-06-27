@@ -1,0 +1,19 @@
+.goods-item-block {
+  background: #fff;
+  overflow: hidden;
+  padding: var(--theme-page-card-padding-top, 12px)
+    var(--theme-page-card-padding-right, 12px)
+    var(--theme-page-card-padding-bottom, 12px)
+    var(--theme-page-card-padding-left, 12px);
+}
+.delete-btn {
+  background: #f44;
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  width: 64px;
+  height: 100%;
+}

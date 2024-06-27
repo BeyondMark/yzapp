@@ -1,0 +1,7 @@
+<view class="corner-mark-wrap">
+    <block wx:if="{{type!=4}}">
+        <view class="corner-back corner-back--{{type}} back-type-class"></view>
+        <a class="corner-mark corner-mark--icon corner-mark--{{type}} mark-type-class" color="{{themeColor}}" customClass="van-icon" name="{{iconName}}"></a>
+    </block>
+    <image class="corner-mark corner-mark--custom" mode="widthFix" src="{{markImage}}" wx:else></image>
+</view>

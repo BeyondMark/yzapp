@@ -1,0 +1,13 @@
+<view catch:tap="_p" class="{{'t-notice-bar'}} {{mode?'t-notice-bar--withicon':''}} {{wrapable?'t-notice-bar--wrapable':''}} {{customClass}}" data-t="{{ tap:{en:'onClick',et:'stop'} }}" style="{{styles.root}}" wx:if="{{show}}">
+    <a bind:_init="_tic" class="t-notice-bar__left-icon" name="{{leftIcon}}" size="16px" wx:if="{{leftIcon}}"></a>
+    <slot name="left-icon" wx:else></slot>
+    <view class="{{classes.wrap}}">
+        <view animation="{{animationData}}" class="{{classes.content}}"> {{text}} <slot wx:if="{{!text}}"></slot>
+        </view>
+    </view>
+    <a bind:_init="_tic" bind:tap="_p" class="t-notice-bar__right-icon" data-t="{{ tap:{en:'onClickIcon'} }}" name="cross" wx:if="{{mode==='closeable'}}"></a>
+    <view bind:tap="_t_hn_" data-href="{{url}}" openType="{{openType}}" wx:elif="{{mode==='link'}}">
+        <a bind:_init="_tic" class="t-notice-bar__right-icon" name="arrow"></a>
+    </view>
+    <slot name="right-icon" wx:else></slot>
+</view>

@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-icon": "/packages/async-main/@vant/weapp/dist/icon/index",
+    "van-overlay": "/packages/async-main/@vant/weapp/dist/overlay/index",
+    "_": "../../../../components/_/index"
+  },
+  "componentPlaceholder": { "van-icon": "_", "van-overlay": "_" }
+}

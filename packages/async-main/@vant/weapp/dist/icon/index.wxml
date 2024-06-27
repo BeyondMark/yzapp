@@ -1,0 +1,4 @@
+<view bindtap="onClick" class="{{computed.rootClass( {classPrefix:classPrefix,name:name} )}}" style="{{computed.rootStyle( {customStyle:customStyle,color:color,size:size} )}}">
+    <a customClass="van-icon__info info-class" dot="{{dot}}" info="{{info}}" wx:if="{{info!==null||dot}}"></a>
+    <image class="van-icon__image" mode="aspectFit" src="{{name}}" wx:if="{{computed.isImage(name)}}"></image>
+</view>

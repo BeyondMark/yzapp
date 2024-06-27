@@ -1,0 +1,17 @@
+.description {
+  margin-top: 10px;
+  background: #fff;
+  padding: 15px 15px 20px;
+  box-sizing: border-box;
+}
+.content {
+  padding: 10px 12px;
+  background: #fef0f0;
+  border: 1px solid #ff5644;
+  border-radius: 8px;
+  max-height: 200px;
+  overflow: scroll;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 20px;
+}

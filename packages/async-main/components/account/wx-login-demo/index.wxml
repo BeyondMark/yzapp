@@ -1,0 +1,4 @@
+<view>
+    <a id="account-wx-login"></a>
+    <b bindgetphonenumber="loginBywxAuthorize" openType="getPhoneNumber" type="primary">主要按钮</b>
+</view>

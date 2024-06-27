@@ -1,0 +1,10 @@
+<view class="guarantee-item">
+    <image class="guarantee-item__icon" src="{{icon}}"></image>
+    <view class="guarantee-item__right">
+        <view bind:tap="onClick" class="guarantee-item__title">
+            <text>{{data.title}}</text>
+            <a class="guarantee-item__title-icon" name="arrow" wx:if="{{data.event}}"></a>
+        </view>
+        <text class="guarantee-item__detail">{{data.content}}</text>
+    </view>
+</view>

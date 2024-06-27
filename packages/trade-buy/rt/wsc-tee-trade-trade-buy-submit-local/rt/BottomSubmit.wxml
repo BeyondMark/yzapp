@@ -1,0 +1,44 @@
+<view>
+    <view class="{{'b6efb'}} {{'b6efb-class'}} {{!address.visible&&currentAddress.id&&!isShowRiskWarnShopPrompt?'c1dcc':''}}" wx:if="{{!memberCard.renewal}}">
+        <e backgroundColor="#FDE6E9" bind:_init="_tic" color="#323233" text="{{riskWarnShopPrompt}}" wx:if="{{isShowRiskWarnShopPrompt}}"></e>
+        <view class="c72be" wx:elif="{{display.prompt}}"> {{display.prompt}}
+      。
+      <view bind:tap="_p" class="b3eb4 c89585" data-t="{{ tap:{en:'handleMatchOffline'} }}" wx:if="{{display.matchOffline}}">        切换到附近可送网点
+      </view>
+            <d bind:_init="_tic" customClass="c41bdd" name="arrow" wx:if="{{display.matchOffline}}"></d>
+        </view>
+        <view bind:tap="_p" class="c561c4" data-t="{{ tap:{en:'setBestActivity'} }}" wx:elif="{{showPromotionBest}}">
+            <view class="c8ab04">
+                <view>{{promotionBestContent[0]}}</view>
+                <view style="color:{{themeColors['ump-tag-text']}}; font-weight:{{500}}" wx:if="{{promotionBestContent[1]}}">          ￥{{promotionBestContent[1]}} </view>
+            </view>
+            <view style="color:{{themeColors['ump-tag-text']}}; font-weight:{{500}}">立即使用</view>
+        </view>
+        <view class="c43640 c1dcc" wx:elif="{{address.visible===false&&currentAddress.id&&!isShowRiskWarnShopPrompt}}">
+            <view class="c970dd">
+                <d bind:_init="_tic" class="c8efe8" color="#2DA641" name="location"></d> {{siteTop}} </view>
+            <view class="eee91">{{siteBottom}}</view>
+        </view>
+        <block wx:if="{{hasPostageToolTip&&!showPromotionBest}}">
+            <b bind:_init="_tic" rmId="b36-27" useCustomTitleSlot="{{true}}" wx:if="{{rmId==='b36-9'}}"></b>
+        </block>
+        <view class="c6c486 t-hairline--top">
+            <g bind:_init="_tic" class="c55ac1" displayPrice="{{displayPrice}}" formatPriceArray="{{formatPriceArray}}" orderFinalPrice="{{orderFinalPrice}}" payPostage="{{payPostage}}" payRechargeInfo="{{payRechargeInfo}}" pointStr="{{pointStr}}" priceLabel="{{priceLabel}}" showComma="{{showComma}}" showDisplayCardPrice="{{showDisplayCardPrice}}" showPostage="{{showPostage}}" showPriorUseSummary="{{showPriorUseSummary}}" themeColors="{{themeColors}}"></g>
+            <f bind:_init="_tic" bind:submit-click="_p" color="{{themeColors.general}}" data-t="{{ submitClick:{en:'submitOrder'} }}" disabled="{{disabled}}" large="{{buttonText.length>4}}" loading="{{isPayBtnLoading}}" textColor="{{themeColors['main-text']}}">
+                <view hidden="{{isPayBtnLoading}}">
+                    <view class="c89585">{{buttonText}}</view>
+                </view>
+            </f>
+        </view>
+    </view>
+    <view class="b6efb b6efb-class" wx:else>
+        <block wx:if="{{enableUseUserAuthorize&&!disabled}}">
+            <a bind:_init="_tic" bind:next="_p" data-t="{{ next:{en:'submitOrder'} }}" kdtId="{{kdtId}}" rmId="@passport-tee/user-authorize~DDdJBmWG" scene="click_buy_now" type="separate" wx:if="{{rmId==='b36-9'}}">
+                <c bind:_init="_tic" loading="{{isPayBtnLoading}}" size="large" square="{{true}}" type="{{isRetailApp?'primary':'danger'}}">        购买延长使用{{memberCard.days}}天
+      </c>
+            </a>
+        </block>
+        <c bind:_init="_tic" bind:tap="_p" data-t="{{ tap:{en:'submitOrder'} }}" disabled="{{disabled}}" loading="{{isPayBtnLoading}}" size="large" square="{{true}}" type="{{isRetailApp?'primary':'danger'}}" wx:else>      购买延长使用{{memberCard.days}}天
+    </c>
+    </view>
+</view>

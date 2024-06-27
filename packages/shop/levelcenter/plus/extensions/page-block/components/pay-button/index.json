@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-main/@vant/weapp/dist/checkbox/index",
+    "b": "/components/account/user-authorize/index",
+    "c": "/packages/shop/@vant/weapp/dist/button/index",
+    "_": "../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

@@ -1,0 +1,33 @@
+<import src="../common/list.wxml"></import>
+<van-toast id="van-toast"></van-toast>
+<page-container class="{{themeClass}} page-{{deviceType}}">
+    <view class="search-bar">
+        <van-field bind:change="inputChange" bind:confirm="search" border="{{false}}" class="search-bar__field" clearable="{{true}}" confirmType="search" customStyle="padding: 3px 10px" placeholder="{{placeholder}}" type="search" value="{{value}}">
+            <view class="search-bar__left-part" slot="left-icon">
+                <van-icon customStyle="margin-bottom: 2px; vertical-align: middle" name="search"></van-icon>
+                <picker bindchange="pickerChange" class="search-bar__picker" mode="selector" range="{{range}}" slot="input" style="width: 60px" value="{{rangeIndex}}">
+                    <view class="search-bar__picker-cnt">{{range[rangeIndex]}}</view>
+                </picker>
+            </view>
+        </van-field>
+        <view class="search-bar__action">
+            <view bind:tap="cancelSearch" class="cancel-class">取消</view>
+        </view>
+    </view>
+    <template is="shop-or-location-list" data="{{list:list,isAddress:rangeIndex==1,loading:loading,onToLower:onToLower,scrollPosition:scrollPosition,navigateBack:navigateBack}}" wx:if="{{list.length!==0}}"></template>
+    <view class="search-shop__tip van-c-gray van-font-14" wx:if="{{list.length===0&&!nodata}}">
+        <block wx:if="{{rangeIndex==0}}">通过门店名称、地址等搜索你想访问的门店。</block>
+        <block wx:else>搜索并选择你想要配送的小区 写字楼、学校等，我们给你推荐附近的门店。</block>
+    </view>
+    <view class="search-shop__tip van-c-gray van-font-14" wx:if="{{list.length===0&&nodata&&rangeIndex==0}}">
+        <view>没找到你要的店铺，</view>
+        <view>请尝试搜索区县信息试试，比如“西湖区”等。</view>
+        <navigator class="van-c-blue" openType="redirect" url="/packages/shop/multi-store/index/index?useLocationTab=1">点此查看你附近的门店</navigator>
+    </view>
+    <view class="search-shop__tip van-c-gray van-font-14" wx:if="{{list.length===0&&nodata&&rangeIndex!=0}}">
+        <view>没找到你要的地址，</view>
+        <view>请尝试只输入小区、写字楼或学校名试试。</view>
+    </view>
+</page-container>
+<import src="../../pages/common/wsc-page/index.wxml"></import>
+<template is="wsc-page" data="{{wscpage:wscpage}}"></template>

@@ -1,0 +1,7 @@
+<view>
+    <view bind:tap="_p" class="c2ebf6" data-t="{{ tap:{en:'handleSelectGender'} }}">
+        <view class="a2ed8">{{item.name}}</view>
+        <view class="{{'c25a81'+(!showValue?' a2e48':'')}}">{{displayValue}}</view>
+    </view>
+    <a actions="{{actions}}" bind:_init="_tic" bind:cancel="_p" bind:close="_p" bind:select="_p" cancelText="取消" data-t="{{ close:{en:'onClose'},select:{en:'onSelect'},cancel:{en:'onClose'} }}" show="{{show}}" zIndex="{{7011}}"></a>
+</view>

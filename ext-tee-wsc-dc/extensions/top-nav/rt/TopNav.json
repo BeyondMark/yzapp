@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y/dt/src/dc/search/index",
+    "b": "/@y-open/vt/dist/tab/index",
+    "c": "/@y-open/vt/dist/tabs/index",
+    "_": "../../../../components/_/index"
+  }
+}

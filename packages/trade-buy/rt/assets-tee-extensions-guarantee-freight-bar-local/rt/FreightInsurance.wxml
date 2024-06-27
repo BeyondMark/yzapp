@@ -1,0 +1,6 @@
+<view>
+    <a bind:_init="_tic" bind:tap="_p" border="{{false}}" class="{{'freight-insurance'}} {{'long-cell'}} {{isOrderPage?'freight-insurance-bold':''}}" customStyle="{{padding}}" data-t="{{ tap:{en:'showDetail'} }}" isLink="{{true}}" title="{{freightInsurance.name}}" value="{{freightInsurance.title}}" valueClass="freight-insurance__value" wx:if="{{freightInsurance.title}}"></a>
+    <b bind:_init="_tic" bind:close="_p" bind:confirm="_p" bodyBackgroundColor="#fff" buttonText="我知道了" closeable="{{false}}" data-t="{{ close:{en:'onClose'},confirm:{en:'onClose'} }}" show="{{showPopup}}" themeColors="{{themeColors}}" title="{{freightInsurance.name}}">
+        <view class="freight-insurance-popup__content"> {{freightInsurance.desc}} </view>
+    </b>
+</view>

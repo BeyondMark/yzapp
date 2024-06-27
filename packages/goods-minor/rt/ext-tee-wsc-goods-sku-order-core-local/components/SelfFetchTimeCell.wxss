@@ -1,0 +1,12 @@
+.c8c4ec {
+  padding: var(--theme-goods-direct-order-popup-cell-padding-top, 12px)
+    var(--theme-goods-direct-order-popup-cell-padding-right, 12px)
+    var(--theme-goods-direct-order-popup-cell-padding-bottom, 12px)
+    var(--theme-goods-direct-order-popup-cell-padding-left, 12px) !important;
+}
+.self-fetch-time__value {
+  color: var(--error, #ee0a24) !important;
+}
+.self-fetch-time__value.self-fetch-time__selected {
+  color: #323 !important;
+}

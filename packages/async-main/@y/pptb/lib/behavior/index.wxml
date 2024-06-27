@@ -1,0 +1,9 @@
+<c bind:_init="_tic">
+    <slot></slot>
+    <d bind:_init="_tic" bind:after-enter="_p" bind:close="_p" bind:drag-end="_p" bind:drag-move="_p" canDrag="{{canDrag}}" data-t="{{ close:{en:'hide'},dragMove:{en:'dragMove'},dragEnd:{en:'dragEnd'},afterEnter:{en:'handleLayoutShow'} }}" display="{{display}}" dragBar="{{dragBar}}" dragStart="{{dragStart}}" open="{{open}}">
+        <view slot="slide">
+            <a behaviorData="{{behaviorData}}" behaviorLoading="{{behaviorLoading}}" bind:_init="_tic" bind:big-image-loaded="_p" bind:display-query="_p" bind:refresh-behavior-data="_p" data-ref="display" data-t="{{ bigImageLoaded:{en:'updateScale'},refreshBehaviorData:{en:'freshBehaviorData'},displayQuery:{en:'displayQuery'} }}" dragBar="{{dragBar}}" scale="{{scale}}" size="{{bigSize}}" status="{{status}}"></a>
+            <b behaviorData="{{behaviorData}}" behaviorLoading="{{behaviorLoading}}" bind:_init="_tic" bind:drag-bar-query="_p" bind:drag-start-query="_p" bind:refresh-behavior-data="_p" canDrag="{{canDrag}}" data-ref="control" data-t="{{ dragBarQuery:{en:'dragBarQuery'},dragStartQuery:{en:'dragStartQuery'},refreshBehaviorData:{en:'freshBehaviorData'} }}" display="{{display}}" moveX="{{moveX}}" scale="{{scale}}" status="{{status}}"></b>
+        </view>
+    </d>
+</c>

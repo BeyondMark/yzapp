@@ -1,0 +1,8 @@
+<view>
+    <a bind:agree="handleAgree" bind:refresh-protocol-data="initData" btnConfig="{{btnConfig}}" code="{{[type]}}" ready="{{true}}" visible="{{visible}}">
+        <view class="title" slot="title">{{title}}</view>
+        <view slot="content">
+            <view class="agreement-content">{{changeType==='sign'?'你好，请阅读':'你好，我们对'}}<view bindtap="viewAgreement" class="agreement" data-url="{{item.url}}" wx:for="{{protocolArr}}" wx:key="agreementTplId">《{{item.agreementTplName}}》</view>{{changeType==='sign'?'，以便你了解商家会员卡注册规则、你的个人信息授权使用情况以及如何保障你的会员权益。':'进行了更新，为保障你的会员权益，请仔细阅读并确定了解我们对你个人信息的处理规则。'}}</view>
+        </view>
+    </a>
+</view>

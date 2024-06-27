@@ -1,0 +1,14 @@
+<view>
+    <a bind:_init="_tic" bind:close="_p" catch:touchmove="_p" closeable="{{true}}" data-t="{{ close:{en:'onClose'},touchmove:{en:'true',et:'stop'} }}" position="bottom" show="{{popupShow}}" zIndex="{{5001}}">
+        <view class="c73443">
+            <slot name="header">
+                <d bind:_init="_tic" fastJoinHeaderInfo="{{fastJoinHeaderInfo}}" shopInfo="{{shopInfo}}"></d>
+            </slot>
+            <e attributeInfo="{{attributeInfo}}" bind:_init="_tic" data-ref="infoBlock"></e>
+            <f bind:_init="_tic" data-ref="agreementBlock"></f>
+            <g bind:_init="_tic" bind:onSubmit="_p" data-t="{{ onSubmit:{en:'handleSubmit'} }}"></g>
+        </view>
+    </a>
+    <c bind:_init="_tic" data-ref="joinNotice"></c>
+    <b bind:_init="_tic" data-ref="van-toast"></b>
+</view>

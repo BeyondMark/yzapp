@@ -1,0 +1,6 @@
+<view class="c36227" wx:if="{{evaluate&&evaluate.length>0}}">
+    <view class="c6ac0a">
+        <view class="c5ebeb" style="background-color:{{themeColors['vice-bg']}}" wx:for="{{evaluate}}" wx:key="attitude"> {{item.attitude}}({{item.count}})
+    </view>
+    </view>
+</view>

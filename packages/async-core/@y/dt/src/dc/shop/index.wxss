@@ -1,0 +1,116 @@
+.t-text {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.dc-shop .banner {
+  position: relative;
+  height: 185px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+}
+.dc-shop .banner.horizontal.inside {
+  height: calc(100% - 100px);
+  padding: 50px 0;
+}
+.dc-shop .mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.dc-shop .gradient {
+  background-color: initial;
+  background-image: linear-gradient(0deg, #000, transparent);
+}
+.dc-shop .content {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  padding: 0 15px;
+  display: -webkit-flex;
+  display: flex;
+}
+.dc-shop .content.horizontal {
+  display: block;
+  padding: 0;
+  width: 100%;
+}
+.dc-shop .content.horizontal.inside {
+  position: relative;
+}
+.dc-shop .logo {
+  width: 70px;
+  height: 70px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: 50%;
+}
+.dc-shop .logo.has-bg {
+  border: 1px solid #fff;
+  background-color: #fff;
+}
+.dc-shop .logo.horizontal {
+  margin: 0 auto;
+}
+.dc-shop .circle {
+  border-radius: 50%;
+}
+.dc-shop .msg {
+  margin-left: 10px;
+  align-self: center;
+}
+.dc-shop .msg.horizontal {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px auto 0;
+}
+.dc-shop .name {
+  max-width: 220px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-shadow: 0 1px 15px rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dc-shop .name.horizontal.outside {
+  color: #222;
+  text-shadow: none;
+}
+.dc-shop .desc {
+  display: inline-block;
+  position: relative;
+  font-size: 12px;
+  color: #fff;
+  padding: 0 10px;
+}
+.dc-shop .desc.outside {
+  color: #999;
+}
+.dc-shop .desc:first-child {
+  padding-left: 0;
+}
+.dc-shop .split:first-child:after {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  width: 2px;
+  height: 12px;
+  color: #e5e5e5;
+  font-size: 10px;
+  content: "|";
+}
+.dc-shop .tag {
+  display: inline-block;
+  padding: 0 4px;
+  border-radius: 2px;
+  background-color: #f44;
+}

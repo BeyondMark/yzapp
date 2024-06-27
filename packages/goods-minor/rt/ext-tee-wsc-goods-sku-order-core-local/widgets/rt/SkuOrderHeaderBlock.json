@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/goods-main/rt/assets-tee-extensions-guarantee-components-local/widgets/rt/YzGuaranteeForSkuOrder",
+    "b": "./../../../wsc-tee-trade-trade-buy-misc-pre-local/widgets/trade-carousel/rt/index",
+    "c": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "_": "../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_", "c": "_" }
+}

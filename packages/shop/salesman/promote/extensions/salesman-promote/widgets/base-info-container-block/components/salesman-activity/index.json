@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../../components/common-tag/index",
+    "b": "/packages/shop/@vant/weapp/dist/cell/index",
+    "_": "../../../../../../../../../../components/_/index"
+  }
+}

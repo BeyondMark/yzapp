@@ -1,0 +1,12 @@
+<view class="extra van-hairline--top">
+    <view class="extra-title">{{extra.greetingCardName}}<view class="extra-title__tip">{{extra.remark?'('+extra.remark+')':''}}</view>
+    </view>
+    <view class="extra-body">
+        <a bg="{{key===chosen?'main-bg':''}}" bindtap="onSelect" color="{{key===chosen?'general':''}}" customClass="extra-body__item" data-value="{{key}}" opacity="0.1" wx:for="{{extra.customerRelation}}" wx:for-index="key" wx:for-item="value" wx:key="key">{{value}}</a>
+    </view>
+    <view class="van-hairline--bottom van-hairline--top" wx:if="{{isShowField}}">
+        <b bind:input="onInput" border="{{false}}" customStyle="padding: 12px 0" maxlength="{{100}}" placeholder="请输入祝福语" value="{{msgValue}}">
+            <view class="blessing-label" slot="label">祝福语</view>
+        </b>
+    </view>
+</view>

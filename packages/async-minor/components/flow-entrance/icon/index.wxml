@@ -1,0 +1,4 @@
+<view bindtap="handelClick" class="flow-entrance-icon {{hidden?'flow-entrance-icon--hidden':''}} {{isIphoneX?'is-iphone-x':''}}" style="{{iconStyle}}" wx:if="{{!isClosed&&info&&!isChannels}}">
+    <image class="icon-image" mode="widthFix" src="{{info.icon}}"></image>
+    <text catchtap="handleClose" class="icon-close"></text>
+</view>

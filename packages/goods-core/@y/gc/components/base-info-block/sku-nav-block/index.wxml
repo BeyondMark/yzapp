@@ -1,0 +1,5 @@
+<view class="cf728" wx:if="{{opt.show}}">
+    <a bind:_init="_tic" bind:tap="_p" data-t="{{ tap:{ en:'selectSkuNav',args:[0] } }}" isActive="{{opt.current===0}}" url="{{opt.goodsPic}}"></a>
+    <view class="c1ba43"></view>
+    <a bind:_init="_tic" bind:tap="_p" data-t="{{ tap:{ en:'selectSkuNav',args:[key+opt.pictureLength] } }}" isActive="{{key+opt.pictureLength===opt.current}}" url="{{sku.url}}" wx:for="{{showSkuPictures}}" wx:for-index="key" wx:for-item="sku" wx:key="key"></a>
+</view>

@@ -1,0 +1,19 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/goods-minor/rt/wsc-tee-trade-trade-buy-common-popup-local/widgets/time-picker/rt/index",
+    "b": "/packages/goods-minor/rt/wsc-tee-trade-trade-buy-common-popup-local/widgets/contact-list/rt/index",
+    "c": "./../../../../wsc-tee-trade-retail-order-local/widgets/rt/PickUpWay",
+    "d": "./../../../../wsc-tee-trade-retail-order-local/widgets/rt/SelfFetchShopSecondConfirmDialog",
+    "e": "./../../../../wsc-tee-trade-retail-order-local/widgets/rt/GetPhoneButton",
+    "f": "./../../../../wsc-tee-trade-retail-order-local/widgets/rt/WaitingProcess",
+    "g": "/@y-open/vt/dist/cell/index",
+    "h": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "i": "/packages/async-tee/@y-open/vt/dist/tag/index",
+    "j": "/packages/async-tee/@y-open/vt/native/weapp/field/index/index",
+    "k": "./../../../components/InfoCard",
+    "l": "./../DistanceIcon",
+    "_": "../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_", "b": "_", "h": "_", "i": "_", "j": "_" }
+}

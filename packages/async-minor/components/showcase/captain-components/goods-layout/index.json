@@ -1,0 +1,24 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./components/more-button/index",
+    "b": "../skeleton/index",
+    "_": "../../../../../../components/_/index"
+  },
+  "componentGenerics": {
+    "goods-item-image": { "default": "./components/goods-item-image/index" },
+    "goods-item-corner-mark": {
+      "default": "./components/goods-item-corner-mark/index"
+    },
+    "goods-item-title": { "default": "./components/goods-item-title/index" },
+    "goods-item-tags": { "default": "./components/goods-item-tags/index" },
+    "goods-item-price": true,
+    "goods-item-expand": true,
+    "goods-item-extra": true,
+    "goods-item-ump-tags": true,
+    "goods-item-tag-info": true,
+    "goods-price-label": true,
+    "item-extra": true,
+    "buy-button": true
+  }
+}

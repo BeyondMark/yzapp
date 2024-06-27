@@ -1,0 +1,5 @@
+.e57bc {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 16px;
+}

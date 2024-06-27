@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../components/showcase/captain-components/search/index",
+    "b": "../shop-list/index",
+    "c": "../local-retail-shop-list/index",
+    "d": "../navigator-bar/index",
+    "e": "../retail-shop-search-history/index",
+    "_": "../../../../../components/_/index"
+  },
+  "enablePullDownRefresh": true
+}

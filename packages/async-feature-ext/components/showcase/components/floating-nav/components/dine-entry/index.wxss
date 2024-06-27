@@ -1,0 +1,44 @@
+.dine-floating {
+  position: fixed;
+  top: 50.73vw;
+  right: 0;
+  z-index: 99;
+  width: 26.433vw;
+  height: 10.68vw;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 12px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.dine-floating--fold {
+  right: -18.957vw;
+  transition: right 0.3s;
+}
+.dine-floating__number {
+  width: 10.68vw;
+  height: 10.68vw;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.335vw;
+  box-sizing: border-box;
+  position: absolute;
+  left: -5.34vw;
+}
+.dine-floating__number__text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #fff;
+}
+.dine-floating__text {
+  padding-right: 2.136vw;
+  color: #333;
+}
+.dine-floating__text__arrow {
+  color: #c8c9cc;
+}

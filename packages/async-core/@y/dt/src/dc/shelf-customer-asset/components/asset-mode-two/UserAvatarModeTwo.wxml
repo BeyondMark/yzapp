@@ -1,0 +1,12 @@
+<view class="user-avatar">
+    <view catch:tap="_p" class="avatar" data-t="{{ tap:{ en:'handleClick',et:'stop',args:['person'] } }}" wx:if="{{showAvatar}}">
+        <image class="tee-image" lazyLoad="true" mode="aspectFit" src="{{userAvatar}}"></image>
+    </view>
+    <view catch:tap="_p" class="info-container" data-t="{{ tap:{ en:'handleClick',et:'stop',args:['member'] } }}">
+        <view class="name">
+            <view class="t-text">{{userName}}</view>
+            <a bind:_init="_tic" class="level-icon" currentFreeLevel="{{level}}" wx:if="{{showLevelIcon}}"></a>
+        </view>
+        <slot></slot>
+    </view>
+</view>

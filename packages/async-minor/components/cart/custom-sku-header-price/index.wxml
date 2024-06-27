@@ -1,0 +1,5 @@
+<a class="sc-sku-price__show" color="{{themeGeneral}}">
+    <text class="sc-sku-price__symbol">￥</text>
+    <text class="sc-sku-price__num">{{price}}</text>
+    <view class="sc-sku-price__origin" wx:if="{{util.comparePriceString(originPrice,price)}}">{{originPrice}}</view>
+</a>

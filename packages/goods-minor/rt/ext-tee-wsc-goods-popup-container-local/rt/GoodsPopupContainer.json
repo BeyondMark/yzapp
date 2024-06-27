@@ -1,0 +1,25 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../widgets/rt/UmpVisitGift",
+    "b": "/ext-tee-passport/extensions/user-authorize/widgets/rt/Popup",
+    "c": "/packages/goods-main/rt/wsc-tee-shop-shop-rest-local/rt/Main",
+    "d": "/packages/async-feature-ext/rt/ext-tee-wsc-goods-biz-sku-manage-local/rt/Main",
+    "e": "/packages/goods-main/rt/ext-tee-wsc-goods-preview-image-block-local/rt/Main",
+    "f": "./../../wsc-tee-trade-trade-buy-misc-pre-local/widgets/order-keep/rt/index",
+    "g": "./../../ext-tee-wsc-im-im-layer-local/rt/Main",
+    "h": "./../../wsc-tee-trade-order-pay-prompt-popup-local/rt/Main",
+    "i": "./../../ext-tee-wsc-goods-sku-order-core-local/rt/SkuOrderCorePopup",
+    "j": "./../ump/helpcut/Widget",
+    "k": "./../ump/launch-reservation-qrcode/Widget",
+    "l": "./../ump/question/Widget",
+    "m": "./../ump/wecom-benefit/Widget",
+    "n": "./../components/goods-makeup-order/Main",
+    "o": "./../components/follow-popup/Widget",
+    "p": "./../components/wx-subscription/Widget",
+    "q": "./../components/live-coupon/Widget",
+    "r": "/packages/async-main/components/account/inject-protocol/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "c": "_", "d": "_", "e": "_", "r": "view" }
+}

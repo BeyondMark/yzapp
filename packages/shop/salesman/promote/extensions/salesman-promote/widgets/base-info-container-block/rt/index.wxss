@@ -1,0 +1,26 @@
+.m-base-info {
+  position: relative;
+  padding: 8px 16px 16px;
+  background-color: #fff;
+}
+.m-base-info.has-guarantee-bar {
+  padding-bottom: 10px;
+}
+.u-base-info-row {
+  position: relative;
+  width: 100%;
+  font-size: 13px;
+  line-height: 18px;
+  display: block;
+}
+.u-base-info-row.last-child {
+  margin-bottom: -8px;
+}
+.u-base-padding-row {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 18px;
+  box-sizing: border-box;
+}

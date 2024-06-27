@@ -1,0 +1,32 @@
+.cedb3 {
+  padding: 0 16px;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 20px 20px 0 0;
+  z-index: 300;
+}
+.cedb3 .c9377e {
+  margin-bottom: 15px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  font-family: PingFangSC-Medium, sans-serif;
+  font-size: 16px;
+  color: #39393a;
+}
+.cedb3 .c981c1 {
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+}
+.cedb3 .c29a3a {
+  margin: 46px 0 7px;
+  height: 44px;
+  line-height: 44px;
+  font-size: 16px;
+  border-radius: 100px;
+  color: #fff;
+  text-align: center;
+  background-image: linear-gradient(135deg, #ff5644, #fb1c60);
+}

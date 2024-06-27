@@ -1,0 +1,15 @@
+<view class="dc-goods-tags-top">
+    <view id="{{curId}}" wx:if="{{opt.tabs&&opt.tabs.length>1}}">
+        <view style="height: 44px" wx:if="{{isSticky}}"></view>
+        <view class="{{isSticky?'goods-tags-top--fixed':'goods-tags-top--normal'}}" style="{{goodsTagsTopStyle}}">
+            <b active="{{activeTab}}" bind:_init="_tic" bind:tap="_p" customClass="dc-goods-tabs" data-t="{{ tap:{en:'onClickTab'} }}" lineClass="{{tabInfo.tabType==='line'?'dc-goods-tabs-line':''}}" navClass="{{['nav-class-style-'+opt.tagsConfig.navStyle,tabInfo.tabType,'nav-padding']}}" offsetTop="{{tabInfo.offsetTop}}" pid="{{'tabs-'+tabPid}}" scrollClass="{{'scroll-'+tabInfo.tabType}}" tabActiveClass="{{'tab-active-'+opt.tagsConfig.navStyle}}" tabClass="tab-normal" titleInactiveColor="#323233" type="{{tabInfo.tabType}}" wrapClass="dc-goods-tabs-wrap-class" zIndex="{{zIndex}}">
+                <c bind:_init="_tic" pid="{{'tabs-'+tabPid}}" title="{{tab.title}}" wx:for="{{opt.tabs}}" wx:for-item="tab" wx:key="alias"></c>
+            </b>
+        </view>
+        <view style="{{tab.warpStyle}}" wx:for="{{showTabs}}" wx:for-item="tab" wx:key="alias">
+            <a _opt="{{goodsExtra[index]}}" bind:_init="_tic" bind:button-click="_p" bind:component-loaded="_p" bind:item-click="_p" data-t="{{ buttonClick:{en:'handleBuyClick'},itemClick:{en:'handleItemClick'},componentLoaded:{en:'handleGoodsComponentLoaded'} }}" isShowGoodsAddNumber="{{isShowGoodsAddNumber}}" kdtId="{{kdtId}}" wx:if="{{tab.isVIf}}"></a>
+        </view>
+    </view>
+    <a _opt="{{goodsExtra[0]}}" bind:_init="_tic" bind:button-click="_p" bind:component-loaded="_p" bind:item-click="_p" data-t="{{ buttonClick:{en:'handleBuyClick'},itemClick:{en:'handleItemClick'},componentLoaded:{en:'handleGoodsComponentLoaded'} }}" kdtId="{{kdtId}}" wx:elif="{{opt.tabs&&opt.tabs.length}}"></a>
+    <view class="bottom-hook"></view>
+</view>

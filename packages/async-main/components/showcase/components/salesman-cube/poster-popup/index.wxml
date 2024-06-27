@@ -1,0 +1,10 @@
+<a bind:click-overlay="close" customStyle="background-color: transparent;overflow: initial;" show="{{show}}" zIndex="{{999}}">
+    <view class="{{csPrefix}}-container">
+        <b bindtap="close" customClass="{{csPrefix}}-container--close" name="close"></b>
+        <view class="{{csPrefix}}-container__body">
+            <image mode="aspectFill" src="{{posterImg}}"></image>
+            <text class="weappcode-container__body-text" wx:if="{{csPrefix==='weappcode'}}">长按识别小程序码</text>
+        </view>
+        <c bind:tap="save" class="{{csPrefix}}-container__button" color="#fff" customStyle="background-color: transparent;width: 160px;height: 36px;" plain="{{true}}" round="{{true}}" size="large">保存图片</c>
+    </view>
+</a>

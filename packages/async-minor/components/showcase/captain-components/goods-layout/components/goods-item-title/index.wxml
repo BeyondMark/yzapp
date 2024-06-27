@@ -1,0 +1,12 @@
+<view class="c-goods-layout__info-title custom-class {{infoTitleClass}}" style="{{textAlignStyle}}" wx:if="{{isShowTitle||isShowSubTitle}}">
+    <view class="title" style="{{titleStyle}}" wx:if="{{isShowTitle}}">
+        <block wx:if="{{!goodsInfo.skeleton}}">
+            <b bg="general" color="general" customClass="title-tag" opacity="0.1" wx:if="{{isShowTitleTag}}">{{goodsInfo.titleTagText}}</b>{{goodsInfo.title}}</block>
+        <a fontSize="{{14}}" lineHeight="{{20}}" rows="{{layout==0||layout==2?1:2}}" wx:else></a>
+    </view>
+    <view class="sub-title" wx:if="{{isShowSubTitle}}">
+        <block wx:if="{{!goodsInfo.skeleton}}">{{goodsInfo.subTitle}}</block>
+        <a wx:else></a>
+    </view>
+    <b border="general" color="general" customClass="goods-type" wx:if="{{isPaidContent&&goodsType}}">{{goodsType}}</b>
+</view>

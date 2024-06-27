@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-main/@vant/weapp/dist/icon/index",
+    "b": "../../../skeleton/index",
+    "c": "../../../../../../common/components/theme-view/index",
+    "_": "../../../../../../../../components/_/index"
+  },
+  "componentGenerics": {
+    "buy-button": { "default": "../buy-button/index" },
+    "goods-item-extra": true
+  },
+  "componentPlaceholder": { "a": "_" }
+}

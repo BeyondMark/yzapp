@@ -1,0 +1,5 @@
+<view class="goods-attributes" wx:if="{{opt.goodsAttributes&&opt.goodsAttributes.length}}">
+    <b bind:_init="_tic" isFirst="{{index===0}}" skuRow="{{attribute}}" wx:for="{{opt.goodsAttributes}}" wx:for-item="attribute" wx:key="index">
+        <a attribute="{{attribute}}" bind:_init="_tic" bind:select="_p" data-t="{{ select:{en:'onSelect'} }}" disabled="{{skuValue.textStatus===0}}" selectedStr="{{selectedStr}}" skuValue="{{skuValue}}" wx:for="{{attribute.v}}" wx:for-item="skuValue" wx:key="id"></a>
+    </b>
+</view>

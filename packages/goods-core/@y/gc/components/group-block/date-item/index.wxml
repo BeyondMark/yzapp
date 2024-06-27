@@ -1,0 +1,4 @@
+<view class="{{'e4ca1'}} {{item.selected?'cec55':''}}">
+    <view class="bbcc3">{{item.day}}</view>
+    <view class="c36107"> {{item.price}} </view>
+</view>

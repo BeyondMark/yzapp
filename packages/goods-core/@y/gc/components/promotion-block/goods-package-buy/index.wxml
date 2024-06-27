@@ -1,0 +1,25 @@
+<view bind:tap="_p" class="f9b8f" data-t="{{ tap:{en:'goPackageList'} }}">
+    <b bind:_init="_tic" border="{{false}}" class="discount-packages-container">
+        <a bind:_init="_tic" border="{{false}}" class="align-right" isLink="{{isMultiPackage}}" title="优惠套餐" titleClass="dac3c">
+            <view class="t-font-12 t-c-gray-darker c89585" wx:if="{{isMultiPackage}}">        查看全部
+      </view>
+        </a>
+        <a bind:_init="_tic" border="{{false}}" customClass="dc06a" valueClass="cell-value__class">
+            <view class="c8f0d2">
+                <view class="df2a0 {{!isMultiPackage?'dc188':''}}" wx:for="{{packageBuy.goodsList}}" wx:key="id">
+                    <view class="c5aedd" style="background-image:{{'url('+item.imageUrl+')'}}"></view>
+                    <view class="c3c877 {{item.planType===1||!item.showPreference?'c3c877--top':''}}">
+                        <view class="c62e0"> {{item.title}} </view>
+                        <view class="c4a5b0 theme__color">
+                            <view class="d461d c89585">套餐价：</view>
+                            <view class="c8918e c89585">￥</view>
+                            <view class="c7c0e6 c89585">{{item.price}}</view>
+                            <view class="c2c85d c89585">{{item.planType===1?'起':''}}</view>
+                        </view>
+                        <view class="c10cd" wx:if="{{item.planType!==1&&item.showPreference}}"> {{item.hasMaxSavings?'最多':''}}可省￥{{item.saveMoneyCn}} </view>
+                    </view>
+                </view>
+            </view>
+        </a>
+    </b>
+</view>

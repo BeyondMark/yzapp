@@ -1,0 +1,15 @@
+<view wx:if="{{!hideSkuList}}">
+    <view class="set-choice-wrapper" wx:if="{{loading}}">
+        <b class="detail-loading" type="spinner"></b>
+    </view>
+    <view wx:else>
+        <view class="swipe-chioce-wrapper">
+            <view class="task-label" wx:if="{{skuList.length}}">可购套餐</view>
+            <view class="sku-list">
+                <view bind:tap="toggle" class="choice-item {{radio===index?'item-active':''}}" data-index="{{index}}" data-sku-info="{{item}}" style="width: {{width}}px;height: {{height}}px" wx:for="{{skuList}}" wx:key="{{item.levelSkuId}}">
+                    <a bestPrice="{{bestPrice}}" hasMonthNotCheapest="{{hasMonthNotCheapest}}" item="{{item}}"></a>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,18 @@
+.label,
+.labels__selection {
+  display: flex;
+  align-items: center;
+}
+.label {
+  margin-right: 8px;
+  width: 56px;
+  height: 28px;
+  font-size: 14px;
+  justify-content: center;
+  background: #f2f3f5;
+  border-radius: 14px;
+}
+.label__active {
+  color: var(--tag-text, #323233);
+  background: var(--tag-bg, #f2f2ff);
+}

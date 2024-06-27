@@ -1,0 +1,33 @@
+<view class="trade-buy-ump-block" wx:if="{{dataLoaded}}">
+    <block wx:if="{{showPlusPop}}">
+        <f bind:_init="_tic" bind:closePlusSwipe="_p" data-t="{{ closePlusSwipe:{en:'closePlusSwipe'} }}" payPrice="{{payPrice}}" plusBuyGoodsList="{{plusBuyGoodsList}}" rmId="{{rmId}}" selectedCount="{{selectedCount}}" wx:if="{{rmId==='b7-64'}}"></f>
+    </block>
+    <block wx:if="{{showPlusBuy}}">
+        <e bind:_init="_tic" payPrice="{{payPrice}}" plusBuyGoodsList="{{plusBuyGoodsList}}" rmId="{{rmId}}" selectedCount="{{selectedCount}}" wx:if="{{rmId==='b7-64'}}"></e>
+    </block>
+    <m bind:_init="_tic">
+        <a bind:_init="_tic" info="{{umpBlockBase}}" postage="{{selected}}" rmId="{{rmId}}" showDisplayCardPrice="{{showDisplayCardPrice}}" wx:if="{{rmId==='b7-64'}}"></a>
+        <c bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b7-64'}}"></c>
+        <block wx:if="{{isShowDeliveryCouponCell&&isShow}}">
+            <g bind:_init="_tic" opt="{{deliveryCouponOpt}}" rmId="{{rmId}}" wx:if="{{rmId==='b7-64'}}"></g>
+        </block>
+        <h bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b7-64'}}"></h>
+        <block wx:if="{{isShowCouponCell}}">
+            <g bind:_init="_tic" opt="{{couponOpt}}" rmId="{{rmId}}" wx:if="{{rmId==='b7-64'}}"></g>
+        </block>
+        <k bind:_init="_tic" color="{{themeColors.general}}" kdtId="{{kdtId}}" rmId="{{rmId}}" wx:if="{{rmId==='b7-64'}}"></k>
+        <block wx:if="{{orderPromotions.length}}">
+            <d bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b7-64'}}"></d>
+        </block>
+        <block wx:if="{{points.usePoints}}">
+            <i bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b7-64'}}"></i>
+        </block>
+        <block wx:if="{{!!pointDesc&&!orderCreated}}">
+            <j bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b7-64'}}"></j>
+        </block>
+        <b bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b7-64'}}"></b>
+        <o bind:_init="_tic" bind:confirmBestPrice="_p" bind:showRewardPopup="_p" data-t="{{ showRewardPopup:{en:'showRewardPopup'},confirmBestPrice:{en:'confirmBestPrice'} }}" promotionInfo="{{promotionInfo}}" wx:if="{{hasReward}}"></o>
+        <n bind:_init="_tic" price="{{orderFinalPrice}}" wx:if="{{showAmount}}"></n>
+    </m>
+    <l bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b7-64'}}"></l>
+</view>

@@ -1,0 +1,129 @@
+.note-article-product {
+  position: relative;
+  width: 100%;
+  padding: 0 12px;
+  box-sizing: border-box;
+  background: #f7f8fa;
+  z-index: 400;
+  max-height: 100%;
+  overflow: scroll;
+}
+.note-article-product__title {
+  position: fixed;
+  box-sizing: border-box;
+  left: 0;
+  display: flex;
+  height: 50px;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 44px;
+  margin-bottom: 5px;
+  padding: 0 12px;
+  background-color: #fff;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 2px 4p 0 rgba(65, 65, 66, 0.12);
+}
+.note-article-product__title-main {
+  flex: 1;
+  font-size: 16px;
+  line-height: 20px;
+  color: #333;
+  font-family: PingFangSC-Medium;
+  line-height: 22px;
+  text-align: center;
+}
+.note-article-product__title-close {
+  right: 16px;
+  font-size: 12px;
+}
+.icon-cross,
+.note-article-product__title-close {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+}
+.icon-cross:after,
+.icon-cross:before {
+  background: #c8c9cc;
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 1.5px;
+  top: 1px;
+  right: 11px;
+}
+.icon-cross:before {
+  transform: rotate(45deg);
+}
+.icon-cross:after {
+  transform: rotate(-45deg);
+}
+.note-article-product__content {
+  width: 100%;
+  margin-bottom: 12px;
+  height: 124px;
+}
+.note-article-product__content:first-child {
+  margin-top: 56px;
+}
+.note-article-product__content-item {
+  display: flex;
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.note-article-product__content-item--image {
+  height: 96px;
+  width: 96px;
+  border-radius: 4px;
+}
+.note-article-product__content-item--right {
+  flex: 1;
+  height: 96px;
+  margin-left: 8px;
+}
+.note-article-product__content-item--right-des {
+  height: 36px;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 14px;
+  font-family: PingFangSC-Regular;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.note-article-product__content-item--right-bottom {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 36px;
+}
+.note-article-product__content-item--right-bottom-price {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  color: #f44;
+  flex: 1;
+  font-family: PingFangSC-Semibold;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.note-article-product__content-item--right-bottom-price .unit {
+  font-size: 12px;
+  display: inline;
+  margin-right: 0.35em;
+}
+.note-article-product__content-item--right-bottom-button {
+  width: 66px;
+  height: 24px;
+  line-height: 24.5px;
+  border-radius: 50px;
+  background: #f44;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-family: PingFangSC-Regular;
+}

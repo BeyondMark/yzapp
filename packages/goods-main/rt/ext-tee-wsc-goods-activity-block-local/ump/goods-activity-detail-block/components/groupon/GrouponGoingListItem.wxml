@@ -1,0 +1,12 @@
+<view class="c14b4c">
+    <image class="c8354c bd231" lazyLoad="true" src="{{thumbUrl}}"></image>
+    <view class="ce8fa">
+        <view class="c79434">{{title}}</view>
+        <view class="c61aab">      还差
+      <view class="c876ca c89585">{{' '+gapNum+' '}}</view>      人成团，剩余
+      <view class="c0ae6b c89585"> {{' '+countDown}}</view>
+        </view>
+    </view>
+    <a bind:_init="_tic" bind:tap="_p" customClass="ee50d" data-t="{{ tap:{en:'goJoinUrl'} }}" round="{{true}}" size="small">    去凑团
+  </a>
+</view>

@@ -1,0 +1,3 @@
+<view bindtap="navigateTo" class="custom-class">
+    <slot></slot>
+</view>

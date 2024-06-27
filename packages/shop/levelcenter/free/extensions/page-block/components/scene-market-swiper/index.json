@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-minor/components/scene-market-subscribe/index",
+    "b": "./components/plan-item/index",
+    "_": "../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

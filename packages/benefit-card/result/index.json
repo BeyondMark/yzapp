@@ -1,0 +1,17 @@
+{
+  "usingComponents": {
+    "page-container": "/pages/common/page-container/index",
+    "account-login": "../../async-main/components/account/login/index",
+    "van-toast": "../../async-main/@vant/weapp/dist/toast/index",
+    "van-notify": "../../async-main/@vant/weapp/dist/notify/index",
+    "van-button": "../@vant/weapp/dist/button/index",
+    "van-dialog": "../../async-main/@vant/weapp/dist/dialog/index",
+    "_": "../../../components/_/index"
+  },
+  "componentPlaceholder": {
+    "account-login": "_",
+    "van-toast": "_",
+    "van-notify": "_",
+    "van-dialog": "_"
+  }
+}

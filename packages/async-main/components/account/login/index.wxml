@@ -1,0 +1,11 @@
+<d bind:close="onClose" customClass="mobile-popup" customStyle="padding-bottom: {{popupBottom}}px" position="bottom" round="{{true}}" show="{{show}}" zIndex="10000">
+    <view class="account-login-dialog">
+        <view catchtap="onClose" class="close-icon" wx:if="{{!forbidClose}}">
+            <e name="cross"></e>
+        </view>
+        <b bind:changeLoginType="changeLoginType" bind:loginFail="loginFail" bind:loginSuccess="loginSuccess" isFromAuthComponent="{{isFromAuthComponent}}" redirectUrl="{{redirectUrl}}" refresh="{{refresh}}" wx:if="{{loginType==='sms'}}"></b>
+        <a bind:changeLoginType="changeLoginType" bind:loginFail="loginFail" bind:loginSuccess="loginSuccess" isFromAuthComponent="{{isFromAuthComponent}}" redirectUrl="{{redirectUrl}}" refresh="{{refresh}}" wx:else></a>
+        <view class="copyright">有赞提供技术支持</view>
+    </view>
+</d>
+<c bind:behaviorComponentReady="behaviorComponentReady" id="behavior-verify"></c>

@@ -1,0 +1,45 @@
+.c6a39a {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  overflow: hidden;
+}
+.c5add9 {
+  position: relative;
+}
+.c5add9 .c9a6c0 {
+  position: absolute;
+  width: 29px;
+  height: 29px;
+  background-image: url(https://img01.yzcdn.cn/weapp/wsc/B2MVjv.png);
+  background-repeat: no-repeat;
+  background-size: 29px;
+  bottom: -66px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.c5add9 .c9a6c0.c0ff83 {
+  bottom: -86px;
+}
+.e9c6c {
+  margin-top: 32rpx;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.e9c6c.f5ddf .c6476,
+.e9c6c.f5ddf .c69eb7 {
+  margin-right: 5px;
+}
+.e9c6c .c69eb7 {
+  background: hsla(0, 0%, 100%, 0.5);
+}
+.e9c6c .c6476,
+.e9c6c .c69eb7 {
+  width: 8rpx;
+  height: 8rpx;
+  border-radius: 50%;
+}
+.e9c6c .c6476 {
+  background: #fff;
+}

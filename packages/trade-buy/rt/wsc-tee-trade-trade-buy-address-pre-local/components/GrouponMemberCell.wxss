@@ -1,0 +1,51 @@
+.c4cf49 {
+  padding: 12px 12px 0;
+  font-size: 12px;
+  background-color: #fff;
+  color: #323233;
+  overflow: hidden;
+}
+.c4cf49 .c4ea6 {
+  display: flex;
+  flex-direction: row-reverse;
+  line-height: 16px;
+  letter-spacing: 0;
+  font-size: inherit;
+  border-radius: 4px;
+  background-color: #f7f8fa;
+  padding-left: 12px;
+}
+.e52a9 {
+  text-align: left;
+}
+.e25f4 {
+  margin-left: 10px;
+}
+.e25f4 .t-icon {
+  vertical-align: middle;
+}
+.e25f4 .t-icon:before {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  left: -1px;
+  top: -3px;
+  font-size: 12px;
+}
+.c4c147 {
+  font-size: 16px;
+  display: inline-block;
+  color: #969799;
+}
+.c4cf49 .c5a018 {
+  text-align: left;
+  color: #323233;
+  position: relative;
+}
+.c4cf49 .c5a018 .c4c147 {
+  font-size: 16px;
+  display: inline-block;
+  color: #969799;
+  position: absolute;
+  bottom: -1px;
+}

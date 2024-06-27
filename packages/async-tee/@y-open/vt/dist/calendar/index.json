@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y-open/vt/dist/popup/index.weapp",
+    "b": "../../native/weapp/toast/index/index",
+    "c": "./calendar",
+    "_": "../../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-cell": "../cell/index",
+    "van-icon": "/packages/async-main/@vant/weapp/dist/icon/index",
+    "_": "../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "van-icon": "_" }
+}

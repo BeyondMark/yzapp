@@ -1,0 +1,1 @@
+<a bind:_init="_tic" bind:init="_p" bind:play-change="_p" bind:source="_p" data-ref="danmaku" data-t="{{ source:{en:'initDanmakuSource'},init:{en:'onDanmakuInit'},playChange:{en:'onDanmakuPlayChange'} }}" minCount="{{minCount}}" offsetTop="{{offsetTop}}" opt="{{opt}}" source="{{source}}" visible="{{visible}}"></a>

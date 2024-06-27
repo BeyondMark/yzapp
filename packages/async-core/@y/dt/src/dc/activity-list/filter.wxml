@@ -1,0 +1,13 @@
+<view catch:touchmove="_p" class="filters" data-t="{{ touchmove:{en:'true',et:'stop'} }}">
+    <view bind:tap="_p" class="filter" data-t="{{ tap:{en:'handleShowCity'} }}"> {{city.value.text}} <image class="arrow tee-image" lazyLoad="true" src="{{city.icon}}"></image>
+    </view>
+    <view bind:tap="_p" class="filter" data-t="{{ tap:{en:'handleShowDate'} }}"> {{date.text}} <image class="arrow tee-image" lazyLoad="true" src="{{date.icon}}"></image>
+    </view>
+    <view bind:tap="_p" class="filter" data-t="{{ tap:{en:'handleShowStatus'} }}"> {{status.value.text}} <image class="arrow tee-image" lazyLoad="true" src="{{status.icon}}"></image>
+    </view>
+    <a bind:_init="_tic" position="bottom" round="{{true}}" show="{{isShowCity}}" style="height: 30%; z-index: 999">
+        <d bind:_init="_tic" bind:cancel="_p" bind:confirm="_p" columns="{{city.values}}" data-t="{{ confirm:{en:'handleCityChange'},cancel:{en:'handleCloseCity'} }}" showToolbar="{{true}}"></d>
+    </a>
+    <c allowSameDay="{{true}}" bind:_init="_tic" bind:close="_p" bind:confirm="_p" color="{{color}}" data-t="{{ confirm:{en:'handleDateChange'},close:{en:'handleCloseDate'} }}" maxDate="{{minmax.max}}" minDate="{{minmax.min}}" show="{{isShowDate}}" style="z-index: 999" type="range"></c>
+    <b actions="{{status.values}}" bind:_init="_tic" bind:cancel="_p" bind:select="_p" cancelText="取消" closeOnClickAction="{{true}}" data-t="{{ select:{en:'handleStatusChange'},cancel:{en:'handleCloseStatus'} }}" show="{{isShowStatus}}" style="z-index: 999"></b>
+</view>

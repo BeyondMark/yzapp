@@ -1,0 +1,24 @@
+<view>
+    <c bind:_init="_tic" bind:close="_p" bind:confirm="_p" btnTextColor="var(--general, #323233)" buttonPlain="{{true}}" buttonText="{{'不使用'+pointsName}}" color="var(--general, #323233)" data-t="{{ close:{en:'closePointDialog'},confirm:{en:'dropUsePoint'} }}" disablePadding="{{true}}" popupClass="c38da9" show="{{isShowPointDeductionDialog}}" showClose="{{true}}" title="{{pointsName}}">
+        <view class="c785b3">
+            <a bind:_init="_tic" border="{{false}}" class="c5d6c5" title="{{pointTotal}}">
+                <view bind:tap="_p" class="c9c1d8" data-t="{{ tap:{en:'onSwitchChange'} }}" style="color:{{isUse?themeColors['main-bg']:'#333'}}"> {{pointPrice}} <b bind:_init="_tic" class="{{orderCreated?'icon--disabled':''}} {{'decaf'}} {{'c8f16'}}" color="{{themeColors['main-bg']}}" name="checked" size="22px" wx:if="{{isUse}}"></b>
+                    <b bind:_init="_tic" class="{{orderCreated?'icon--disabled':''}} {{'icon-unchecked'}} {{'decaf'}}" color="#969799" name="circle" size="22px" wx:if="{{!isUse}}"></b>
+                </view>
+            </a>
+        </view>
+    </c>
+    <d bind:_init="_tic" bind:close="_p" btnTextColor="var(--main-text, #fff)" data-t="{{ close:{en:'closeInfoDialog'} }}" show="{{isShowPointDeductionPrompt}}" themeColors="{{themeColors}}" title="使用须知" whiteSpace="normal">
+        <view class="c0f97">
+            <view class="c13977">使用条件：</view>
+            <view>
+                <view wx:for="{{useConditions}}" wx:key="item"> {{item}} </view>
+            </view>
+            <view class="c13977">使用数量：</view>
+            <view>
+                <view>1、使用{{pointsName}}数量为{{pointsDeduction.points}}的整数倍</view>
+                <view>2、每{{pointsDeduction.points}}{{pointsName}}抵{{pointsDeduction.amount}}元</view>
+            </view>
+        </view>
+    </d>
+</view>

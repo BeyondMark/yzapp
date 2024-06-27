@@ -1,0 +1,16 @@
+<view>
+    <a bind:_init="_tic" bind:close="_p" bind:confirm="_p" bodyBackgroundColor="#fff" btnTextColor="var(--main-text, #fff)" buttonText="完成" closeOnConfirm="{{false}}" color="var(--main-bg, #323233)" data-t="{{ close:{en:'closeInvoiceForm'},confirm:{en:'submit'} }}" disablePadding="{{true}}" popupClass="new-invoice__popup" show="{{visible}}" showClose="{{true}}" title="发票">
+        <c bind:_init="_tic" bind:close="_p" bind:open-goods-message="_p" bind:open-invoice-tips="_p" data-ref="invoiceFormRef" data-t="{{ close:{en:'closeInvoiceForm'},openInvoiceTips:{en:'onOpenInvoiceTips'},openGoodsMessage:{en:'openInvalidGoodMessage'} }}" disabled="{{!!warningTips}}" goods="{{invoiceGoods}}" invoice="{{invoice}}" invoiceDetailTypeSwitch="{{invoiceContentType}}" invoiceLimitType="{{invoiceLimitType}}" isElectronic="{{isElectronic}}" text="{{warningTips}}" themeColors="{{themeColors}}"></c>
+    </a>
+    <b bind:_init="_tic" bind:close="_p" btnTextColor="var(--main-text, #fff)" data-t="{{ close:{en:'onCloseInvoiceTips'} }}" show="{{invoiceTipsVisible}}" themeColors="{{themeColors}}" title="发票须知">
+        <view class="cbe4a">
+            <view>1、电子发票是税局认可的有效收付款凭证，其法律效力、基本用途及使用规定同纸质发票，支持报销入账，如需纸质发票可自行下载打印
+      </view>
+            <view>2、如下单使用会员余额或礼品卡支付，则不提供发票</view>
+            <view>3、如申请发票时填写发票抬头错误，请联系商家将发票冲红后再重新开票</view>
+        </view>
+    </b>
+    <b bind:_init="_tic" bind:close="_p" btnTextColor="var(--main-text, #fff)" buttonColor="{{themeColors.general}}" data-t="{{ close:{en:'closeInvalidGoodMessage'} }}" show="{{goodsInfoVisible}}" themeColors="{{themeColors}}">
+        <d bind:_init="_tic" goods="{{invoiceGoods}}"></d>
+    </b>
+</view>

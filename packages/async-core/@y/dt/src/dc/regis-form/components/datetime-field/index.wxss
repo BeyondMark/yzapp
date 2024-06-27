@@ -1,0 +1,4 @@
+.datetime-field .black-field input {
+  color: #323233;
+  -webkit-text-fill-color: #323233;
+}

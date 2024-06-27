@@ -1,0 +1,7 @@
+.shopnote-title {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #323233;
+  line-height: 28px;
+  font-weight: 500;
+}

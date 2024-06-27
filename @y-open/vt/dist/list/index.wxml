@@ -1,0 +1,9 @@
+<view bind:touchend="_p" bind:touchmove="_p" bind:touchstart="_p" class="t-list" data-t="{{ touchstart:{en:'onTouchStart'},touchmove:{en:'onTouchMove'},touchend:{en:'onTouchEnd'} }}">
+    <slot></slot>
+    <view class="{{'t-list__hook'}} {{hookId}}" id="{{hookId}}" style="{{hookLineStyle}}" wx:if="{{!swipe}}"></view>
+    <view class="t-list__loading-wrap" wx:if="{{!finished&&loading&&!swipe}}">
+        <a bind:_init="_tic" customClass="t-list__loading" wx:if="{{loading}}"> {{loadingText}} </a>
+    </view>
+    <view catch:tap="_p" class="t-list__finished-text" data-t="{{ tap:{en:'retry',et:'stop'} }}" wx:if="{{!finished&&!loading&&error}}"> {{errorText}} </view>
+    <view class="t-list__finished-text" wx:if="{{finished&&finishedText&&!swipe}}"> {{finishedText}} </view>
+</view>

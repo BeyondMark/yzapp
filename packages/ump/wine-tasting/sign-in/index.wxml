@@ -1,0 +1,13 @@
+<view>
+    <view class="wine-tasking-sign-in" hidden="{{!signIn.show}}">
+        <view class="sign-in-group">
+            <a class="sign-in-icon" name="checked" wx:if="{{signIn.status}}"></a>
+            <a class="sign-in-icon error" name="clear" wx:else></a>
+            <view class="sign-in-tip">
+                <view class="sign-in-title">{{signIn.status?'签到成功':'签到失败'}}</view>
+                <view class="sign-in-desc">{{signIn.tips}}</view>
+            </view>
+        </view>
+    </view>
+    <b class="copyright" pageBgColor="#fff"></b>
+</view>

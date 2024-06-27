@@ -1,0 +1,14 @@
+<view class="dc-new-zone" style="background-color:{{opt.bgColor}}" wx:if="{{showNewZone}}">
+    <d _opt="{{...opt.moduleTitleOpt,customTxtStyle:'margin-top: 0',customImgStyle:'margin-top: 0'}}" bind:_init="_tic"></d>
+    <view class="main">
+        <e _opt="{{opt.couponOpt}}" bind:_init="_tic" bind:tap="_p" coupons="{{curCoupons}}" data-t="{{ tap:{en:'handleCouponClick'} }}" kdtId="{{kdtId}}"></e>
+        <view style="{{goodsWrapStyle}}" wx:if="{{!!curGoodsList.length}}">
+            <b _opt="{{opt.goodsLayoutOpt}}" bind:_init="_tic">
+                <c _opt="{{opt.goodsLayoutOpt}}" bind:_init="_tic" itemIndex="{{index}}" wx:for="{{curGoodsList}}" wx:key="index">
+                    <a _opt="{{...item}}" bind:_init="_tic" bind:item-click="_p" data-t="{{ itemClick:{en:'handleItemClick'} }}"></a>
+                </c>
+            </b>
+            <f bind:_init="_tic" bind:tap="_p" data-t="{{ tap:{en:'loadMoreGoods'} }}" wx:if="{{showChangeBtn}}"></f>
+        </view>
+    </view>
+</view>

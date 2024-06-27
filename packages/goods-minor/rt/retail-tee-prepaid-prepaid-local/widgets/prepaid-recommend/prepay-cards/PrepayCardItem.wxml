@@ -1,0 +1,28 @@
+<view bind:tap="_p" class="c18b2c" data-t="{{ tap:{en:'onClick'} }}">
+    <view class="{{'c96807'}} {{disabled?'bcf02':''}} {{!!card.cardCover?'c9ace0':'c437ef'}}" style="background-image:{{card.cardCover?'url('+card.cardCover+')':''}}">
+        <view class="b1120">
+            <view class="{{'c83fbf'}} {{!!card.cardCover?'c46ed0':'c656aa'}}"> {{card.cardName}} </view>
+            <view class="edef3">
+                <view class="{{'f61af'}} {{!!card.cardCover?'c35373':'d5412'}}">
+                    <view class="c561ef">￥</view>
+                    <view class="c8824" style="font-size:{{balanceFlexPriceIntFontSize}}"> {{balancePriceInt}} </view>
+                    <view class="c6abdd">.{{balancePriceCent}}</view>
+                </view>
+                <view class="c906d0">
+                    <view class="c504c8" wx:if="{{card.expireTime}}">有效期至 {{card.expireTime}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="c30d11">
+            <view style="visibility:{{disabled?'hidden':'visible'}}; height:18px">
+                <a bind:_init="_tic" class="{{!!card.cardCover?'f1434':'c3a94b'}}" name="checked" style="color:{{themeMainColor}}" wx:if="{{checked}}"></a>
+                <a bind:_init="_tic" class="{{!!card.cardCover?'c01172':'c9e96'}}" name="circle" wx:if="{{!checked}}"></a>
+            </view>
+        </view>
+        <view class="c300d" wx:if="{{!!card.cardCover}}"></view>
+    </view>
+    <view class="{{'f60c6'}} {{!!card.cardCover?'f60c6--hascover':'d2b9f'}}" wx:if="{{disabled&&card.unusableReason}}"> {{card.unusableReason}} </view>
+    <view class="{{'f60c6'}} {{!!card.cardCover?'f60c6--hascover':'d2b9f'}}" wx:elif="{{card.useSpecification}}"> {{checked?'取消使用该卡类，可重新享受店铺活动、优惠券、积分、储值专享折扣等优惠':'该卡不可与店铺活动、优惠券、积分、储值专享折扣同时使用，限原价购买'}} </view>
+    <view class="f60c6" wx:if="{{showFreeze}}">    待付款订单冻结金额{{freezingSumDnomPrice}}元，取消后冻结余额可释放。
+  </view>
+</view>

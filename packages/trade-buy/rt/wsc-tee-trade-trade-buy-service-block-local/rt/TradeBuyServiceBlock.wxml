@@ -1,0 +1,8 @@
+<view class="c05b53" wx:if="{{initShow||dataLoaded}}">
+    <view wx:if="{{initShow||showMessage}}">
+        <a bind:_init="_tic" bind:change="_p" bind:focus="_p" buyerMsgTips="{{shopConfig.buyerMsgTips}}" data-t="{{ change:{en:'setOrderMessage'},focus:{en:'logFocus'} }}" goods="{{goods}}" order="{{order}}" rmId="{{rmId}}" wx:if="{{rmId==='b36-24'}}"></a>
+    </view>
+    <view wx:if="{{showInvoiceCell}}">
+        <b bind:_init="_tic" customStyle="{{customInvoiceCellStyle}}" disableValueClass="{{disableValueClass}}" hasHaitaoGoods="{{hasHaitaoGoods}}" invoiceInfo="{{invoiceInfo}}" rmId="{{rmId}}" wx:if="{{rmId==='b36-24'}}"></b>
+    </view>
+</view>

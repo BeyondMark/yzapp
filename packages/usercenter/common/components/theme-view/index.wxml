@@ -1,0 +1,4 @@
+<view class="custom-class" style="{{elementStyle}}">
+    <slot></slot>
+    <view class="mock-after custom-after-class" style="{{borderAfterStyle}}" wx:if="{{borderAfter}}"></view>
+</view>

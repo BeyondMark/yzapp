@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/goods-core/@y/gc/components/goods-detail/price-intro/index",
+    "_": "../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

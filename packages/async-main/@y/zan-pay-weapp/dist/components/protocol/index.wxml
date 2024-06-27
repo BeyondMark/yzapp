@@ -1,0 +1,3 @@
+<view class="protocol" wx:if="{{protocol}}">{{protocol.prefix}}<block wx:if="{{protocol.links&&protocol.links.length}}">
+        <text bind:tap="navigate" class="link" data-link="{{item}}" wx:for="{{protocol.links}}" wx:key="name">{{item.name}}</text>
+    </block>{{protocol.suffix}}</view>

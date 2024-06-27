@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../../@vant/weapp/dist/field/index",
+    "b": "../../../../@vant/weapp/dist/cell/index",
+    "c": "../../../../@vant/weapp/dist/uploader/index",
+    "_": "../../../../../../components/_/index"
+  }
+}

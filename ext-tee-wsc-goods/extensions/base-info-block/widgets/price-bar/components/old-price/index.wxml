@@ -1,0 +1,4 @@
+<view class="c1594" wx:if="{{originPrice.price}}">
+    <view class="c1b458 c89585" wx:if="{{originPrice.label}}">{{originPrice.label}} </view>
+    <view class="cbdf3">{{price}}</view>
+</view>

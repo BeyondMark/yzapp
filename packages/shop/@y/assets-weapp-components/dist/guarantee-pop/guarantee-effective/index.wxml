@@ -1,0 +1,31 @@
+<a bind:close="onClose" closeIcon="arrow-left" closeIconPosition="top-left" closeable="{{true}}" position="bottom" round="{{true}}" show="{{value}}" zIndex="{{zIndex}}">
+    <view class="guarantee-effective">
+        <view class="guarantee-effective__container">
+            <text class="guarantee-effective__title">{{dataFormat.title}}</text>
+            <view class="guarantee-effective__content">
+                <view wx:for="{{dataFormat.content}}" wx:key="index">
+                    <text class="guarantee-effective__sub-title" wx:if="{{item.subTitle}}">{{item.subTitle}}</text>
+                    <view class="guarantee-effective__desc">
+                        <view wx:for="{{item.desc}}" wx:for-index="rindex" wx:for-item="row" wx:key="rindex">
+                            <block wx:for="{{row}}" wx:for-index="dindex" wx:for-item="c" wx:key="dindex">
+                                <text wx:if="{{c.text&&!c.url}}">{{c.text}}</text>
+                                <navigator openType="redirect" url="{{c.url}}" wx:if="{{c.url}}">{{c.text}}</navigator>
+                            </block>
+                        </view>
+                        <rich-text nodes="{{row}}"></rich-text>
+                    </view>
+                    <view class="guarantee-effective__list" wx:if="{{item.content.length}}">
+                        <view class="guarantee-effective__list-item" wx:for="{{item.content}}" wx:for-index="cindex" wx:for-item="c" wx:key="cindex">
+                            <view>
+                                <view>{{c.text}}</view>
+                                <text style="color: #969799" wx:if="{{c.subText}}">{{c.subText}}</text>
+                            </view>
+                            <b color="#00B355" name="passed" wx:if="{{c.effective}}"></b>
+                            <b color="#969799" name="close" wx:else></b>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</a>

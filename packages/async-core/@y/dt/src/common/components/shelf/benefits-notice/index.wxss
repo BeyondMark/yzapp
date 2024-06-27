@@ -1,0 +1,19 @@
+.pop__close-btn {
+  display: inline-block;
+  width: 48rpx;
+  height: 48rpx;
+  background: url(https://img01.yzcdn.cn/upload_files/2022/11/18/Ftd1VOajNCaaTeOXgSO8yApC3cgx.png)
+    no-repeat 50%;
+  background-size: cover;
+}
+.container {
+  display: -webkit-flex;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+}

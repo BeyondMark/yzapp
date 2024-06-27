@@ -1,0 +1,32 @@
+.title {
+  height: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #323232;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.title .name {
+  max-width: 150px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-right: 5px;
+}
+.sub-title {
+  margin: 12px 0 16px;
+  padding: 0 10px 10px;
+  height: 20px;
+  line-height: 20px;
+  color: #7d7e80;
+  font-size: 14px;
+  font-weight: 400;
+}
+.sub-title .highlight {
+  font-weight: 700;
+  margin: 0 0.2em;
+  color: #ed6a0c;
+}

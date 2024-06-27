@@ -1,0 +1,72 @@
+<view>
+    <b bind:_init="_tic" bind:close="_p" closeable="{{false}}" customClass="c50d8d" data-t="{{ close:{en:'closePop'} }}" position="bottom" round="{{true}}" safeAreaInsetBottom="{{true}}" show="{{show}}">
+        <view class="ede68" wx:if="{{showComp}}">
+            <view class="c16656">优惠</view>
+            <scroll-view class="c103a9" scrollY="{{true}}">
+                <view class="c78475" wx:if="{{optimalCouponShowList&&optimalCouponShowList.length>0}}">
+                    <view>使用以下优惠，预计券后</view>
+                    <view class="c18dd9">{{optimalPreferentialPrice}}</view>
+                </view>
+                <e bind:_init="_tic" bind:triggerCouponClick="_p" data-t="{{ triggerCouponClick:{en:'handleGetCoupon'} }}" estimateCouponShowList="{{estimateCouponShowList}}" goodsEstimatePriceData="{{goodsEstimatePriceData}}" goodsSpe="{{goodsSpe}}" kdtId="{{kdtId}}" panelSource="{{panelSource}}" wx:if="{{showEstimatePrice}}"></e>
+                <view style="position: relative" wx:for="{{optimalCouponShowList}}" wx:for-item="coupon" wx:key="index">
+                    <c bind:_init="_tic" bind:tap="_p" coupon="{{coupon}}" data-t="{{ tap:{en:'handleOptimalCouponClick'} }}" index="{{index}}" isGrayText="{{true}}" kdtId="{{kdtId}}"></c>
+                </view>
+                <view bind:tap="_p" class="c23cd5" data-t="{{ tap:{en:'unfoldOptimalCouponList'} }}" wx:if="{{showOptimalCouponMoreBtn}}">          更多推荐优惠券
+          <a bind:_init="_tic" color="#969799" customClass="dec4b" name="arrow-down" size="12px"></a>
+                </view>
+                <view class="c78475" wx:if="{{formatedGoodsPromotion&&formatedGoodsPromotion.length>0}}">          促销
+          <div bind:_init="_tic" class="c32de7" wx:if="{{hasMemberGuide}}">该优惠为初步预估，请以开通会员后为准</div>
+                    <a bind:_init="_tic" bind:tap="_p" color="#999" data-t="{{ tap:{en:'showGuide'} }}" name="question-o" size="14px" wx:if="{{hasMemberGuide}}"></a>
+                </view>
+                <view wx:if="{{formatedGoodsPromotion&&formatedGoodsPromotion.length>0}}">
+                    <view class="J-viewlog" data-viewlog="{{promotion.viewLog}}" style="position: relative" wx:for="{{formatedGoodsPromotion}}" wx:for-item="promotion" wx:key="index">
+                        <c bind:_init="_tic" bind:tap="_p" coupon="{{promotion}}" data-t="{{ tap:{en:'onPromotionClick'} }}" hasArrow="{{promotion.hasExtraDesc}}" index="{{index}}" isGrayText="{{true}}" kdtId="{{kdtId}}" showRule="{{showActivityRule}}"></c>
+                    </view>
+                </view>
+                <view class="c78475" wx:if="{{umpCouponShowList&&umpCouponShowList.length>0}}">          可领优惠券
+        </view>
+                <view class="J-viewlog" data-viewlog="{{coupon.viewLog}}" style="position: relative" wx:for="{{umpCouponShowList}}" wx:for-item="coupon" wx:key="index">
+                    <c bind:_init="_tic" bind:tap="_p" coupon="{{coupon}}" data-t="{{ tap:{en:'handleUmpCouponClick'} }}" index="{{index}}" isGrayText="{{true}}" kdtId="{{kdtId}}" showRule="{{showActivityRule}}"></c>
+                </view>
+                <view class="c1feed">
+                    <view class="c3ddc7">以下单页实际参与活动为准</view>
+                    <view bind:tap="_p" class="c58205" data-t="{{ tap:{en:'clickRuleBtn'} }}" wx:if="{{showRuleBtn}}">{{ruleBtnName}}</view>
+                </view>
+                <view class="c777bb" wx:if="{{optimalCouponShowList&&optimalCouponShowList.length>0}}">          券后价格仅为初步预估，请以最终购买价格为准
+        </view>
+            </scroll-view>
+            <view catch:tap="_p" class="e31b8" data-t="{{ tap:{en:'true',et:'stop'} }}">
+                <view bind:tap="_p" class="c610c8" data-t="{{ tap:{en:'closePop'} }}">          我知道了
+        </view>
+            </view>
+        </view>
+    </b>
+    <b bind:_init="_tic" bind:close="_p" closeable="{{false}}" customClass="c50d8d" data-t="{{ close:{en:'hidePopUpMore'} }}" position="bottom" round="{{true}}" safeAreaInsetBottom="{{true}}" show="{{isShowMore}}">
+        <view class="c16656">{{moreText.title}}</view>
+        <scroll-view class="c103a9" scrollY="{{true}}">
+            <f bind:_init="_tic" kdtId="{{kdtId}}" meetReducePostageData="{{moreText.meetReducePostageData}}" wx:if="{{moreText.isShowMeetReducePostage}}"></f>
+            <view wx:else>{{moreText.desc}}</view>
+        </scroll-view>
+        <view catch:tap="_p" class="e31b8" data-t="{{ tap:{en:'true',et:'stop'} }}">
+            <view bind:tap="_p" class="c610c8" data-t="{{ tap:{en:'hidePopUpMore'} }}">        我知道了
+      </view>
+        </view>
+    </b>
+    <b bind:_init="_tic" bind:click-overlay="_p" bind:close="_p" customClass="c50d8d" data-t="{{ close:{en:'hideCashBackRule'},clickOverlay:{en:'hideCashBackRule'} }}" position="bottom" round="{{true}}" safeAreaInsetBottom="{{true}}" show="{{showCashBackRulePop}}">
+        <view class="c16656">{{cashbackProTitle}}说明</view>
+        <scroll-view class="c103a9" scrollY="{{true}}">
+            <d bind:_init="_tic" cashbackPro="{{cashbackProData}}" isCashbackPro="{{isCashbackPro}}" promotionActivity="{{promotionActivity}}"></d>
+        </scroll-view>
+        <view catch:tap="_p" class="e31b8" data-t="{{ tap:{en:'true',et:'stop'} }}">
+            <view bind:tap="_p" class="c610c8" data-t="{{ tap:{en:'hideCashBackRule'} }}">        知道了
+      </view>
+        </view>
+    </b>
+    <b bind:_init="_tic" bind:click-overlay="_p" bind:close="_p" closeable="{{true}}" customClass="c50d8d" data-t="{{ close:{en:'hideGuide'},clickOverlay:{en:'hideGuide'} }}" position="bottom" round="{{true}}" safeAreaInsetBottom="{{true}}" show="{{showGuidePop}}">
+        <view class="c16656">优惠说明</view>
+        <view class="c103a9">
+            <div bind:_init="_tic" class="c33db3">开通会员后，根据商家设置不同，商品会有不同的优惠方式：</div>
+            <image class="c76345 bd231" lazyLoad="true" mode="widthFix" src="//b.yzcdn.cn/public_files/fec054af2cbf866baeb77d64cbaf0ffb.png"></image>
+        </view>
+    </b>
+</view>

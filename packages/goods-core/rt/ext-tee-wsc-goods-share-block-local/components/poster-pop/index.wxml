@@ -1,0 +1,15 @@
+<view catch:tap="_p" class="c5ebeb" data-t="{{ tap:{en:'closePop',et:'stop'} }}" style="margin-top:{{statusBarHeight+'px'}}" wx:if="{{show&&!isWxShareImg}}">
+    <view class="c0d03c">
+        <view class="c1b86f">
+            <view class="ea345"></view>
+        </view>
+        <view class="c8811d">
+            <image bind:load="_p" class="ee77a bd231" data-t="{{ load:{en:'onPosterLoad'} }}" lazyLoad="true" mode="widthFix" src="{{previewImg}}" style="height:{{posterHeight+'px'}}" wx:if="{{isLoaded}}"></image>
+            <view class="baee1" wx:if="{{!isLoaded}}">
+                <image bind:load="_p" class="c8de70 bd231" data-t="{{ load:{en:'onSkeletonLoad'} }}" lazyLoad="true" mode="widthFix" src="https://img01.yzcdn.cn/public_files/94cb2c049fbd71ffdb4631c9b3d4a0dc.png!large.png" style="height:{{skeletonHeight+'px'}}"></image>
+            </view>
+        </view>
+        <view bind:tap="_p" class="c825d4 c5136e" data-t="{{ tap:{en:'clickSaveImage'} }}" hidden="{{!isLoaded}}">      保存图片
+    </view>
+    </view>
+</view>

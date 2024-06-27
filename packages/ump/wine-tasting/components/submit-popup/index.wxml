@@ -1,0 +1,19 @@
+<a bind:close="onClose" closeable="{{true}}" customStyle="background: #F2F2F2;bottom:{{popupBottom}}px;transition: all 0.3s;" position="bottom" round="{{true}}" safeAreaInsetBottom="{{false}}" show="{{show}}" style="--theme-main-color: {{themeColor}}">
+    <view class="activity-apply-content" id="activity-apply-content-id">
+        <view class="activity-apply-content-top">
+            <text class="top-title">欢迎参加品鉴会</text>
+            <text class="top-desc">填写信息后即为报名成功</text>
+        </view>
+        <view class="activity-apply-content-middle">
+            <b border="{{false}}" customClass="apply-cell-group" inset="{{true}}">
+                <c adjustPosition="{{false}}" bind:change="onChange" catchtap="inputClick" center="{{true}}" customStyle="min-height: 112rpx;" data-name="name" errorMessage="{{error.name}}" focus="{{focus==='name'}}" label="姓名" labelClass="label-field" maxlength="15" placeholder="请输入姓名" showConfirmBar="{{false}}" titleWidth="120rpx" type="textarea" value="{{info.name}}"></c>
+                <c adjustPosition="{{false}}" bind:change="onChange" border="{{activityInfo.applySettingObj.position||activityInfo.applySettingObj.company}}" center="{{true}}" customStyle="min-height: 112rpx;" data-name="mobile" disabled="{{true}}" errorMessage="{{error.mobile}}" label="手机号" labelClass="label-field" placeholder="用于接收邀请通知" showConfirmBar="{{false}}" titleWidth="120rpx" type="textarea" value="{{info.mobile}}"></c>
+                <c adjustPosition="{{false}}" bind:change="onChange" border="{{!!activityInfo.applySettingObj.position}}" catchtap="inputClick" center="{{true}}" customStyle="min-height: 112rpx;" data-name="company" errorMessage="{{error.company}}" focus="{{focus==='company'}}" label="公司" labelClass="label-field" maxlength="30" placeholder="{{activityInfo.applySettingObj.company==='true'?'':'(选填)'}}为了更好的服务您" showConfirmBar="{{false}}" titleWidth="120rpx" type="textarea" value="{{info.company}}" wx:if="{{activityInfo.applySettingObj.company}}"></c>
+                <c adjustPosition="{{false}}" bind:change="onChange" border="{{false}}" catchtap="inputClick" center="{{true}}" customStyle="min-height: 112rpx;" data-name="position" errorMessage="{{error.position}}" focus="{{focus==='position'}}" label="职位" labelClass="label-field" maxlength="15" placeholder="{{activityInfo.applySettingObj.position==='true'?'':'(选填)'}}为了更好的服务您" showConfirmBar="{{false}}" titleWidth="120rpx" type="textarea" value="{{info.position}}" wx:if="{{activityInfo.applySettingObj.position}}"></c>
+            </b>
+        </view>
+        <view class="activity-apply-content-bottom">
+            <d bind:click="onSubmit" customClass="button-submit apply" loading="{{loading}}" loadingText="报名中...">确认报名</d>
+        </view>
+    </view>
+</a>

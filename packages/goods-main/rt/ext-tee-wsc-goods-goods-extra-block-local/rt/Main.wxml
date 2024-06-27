@@ -1,0 +1,8 @@
+<view>
+    <block wx:if="{{couponIntroOpt.showCouponIntro}}">
+        <b bind:_init="_tic" rmId="{{rmId}}" skuCouponIntroDetail="{{couponIntroOpt.skuCouponIntroDetail}}" wx:if="{{rmId==='b7-53'||rmId==='b33-18'}}"></b>
+    </block>
+    <block wx:if="{{ecardIntroOpt.show}}">
+        <a bind:_init="_tic" opt="{{ecardIntroOpt}}" rmId="{{rmId}}" wx:if="{{rmId==='b7-53'||rmId==='b33-18'}}"></a>
+    </block>
+</view>

@@ -1,0 +1,8 @@
+<view class="order-pay-prompt-popup-btns">
+    <view class="pay-immediately">
+        <a bg="main-bg" bindtap="payHandle" color="main-text" customClass="pay-immediately-btn">立即支付</a>
+    </view>
+    <view class="later">
+        <text bindtap="laterHandle" class="later-btn">稍后再说</text>
+    </view>
+</view>

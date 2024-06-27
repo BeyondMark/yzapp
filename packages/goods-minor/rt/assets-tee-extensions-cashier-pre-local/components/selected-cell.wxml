@@ -1,0 +1,4 @@
+<a bind:_init="_tic" bind:tap="_p" border="{{false}}" customClass="cashier-pre__selected-cell" data-t="{{ tap:{ en:'$emit',args:['show-list'] } }}" isLink="{{true}}" title="支付方式">
+    <view class="{{classnames.selected}}">
+        <b bind:_init="_tic" channel="{{channel}}" customStyle="margin: 0 4px" style="height: 20px"></b> {{displayName}} </view>
+</a>

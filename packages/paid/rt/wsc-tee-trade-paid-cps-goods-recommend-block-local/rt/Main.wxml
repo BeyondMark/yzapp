@@ -1,0 +1,5 @@
+<view wx:if="{{showExtHolder}}">
+    <block wx:if="{{widgetCpsRecommendGoodsInit}}">
+        <a bind:_init="_tic" rmId="b21-5" wx:if="{{rmId==='b21-22'}}"></a>
+    </block>
+</view>

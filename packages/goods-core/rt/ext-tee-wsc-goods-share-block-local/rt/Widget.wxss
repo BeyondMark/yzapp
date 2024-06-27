@@ -1,0 +1,3 @@
+.scroll-locked {
+  overflow: hidden !important;
+}

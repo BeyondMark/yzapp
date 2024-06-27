@@ -1,0 +1,40 @@
+.end-card-wrap {
+  position: relative;
+  padding: 15px 15px 10px;
+  background: url(https://b.yzcdn.cn/public_files/2e94cd94c4b4f2fcaff17293b3ce046b.png);
+  background-size: 100%auto;
+  background-repeat: no-repeat;
+  background-position: 0-64px;
+  background-color: #fff;
+}
+.end-card {
+  position: relative;
+  margin-top: 10px;
+  background: #fff;
+  padding: 20px 10px;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.end-card-icon {
+  margin: 14px auto 11px;
+  width: 120px;
+  height: 118px;
+  background: url(https://img01.yzcdn.cn/upload_files/2020/07/28/FhtPuMqppz3GxAPwdkSGsFptpux3.png)
+    no-repeat 50%;
+  background-size: 100%;
+}
+.end-card-text {
+  font-size: 16px;
+  color: #969799;
+}
+.end-card-btn {
+  display: block;
+  margin-top: 27px;
+  background-image: linear-gradient(135deg, #ff5644, #fb1c60);
+  border-radius: 22px;
+  font-size: 16px;
+  color: #fff;
+  height: 44px;
+  line-height: 44px;
+}

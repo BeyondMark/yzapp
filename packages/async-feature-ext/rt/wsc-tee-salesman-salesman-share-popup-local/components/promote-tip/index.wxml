@@ -1,0 +1,13 @@
+<view>
+    <a bind:_init="_tic" bind:close="_p" confirmButtonColor="var(--general)" confirmButtonText="我知道了" data-t="{{ close:{en:'handleClose'} }}" show="{{show}}" useSlot="{{true}}" width="240px">
+        <view class="tips-wrap">
+            <view class="tips-content">
+                <view class="{{'tip-item'}} {{tip.state?'':'error-text'}}" wx:for="{{statusList}}" wx:for-item="tip" wx:key="text">
+                    <b bind:_init="_tic" name="passed" wx:if="{{tip.state}}"></b>
+                    <b bind:_init="_tic" name="close" wx:else></b>
+                    <view class="tip-text t-text">{{tip.text}}</view>
+                </view>
+            </view>
+        </view>
+    </a>
+</view>

@@ -1,0 +1,14 @@
+@import "/packages/shop/components/showcase/index.wxss";
+@import "/packages/shop/goods/group/extensions/page-block/widgets/group-page/owl-goods/index.wxss";
+.home-btn {
+  text-align: center;
+  margin-top: 30px;
+}
+.home-btn button {
+  width: 86px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  border-radius: 2px;
+  color: #999;
+}

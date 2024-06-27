@@ -1,0 +1,23 @@
+.sc-sku-price__label {
+  font-size: 12px;
+}
+.sc-sku-price__show {
+  display: inline-block;
+}
+.sc-sku-price__symbol {
+  font-size: 14px;
+  vertical-align: middle;
+}
+.sc-sku-price__num {
+  font-size: 16px;
+  vertical-align: middle;
+}
+.sc-sku-price__tag {
+  vertical-align: middle;
+  margin-left: 6px;
+}
+.sc-sku-price__origin {
+  font-size: 12px;
+  text-decoration: line-through;
+  color: #c9c9c9;
+}

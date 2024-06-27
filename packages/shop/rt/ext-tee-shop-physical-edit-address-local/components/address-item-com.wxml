@@ -1,0 +1,6 @@
+<view bind:tap="_p" class="address-list-item" data-t="{{ tap:{en:'onItemClick'} }}">
+    <view class="item-content">
+        <view class="name">{{item.title}}</view>
+        <view class="desc"> {{item.address}} </view>
+    </view>
+</view>

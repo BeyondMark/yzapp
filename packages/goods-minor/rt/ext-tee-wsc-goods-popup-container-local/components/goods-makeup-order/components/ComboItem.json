@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "b": "./GoodsItem",
+    "_": "../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

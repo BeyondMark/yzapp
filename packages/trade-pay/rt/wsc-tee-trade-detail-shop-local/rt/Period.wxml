@@ -1,0 +1,7 @@
+<view wx:if="{{showPeriodBuyDelivery}}">
+    <a bind:_init="_tic" style="{{customStyle}}" title="配送周期" titleWidth="80px" value="{{periodTime}}"></a>
+    <a bind:_init="_tic" center="{{true}}" style="{{customStyle}}" title="送达日期" titleWidth="80px">
+        <view> {{periodDeliveryTime}} </view>
+        <view> {{periodBuyTimeText}} </view>
+    </a>
+</view>

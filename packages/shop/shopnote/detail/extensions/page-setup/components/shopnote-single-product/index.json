@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../shopnote-base/shopnote-title/index",
+    "b": "../shopnote-base/shopnote-headpic/index",
+    "c": "../shopnote-base/shopnote-fixedicon/index",
+    "d": "../shopnote-base/shopnote-highlight/index",
+    "e": "../shopnote-base/shopnote-time/index",
+    "_": "../../../../../../../../components/_/index"
+  }
+}

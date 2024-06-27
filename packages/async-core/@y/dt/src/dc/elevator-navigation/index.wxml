@@ -1,0 +1,36 @@
+<view class="elevator-navigation" id="{{elevatorNavigationId}}" style="{{tabActive}}" wx:if="{{opt.tabs.length>0}}">
+    <view style="height: 44px" wx:if="{{isStartFixed}}"></view>
+    <view class="{{isStartFixed?'elevator-navigation__view--fixed':''}}" style="top:{{stickyTop+'px'}}">
+        <scroll-view bind:scroll="_p" class="scroll_view" data-t="{{ scroll:{en:'scrollViewScroll'} }}" scrollLeft="{{scrollLeft}}" scrollWithAnimation="{{true}}" scrollX="true" wx:if="{{!(opt.navigationType===navigationTypeDefault&&opt.showMethod===showMethodDefault)}}">
+            <view class="tabs_warp">
+                <view bind:tap="_p" class="{{'elevator-tab'}} {{index===active?'elevator-tab-active':''}}" data-index="{{index}}" data-t="{{ tap:{en:'handleTabClick'} }}" style="{{item.bgStyle}}" wx:for="{{showTabs}}" wx:key="index">
+                    <view class="tab_title" style="{{item.titleStyle}}">
+                        <image class="{{'elevator_navigation_img'}} {{opt.showMethod===imageTextIndex?'elevator_navigation_image_text':'elevator_navigation_image'}} tee-image" lazyLoad="true" src="{{item.image_url}}" wx:if="{{opt.showMethod===imageTextIndex||opt.showMethod===imageIndex}}"></image>
+                        <view class="{{'text'}} {{opt.showMethod===imageTextIndex?'image_text':''}}" wx:if="{{opt.showMethod!==imageIndex}}">{{item.title}}</view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+        <a active="{{active}}" bind:_init="_tic" bind:nav-scroll="_p" bind:tap="_p" border="{{false}}" class="cap-tabs {{opt.tabsCustomClass}}" color="{{typeColor}}" data-t="{{ tap:{en:'handleVanTabClick'},navScroll:{en:'scrollViewScroll'} }}" pid="{{'elevator-navigation'+pid}}" swipeThreshold="{{5}}" tabActiveClass="elevator-navigation-active" tabClass="elevator-navigatio-default" titleActiveColor="{{fontActiveColor}}" titleInactiveColor="{{fontDefaultColor}}" wx:if="{{opt.navigationType===navigationTypeDefault&&opt.showMethod===showMethodDefault}}">
+            <view wx:if="{{opt.showMethod===showMethodDefault}}">
+                <b bind:_init="_tic" pid="{{'elevator-navigation'+pid}}" title="{{tab.title}}" titleStyle="{{'margin: 0 -5px;background:'+backgroundColor}}" wx:for="{{opt.tabs}}" wx:for-item="tab" wx:key="index"></b>
+            </view>
+        </a>
+        <view class="elevator-navigation--tabs-mask" style="{{tabsMaskCustomStyle}}" wx:if="{{opt.slideSetting===1&&opt.tabs.length>showMaxNum&&showMask}}"></view>
+        <view wx:if="{{opt.slideSetting===0&&opt.showMethod===showMethodDefault}}">
+            <view bind:tap="_p" class="elevator-navigation--tabs-mask" data-t="{{ tap:{en:'handleTabsPop'} }}" style="{{tabsMaskCustomStyle}}" wx:if="{{showMask}}">
+                <c bind:_init="_tic" color="{{fontDefaultColor}}" name="arrow-down"></c>
+            </view>
+            <view class="elevator-navigation--tabs-pop" wx:if="{{showTabsPop}}">
+                <view class="tabs-pop_title">
+                    <view bind:tap="_p" class="tabs-pop_title-arrow" data-t="{{ tap:{en:'handleTabsPop'} }}">
+                        <c bind:_init="_tic" name="arrow-up"></c>
+                    </view>
+                </view>
+                <view class="tabs-pop_tabs">
+                    <view bind:tap="_p" class="tabs-pop_tabs-item ellipsis-1 {{popTextCustomClass}}" data-t="{{ tap:{ en:'handleTabsPopClick',args:[index] } }}" style="{{index===active?popTextCustomStyle:''}}" wx:for="{{opt.tabs}}" wx:for-item="tab" wx:key="index">{{tab.title}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

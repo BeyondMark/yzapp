@@ -1,0 +1,15 @@
+<view class="cashback-popup">
+    <view class="acffe">
+        <view>{{cashBackProRuleStr||cashBackRuleStr}}</view>
+    </view>
+    <block wx:if="{{isCashbackPro&&isCashbackProStoredValue}}">
+        <view class="c84bb4">1.返还的储值金将发放至储值余额，请前往“个人中心”-“余额”中查看。</view>
+        <view class="c84bb4">2.订单支付完成{{feedbackLimitDays}}天后，且未发起退款才会收到储值金返还。</view>
+    </block>
+    <block wx:else>
+        <view class="c84bb4">1.通过“微信支付”付款，返现金额将通过“微信退款”发放，请注意查收。</view>
+        <view class="c84bb4">2.通过“银行卡”付款，返现金额将在3天内，原路发放至银行卡账户。</view>
+        <view class="c84bb4" wx:if="{{isCashbackPro}}">      3.后续若发生取消订单或退货，则从货款中扣除已返现金额。
+    </view>
+    </block>
+</view>

@@ -1,0 +1,18 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y-open/vt/dist/popup/index.weapp",
+    "b": "/packages/async-tee/@y-open/vt/native/weapp/loading/index/index",
+    "c": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "d": "./guarantee-pop/GuaranteeItem",
+    "e": "./guarantee-pop/GuaranteeDeclare",
+    "f": "./guarantee-pop/GuaranteeEffective",
+    "g": "./guarantee-pop/GuaranteePickup",
+    "h": "./guarantee-pop/GuaranteeDamageSubsidy",
+    "i": "./guarantee-pop/GuaranteeBeautyRights",
+    "j": "./guarantee-pop/GuaranteeEatRights",
+    "k": "./guarantee-pop/GuaranteeCommon",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_", "c": "_" }
+}

@@ -1,0 +1,9 @@
+<view bind:tap="goTaskDetail" class="tips-container" data-query="{{taskId:taskAwardData.taskId,kdtId:kdtId}}" wx:if="{{goodsBottomDisabledTip.showTask}}">
+    <view class="award-icon-wrap">
+        <a class="task-award-info-icon" name="https://img01.yzcdn.cn/upload_files/2020/06/21/Fsud2-Y2TCUqiNp1IBaF8T-e-uQd.png"></a>
+    </view>
+    <view class="tips-content-wrap theme__button--main" style="background: {{mainColor}};">
+        <text class="tips-content">{{taskAwardData.nextAwardGapStr}}</text>
+        <view class="tips-triangle theme__border-top" style="border-top-color: {{mainColor}};"></view>
+    </view>
+</view>

@@ -1,0 +1,15 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../address-list/rt/index",
+    "b": "./../../address-card/rt/index",
+    "c": "./../../local-delivery-time-cell/rt/index",
+    "d": "/packages/goods-minor/rt/wsc-tee-trade-trade-buy-common-popup-local/widgets/delivery-scope-popup/rt/index",
+    "e": "./../../../components/GrouponHeaderCell",
+    "f": "./../../../components/GrouponMemberCell",
+    "g": "./../../../components/express-way/ExpressWayCell",
+    "h": "./../../../components/delivery-scope/index",
+    "_": "../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "d": "_" }
+}

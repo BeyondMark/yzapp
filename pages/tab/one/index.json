@@ -1,0 +1,20 @@
+{
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "a": "/pages/home/feature/index",
+    "b": "/packages/trade-cart/cart/index",
+    "c": "/packages/member-code/index",
+    "d": "/packages/trade/order/list/index",
+    "e": "/packages/async-main/@vant/weapp/dist/toast/index",
+    "f": "/packages/async-main/@vant/weapp/dist/notify/index",
+    "_": "../../../components/_/index"
+  },
+  "componentPlaceholder": {
+    "b": "view",
+    "c": "_",
+    "d": "_",
+    "e": "_",
+    "f": "_"
+  }
+}

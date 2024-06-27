@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../pop-container/index",
+    "b": "../goods-item/index",
+    "_": "../../../../../components/_/index"
+  }
+}

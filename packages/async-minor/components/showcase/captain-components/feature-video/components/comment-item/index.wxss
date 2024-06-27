@@ -1,0 +1,47 @@
+.feat-video__comment {
+  margin-bottom: 7px;
+}
+.feat-video__comment__likes {
+  display: flex;
+  align-items: center;
+  float: right;
+}
+.feat-video__comment__likes-count {
+  display: inline-block;
+  margin-bottom: -3px;
+}
+.feat-video__comment__likes image {
+  width: 13px;
+  height: 13px;
+  padding: 0 5px;
+}
+.feat-video__comment__header {
+  color: #4a4a4a;
+  line-height: 17px;
+  margin-bottom: 5px;
+  display: flex;
+}
+.feat-video__comment__name {
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  flex: 1;
+  padding-right: 20px;
+}
+.feat-video__comment__content {
+  color: #333;
+  line-height: 16px;
+  margin: 0 5px 5px 0;
+}
+.feat-video__comment__date {
+  color: #999;
+  line-height: 14px;
+  font-size: 10px;
+  padding-bottom: 5px;
+}
+.feat-video__comment__reply {
+  padding-top: 9px;
+  border-top: 1px solid #979797;
+  padding-left: 16px;
+}

@@ -1,0 +1,17 @@
+<view class="prb" wx:if="{{showProgress}}">
+    <view class="prb-title">{{opt.title}}</view>
+    <view class="prb-intro">
+        <view class="intro__progress">
+            <view class="intro__progress-point"></view>
+            <block wx:for="{{progressPoint}}" wx:for-item="_">
+                <view class="{{'intro__progress-bar'}} {{'bar-'+index}}"></view>
+                <view class="{{'intro__progress-bar'}} {{'bar-'+index}}"></view>
+                <view class="{{'intro__progress-point'}} {{'point-'+index}}"></view>
+            </block>
+        </view>
+        <view class="intro__text">
+            <view wx:for="{{opt.progressText}}" wx:key="index"> {{item}} </view>
+        </view>
+        <view class="intro__desc">{{depositPaymentTime}}</view>
+    </view>
+</view>

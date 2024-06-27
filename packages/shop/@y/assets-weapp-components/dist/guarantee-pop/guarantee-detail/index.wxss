@@ -1,0 +1,32 @@
+@import "/packages/shop/@y/assets-weapp-components/dist/common/index.wxss";
+.guarantee-detail {
+  height: 85vh;
+}
+.guarantee-detail__container {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 16px 18px 0;
+}
+.guarantee-detail__title {
+  color: #39393a;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+}
+.guarantee-detail__content {
+  max-height: 75vh;
+  margin: 20px 0 0;
+  padding-bottom: 20px;
+  overflow-y: auto;
+}
+.guarantee-detail__sub-title {
+  padding: 20px 0 10px;
+  color: #111;
+  font-size: 14px;
+}
+.guarantee-detail__text {
+  color: #666;
+  font-size: 12px;
+  line-height: 1.3;
+}

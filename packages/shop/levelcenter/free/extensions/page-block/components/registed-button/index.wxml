@@ -1,0 +1,9 @@
+<view class="mobile-check-action">
+    <view class="button-wrapper {{showBottomPadding?'btn-bottom':''}}">
+        <view class="promot-info">
+            <a authTypeList="{{['mobile']}}" bind:next="handleButtonConfirm" bizDataMap="{{bizDataMap}}">
+                <view class="experience-price">{{btnText}}</view>
+            </a>
+        </view>
+    </view>
+</view>

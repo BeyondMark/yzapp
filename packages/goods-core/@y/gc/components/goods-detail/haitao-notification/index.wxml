@@ -1,0 +1,9 @@
+<view class="c0aad8">
+    <view class="d5d3d">{{haitaoDesc.title}}</view>
+    <view class="c9a036">
+        <view class="eaa7e"> {{haitaoDesc.subtitle}} </view>
+        <view class="c6438c"> {{haitaoDesc.info1}} </view>
+        <view class="c6438c"> {{haitaoDesc.info2}} </view>
+        <view class="c6438c"> {{haitaoDesc.info3}} </view>
+    </view>
+</view>

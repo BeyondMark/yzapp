@@ -1,0 +1,32 @@
+.user-authorize__comnponent {
+  display: block;
+  height: 100%;
+  text-align: inherit;
+}
+.user-authorize-btn {
+  position: relative;
+  height: 100%;
+}
+.user-authorize-btn:after,
+.user-authorize-btn:before {
+  content: "";
+  display: table;
+  clear: both;
+}
+.user-authorize__btn-empty {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  overflow: visible;
+  font-size: inherit !important;
+  color: inherit !important;
+  line-height: inherit !important;
+  text-align: inherit;
+}
+.user-authorize__btn-empty:after,
+.user-authorize__btn-empty:before {
+  opacity: 0;
+  border: none !important;
+}

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./DeliveryBlock",
+    "_": "../../../../../components/_/index"
+  }
+}

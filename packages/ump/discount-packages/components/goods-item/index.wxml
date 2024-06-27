@@ -1,0 +1,15 @@
+<view class="goods-item">
+    <view catchtap="onClickThumb" class="goods-item__thumb">
+        <image class="goods-item__img" mode="aspectFill" src="{{goods.thumbUrl}}"></image>
+    </view>
+    <view class="goods-item__content">
+        <view class="goods-item__title">{{goods.title}}</view>
+        <view catchtap="handleSkuBtnTap" class="goods-item__desc" wx:if="{{goods.desc}}">{{goods.desc}}<b class="sku-arrow" color="#DCDCDC" name="arrow-down" size="14px"></b>
+        </view>
+        <view class="goods-item__bottom">
+            <a color="general" customClass="goods-item__price" wx:if="{{isMatchPackage}}">￥{{goods.activityPrice}}</a>
+            <text class="goods-item__origin {{isMatchPackage?'goods-item__origin--del':''}}">￥{{goods.originPrice}}</text>
+            <text class="goods-item__num">X{{goods.num}}</text>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,20 @@
+<view class="c6e94b">
+    <a bind:_init="_tic" border="{{false}}" customClass="c1604c">
+        <view class="e342b" slot="title">
+            <view class="c45e42 c89585">运费</view>
+            <view class="c4c00f">
+                <view>{{opt.postage}}</view>
+                <view class="c90888">
+                    <view class="c722f7" wx:if="{{opt.showSoldNum}}">
+                        <view class="c89585" style="margin-right: 4px">已售</view>
+                        <view class="c89585">{{opt.soldNumText}}</view>
+                    </view>
+                    <view class="c722f7" wx:if="{{opt.showStockNum}}">
+                        <view class="c89585" style="margin-right: 4px">剩余</view>
+                        <view class="c89585">{{opt.stockNumText}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </a>
+</view>

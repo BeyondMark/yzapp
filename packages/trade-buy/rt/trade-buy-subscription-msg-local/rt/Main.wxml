@@ -1,0 +1,6 @@
+<view wx:if="{{showTips}}">
+    <a bind:_init="_tic" mask="{{true}}" show="{{showTips}}" zIndex="199"></a>
+    <view bind:tap="_p" class="c7c275" data-t="{{ tap:{en:'closeTips'} }}">
+        <image class="c0695c bd231" lazyLoad="true" src="https://img01.yzcdn.cn/upload_files/2020/03/25/Fq24gCcTJhE3bpk9giOf7LPqC-7H.gif"></image>
+    </view>
+</view>

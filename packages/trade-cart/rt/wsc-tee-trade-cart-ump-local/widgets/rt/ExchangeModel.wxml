@@ -1,0 +1,26 @@
+<view class="em" style="{{themeCss}}">
+    <c bind:_init="_tic" bind:closed="_p" customClass="c7e9af" customStyle="{{customStyle}}" data-t="{{ closed:{en:'closeExchangePop'} }}" position="bottom" safeAreaInsetBottom="{{true}}" show="{{show}}">
+        <view class="c4e768">
+            <view class="c18f06"> 换购商品 </view>
+            <b bind:_init="_tic" bind:tap="_p" customClass="c5174a" data-t="{{ tap:{en:'closeExchangePop'} }}" name="cross"></b>
+        </view>
+        <view class="c92898" wx:if="{{goodsList.length}}"> {{activityDesc}} <view wx:if="{{supportMulti}}">可换购以下任意商品</view>
+            <view wx:else> 可换购<view class="c89585">1件</view>商品 </view>
+        </view>
+        <view class="e775a">
+            <f bind:_init="_tic" class="d5bab" type="spinner" wx:if="{{fetchExchangeListIng}}"></f>
+            <g bind:_init="_tic" wx:if="{{getListError}}"></g>
+            <block wx:else>
+                <a bind:_init="_tic" bind:change-sku-show="_p" bind:close-sku="_p" bind:to-goods-detail="_p" bind:updateGoodsListData="_p" currentSelectedSku="{{currentSelectedSku}}" data-t="{{ updateGoodsListData:{en:'updateGoodsListData'},toGoodsDetail:{en:'toGoodsDetail'},closeSku:{en:'closeSku'},changeSkuShow:{en:'changeSkuShow'} }}" goodsList="{{goodsList}}" rmId="{{rmId}}" supportMulti="{{supportMulti}}" themeCss="{{themeCss}}" themeGeneralColor="{{themeGeneralColor}}" wx:if="{{rmId==='b4-2'}}"></a>
+            </block>
+        </view>
+        <view class="c856cd">
+            <view class="c9f792">
+                <view class="c89585">已选 {{totalNum}} 件</view>
+            </view>
+            <d bind:_init="_tic" bind:tap="_p" customClass="cb584" data-t="{{ tap:{en:'onAddToCart'} }}" loading="{{btnLoading}}" loadingType="spinner">        确定
+      </d>
+        </view>
+    </c>
+    <e bind:_init="_tic" data-ref="van-toast"></e>
+</view>

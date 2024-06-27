@@ -1,0 +1,3 @@
+<view class="input-field">
+    <a bind:_init="_tic" bind:input="_p" customStyle="{{fieldStyle}}" data-id="{{fieldInfo.itemId}}" data-t="{{ input:{en:'onTextInput'} }}" disabled="{{fieldInfo.disabled}}" label="{{fieldLabel}}" placeholder="{{placeholder}}" type="{{type}}" value="{{fieldValue}}"></a>
+</view>

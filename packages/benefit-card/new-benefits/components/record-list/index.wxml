@@ -1,0 +1,8 @@
+<view class="{{!isAllShow?'record-list':''}}">
+    <a bind:click="toRecordDetailLink" data-biz="{{item.sceneBizValue}}" data-id="{{item.benefitId}}" data-scene="{{item.scene}}" label="{{item.createdDate}}" title="{{item.templatePluginBaseDTO.benefitPluginInfo.pluginName}}" wx:for="{{showList}}" wx:key="{{ item.templatePluginBaseDTO.requestId }}">
+        <view class="use-info">
+            <image class="use-info-background" src="https://b.yzcdn.cn/public_files/e77c7892b8cc3c7b4219d085f4e8d2d8.png" wx:if="{{!isAllShow}}"></image>
+            <span>已使用{{item.num}}次</span>
+        </view>
+    </a>
+</view>

@@ -1,0 +1,30 @@
+.popup-content {
+  text-align: center;
+}
+.popup-container {
+  width: 312px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+.popup-container__title {
+  color: #323233;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 8px;
+}
+.popup-container__msg {
+  color: #969799;
+  font-size: 14px;
+  line-height: 20px;
+}
+.popup-button {
+  display: inline-block;
+  vertical-align: middle;
+}
+.popup-button .popup-button-main {
+  color: #ee0a24;
+  width: 156px;
+}
+.popup-button .popup-button-cancel {
+  width: 156px;
+}

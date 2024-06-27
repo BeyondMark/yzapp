@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../login/index",
+    "b": "../../../@vant/weapp/dist/toast/index",
+    "_": "../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,21 @@
+<view wx:if="{{formattedGoods.length}}">
+    <view class="{{'c4c486'}} {{isEmpty?'c4c486--empty':''}}">
+        <view bind:tap="_p" class="f9f12" data-t="{{ tap:{en:'openDetail'} }}">
+            <view class="c68911">
+                <view>以下商品（共{{formattedGoods.length}}件）无法购买</view>
+                <view class="f4f25">          查看原因<b bind:_init="_tic" color="#969799" customClass="c6f942" name="arrow"></b>
+                </view>
+            </view>
+            <view class="cbba7">
+                <view class="c08101">
+                    <view class="c75c62" wx:for="{{formattedGoodsLimit}}" wx:key="skuId">
+                        <image class="c5c40c bd231" lazyLoad="true" src="{{item.imgUrl}}"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <a bind:_init="_tic" bind:close="_p" buttonText="我知道了" color="{{themeColors.general}}" data-t="{{ close:{en:'closeDetail'} }}" show="{{show}}" title="查看原因">
+        <c bind:_init="_tic" item="{{item}}" wx:for="{{formattedGoods}}" wx:key="index"></c>
+    </a>
+</view>

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "拼团详情",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "light",
+  "navigationStyle": "custom",
+  "componentPlaceholder": { "c": "_", "d": "_", "f": "_", "g": "_", "h": "_" }
+}

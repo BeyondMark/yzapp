@@ -1,0 +1,18 @@
+<view class="c-calendar__container">
+    <view class="c-calendar__header">
+        <view class="c-calendar__choose">
+            <b bindtap="showPreviousMonth" class="c-header__arrow c-header__arrow--left" name="arrow-left" wx:if="{{canJumpPrevious}}"></b>
+            <view class="l-general__text c-header__text">{{year}}年{{month}}月</view>
+            <b bindtap="showNextMonth" class="c-header__arrow c-header__arrow--right" name="arrow" wx:if="{{canJumpNext}}"></b>
+        </view>
+        <a bind:toggle-subscribe-mask="toggleSubscribeMask" canReminderOpen="{{canReminderOpen}}" themeColor="{{themeColor}}"></a>
+    </view>
+    <view class="c-calendar__main">
+        <view class="l-calendar__row">
+            <view class="l-general__text l-calendar__item" wx:for="{{weeksMap}}" wx:key="index">{{item}}</view>
+        </view>
+        <view class="l-calendar__row" wx:for="{{monthTable}}" wx:for-item="week" wx:key="index">
+            <view class="l-calendar__item c-calendar__date {{item.hasSign?'c-calendar__date--sign':''}}" style="{{item.hasSign?'background:'+themeColor:''}}" wx:for="{{week}}" wx:key="index">{{item.value===0||item.hasSign?'':item.value}}</view>
+        </view>
+    </view>
+</view>

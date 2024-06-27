@@ -1,0 +1,137 @@
+.c89585 {
+  text-decoration: inherit;
+}
+.c89585,
+.bd231 {
+  display: inline-block;
+}
+.bd231 {
+  width: 100%;
+  height: 100%;
+}
+.baec6 {
+  display: inline-block;
+  width: 16px;
+  background-size: cover;
+}
+.baec6.PRIOR_USE {
+  height: 16px;
+  background-image: url(https://b.yzcdn.cn/assets-cashier/icon/prior-use-wechat2.png);
+}
+.baec6.INSTALMENT {
+  height: 12px;
+  background-image: url(https://img01.yzcdn.cn/public_files/2019/03/21/0a1e88aeac0387f39b64e2930ef35407.png);
+}
+.c31366 {
+  flex: 1;
+  text-align: right;
+  color: var(--cell-right-icon-color, #969799);
+}
+.c609e6 {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  box-sizing: border-box;
+  padding: 9px 16px;
+  border-left: 0;
+  border-right: 0;
+}
+.c609e6,
+.e21e6 {
+  background: #fff;
+}
+.c3d839 {
+  position: absolute;
+  right: 16px;
+  top: 12px;
+  width: 22px;
+  height: 22px;
+  padding: 4px;
+  box-sizing: border-box;
+}
+.e21e6 .c38696 {
+  font-size: 12px;
+  color: #969799;
+  text-align: center;
+  margin: 4px auto;
+}
+.e21e6 .c38696 em {
+  color: #323233;
+  font-weight: 700;
+  font-style: normal;
+}
+.e21e6 .d304b {
+  font-size: 14px;
+  line-height: 18px;
+  color: #323233;
+  padding: 32px 0 4px;
+}
+.e21e6 .eac82 {
+  font-size: 12px;
+  color: #969799;
+  line-height: 18px;
+}
+.e21e6__button {
+  line-height: 36px;
+  border-radius: 18px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  background: #ee0a24;
+  display: block;
+  margin-bottom: 20px;
+}
+.a4a71 {
+  font-size: 18px !important;
+  line-height: 24px;
+  color: #323233 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.a4a71 .b798a {
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+}
+.bd5ba {
+  max-width: 100%;
+  display: block;
+  padding: 6vw 7vw 8px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 17vw;
+}
+.c7b5dd {
+  display: flex;
+  justify-content: space-around;
+  font-size: 12px;
+  color: #39393a;
+  position: relative;
+}
+.c7b5dd:before {
+  content: "确认收货";
+  color: #969799;
+  font-size: 2.7vw;
+  position: absolute;
+  right: 17.5vw;
+  top: -11vw;
+}
+.c7b5dd .d70c1 {
+  flex: 1;
+  text-align: center;
+}
+.c64f39 {
+  margin: 0 4px;
+  font-size: 14px;
+  color: #666;
+}
+.e36aa {
+  font-size: 14px;
+  color: #969799;
+  display: flex;
+  align-items: center;
+  height: 16px;
+  padding-left: 4px;
+  position: relative;
+}

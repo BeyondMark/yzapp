@@ -1,0 +1,17 @@
+<c bind:_init="_tic" bind:close="_p" closeOnClickOverlay="{{closeOnClickOverlay}}" customClass="{{customClass}}" customStyle="{{formattdCustomStyle}}" data-t="{{ close:{en:'onClickOverlay'} }}" overlay="{{overlay}}" overlayStyle="{{overlayStyle}}" position="bottom" round="{{round}}" safeAreaInsetBottom="{{safeAreaInsetBottom}}" show="{{show}}" zIndex="{{zIndex}}">
+    <view class="t-hairline--bottom t-action-sheet__header" wx:if="{{title}}"> {{title}} <a bind:_init="_tic" bind:tap="_p" customStyle="{{closeIconStyle}}" data-t="{{ tap:{en:'onClose'} }}" name="close" wx:if="{{closeable}}"></a>
+    </view>
+    <view class="t-action-sheet__description" wx:if="{{description}}"> {{description}} </view>
+    <view wx:if="{{actions&&actions.length}}">
+        <button appParameter="{{appParameter}}" bind:contact="_p" bind:error="_p" bind:getphonenumber="_p" bind:getuserinfo="_p" bind:launchapp="_p" bind:opensetting="_p" bind:tap="_p" class="{{'t-action-sheet__item'}} {{'t-hairline--top'}} {{item.disabled||item.loading?'t-action-sheet__item--disabled':''}} {{item.className}} {{item.btnClass}}" data-index="{{index}}" data-t="{{ tap:{en:'onSelect'},getuserinfo:{en:'bindGetUserInfo'},contact:{en:'bindContact'},getphonenumber:{en:'bindGetPhoneNumber'},error:{en:'bindError'},launchapp:{en:'bindLaunchApp'},opensetting:{en:'bindOpenSetting'} }}" hoverClass="t-action-sheet__item--hover" lang="{{lang}}" openType="{{item.openType}}" sendMessageImg="{{sendMessageImg}}" sendMessagePath="{{sendMessagePath}}" sendMessageTitle="{{sendMessageTitle}}" sessionFrom="{{sessionFrom}}" showMessageCard="{{showMessageCard}}" style="{{item.color?'color: '+item.color:''}}" wx:for="{{formattedAction}}" wx:key="index">
+            <block wx:if="{{!item.loading}}"> {{item.name}} <view class="t-action-sheet__subname" wx:if="{{item.subname}}">{{item.subname}}</view>
+            </block>
+            <b bind:_init="_tic" customStyle="{{bthLoadingStyle}}" size="20px" wx:else></b>
+        </button>
+    </view>
+    <slot></slot>
+    <block wx:if="{{cancelText}}">
+        <view class="t-action-sheet__gap"></view>
+        <view bind:tap="_p" class="t-action-sheet__cancel" data-t="{{ tap:{en:'onCancel'} }}" hoverClass="t-action-sheet__cancel--hover" hoverStayTime="70"> {{cancelText}} </view>
+    </block>
+</c>

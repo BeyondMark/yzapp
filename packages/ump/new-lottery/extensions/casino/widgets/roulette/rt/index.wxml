@@ -1,0 +1,28 @@
+<view class="roulette-container l-scene__roulette">
+    <a authTypeList="{{authTypeList}}" authorizeScene="{{authorizeScene}}" beforGuide="{{beforGuide}}" bind:afterGetGuide="afterGetGuide" bind:catchGuide="handleLevel" class="lottery-btn-wrapper" containerStyle="height: 100%;" customStyle="background-color: rgba(0, 0, 0, 0); height: 440px;" guideType="casino" hasPopupSlot="{{true}}" kdtId="{{kdtId}}" redirectUrl="{{redirectUrl}}" requestParam="{{alias:alias}}">
+        <button class="lottery-btn" slot="guide-button">
+            <view class="lottery-btn__desc" wx:if="{{btnCode===statusEnum.UNSTART}}">活动未开始</view>
+            <view class="lottery-btn__desc" wx:elif="{{btnCode===statusEnum.END}}">活动已结束</view>
+            <view class="lottery-btn__desc" wx:else>{{joinTimes>0?'还剩 '+joinTimes+' 次':'次数已用完'}}</view>
+        </button>
+        <view class="lottery__pop--container" slot="popup-container">
+            <image src="https://img01.yzcdn.cn/upload_files/2021/07/11/FjXD5JFCGrbvMoDZnOTXa6z9BhYZ.png" style="width: 100%; height: 320px;"></image>
+            <view class="lottery__pop--container__desc">{{guideDesc}} 获得抽奖资格</view>
+            <view class="lottery__pop--container__title">有机会抽取<span class="lottery__pop--container__award">{{animationList[0].awardName}}</span>等大奖</view>
+        </view>
+        <view class="lottery__pop--cancel" slot="popup-button-cancel">
+            <b name="close"></b>
+        </view>
+        <view class="lottery__pop--main" slot="popup-button-main">
+            <c color="linear-gradient(to right, #ff717a, #ff2652)" round="{{true}}">
+                <span class="lottery__pop--main__span">{{guideBtnText}} 去抽奖</span>
+            </c>
+        </view>
+    </a>
+    <view class="roulette-award {{!award.show?'roulette-award--hidden':''}} {{award.index===curIndex?'roulette-award--active':''}}" wx:for="{{animationList}}" wx:for-item="award" wx:key="index">
+        <view style="padding: 8px;">
+            <image class="roulette-award__icon" mode="aspectFill" src="{{award.imageUrl}}"></image>
+            <view class="roulette-award__desc roulette-award__general-desc">{{award.awardName}}</view>
+        </view>
+    </view>
+</view>

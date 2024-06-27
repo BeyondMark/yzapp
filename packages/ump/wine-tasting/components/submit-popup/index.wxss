@@ -1,0 +1,51 @@
+.mgr15 {
+  margin-right: 15rpx;
+}
+.top3 {
+  position: relative;
+  top: 3rpx;
+}
+.activity-apply-content {
+  padding: 20rpx 30rpx;
+  padding-bottom: calc(env(safe-area-inset-bottom) + 20rpx);
+  box-sizing: border-box;
+  background: #f7f8fa;
+}
+.activity-apply-content-top {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 176rpx;
+  padding-bottom: 20rpx;
+}
+.activity-apply-content-top .top-title {
+  font-size: 40rpx;
+  font-weight: 700;
+  margin-bottom: 8rpx;
+}
+.activity-apply-content-top .top-desc {
+  font-size: 28rpx;
+}
+.activity-apply-content-middle .apply-cell-group {
+  margin: 0 !important;
+}
+.activity-apply-content-middle .apply-cell-group .input-field {
+  min-height: 70rpx;
+}
+.activity-apply-content-middle .apply-cell-group .label-field {
+  color: #333 !important;
+}
+.activity-apply-content-bottom {
+  margin-top: 90rpx;
+  padding: 0 10rpx;
+}
+.activity-apply-content-bottom .button-submit {
+  width: 100%;
+  height: 92rpx;
+  border-radius: 100px;
+  border: none;
+  font-size: 32rpx;
+  color: #fff;
+  background-color: var(--theme-main-color);
+}

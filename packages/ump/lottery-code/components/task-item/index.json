@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/components/account/user-authorize/index",
+    "b": "../../../@vant/weapp/dist/button/index",
+    "_": "../../../../../components/_/index"
+  }
+}

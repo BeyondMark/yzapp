@@ -1,0 +1,12 @@
+<view>
+    <view class="c3ebc4">
+        <view class="b79aa">
+            <view class="goods-hader--title">失效商品</view>
+            <view bind:tap="_p" class="c7a6a1 c321e4" data-t="{{ tap:{en:'clearGoods'} }}">        清空失效商品
+      </view>
+        </view>
+    </view>
+    <view class="bb69c">
+        <a bind:_init="_tic" bind:item-delete="_p" bind:to-goods-detail="_p" cloudCartId="{{it.cartId}}" cloudGoodsId="{{it.goodsId}}" cloudIndex="{{idx}}" data-t="{{ itemDelete:{en:'handleItemDelete'},toGoodsDetail:{en:'toGoodsDetail'} }}" goods="{{it}}" rmId="{{rmId}}" wx:if="{{rmId==='b4-8'}}" wx:for="{{unavailableItems}}" wx:for-index="idx" wx:for-item="it" wx:key="idx"></a>
+    </view>
+</view>

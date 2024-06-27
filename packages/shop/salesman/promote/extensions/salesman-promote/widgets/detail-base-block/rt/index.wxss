@@ -1,0 +1,37 @@
+.module-mask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  opacity: 0.7;
+  z-index: 2;
+}
+.module-top {
+  position: relative;
+}
+.module-bottom {
+  position: fixed;
+  width: 100%;
+  max-height: 70%;
+  bottom: 0;
+  z-index: 141;
+}
+.module-bottom-upper {
+  z-index: 3;
+}
+.module-unit {
+  position: relative;
+  display: block;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+.module-unit:empty {
+  display: none;
+}
+.floating-nav__safe-bottom {
+  transform: translateY(-10px);
+}

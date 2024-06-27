@@ -1,0 +1,3 @@
+<a _opt="{{_opt}}" bind:_init="_tic" wx:if="{{showQrCode}}"></a>
+<b _opt="{{_opt}}" bind:_init="_tic" bind:handleFansClick="_p" bind:jumpToLink="_p" data-t="{{ handleFansClick:{en:'onFansClick'},jumpToLink:{en:'handleItemClick'} }}" kdtId="{{kdtId}}" sessionFrom="{{sessionFrom}}" shopInfo="{{shopInfo}}" wx:elif="{{newVersion}}"></b>
+<c _opt="{{_opt}}" bind:_init="_tic" bind:handleFansClick="_p" bind:jumpToLink="_p" data-t="{{ handleFansClick:{en:'onFansClick'},jumpToLink:{en:'handleItemClick'} }}" kdtId="{{kdtId}}" sessionFrom="{{sessionFrom}}" shopInfo="{{shopInfo}}" wx:else></c>

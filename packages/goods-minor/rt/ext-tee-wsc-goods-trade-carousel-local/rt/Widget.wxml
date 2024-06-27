@@ -1,0 +1,10 @@
+<view class="c5c4fe" style="top:{{fixedTop}}" wx:if="{{showMarquee&&tradeRecords.length>0}}">
+    <view class="b370a">
+        <a bind:_init="_tic" bind:before-enter="_p" bind:leave="_p" customStyle="{{customStyle}}" data-t="{{ beforeEnter:{en:'handleBeforeEnter'},leave:{en:'handleLeave'} }}" name="slide-up" show="{{tradeRecord.show}}" wx:for="{{tradeRecords}}" wx:for-item="tradeRecord" wx:key="index">
+            <view class="c276c">
+                <image class="d22b2 bd231" lazyLoad="true" src="{{tradeRecord.avatar}}" wx:if="{{tradeRecord.avatar}}"></image>
+                <view class="c35132 c89585"> {{tradeRecord.content}} </view>
+            </view>
+        </a>
+    </view>
+</view>

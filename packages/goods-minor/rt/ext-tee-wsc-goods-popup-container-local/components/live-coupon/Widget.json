@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./components/live-coupon-popup/index",
+    "b": "./components/live-coupon-icon/index",
+    "_": "../../../../../../components/_/index"
+  }
+}

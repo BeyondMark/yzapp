@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../channel/index",
+    "b": "../../../../../@vant/weapp/dist/cell/index",
+    "c": "../../../../../@vant/weapp/dist/icon/index",
+    "d": "../all-skeleton/index",
+    "_": "../../../../../../../components/_/index"
+  }
+}

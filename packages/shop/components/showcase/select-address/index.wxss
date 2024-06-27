@@ -1,0 +1,42 @@
+.address-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 12px;
+  padding: 12px 16px;
+  font-size: 14px;
+  background-color: #fff;
+  border-radius: 8px;
+  min-height: 44px;
+  box-sizing: border-box;
+}
+.address-container .select-address {
+  font-size: 14px;
+}
+.address-container .change-address {
+  color: #f44;
+  flex-shrink: 0;
+  font-size: 14px;
+}
+.address-container .user-address {
+  margin-right: 72rpx;
+}
+.address-container .user-address__info {
+  display: flex;
+  font-size: 16px;
+}
+.address-container .user-address__detail {
+  font-size: 13px;
+  color: #969699;
+  margin-top: 8px;
+}
+.address-container .user-address__tag-root {
+  display: flex;
+  align-items: center;
+}
+.address-container .user-address__tag {
+  margin-left: 8px;
+  height: 14px;
+  box-sizing: border-box;
+}

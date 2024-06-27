@@ -1,0 +1,19 @@
+<view class="container">
+    <b customStyle="border-radius: 0; bottom: 0;" position="bottom" show="{{true}}" zIndex="{{9}}">
+        <view class="panel">
+            <view class="icon-list-row">
+                <view class="icon-list-row__option" name="icon-option" wx:for="{{iconList}}" wx:key="index">
+                    <button bindtap="handleClickIcon" class="icon-list-row__option" data-alias="{{item.alias}}" data-config="{{item}}" openType="{{item.openType}}">
+                        <image class="icon-list-row__icon" src="{{item.iconUrl}}"></image>
+                        <text class="icon-list-row__name">{{item.title}}</text>
+                    </button>
+                </view>
+            </view>
+        </view>
+    </b>
+    <view class="poster">
+        <view class="poster-content">
+            <a bind:set-src="handleSetSrc" desc="{{noteData.description}}" goodsImage="{{noteData.sharePhoto}}" id="share-goods" salesmanAlias="{{salesmanAlias}}" shopName="{{CURRENT_GLOBAL_SHOP.shop_name}}" title="{{noteData.title}}" wx:if="{{noteData.noteId}}"></a>
+        </view>
+    </view>
+</view>

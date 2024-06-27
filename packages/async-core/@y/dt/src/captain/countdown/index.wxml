@@ -1,0 +1,16 @@
+<view class="{{'decorate-tee-cap-countdown'}} {{'cap-countdown'}} {{'cap-countdown-'+opt.layout}}">
+    <view class="tag" wx:if="{{showTag}}">{{opt.tagText}}</view>
+    <view class="status" wx:else>{{statusText}}</view>
+    <view class="main">
+        <view class="status" wx:if="{{opt.layout==='big'||opt.layout==='out'}}">{{statusText}}</view>
+        <view class="day-inner" wx:if="{{showDay}}">
+            <view class="time first">{{day}}</view>
+            <view class="time-text">{{dayUnit}}</view>
+        </view>
+        <view class="time {{!hasDay?'first':''}}">{{hour}}</view>
+        <view class="time-text">{{hourUnit}}</view>
+        <view class="time">{{minute}}</view>
+        <view class="time-text">{{minuteUnit}}</view>
+        <view class="time">{{second}}</view>
+    </view>
+</view>

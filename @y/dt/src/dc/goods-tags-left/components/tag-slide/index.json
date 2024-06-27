@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../../../captain/item-card/index",
+    "b": "./../tags-nav/index",
+    "c": "./../card-skeleton/index",
+    "_": "../../../../../../../components/_/index"
+  }
+}

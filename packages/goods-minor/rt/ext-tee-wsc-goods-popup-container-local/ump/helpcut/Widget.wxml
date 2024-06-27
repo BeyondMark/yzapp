@@ -1,0 +1,22 @@
+<a bind:_init="_tic" bind:close="_p" closeable="{{true}}" data-t="{{ close:{en:'onClose'} }}" round="{{true}}" show="{{show}}">
+    <view class="c83906">
+        <view class="ed15b">{{errMsg}}</view>
+        <view class="c2c364">
+            <view class="dba9b">
+                <view class="d5d3d">更多超值好物</view>
+            </view>
+            <view class="c4a4c3">
+                <view class="a2e48" wx:if="{{list.length===0}}"></view>
+                <view bind:tap="_p" class="{{'c7c98b'}} {{itemClass}} {{item.imageUrl?'':'c67452'}}" data-t="{{ tap:{ en:'goodsClick',args:[item] } }}" wx:for="{{list}}" wx:key="alias">
+                    <view wx:if="{{item.imageUrl}}">
+                        <image class="ed096 bd231" lazyLoad="true" mode="aspectFill" src="{{item.imageUrl}}"></image>
+                        <view class="c528d4">
+                            <view>￥{{item.price}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view bind:tap="enterShop" class="c83983"> 进店逛逛 </view>
+        </view>
+    </view>
+</a>

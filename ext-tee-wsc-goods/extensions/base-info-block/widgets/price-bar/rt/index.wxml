@@ -1,0 +1,5 @@
+<view class="c133c1">
+    <b bind:_init="_tic" class="c4311c" priceInfo="{{opt.priceInfo}}" priceTags="{{opt.priceTags}}" wx:if="{{opt.priceInfo.price}}"></b>
+    <a bind:_init="_tic" priceInfo="{{opt.priceInfo}}" wx:if="{{opt.priceInfo.pointsPriceText}}"></a>
+    <c bind:_init="_tic" class="c4311c" originPrice="{{opt.originPriceObj}}" wx:if="{{opt.priceInfo.showOriginPrice}}"></c>
+</view>

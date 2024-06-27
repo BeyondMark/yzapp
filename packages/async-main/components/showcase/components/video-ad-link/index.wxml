@@ -1,0 +1,6 @@
+<view>
+    <view bind:tap="handleAllAreaLink" class="allarea-link" wx:if="{{linkType===1}}"></view>
+    <block wx:if="{{linkType==2&&linkConfig.hotAreas&&linkConfig.hotAreas.length}}">
+        <a appId="{{hotarea.extraData.otherWeappAppid}}" bind:navigate="handleHotareaNavigate" customStyle="position: absolute; left: 0; right: 0; top: 0; bottom: 0;" data-hotarea="{{hotarea}}" linkType="{{hotarea.linkType}}" path="{{hotarea.extraData.otherWeappLink}}" shortLink="{{hotarea.extraData.shortLink}}" style="position: absolute; left: {{hotarea.left}}vw; top: {{hotarea.top}}vh; width: {{hotarea.width}}vw; height: {{hotarea.height}}vh;" useShortLink="{{hotarea.extraData.useShortLink==='1'||hotarea.extraData.useShortLink===1?1:0}}" wx:for="{{linkConfig.hotAreas}}" wx:for-item="hotarea" wx:key="unique"></a>
+    </block>
+</view>

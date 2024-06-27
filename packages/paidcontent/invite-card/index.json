@@ -1,0 +1,5 @@
+{
+  "navigationBarTitleText": "分享邀请好友",
+  "enablePullDownRefresh": false,
+  "componentPlaceholder": { "account-login": "_", "inject-protocol": "_" }
+}

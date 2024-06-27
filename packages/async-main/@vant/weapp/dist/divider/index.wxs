@@ -1,0 +1,13 @@
+var style = require("p_./@vant/weapp/dist/wxs/style.wxs");
+var addUnit = require("p_./@vant/weapp/dist/wxs/add-unit.wxs");
+function rootStyle(data) {
+  return style([
+    {
+      "border-color": data.borderColor,
+      color: data.textColor,
+      "font-size": addUnit(data.fontSize),
+    },
+    data.customStyle,
+  ]);
+}
+module.exports = { rootStyle: rootStyle };

@@ -1,0 +1,14 @@
+<a id="van-toast"></a>
+<web-view src="{{noteData.linkUrl}}">
+    <cover-view bind:tap="thumbClick" class="buttom-btns-one shopnote-fixedicon" wx:if="showCoverView">
+        <cover-image class="shopnote-fixedicon-thumb" src="{{thumbsStatus?'https://img01.yzcdn.cn/upload_files/2021/05/17/FkvrfKb38t62FHd0r801biIWt6Mf.png':'https://img01.yzcdn.cn/upload_files/2021/05/17/FoLEFAbKlYf7pQJgxPSEnRIvNl9L.png'}}"></cover-image>
+    </cover-view>
+    <cover-view class="buttom-btns-two shopnote-fixedicon" wx:if="showCoverView">
+        <button class="button btn-class" hoverClass="none" openType="share">
+            <cover-image class="shopnote-fixedicon-thumb" src="https://img01.yzcdn.cn/upload_files/2021/05/17/FpgeFFbsOf4fPMZOyC6A51pabImH.png"></cover-image>
+        </button>
+    </cover-view>
+    <cover-view bind:tap="salesmanClick" class="buttom-btns-three shopnote-fixedicon" wx:if="{{showCoverView&&salesman.show}}">
+        <cover-image class="shopnote-fixedicon-full" src="{{salesman.icon}}" wx:if="{{!!salesman.icon}}"></cover-image>
+    </cover-view>
+</web-view>

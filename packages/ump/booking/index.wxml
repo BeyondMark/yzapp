@@ -1,0 +1,1 @@
+<a bindmessage="handleMessage" disableScroll="{{true}}" src="{{src}}"></a>

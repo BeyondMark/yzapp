@@ -1,0 +1,4 @@
+function showPoiPrompt(forcePoiSelect, item) {
+  return forcePoiSelect && item.type !== 2 && !item.downgrade;
+}
+module.exports = { showPoiPrompt: showPoiPrompt };

@@ -1,0 +1,44 @@
+.d5a4c {
+  padding: var(--theme-page-cell-padding-top, 10px)
+    var(--theme-page-cell-padding-right, 12px)
+    var(--theme-page-cell-padding-bottom, 10px)
+    var(--theme-page-cell-padding-left, 12px) !important;
+}
+.dc895 {
+  color: #323233 !important;
+  font-family: Avenir;
+  font-weight: var(--theme-common-price-font-weight, 800) !important;
+}
+.bd1e6 {
+  position: relative;
+  background-color: #fff;
+  line-height: 44px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #323233;
+}
+.c83ec5 {
+  white-space: nowrap;
+}
+.c83ec5,
+.b2ce8 {
+  display: flex;
+  align-items: center;
+}
+.b2ce8 {
+  justify-content: flex-end;
+  font-family: Avenir;
+}
+.c275c0 {
+  margin-right: 4px;
+  color: #999;
+  text-decoration-line: line-through;
+}
+.c0e506 {
+  color: #969799;
+  margin-left: 4px;
+}
+.bd1e6 .t-cell__value {
+  color: #323233 !important;
+  font-family: Avenir;
+}

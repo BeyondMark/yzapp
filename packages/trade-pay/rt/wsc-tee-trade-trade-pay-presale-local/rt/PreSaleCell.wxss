@@ -1,0 +1,126 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.c1629a {
+  background: #fff;
+}
+.c00a11 {
+  float: right;
+}
+.ecf7f {
+  display: inline-block;
+  text-align: right;
+}
+.c85cd5 {
+  vertical-align: middle;
+  margin-top: -3px;
+  margin-right: 4px;
+  padding: 4px;
+}
+.c85cd5:active {
+  color: #000;
+}
+.c8bed3 {
+  font-size: 14px;
+  padding: 12px 15px;
+}
+.c73633 {
+  line-height: 26px;
+  position: relative;
+  padding-left: 12px;
+}
+.c73633:not(:last-of-type) .c1f2f5:after {
+  content: "";
+  top: 12px;
+  left: 50%;
+  width: 1px;
+  height: 10px;
+  position: absolute;
+  transform: translateX(-50%);
+  background-color: #e5e5e5;
+}
+.c1f2f5 {
+  top: 13px;
+  left: -1px;
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  border-radius: 100%;
+  background: #e5e5e5;
+  transform: translate3d(-50%, -50%, 0);
+}
+.ec871 {
+  display: inline-flex;
+  align-items: center;
+  color: #323233;
+}
+.b7657 {
+  color: #969799;
+  margin-right: 3px;
+}
+.c43912 .c1f2f5 {
+  background: #ff7272;
+  border: 2px solid rgba(255, 68, 68, 0.26);
+  box-sizing: initial;
+  background-clip: content-box;
+}
+.c8e585 {
+  color: #969799;
+  margin-left: 6px;
+}
+.c1629a__cell {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.c1629a__cell__title {
+  display: flex;
+  align-items: center;
+}
+.c89184 {
+  max-height: 60vh;
+  color: #666;
+  font-size: 12px;
+  padding: 10px 30px 20px;
+  white-space: pre-line;
+}
+.c31175 {
+  margin-top: 10px;
+}
+.fd001 {
+  font-weight: 700;
+}
+.ae38a {
+  padding: 0 16px 7px 16px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+.c8de07 {
+  padding: 11px;
+  color: #323233;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+}
+.c3e960 {
+  padding: 14px 0;
+}
+.f9bdf {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+.bd169 {
+  margin: 0 auto;
+  width: 283px;
+  height: 36px;
+  line-height: 36px;
+}

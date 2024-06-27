@@ -1,0 +1,29 @@
+<view class="{{showAwardV2Block||!hasPaid?'bg-transparent':''}} {{'action-block'}} {{'action-block--normal'}}" style="{{themeCSS}}" wx:if="{{show}}">
+    <view class="{{item.block?'action-block__btn-primary':'action-block__btn-default'}} {{index>1&&!item.block?'action-block__btn-default-next':''}}" wx:for="{{btnList}}" wx:key="type">
+        <block wx:if="{{item.type===BTNS_MAP.PICK_UP_CODE&&item.btnBizType==='GROUPBUY'}}">
+            <e bind:_init="_tic" border="{{item.block}}" rmId="b21-15" wx:if="{{rmId==='b21-3'}}"></e>
+        </block>
+        <block wx:elif="{{item.type===BTNS_MAP.GROUPBUY}}">
+            <g bind:_init="_tic" rmId="b21-9" wx:if="{{rmId==='b21-3'}}"></g>
+        </block>
+        <block wx:elif="{{item.type===BTNS_MAP.SHARE&&item.btnBizType==='GROUPBUY'}}">
+            <f bind:_init="_tic" rmId="b21-9" wx:if="{{rmId==='b21-3'}}"></f>
+        </block>
+        <block wx:elif="{{item.type===BTNS_MAP.SHARE&&item.btnBizType==='SOLITAIRE_BUY'}}">
+            <h bind:_init="_tic" rmId="b21-14" wx:if="{{rmId==='b21-3'}}"></h>
+        </block>
+        <block wx:elif="{{item.type===BTNS_MAP.TAKE_GOODS_CODE}}">
+            <c bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b21-3'}}"></c>
+        </block>
+        <block wx:elif="{{isRetailApp&&item.type===BTNS_MAP.PICK_UP_CODE}}">
+            <d bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b21-3'}}"></d>
+        </block>
+        <j bind:_init="_tic" bind:tap="_p" color="{{item.block?'var(--icon, #323233)':'#969799'}}" customClass="{{'action-block__btn '+(item.block&&'block'||'')}}" customStyle="{{!item.block?'border: none;':'border-radius: var(--theme-radius-button, 999px)'}}" data-t="{{ tap:{ en:'processPaidAction',args:[item] } }}" plain="{{true}}" wx:else> {{item.defaultText}} </j>
+    </view>
+    <i bind:_init="_tic" rmId="b21-13" wx:if="{{rmId==='b21-3'}}"></i>
+    <subscription-dialog bind:_init="_tic"></subscription-dialog>
+    <self-fetch-dialog bind:_init="_tic"></self-fetch-dialog>
+    <voucher-card-dialog bind:_init="_tic"></voucher-card-dialog>
+    <a bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b21-3'}}"></a>
+    <b bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b21-3'}}"></b>
+</view>

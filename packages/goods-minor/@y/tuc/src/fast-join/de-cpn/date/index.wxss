@@ -1,0 +1,23 @@
+.c8a21d {
+  display: flex;
+  border-bottom: 1px solid #ebedf0 !important;
+}
+.d4165 {
+  min-width: 64px;
+  line-height: 60px;
+  font-size: 14px;
+}
+.c4cf6a {
+  flex: 1;
+  width: auto;
+  line-height: 60px;
+  color: #323233;
+  font-size: 14px;
+  margin-left: 16px;
+}
+.c4cf6a.a2e48 {
+  color: #c8c9cc;
+}
+.c8a21d__get-btn {
+  margin-top: 10px;
+}

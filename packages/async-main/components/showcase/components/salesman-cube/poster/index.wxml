@@ -1,0 +1,36 @@
+<view class="{{posterClass}}">
+    <a wx:if="{{loading}}"></a>
+    <view class="poster-box" style="height: {{height}}px" wx:elif="{{hasAuth}}">
+        <view class="poster-banner">
+            <swiper bind:change="onSwiperChange" class="poster-swiper" current="{{current}}" duration="{{duration}}" indicatorActiveColor="#999999" indicatorColor="#ebedf0" indicatorDots="{{posterImgArr.length>1}}" nextMargin="55" previousMargin="55" wx:if="{{posterImgArr.length}}">
+                <swiper-item wx:for="{{posterImgArr}}">
+                    <view class="poster-banner__img-container {{current===index?'active':''}}">
+                        <image class="poster-banner__img" mode="{{imgMode}}" src="{{item.image}}"></image>
+                        <a customClass="poster-loading" vertical="{{true}}" wx:if="{{item.loading}}">海报生成中</a>
+                        <view bindtap="reGenPoster" class="poster-banner__img--error" data-index="{{index}}" wx:elif="{{item.error}}">海报生成失败，点击重试</view>
+                    </view>
+                </swiper-item>
+            </swiper>
+        </view>
+        <view class="{{isWxShareImg?'poster-banner__bottom':'poster-banner__bottom single-btn'}}">
+            <view bindtap="shareWechatFriends" class="poster-banner__btn" wx:if="{{isWxShareImg}}">
+                <image class="poster-banner__btn--icon" src="//b.yzcdn.cn/salesman/cube/share.png"></image>
+                <text class="poster-banner__btn--name">微信好友</text>
+            </view>
+            <view bindtap="savePoster" class="poster-banner__btn" wx:if="{{isWxShareImg}}">
+                <image class="poster-banner__btn--icon" src="//b.yzcdn.cn/salesman/cube/NdzsNJ.png"></image>
+                <text class="poster-banner__btn--name">保存海报</text>
+            </view>
+            <view bindtap="savePoster" class="poster-banner__btn" style="background-color: {{themeMainBgColor}}" wx:else>保存海报</view>
+        </view>
+    </view>
+    <b authTypeList="{{['nicknameAndAvatar']}}" bind:next="getPoster" wx:else>
+        <view class="poster-authorize" style="height: {{height-20}}px">
+            <view class="poster-authorize__body">
+                <view>生成海报需要使用微信头像昵称</view>
+                <view>授权后可保存海报</view>
+                <view class="poster-authorize__btn">点击授权</view>
+            </view>
+        </view>
+    </b>
+</view>

@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y-open/vt/dist/cell/index",
+    "b": "./cashier-icon",
+    "_": "../../../../../components/_/index"
+  }
+}

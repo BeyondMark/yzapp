@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/shop/components/ump/coupon/index",
+    "_": "../../../../../../../../../../../components/_/index"
+  }
+}

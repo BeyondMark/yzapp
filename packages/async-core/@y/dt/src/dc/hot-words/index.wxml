@@ -1,0 +1,8 @@
+<div bind:_init="_tic" class="dc-hot-words-box {{loggerRef}} {{isSingle?'dc-hot-words-box-inline':''}}" wx:if="{{opt.visible}}">
+    <div bind:_init="_tic" class="hot-words-title" wx:if="{{opt.title}}">{{opt.title}}</div>
+    <div bind:_init="_tic" class="hot-words-fire" wx:if="{{isSingle}}">
+        <a bind:_init="_tic" color="#ee0a24" name="fire"></a>    热搜
+  </div>
+    <b bind:_init="_tic" bind:search="_p" data-t="{{ search:{ en:'handleSearch',args:[item,index] } }}" extraCls="{{extraCls}}" showHot="{{opt.is_hot}}" themeStyle="{{hotStyle}}" wordItem="{{item}}" wx:for="{{opt.hot}}" wx:key="index"></b>
+    <b bind:_init="_tic" bind:search="_p" data-t="{{ search:{ en:'handleSearch',args:[item,opt.hot.length+index] } }}" wordItem="{{item}}" wx:for="{{opt.normal}}" wx:key="index"></b>
+</div>

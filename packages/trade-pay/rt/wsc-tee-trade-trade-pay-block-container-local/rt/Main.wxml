@@ -1,0 +1,26 @@
+<view class="c4200c" style="margin-bottom:{{marginBottom+'px'}}">
+    <view class="block-content" style="{{themeVars}}" wx:if="{{rmId==='b38-1'}}">
+        <a bind:_init="_tic" rmId="b38-2"></a>
+        <b bind:_init="_tic" rmId="b38-2"></b>
+        <c bind:_init="_tic" rmId="b38-4"></c>
+        <d bind:_init="_tic" rmId="b38-4"></d>
+        <e bind:_init="_tic" rmId="b38-4"></e>
+        <f bind:_init="_tic" rmId="b38-22"></f>
+        <g bind:_init="_tic" rmId="b38-4"></g>
+    </view>
+    <view class="block-content" style="{{themeVars}}" wx:if="{{rmId==='b38-10'}}">
+        <h bind:_init="_tic" rmId="b38-11"></h>
+        <i bind:_init="_tic" rmId="b38-11"></i>
+    </view>
+    <j bind:_init="_tic" class="block-content" rmId="b38-13" style="{{themeVars}}" wx:if="{{rmId==='b38-12'}}"></j>
+    <k bind:_init="_tic" class="block-content" rmId="b38-28" style="{{themeVars}}" wx:if="{{rmId==='b38-14'}}"></k>
+    <view class="block-content" style="{{themeVars}}" wx:if="{{rmId==='b38-15'}}">
+        <l bind:_init="_tic" rmId="b38-29"></l>
+        <m bind:_init="_tic" cloudExcluded="{{true}}" rmId="b38-16"></m>
+    </view>
+    <n bind:_init="_tic" class="block-content" cloudExcluded="{{true}}" rmId="b38-17" style="{{themeVars}}" wx:if="{{rmId==='b38-18'}}"></n>
+    <o bind:_init="_tic" class="block-content" rmId="b38-3" style="{{themeVars}}" wx:if="{{rmId==='b38-25'}}"></o>
+    <p bind:_init="_tic" class="block-content" rmId="b38-21" style="{{themeVars}}" titleColor="#969799" valueColor="#323233" wx:if="{{rmId==='b38-26'}}"></p>
+    <q bind:_init="_tic" class="block-content" rmId="b38-23" style="{{themeVars}}" wx:if="{{rmId==='b38-30'}}"></q>
+    <r bind:_init="_tic" class="block-content" rmId="b38-32" style="{{themeVars}}" wx:if="{{rmId==='b38-33'}}"></r>
+</view>

@@ -1,0 +1,1 @@
+<a bind:buy="onBuyClick" bind:sku-close="onSkuClose" buyText="{{skuInfo.buyText}}" goods="{{skuInfo.goods}}" quota="{{skuInfo.quota}}" quotaUsed="{{skuInfo.quotaUsed}}" show="{{showSku}}" showAddCartBtn="{{false}}" sku="{{skuInfo.sku}}" wx:if="{{showSku}}"></a>

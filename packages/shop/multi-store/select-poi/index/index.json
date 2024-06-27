@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "选择收货地址",
+  "usingComponents": {
+    "a": "../components/city-select/index",
+    "b": "../components/current-poi/index",
+    "c": "../components/address-list/index",
+    "d": "../components/nearby-poi/index",
+    "e": "../components/position-deny/index",
+    "f": "/packages/async-main/@vant/weapp/dist/toast/index",
+    "g": "/packages/async-main/components/account/inject-protocol/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "f": "_", "g": "_" }
+}

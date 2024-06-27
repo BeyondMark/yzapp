@@ -1,0 +1,28 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./SkuOrderGoodsExtraBlock",
+    "b": "./SkuOrderExtraBlock",
+    "c": "/packages/goods-core/@y/gc/components/sku/extra-components/selling-point/index",
+    "d": "/packages/goods-core/@y/gc/components/sku/components/SkuImage",
+    "e": "/packages/goods-core/@y/gc/components/sku/components/SkuRowWrap",
+    "f": "/packages/goods-core/@y/gc/components/sku/components/SkuStepper",
+    "g": "/packages/goods-core/@y/gc/components/sku/components/SkuPrice",
+    "h": "/packages/goods-core/@y/gc/components/sku/components/SkuStock",
+    "i": "/packages/goods-core/@y/gc/components/sku/components/SkuMessage",
+    "j": "/packages/goods-core/@y/gc/components/sku/extra-components/goods-attributes/index",
+    "k": "/packages/goods-core/@y/gc/components/sku/components/AtmosphereBanner",
+    "_": "../../../../../../components/_/index"
+  },
+  "componentPlaceholder": {
+    "c": "_",
+    "d": "_",
+    "e": "_",
+    "f": "_",
+    "g": "_",
+    "h": "_",
+    "i": "_",
+    "j": "_",
+    "k": "_"
+  }
+}

@@ -1,0 +1,5 @@
+<view class="e54a7 {{mg?'c8ff88':''}}">  储值即同意
+  
+  <view bind:tap="_t_hn_" class="b91f9 c6959e" data-href="{{agreementUrl}}" hoverClass="none">    《储值卡消费者服务协议》
+  </view>
+</view>

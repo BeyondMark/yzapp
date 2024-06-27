@@ -1,0 +1,38 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.c5f091 {
+  --cell-vertical-padding: var(--theme-goods-sku-cell-padding);
+}
+.bae39 {
+  display: flex;
+  padding: 12px 4px;
+  background: #fff;
+}
+.a1439 {
+  height: 42px;
+  margin: 0 12px;
+  font-size: 14px;
+  color: #323233;
+  text-align: center;
+  line-height: 18px;
+  position: relative;
+}
+.a1439 .f4e33 {
+  font-size: 12px;
+  transform: scale(0.8);
+  color: var(--general);
+}
+.a10fb {
+  background-color: var(--general);
+  height: 3px;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+.c5f091 .c8d76e {
+  text-align: left;
+}
+.c5f091 .a1de2 {
+  color: #ed6a0c;
+}

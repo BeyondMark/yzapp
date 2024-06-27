@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../captain/level-info-popup/index",
+    "b": "./components/asset-mode-one/index",
+    "c": "./components/asset-mode-two/index",
+    "d": "./components/asset-mode-three/index",
+    "e": "./components/asset-mode-four/index",
+    "f": "./components/common/UnAuth",
+    "g": "./components/common/CompleteInfoTips",
+    "h": "./../../common/components/shelf/benefits-notice/index",
+    "_": "../../../../../../../components/_/index"
+  }
+}

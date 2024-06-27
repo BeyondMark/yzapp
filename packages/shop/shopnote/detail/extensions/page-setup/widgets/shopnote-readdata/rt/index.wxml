@@ -1,0 +1,4 @@
+<view class="shopnote-readdata">
+    <view class="shopnote-readdata__browse" wx:if="{{showBrowseCount}}">{{browseCount}}阅读</view>
+    <view class="shopnote-readdata__thumbs" wx:if="{{showThumbsUp}}">{{thumbsUp}}赞</view>
+</view>

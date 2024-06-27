@@ -1,0 +1,60 @@
+.follow-suc-pop {
+  height: 433px;
+}
+.follow-header {
+  background: url(https://b.yzcdn.cn/public_files/8321dea955147b6ad4de419d38363ada.png)
+    no-repeat 50%;
+  background-size: 266px 84px;
+  height: 84px;
+  color: #fff3a5;
+  text-align: center;
+  padding-top: 26px;
+  box-sizing: border-box;
+}
+.follow-header .header-title {
+  margin-bottom: 6px;
+  font-size: 18px;
+}
+.follow-header .header-desc {
+  font-size: 12px;
+}
+.code-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 260px;
+  overflow-y: scroll;
+}
+.code-list .code {
+  width: 239px;
+  height: 73px;
+  background: url(https://b.yzcdn.cn/public_files/07dbbffc0b1d6e9c9075b8ddba7d6689.png)
+    no-repeat 50%;
+  background-size: 239px 73px;
+  line-height: 73px;
+  text-align: center;
+  color: #c71212;
+  font-size: 18px;
+  font-family: PingFangSC-Semibold;
+}
+.follow-btn {
+  width: 86.4vw;
+  margin: auto;
+  height: 44px;
+  line-height: 44px;
+  font-size: 16px;
+  border-radius: 100px;
+  color: #fff;
+  text-align: center;
+  background-image: linear-gradient(135deg, #ff5644, #fb1c60);
+}
+.btn-tip {
+  margin-top: 15px;
+  text-align: center;
+  color: #9b9b9b;
+  font-size: 12px;
+}
+.btn-tip .strong {
+  color: #ff0029;
+}

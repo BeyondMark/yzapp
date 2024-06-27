@@ -1,0 +1,16 @@
+<view bindtap="handleClick" class="mc__basicPrompt">
+    <view class="mc__basicPrompt_wrapper">
+        <view class="mc__basicPrompt_wrapper-left">
+            <view class="mc__basicPrompt_image-wrapper">
+                <image class="mc__basicPrompt_image" mode="aspectFill" src="{{goods[0]?goods[0].imgUrl:''}}"></image>
+                <text class="mc__basicPrompt_image-mask" wx:if="{{goods.length>1}}">共{{goods.length}}件</text>
+            </view>
+            <view class="mc__basicPrompt_layout">
+                <view class="mc__basicPrompt_text">
+                    <slot></slot>
+                </view>
+            </view>
+        </view>
+        <a customClass="pay-btn" gradient="{{true}}" gradientDeg="90">{{btnTxt}}</a>
+    </view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../async-main/common/components/form-view/index",
+    "_": "../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

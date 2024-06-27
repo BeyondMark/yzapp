@@ -1,0 +1,20 @@
+<view class="cap-nb-warp">
+    <view class="'cap-nb' {{styleColorCustomType==='gaussianblur'&&styleColorType!=='global'?'gaussianblur':''}} {{isImmersion?'immersion':''}}" style="padding-top: {{navPaddingTop}}px;{{bgStyle}}; height: {{navHeight}}px;box-sizing: content-box;" wx:if="{{caclComplete}}">
+        <view class="cap-nb-user-set-warp" style="position: relative;">
+            <e bind:share="handleShare" wx:if="{{isReservation}}"></e>
+            <view class="left" wx:if="{{!isReservation}}">
+                <view class="confont home" wx:if="{{showMenuMain&&titleSwitch!=='1'&&searchSwitch!=='1'&&shortcutSwitch!=='1'&&immersionUpShow}}"></view>
+                <a title="{{title}}" titleColor="{{colorType}}" wx:if="{{titleSwitch==='1'&&titleContentType==='text'&&titlePosition==='left'&&(immersionUpShow||!isImmersion)}}"></a>
+                <b bind:searchClick="onIconClick" showImmersion="{{isImmersion&&!immersionUpShow&&styleColorCustomType!=='gaussianblur'}}" wx:if="{{searchSwitch==='1'&&searchPosition==='left'}}"></b>
+                <c bind:iconClick="onIconClick" imageType="{{iconImageType}}" shortcutList="{{shortcutList}}" showImmersion="{{isImmersion&&!immersionUpShow&&styleColorCustomType!=='gaussianblur'}}" wx:if="{{shortcutSwitch==='1'&&navigationbarConfigType!=='global'}}"></c>
+                <d realHeight="{{navHeight}}" titleImageUrl="{{titleImageUrl}}" wx:if="{{titleSwitch==='1'&&titleContentType==='image'&&titlePosition==='left'&&(immersionUpShow||!isImmersion)}}"></d>
+            </view>
+            <view class="center" style="{{centerStyle}}" wx:if="{{!isReservation}}">
+                <a style="width: 100%" textAlign="center" title="{{title}}" titleColor="{{colorType}}" wx:if="{{titleSwitch==='1'&&titleContentType==='text'&&titlePosition==='center'&&(immersionUpShow||!isImmersion)}}"></a>
+                <b bind:searchClick="onIconClick" showImmersion="{{isImmersion&&!immersionUpShow&&styleColorCustomType!=='gaussianblur'}}" style="width: 100%" textAlign="center" wx:if="{{searchSwitch==='1'&&searchPosition==='center'}}"></b>
+                <d realHeight="{{navHeight}}" style="width: 100%" textAlign="center" titleImageUrl="{{titleImageUrl}}" wx:if="{{titleSwitch==='1'&&titleContentType==='image'&&titlePosition==='center'&&(immersionUpShow||!isImmersion)}}"></d>
+            </view>
+        </view>
+        <f immersionUpShow="{{immersionUpShow}}" info="{{shop.chainStoreInfo}}" isImmersion="{{true}}" pageOptions="{{switchPageOptions}}" showInNavigation="{{searchSwitch!=='1'&&shortcutSwitch!=='1'}}" wx:if="{{!isReservation&&shop.chainStoreInfo.isMultiOnlineShop&&isImmersion}}"></f>
+    </view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../components/pay-passer",
+    "_": "../../../../../components/_/index"
+  }
+}

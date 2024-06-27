@@ -1,0 +1,37 @@
+<view class="showcase-search">
+    <b bind:_init="_tic" bind:tap="_p" border="{{false}}" data-t="{{ tap:{en:'gotoDestination'} }}" isLink="{{true}}" title="目的地" titleClass="destination-title" url="{{url}}" value="{{city}}" valueClass="destination-value" wx:if="{{showDestination}}"></b>
+    <view class="filter-container">
+        <view bind:tap="_p" class="filter-container-time" data-t="{{ tap:{en:'setShowCalender'} }}">
+            <view>
+                <view class="filter-container-time-title">入住</view>
+                <view class="filter-container-time-content"> {{startDay}} </view>
+            </view>
+            <view class="filter-container-time-tag">{{checkInDay}}晚</view>
+            <view>
+                <view class="filter-container-time-title">离店</view>
+                <view class="filter-container-time-content">{{leaveDay}}</view>
+            </view>
+        </view>
+        <view bind:tap="_p" class="filter-container-text" data-t="{{ tap:{en:'setShowFilter'} }}" wx:if="{{showPriceFilter}}">      筛选
+    </view>
+        <a bind:_init="_tic" class="filter-icon" name="arrow"></a>
+    </view>
+    <view class="van-search">
+        <view class="{{inputClass}}" style="{{inputStyle}}">
+            <view class="search-cell__left-icon">
+                <a bind:_init="_tic" color="{{searchData.color}}" name="search" size="18"></a>
+            </view>
+            <view bind:tap="_p" class="search-cell__value" data-t="{{ tap:{en:'gotoSearch'} }}">
+                <f bind:_init="_tic" clearable="{{true}}" customStyle="{{inputBg}}" inputAlign="{{searchData.textAlign}}" placeholder="请输入酒店名/地址" type="search"></f>
+            </view>
+        </view>
+    </view>
+    <view class="search-btn">
+        <c bind:_init="_tic" bind:tap="_p" block="{{true}}" color="{{themeColors.general}}" data-t="{{ tap:{en:'gotoSearchPage'} }}" round="{{searchData.buttonStyleMethod}}">      立即搜索
+    </c>
+    </view>
+    <e bind:_init="_tic" bind:close="_p" bind:confirm="_p" color="{{themeColors.general}}" data-t="{{ confirm:{en:'onConfirm'},close:{en:'onClose'} }}" show="{{show}}" showConfirm="{{false}}" type="range"></e>
+    <d bind:_init="_tic" bind:close="_p" closeIconPosition="top-right" closeable="{{true}}" data-t="{{ close:{en:'onClosePopup'} }}" position="bottom" round="{{true}}" show="{{showFiter}}" style="height:32%; z-index:{{10000}}; position:fixed">
+        <g bind:_init="_tic" bind:comfirm="_p" data-t="{{ comfirm:{en:'comfirmPrice'} }}" max="{{maxPrice}}" showFiter="{{showFiter}}" themeColors="{{themeColors}}"></g>
+    </d>
+</view>

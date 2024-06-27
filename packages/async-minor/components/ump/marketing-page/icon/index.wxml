@@ -1,0 +1,1 @@
+<view bindtap="eventHandler" class="entry-container {{goaway||pGoaway?'goaway':''}}" data-event="navigateToMarketingPage" style="{{bottom||pBottom?'bottom:'+(bottom||pBottom)+iconImgStyle:iconImgStyle}}" wx:if="{{state.isShow}}"></view>

@@ -1,0 +1,23 @@
+<view>
+    <view class="c2cb60" style="height:{{navBarInfo.height+'px'}}" wx:if="{{canUseNav}}">
+        <view class="c0eb6e" style="height:{{navBarInfo.height+'px'}}">
+            <view class="eb28c" style="height:{{navBarInfo.height+'px'}}">
+                <view class="c554f1" style="{{navBarInfo.customIconStyle}}">
+                    <view bind:tap="_p" class="c8c343" data-t="{{ tap:{en:'onBackTap'} }}">
+                        <a bind:_init="_tic" name="arrow-left" size="20px"></a>
+                    </view>
+                </view>
+                <view class="f395f" style="padding-top:{{navBarInfo.paddingTop+'px'}}">
+                    <view class="c7e5de" style="width:{{navBarInfo.textWidth+'px'}}; font-size:{{navBarInfo.fontSizeSetting+'px'}}"> {{navBarInfo.titleText}} </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <b bind:_init="_tic" show="{{showBackupDialog}}" showConfirmButton="{{false}}" useSlot="{{true}}" useTitleSlot="{{true}}">
+        <view class="c33202" slot="title">返回将不保存当前信息，是否离开？</view>
+        <view bind:tap="_p" class="a64a9 c4a8a8" data-t="{{ tap:{ en:'onClickBtnBack',args:['save'] } }}" style="color:{{themeColors['main-bg']}}">      保存并离开
+    </view>
+        <view bind:tap="_p" class="a64a9" data-t="{{ tap:{ en:'onClickBtnBack',args:['leave'] } }}">离开</view>
+        <view bind:tap="_p" class="a64a9" data-t="{{ tap:{ en:'onClickBtnBack',args:['cancel'] } }}">取消</view>
+    </b>
+</view>

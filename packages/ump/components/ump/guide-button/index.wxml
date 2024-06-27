@@ -1,0 +1,26 @@
+<view style="{{containerStyle}}">
+    <d authTypeList="{{authTypeList}}" bind:next="buttonClick" scene="{{authorizeScene}}" wrapperClass="auth-btn" wx:if="{{authorizeScene!==''||authTypeList!==[]}}">
+        <slot name="guide-button"></slot>
+    </d>
+    <view bindtap="buttonClick" wx:else>
+        <slot name="guide-button"></slot>
+    </view>
+    <b customClass="popup-content" customStyle="{{customStyle}}" round="{{true}}" show="{{showPop}}">
+        <view class="popup-container" wx:if="{{!hasPopupSlot}}">
+            <view class="popup-container__title">{{popupTitle}}</view>
+            <view class="popup-container__msg">当前身份不满足条件</view>
+        </view>
+        <slot name="popup-container" wx:else></slot>
+        <view bindtap="onCancel" class="popup-button">
+            <c customClass="popup-button-cancel" type="default" wx:if="{{!hasPopupSlot}}">取消</c>
+            <slot name="popup-button-cancel" wx:else></slot>
+        </view>
+        <view class="popup-button">
+            <d authTypeList="{{['mobile']}}" bind:next="onConfirm" id="user-authorize">
+                <c customClass="popup-button-main" type="default" wx:if="{{!hasPopupSlot}}">{{confirmButtonText}}</c>
+                <slot name="popup-button-main" wx:else></slot>
+            </d>
+        </view>
+    </b>
+    <a id="van-toast"></a>
+</view>

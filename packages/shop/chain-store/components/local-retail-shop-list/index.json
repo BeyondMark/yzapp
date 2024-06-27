@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-main/@vant/weapp/dist/icon/index",
+    "b": "../../../@vant/weapp/dist/tag/index",
+    "c": "../../../components/showcase/select-address/index",
+    "d": "../phone-popup/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

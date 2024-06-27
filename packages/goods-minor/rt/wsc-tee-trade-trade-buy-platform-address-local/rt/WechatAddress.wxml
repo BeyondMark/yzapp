@@ -1,0 +1,5 @@
+<view catch:tap="_p" class="c1bc32" data-t="{{ tap:{en:'onClick',et:'stop'} }}" wx:if="{{cloudData.displayConfig.isShowWechatAddress}}">
+    <image class="c737d9 bd231" lazyLoad="true" mode="aspectFit" slot="icon" src="{{url}}" wx:if="{{isCell}}"></image>
+    <image class="c737d9 bd231" lazyLoad="true" mode="aspectFit" src="{{url}}" wx:else></image>
+    <view class="c99672 c89585">微信导入</view>
+</view>

@@ -1,0 +1,145 @@
+.t-text {
+  text-decoration: inherit;
+}
+.t-text,
+.tee-image {
+  display: inline-block;
+}
+.tee-image {
+  width: 100%;
+  height: 100%;
+}
+.yz-auth {
+  position: relative;
+  padding-bottom: 32px;
+  color: #333;
+  text-align: left;
+}
+.yz-auth__header {
+  display: flex;
+  padding: 0 24px;
+  height: 48px;
+  align-items: center;
+  overflow: hidden;
+  font-size: 15px;
+  font-weight: 700;
+  color: #191919;
+}
+.yz-auth__header .shop-warn {
+  flex-shrink: 0;
+}
+.yz-auth__header .shop-avatar {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #e6e6e6;
+}
+.yz-auth__header .shop-name {
+  flex-shrink: 1;
+  margin: 0 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.yz-auth__header .shop-name > view {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.yz-auth__title {
+  display: block;
+  margin: 12px 24px;
+  font-size: 14px;
+  color: #999;
+  line-height: 20px;
+}
+.yz-auth__item {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  margin: 0 24px;
+  font-size: 17px;
+  font-weight: 400;
+  padding-right: 8px;
+}
+.yz-auth__item__avatar {
+  width: 48px;
+  height: 48px;
+  margin-right: 12px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.yz-auth__item__icon {
+  width: 24px;
+  height: 24px;
+}
+.yz-auth__item__nickname {
+  flex: 1;
+}
+.yz-auth__item__mobile {
+  flex: 1;
+  font-size: 14px;
+  color: #b3b3b3;
+}
+.yz-auth__item__info {
+  flex: 1;
+  margin-left: 10px;
+  font-size: 14px;
+  color: #999;
+}
+.yz-auth .border {
+  border-bottom: 1px solid #ebedf0;
+  border-top: 1px solid #ebedf0;
+}
+.yz-auth .onlyMobile {
+  display: flex;
+  align-items: center;
+  height: 36px;
+}
+.yz-auth .onlyMobile__mobile {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 36px;
+  color: #333;
+}
+.yz-auth .onlyMobile__unused {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #576b95;
+  margin-left: 16px;
+}
+.yz-auth .onlyName {
+  margin-top: 40px;
+}
+.yz-auth__flex {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.yz-auth__actions {
+  margin: 24px 24px 30px;
+  font-size: 14px !important;
+  font-weight: 500;
+}
+.yz-auth__actions .actions--btn {
+  width: 100%;
+  height: 40px !important;
+  line-height: 40px !important;
+  border: 0 !important;
+  border-radius: 4px !important;
+  margin: 0 0 8px 0;
+}
+.yz-auth__actions .actions--refuse {
+  color: #576b95 !important;
+  text-align: center;
+  box-shadow: none;
+}
+.yz-auth__actions .actions--agree {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(103, 159, 255, 0.1490196078) !important;
+  color: #155bd4 !important;
+}

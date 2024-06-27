@@ -1,0 +1,8 @@
+<view bind:tap="_p" class="{{true?'zan-pay-a__method':''}} {{disabled?'zan-pay-a__method--disabled':''}} {{paying?'zan-pay-a__method--loading':''}} {{hairline?'zan-pay-a__method--hairline':''}} {{emphasize?'zan-pay-a__method--emphasize':''}}" data-t="{{ tap:{en:'onClick'} }}">
+    <view class="{{'zan-pay-a__method-content'}} {{'zan-pay-a__method-content--'+lowercase}}">
+        <view class="zan-pay-a__method-name" style="color:{{channel.color}}" wx:if="{{!paying}}"> {{channel.payChannelName}} </view>
+        <view class="zan-pay-a__method-right" wx:if="{{!paying&&saleRightContent}}"> {{channel.saleRightContent}} </view>
+        <view class="zan-pay-a__method-desc" wx:if="{{!paying&&channel.availableDesc}}"> {{channel.availableDesc}} </view>
+        <a bind:_init="_tic" wx:if="{{paying}}"></a>
+    </view>
+</view>

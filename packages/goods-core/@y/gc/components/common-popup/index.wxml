@@ -1,0 +1,9 @@
+<a bind:_init="_tic" bind:input="_p" class="ee668" closeIcon="{{closeIcon}}" closeIconPosition="top-left" closeable="{{nested}}" data-model-id="showModal" data-ref="commonPopRef" lockScroll="{{true}}" position="bottom" round="{{true}}" safeAreaInsetBottom="{{true}}" value="{{showModal}}">
+    <h3 bind:_init="_tic" class="ad1e4" wx:if="{{title}}">{{title}}</h3>
+    <view class="cd66d">
+        <slot></slot>
+    </view>
+    <view class="c41842" wx:if="{{!nested}}">
+        <b bind:_init="_tic" bind:tap="_p" block="{{true}}" customClass="ed658" customStyle="color: var(--main-text, #fff); background: var(--main-bg, #323233); border: 1px solid var(--main-bg, #323233);" data-t="{{ tap:{en:'handleCloseModal'} }}" round="{{true}}"> {{button||'我知道了'}} </b>
+    </view>
+</a>

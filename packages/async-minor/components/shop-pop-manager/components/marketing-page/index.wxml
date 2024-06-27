@@ -1,0 +1,3 @@
+<view class="marketing-page-box">
+    <a activeUmpId="{{activeUmpId}}" bind:close="closeMarketingPagePop" bind:gomarketing="onGoMarketingPage" detail="{{detail}}" show="{{visible}}"></a>
+</view>

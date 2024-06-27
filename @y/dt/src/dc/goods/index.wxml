@@ -1,0 +1,54 @@
+<view class="dc-goods" style="{{dcGoodsStyle}}">
+    <g _opt="{{opt.moduleTitleOpt}}" bind:_init="_tic" wx:if="{{opt.moduleTitleOpt&&curList.length}}"></g>
+    <view wx:if="{{isLimitdDiscount&&outCountdownOpt}}">
+        <e _opt="{{outCountdownOpt}}" bind:_init="_tic"></e>
+    </view>
+    <a bind:_init="_tic" bind:load="_p" data-t="{{ load:{en:'handleLoadMore'} }}" direction="{{direction}}" finished="{{finished}}" finishedText="{{''}}" loading="{{preListLength&&shouldShowVanListLoading}}" wx:if="{{direction}}">
+        <view wx:if="{{isWaterfall}}">
+            <c _opt="{{capLayoutOpt}}" bind:_init="_tic">
+                <d _opt="{{type:'two'}}" bind:_init="_tic" wx:for="{{waterfallListParts}}" wx:for-index="waterfallIndex" wx:for-item="waterfallList" wx:key="waterfallIndex">
+                    <c _opt="{{type:'one'}}" bind:_init="_tic">
+                        <d _opt="{{type:'one',itemMargin:opt.layoutOpt.itemMargin}}" bind:_init="_tic" wx:for="{{waterfallList}}" wx:key="index">
+                            <i _opt="{{item}}" bind:_init="_tic" bind:item-click="_p" data-t="{{ itemClick:{en:'handleItemClick'} }}" wx:if="{{item.itemType&&(item.itemType.type==='coupon'||item.itemType.type==='note')}}"></i>
+                            <b _opt="{{item}}" bind:_init="_tic" bind:button-click="_p" bind:item-click="_p" bind:item-image-loaded="_p" data-t="{{ buttonClick:{en:'handleBuyClick'},itemClick:{en:'handleItemClick'},itemImageLoaded:{ en:'onItemImageLoaded',args:[index,waterfallIndex] } }}" isShowGoodsAddNumber="{{isShowGoodsAddNumber}}" mode="auto" wx:else></b>
+                        </d>
+                    </c>
+                </d>
+            </c>
+        </view>
+        <block wx:else>
+            <scroll-view scrollX="{{true}}" wx:if="{{capLayoutOpt.type==='swipe'&&capLayoutOpt.canUseScrollView}}">
+                <view class="{{'cap-layout'}} {{'cap-layout-'+capLayoutOpt.type}}" style="{{capLayoutStyle}}">
+                    <view class="{{'cap-layout-item'}} {{opt.layoutOpt.type}} {{item.isShowOutGoods?'cap-item-sell-out':''}}" itemIndex="{{index}}" style="{{item.layoutItemWrapStyle}}" wx:for="{{addSkeletonList}}" wx:key="index">
+                        <view style="{{capLayoutItemStyle}}">
+                            <i _opt="{{...item,heightStyle:heightStyle}}" bind:_init="_tic" bind:item-click="_p" data-t="{{ itemClick:{en:'handleItemClick'} }}" wx:if="{{item.itemType&&(item.itemType.type==='coupon'||item.itemType.type==='note')}}"></i>
+                            <b _opt="{{item}}" bind:_init="_tic" bind:button-click="_p" bind:item-click="_p" bind:item-image-loaded="_p" data-t="{{ buttonClick:{en:'handleBuyClick'},itemClick:{en:'handleItemClick'},itemImageLoaded:{ en:'onItemImageLoaded',args:[index,0] } }}" isShowGoodsAddNumber="{{isShowGoodsAddNumber}}" mode="auto" wx:else></b>
+                        </view>
+                    </view>
+                    <h _opt="{{moreButtonOpt}}" bind:_init="_tic" bind:more-click="_p" data-t="{{ moreClick:{en:'handleMoreClick'} }}" wx:if="{{isSwipeLayout&&isSwipeMoreBtnShow}}"></h>
+                </view>
+            </scroll-view>
+            <view class="{{'cap-layout'}} {{'cap-layout-'+capLayoutOpt.type}}" style="{{capLayoutStyle}}" wx:else>
+                <block wx:for="{{addSkeletonList}}" wx:key="index">
+                    <view class="hybrid-line" wx:if="{{item.type==='hybrid-line'}}">
+                        <view class="{{'cap-layout-item'}} {{opt.layoutOpt.type}} {{item.isShowOutGoods?'cap-item-sell-out':''}}" itemIndex="{{subIndex}}" style="{{subItem.layoutItemWrapStyle}}" wx:for="{{item.items}}" wx:for-index="subIndex" wx:for-item="subItem" wx:key="subIndex">
+                            <view style="{{capLayoutItemStyle}}">
+                                <i _opt="{{...subItem,heightStyle:heightStyle}}" bind:_init="_tic" bind:item-click="_p" data-t="{{ itemClick:{en:'handleItemClick'} }}" wx:if="{{subItem.itemType&&(subItem.itemType.type==='coupon'||subItem.itemType.type==='note')}}"></i>
+                                <b _opt="{{subItem}}" bind:_init="_tic" bind:button-click="_p" bind:item-click="_p" bind:item-image-loaded="_p" data-t="{{ buttonClick:{en:'handleBuyClick'},itemClick:{en:'handleItemClick'},itemImageLoaded:{ en:'onItemImageLoaded',args:[subIndex,0] } }}" isShowGoodsAddNumber="{{isShowGoodsAddNumber}}" mode="auto" wx:else></b>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="{{'cap-layout-item'}} {{opt.layoutOpt.type}} {{item.isShowOutGoods?'cap-item-sell-out':''}}" style="{{item.layoutItemWrapStyle}}" wx:else>
+                        <view style="{{capLayoutItemStyle}}">
+                            <i _opt="{{...item,heightStyle:heightStyle}}" bind:_init="_tic" bind:item-click="_p" data-t="{{ itemClick:{en:'handleItemClick'} }}" wx:if="{{item.itemType&&(item.itemType.type==='coupon'||item.itemType.type==='note')}}"></i>
+                            <b _opt="{{item}}" bind:_init="_tic" bind:button-click="_p" bind:item-click="_p" bind:item-image-loaded="_p" data-t="{{ buttonClick:{en:'handleBuyClick'},itemClick:{en:'handleItemClick'},itemImageLoaded:{ en:'onItemImageLoaded',args:[index,0] } }}" isShowGoodsAddNumber="{{isShowGoodsAddNumber}}" mode="auto" wx:else></b>
+                        </view>
+                    </view>
+                </block>
+                <h _opt="{{moreButtonOpt}}" bind:_init="_tic" bind:more-click="_p" data-t="{{ moreClick:{en:'handleMoreClick'} }}" wx:if="{{isSwipeLayout&&isSwipeMoreBtnShow}}"></h>
+            </view>
+        </block>
+        <h _opt="{{moreButtonOpt}}" bind:_init="_tic" bind:more-click="_p" data-t="{{ moreClick:{en:'handleMoreClick'} }}" wx:if="{{!isSwipeLayout&&showLoadMore&&isMoreBtnShow}}"></h>
+    </a>
+    <f bind:_init="_tic" bind:load-more="_p" data-t="{{ loadMore:{en:'handleClickLoadNextPage'} }}" wx:if="{{!finished&&useLoadMore}}"></f>
+</view>

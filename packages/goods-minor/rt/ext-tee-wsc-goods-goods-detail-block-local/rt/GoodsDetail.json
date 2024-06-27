@@ -1,0 +1,17 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../widgets/haitao-notification/rt/index",
+    "b": "./../widgets/price-intro/rt/index",
+    "c": "./../widgets/detail-title/rt/index",
+    "d": "/ext-tee-wsc-dc/extensions/showcase-container/rt/ShowcaseContainer",
+    "e": "/@y-open/vt/dist/tabs/index",
+    "f": "/@y-open/vt/dist/tab/index",
+    "g": "/@y-open/vt/dist/cell/index",
+    "h": "/@y-open/vt/dist/cell-group/index",
+    "i": "/packages/goods-core/@y/gc/components/goods-detail/faq/index",
+    "j": "./../components/detail/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "i": "_" }
+}

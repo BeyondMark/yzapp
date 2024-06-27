@@ -1,0 +1,16 @@
+.fb14c {
+  margin: 8px 0;
+  --checkbox-border-color: var(--main-bg, #e7c5a5);
+  --checkbox-checked-icon-color: var(--main-bg, #e7c5a5);
+}
+.c7916a {
+  justify-content: center;
+}
+.c7e89 {
+  display: inline;
+  font-size: 12px;
+}
+.c994fa {
+  display: inline;
+  color: #44598d;
+}

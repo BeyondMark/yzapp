@@ -1,0 +1,12 @@
+<import src="../owl-goods/index.wxml"></import>
+<van-tabs active="{{tab.selectedId}}" bind:change="handleTabChange" wx:if="{{tab.isShow}}">
+    <van-tab title="{{item.title}}" wx:for="{{tab.list}}" wx:key="{{ item.id }}"></van-tab>
+</van-tabs>
+<view wx:if="{{!fetching&&(pageType!=='coupon'||tab.selectedId==='normalGoods')}}">
+    <r0 rmId="b8-2" wx:if="{{rmId==='b8-0'}}"></r0>
+</view>
+<template is="owl-goods" data="{{themeClass:themeClass,columnList:paidData.columnList,columnTotal:paidData.columnTotal,contentList:paidData.contentList,contentTotal:paidData.contentTotal}}" wx:if="{{!fetching&&pageType==='coupon'&&tab.selectedId==='paidColumn'}}"></template>
+<zan-loadmore text="{{nomore?'':'暂无数据'}}" type="text" wx:if="{{nomore||nodata}}"></zan-loadmore>
+<salesman-cube needBindRelation="{{false}}" pageQuery="{{groupalias:groupalias}}" scenes="feature"></salesman-cube>
+<import src="../../../../../../../pages/common/wsc-page/index.wxml"></import>
+<template is="wsc-page" data="{{wscpage:wscpage}}"></template>

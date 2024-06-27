@@ -1,0 +1,5 @@
+<view>
+    <a rmId="{{rmId}}" wx:if="{{rmId==='b29-0'}}">
+        <slot></slot>
+    </a>
+</view>

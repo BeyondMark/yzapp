@@ -1,0 +1,4 @@
+<view class="extra-item {{extraClass}}" style="{{opt.heightStyle}}">
+    <a _opt="{{_opt}}" bind:_init="_tic" bind:item-click="_p" data-t="{{ itemClick:{en:'handleClick'} }}" wx:if="{{opt.itemType&&opt.itemType.type==='coupon'}}"></a>
+    <b _opt="{{_opt}}" bind:_init="_tic" bind:item-click="_p" data-t="{{ itemClick:{en:'handleClick'} }}" wx:if="{{opt.itemType&&opt.itemType.type==='note'}}"></b>
+</view>

@@ -1,0 +1,19 @@
+<a class="info-dialog" customStyle="background-color: rgba(0, 0, 0, 0);" round="{{true}}" show="{{visible}}" showConfirmButton="{{false}}">
+    <view class="experience-dialog-container">
+        <view class="experience-bg">
+            <view class="content">
+                <view class="img" style="background-image: url({{bgUrl}})"></view>
+                <view class="prompt-title">特价体验<text class="experience-num">{{skuInfo.experienceTime.termDays}}</text>天会员</view>
+                <view class="prompt-label">特价体验，限时抢购</view>
+            </view>
+            <view class="dialog-button">
+                <c authTypeList="{{['mobile']}}" bind:next="handleToPay" bizDataMap="{{bizDataMap}}">
+                    <view class="benefit-btn">{{skuInfo.experienceTime.termDays?skuInfo.showPrice:''}}元特价体验</view>
+                </c>
+            </view>
+            <view class="operator-bar">
+                <b bindtap="handleCloseDialog" class="dialog-close" name="close"></b>
+            </view>
+        </view>
+    </view>
+</a>

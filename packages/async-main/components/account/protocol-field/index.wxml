@@ -1,0 +1,7 @@
+<view class="agreement">
+    <a bind:change="handleAgreementChange" customClass="agreement__check" iconSize="14px" labelClass="agreement__check-label" value="{{isProtocolAgreed}}">阅读并同意<block wx:for="{{protocols}}" wx:key="name">
+            <view catchtap="readProtocol" class="agreement__link" data-protocol="{{item}}">{{item.name}}</view>
+            <text wx:if="{{index<protocols.length-1}}">、</text>
+        </block>
+    </a>
+</view>

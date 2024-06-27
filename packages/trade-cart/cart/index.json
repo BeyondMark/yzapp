@@ -1,0 +1,35 @@
+{
+  "navigationBarTitleText": "购物车",
+  "enablePullDownRefresh": true,
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "a": "./../rt/wsc-tee-trade-cart-shop-header-local/rt/ShopHeader",
+    "b": "./../rt/wsc-tee-trade-cart-coupon-addon-bar-local/rt/CouponAddonBar",
+    "c": "./../rt/wsc-tee-trade-cart-coupon-bar-local/rt/CouponBarBlock",
+    "d": "./../rt/wsc-tee-trade-cart-valid-goods-local/rt/ValidGoods",
+    "e": "./../rt/wsc-tee-trade-cart-invalid-goods-local/widgets/rt/InvalidGoodsBlock",
+    "f": "./../rt/wsc-tee-trade-cart-submit-local/rt/Submit",
+    "g": "./../rt/wsc-tee-trade-cart-empty-tip-local/rt/CartEmptyBlock",
+    "h": "./../../goods-main/rt/wsc-tee-statcenter-recommend-goods-local/rt/Main",
+    "i": "./../rt/wsc-tee-trade-cart-order-keep-local/rt/OrderKeep",
+    "j": "./../rt/wsc-tee-trade-cart-present-popup-local/rt/PresentPopup",
+    "k": "./../rt/wsc-tee-trade-trade-buy-reward-popup-local/rt/Main",
+    "l": "/ext-tee-wsc-dc/extensions/page-style/rt/Main",
+    "m": "./../../async-feature-ext/rt/wsc-tee-shop-footer-local/rt/Main",
+    "n": "./../rt/ext-tee-wsc-goods-base-common-sku-local/rt/Main",
+    "o": "../../async-tee/@y-open/vt/native/weapp/toast/index/index",
+    "p": "../../async-tee/@y-open/vt/native/weapp/dialog/index/index",
+    "q": "/pages/common/page-container/index",
+    "r": "/custom-tab-bar-v2/index",
+    "s": "./../../async-minor/components/cps-goods-recommend/index",
+    "t": "/components/global-custom-loading/index",
+    "_": "../../../components/_/index"
+  },
+  "componentPlaceholder": {
+    "h": "_",
+    "m": "_",
+    "o": "_",
+    "p": "_",
+    "s": "view"
+  }
+}

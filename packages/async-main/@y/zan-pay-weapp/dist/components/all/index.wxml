@@ -1,0 +1,17 @@
+<view>
+    <d wx:if="{{loading}}"></d>
+    <block wx:else>
+        <view wx:for="{{channels}}" wx:for-item="channel" wx:key="payChannel">
+            <b bind:click="onChannelClick" data-channel="{{channel}}" useLabelSlot="{{!!channel.channelNotice}}">
+                <a channel="{{channel}}" sb="{{true}}" slot="title"></a>
+                <view class="label {{channel.available?'':'d'}}" slot="label" wx:if="{{channel.channelNotice}}">{{channel.channelNotice}}</view>
+                <c class="as" color="{{tc}}" name="success" size="16" slot="right-icon" wx:if="{{a&&a.payChannel===channel.payChannel&&(!a.ext||!a.ext.instalments)}}"></c>
+            </b>
+            <block wx:if="{{channel.ext&&channel.ext.instalments}}">
+                <b bind:click="onChannelClick" customClass="i" data-channel="{{channel}}" data-i="{{it}}" label="{{'手续费 ¥ '+it.charges+'/期'}}" title="{{'¥ '+it.amount+' x '+it.num+'期'}}" wx:for="{{channel.ext.instalments}}" wx:for-item="it" wx:key="num">
+                    <c class="as" color="{{tc}}" name="success" size="16" slot="right-icon" wx:if="{{a&&a.payChannel===channel.payChannel&&i&&i.num===it.num}}"></c>
+                </b>
+            </block>
+        </view>
+    </block>
+</view>

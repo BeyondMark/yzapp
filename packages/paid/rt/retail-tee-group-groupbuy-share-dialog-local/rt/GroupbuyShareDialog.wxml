@@ -1,0 +1,67 @@
+<view>
+    <a bind:_init="_tic" bind:click-overlay="_p" closeOnClickOverlay="{{true}}" customClass="c026ea" customStyle="border-radius: 20px 20px 0 0; text-align: center;" data-t="{{ clickOverlay:{en:'close'} }}" position="bottom" show="{{visible}}">
+        <block wx:if="{{hasError}}">
+            <view class="aa7f7">
+                <image class="c2b9c5 bd231" lazyLoad="true" src="https://img01.yzcdn.cn/upload_files/2020/03/12/FoFlIZNte-bq-nCcHIiZHDdvdwNa.png"></image>
+                <view class="cf8d1"> 数据获取失败 </view>
+            </view>
+            <view class="c36793">
+                <c bind:_init="_tic" bind:tap="_p" customClass="c8245d" data-t="{{ tap:{en:'queryShare'} }}">          点击重试
+        </c>
+            </view>
+        </block>
+        <block wx:elif="{{loading}}">
+            <view class="ba746">
+                <b bind:_init="_tic" class="c44f7f" size="35" type="img"></b>
+                <view class="c99a47">          正在获取数据...
+        </view>
+            </view>
+            <view class="c36793">
+                <c bind:_init="_tic" customClass="c8245d">          邀请好友参与
+        </c>
+            </view>
+        </block>
+        <block wx:else>
+            <view class="c05372"> 恭喜你，参团成功 </view>
+            <view class="e7dee" wx:if="{{showGoalNum}}">        还差
+        <view class="fa7f7">{{formatNum}}</view> {{unit}}成团，距结束
+        <count-down bind:_init="_tic" customClass="c87762" format="DD天HH时mm分ss秒" time="{{countdown}}"></count-down>
+            </view>
+            <view class="e7dee" wx:else>        快去邀请好友一起参与吧
+      </view>
+            <view class="c515c8">
+                <view class="ab246">
+                    <image class="c96a81 bd231" lazyLoad="true" src="{{customerAvatar}}"></image>
+                    <view class="e2c49"> {{customerNickname}} </view>
+                </view>
+                <view class="c90c4f">          “我在团长【{{headerName}}】处团购了
+          <view class="c4a201"> {{goodsNum}} </view>          件商品，
+          <view class="c9997" wx:if="{{savedMoney}}">            省了
+            <view class="c4a201"> {{formatSavedMoney}} </view>            元，
+          </view>          快来参团吧”
+        </view>
+                <view class="c215f7">
+                    <view class="e12f3" wx:for="{{items}}" wx:key="index">
+                        <image class="c4d499 bd231" lazyLoad="true" src="{{item.imgUrl}}"></image>
+                        <view class="f65a3">￥{{item.salesPrice}}</view>
+                    </view>
+                </view>
+            </view>
+            <view class="c36793">
+                <button class="c8245d" openType="share" wx:if="{{!isWeb}}">          邀请好友参与
+        </button>
+                <button bind:tap="_p" class="c8245d" data-t="{{ tap:{en:'openSharedPop'} }}" wx:else>          邀请好友参与
+        </button>
+            </view>
+        </block>
+    </a>
+    <a bind:_init="_tic" bind:click-overlay="_p" closeOnClickOverlay="{{true}}" customClass="a471d" customStyle="z-index: 2036;" data-t="{{ clickOverlay:{en:'closeSharedPop'} }}" overlayStyle="z-index: 2035;" show="{{showShared}}">
+        <view bind:tap="_p" class="c7cdef" data-t="{{ tap:{en:'closeSharedPop'} }}">
+            <view class="c26f23"></view>
+            <view class="cb97c">
+                <p bind:_init="_tic" class="d14af">立即推广给好友吧</p>
+                <p bind:_init="_tic" class="c1fd9d">点击屏幕右上角将本页面分享给好友</p>
+            </view>
+        </view>
+    </a>
+</view>

@@ -1,0 +1,43 @@
+.t-text {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.item-placeholder {
+  font-size: 20px;
+  font-family: Arial;
+  line-height: 30px;
+}
+.asset-info-block,
+.asset-info-block .info-item {
+  display: -webkit-flex;
+  display: flex;
+}
+.asset-info-block .info-item {
+  position: relative;
+  width: 60px;
+  flex-direction: column;
+  text-align: center;
+  color: #333;
+}
+.asset-info-block .info-item .title {
+  font-size: 11px;
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--realTextColor);
+}
+.asset-info-block .info-item .value {
+  line-height: 30px;
+  font-family: Avenir;
+  font-weight: 600;
+}
+.asset-info-block .info-item:nth-child(n + 2):after {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  content: "";
+  width: 0;
+  border-left: 1px solid #d8d8d8;
+  height: 160%;
+  transform-origin: 0 0;
+  transform: scale(0.5);
+}

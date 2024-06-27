@@ -1,0 +1,21 @@
+<view class="{{'c0ee50'}} {{isSlide&&!isSkyline?'e02bd':''}}">
+    <view class="c46575" wx:if="{{hotAreas&&hotAreas.length}}">
+        <image class="ad-image bd231" lazyLoad="true" src="{{adImage}}" style="{{imageStyle}}"></image>
+        <view class="c66256" style="width:{{item.width}}px;height:{{item.height}}px;top:{{item.top}}px;left:{{item.left}}px" wx:for="{{hotAreas}}" wx:key="index">
+            <view catch:tap="_p" class="fe508" data-t="{{ tap:{ en:'handleClickAdPop',et:'stop',args:[item] } }}" wx:if="{{item.link_type!=='chat'}}"></view>
+            <view class="fe508" wx:else>
+                <a bind:_init="_tic" bind:contact="onContactBack" businessId="{{im.businessId}}" contactClass="c39198" openType="contact" sessionFrom="{{im.sourceParam}}" wx:if="{{rmId==='b21-18'}}">
+                    <button class="contact-content" style="width:{{item.width}}px;height:{{item.height}}px"></button>
+                </a>
+            </view>
+        </view>
+    </view>
+    <view class="c348f9" wx:else>
+        <image catch:tap="_p" class="ad-image bd231" data-t="{{ tap:{ en:'handleClickAdPop',et:'stop',args:[linkInfo] } }}" lazyLoad="true" src="{{adImage}}" style="{{imageStyle}}" wx:if="{{!isImLink}}"></image>
+        <block wx:else>
+            <a bind:_init="_tic" bind:contact="onContactBack" businessId="{{im.businessId}}" contactClass="c5c682" contactStyle="{{imageStyle}}" openType="contact" sessionFrom="{{im.sourceParam}}" wx:if="{{rmId==='b21-18'}}">
+                <image class="ad-image bd231" lazyLoad="true" src="{{adImage}}" style="{{imageStyle}}"></image>
+            </a>
+        </block>
+    </view>
+</view>

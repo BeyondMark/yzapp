@@ -1,0 +1,70 @@
+.zan-pay__icon {
+  display: inline-block;
+  background-image: url(https://b.yzcdn.cn/assets/base/zan-pay/channel-sprites-3.png);
+  background-size: 60px 60px;
+  background-position: -20px -40px;
+  width: 20px;
+  height: 20px;
+}
+.zan-pay__icon--ecard {
+  background-position: 0 0;
+}
+.zan-pay__icon--prepaid_pay {
+  background-position: -20px 0;
+}
+.zan-pay__icon--instalment {
+  background-position: 0-20px;
+}
+.zan-pay__icon--wx_app,
+.zan-pay__icon--wx_applet,
+.zan-pay__icon--wx_h5,
+.zan-pay__icon--wx_js {
+  background-position: -20px -20px;
+}
+.zan-pay__icon--peerpay {
+  background-position: -40px 0;
+}
+.zan-pay__icon--alipay_agreement,
+.zan-pay__icon--alipay_applet,
+.zan-pay__icon--alipay_js,
+.zan-pay__icon--alipay_wap {
+  background-position: -40px -20px;
+}
+.zan-pay__icon--alipay_flower {
+  background-image: url(https://b.yzcdn.cn/assets-cashier/icon/huabei2.png) !important;
+}
+.zan-pay__icon--alipay_flower,
+.zan-pay__icon--alipay_hbfq {
+  background-size: 20px !important;
+  background-position: 0 0 !important;
+}
+.zan-pay__icon--alipay_hbfq {
+  background-image: url(https://b.yzcdn.cn/assets-cashier/icon/alipay-hbfq.png) !important;
+}
+.zan-pay__icon--change_pay {
+  background-position: 0-40px;
+}
+.zan-pay__icon--bank_card,
+.zan-pay__icon--credit_card,
+.zan-pay__icon--debit_card {
+  background-position: -20px -40px;
+}
+.zan-pay__icon--bank_transfer_large {
+  background-image: url(https://img01.yzcdn.cn/upload_files/2023/12/14/FvI-Ym0Vne3ITOAErrX0AJv1sG2r.png);
+  background-size: 20px;
+  background-position: 0 0;
+}
+.zan-pay__icon--prior_use {
+  background-image: url(https://b.yzcdn.cn/assets-cashier/icon/prior-use-wechat2.png);
+  background-size: 20px;
+  background-position: 0 0;
+}
+.zan-pay__icon--cash_on_delivery {
+  background-position: -40px -40px;
+}
+.zan-pay__icon--pf_offline_pay {
+  background-image: url(https://b.yzcdn.cn/assets-cashier/icon/pf_offline_pay.svg);
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}

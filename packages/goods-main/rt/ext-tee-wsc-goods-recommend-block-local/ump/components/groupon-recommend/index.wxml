@@ -1,0 +1,12 @@
+<view class="c1105f" wx:if="{{hasRecommend}}">
+    <view class="c36eb"> 更多拼团商品 </view>
+    <b _opt="{{layoutConfig}}" bind:_init="_tic">
+        <c _opt="{{layoutConfig}}" bind:_init="_tic" wx:for="{{recommendGoods}}" wx:key="alias">
+            <a _opt="{{item}}" bind:_init="_tic" bind:item-click="_p" data-t="{{ itemClick:{ en:'handleItemClick',args:[item] } }}" textClass="c43c56"></a>
+        </c>
+    </b>
+    <view class="d2462" wx:if="{{!appConfig.hideStroll}}">
+        <d bind:_init="_tic" bind:tap="_p" block="{{true}}" data-t="{{ tap:{en:'goToPage'} }}" size="normal">      查看全部拼团商品
+    </d>
+    </view>
+</view>

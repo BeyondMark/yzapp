@@ -1,0 +1,33 @@
+<b bind:_init="_tic" bind:after-enter="_p" bind:click-overlay="_p" closeOnClickOverlay="{{!submitting}}" customStyle="{{popupCustomStyle}}" data-t="{{ clickOverlay:{en:'handleRefuse'},afterEnter:{en:'handleShowUserInfoPopup'} }}" position="bottom" round="{{true}}" safeAreaInsetBottom="{{true}}" show="{{visible}}" zIndex="{{zIndex}}">
+    <view catch:tap="_p" class="yz-auth" data-t="{{ tap:{en:'true',et:'stop'} }}" style="padding-bottom:{{keyboardHeight}}">
+        <view class="yz-auth__header">
+            <image class="shop-avatar tee-image" lazyLoad="true" src="{{shopLogo}}"></image>
+            <view class="shop-name"> {{shopName}} </view>
+            <view class="shop-warn t-text">申请</view>
+        </view>
+        <view class="yz-auth__title t-text">{{title}}</view>
+        <view class="yz-auth__item">
+            <view class="{{'yz-auth__item__wrap'}} {{notAvatar?'yz-auth__item__wrap__error':''}}">
+                <view class="yz-auth__item__label t-text">头像</view>
+                <a bind:_init="_tic" bind:chooseavatar="_p" block="{{true}}" class="yz-auth__item__button" customClass="button-custom-class" data-t="{{ chooseavatar:{en:'handleChooseAvatar'} }}" openType="chooseAvatar" textStyle="{{textStyle}}">
+                    <image class="yz-auth__item__avatar tee-image" lazyLoad="true" mode="aspectFill" src="{{defaultAvatarUrl}}" wx:if="{{!avatarUrl}}"></image>
+                    <image class="yz-auth__item__avatar tee-image" lazyLoad="true" mode="aspectFill" src="{{avatarUrl}}" wx:else></image>
+                    <d bind:_init="_tic" class="yz-auth__item__icon" name="arrow"></d>
+                </a>
+            </view>
+            <view class="{{'yz-auth__item__wrap'}} {{notNickname?'yz-auth__item__wrap__error':''}}">
+                <view class="t-text">昵称</view>
+                <c adjustPosition="{{false}}" bind:_init="_tic" bind:blur="_p" bind:change="_p" bind:focus="_p" border="{{false}}" class="yz-auth__item__nickname" data-t="{{ change:{en:'handleNicknameChange'},blur:{en:'handleNicknameBlur'},focus:{en:'handleFocus'} }}" placeholder="点击填写" type="nickname" value="{{nickName}}"></c>
+            </view>
+        </view>
+        <view class="yz-auth__random">
+            <view bind:tap="_p" class="t-text" data-t="{{ tap:{en:'handleAvaNick'} }}">随机头像昵称</view>
+        </view>
+        <view class="yz-auth__actions">
+            <a bind:_init="_tic" bind:tap="_p" color="{{theme}}" customClass="yz-auth__actions--btn agree" data-t="{{ tap:{en:'handleAllow'} }}" loading="{{submitting}}" type="primary">        允许
+      </a>
+            <a bind:_init="_tic" bind:tap="_p" color="{{theme}}" customClass="yz-auth__actions--btn refuse" data-t="{{ tap:{en:'handleRefuse'} }}" disabled="{{submitting}}" plain="{{true}}">        拒绝
+      </a>
+        </view>
+    </view>
+</b>

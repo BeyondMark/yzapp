@@ -1,0 +1,42 @@
+<view class="container" hidden="{{hidden}}">
+    <view hidden="{{isFocus||isHideAddress}}">
+        <view class="shop-list-title">收货地址</view>
+        <c addressId="{{addressId}}" bind:select-address="reFetchList"></c>
+        <view class="shop-list-title">{{'附近门店'}}</view>
+    </view>
+    <view class="shop-list-wrap" wx:if="{{localRetailShopList&&localRetailShopList.length>0}}">
+        <view bindtap="handleChooseShop" class="shop-list-item {{item.kdtId===currentKdtId&&!isFocus?'shop-item--selected':''}}" data-shop="{{item}}" wx:for="{{localRetailShopList}}" wx:key="name">
+            <block wx:if="{{item.kdtId===currentKdtId&&!isFocus}}">
+                <view class="shop-item--selected-bg"></view>
+                <a class="shop-item--selected-icon" color="#fff" name="success"></a>
+            </block>
+            <view class="item-content {{item.disableClick?'disabled':''}}">
+                <view class="item-head">
+                    <view class="item-head__container">
+                        <view class="name">{{item.name}}</view>
+                        <block wx:if="{{!isFocus}}">
+                            <b class="item-head__icon" color="#EDF4FF" round="{{true}}" textColor="#1989FA" type="success" wx:if="{{item.isOpen}}">营业中</b>
+                            <b class="item-head__icon" color="#F2F3F5" round="{{true}}" textColor="#323233" type="success" wx:else>休息中</b>
+                            <b class="item-head__icon" color="rgba(238,10,36,0.1)" round="{{true}}" textColor="#EE0A24" type="success" wx:if="{{!item.isSupportDelivery}}">超出配送范围</b>
+                        </block>
+                    </view>
+                    <view class="distance" wx:if="{{item.distance}}">{{item.distance}}km</view>
+                </view>
+                <view class="item-desc">
+                    <a class="icon-location" name="location-o"></a>{{item.desc}}</view>
+                <view class="item-footer" wx:if="{{!isFocus}}">
+                    <view class="item-footer__time" wx:if="{{item.summary}}">
+                        <a class="icon-time" name="underway-o"></a>{{item.summary}}</view>
+                    <view wx:else></view>
+                    <view catch:tap="handleContact" class="item-footer__contact" data-customer-service-area-code="{{item.customerServiceAreaCode}}" data-customer-service-phone-number="{{item.customerServicePhoneNumber}}" wx:if="{{item.customerServicePhoneNumber}}">
+                        <a class="icon-phone" name="phone-o"></a>
+                        <text>联系商家</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="no-more" wx:if="{{noMore}}">没有更多了...</view>
+    </view>
+    <view class="about-blank" wx:else>{{blankContent||'暂无相关店铺'}}</view>
+</view>
+<d bind:onClosePopup="handleClosePhonePopup" customerServiceAreaCode="{{customerServiceAreaCode}}" customerServicePhoneNumber="{{customerServicePhoneNumber}}" show="{{showPhonePopup}}"></d>

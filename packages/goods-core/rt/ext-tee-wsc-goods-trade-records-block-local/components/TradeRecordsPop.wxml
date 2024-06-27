@@ -1,0 +1,9 @@
+<a bind:_init="_tic" bind:close="_p" class="c5fb55" closeable="{{true}}" customClass="c5fb55" customStyle="height: 80%;border-radius: var(--theme-radius-dialog, 16px) var(--theme-radius-dialog, 16px) 0 0;" data-t="{{ close:{en:'onClose'} }}" position="bottom" round="{{true}}" safeAreaInsetBottom="{{true}}" show="{{show}}">
+    <view class="e421c" wx:if="{{show}}">
+        <view class="ac0b7">购买记录</view>
+        <c bind:_init="_tic" class="c4fdff"></c>
+        <view class="ab5a1">
+            <b bind:_init="_tic" goodsId="{{goodsBaseInfo.id}}" rootKdtId="{{shopBaseInfo.rootKdtId}}"></b>
+        </view>
+    </view>
+</a>

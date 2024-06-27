@@ -1,0 +1,8 @@
+<b bind:_init="_tic" bind:close="_p" bodyBackgroundColor="#fff" buttonText="我知道了" color="{{color}}" data-t="{{ close:{en:'handleClose'} }}" disablePadding="{{true}}" popupClass="goods-message-list" show="{{show}}" title="查看留言">
+    <a bind:_init="_tic" border="{{false}}" customClass="c0ecbf" title="{{item.label}}" titleClass="c39c1d" wx:for="{{formatMessage}}" wx:key="index">
+        <view class="c78b5e">
+            <image class="c757ba bd231" data-src="{{item.value}}" lazyLoad="true" mode="aspectFit" src="{{item.preview}}" wx:if="{{item.type==='image'}}"></image>
+            <view class="c89585" wx:else>{{item.value||'无'}}</view>
+        </view>
+    </a>
+</b>

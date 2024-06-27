@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@vant/weapp/dist/popup/index",
+    "b": "/packages/async-main/common/components/form-view/index",
+    "_": "../../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_" }
+}

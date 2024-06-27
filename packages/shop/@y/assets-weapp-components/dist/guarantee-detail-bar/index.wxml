@@ -1,0 +1,14 @@
+<view wx:if="{{guarantee.on}}">
+    <a bind:click="showGuaranteeIntro" border="{{false}}" customClass="guarantee-bar--{{guarantee.style}}">
+        <view class="guarantee-bar__title">
+            <view class="guarantee-bar__info">
+                <image alt="护航logo" class="guarantee-bar__logo {{isWxPromise?'guarantee-bar__logo-wx':''}}" mode="heightFix" src="{{logo}}"></image>
+            </view>
+            <view class="guarantee-bar__desc" wx:if="{{guaranteeDesc.length}}">
+                <view wx:for="{{guaranteeDesc}}" wx:key="index">{{item}}</view>
+            </view>
+        </view>
+        <b class="guarantee-bar__icon" name="arrow" size="16px" slot="right-icon"></b>
+    </a>
+    <c alias="{{alias}}" bind:close="closeGuaranteeIntro" featureKeys="{{featureKeys}}" kdtId="{{kdtId}}" orderCreateTime="{{orderCreateTime}}" pageSource="{{pageSource}}" type="detail" value="{{showPopup}}" zIndex="2003"></c>
+</view>

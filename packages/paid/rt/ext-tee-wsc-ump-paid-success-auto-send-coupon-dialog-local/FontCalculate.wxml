@@ -1,0 +1,3 @@
+<div bind:_init="_tic" class="c3e150" data-ref="wrapper">
+    <slot></slot>
+</div>

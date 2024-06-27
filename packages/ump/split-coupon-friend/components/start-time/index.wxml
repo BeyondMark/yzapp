@@ -1,0 +1,20 @@
+<view class="start-time">
+    <slot name="needFriend"></slot>
+    <text class="start-time__label" wx:if="{{!friend}}">距活动开始</text>
+    <view class="split-coupon-friend-activity-info__help-tips" wx:else>
+        <text>还差</text>
+        <text class="split-coupon-friend-activity-info__help-num">{{needFriend}}</text>
+        <text>人，距结束</text>
+    </view>
+    <a bind:change="onChange" bind:finish="onCountDownFinish" class="start-time__time {{time&&time>ONE_DAY?'start-time__time_more-one-day':''}}" time="{{time}}" useSlot="{{true}}">
+        <block wx:if="{{timeData.days}}">
+            <text class="text">{{timeData.days}}</text>
+            <text class="text">天</text>
+        </block>
+        <text class="text">{{timeData.hours}}</text>
+        <text class="text">:</text>
+        <text class="text">{{timeData.minutes}}</text>
+        <text class="text">:</text>
+        <text class="text">{{timeData.seconds}}</text>
+    </a>
+</view>

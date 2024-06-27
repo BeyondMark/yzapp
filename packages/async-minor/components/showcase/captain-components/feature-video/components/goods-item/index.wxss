@@ -1,0 +1,33 @@
+.feat-video__good {
+  display: inline-block;
+  max-width: 184px;
+  text-align: left;
+  margin-right: 15px;
+}
+.feat-video__good__info {
+  float: right;
+  height: 80px;
+  position: relative;
+  margin-left: 5px;
+  line-height: 17px;
+}
+.feat-video__good__name {
+  width: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.feat-video__good__price {
+  position: absolute;
+  bottom: 0;
+  font-weight: 700;
+}
+.feat-video__good__decp {
+  color: #af9d76;
+  font-size: 10px;
+  display: inline-block;
+}
+.feat-video__good__pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+}

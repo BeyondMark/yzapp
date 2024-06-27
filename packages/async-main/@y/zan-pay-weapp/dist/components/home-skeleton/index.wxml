@@ -1,0 +1,9 @@
+<view>
+    <a class="notice-bar" title="{{true}}" titleWidth="100%"></a>
+    <a class="info" title="{{true}}" titleWidth="100%"></a>
+    <view class="channel">
+        <a class="key" title="{{true}}" titleWidth="100%"></a>
+        <a class="value" title="{{true}}" titleWidth="100%"></a>
+    </view>
+    <a class="submit" round="{{true}}" title="{{true}}" titleWidth="100%"></a>
+</view>

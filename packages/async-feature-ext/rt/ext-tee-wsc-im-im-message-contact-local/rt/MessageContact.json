@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../components/MessageContactButton",
+    "b": "/ext-tee-passport/extensions/user-authorize/widgets/rt/Main",
+    "c": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "c": "_" }
+}

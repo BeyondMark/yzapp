@@ -1,0 +1,5 @@
+<view class="f11db" wx:if="{{showPrepayCardCell}}">
+    <a bind:_init="_tic" border="{{false}}" center="{{true}}" customClass="f1e6f" style="{{cssVar}}" titleClass="c4ac5a" value="{{prepayCardCellValue}}" valueClass="f1e6f__value--red">
+        <view slot="title">储值卡/礼品卡</view>
+    </a>
+</view>

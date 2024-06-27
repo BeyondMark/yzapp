@@ -1,0 +1,3 @@
+<view class="present-gift">
+    <image bind:tap="jumpToGiftPage" class="image" mode="widthFix" src="{{src}}" wx:if="{{src}}"></image>
+</view>

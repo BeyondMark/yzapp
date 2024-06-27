@@ -1,0 +1,15 @@
+.dc-goods-tags-left {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  max-height: 100vh;
+  background-color: #f2f2f2;
+}
+.dc-goods-tags-left .tag-list-nav {
+  width: 80px;
+}
+.dc-goods-tags-left .tag-list-goods {
+  flex: 1;
+  overflow: hidden;
+  background-color: #fff;
+}

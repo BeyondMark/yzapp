@@ -1,0 +1,10 @@
+<d bind:_init="_tic" bind:click-handle="_p" bind:pure-log="_p" data-t="{{ pureLog:{en:'pureLog'},clickHandle:{en:'clickImage'} }}" info="{{promotionInfo}}" isSkyline="{{isSkyline}}" isWxReceipt="{{isWxReceipt}}" themeColor="{{themeColor}}" wx:if="{{currentType===PROMOTION_TYPES.Present}}"></d>
+<b bind:_init="_tic" bind:pure-log="_p" cloudConfig="{{cloudConfig}}" data-t="{{ pureLog:{en:'pureLog'} }}" info="{{promotionInfo}}" isWxReceipt="{{isWxReceipt}}" navigateTo="{{navigateTo}}" returnUrl="{{returnUrl}}" themeColor="{{themeColor}}" wx:elif="{{currentType===PROMOTION_TYPES.ActivitiesQrCode}}"></b>
+<e bind:_init="_tic" bind:click-handle="_p" data-t="{{ clickHandle:{en:'clickImage'} }}" detailUrl="{{promotionInfo.detailUrl}}" isWxReceipt="{{isWxReceipt}}" navigateTo="{{navigateTo}}" prizes="{{promotionInfo.prizes}}" wx:elif="{{currentType===PROMOTION_TYPES.Wheel}}"></e>
+<f bind:_init="_tic" bind:click-btn="_p" bind:pure-log="_p" cloudConfig="{{cloudConfig}}" data-t="{{ pureLog:{en:'pureLog'},clickBtn:{en:'clickImage'} }}" info="{{promotionInfo}}" isSkyline="{{isSkyline}}" isWxReceipt="{{isWxReceipt}}" themeColor="{{themeColor}}" wx:elif="{{currentType===DEFAULT_SHOW}}"></f>
+<a bind:_init="_tic" bind:after-contact="_p" customClass="c2249b" data-t="{{ afterContact:{en:'afterContact'} }}" h5Link="{{promotionInfo.detailUrl}}" navigateTo="{{navigateTo}}" wx:elif="{{isCustomActivityQrcode}}">
+    <image class="c29be0 bd231" lazyLoad="true" mode="{{isSkyline?'':'widthFix'}}" src="{{customPic}}"></image>
+</a>
+<c bind:_init="_tic" bind:tap="_p" customStyle="padding: 0" data-t="{{ tap:{en:'clickImage'} }}" isWxReceipt="{{isWxReceipt}}" wx:elif="{{currentType===ImageShow}}">
+    <image class="c29be0 bd231" lazyLoad="true" mode="{{isSkyline?'':'widthFix'}}" src="{{customPic}}"></image>
+</c>

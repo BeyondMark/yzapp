@@ -1,0 +1,100 @@
+.osp {
+  min-height: 200px;
+  height: auto;
+  border-radius: 20px 20px 0 0;
+  max-height: 80vh;
+}
+.osp__header {
+  height: 108px;
+  box-sizing: border-box;
+  background-size: 100% 100%;
+  background-image: url(https://img01.yzcdn.cn/public_files/b85727983be2decef8670a46a4e6f4d0.png!large.png);
+}
+.osp__header-badge {
+  position: absolute;
+  right: 44px;
+  top: 0;
+  width: 85px;
+  height: 87px;
+  background-size: 100% 100%;
+}
+.osp__header-badge--3 {
+  background-image: url(https://img01.yzcdn.cn/public_files/0f2ca3b9821428909052396b107edece.png!small.png);
+}
+.osp__header-badge--4 {
+  background-image: url(https://img01.yzcdn.cn/public_files/bbec77916aadfbf6c62ed54bbf8e8e72.png!small.png);
+}
+.osp__header-badge--5 {
+  background-image: url(https://img01.yzcdn.cn/public_files/ceab67b620cfdd5afb704ecea87a9971.png!small.png);
+}
+.osp__header-badge--6 {
+  background-image: url(https://img01.yzcdn.cn/public_files/50182641e16342781b3c8891bd7b5b52.png!small.png);
+}
+.osp__header-badge--7 {
+  background-image: url(https://img01.yzcdn.cn/public_files/ee87401bab8b3842df09ac1ced8a318a.png!small.png);
+}
+.osp__header-badge--8 {
+  background-image: url(https://img01.yzcdn.cn/public_files/2b6e5c465c843425c6f024602790f2b8.png!small.png);
+}
+.osp__header-badge--9 {
+  background-image: url(https://img01.yzcdn.cn/public_files/9f81580696325bec1fd1fdc0671e6bc9.png!small.png);
+}
+.osp__header-badge--10 {
+  background-image: url(https://img01.yzcdn.cn/public_files/2a818aca6e7843388047e058f5218665.png!small.png);
+}
+.osp__cnt {
+  position: relative;
+  margin: 0 29px;
+  padding: 40px;
+  height: 254px;
+  background-size: 100% 100%;
+  background-image: url(https://img01.yzcdn.cn/public_files/54faba259ccc7f556d2ab4dd29bfac67.png!large.png);
+  font-size: 14px;
+  color: #6c3106;
+  box-sizing: border-box;
+  z-index: -2;
+}
+.osp__cnt-p1 {
+  text-align: justify;
+  line-height: 22px;
+}
+.osp__cnt-p2 {
+  text-align: center;
+  margin-top: 15px;
+  line-height: 22px;
+  white-space: nowrap;
+}
+.osp__cnt-date {
+  font-size: 12px;
+  margin-top: 15px;
+  text-align: right;
+}
+.osp__cnt-logo {
+  position: absolute;
+  bottom: 14px;
+  right: 24px;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background-size: 100% 100%;
+  background-image: url(https://img01.yzcdn.cn/public_files/6031351ec534039dfdb40e21290e8767.png!small.png);
+  z-index: -1;
+}
+.osp__cnt-mask {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 36px;
+  background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0), #fff);
+}
+.osp__btn {
+  margin: 7px 16px;
+  background: var(--main-bg);
+  height: 40px;
+  border-radius: 22px;
+  line-height: 40px;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+}

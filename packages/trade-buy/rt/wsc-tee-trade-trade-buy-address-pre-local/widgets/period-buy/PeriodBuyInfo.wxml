@@ -1,0 +1,1 @@
+<a bind:_init="_tic" border="{{false}}" customClass="c810c6" title="配送周期" value="{{periodBuy.info}}" valueClass="e16b4" wx:if="{{periodBuy.info}}"></a>

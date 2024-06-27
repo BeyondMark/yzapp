@@ -1,0 +1,16 @@
+.promote-salesman-activity .promote-salesman-activity__cell {
+  padding: 0;
+}
+.promote-salesman-activity__background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.promote-salesman-activity__tag {
+  margin-right: 4px;
+}

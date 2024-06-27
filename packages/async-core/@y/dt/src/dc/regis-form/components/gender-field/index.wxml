@@ -1,0 +1,8 @@
+<view class="gender-field">
+    <a bind:_init="_tic">
+        <view class="van-cell__title" slot="title"> {{fieldLabel}} </view>
+        <view class="radio-wrapper">
+            <b bind:_init="_tic" bind:change="_p" checkedColor="#f44" class="radio-item" data-t="{{ change:{en:'chooseGenderRadio'} }}" name="{{item}}" value="{{fieldValue}}" wx:for="{{fieldInfo.itemValueList}}" wx:key="item"> {{item}} </b>
+        </view>
+    </a>
+</view>

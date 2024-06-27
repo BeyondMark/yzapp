@@ -1,0 +1,47 @@
+<view class="exchange-container">
+    <view wx:if="{{show}}">
+        <view class="result">
+            <b color="main-bg">
+                <a class="result-icon" name="checked"></a>
+            </b>
+            <text class="result-text">兑换成功</text>
+        </view>
+        <view class="coupon-details" wx:if="{{goodsType===2}}">
+            <view class="left-info">
+                <b bindtap="handleClickUse" color="main-bg">
+                    <view class="notes">
+                        <text wx:if="{{preferentialType===1||preferentialType===2}}">
+                            <text class="big">{{descriptionInfo.denomination}}</text>{{descriptionInfo.unit}}</text>
+                        <text class="exchange-coupon" wx:elif="{{preferentialType===3}}">兑换商品</text>
+                        <block wx:elif="{{preferentialType===5}}">
+                            <text class="delivery-coupon">{{deliveryCouponInfo.text}}</text>{{deliveryCouponInfo.unit}}</block>
+                    </view>
+                </b>
+                <view class="condition">{{descriptionInfo.condition}}</view>
+            </view>
+            <view class="right-info">
+                <view class="coupon-name">{{goodsDetails.groupName}}</view>
+                <view class="coupon-expired">{{goodsDetails.termDesc}}</view>
+            </view>
+        </view>
+        <view class="card-details" wx:if="{{goodsType===3}}">
+            <image class="card-cover" mode="widthFix" src="{{cardCoverUrl}}"></image>
+            <view class="card-details-info">
+                <view class="title">
+                    <text class="name">{{goodsDetails.cardName}}</text>
+                    <text class="notes">¥{{price}}</text>
+                </view>
+                <text class="expired">{{goodsDetails.termDesc}}</text>
+            </view>
+        </view>
+        <view class="actions">
+            <view class="theme-view-wrap">
+                <b bg="main-bg" bindtap="handleClickUse" color="main-text">
+                    <view>完成</view>
+                </b>
+            </view>
+            <view bindtap="addCardWithSDK" class="sync-wx-card" wx:if="{{canSyncWX&&isSyncWX}}">添加到微信卡包</view>
+        </view>
+    </view>
+    <c bind:close="toggleSubscribeMask" show="{{showSubscribeMask}}"></c>
+</view>

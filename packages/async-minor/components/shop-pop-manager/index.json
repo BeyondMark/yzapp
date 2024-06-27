@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./components/sign-popup/index",
+    "b": "./components/visit-gift/index",
+    "c": "./components/shop-ad/index",
+    "d": "./components/member-guide/index",
+    "e": "../../common/components/order-pay-prompt-popup/index",
+    "f": "./components/marketing-page/index",
+    "g": "./components/customer-rebuy/index",
+    "h": "../message/subscribe-message/index",
+    "_": "../../../../components/_/index"
+  }
+}

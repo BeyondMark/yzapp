@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/ext-tee-passport/extensions/user-authorize/components/UserAuthorizePopup",
+    "b": "/packages/async-feature-ext/rt/ext-tee-wsc-im-subscription-message-local/components/SubscribeGuide",
+    "c": "./BottomSubmit",
+    "d": "/packages/async-main/@y/pptb/lib/behavior/index",
+    "e": "/packages/async-tee/@y-open/vt/native/weapp/dialog/index/index",
+    "f": "./../ShopStatus",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_", "d": "_", "e": "_" }
+}

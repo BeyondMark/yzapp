@@ -1,0 +1,9 @@
+.tee-image {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.dc-present-gift .image {
+  display: block;
+  width: 100%;
+}

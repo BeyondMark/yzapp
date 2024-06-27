@@ -1,0 +1,3 @@
+<view class="shopnote-headpic">
+    <image class="shopnote-headpic__image" mode="widthFix" src="{{headPicUrl}}"></image>
+</view>

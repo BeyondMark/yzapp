@@ -1,0 +1,47 @@
+.friend-popup {
+  margin: 0 auto;
+  background: transparent !important;
+}
+.friend-popup__close {
+  text-align: right;
+  margin-bottom: 10px;
+}
+.friend-popup__main {
+  width: 327px;
+  border-radius: 8px;
+  background: #fff;
+  padding-bottom: 24px;
+}
+.friend-popup__top {
+  width: 100%;
+  height: 86px;
+}
+.friend-popup__text {
+  font-size: 18px;
+  color: #323233;
+  text-align: center;
+  line-height: 26px;
+  margin-top: 46px;
+  margin-bottom: 46px;
+  font-weight: 500;
+}
+.friend-popup__coupon {
+  margin: 32px 12px;
+}
+.friend-popup__btn-wrap {
+  padding: 0 24px;
+}
+.friend-popup__btn {
+  height: 48px;
+  background-image: linear-gradient(270deg, #ff572f, #ff0438);
+  font-size: 18px;
+  font-weight: 500;
+}
+.friend-popup__gohome {
+  font-size: 14px;
+  color: #ff0d37;
+  text-align: center;
+  line-height: 16px;
+  margin-top: 16px;
+  text-decoration: underline;
+}

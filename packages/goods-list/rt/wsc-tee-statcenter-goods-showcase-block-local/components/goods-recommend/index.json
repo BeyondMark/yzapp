@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y/dt/src/captain/layout/layout",
+    "b": "/@y/dt/src/captain/layout/layout-item",
+    "c": "/@y/dt/src/captain/item-card/index",
+    "d": "/@y-open/vt/dist/list/index",
+    "e": "./components/ump-tags/index",
+    "_": "../../../../../../components/_/index"
+  }
+}

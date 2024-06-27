@@ -1,0 +1,10 @@
+<a bind:_init="_tic" bind:close="_p" closeable="{{true}}" customClass="cashier-pre__list-popup" customStyle="{{customStyle}}" data-t="{{ close:{ en:'$emit',args:['close'] } }}" overlayStyle="background: transparent" position="bottom" show="{{show}}">
+    <view class="cashier-pre__list-container">
+        <view class="cashier-pre__header">
+            <view class="cashier-pre__title t-text">选择支付方式</view>
+        </view>
+        <view class="cashier-pre__list-content">
+            <b bind:_init="_tic" bind:change="_p" channel="{{channel}}" data-t="{{ change:{en:'onChange'} }}" instalment="{{instalment}}" selected="{{selected}}" themeColor="{{themeColor}}" wx:for="{{channels}}" wx:for-item="channel" wx:key="payChannel"></b>
+        </view>
+    </view>
+</a>

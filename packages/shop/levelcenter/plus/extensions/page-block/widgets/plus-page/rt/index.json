@@ -1,0 +1,26 @@
+{
+  "navigationBarTitleText": "PLUS会员中心",
+  "navigationBarBackgroundColor": "#252525",
+  "navigationBarTextStyle": "white",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "a": "../../../components/level-card/index",
+    "b": "../../../components/pay/index",
+    "c": "../../../components/pay-button/index",
+    "d": "../../../components/experience-dialog/index",
+    "e": "../../../../../../level-common/subscirbe-msg/index",
+    "f": "../../../../../../level-common/simple-benefit-list/index",
+    "g": "../../../../../../level-common/personal-info-header/index",
+    "h": "/packages/async-main/components/account/wx-login/index",
+    "i": "/packages/shop/components/recommend/index",
+    "j": "../../../../../../level-common/protocol-guide/index",
+    "k": "../../../../../../level-common/birthday-tip/index",
+    "l": "../../../../../../level-common/member-coupon/index",
+    "m": "/packages/async-main/@vant/weapp/dist/toast/index",
+    "n": "../../../components/sku-list/index",
+    "o": "/ext-tee-wsc-dc/extensions/showcase-container/rt/ShowcaseContainer",
+    "p": "/packages/async-main/@vant/weapp/dist/dialog/index",
+    "_": "../../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "h": "_", "m": "_", "p": "_" }
+}

@@ -1,0 +1,57 @@
+<view class="c5ee3c">
+    <view class="e3cf9">
+        <view class="c87340"></view>
+        <view class="db4c6">
+            <view>送你1张惊喜券，买“</view>
+            <view class="c2c08b">{{searchText}}</view>
+            <view>”相关商品可用</view>
+        </view>
+        <view bindtap="putawayHandle" class="c32922">
+            <c color="#969799" name="cross"></c>
+        </view>
+    </view>
+    <view class="c14821" wx:if="{{couponData.name&&couponStatus==='unaccalimed'}}">
+        <a btnIcon="{{false}}" coupon="{{couponData}}" themeClass="{{themeClass}}">
+            <view slot="btnPrefix">
+                <d bind:next="receivedHandle" scene="get_coupon">
+                    <e bg="var(--ump-icon)" color="main-text" customClass="e6db6">立即领取</e>
+                </d>
+            </view>
+        </a>
+    </view>
+    <view class="c14821" wx:if="{{couponData.name&&couponStatus==='received'}}">
+        <e bg="var(--ump-coupon-bg)" border="var(--ump-border)" customClass="c746fb">
+            <view class="c1ade1">
+                <view class="c260c2 c5317f">
+                    <view class="c83b00">
+                        <e color="var(--ump-icon)" customClass="a58e6">{{couponData.value}}</e>
+                        <e color="var(--ump-icon)" customClass="denomination-unit">{{couponData.unit}}</e>
+                    </view>
+                </view>
+                <view class="c50b6d">
+                    <view class="c1552c">{{couponData.name}}</view>
+                    <view class="c53274" wx:if="{{couponData.validTime}}">{{couponData.validTime}}</view>
+                    <view class="c0bb1b" wx:else>
+                        <view class="c6202c">距到期仅剩</view>
+                        <b bind:change="onChange" bind:finish="onFinished" time="{{couponData.validEndTime-curTime}}" useSlot="{{true}}">
+                            <text class="b13e9" wx:if="{{timeData.days>0}}">{{timeData.days}}</text>
+                            <text class="b13e9 time-day" wx:if="{{timeData.days>0}}">天</text>
+                            <text class="b13e9">{{timeData.hours}}:</text>
+                            <text class="b13e9">{{timeData.minutes}}:</text>
+                            <text class="b13e9">{{timeData.seconds}}</text>
+                        </b>
+                    </view>
+                </view>
+                <view class="c260c2 e3ae5">
+                    <e bg="var(--ump-main-bg)" bindtap="useHandle" color="var(--ump-main-text)" customClass="c20041">立即使用</e>
+                </view>
+                <view class="c9c1e4" wx:if="{{themeClass}}">
+                    <view class="e5828">
+                        <view class="c038e">已领</view>
+                    </view>
+                </view>
+            </view>
+        </e>
+    </view>
+    <view class="c93481">{{countDownNum}}秒后自动收起</view>
+</view>

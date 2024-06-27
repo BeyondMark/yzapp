@@ -1,0 +1,94 @@
+<template name="icon-list">
+    <view class="{{index>0?'sm-icon-list-row sm-icon-list-row--border':'sm-icon-list-row'}}" wx:for="{{iconList}}" wx:for-item="rowConfig" wx:key="{{ index }}">
+        <view class="sm-icon-list-row__option" name="icon-option" wx:for="{{rowConfig}}" wx:key="index">
+            <button bindtap="handleClickIcon" class="sm-icon-list-row__option" data-alias="{{item.alias}}" data-config="{{item}}" openType="{{item.openType}}">
+                <image class="sm-icon-list-row__icon" src="{{item.iconUrl}}"></image>
+                <text class="sm-icon-list-row__name">{{item.title}}</text>
+            </button>
+        </view>
+    </view>
+</template>
+<a wx:if="{{cubeVisible||getShareOpportunity==='show'}}">
+    <view bindtap="handleIconTap">
+        <slot name="icon" wx:if="{{customIcon}}"></slot>
+        <view class="salesman-icon {{goaway?'goaway':''}}" style="bottom: {{bottom?bottom:''}}; right: {{bottom?'9px':''}}; transition: {{bottom?'all 0.2s':''}};" wx:else>
+            <image src="{{iconUrl}}"></image>
+        </view>
+    </view>
+</a>
+<e bind:click-overlay="handleTogglePanel" customStyle="border-radius: 20px 20px 0 0;" overlay="{{showPopupOverlay}}" position="bottom" show="{{showPopup}}" zIndex="{{99999}}" wx:if="{{hasOpenPopup}}">
+    <a>
+        <view class="panel frame" id="frame" style="{{special?'height: 90vh;':''}}">
+            <g bindtap="handleTogglePanel" customClass="panel-close" name="close" size="16"></g>
+            <view class="frame-header" style="{{commission>0||hasCommissionRange?'height: 64px;':'height: 44px;'}}">
+                <view class="frame-header__panel-title" wx:if="{{commissionRange.length}}">{{hasCommissionRange?commissionRangeTextInfo.text:'立即分享给好友'}}<text class="span" wx:if="{{hasCommissionRange}}">{{commissionRangeTextInfo.commission}}</text>
+                </view>
+                <view class="frame-header__panel-title" wx:else>{{commission>0?'分享后预计可赚':'立即分享给好友'}}<text class="span" wx:if="{{commission>0}}">￥{{commission}}</text>
+                </view>
+                <view class="frame-header__panel-desc" wx:if="{{commission>0||hasCommissionRange}}">佣金可在“{{shareData.isShoppingGuide?'导购工作台':shareData.salesmanName?shareData.salesmanName+'中心':'分销员中心'}}”里查看</view>
+            </view>
+            <view class="frame-content" wx:if="{{special}}">
+                <h active="{{active}}" bind:change="changeTab" color="{{themeMainBgColor}}" lineWidth="{{24}}" wx:if="{{goodsInfo&&showPopup}}">
+                    <i title="推广图文">
+                        <view class="tab-content" style="height: {{popupHeight-(commission>0||hasCommissionRange?108:88)}}px;">
+                            <b bind:publish-success="publishSuccess" class="tab-promote" color="{{themeMainBgColor}}" goodsInfo="{{goodsInfo}}" shareData="{{shareData}}" shopRights="{{rightsInfo}}" shortLinkPromoteUrl="{{shortLinkPromoteUrl}}" showPersonalSpace="{{personalSpaceAbility}}" smartTextData="{{smartTextData}}"></b>
+                            <scroll-view class="panel-icon" scrollX="{{true}}" style="{{'height:'+iconList.length*100+'px'}}">
+                                <template is="icon-list" data="{{iconList:iconList}}"></template>
+                            </scroll-view>
+                        </view>
+                    </i>
+                    <i title="生成海报">
+                        <view class="tab-content" style="height: {{popupHeight-(commission>0||hasCommissionRange?108:88)}}px;">
+                            <c bind:complete="tryOpenAssistantPop" goodsInfo="{{goodsInfo}}" goodsPosterInfo="{{goodsPosterInfo}}" height="{{popupHeight-(commission>0||hasCommissionRange?108:88)}}" isWxShareImg="{{isWxShareImg}}" shareData="{{shareData}}"></c>
+                        </view>
+                    </i>
+                </h>
+            </view>
+            <scroll-view class="panel-icon" scrollX="{{true}}" style="height: {{iconList.length*100}}px;" wx:else>
+                <template is="icon-list" data="{{iconList:iconList}}"></template>
+            </scroll-view>
+        </view>
+    </a>
+</e>
+<e customStyle="left: 0;right:0;top:0;bottom:0;background-color: transparent;transform: none;" show="{{showGuide}}" zIndex="{{1000}}" wx:if="{{hasOpenPopup}}">
+    <d bind:complete="handleCompleteGuide" guideConfig="{{guideConfig}}"></d>
+</e>
+<f bind:close="handleTogglePoster" posterImg="{{poster}}" show="{{showPoster}}" wx:if="{{hasOpenPopup}}"></f>
+<f bind:close="handleCloseFeaturePoster" needDownload="{{true}}" posterImg="{{featurePosterData}}" show="{{showFeaturePoster}}" wx:if="{{hasOpenPopup}}"></f>
+<f bind:close="handleToggleWeappCode" csPrefix="weappcode" needDownload="{{true}}" posterImg="{{weappCode}}" show="{{showWeappCode}}" wx:if="{{hasOpenPopup}}"></f>
+<e bind:click-overlay="handleToggleTaxSign" customStyle="background-color: transparent" show="{{showTaxSign}}" zIndex="{{999}}" wx:if="{{hasOpenPopup}}">
+    <view class="task-sign">
+        <image class="task-sign__banner" src="https://b.yzcdn.cn/image/salesman/task-banner.png"></image>
+        <view class="task-sign__text">{{signText}}</view>
+        <view bindtap="handleCert" class="task-sign__btn">立即签约</view>
+        <view bindtap="handleClose" class="task-sign__next">下次再说</view>
+    </view>
+</e>
+<e bind:click-overlay="closeAssistantPop" customStyle="bottom: {{popupBottom}}px;" position="bottom" round="{{true}}" show="{{showAssistant}}" zIndex="{{1001}}" wx:if="{{hasOpenPopup}}">
+    <view class="assistant-pop">
+        <view class="assistant-pop__title">智能助理</view>
+        <view class="assistant-pop__subtext">想知道如何快速上手卖货？快来开通智能助理</view>
+        <image class="assistant-pop__img" src="https://img01.yzcdn.cn/upload_files/2021/03/09/Fnxvvz23Njr8UTvjpm5Cf4q53PMb.jpg"></image>
+        <view class="assistant-pop__action">长按识别二维码关注</view>
+        <view class="assistant-pop__confirm">
+            <j bindtap="closeAssistantPop" color="linear-gradient(45deg, #ffaa1e, #ff720d)" customStyle="height: 40px;" round="{{true}}" size="large">我知道了</j>
+        </view>
+    </view>
+</e>
+<k bind:close="handleToggleSaveTip" confirmButtonColor="{{themeMainBgColor}}" confirmButtonText="我知道了" show="{{showSaveTip}}" useSlot="{{true}}" width="240px" wx:if="{{hasOpenPopup}}">
+    <view class="tips-wrap">
+        <view class="tips-content">
+            <view class="tip-item {{tip.state?'comm-text':'error-text'}}" wx:for="{{status}}" wx:for-item="tip">
+                <g name="passed" wx:if="{{tip.state}}"></g>
+                <g name="close" wx:else></g>
+                <text class="tip-text">{{tip.text}}</text>
+            </view>
+        </view>
+    </view>
+</k>
+<e customStyle="top: 228px;border-radius: 8px 8px 0 0;" show="{{true}}" zIndex="{{1001}}" wx:if="{{isShowGif}}">
+    <view>
+        <image class="sub-guide" src="https://img01.yzcdn.cn/upload_files/2020/03/25/Fq24gCcTJhE3bpk9giOf7LPqC-7H.gif"></image>
+    </view>
+</e>
+<canvas canvasId="salesman-icon" class="poster-canvas" wx:if="{{hasOpenPopup}}"></canvas>

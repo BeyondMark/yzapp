@@ -1,0 +1,46 @@
+.root {
+  width: 270px;
+  position: relative;
+  padding: 15px;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+.surround:after {
+  content: " ";
+  position: absolute;
+  pointer-events: none;
+  box-sizing: border-box;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  transform: scale(0.5);
+  border: 0 solid #969799;
+}
+.header {
+  font-size: 16px;
+}
+.content {
+  margin-bottom: 15px;
+}
+.lint {
+  font-size: 12px;
+  color: #969799;
+}
+.input-wrapper {
+  margin-top: 10px;
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px 15px;
+}
+.input-wrapper:after {
+  border-width: 1px;
+  border-radius: 4px;
+}
+.footer {
+  margin-top: 10px;
+}
+.forget {
+  font-size: 12px;
+  color: #1989fa;
+}

@@ -1,0 +1,8 @@
+<view bind:tap="_p" class="dc-guang" data-t="{{ tap:{en:'onClick'} }}" wx:if="{{cover}}">
+    <image class="logo tee-image" lazyLoad="true" src="{{cover}}"></image>
+    <view class="body">
+        <view class="title">{{opt.title}}</view>
+        <view class="{{'status'}} {{type}}"> {{text}} </view>
+        <image class="heart-icon tee-image" lazyLoad="true" src="//img01.yzcdn.cn/guang/heart-0115.png"></image>
+    </view>
+</view>

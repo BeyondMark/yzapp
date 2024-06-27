@@ -1,0 +1,10 @@
+<view class="feat__video__add-comment-block">
+    <view>
+        <form bindreset="handleTapCommentBtn">
+            <input bindinput="onCommentChanged" class="feat-video__comment__input" placeholder="我来说点什么吧~" value="{{comment}}"></input>
+            <button class="feature-video__comment-button" formType="reset" plain="{{true}}">
+                <image src="https://img01.yzcdn.cn/weapp/wsc/R5GIms.png"></image>
+            </button>
+        </form>
+    </view>
+</view>

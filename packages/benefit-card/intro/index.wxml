@@ -1,0 +1,3 @@
+<view wx:if="{{alias}}">
+    <a src="https://h5.youzan.com/wscuser/scrm/benefitcard/intro?card_alias={{alias}}"></a>
+</view>

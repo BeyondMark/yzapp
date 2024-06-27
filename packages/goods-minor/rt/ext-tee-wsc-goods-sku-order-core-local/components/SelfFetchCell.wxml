@@ -1,0 +1,15 @@
+<a bind:_init="_tic" bind:tap="_p" border="{{false}}" center="{{true}}" customClass="{{isAddressFixed?'c240ce':'c3dfaa'}}" data-t="{{ tap:{en:'onCellClick'} }}" isLink="{{true}}">
+    <view class="c65973" wx:if="{{isAddressFixed}}">
+        <view>
+            <b bind:_init="_tic" color="var(--tag-bg, #f2f2ff)" customClass="c80b3f" hairline="{{themeTag.plain}}" plain="{{themeTag.plain}}" textColor="var(--tag-text, #323233)">自提
+        </b>
+        </view>
+        <view class="c9b959">{{computedSelfFetchShop}}</view>
+    </view>
+    <view class="'c3dfaa-content'" wx:else>
+        <view class="c840aa">
+            <b bind:_init="_tic" color="var(--tag-bg, #f2f2ff)" customClass="c80b3f" hairline="{{themeTag.plain}}" plain="{{themeTag.plain}}" textColor="var(--tag-text, #323233)">自提
+      </b> {{selfFetchName}} </view>
+        <view class="afeb9" wx:if="{{!isAddressFixed}}"> {{selfFetchShopStringFormat}} </view>
+    </view>
+</a>

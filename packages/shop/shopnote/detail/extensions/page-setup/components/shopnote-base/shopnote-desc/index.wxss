@@ -1,0 +1,6 @@
+.shopnote-desc {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #323233;
+  line-height: 28px;
+}

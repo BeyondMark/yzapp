@@ -1,0 +1,4 @@
+<view class="dc-recommend">
+    <b _opt="{{opt.titleOpt}}" bind:_init="_tic" wx:if="{{opt.titleOpt}}"></b>
+    <a _opt="{{goodsOpt}}" bind:_init="_tic" bind:button-click="_p" bind:item-click="_p" data-t="{{ itemClick:{en:'handleItemClick'},buttonClick:{en:'handleButtonClick'} }}" wx:if="{{opt.goodsOpt}}"></a>
+</view>

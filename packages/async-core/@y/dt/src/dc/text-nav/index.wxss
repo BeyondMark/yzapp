@@ -1,0 +1,39 @@
+.cap-text-nav {
+  list-style: none;
+}
+.cap-text-nav__item {
+  position: relative;
+}
+.cap-text-nav__item:last-child:after {
+  display: none;
+}
+.cap-text-nav__item:first-child:after {
+  display: block;
+}
+.cap-text-nav__item:first-child .cap-text-nav__link {
+  border-bottom: 1px solid #e5e5e5;
+}
+.cap-text-nav__link {
+  position: relative;
+  height: 44px;
+  color: #333;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 44px;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 16px;
+}
+.cap-text-nav__title {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.cap-text-nav .cap-text-nav__icon {
+  width: 12px;
+  color: #cbc9cc;
+  font-size: 12px;
+  margin-left: 12px;
+}

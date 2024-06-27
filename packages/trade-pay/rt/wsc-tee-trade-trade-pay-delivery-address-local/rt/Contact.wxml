@@ -1,0 +1,7 @@
+<a bind:_init="_tic" center="{{true}}" isLink="{{false}}" wx:if="{{currentContact.required}}">
+    <b bind:_init="_tic" name="contact" slot="icon"></b>
+    <view class="be064">
+        <view class="c89585">联系人：{{currentContact.userName}}</view>
+        <view class="c89585">{{currentContact.tel}}</view>
+    </view>
+</a>

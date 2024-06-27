@@ -1,0 +1,26 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../../trade-buy-privacy-bill-local/components/PrivacyBillRulePopup",
+    "b": "./SkuOrderAddressPopup",
+    "c": "./GoodsMessageDatePicker",
+    "d": "./../../../wsc-tee-trade-trade-buy-common-popup-local/widgets/contact-list/rt/index",
+    "e": "./../../../wsc-tee-trade-trade-buy-ump-block-local/widgets/activity-dialog/rt/index",
+    "f": "./../../../wsc-tee-trade-trade-buy-ump-block-local/widgets/coupon-list/rt/index",
+    "g": "./../../../wsc-tee-trade-trade-buy-ump-block-local/widgets/membership-dialog/rt/index",
+    "h": "./../../../wsc-tee-trade-trade-buy-service-block-local/widgets/invoice-action-sheet/rt/index",
+    "i": "./../../../wsc-tee-trade-trade-buy-ump-block-local/widgets/prepay-card-popup/rt/index",
+    "j": "./../../../assets-tee-extensions-cashier-pre-local/rt/SingleRowChannelListPopup",
+    "k": "./../../../wsc-tee-trade-trade-buy-ump-block-local/widgets/point-deduction-popup/rt/index",
+    "l": "./../../../retail-tee-prepaid-prepaid-local/widgets/recharge-gift-pack/rt/index",
+    "m": "./../../../wsc-tee-trade-trade-buy-common-popup-local/widgets/time-picker/rt/index",
+    "n": "./../../../wsc-tee-trade-trade-buy-common-popup-local/widgets/delivery-scope-popup/rt/index",
+    "o": "./../../../wsc-tee-trade-trade-buy-ump-block-local/widgets/point-warn-popup/rt/index",
+    "p": "./../../../assets-tee-extensions-cashier-pre-local/rt/SingleRowPayPasser",
+    "q": "./../../../wsc-tee-trade-trade-buy-ump-block-local/widgets/agree-detail-popup/rt/index",
+    "r": "/packages/async-main/@y/pptb/lib/behavior/index",
+    "s": "/@y-open/vt/dist/overlay/index",
+    "_": "../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "r": "_" }
+}

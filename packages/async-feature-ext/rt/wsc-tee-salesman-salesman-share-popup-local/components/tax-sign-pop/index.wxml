@@ -1,0 +1,8 @@
+<a bind:_init="_tic" bind:click-overlay="_p" customStyle="background-color: transparent" data-t="{{ clickOverlay:{en:'handleCloseTaxSign'} }}" show="{{show}}">
+    <view class="task-sign" wx:if="{{show}}">
+        <image class="task-sign__banner tee-image" lazyLoad="true" src="https://b.yzcdn.cn/image/salesman/task-banner.png"></image>
+        <view class="task-sign__text"> {{taxSignText}} </view>
+        <view bind:tap="_p" class="task-sign__btn" data-t="{{ tap:{en:'handleCert'} }}"> 立即签约 </view>
+        <view bind:tap="_p" class="task-sign__next" data-t="{{ tap:{en:'handleCloseTaxSign'} }}"> 下次再说 </view>
+    </view>
+</a>

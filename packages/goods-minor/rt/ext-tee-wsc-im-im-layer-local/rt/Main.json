@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-feature-ext/rt/ext-tee-wsc-im-im-message-contact-local/components/MessageContactButton",
+    "b": "/@y-open/vt/dist/popup/index.weapp",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

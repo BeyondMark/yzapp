@@ -1,0 +1,12 @@
+<view class="date-calendar">
+    <view class="c03e8f">
+        <view class="c29b1b {{day==='六'||day==='日'?'d8e1b':''}}" wx:for="{{week}}" wx:for-item="day" wx:key="day"> {{day}} </view>
+    </view>
+    <view class="eb4d8">
+        <view bind:tap="_p" class="af2a0 {{activeId===dateData.id?'c15c5c':''}} {{dateData.date===-1?'fac7f':''}} {{!dateData.isEnable?'de708':''}}" data-t="{{ tap:{ en:'onItemClick',args:[dateData,index] } }}" wx:for="{{renderDays}}" wx:for-item="dateData" wx:key="dateSkuId">
+            <view class="c14443" wx:if="{{dateData.header}}"> {{dateData.header}} </view>
+            <view class="f1088 c89585">{{dateData.date}}</view>
+            <view class="c90f9d c89585" wx:if="{{dateData.footer}}"> {{dateData.footer}} </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y-open/vt/dist/popup/index.weapp",
+    "b": "./numpad",
+    "c": "../../../@y-open/vt/dist/number-keyboard/index",
+    "_": "../../../../../components/_/index"
+  }
+}

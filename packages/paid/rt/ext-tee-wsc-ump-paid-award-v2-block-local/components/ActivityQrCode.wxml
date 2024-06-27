@@ -1,0 +1,20 @@
+<award-container bind:_init="_tic" customStyle="display: flex;padding: 12px;height: 144px;justify-content: space-between;background-image: url('//img01.yzcdn.cn/public_files/89f7502b133d8b590b1be5866f7479c1.jpg');background-repeat: no-repeat;background-size: 100% 100%;">
+    <view class="c74e3b" wx:if="{{isDefaultImage}}">
+        <view class="c9a036">
+            <text bind:_init="_tic" class="d5d3d" overflow="visible">{{paidPromotion.activitiesQrName}}</text>
+            <image class="c28f1f bd231" lazyLoad="true" mode="aspectFit" src="{{qrCodeTipImage}}"></image>
+        </view>
+        <view>
+            <image class="c49f14 bd231" lazyLoad="true" showMenuByLongpress="{{true}}" src="{{paidPromotion.activityQrUrl}}"></image>
+            <view class="c9eab">
+                <view class="c1cb25">无法识别？</view>
+                <a bind:_init="_tic" customClass="c2249b" h5Link="{{paidPromotion.detailUrl}}" navigateTo="{{navigateTo}}">
+                    <view class="c09da5">点击此处</view>
+                </a>
+            </view>
+        </view>
+    </view>
+    <a bind:_init="_tic" customClass="c09da9" h5Link="{{paidPromotion.detailUrl}}" navigateTo="{{navigateTo}}" wx:else>
+        <image class="f2f65 bd231" lazyLoad="true" mode="aspectFit" src="{{paidPromotion.imgUrl}}"></image>
+    </a>
+</award-container>

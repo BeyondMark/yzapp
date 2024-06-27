@@ -1,0 +1,24 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../wsc-tee-trade-trade-order-status-local/rt/OrderGuide",
+    "b": "./../../wsc-tee-trade-trade-order-status-local/rt/OrderStatusWrapper",
+    "c": "./../../wsc-tee-trade-trade-pay-delivery-address-local/rt/Contact",
+    "d": "./../../wsc-tee-trade-trade-pay-delivery-address-local/rt/LogisticsWrapper",
+    "e": "./../../wsc-tee-trade-trade-pay-delivery-address-local/rt/SelfFetch",
+    "f": "./../../wsc-tee-trade-trade-pay-groupon-local/rt/GrouponHeaderCell",
+    "g": "./../../wsc-tee-trade-trade-pay-delivery-address-local/rt/StripeBorder",
+    "h": "./../../wsc-tee-trade-trade-pay-goods-local/rt/GoodsListWrapper",
+    "i": "./../../wsc-tee-trade-trade-pay-goods-local/rt/GuaranteeFreightBarWrapper",
+    "j": "./../../wsc-tee-trade-trade-pay-price-local/rt/PricePanel",
+    "k": "./../../wsc-tee-trade-trade-pay-service-local/rt/Service",
+    "l": "./../../wsc-tee-trade-trade-pay-presale-local/rt/PreSaleCellWrapper",
+    "m": "./../../wsc-tee-trade-detail-time-local/rt/Time",
+    "n": "./../../wsc-tee-trade-detail-coupon-local/rt/Coupon",
+    "o": "./../../wsc-tee-trade-trade-pay-pre-pay-card-cell-local/rt/PrePayCardCell",
+    "p": "./../../wsc-tee-trade-detail-shop-local/rt/Period",
+    "q": "./../../wsc-tee-trade-trade-pay-idcard-local/rt/Main",
+    "r": "./../../trade-buy-cashier-wrap-local/rt/Main",
+    "_": "../../../../../components/_/index"
+  }
+}

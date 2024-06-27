@@ -1,0 +1,20 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.c718b2 {
+  margin-top: 8px;
+  line-height: 16px;
+}
+.c718b2,
+.a34b9 {
+  color: #969799;
+  font-size: 12px;
+}
+.c38ee4 {
+  margin: 0 2px;
+}
+.d70bc {
+  color: #ee0a24;
+  color: var(--main-bg, #ee0a24) !important;
+}

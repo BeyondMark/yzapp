@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "a": "../../../components/shopnote-keeper-talk/index",
+    "b": "../../../components/shopnote-new-arrival/index",
+    "c": "../../../components/shopnote-shop-circle/index",
+    "d": "../../../components/shopnote-single-product/index",
+    "_": "../../../../../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,27 @@
+<view>
+    <view>
+        <view wx:if="{{isLevelChange&&hasLevel}}">你已成为{{currentLevelName}}</view>
+        <view wx:else>
+            <view class="title" wx:if="{{!hasLevel}}">还差一步，成为会员</view>
+            <view class="title" wx:else>
+                <text class="name">{{nickName}}</text>
+                <text>欢迎入会</text>
+            </view>
+        </view>
+    </view>
+    <view wx:if="{{!hasLevel||isLevelChange}}">
+        <view class="sub-title">
+            <rich-text nodes="{{subTitle}}"></rich-text>
+        </view>
+    </view>
+    <view class="sub-title" wx:else>
+        <view wx:if="{{couponCount>0}}">获得<text class="highlight">{{couponCount}}张</text>{{couponName}}，享<text class="highlight">{{benefitCount}}大</text>会员权益</view>
+        <view wx:else>
+            <view wx:if="{{benefitCount>0}}">享<text class="highlight">{{benefitCount}}</text>大会员权益</view>
+            <view wx:else>享受会员福利</view>
+        </view>
+    </view>
+    <view class="mission-list" wx:if="{{showMissionList}}">
+        <a bizDataMap="{{bizDataMap}}" hasMobile="{{hasMobile}}"></a>
+    </view>
+</view>

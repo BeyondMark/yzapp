@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../wsc-tee-trade-common-widgets-local/rt/PresentGoods",
+    "b": "/@y-open/vt/dist/button/index.weapp",
+    "c": "/@y-open/vt/dist/popup/index.weapp",
+    "_": "../../../../../components/_/index"
+  }
+}

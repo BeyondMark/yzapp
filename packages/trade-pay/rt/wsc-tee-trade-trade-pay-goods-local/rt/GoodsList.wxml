@@ -1,0 +1,20 @@
+<view wx:if="{{display.showGoodsBlock}}">
+    <f bind:_init="_tic" border="{{false}}" customClass="ee070" icon="shop-o" title="{{shopName}}" wx:if="{{!isFxZpp}}"></f>
+    <block wx:if="{{hasHotelGoods}}">
+        <d bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b38-11'}}"></d>
+    </block>
+    <block wx:else>
+        <view wx:for="{{formattedGoods}}" wx:key="index">
+            <block wx:if="{{item.isECard}}">
+                <c bind:_init="_tic" bind:message="_p" data-t="{{ message:{ en:'showGoodsMessage',args:[index] } }}" good="{{item}}" rmId="{{rmId}}" wx:if="{{rmId==='b38-11'}}"></c>
+            </block>
+            <block wx:else>
+                <b bind:_init="_tic" bind:message="_p" data-t="{{ message:{ en:'showGoodsMessage',args:[index] } }}" good="{{item}}" rmId="{{rmId}}" wx:if="{{rmId==='b38-11'}}"></b>
+            </block>
+        </view>
+    </block>
+    <a bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'handleCloseMessage'} }}" message="{{currentMessage}}" rmId="{{rmId}}" show="{{showMessage}}" wx:if="{{rmId==='b38-11'}}"></a>
+    <block wx:if="{{hasHotelGoods}}">
+        <e bind:_init="_tic" rmId="{{rmId}}" showPriceDetail="{{true}}" wx:if="{{rmId==='b38-11'}}"></e>
+    </block>
+</view>

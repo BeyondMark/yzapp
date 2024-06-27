@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "好友瓜分券",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "a": "/pages/common/page-container/index",
+    "b": "./components/friend-popup/index",
+    "c": "./components/activity-info/index",
+    "d": "./components/recommend/index",
+    "e": "./components/share-pop/index",
+    "f": "./components/rule/index",
+    "_": "../../../components/_/index"
+  }
+}

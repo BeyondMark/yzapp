@@ -1,0 +1,19 @@
+<view class="presale-wrap {{themeClass}}" wx:if="{{extraData&&extraData.presaleInfo}}">
+    <view class="van-sku__presale-price">
+        <b class="van-sku__presale-label" color="general">定金：￥</b>
+        <b class="van-sku__presale-price-number" color="general" wx:if="{{selectedSkuComb}}">{{utils.presaleCentToYuan(selectedSkuComb.deposit||sku.deposit.deposit||selectedSkuComb.price*extraData.presaleInfo.depositRatio)}}<a color="{{themeGeneral}}" plain="{{true}}" type="danger" wx:if="{{selectedDecrease||sku.decrease}}">定金可抵{{selectedDecrease||sku.decrease}}</a>
+        </b>
+        <b class="van-sku__presale-price-number" color="general" wx:if="{{!selectedSkuComb&&sku}}">
+            <view wx:if="{{extraData.presaleInfo.deposit.min===extraData.presaleInfo.deposit.max}}">{{utils.presaleCentToYuan(extraData.presaleInfo.deposit.min)}}</view>
+            <view wx:else>{{utils.presaleCentToYuan(extraData.presaleInfo.deposit.min)}} - {{utils.presaleCentToYuan(extraData.presaleInfo.deposit.max)}}</view>
+            <a color="{{themeGeneral}}" plain="{{true}}" type="danger" wx:if="{{selectedDecrease||sku.decrease}}">定金可抵{{selectedDecrease||sku.decrease}}</a>
+        </b>
+    </view>
+    <view class="van-sku__goods-price-wrap">
+        <view class="van-sku__goods-price-label">总价：</view>
+        <view class="van-sku__goods-price">
+            <view class="van-sku__price-symbol">￥</view>
+            <view class="van-sku__price-num">{{utils.getGoodsPrice(selectedSkuComb,sku,isRetailApp)}}</view>
+        </view>
+    </view>
+</view>

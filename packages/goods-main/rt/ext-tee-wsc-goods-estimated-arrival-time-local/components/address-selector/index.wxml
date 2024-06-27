@@ -1,0 +1,20 @@
+<view class="ade2a">
+    <a bind:_init="_tic" class="c2dae9">
+        <b bind:_init="_tic" bind:tap="_p" border="{{false}}" customClass="d9be0" data-t="{{ tap:{ en:'onSelectListItem',args:[item] } }}" wx:for="{{addressList}}" wx:key="id">
+            <view slot="icon">
+                <view class="c46602">
+                    <c bind:_init="_tic" class="d98b6" name="checked" size="18" wx:if="{{selectedId===item.id}}"></c>
+                    <c bind:_init="_tic" color="#969799" name="circle" size="18" wx:else></c>
+                </view>
+            </view>
+            <view class="b2ce8">
+                <view class="b0689">
+                    <view>{{item.userName}}</view>
+                    <view class="c7b95a">{{item.tel}}</view>
+                    <d bind:_init="_tic" customClass="e4d23 c95c34" hairline="{{themeTag.plain}}" plain="{{themeTag.plain}}" type="primary" wx:if="{{item.isDefault}}">默认</d>
+                </view>
+                <view class="c884d9"> {{item.province+item.city+item.county+item.addressDetail}} </view>
+            </view>
+        </b>
+    </a>
+</view>

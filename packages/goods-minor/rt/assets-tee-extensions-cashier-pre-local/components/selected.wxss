@@ -1,0 +1,19 @@
+.t-text {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.cashier-pre__selected {
+  font-size: 12px;
+  color: #646566;
+}
+.cashier-pre__notice {
+  color: #969799;
+  font-size: 12px;
+}
+.cashier-pre__flex {
+  display: flex;
+}
+.cashier-pre__flex--center {
+  justify-content: center;
+  align-items: center;
+}

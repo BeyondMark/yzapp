@@ -1,0 +1,7 @@
+<view class="share-block">
+    <a bind:_init="_tic" bind:close="_p" bind:share-item-click="_p" data-t="{{ shareItemClick:{en:'onItemClick'},close:{en:'onClose'} }}" kdtId="{{kdtId}}" opts="{{popOpts}}" platform="{{platform}}" rmId="{{i[0]}}" show="{{sharePopup}}" wx:if="{{i[1]}}" wx:for="{{[ [rmId,rmId==='b7-5'||rmId==='b0-24'],[rmId,rmId==='b33-6'] ]}}" wx:for-item="i" wx:key="0">
+        <share-pop-header bind:_init="_tic"></share-pop-header>
+    </a>
+    <b alias="{{alias}}" bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'onClosePoster'} }}" isShareStyle="{{isShareStyle}}" isWxShareImg="{{isWxShareImg}}" kdtId="{{kdtId}}" needAddVideoIcon="{{needAddVideoIcon}}" offlineId="{{offlineId}}" rootKdtId="{{rootKdtId}}" shareQuery="{{shareQuery}}" show="{{showPoster}}"></b>
+    <c bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'onCloseGuide'} }}" show="{{showGuide}}"></c>
+</view>

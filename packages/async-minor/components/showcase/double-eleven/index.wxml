@@ -1,0 +1,8 @@
+<view class="cap-double-eleven {{'cap-double-eleven--'+subEntry.length}}" style="background-image: url({{bgImageUrl}})">
+    <view class="cap-double-eleven__entry {{'cap-double-eleven__entry-'+index}}" wx:for="{{subEntry}}" wx:for-item="entry" wx:key="{{ index }}">
+        <a appId="{{entry.navInfo.appId}}" bind:contactback="handleContactBack" bind:navigate="handleNavigate" customClass="cap-double-eleven__entry-wrap" data-index="{{index}}" im="{{extraData}}" itemInfo="{{entry}}" linkType="{{entry.navInfo.linkType}}" path="{{entry.navInfo.path}}">
+            <image class="cap-double-eleven__entry-img" lazyLoad="{{true}}" mode="aspectFill" src="{{entry.imageUrl}}"></image>
+            <view class="cap-double-eleven__entry-title" style="color: {{textColor}}" wx:if="{{entry.title}}">{{entry.title}}</view>
+        </a>
+    </view>
+</view>

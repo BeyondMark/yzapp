@@ -1,0 +1,34 @@
+.c57bdf {
+  z-index: 80;
+}
+.c57bdf .c9a036 {
+  height: 400px;
+  overflow-y: auto;
+  padding: 12px 12px 0 12px;
+  border-radius: 8px;
+}
+.c57bdf .de02b {
+  padding-top: 6px;
+  background: #fff;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.c57bdf .a14fa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.c57bdf .c6a213 {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ed6a0c;
+  background-color: #fffbe8;
+  box-sizing: border-box;
+  text-align: center;
+}
+.c57bdf .c42683 .t-empty__description {
+  padding: 0;
+}

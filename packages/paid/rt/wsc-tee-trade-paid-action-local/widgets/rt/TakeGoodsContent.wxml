@@ -1,0 +1,5 @@
+<view class="c10c7a" style="{{themeCSS}}">
+    <view class="dd472">取货号</view>
+    <view class="c8849c">{{takeGoodsCodeStr}}</view>
+    <view class="c5d33d">{{hasError?'请前往订单详情查看':'请向商家出示取货号码'}}</view>
+</view>

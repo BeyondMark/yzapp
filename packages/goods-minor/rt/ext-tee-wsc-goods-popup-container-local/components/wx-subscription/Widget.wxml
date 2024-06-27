@@ -1,0 +1,9 @@
+<view style="{{themeVars}}">
+    <a bind:_init="_tic" bind:tap="_p" data-t="{{ tap:{en:'closeTips'} }}" show="{{showTips}}" zIndex="{{100}}">
+        <view class="c7c275">
+            <view class="d8fe5"></view>
+        </view>
+    </a>
+    <c bind:_init="_tic" bind:sale-reminder-success="_p" data-ref="saleReminderPopup" data-t="{{ saleReminderSuccess:{en:'handleSaleReminderSuccess'} }}" saleReminder="{{staticConfig.saleReminder}}"></c>
+    <b bind:_init="_tic" bind:hide-sku="_p" bind:stock-reminder-success="_p" data-ref="stockReminderPopup" data-t="{{ stockReminderSuccess:{en:'handleStockReminderSuccess'},hideSku:{en:'handleHideSku'} }}" stockReminder="{{staticConfig.stockReminder}}"></b>
+</view>

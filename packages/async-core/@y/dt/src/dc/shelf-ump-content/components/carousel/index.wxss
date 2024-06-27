@@ -1,0 +1,155 @@
+.t-text {
+  text-decoration: inherit;
+}
+.t-text,
+.tee-image {
+  display: inline-block;
+}
+.tee-image {
+  width: 100%;
+  height: 100%;
+}
+.carousel {
+  height: 18px;
+  position: relative;
+  overflow: hidden;
+  flex-grow: 1;
+}
+.carousel-con {
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 12px;
+}
+.carousel .list {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.carousel.animate3 .list {
+  animation: carousel3 8s linear infinite;
+}
+.carousel.animate2 .list {
+  animation: carousel2 6s linear infinite;
+}
+.carousel .notice {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin-right: 4px;
+}
+.carousel .item {
+  width: 100%;
+  color: #999;
+  font-size: 12px;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  height: 18px;
+}
+.carousel .item-tag {
+  height: 16px;
+  line-height: 16px;
+  padding: 0 4px;
+  color: var(--theme-color);
+  background-color: var(--theme-rgb-color);
+  margin-right: 4px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.carousel .item-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 18px;
+}
+.carousel .fix-height {
+  height: 18px;
+  overflow: hidden;
+}
+.carousel .fix-height .list {
+  animation: none;
+}
+.carousel .fix-height .carousel-con {
+  margin-top: 0;
+}
+@-webkit-keyframes carousel3 {
+  0% {
+    top: 0;
+  }
+  16% {
+    top: -100%;
+  }
+  32% {
+    top: -100%;
+  }
+  48% {
+    top: -200%;
+  }
+  64% {
+    top: -200%;
+  }
+  80% {
+    top: -300%;
+  }
+  to {
+    top: -300%;
+  }
+}
+@keyframes carousel3 {
+  0% {
+    top: 0;
+  }
+  16% {
+    top: -100%;
+  }
+  32% {
+    top: -100%;
+  }
+  48% {
+    top: -200%;
+  }
+  64% {
+    top: -200%;
+  }
+  80% {
+    top: -300%;
+  }
+  to {
+    top: -300%;
+  }
+}
+@-webkit-keyframes carousel2 {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: -100%;
+  }
+  50% {
+    top: -100%;
+  }
+  75% {
+    top: -200%;
+  }
+  to {
+    top: -200%;
+  }
+}
+@keyframes carousel2 {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: -100%;
+  }
+  50% {
+    top: -100%;
+  }
+  75% {
+    top: -200%;
+  }
+  to {
+    top: -200%;
+  }
+}

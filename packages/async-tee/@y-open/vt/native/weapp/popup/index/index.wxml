@@ -1,0 +1,9 @@
+<view>
+    <view catch:tap="_p" data-t="{{ tap:{en:'true',et:'stop'} }}">
+        <a bind:_init="_tic" bind:tap="_p" customStyle="{{overlayStyle}}" data-t="{{ tap:{en:'onClickOverlay'} }}" duration="{{duration}}" show="{{show}}" zIndex="{{zIndex}}" wx:if="{{overlay}}"></a>
+    </view>
+    <view bind:transitionend="_p" class="{{'t-popup'}} {{'t-popup--'+position}} {{round?'t-popup--round':''}} {{safeAreaInsetBottom?'t-popup--safe':''}} {{safeAreaInsetTop?'t-popup--safeTop':''}} {{classes}} {{customClass}}" data-t="{{ transitionend:{en:'onTransitionEnd'} }}" style="{{styles}}" wx:if="{{inited}}">
+        <slot></slot>
+        <b bind:_init="_tic" bind:tap="_p" class="{{'t-popup__close-icon'}} {{closeIconClass}} {{'t-popup__close-icon--'+closeIconPosition}}" data-t="{{ tap:{en:'onClickCloseIcon'} }}" name="{{closeIcon}}" wx:if="{{closeable}}"></b>
+    </view>
+</view>

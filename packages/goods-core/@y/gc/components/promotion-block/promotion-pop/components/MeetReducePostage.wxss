@@ -1,0 +1,25 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.e395a .c0b873 {
+  padding: 10px 0;
+}
+.e395a .c0b873 .c66cb2 {
+  display: flex;
+}
+.e395a .c0b873 .c66cb2 .c6c7ee {
+  color: #969799;
+  flex: none;
+}
+.e395a .c5625f {
+  font-size: 12px;
+  color: #969799;
+  margin-top: 16px;
+}
+.e395a .c592a9 {
+  font-size: 12px;
+  color: #0080ff;
+  text-align: center;
+  margin-top: 30px;
+}

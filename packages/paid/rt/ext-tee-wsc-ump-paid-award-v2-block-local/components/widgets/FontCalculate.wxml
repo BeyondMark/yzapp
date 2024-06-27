@@ -1,0 +1,6 @@
+<view class="c3e150" style="{{containerStyle}}">
+    <view class="a14fa" wx:if="{{calculating}}">-</view>
+    <view class="c2063c {{item.c3e34bDesc===''?'c8dbdd':''}} {{isSkyline?'fd77b':''}}" data-ref="wrapper" style="{{fontStyle}}">
+        <view class="c851f5" wx:if="{{item.preDesc}}">{{item.preDesc}}</view>{{item.valuesDesc}}<view class="c3e34b">{{item.unitDesc}}</view>
+    </view>
+</view>

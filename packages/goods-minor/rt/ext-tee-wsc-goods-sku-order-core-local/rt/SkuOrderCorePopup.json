@@ -1,0 +1,15 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../widgets/rt/SkuOrderHeaderBlock",
+    "b": "./../widgets/rt/SkuOrderGoodsBlock",
+    "c": "./../widgets/rt/SkuOrderSubmitBlock",
+    "d": "./../widgets/rt/SkuOrderServiceBlock",
+    "e": "./../widgets/rt/SkuOrderAddressBlock",
+    "f": "./../widgets/rt/SkuOrderPopupBlock",
+    "g": "./../widgets/rt/SubmitDiscountDetail",
+    "h": "./../widgets/rt/AddressFixedBlock",
+    "i": "/@y-open/vt/dist/popup/index.weapp",
+    "_": "../../../../../components/_/index"
+  }
+}

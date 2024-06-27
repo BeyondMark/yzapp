@@ -1,0 +1,57 @@
+.zan-pay-a__method {
+  text-align: center;
+  height: 50px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 110;
+}
+.zan-pay-a__method-content {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.zan-pay-a__method-content--alipay_wap .zan-pay-a__method-desc {
+  color: #ffa444;
+}
+.zan-pay-a__method-right {
+  position: absolute;
+  font-size: 12px;
+  line-height: 16px;
+  color: #fff;
+  background-color: gold;
+  padding: 0 5px;
+  right: -100%;
+  top: 50%;
+  border-radius: 2px;
+  transform: translateY(-50%);
+}
+.zan-pay-a__method-name {
+  font-size: 16px;
+  line-height: 18px;
+  color: #323233;
+}
+.zan-pay-a__method-desc {
+  font-size: 12px;
+  line-height: 14px;
+  padding-top: 4px;
+  color: #969799;
+}
+.zan-pay-a__method--hairline:before {
+  content: " ";
+  position: absolute;
+  left: -50%;
+  right: -50%;
+  top: 0;
+  border-top: 1px solid #dcdee0;
+  transform: scale(0.5);
+}
+.zan-pay-a__method--loading {
+  padding: 10px 0;
+}
+.zan-pay-a__method--disabled .zan-pay-a__method-desc,
+.zan-pay-a__method--disabled .zan-pay-a__method-name {
+  color: #c8c9cc;
+}

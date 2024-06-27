@@ -1,0 +1,3 @@
+<view wx:if="{{isPreCashierPay}}">
+    <a bind:_init="_tic" block="{{true}}" rmId="{{rmId}}" wx:if="{{rmId==='b36-34'}}"></a>
+</view>

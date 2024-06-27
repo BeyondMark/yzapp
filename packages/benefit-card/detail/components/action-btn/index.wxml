@@ -1,0 +1,25 @@
+<import src="../../custom-tpl.wxml"></import>
+<view class="act-bt-warpper {{hasCard?'':'untake'}} {{isIphone?'is-n-ph':''}} " wx:if="{{btnVisible}}">
+    <view wx:if="{{isCurrentShopAvailable||hasCard}}">
+        <block wx:for="{{designChildren}}" wx:key="type">
+            <view class="ag-wrap" wx:if="{{item.type==='agreement-block'&&customShowProtocol}}">
+                <van-checkbox bind:change="handleAgreedChange" checkedColor="{{themeColors.general}}" value="{{agreed}}">
+                    <view class="ag-label">已阅读并同意<view bindtap="viewAgreement" class="agreement" style="color: {{themeColors.general}}">《权益卡使用协议》</view>
+                    </view>
+                </van-checkbox>
+            </view>
+            <block wx:elif="{{item.type==='action-block'}}">
+                <block wx:if="{{btnVisible}}">
+                    <user-authorize authTypeList="{{['mobile']}}" bind:next="handleCallAuth" wx:if="{{agreed&&activationCondition.requireMobile}}">
+                        <button class="act-bt" style="background-color: {{themeColors.general}}">{{btnText}}</button>
+                    </user-authorize>
+                    <button bindtap="bindClick" class="act-bt" style="background-color: {{themeColors.general}}" wx:else>{{btnText}}</button>
+                </block>
+            </block>
+            <template is="{{item.type}}" data wx:elif="{{item.custom}}"></template>
+        </block>
+    </view>
+    <view wx:else>
+        <button class="act-bt disabled-btn">该卡不适用于本店，不支持领取/购买</button>
+    </view>
+</view>

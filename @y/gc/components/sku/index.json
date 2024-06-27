@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y-open/vt/dist/popup/index.weapp",
+    "b": "/packages/goods-core/@y/gc/components/sku/Container",
+    "_": "../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_" }
+}

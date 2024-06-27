@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../display-card/rt/index",
+    "b": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "c": "/@y-open/vt/dist/cell/index",
+    "d": "/packages/async-tee/@y-open/vt/native/weapp/checkbox/index/index",
+    "_": "../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_", "d": "_" }
+}

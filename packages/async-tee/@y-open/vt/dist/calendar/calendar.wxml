@@ -1,0 +1,14 @@
+<view class="t-calendar">
+    <b bind:_init="_tic" showSubtitle="{{showSubtitle}}" showTitle="{{showTitle}}" subtitle="{{subtitle}}" title="{{title}}">
+        <slot name="title" slot="title"></slot>
+    </b>
+    <scroll-view class="t-calendar__body" scrollIntoView="{{scrollIntoViewId}}" scrollY="{{true}}">
+        <c allowSameDay="{{allowSameDay}}" bind:_init="_tic" bind:click-day="_p" class="month" color="{{color}}" currentDate="{{currentDate}}" data-date="{{item}}" data-t="{{ clickDay:{en:'onClickDay'} }}" date="{{item}}" formatter="{{formatter}}" id="{{'month'+index}}" maxDate="{{maxDate}}" minDate="{{minDate}}" rowHeight="{{rowHeight}}" showMark="{{showMark}}" showMonthTitle="{{index!==0||!showSubtitle}}" showSubtitle="{{showSubtitle}}" type="{{type}}" wx:for="{{months}}" wx:key="index"></c>
+    </scroll-view>
+    <view class="{{'t-calendar__footer'}} {{safeAreaInsetBottom?'t-calendar__footer--safe-area-inset-bottom':''}}">
+        <slot name="footer"></slot>
+    </view>
+    <view class="{{'t-calendar__footer'}} {{safeAreaInsetBottom?'t-calendar__footer--safe-area-inset-bottom':''}}">
+        <a bind:_init="_tic" block="{{true}}" catch:tap="_p" color="{{color}}" customClass="t-calendar__confirm" data-t="{{ tap:{en:'onConfirm',et:'stop'} }}" disabled="{{buttonDisabled}}" nativeType="text" round="{{true}}" type="danger" wx:if="{{showConfirm}}"> {{buttonDisabled?confirmDisabledText:confirmText}} </a>
+    </view>
+</view>

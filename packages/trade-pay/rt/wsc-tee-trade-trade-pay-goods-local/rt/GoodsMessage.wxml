@@ -1,0 +1,10 @@
+<b bind:_init="_tic" bind:close="_p" bodyBackgroundColor="#fff" buttonText="我知道了" data-t="{{ close:{en:'handleClose'} }}" show="{{show}}" themeColors="{{themeColors}}" title="商品留言">
+    <scroll-view class="c3433b" scrollY="{{true}}">
+        <c bind:_init="_tic">
+            <a bind:_init="_tic" title="{{item.name}}" titleWidth="75px" wx:for="{{formatedMessage}}" wx:key="index">
+                <image catch:tap="_p" class="bd231" data-src="{{item.value}}" data-t="{{ tap:{en:'previewImg',et:'stop'} }}" lazyLoad="true" mode="aspectFit" src="{{item.preview}}" style="width: 70px; height: 70px" wx:if="{{item.type==='image'}}"></image>
+                <view class="c89585" wx:else>{{item.value||'无'}}</view>
+            </a>
+        </c>
+    </scroll-view>
+</b>

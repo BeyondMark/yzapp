@@ -1,0 +1,33 @@
+.clamp {
+  position: relative;
+  line-height: 1.5;
+  font-size: 15px;
+  color: #323233;
+}
+.clamp__content {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+.clamp__content--expanded {
+  display: block;
+}
+.clamp__fake-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+.clamp__action-area {
+  margin-top: 8px;
+  line-height: 20px;
+  font-size: 15px;
+  text-align: end;
+  color: #586b93;
+}

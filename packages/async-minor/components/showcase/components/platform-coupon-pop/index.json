@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-main/@vant/weapp/dist/dialog/index",
+    "b": "/components/account/user-authorize/index",
+    "_": "../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

@@ -1,0 +1,94 @@
+.activity-card {
+  position: relative;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 8px;
+}
+.activity-card .bargain-slogan {
+  color: #8d3737;
+  font-size: 14px;
+  margin-top: 6px;
+  font-weight: 500;
+}
+.activity-card .bargain-goods {
+  display: flex;
+  padding: 25px 15px 24px 15px;
+}
+.activity-card .bargain-goods .stamp-copywriting {
+  color: #f72a3e;
+  position: absolute;
+  display: inline-block;
+  transform: rotate(-20deg);
+  bottom: 20%;
+  right: 2%;
+  border: 2px solid;
+  padding: 0 8px 0 8px;
+  z-index: 1;
+}
+.activity-card .bargain-goods .goods-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 3px;
+}
+.activity-card .bargain-goods .goods-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10px;
+  text-align: left;
+}
+.activity-card .bargain-goods .goods-info .goods-stock {
+  padding: 2px 6px;
+  margin-top: 8px;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  background-color: #f44;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.activity-card .bargain-goods .goods-info .goods-title {
+  font-size: 14px;
+  overflow: hidden;
+  color: #333;
+  text-overflow: ellipsis;
+}
+.activity-card .bargain-goods .goods-info .goods-price {
+  font-size: 12px;
+  margin-top: 20px;
+}
+.activity-card .bargain-goods .goods-info .goods-price .price-fen,
+.activity-card .bargain-goods .goods-info .goods-price .price-lower {
+  color: #f44;
+  font-weight: 500;
+}
+.activity-card .bargain-goods .goods-info .goods-price .price-yuan {
+  color: #f44;
+  font-size: 18px;
+  font-weight: 500;
+}
+.activity-card .bargain-goods .goods-info .goods-price .origin-price {
+  color: #666;
+  margin-left: 4px;
+  text-decoration: line-through;
+}
+.activity-card.fail-status .bargain-slogan {
+  color: #ccc;
+}
+.activity-card.fail-status .bargain-goods .goods-info .goods-stock {
+  background-color: #ccc;
+}
+.activity-card.fail-status
+  .bargain-goods
+  .goods-info
+  .goods-price
+  .origin-price,
+.activity-card.fail-status .bargain-goods .goods-info .goods-price .price-fen,
+.activity-card.fail-status .bargain-goods .goods-info .goods-price .price-lower,
+.activity-card.fail-status .bargain-goods .goods-info .goods-price .price-yuan,
+.activity-card.fail-status .bargain-goods .goods-info .goods-title {
+  color: #ccc;
+}

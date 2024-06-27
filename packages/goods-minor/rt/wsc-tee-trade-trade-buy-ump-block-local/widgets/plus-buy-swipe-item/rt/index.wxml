@@ -1,0 +1,16 @@
+<b bind:_init="_tic" customClass="ac104" pid="plus-buy-swipe" style="{{themeCSS}}">
+    <view class="c455c6">
+        <image class="b798a bd231" lazyLoad="true" src="{{goodsData.picture}}"></image>
+        <image bind:tap="_p" class="c716f6 bd231" data-t="{{ tap:{en:'onClose'} }}" lazyLoad="true" src="{{iconUrl}}"></image>
+    </view>
+    <view bind:tap="_p" class="c1dee8" data-t="{{ tap:{en:'onClickCard'} }}">
+        <view class="d5d3d">{{goodsData.title}}</view>
+        <view class="c78a5e">
+            <view class="a6cbf">
+                <view class="b49f0 c89585">¥ {{exchangePrice||goodsData.price}}</view>
+                <view class="c790cc c89585">¥{{originalPrice||goodsData.originalPrice}}</view>
+            </view>
+            <a bind:_init="_tic" checkedColor="{{themeColors.general}}" class="c78a5e-right" iconSize="22px" value="{{checked}}"></a>
+        </view>
+    </view>
+</b>

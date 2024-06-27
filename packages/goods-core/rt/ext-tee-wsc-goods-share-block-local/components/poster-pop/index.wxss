@@ -1,0 +1,110 @@
+.bd231 {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.c5ebeb {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 3000;
+}
+.c0d03c {
+  position: absolute;
+  z-index: 3001;
+  top: 50%;
+  left: 50%;
+  width: 64%;
+  max-height: 76%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translate3d(-50%, -50%, 0);
+}
+.c8811d {
+  overflow: auto;
+  border-radius: 8px;
+  -webkit-overflow-scrolling: touch;
+  -webkit-mask-image: -webkit-radial-gradient(#fff, #000);
+}
+.c8811d::-webkit-scrollbar {
+  width: 2px;
+}
+.c8811d::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #ebedf0;
+}
+.ee77a {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+.ee77a image {
+  display: block;
+}
+.baee1 {
+  display: block;
+  background: #fff;
+}
+.c8de70 {
+  display: block;
+  width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  animation: skeleton-blink 1.2s ease-in-out infinite;
+}
+@keyframes skeleton-blink {
+  50% {
+    opacity: 0.6;
+  }
+}
+.c1b86f {
+  position: absolute;
+  right: 0;
+  top: -32px;
+  height: 24px;
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ea345 {
+  height: 24px;
+  width: 24px;
+  background-image: url(https://img01.yzcdn.cn/public_files/75e5c7bcee301fde8e54d5c4790568d0.png!small.png);
+  background-size: 100% 100%;
+}
+.ea345:after {
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.ea345:before {
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+.c825d4 {
+  position: absolute;
+  bottom: -38px;
+  left: 50%;
+  font-size: 16px;
+  color: #fff;
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+.c5136e {
+  bottom: -60px;
+  width: 160px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  font-size: 14px;
+  color: #fff;
+}
+@media only screen and (min-width: 375px) {
+  .c825d4 {
+    font-size: 14px;
+  }
+}

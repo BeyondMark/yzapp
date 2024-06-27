@@ -1,0 +1,12 @@
+<view class="feb89">
+    <view class="c981c1" wx:for="{{rules}}" wx:for-index="key" wx:for-item="rule" wx:key="key">
+        <view class="d5d3d"> {{rule.title}} </view>
+        <view class="text"> {{rule.text}} </view>
+    </view>
+    <view class="c981c1 c84d0e">
+        <view class="d5d3d"> 拼团流程 </view>
+        <view class="c5456f">
+            <image class="b798a bd231" lazyLoad="true" mode="widthFix" src="https://img01.yzcdn.cn/upload_files/2023/11/27/FuKpAedkQxgR6sn9wtwT_heWkvpo.png"></image>
+        </view>
+    </view>
+</view>

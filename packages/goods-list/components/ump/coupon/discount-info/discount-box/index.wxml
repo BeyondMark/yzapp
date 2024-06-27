@@ -1,0 +1,14 @@
+<view class="c37ff7">
+    <view class="c560c7">
+        <view class="e3163">
+            <slot name="A1"></slot>
+        </view>
+        <a autoFormatValue="{{autoFormatValue}}" autoWidth="{{autoWidth}}" class="f5e5d" disabled="{{disabled}}" maxWidth="{{maxWidth}}" prefix="{{prefix}}" themeClass="{{themeClass}}" unavailable="{{unavailable}}" unit="{{unit}}" value="{{value}}"></a>
+    </view>
+    <view class="c560c7">
+        <view class="e3163">
+            <slot name="A2"></slot>
+        </view>
+        <b class="f5e5d" description="{{description}}" disabled="{{disabled}}" isAuthFontSize="{{true}}" unavailable="{{unavailable}}"></b>
+    </view>
+</view>

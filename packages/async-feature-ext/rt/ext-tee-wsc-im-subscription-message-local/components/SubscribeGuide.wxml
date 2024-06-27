@@ -1,0 +1,6 @@
+<view style="position:absolute; z-index:{{zIndex}}">
+    <a bind:_init="_tic" mask="{{true}}" show="{{show}}" zIndex="1"></a>
+    <view bind:tap="_p" class="subscribe-guide-wrapper" data-t="{{ tap:{en:'handleClose'} }}" style="top:{{imgTop}}" wx:if="{{show}}">
+        <image class="subscribe-guide-wrapper-image tee-image" lazyLoad="true" src="https://img01.yzcdn.cn/upload_files/2020/03/25/Fq24gCcTJhE3bpk9giOf7LPqC-7H.gif"></image>
+    </view>
+</view>

@@ -1,0 +1,22 @@
+<a bind:_init="_tic" bind:after-enter="_p" bind:after-leave="_p" bind:before-enter="_p" bind:click-overlay="_p" closeOnClickOverlay="{{!submitting}}" customClass="yz-external-popup" customStyle="{{popupCustomStyle}}" data-t="{{ clickOverlay:{en:'onRefuse'},beforeEnter:{en:'onBeforeEnter'},afterEnter:{en:'onEnter'},afterLeave:{en:'onLeave'} }}" position="bottom" round="{{true}}" safeAreaInsetBottom="{{true}}" show="{{visible}}" zIndex="{{zIndex}}">
+    <view catch:tap="_p" class="yz-external" data-t="{{ tap:{en:'true',et:'stop'} }}">
+        <view class="pop-head">
+            <image class="pop-logo tee-image" lazyLoad="true" mode="aspectFill" src="{{logo}}" wx:if="{{logo}}"></image>
+            <view class="pop-eyebrow">
+                <view class="pop-eyebrow__carve"></view>
+            </view>
+        </view>
+        <view class="pop-body" style="padding-bottom:{{paddingBottom+'px'}}">
+            <view class="pop-mobile">{{mobile}}</view>
+            <view class="pop-protocol">
+                <c bind:_init="_tic" bind:check="_p" bind:item-tap="_p" checked="{{protocolChecked}}" data-t="{{ check:{en:'onProtocolCheck'},itemTap:{en:'onProtocolTap'} }}" protocols="{{protocols}}" showTip="{{protocolTip}}"></c>
+            </view>
+            <view class="pop-action">
+                <b bind:_init="_tic" bind:agreeprivacyauthorization="_p" bind:tap="_p" block="{{true}}" buttonId="{{agreeBtnId}}" color="{{theme}}" customClass="pop-action__btn pop-action__btn--primary" data-t="{{ tap:{en:'onAgree'},agreeprivacyauthorization:{en:'onPrivacyAgree'} }}" disabled="{{!ready}}" loading="{{submitting}}" openType="agreePrivacyAuthorization" type="primary">          立即登录
+        </b>
+                <b bind:_init="_tic" bind:tap="_p" block="{{true}}" buttonId="{{refuseBtnId}}" color="{{theme}}" customClass="pop-action__btn" data-t="{{ tap:{en:'onRefuse'} }}" disabled="{{submitting}}" plain="{{true}}">          关闭
+        </b>
+            </view>
+        </view>
+    </view>
+</a>

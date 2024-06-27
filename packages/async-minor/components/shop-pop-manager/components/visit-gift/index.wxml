@@ -1,0 +1,7 @@
+<view class="visit-gift-container">
+    <c authTypeList="{{['mobile']}}" bind:next="handleLogin" wx:if="{{showCouponIcon}}">
+        <view class="icon__send-coupon" style="{{bottom?'bottom:'+bottom:''}}"></view>
+    </c>
+    <a bind:close="closeVisitGift" bind:toggle-subscribe-mask="toggleSubscribeMask" bind:toggleRules="showRule" detail="{{detail}}" show="{{showGiftPop}}" source="{{source}}"></a>
+    <b bind:toggleRules="showRule" shopName="{{detail.shopName}}" show="{{ruleVisible}}" typeRule="{{detail.typeRule}}"></b>
+</view>

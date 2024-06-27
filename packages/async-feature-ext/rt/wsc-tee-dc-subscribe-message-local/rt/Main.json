@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../ext-tee-wsc-im-subscription-message-local/components/SubscribeGuide",
+    "_": "../../../../../components/_/index"
+  }
+}

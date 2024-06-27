@@ -1,0 +1,18 @@
+<a bind:close="SET_POP_VISIBLE" customClass="pop" show="{{showPop}}" wx:if="{{joinPopInfo}}">
+    <view class="pop-header">
+        <image class="header-img {{joinPopInfo.showFail?'header-img__fail':''}}" src="{{joinPopInfo.showFail?failPopIcon:successPopIcon}}"></image>
+        <b bind:tap="SET_POP_VISIBLE" class="header-close" name="cross"></b>
+        <view class="header-title">
+            <block wx:if="{{joinPopInfo.preTitle}}">{{joinPopInfo.preTitle}}<text class="strong">{{ownerNickName}}</text>
+            </block>{{joinPopInfo.headerTitle}}</view>
+    </view>
+    <view class="pop-content">
+        <view class="activity-title" wx:if="{{joinPopInfo.title}}">
+            <block wx:if="{{joinPopInfo.showNumTitle}}">仅差<text class="strong">{{remainNum}}</text>
+            </block>{{joinPopInfo.title}}</view>
+        <view class="activity-money" wx:if="{{joinPopInfo.money}}">
+            <text class="strong">{{joinPopInfo.money}}</text>元</view>
+        <button bind:tap="handleClick" class="btn btn__red pop-btn {{joinPopInfo.btnType==='SHARE'?'btn__wechat':''}}" openType="{{joinPopInfo.btnType==='SHARE'?'share':''}}">{{joinPopInfo.btnText}}</button>
+        <view bind:tap="SET_SHARE_VISIBLE" class="invite" wx:if="{{joinPopInfo.btnType==='LIMIT'}}">喊好友一起参与 ></view>
+    </view>
+</a>

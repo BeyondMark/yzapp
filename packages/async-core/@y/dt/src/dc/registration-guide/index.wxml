@@ -1,0 +1,57 @@
+<view class="dc-registration-guide" wx:if="{{show}}">
+    <view class="{{'registration-guide-card'}} {{'halo-background'}} {{cardTheme}}" style="{{backgroundImage}}">
+        <view class="card-header">
+            <view class="title-area">
+                <span bind:_init="_tic" class="title-main">{{title}}</span>
+                <p bind:_init="_tic" class="subtitle" wx:if="{{layoutConfig.showSubtitle}}"> {{subtitle.text}} <span bind:_init="_tic" class="value" style="font-size:{{subtitle.valueFontSize}}" wx:if="{{subtitle.value}}">￥{{subtitle.value}}</span>
+                </p>
+            </view>
+            <view wx:if="{{showAuth&&isFreeLevelType}}">
+                <b authTypeList="{{['mobile']}}" bind:_init="_tic" bind:fail="_p" bind:next="_p" data-t="{{ next:{en:'handleLogin'},fail:{en:'handleAuthFail'} }}" kdtId="{{kdtId}}" type="separate">
+                    <a bind:_init="_tic" class="join-us" href="{{linkUrl}}">立即入会</a>
+                </b>
+            </view>
+            <a bind:_init="_tic" bind:tap="_p" class="join-us" data-t="{{ tap:{en:'handleClick'} }}" href="{{linkUrl}}" wx:else>立即入会</a>
+        </view>
+        <view bind:tap="_p" class="benefit-area" data-t="{{ tap:{en:'handleBenefitClick'} }}" wx:if="{{layoutConfig.showIcon&&benefitList.length>0}}">
+            <ul bind:_init="_tic" class="{{'benefit-list'}} {{benefitList.length>=3?'more':''}}">
+                <li bind:_init="_tic" class="benefit-item" wx:for="{{benefitList}}" wx:key="showName + index">
+                    <image class="benefit-img tee-image" lazyLoad="true" src="{{item.icon}}"></image>
+                    <span bind:_init="_tic" class="benefit-name">{{item.showName}}</span>
+                </li>
+            </ul>
+        </view>
+        <view bind:tap="_p" class="ticket-area" data-t="{{ tap:{en:'handleBenefitClick'} }}" wx:if="{{layoutConfig.showBenefitInfo&&(presentInfo.title||coupons.length>0||pointsInfo.points)}}">
+            <view class="{{'ticket-mask'}} {{maskClass}}" hidden="{{!maskClass}}"></view>
+            <scroll-view bind:scroll="_p" bind:scrolltolower="_p" class="{{'coupon-list'}} {{twoLineCouponStyle}}" data-t="{{ scroll:{en:'handleScroll'},scrolltolower:{en:'handleScrollRight'} }}" enableFlex="true" hidden="{{!(coupons.length>0||isOneLine)}}" scrollX="{{true}}">
+                <view class="list-content">
+                    <view class="present" wx:if="{{isOneLine&&presentInfo.title}}">
+                        <image class="present-img tee-image" lazyLoad="true" src="{{presentInfo.url}}"></image>
+                        <view class="present-info">
+                            <view class="name">{{presentInfo.title}}</view>
+                            <view class="tips">{{presentInfo.tips}}</view>
+                        </view>
+                    </view>
+                    <c bind:_init="_tic" class="{{'registration-guide-coupon'}} {{couponStyleType}}" coupon="{{item}}" styleType="{{couponStyleType}}" wx:for="{{coupons}}" wx:key="content + index"></c>
+                    <view class="point" wx:if="{{isOneLine&&pointsInfo.points}}">
+                        <view class="count">{{pointsInfo.points}}</view>
+                        <view class="tips">送{{pointsInfo.name}}</view>
+                    </view>
+                </view>
+            </scroll-view>
+            <view class="second-line" wx:if="{{!isOneLine&&(presentInfo.title||pointsInfo.points)}}">
+                <view class="present second-line-item" wx:if="{{presentInfo.title}}">
+                    <image class="present-img tee-image" lazyLoad="true" src="{{presentInfo.url}}"></image>
+                    <view class="present-info">
+                        <view class="name">{{presentInfo.title}}</view>
+                        <view class="tips">{{presentInfo.tips}}</view>
+                    </view>
+                </view>
+                <view class="point second-line-item" wx:if="{{pointsInfo.points}}">
+                    <view class="count">{{pointsInfo.points}}</view>
+                    <view class="tips">送{{pointsInfo.name}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

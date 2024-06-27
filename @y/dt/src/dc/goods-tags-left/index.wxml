@@ -1,0 +1,2 @@
+<b _opt="{{_opt}}" appId="{{appId}}" bind:_init="_tic" bind:button-click="_p" bind:item-click="_p" data-t="{{ buttonClick:{en:'handleBuyClick'},itemClick:{en:'handleItemClick'} }}" kdtId="{{kdtId}}" offlineId="{{offlineId}}" pageScrollKey="{{pageScrollKey}}" tabPage="{{tabPage}}" wx:if="{{slideType==='tag_slide'}}"></b>
+<a _opt="{{_opt}}" appId="{{appId}}" bind:_init="_tic" bind:button-click="_p" bind:item-click="_p" data-t="{{ buttonClick:{en:'handleBuyClick'},itemClick:{en:'handleItemClick'} }}" kdtId="{{kdtId}}" offlineId="{{offlineId}}" wx:else></a>

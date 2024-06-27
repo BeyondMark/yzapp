@@ -1,0 +1,1 @@
+<view class="custom-class {{name}}"></view>

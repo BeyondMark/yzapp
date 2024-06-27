@@ -1,0 +1,33 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.long-cell {
+  padding: var(--theme-page-cell-padding-top, 10px)
+    var(--theme-page-cell-padding-right, 12px)
+    var(--theme-page-cell-padding-bottom, 10px)
+    var(--theme-page-cell-padding-left, 12px) !important;
+}
+.a095e {
+  height: 44px;
+  text-align: right;
+  line-height: 44px;
+  padding: 0 var(--theme-page-cell-padding-right, 12px) 0
+    var(--theme-page-cell-padding-left, 12px);
+  background-color: #fff;
+  font-size: 14px;
+}
+.c0d3b4 {
+  display: flex;
+  justify-content: space-between;
+}
+.c96c10 {
+  color: #323233;
+}
+.c95876 {
+  font-family: Avenir;
+  font-weight: var(--theme-common-price-font-weight, 800);
+}
+.c3b8df {
+  color: #323233 !important;
+}

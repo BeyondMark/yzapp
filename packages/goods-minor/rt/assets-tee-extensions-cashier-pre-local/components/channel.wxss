@@ -1,0 +1,64 @@
+.t-text {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.cashier-pre__flex {
+  display: flex;
+}
+.cashier-pre__flex--inline {
+  display: inline-flex;
+}
+.cashier-pre__flex--column {
+  flex-direction: column;
+}
+.cashier-pre__flex--justify-center {
+  justify-content: center;
+}
+.cashier-pre__flex--align-center {
+  align-items: center;
+}
+.cashier-pre__flex--align-end {
+  align-items: flex-end;
+}
+.cashier-pre__flex--center {
+  justify-content: center;
+  align-items: center;
+}
+.cashier-pre__flex--justify-end {
+  justify-content: flex-end;
+}
+.cashier-pre__flex--sb {
+  justify-content: space-between;
+}
+.cashier-pre__flex--wrap {
+  flex-wrap: wrap;
+}
+.cashier-pre__channel {
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: #323233;
+}
+.cashier-pre__channel--disabled {
+  color: #c8c9cc;
+}
+.cashier-pre__label {
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 6px;
+  padding-left: 28px;
+}
+.cashier-pre__label--normal {
+  counter-reset: #646566;
+}
+.cashier-pre__label--disabled {
+  color: #c8c9cc;
+}
+.cashier-pre__instalment {
+  padding-left: 44px !important;
+}
+.cashier-pre__active-sign {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}

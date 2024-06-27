@@ -1,0 +1,5 @@
+<view>
+    <a bind:_init="_tic" border="{{false}}" customClass="d5a4c" title="{{item.name}}" valueClass="dc895" wx:for="{{info.extraFees}}" wx:key="name">
+        <view>￥{{item.realPay}}</view>
+    </a>
+</view>

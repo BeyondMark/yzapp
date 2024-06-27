@@ -1,0 +1,15 @@
+<view wx:if="{{showGoodsBlock}}">
+    <view class="c93440">
+        <block wx:if="{{goods.list}}">
+            <d bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b36-7'}}"></d>
+        </block>
+        <block wx:if="{{showStoreGoodsList}}">
+            <c bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b36-7'}}"></c>
+        </block>
+        <a bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b36-7'}}"></a>
+        <block wx:if="{{isWscShop}}">
+            <b bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b36-7'}}"></b>
+        </block>
+        <e bind:_init="_tic" rewardModel="{{rewardModel}}"></e>
+    </view>
+</view>

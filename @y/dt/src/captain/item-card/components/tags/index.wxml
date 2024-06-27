@@ -1,0 +1,6 @@
+<view class="{{'goods-tags'}} {{'goods-tags-'+opt.textAlign}}" style="{{style}}">
+    <view class="{{'item'}} {{item.color?'default':item.type}}" style="{{'border-color:'+item.color+';'+item.warpStyle}}" wx:for="{{opt.list}}" wx:key="index">
+        <view class="sign" style="{{'color:'+item.color}}" wx:if="{{item.preLabel}}"> {{item.preLabel}} </view>
+        <view class="padding" style="{{'color:'+item.color+';'+item.labelStyle}}"> {{item.label}} </view>
+    </view>
+</view>

@@ -1,0 +1,16 @@
+{
+  "miniprogramRoot": "",
+  "__compileDebugInfo__": {
+    "from": "ci",
+    "useNewCompileModule": true,
+    "devtoolsVersion": "0",
+    "compileSetting": {
+      "es6": false,
+      "es7": false,
+      "minify": false,
+      "codeProtect": false,
+      "autoPrefixWXSS": false
+    },
+    "ciVersion": "1.8.35"
+  }
+}

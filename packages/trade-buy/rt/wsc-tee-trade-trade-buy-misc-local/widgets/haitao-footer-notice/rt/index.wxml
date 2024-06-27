@@ -1,0 +1,27 @@
+<view wx:if="{{tradeTag.hasOverseaGoods}}">
+    <view class="c87a1">    提交订单则表示你已同意
+    <view bind:tap="_p" class="c1cb25" data-t="{{ tap:{en:'onClickConsumersNotice'} }}">《消费者告知书》</view>及<view bind:tap="_p" class="c1cb25" data-t="{{ tap:{en:'onClickImportNotice'} }}">《进口个人委托申报委托函》</view>
+    </view>
+    <b bind:_init="_tic" show="{{showNotice}}" showConfirmButton="{{false}}" title="{{dialogMode==='consumerNotice'?'《消费者告知书》':'《进口个人委托申报委托函》'}}" useSlot="{{true}}">
+        <view class="c81682">
+            <view class="b3de1 c1bda8" wx:if="{{dialogMode==='consumerNotice'}}">
+                <view class="c1bda8">你好！为帮助你更好地选购境外商品，请你在购物前务必认真、详细地阅读并理解本《消费者告知书》的全部内容，并对自身风险承担做出客观判断。
+          <view class="c1cb25">请你在同意本告知书内容后再下单购买：</view>
+                </view>
+                <view class="c1bda8">1、
+          你知晓你所购买的商品符合原产地有关质量、安全、卫生、环保、标识等标准或技术规范要求，但可能与我国标准存在差异，你需自行承担相关风险。</view>
+                <view class="c1bda8">2、
+          你知晓您所购买的商品直接购自境外，可能无中文标签，您可以通过产品上贴二维码扫码、商品详情页查看相关商品标签中文翻译或者联系店铺客服询问。</view>
+                <view class="c1bda8">3、
+          你知晓根据相关法律法规的规定，你所购买的商品仅限于个人自用，不得进行二次销售。</view>
+                <view class="c1bda8">4、
+          你知晓跨境电商零售进口商品按个人自用进境物品监管，不执行有关商品首次进口许可批件、注册或备案要求。</view>
+            </view>
+            <view class="c1bda8" wx:if="{{dialogMode==='importNotice'}}">本人承诺所购买商品系个人合理自用，针对保税区发货的各类商品，现委托商家代理申报、代缴税款等通关事宜，本人保证将遵守《海关法》等国家相关法律法规的规定，保证所提供的身份信息和收货信息真实完整，无侵犯他人权益之行为。以上委托系本人真实意愿表示，本人愿意接受海关、检验检疫机构及其他监管部门的监管，并承担相应的法律责任。</view>
+        </view>
+        <view class="c988e5">
+            <a bind:_init="_tic" bind:tap="_p" color="{{themeColors.general}}" customClass="c267ef" data-t="{{ tap:{en:'onConfirmConsumersNotice'} }}" round="{{true}}">        我知道了
+      </a>
+        </view>
+    </b>
+</view>

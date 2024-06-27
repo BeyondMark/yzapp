@@ -1,0 +1,42 @@
+.popup-content {
+  text-align: center;
+}
+.popup-container {
+  width: 312px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+.popup-container__title {
+  color: #323233;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 8px;
+}
+.popup-container__msg {
+  color: #969799;
+  font-size: 14px;
+  line-height: 20px;
+}
+.popup-button {
+  display: inline-block;
+  vertical-align: middle;
+}
+.popup-button .popup-button-main {
+  color: #ee0a24;
+  width: 156px;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-size: var(--button-normal-font-size, 14px);
+  background: var(--button-default-background-color, #fff);
+  border: var(--button-border-width, 1px) solid
+    var(--button-default-border-color, #ebedf0);
+  vertical-align: middle;
+  height: var(--button-default-height, 44px);
+  border-radius: var(--button-border-radius, 2px);
+}
+.popup-button .popup-button-cancel {
+  width: 156px;
+}

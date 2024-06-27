@@ -1,0 +1,19 @@
+<view bind:tap="onClick" class="custom-class {{utils.bem( 'cell',[ size,{center:center,required:required,borderless:!border,clickable:isLink||clickable} ] )}}" hoverClass="c898ed hover-class" hoverStayTime="70" style="{{customStyle}}">
+    <a class="c7e922" customClass="c63c79" name="{{icon}}" wx:if="{{icon}}"></a>
+    <slot name="icon" wx:else></slot>
+    <view class="b4774 title-class" style="{{computed.titleStyle( {titleWidth:titleWidth,titleStyle:titleStyle} )}}">
+        <block wx:if="{{title}}">{{title}}</block>
+        <slot name="title" wx:else></slot>
+        <view class="ffe13 label-class" wx:if="{{label||useLabelSlot}}">
+            <slot name="label" wx:if="{{useLabelSlot}}"></slot>
+            <block wx:elif="{{label}}">{{label}}</block>
+        </view>
+    </view>
+    <view class="e2b4d value-class">
+        <block wx:if="{{value||value===0}}">{{value}}</block>
+        <slot wx:else></slot>
+    </view>
+    <a class="ad5eb right-icon-class" customClass="aeaa7" name="{{arrowDirection?'arrow'+'-'+arrowDirection:'arrow'}}" wx:if="{{isLink}}"></a>
+    <slot name="right-icon" wx:else></slot>
+    <slot name="extra"></slot>
+</view>

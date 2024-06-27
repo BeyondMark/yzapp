@@ -1,0 +1,17 @@
+<view class="winner-list-wrap {{isCollapse?'collapse':''}}" wx:if="{{winners.length}}">
+    <view class="winner-list">
+        <view class="winner-list__record" wx:for="{{winners}}" wx:key="index">
+            <view>
+                <image class="record-avatar" src="{{item.avatar||'https://img01.yzcdn.cn/upload_files/2021/12/20/FvPfi2qEmvSMeNhWnqUlLB4ikj5C.png'}}"></image>
+                <view class="record-info">
+                    <view class="record-user">{{item.userName||'匿名用户'}}</view>
+                    <view class="record-time">{{item.createAt}}</view>
+                </view>
+            </view>
+            <text class="record-award" style="color: {{themeColor}}">获得{{item.awardName}}</text>
+        </view>
+    </view>
+</view>
+<view class="empty-text" wx:else>暂无中奖记录</view>
+<view bind:tap="toggleCollapseWinner" class="winner-collapse" wx:if="{{winners.length>3}}">{{isCollapse?'查看全部记录':'收起'}}<a class="winner-collapse__icon" name="{{isCollapse?'arrow-down':'arrow-up'}} "></a>
+</view>

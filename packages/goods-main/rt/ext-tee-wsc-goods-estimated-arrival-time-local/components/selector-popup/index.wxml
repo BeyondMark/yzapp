@@ -1,0 +1,9 @@
+<a bind:_init="_tic" bind:after-enter="_p" bind:close="_p" customClass="c4f1d6" customStyle="height: 80%; padding-bottom: 12px;" data-t="{{ close:{en:'onClose'},afterEnter:{en:'onShow'} }}" duration="{{duration}}" position="bottom" round="{{true}}" show="{{showPopup}}">
+    <view class="c116d2"> {{title}}<c bind:_init="_tic" bind:tap="_p" class="b76f9" data-t="{{ tap:{en:'onClose'} }}" name="cross"></c>
+    </view>
+    <d areaList="{{areaList}}" bind:_init="_tic" bind:selected="_p" data-ref="regionSelector" data-t="{{ selected:{en:'onRegionSelected'} }}" wx:if="{{type===SELECTOR_TYPE.region}}"></d>
+    <e addressList="{{userAddressList}}" bind:_init="_tic" bind:selected="_p" data-t="{{ selected:{en:'onAddressSelected'} }}" selectedId="{{selectedAddressId}}" themeTag="{{themeTag}}" wx:elif="{{type===SELECTOR_TYPE.address}}"></e>
+    <view class="c11adc">
+        <b bind:_init="_tic" bind:tap="_p" block="{{true}}" customClass="c110db" data-t="{{ tap:{en:'onButtonClick'} }}" wx:if="{{type===SELECTOR_TYPE.address}}">选择其他地区</b>
+    </view>
+</a>

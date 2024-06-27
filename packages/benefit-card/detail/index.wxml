@@ -1,0 +1,68 @@
+<import src="./custom-tpl.wxml"></import>
+<page-container copyrightBgColor="#fff" fixedBottom="{{true}}" pageBgColor="#fff" wx:if="{{!loading}}">
+    <block wx:if="{{!loading&&hasFetchedChainShopInfo}}">
+        <view class="detail">
+            <navigation-bar statusH="{{statusH}}"></navigation-bar>
+            <block wx:for="{{design}}" wx:key="type">
+                <block wx:if="{{item.type==='card-block'}}">
+                    <view class="banner-wrapper" style="padding-top: {{statusH}}px">
+                        <view class="card-bg">
+                            <view class="in" style="background-image: {{cardStyle.imageUrl}}"></view>
+                        </view>
+                        <view class="card-container" style="width: {{cardWrapperStyle.width}};height: {{cardWrapperStyle.height}};">
+                            <card bindrenew="onRenew" cardInfo="{{cardInfo}}" cardNo="{{cardNo}}" cardType="{{cardType}}" hasCard="{{hasCard}}" height="{{cardWrapperStyle.height}}" imageUrl="{{cardStyle.imageUrl}}" isDisplay="{{isDisplay}}" isEnabled="{{isEnabled}}" isExpired="{{isExpired}}" isRenewable="{{isRenewable}}" isSoldOut="{{isSoldOut}}" themeColors="{{themeColors}}" width="{{cardWrapperStyle.width}}"></card>
+                        </view>
+                    </view>
+                    <view class="c-i-c">
+                        <view class="c-name">{{cardName}}</view>
+                        <view class="e-icon" wx:if="{{subType===exType}}">
+                            <view class="icon-inner" style="background: {{themeColors.general}}">体验卡</view>
+                        </view>
+                        <view class="c-p-info {{price||topCardExpire?'block-comm':''}}" wx:if="{{!hasCard}}">
+                            <view class="info-price" wx:if="{{price}}">{{price}}</view>
+                            <view class="in-expi" wx:if="{{topCardExpire}}">
+                                <view wx:if="{{topCardExpire.type===1}}">/</view>
+                                <view class="in-t">{{topCardExpire.val}}</view>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+                <exclusive-container alias="{{alias}}" benefitBag="{{benefitBag}}" cardInfo="{{cardInfo}}" cardIsExpired="{{isExpired}}" hasCard="{{hasCard}}" subType="{{subType}}" themeGeneral="{{themeColors.general}}" wx:elif="{{item.type==='simple-benefits-list-block'}}"></exclusive-container>
+                <block wx:elif="{{item.type==='addition-action-block'}}">
+                    <addition-action activated="{{activated}}" activationCondition="{{activationCondition}}" alias="{{alias}}" bindbtnaction="onBtnAction" cardGoods="{{cardGoods}}" cardNo="{{cardNo}}" cardSyncInfo="{{cardSyncInfo}}" cardType="{{cardType}}" hasCard="{{hasCard}}" hasMobile="{{hasMobile}}" hasSyncToWeixin="{{syncWeixin}}" isDisplay="{{isDisplay}}" isEnabled="{{isEnabled}}" isExpired="{{isExpired}}" isRenewable="{{isRenewable}}" isSoldOut="{{isSoldOut}}" price="{{price}}" wx:if="{{!loading&&!isExpired&&isEnabled&&hasCard&&isCurrentShopAvailable}}"></addition-action>
+                </block>
+                <van-cell-group border="{{false}}" customClass="info-content" wx:elif="{{item.type==='card-cell-group-block'}}">
+                    <van-cell icon="shop-o" labelClass="cell-label-item" title="适用店铺" value="{{availableTips}}" valueClass="cell-value-available-shop" wx:if="{{isChainStore&&!isCurrentShopAvailable}}"></van-cell>
+                    <van-cell bind:click="takeCall" icon="phone-o" labelClass="cell-label-item" title="客服电话" value="{{servicePhone}}" wx:if="{{servicePhone}}"></van-cell>
+                </van-cell-group>
+                <recommend-goods cardType="{{cardType}}" spmId="{{spmId}}" wx:elif="{{item.type==='recommend-goods-block'}}"></recommend-goods>
+                <block wx:elif="{{item.type==='action-btn-block'}}">
+                    <action-btn activated="{{activated}}" activationCondition="{{activationCondition}}" alias="{{alias}}" bindbtnaction="onBtnAction" cardGoods="{{cardGoods}}" cardInfo="{{cardInfo}}" cardNo="{{cardNo}}" cardSyncInfo="{{cardSyncInfo}}" cardType="{{cardType}}" designChildren="{{item.children}}" hasCard="{{hasCard}}" hasMobile="{{hasMobile}}" hasSyncToWeixin="{{syncWeixin}}" isCurrentShopAvailable="{{isCurrentShopAvailable}}" isDisplay="{{isDisplay}}" isEnabled="{{isEnabled}}" isExpired="{{isExpired}}" isRenewable="{{isRenewable}}" isSoldOut="{{isSoldOut}}" isIphone="{{isIphoneX}}" price="{{price}}" themeColors="{{themeColors}}" wx:if="{{!loading&&isEnabled&&(!isExpired||isNeedWillRenew&&isRenewable)}}"></action-btn>
+                </block>
+                <template is="{{item.type}}" data wx:elif="{{item.custom}}"></template>
+            </block>
+        </view>
+        <view bindtap="removeCard" class="remove-btn" style="color: {{themeColors.general}}" wx:if="{{hasCard&&subType!==1&&cardType!==8}}">删除权益卡</view>
+    </block>
+    <salesman-cube goodsInfo="{{salesmanCubeGoodsInfo}}" needBindRelation="{{false}}" pageQuery="{{alias:alias}}" scenes="benefit_card" wx:if="{{isShareable}}"></salesman-cube>
+</page-container>
+<view class="loading-container" wx:else>
+    <van-loading class="detail-loading" color="white" type="spinner"></van-loading>
+</view>
+<van-toast id="van-toast"></van-toast>
+<van-dialog customStyle="background-color: transparent;" show="{{presentDialogVisible}}" showConfirmButton="{{false}}" useSlot="{{true}}">
+    <view class="present-dialog">
+        <view class="content">
+            <image class="present-pic" src="https://img01.yzcdn.cn/public_files/1ad6b10c7e09d746d449445c8f11e4f5.png"></image>
+            <view class="present-descp">恭喜获得一份赠品</view>
+        </view>
+        <view class="dialog-button">
+            <button bindtap="handleTakePresent" class="benefit-btn" style="background-color: {{themeColors.general}}">立即领取</button>
+        </view>
+    </view>
+    <view class="operator-bar">
+        <van-icon bindtap="closePresentDialog" class="dialog-close" customStyle="font-size: 64rpx; color: #969799;" name="close"></van-icon>
+    </view>
+</van-dialog>
+<van-dialog id="van-dialog"></van-dialog>
+<select-shop bindclose="handleOnCloseSelectShop" bindrefresh="handleRefreshShopList" bindselect="handleOnSelectShop" shopList="{{shopList}}" value="{{actionSheetVisible}}"></select-shop>

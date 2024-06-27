@@ -1,0 +1,117 @@
+.bg-mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.level-wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 17px 16px 16px 20px;
+  height: 180px;
+  color: #fff;
+  box-sizing: border-box;
+  border-radius: 12px;
+  cursor: pointer;
+  background-size: cover;
+  margin-right: 16px;
+}
+.level-top,
+.level-wrap {
+  justify-content: space-between;
+  position: relative;
+}
+.level-top {
+  font-size: 18px;
+  font-weight: 700;
+  flex: 1;
+  height: 26px;
+}
+.level-top .trial {
+  display: inline-block;
+  background: url(//img01.yzcdn.cn/public_files/4c280810058fe0a1826ba4906d8cc370.png)
+    no-repeat 50% / contain;
+  font-size: 11px;
+  color: #fff;
+  text-align: center;
+  line-height: 12px;
+  padding: 3px 4px;
+  margin-left: 4px;
+  border-radius: 3px;
+}
+.level-top .level-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #323233;
+  font-weight: 700;
+  background-color: #fff;
+  flex: 1;
+  height: 30px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 30px;
+  border-radius: 999px;
+}
+.level-top .level-btn:after {
+  border: none;
+}
+.level-top .level-btn .van-button--defaul {
+  border: 0;
+}
+.level-top .level-btn .van-button__text {
+  color: #323233;
+  font-size: 14px;
+  font-weight: 450;
+}
+.level-top .level-btn-default {
+  mix-blend-mode: screen;
+}
+.level-middle {
+  height: 50px;
+  margin-bottom: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  z-index: 1;
+}
+.level-middle .level-gift {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+.level-middle .level-gift .level-num {
+  font-size: 26px;
+  padding-right: 4px;
+}
+.level-middle .level-gift span {
+  font-size: 12px;
+  margin-top: -10px;
+}
+.vaild-time {
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: 400;
+}
+.level-bottom {
+  font-size: 12px;
+  position: relative;
+  margin: 0 0 8px 0;
+}
+.level-bottom .card-level-container {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.level-bottom .card-level-container .card-level-container-logo {
+  width: 80px;
+  height: 80px;
+}
+.level-bottom .level-upgrade {
+  position: absolute;
+  right: 0;
+  top: 0;
+}

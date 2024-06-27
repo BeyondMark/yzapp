@@ -1,0 +1,3 @@
+<view wx:if="{{showPrice}}">
+    <a bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b36-8'}}"></a>
+</view>

@@ -1,0 +1,41 @@
+.popup-benefit-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 238px;
+  margin: 0 auto;
+}
+.benefit-item {
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.benefit-item__icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+}
+.benefit-item__name {
+  margin-top: 4px;
+  font-size: 11px;
+  color: #323233;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.benefit-item__num {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background: rgba(17, 18, 41, 0.8);
+  box-shadow: inset 0 0 8px 0 hsla(0, 0%, 100%, 0.3);
+  color: #f9e5d0;
+  font-weight: 600;
+  line-height: 40px;
+  font-size: 20px;
+}
+.benefit-item__num .unit {
+  font-size: 10px;
+  font-weight: 500;
+}

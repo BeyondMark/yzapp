@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "b": "/@y/ppt/lib/user-authorize/index",
+    "c": "./components/coupon/index",
+    "_": "../../../../../../../components/_/index"
+  }
+}

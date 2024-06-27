@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-feature-ext/rt/ext-tee-wsc-im-subscription-message-local/components/SubscribeGuide",
+    "b": "/@y-open/vt/dist/cell/index",
+    "c": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "d": "./../oldcomponents/TopTag",
+    "e": "./../oldcomponents/Content",
+    "f": "/packages/goods-core/@y/gc/components/promotion-block/promotion-pop/index",
+    "_": "../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_", "c": "_", "f": "_" }
+}

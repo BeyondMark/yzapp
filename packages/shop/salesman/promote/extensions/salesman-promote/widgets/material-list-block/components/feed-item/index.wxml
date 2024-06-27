@@ -1,0 +1,12 @@
+<view class="feed-item custom-class">
+    <view class="feed-item__content feed-item__content--no-img">
+        <c content="{{text}}" customClass="feed-item__text" expandText="全文" wx:if="{{text}}"></c>
+        <view class="feed-item__video" wx:if="{{video.video.video_id}}">
+            <a bind:get-src="handleGetSrc" componentData="{{video}}" kdtId="{{videoKdtId}}"></a>
+        </view>
+        <b bind:load="_handleImageLoad" imgList="{{imageList}}" wx:if="{{imageList.length>0}}"></b>
+        <slot name="after-media"></slot>
+        <slot name="before-bottom"></slot>
+        <slot name="bottom"></slot>
+    </view>
+</view>

@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./CouponList",
+    "b": "/@y-open/vt/dist/popup/index.weapp",
+    "c": "./../../ump/visit-gift/visit-gift/components/error-info/index",
+    "_": "../../../../../../components/_/index"
+  }
+}

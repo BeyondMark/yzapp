@@ -1,0 +1,27 @@
+<a class="coupon-item" customClass="coupon-item__inner">
+    <view class="coupon-item__head">
+        <view class="coupon-item__banner">
+            <a bg="main-bg" borderAfterStyle="height: 80px;" class="banner-theme" customClass="custom-height" opacity="0.04">
+                <image class="banner-image" src="https://img01.yzcdn.cn/upload_files/2020/06/15/FhVbKAkgOCKklSEBZTgfdq75CmtY.png"></image>
+            </a>
+            <view class="coupon-item__head-wrap">
+                <view class="coupon-item__price-top">
+                    <a class="coupon-item__price-value {{'price-length-'+discountInfo.length}}" color="general" innerStyle="display: inline-block; font-weight: bold;">{{discountInfo}}</a>
+                    <a class="coupon-item__price-value-unit" color="general" innerStyle="display: inline-block;" wx:if="{{unit}}">{{unit}}{{title}}</a>
+                </view>
+                <view class="coupon-item__condition" wx:if="{{condition}}">{{condition}}</view>
+                <view class="coupon-item__condition coupon-item__condition-1" wx:if="{{timeLimit}}">{{timeLimit}}</view>
+            </view>
+        </view>
+    </view>
+    <a bg="main-bg" class="coupon-item__action" customClass="coupon-item__inner">
+        <view bind:tap="handleGetCoupon" class="coupon-item__action-content">
+            <view class="coupon-item__btn">立即发放</view>
+            <view class="coupon-item__left-desc" wx:if="{{availableNum&&availableNum<10}}">仅剩{{availableNum}}张</view>
+        </view>
+        <view class="board-point top-point"></view>
+        <view class="board-point bottom-point"></view>
+        <view class="coupon-item__more-border coupon-item__more-border-1 theme__border" style="border-color: {{mainColor}};" wx:if="{{availableNum>1}}"></view>
+        <view class="coupon-item__more-border coupon-item__more-border-2 theme__border" style="border-color: {{mainColor}};" wx:if="{{availableNum>1}}"></view>
+    </a>
+</a>

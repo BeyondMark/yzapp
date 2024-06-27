@@ -1,0 +1,17 @@
+<b bind:_init="_tic" bind:after-enter="_p" customStyle="background:#000;" data-t="{{ afterEnter:{en:'handleAfterEnter'} }}" position="bottom" show="{{show}}" zIndex="{{10008}}">
+    <view class="preview-image-swipe-wrap" style="{{pageVars}}" wx:if="{{showComp}}">
+        <d bind:_init="_tic" bind:change="_p" class="preview-image-swipe" data-ref="previewImageSwipe" data-t="{{ change:{en:'handleSwipeChange'} }}" height="{{swiperHeight}}" initialSwipe="{{current}}" pid="preview-image-swipe" showIndicators="{{false}}">
+            <e active="{{show&&current===index}}" bind:_init="_tic" bind:scale="_p" class="preview-image-swipe-item" data-t="{{ scale:{en:'onImageScale'} }}" pid="preview-image-swipe" rootHeight="{{swiperHeight}}" rootWidth="{{swiperWidth}}" showMenuByLongpress="{{true}}" src="{{url}}" wx:for="{{urls}}" wx:for-item="url" wx:key="index"></e>
+        </d>
+        <view class="preview-image-swipe-navbar" style="top:{{navRect.top}}; height:{{navRect.height}}">
+            <view class="preview-image-swipe-navbar__indicator"> {{current+1}} / {{urls.length}} </view>
+            <c bind:_init="_tic" catch:tap="_p" class="{{closeIconProps.class}}" data-t="{{ tap:{en:'onClose',et:'stop'} }}" name="{{closeIconProps.name}}"></c>
+        </view>
+        <view catch:tap="_p" class="preview-image-swipe__footer" data-t="{{ tap:{en:'',et:'stop'} }}" wx:if="{{imageScale<=1.3}}">
+            <block wx:if="{{uiType==='NORMAL'&&!isNoStock&&imageScale<=1.3}}">
+                <a bind:_init="_tic" bind:big-buttons-click="_p" data-t="{{ bigButtonsClick:{en:'handleBigButtonClick'} }}" finalBigButtons="{{finalBigButtons}}" goodsBaseInfo="{{goodsBaseInfo}}" goodsPriceInfo="{{goodsPriceInfo}}" kdtId="{{kdtId}}" rmId="{{rmId}}" wx:if="{{rmId==='b7-33'||rmId==='b33-19'}}"></a>
+            </block>
+            <f bind:_init="_tic" bind:swipe="_p" current="{{current}}" data-t="{{ swipe:{en:'onSwipe'} }}" goodsBaseInfo="{{goodsBaseInfo}}" goodsPriceInfo="{{goodsPriceInfo}}" skuList="{{skuList}}" wx:if="{{uiType==='SKU'&&!isNoStock&&imageScale<=1.3}}"></f>
+        </view>
+    </view>
+</b>

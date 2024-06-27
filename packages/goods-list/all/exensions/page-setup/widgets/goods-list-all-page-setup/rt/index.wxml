@@ -1,0 +1,22 @@
+<view bindtap="handleRootTap" class="c34be9" style="{{goodsOpt.layoutOpt.type==='list'?'; background: #fff':'; background: linear-gradient(180deg, #FFF 20vh, #F5F5F5 50vh)'}}">
+    <a>
+        <g rmId="b9-2" shareFrom="{{4}}" wx:if="{{rmId==='b9-1'}}"></g>
+        <view style="height: 50px">
+            <e rmId="b9-3" wx:if="{{rmId==='b9-1'}}"></e>
+        </view>
+        <f isShowLayoutChange="{{true}}" rmId="b9-4" wx:if="{{rmId==='b9-1'}}"></f>
+    </a>
+    <shop-block></shop-block>
+    <block wx:if="{{!isEmpty}}">
+        <h pageType="ALL_GOODS_CONFIG" rmId="b9-5" wx:if="{{rmId==='b9-1'}}"></h>
+    </block>
+    <view class="c6f4c" wx:else>
+        <image class="c1fcec" src="https://img01.yzcdn.cn/v2/image/wap/trade/new_order/empty@2x.png"></image>
+        <text class="c37b5">没有发现商品，去首页逛逛吧</text>
+    </view>
+    <i id="van-toast"></i>
+    <j id="van-notify"></j>
+    <c source="{{5}}"></c>
+    <d></d>
+    <b noAutoAuth="{{noAutoAuth}}" zIndex="{{protocolIndex}}"></b>
+</view>

@@ -1,0 +1,159 @@
+.split-coupon {
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-size: 100%auto;
+  background-position: top;
+}
+.activity-title {
+  font-size: 16px;
+  font-family: PingFangSC-Medium;
+  line-height: 22px;
+  color: #323232;
+}
+.activity-title .strong {
+  color: #ee0a24;
+}
+.activity-money {
+  margin: 16px 0 24px;
+  color: #ee0a24;
+  font-size: 14px;
+}
+.activity-money .strong {
+  margin-right: 2px;
+  font-size: 36px;
+  font-family: PingFangSC-Semibold;
+}
+@keyframes translate {
+  0% {
+    transform: scale(0.98);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+.btn {
+  display: block !important;
+  width: 260px;
+  height: 44px !important;
+  line-height: 44px !important;
+  color: #fff !important;
+  border-radius: 22px !important;
+  animation: translate 0.8s infinite;
+  font-size: 16px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.btn__red {
+  background-image: linear-gradient(90deg, #ff6034, #ee0a24);
+}
+.btn__yellow {
+  background-image: linear-gradient(90deg, #ffce28 3%, #ffac24 96%);
+}
+.btn__top {
+  margin-bottom: 16px !important;
+}
+.btn__bottom,
+.btn__top,
+.btn__wechat {
+  animation: none;
+}
+.btn__wechat:before {
+  position: relative;
+  top: 3px;
+  margin-right: 7px;
+  content: "";
+  width: 20px;
+  height: 17px;
+  display: inline-block;
+  background: url(https://b.yzcdn.cn/public_files/2018/04/10/5fc7cf49641ad786bbe6024fa215a02a.png)
+    no-repeat 50%;
+  background-size: 100% 100%;
+}
+.activity-card {
+  position: relative;
+  margin: 50.67vw 15px 0;
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px 0;
+  text-align: center;
+  min-height: 150px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(50, 50, 51, 0.08);
+}
+.activity-card .money-icon {
+  position: absolute;
+  width: 48px;
+  height: 43px;
+  top: -20px;
+  left: -20px;
+  background: url(https://b.yzcdn.cn/public_files/11580c72b762f6584e56a28da433f1b3.png)
+    no-repeat 50%;
+  background-size: 80% 80%;
+}
+.time {
+  margin: 12px 0 16px;
+  color: #f60;
+  font-size: 14px;
+}
+.time .time-remain {
+  display: inline-block;
+  color: #f60;
+}
+.time:after,
+.time:before {
+  margin-bottom: 5px;
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-bottom: 1px solid #dcdee0;
+}
+.time:before {
+  margin-right: 8px;
+  border-left: 23px solid transparent;
+}
+.time:after {
+  margin-left: 8px;
+  border-right: 23px solid transparent;
+}
+.fail-icon {
+  display: block;
+  width: 70px;
+  height: 64px;
+  margin: 0 auto;
+}
+.fail-title {
+  margin: 16px 0 8px;
+}
+.activity-desc {
+  font-size: 14px;
+  color: #969799;
+  white-space: pre-wrap;
+  line-height: 20px;
+}
+.activity-time {
+  margin: 16px 0;
+  white-space: normal;
+}
+.success-card .activity-title {
+  font-size: 14px;
+  color: #ee0a24;
+}
+.success-card .activity-desc {
+  margin: 0 0 16px;
+}
+.success-card .activity-money {
+  margin: 12px 0;
+}
+.fail-card .activity-title {
+  margin: 16px 0 8px;
+}
+.fetch-card {
+  background-image: url(https://b.yzcdn.cn/public_files/61972d8c41da23018c0a9f91aa70cba5.png);
+  background-size: 110% 110%;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+.btn-text {
+  font-size: 16px;
+}

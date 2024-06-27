@@ -1,0 +1,5 @@
+<view class="c0cd9b {{customClass}}" id="{{selectorId}}" style="top:{{top+'px'}}; left:{{left+'px'}}">
+    <slot name="header"></slot>
+    <slot name="content" wx:if="{{useContentSlot}}"></slot>
+    <view class="c7f28e c89585" style="{{'max-width:'+maxTextLength+1+'em'}}" wx:else>{{sourceData.content}}</view>
+</view>

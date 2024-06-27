@@ -1,0 +1,31 @@
+<view class="goods-recommend" hidden="{{!show}}">
+    <d bind:_init="_tic" bind:load="_p" data-t="{{ load:{en:'loadMore'} }}" direction="swipe" finished="{{false}}" immediateCheck="{{false}}" loading="{{loadingMore}}">
+        <a _opt="{{layoutConfig}}" bind:_init="_tic">
+            <b _opt="{{layoutConfig}}" bind:_init="_tic" wx:for="{{formatRecommendList}}" wx:key="alias">
+                <c _opt="{{item.card}}" bind:_init="_tic" bind:item-click="_p" data-t="{{ itemClick:{ en:'handleItemClick',args:[item] } }}" textClass="cap-card-text-info">
+                    <view class="{{'ranking-mark'}} {{'ranking-mark--'+item.rank}} {{item.rank<=3?'rank-1-to-3':''}} {{item.rank>3&&item.rank<=20?'rank-above-3':''}}" slot="corner-mark" wx:if="{{showCornerMark}}"></view>
+                    <view slot="card-custom-tags">
+                        <e bind:_init="_tic" maxNum="{{1}}" showDefaultTags="{{item.showDefaultTags}}" showTags="{{item.showTags}}"></e>
+                    </view>
+                </c>
+            </b>
+            <b _opt="{{layoutConfig}}" bind:_init="_tic" wx:if="{{showMoreBtn&&listLoaded}}">
+                <view bind:tap="_p" class="showcase-item-more" data-t="{{ tap:{en:'jumpPage'} }}">
+                    <view class="showcase-item-more-container">
+                        <view class="showcase-item-more-main">
+                            <i bind:_init="_tic" class="showcase-item-more-icon"></i>
+              查看更多
+            </view>
+                    </view>
+                </view>
+            </b>
+            <b _opt="{{layoutConfig}}" bind:_init="_tic" wx:if="{{!listLoaded}}">
+                <view class="showcase-item-more">
+                    <view class="showcase-item-more-container">
+                        <view class="showcase-item-more-empty"></view>
+                    </view>
+                </view>
+            </b>
+        </a>
+    </d>
+</view>

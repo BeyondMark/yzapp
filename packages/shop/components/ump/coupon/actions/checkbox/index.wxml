@@ -1,0 +1,5 @@
+<view class="coupon-checkbox custom-class">
+    <a bind:change="handleChange" checkedColor="{{themeConfig.mainColor||'#fa1919'}}" disabled="{{disabled}}" iconSize="18px" labelClass="coupon-checkbox__label" unavailable="{{unavailable}}" value="{{value}}">
+        <slot></slot>
+    </a>
+</view>

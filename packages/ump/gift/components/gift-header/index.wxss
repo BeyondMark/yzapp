@@ -1,0 +1,48 @@
+.gift-header__bottom-box {
+  height: 44px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.gift-header__img-area {
+  position: relative;
+  height: 65px;
+  background: #e0493f;
+  padding: 0 15px;
+}
+.gift-header__img-area .img-1 {
+  width: 112px;
+  height: 65px;
+  position: absolute;
+  margin-left: 6px;
+}
+.gift-header__img-area .img-2 {
+  height: 52px;
+  width: 31px;
+  position: absolute;
+  left: 126px;
+}
+.gift-header__img-area .img-3 {
+  height: 87px;
+  width: 167px;
+  position: absolute;
+  right: 35px;
+  top: -30px;
+}
+.gift-header__bottom-border {
+  border-radius: 842px;
+  height: 842px;
+  width: 842px;
+  background: #e0493f;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -421px;
+}
+.gift-share-header {
+  position: relative;
+  top: -30px;
+}
+.gift-share-header .gift-header__img-area {
+  padding-bottom: 30px;
+}

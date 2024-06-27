@@ -1,0 +1,18 @@
+<page-container class="{{themeClass}} page-{{deviceType}}">
+    <view class="membercard-result container">
+        <view class="img-container">
+            <image class="top-img" mode="aspectFit" src="https://b.yzcdn.cn/v2/image/scrm/wap/icon/icon_lingqu@2x.png"></image>
+        </view>
+        <view class="status_text" wx:if="{{from=='take'}}">已成功领取会员卡</view>
+        <view class="status_text" wx:else>已成功激活会员卡</view>
+        <view class="btn-container">
+            <view bindtap="addCard" class="active_btn zan-btn zan-btn--large zan-btn--primary btn-add-card" wx:if="{{wxCard}}">添加至微信卡包</view>
+            <van-button bind:click="globalNavigate" customClass="active_btn" data-type="switch" data-url="/pages/home/dashboard/index" size="large" type="primary" wx:if="{{!needActive}}">进店逛逛</van-button>
+            <van-button bind:click="goToActive" customClass="active_btn" size="large" type="primary" wx:else>立即激活会员卡</van-button>
+        </view>
+    </view>
+</page-container>
+<account-login bind:closeAccountLogin="onAccountClose" bind:loginSuccess="onAccountSuccess" show="{{accountLogin}}" wx:if="{{accountLogin}}"></account-login>
+<van-dialog id="van-dialog"></van-dialog>
+<import src="../pages/common/wsc-page/index.wxml"></import>
+<template is="wsc-page" data="{{wscpage:wscpage}}"></template>

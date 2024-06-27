@@ -1,0 +1,80 @@
+<u show="{{loading}}" wx:if="{{globalCustomLoading}}"></u>
+<view class="{{deviceType}} {{showTabBar?'page-container--tab-bottom':''}} {{showRegisterBtn?'page-container--fix-bottom':''}}">
+    <view wx:if="{{isFeatureMemberCenter&&!isUnionCode}}">
+        <view class="feature-page__top-hook"></view>
+        <t rmId="b14-3" wx:if="{{rmId==='b14-0'}}"></t>
+        <b forceShow="{{true}}" wx:if="{{showTabBar}}"></b>
+    </view>
+    <block wx:else>
+        <view class="container {{isUnionCode?'union-code-container':''}}" wx:if="{{isReady}}">
+            <view class="navigation-bar__title-text" style="padding-top: {{topBarHeight/2}}px;height:{{topBarHeight}}px">
+                <text>会员中心</text>
+            </view>
+            <view bindtap="goToCompleteInfo" class="levelcenter__complete-info" wx:if="{{showRegisterCompleteBar}}">
+                <view class="text">
+                    <v customClass="arrow-custom" customStyle="margin-right: 8px" name="https://img01.yzcdn.cn/public_files/f31c2cc64cc43f0ef9e35de9eb29067f.png" size="16"></v>完善资料尊享更多会员权益</view>
+                <view>
+                    <text class="levelcenter-level-tip">去完善</text>
+                    <v color="#9a640c" customClass="arrow-custom" customStyle="vertical-align: -2px;" name="arrow"></v>
+                </view>
+            </view>
+            <view class="levels-wrapper">
+                <view class="card-bg"></view>
+                <view class="swiper-wrapper swiper-height">
+                    <w authTypeList="{{['mobile']}}" bind:next="handleAfterAuthorized" bizDataMap="{{bizDataMap}}" customStyle="position: absolute;right: 42px;top: 17px;overflow: visible;width: 90px;height: 30px;" wx:if="{{requireMobile&&!mobileAuthorized&&!hasMobile}}">
+                        <swiper bindchange="handleSwipeChange" bindtap="handleSwipeChange" current="{{current}}" nextMargin="{{10}}" style="height: var(--swiper-height);width: calc(100vw - 15px);position: absolute;right: -42px;top: -17px;">
+                            <swiper-item wx:for="{{cards}}" wx:key="unique">
+                                <k alias="{{!showInfo&&!hasCompleted?groupAlias:null}}" btnShow="{{true}}" card="{{item.card}}" cardTextSource="{{item.levelGapInfo}}" disabled="{{!item.isEnabled}}" hasCompleted="{{hasCompleted}}" hasLevel="{{hasLevel}}" hasMobile="{{hasMobile}}" isConsume="{{isConsume}}" isThirdPartyCenter="{{isThirdPartyCenter}}" memberCenterLogoUrl="{{memberCenterLogoUrl}}" mobileAuthorized="{{mobileAuthorized}}" mode="{{mode}}" nextCard="{{nextCard}}" nowLevel="{{nowLevel}}" pointsInfo="{{pointsInfo}}" recruitParams="{{recruitParams}}" redirect="{{!showInfo&&!hasCompleted?redirectUrl:toMissionCenter}}" requireMobile="{{requireMobile}}"></k>
+                            </swiper-item>
+                        </swiper>
+                    </w>
+                    <swiper bindchange="handleSwipeChange" bindtap="handleSwipeChange" current="{{current}}" nextMargin="{{10}}" style="height: var(--swiper-height);" wx:else>
+                        <swiper-item wx:for="{{cards}}" wx:key="unique">
+                            <k alias="{{!showInfo&&!hasCompleted?groupAlias:null}}" bindbindMobile="handleAllTriggerEvent" bindhandleQRClick="handleQRClick" bindhandleRejoin="handleRejoin" btnShow="{{true}}" card="{{item.card}}" cardTextSource="{{item.levelGapInfo}}" disabled="{{!item.isEnabled}}" hasCompleted="{{hasCompleted}}" hasLevel="{{hasLevel}}" hasMobile="{{hasMobile}}" isConsume="{{isConsume}}" isFullLevel="{{isFullLevel}}" isRemoved="{{isRemoved}}" isThirdPartyCenter="{{isThirdPartyCenter}}" memberCenterLogoUrl="{{memberCenterLogoUrl}}" mobileAuthorized="{{mobileAuthorized}}" mode="{{mode}}" nextCard="{{nextCard}}" nowLevel="{{nowLevel}}" pointsInfo="{{pointsInfo}}" redirect="{{!showInfo&&!hasCompleted?redirectUrl:toMissionCenter}}" requireMobile="{{requireMobile}}" userLevel="{{userLevel}}"></k>
+                        </swiper-item>
+                    </swiper>
+                </view>
+                <g benefitsList="{{nowBenefitList}}" bindsubscribeCallback="handleSubscribeCallback" customBg="{{customBg}}" customNameColor="{{customNameColor}}" kdtId="{{kdtId}}" maxRow="{{1}}" needSubscribe="{{needSubscribe}}" nowLevelAlias="{{nowLevelAlias}}" wx:if="{{memberLevelBenefit}}"></g>
+                <a scrollable="{{false}}" text="权益说明：以上权益限本店会员可用，您当前无法享受" wx:if="{{showBenefitsAlert}}"></a>
+                <view class="bottom-container {{hasContent?'has-content':''}}" wx:if="{{!isUnionCode}}">
+                    <view class="bottom-content">
+                        <r bind:bindMobile="handleAllTriggerEvent" groupAlias="{{groupAlias}}" pageQuery="{{pageQuery}}"></r>
+                        <p></p>
+                        <o benefitGift="{{benefitGift}}" bindbindMobile="handleAllTriggerEvent" bindhideMemberGift="hideMemberGift" bizDataMap="{{bizDataMap}}" isMember="{{hasLevel}}" mode="{{mode}}" neededMoreStoreBalance="{{neededMoreStoreBalance}}" showRegisterBtn="{{showRegisterBtn}}" wx:if="{{showNewMemberGift}}"></o>
+                        <j></j>
+                        <i isMember="{{hasLevel}}" levelType="free"></i>
+                        <view wx:if="{{!isThirdPartyCenter&&showMission&&mode===1}}">
+                            <view class="task-list">
+                                <view class="task-label">成长任务<v bindtap="jumpToMissionCenter" color="#979797" name="arrow"></v>
+                                </view>
+                                <h bind:after-fetch-missions="handleAfterFetchMission" bindmissionsNumber="missionsNumber" bizDataMap="{{bizDataMap}}" fetchMissionFinished="{{fetchMissionFinished}}" hasMobile="{{hasMobile}}" neededMoreStoreBalance="{{neededMoreStoreBalance}}"></h>
+                            </view>
+                        </view>
+                        <s bind:heightCalculate="handleHeightCalculate" class="height-cal"></s>
+                    </view>
+                    <view style="background-color: #fff;margin-bottom: 12px;">
+                        <t rmId="b14-3" wx:if="{{rmId==='b14-0'}}"></t>
+                    </view>
+                    <view class="goods-recommend-wrap">
+                        <c bizName="levelcenter~rec" customRecommendName="更多精选商品" goodsNumber="{{6}}" titleConfig="{{goodsRecommendTitleConfig}}" wx:if="{{isSupportGoodsRecommend}}"></c>
+                    </view>
+                    <view class="act-btns" wx:if="{{!isThirdPartyCenter||hasLevel}}">
+                        <view bindtap="linkToRule" class="remove-btn" wx:if="{{!isThirdPartyCenter}}">查看会员规则</view>
+                        <text class="split" wx:if="{{!isThirdPartyCenter&&hasLevel}}">|</text>
+                        <view bindtap="removeLevel" class="remove-btn" wx:if="{{hasLevel}}">退出当前等级</view>
+                    </view>
+                    <m bindbindMobile="handleAllTriggerEvent" bindreloadData="reloadDataWithCtx" bizDataMap="{{bizDataMap}}" isWeixinCardEnabled="{{isWeixinCardEnabled}}" neededMoreStoreBalance="{{neededMoreStoreBalance}}" pageQuery="{{pageQuery}}" showBottomPadding="{{showTabBar}}" wx:if="{{showRegisterBtn}}"></m>
+                </view>
+                <q kdtId="{{kdtId}}" query="{{pageQuery}}" wx:else></q>
+            </view>
+            <l barCode="{{barCode}}" bindcloseCodeDialog="handleAllTriggerEvent" bindrecall="getMemberCodeInfo" identityNo="{{encodeCode}}" isShow="{{isShow}}" level="{{userLevel.level.levelValue}}" memberCodeRefreshInterval="{{memberCodeRefreshInterval}}" qrCode="{{qrCode}}" qrCodeExpired="{{qrCodeExpired}}" userInfo="{{userInfo}}"></l>
+            <n bindbindMobile="handleAllTriggerEvent" bindsubscribeCallback="handleSubscribeCallback" bizDataMap="{{bizDataMap}}" crmFromScenePlanId="{{crmFromScenePlanId}}" groupAlias="{{groupAlias}}" hasAuthorized="{{mobileAuthorized}}" hasLevel="{{hasLevel}}" hasMobile="{{hasMobile}}" joinGapInfo="{{joinGapInfo}}" kdtId="{{kdtId}}" nowBenefitList="{{nowBenefitList}}" nowLevel="{{nowLevel}}" pageQuery="{{pageQuery}}" removed="{{isRemoved}}" scene="{{guideScene}}" wx:if="{{!!groupAlias&&!isUnionCode}}"></n>
+        </view>
+        <block wx:if="{{!isUnionCode}}">
+            <f bindsubscribe="handleSubscribe" hasButton="{{!hasLevel&&!hasCompleted}}" hasTabbar="{{showTabBar}}" wx:if="{{needSubscribe}}"></f>
+            <e bind:close="closeSubscribeFailPopup" openImageSrc="https://img01.yzcdn.cn/public_files/2019/12/23/7b987495fc6bbd066262153577881592.png" show="{{showSubscribeFail}}"></e>
+            <b forceShow="{{true}}" wx:if="{{showTabBar}}"></b>
+        </block>
+    </block>
+</view>
+<d bind:onProtocolInitListen="handleProtocol" noAutoAuth="false" zIndex="10001"></d>

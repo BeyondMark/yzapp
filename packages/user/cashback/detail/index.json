@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "返现详情",
+  "navigationBarBackgroundColor": "#FFF",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "a": "/components/znb-web-view/index",
+    "_": "../../../../components/_/index"
+  }
+}

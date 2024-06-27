@@ -1,0 +1,76 @@
+<view style="{{varStyle}}">
+    <f bind:_init="_tic" customClass="c77732" originPrice="{{good.originPrice}}" originPriceClass="c5bd2b">
+        <view slot="thumb">
+            <view class="c956ac">
+                <image bind:load="_p" class="c0355a bd231" data-t="{{ load:{en:'onGoodsImageLoad'} }}" lazyLoad="true" mode="{{good.imgMode}}" src="{{good.thumb}}"></image>
+            </view>
+        </view>
+        <view class="e07fc" slot="title">
+            <image class="{{'c01362'}} {{good.isPeriodBuy?'c57c4':good.haitao?'c0a9ae':good.isPrescriptionDrugGoods?'afe36':''}} bd231" lazyLoad="true" src="{{activityTag}}" wx:if="{{activityTag}}"></image>
+            <view class="c54bb1 c89585">{{good.title}}</view>
+        </view>
+        <view class="c09cac" slot="desc" wx:if="{{good.desc||good.isECard||deliveryTime||texts&&texts.length>0}}">
+            <view wx:if="{{good.desc}}">{{good.desc}}</view>
+            <view class="c01ce1" wx:if="{{good.isECard}}">        有效期：{{good.effectiveTime}} </view>
+            <view class="e6e2e" wx:if="{{isShowDeliveryTime&&deliveryTime}}">{{deliveryTime}} </view>
+            <view class="c0380e" wx:if="{{texts&&texts.length>0}}">
+                <a alias="{{good.alias}}" bind:_init="_tic" content="{{texts}}"></a>
+            </view>
+        </view>
+        <view class="c7f4cd" slot="price-top">
+            <view class="bb2b0" wx:if="{{good.quickRefund||good.isSevenDayUnconditionalReturn}}">
+                <d bind:_init="_tic" customClass="c4aac2" hairline="{{themeTag.plain}}" plain="{{themeTag.plain}}" wx:if="{{good.isSevenDayUnconditionalReturn}}">7天无理由退货
+        </d>
+                <d bind:_init="_tic" customClass="c4aac2" hairline="{{themeTag.plain}}" plain="{{themeTag.plain}}" wx:if="{{good.quickRefund}}">自动退款
+        </d>
+            </view>
+            <view class="bb2b0" wx:if="{{good.hasMemberPrice||good.goodTags.length}}">
+                <d bind:_init="_tic" customClass="c61381" hairline="{{themeTag.plain}}" plain="{{themeTag.plain}}" wx:for="{{good.goodTags}}" wx:for-item="tag" wx:key="tag">{{tag}} </d>
+                <d bind:_init="_tic" customClass="c61381" hairline="{{themeTag.plain}}" plain="{{themeTag.plain}}" wx:if="{{good.hasMemberPrice}}">会员价
+        </d>
+            </view>
+            <view class="bb2b0" wx:if="{{good.subTags.length}}">
+                <d bind:_init="_tic" customClass="c61381" hairline="{{themeTag.plain}}" plain="{{themeTag.plain}}" wx:for="{{good.subTags}}" wx:for-item="tag" wx:key="tag">{{tag}} </d>
+            </view>
+            <view wx:if="{{good.deliveryTime}}">{{good.deliveryTime}}</view>
+            <view class="c4842e c58714" wx:if="{{good.canChangeNum&&startSaleNum>1}}">        起售{{startSaleNum}}件
+      </view>
+            <view class="c2089 c58714" wx:if="{{good.taxTips}}"> {{good.taxTips}} </view>
+        </view>
+        <view class="{{'c4490e'}} {{good.isECard?'af70e':''}}" slot="price">
+            <view wx:if="{{good.usePoint}}">
+                <view class="c8e38e c89585">{{good.usePoint[0]}}</view>
+                <view class="c5e2a8 c89585">{{good.usePoint[1]}}</view>
+                <view class="c89585" wx:if="{{!good.isZeroPrice}}">
+                    <view class="c8e38e c89585">+ {{good.goodPrice[0]}}.</view>
+                    <view class="c5e2a8 c89585">{{good.goodPrice[1]}}元 </view>
+                </view>
+            </view>
+            <view wx:else>        ¥<view class="c8e38e ceedb c89585">{{good.goodPrice[0]}}.</view>
+                <view class="c5e2a8 c89585">{{good.goodPrice[1]}}</view>
+            </view>
+        </view>
+        <view class="c4490e c6ba4c" slot="num">
+            <view class="c41d93" wx:if="{{good.showStepper}}">
+                <view style="text-align: right" wx:if="{{isTTVerifyRetailScene}}">x {{good.num}}</view>
+                <e bind:_init="_tic" bind:blur="_p" bind:change="_p" bind:minus="_p" bind:overlimit="_p" bind:plus="_p" buttonSize="24px" data-ref="stepper" data-t="{{ overlimit:{en:'overLimitAction'},change:{en:'onChange'},plus:{ en:'onPlusMinus',args:['plus'] },minus:{ en:'onPlusMinus',args:['minus'] },blur:{en:'onBlur'} }}" disableMinus="{{stepperDisableMinus}}" disabled="{{showToast}}" inputClass="c496d7" inputWidth="32px" integer="{{true}}" longPress="{{false}}" max="{{good.goodMax}}" min="{{startSaleNum}}" value="{{good.num}}" wx:else></e>
+            </view>
+            <view class="{{good.isECard?'c22aee':''}}" wx:else>x{{good.num}} </view>
+            <view class="c720ec" wx:if="{{good.isPeriodBuy}}">每期配送数量</view>
+        </view>
+        <view class="c7c9b0" slot="bottom" wx:if="{{good.showMessageRule}}">
+            <view bind:tap="_p" class="c9cae0" data-t="{{ tap:{en:'messageClick'} }}" wx:if="{{good.hasMessage}}">
+                <view>{{firstMessage}}</view>
+                <view>
+                    <view class="c89585">全部留言</view>
+                    <b bind:_init="_tic" customClass="b8c5a" name="arrow"></b>
+                </view>
+            </view>
+            <view wx:if="{{messageList.length}}">
+                <view class="c9cae0" wx:for="{{messageList}}" wx:for-index="messageListIndex" wx:key="messageListIndex"> {{item}} </view>
+            </view>
+        </view>
+    </f>
+    <g bind:_init="_tic" bind:close="_p" color="{{themeColors.general}}" data-t="{{ close:{en:'handleCloseMessage'} }}" messages="{{good.message}}" show="{{showMessage}}"></g>
+    <c bind:_init="_tic" class="c60883" size="16" wx:if="{{showToast}}"></c>
+</view>

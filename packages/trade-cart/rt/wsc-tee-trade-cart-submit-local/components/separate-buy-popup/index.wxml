@@ -1,0 +1,33 @@
+<b bind:_init="_tic" bind:close="_p" customClass="b8fad" data-t="{{ close:{en:'onClose'} }}" position="bottom" show="{{separateBuy.show}}">
+    <view class="d5d3d">    选择结算商品
+    <c bind:_init="_tic" bind:tap="_p" class="baec6" data-t="{{ tap:{en:'onClose'} }}" name="cross"></c>
+    </view>
+    <view class="c6a213">{{TIP_MAP[separateBuy.type]}}</view>
+    <view class="c5f0b6">
+        <view class="c8d276" wx:for="{{formattedData}}" wx:for-item="goodItem" wx:key="index">
+            <view class="t-clearfix b2eef">
+                <view class="c83ec5">{{goodItem.title}}</view>
+                <view class="c4ae35" wx:if="{{goodItem.isHasHaiTao}}">
+                    <view class="c89585">（含</view>
+                    <view class="c48140 c89585"></view>
+                    <view class="c89585">的商品）</view>
+                </view>
+            </view>
+            <view class="c76680">
+                <view>
+                    <image class="c667a6 bd231" lazyLoad="true" mode="aspectFit" src="{{imageItem.imgUrl}}" wx:for="{{goodItem.goodItemsFilter}}" wx:for-index="imageIndex" wx:for-item="imageItem" wx:key="imageIndex"></image>
+                    <view class="c01959 c89585" wx:if="{{goodItem.list.length>3}}">...</view>
+                </view>
+                <view>
+                    <d bind:_init="_tic" bind:tap="_p" customClass="c8c0d6" data-t="{{ tap:{ en:'goPay',args:[index] } }}">去结算</d>
+                </view>
+            </view>
+            <view class="fbb44">共 <view class="num c89585">{{goodItem.list.length}}</view>
+                <view class="c89585"> {{goodItem.title==='课程'?'门':'件'}}</view>，合计：
+        <view>
+                    <a bind:_init="_tic" customClass="c78a5e" price="{{goodItem.totalPrice}}"></a>
+                </view>
+            </view>
+        </view>
+    </view>
+</b>

@@ -1,0 +1,10 @@
+<view>
+    <view wx:if="{{show}}">
+        <view class="a457c" wx:for="{{extraFees}}" wx:key="name">
+            <view class="a457c__label c89585"> {{item.name}} <a bind:_init="_tic" bind:tap="_p" color="#969799" customClass="bb012" data-t="{{ tap:{ en:'popupToggle',args:[item.name] } }}" name="info-o" size="16px" wx:if="{{item.showTips}}"></a>
+                <b bind:_init="_tic" bind:close="_p" data-t="{{ close:{ en:'popupToggle',args:[item.name] } }}" show="{{popupShow[item.name]===true}}" themeColors="{{themeColors}}" title="打包费说明"> {{item.desc}} </b>
+            </view>
+            <view class="c15323 c89585">{{item.formatPrice}}</view>
+        </view>
+    </view>
+</view>

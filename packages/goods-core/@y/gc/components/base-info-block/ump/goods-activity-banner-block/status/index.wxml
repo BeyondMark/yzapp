@@ -1,0 +1,7 @@
+<view class="c5074e {{activity.countDownForced?'c22ae':''}}">
+    <view class="ee902" wx:if="{{activity.isEnd}}">活动已结束</view>
+    <view wx:elif="{{remainObj}}">
+        <b activity="{{activity}}" bind:_init="_tic" remainObj="{{remainObj}}" wx:if="{{showStockCountDown}}"></b>
+        <a activityTitle="{{activityTitle}}" bind:_init="_tic" countDownForced="{{activity.countDownForced}}" isUmpBannerV2="{{isUmpBannerV2}}" remainObj="{{remainObj}}" showCountDownTime="{{showCountDownTime}}" showMilliseconds="{{showMilliseconds}}" wx:else></a>
+    </view>
+</view>

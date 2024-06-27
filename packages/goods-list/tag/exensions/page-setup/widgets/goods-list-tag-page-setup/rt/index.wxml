@@ -1,0 +1,46 @@
+<view bindtap="handleRootTap" class="c34be9" style="{{goodsOpt.layoutOpt.type==='one'?'; background: #fff':'; background: linear-gradient(180deg, #FFF 20vh, #F5F5F5 50vh)'}}">
+    <a wx:if="{{hasLoaded}}">
+        <view style="height: {{navBarHeight}}px">
+            <m rmId="b10-3" shareFrom="{{3}}" wx:if="{{rmId==='b10-2'}}"></m>
+        </view>
+    </a>
+    <a offsetTop="{{navBarHeight}}" wx:if="{{hasLoaded}}">
+        <view style="height: {{stickyHeight}}px">
+            <view style="height: 50px" wx:if="{{showSearchBar}}">
+                <k rmId="b10-5" wx:if="{{rmId==='b10-2'}}"></k>
+            </view>
+            <view class="c5195f" wx:if="{{groupData.length>1}}">
+                <e active="{{activeName}}" bind:change="handleTabChange" color="var(--general, #2f2f34)" customClass="c5db8d" ellipsis="{{false}}" lineWidth="28px" navClass="custom-nav-class" swipeThreshold="{{1}}" titleActiveColor="#323233" titleInactiveColor="#969799">
+                    <d name="{{item.alias}}" title="{{item.subtitle||item.title}}" wx:for="{{groupData}}" wx:key="alias"></d>
+                    <view slot="nav-right">
+                        <view bindtap="showAllGroup" class="c0851f">
+                            <c name="{{isAllGroupShow?'arrow-up':'arrow-down'}}"></c>
+                        </view>
+                    </view>
+                </e>
+                <f closeOnClickOutside="{{false}}" customClass="fb563" zIndex="{{11}}">
+                    <g bind:close="onCloseDropdown" class="js-dropdown-item">
+                        <view class="c5a81" style="{{tagStyle}}">
+                            <b bindtap="handleClickTag" customClass="{{item.alias===activeName?'c3b12b c5cd35':'c3b12b'}}" data-key="{{item.alias}}" round="{{true}}" wx:for="{{groupData}}" wx:key="alias">{{item.subtitle||item.title}}</b>
+                        </view>
+                    </g>
+                </f>
+            </view>
+            <l rmId="b10-6" wx:if="{{rmId==='b10-2'}}"></l>
+        </view>
+    </a>
+    <o rmId="b10-4" wx:if="{{rmId==='b10-2'}}"></o>
+    <n pageType="TAG_CONFIG" rmId="b10-7" wx:if="{{rmId==='b10-2'}}"></n>
+    <view class="c31eb4" wx:if="{{isEmpty}}">
+        <image class="c86ca8" src="https://img01.yzcdn.cn/upload_files/2020/12/31/FkdBILcwwEKmXT3IzSyjAyNpB7j9.png"></image>
+        <text class="eb962">暂无商品</text>
+    </view>
+    <r rmId="b10-1" wx:if="{{rmId==='b10-2'}}"></r>
+    <p rmId="b10-8" wx:if="{{rmId==='b10-2'}}"></p>
+    <s id="van-toast"></s>
+    <t id="van-notify"></t>
+    <h noAutoAuth="{{noAutoAuth}}" zIndex="{{protocolIndex}}"></h>
+    <i></i>
+    <q cloudExcluded="{{true}}" rmId="b10-13" wx:if="{{rmId==='b10-2'}}"></q>
+    <j source="{{5}}"></j>
+</view>

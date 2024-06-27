@@ -1,0 +1,12 @@
+<view class="component-display__loading">
+    <view wx:if="{{isError}}">
+        <a bind:_init="_tic" class="component-display__loading-error" name="info-o"></a>
+        <view class="component-display__loading-text">加载失败，请重试</view>
+    </view>
+    <view wx:else>
+        <view class="component-display__loading-icon">
+            <view class="component-display__loading-icon--before"></view>
+        </view>
+        <view class="component-display__loading-text">加载中</view>
+    </view>
+</view>

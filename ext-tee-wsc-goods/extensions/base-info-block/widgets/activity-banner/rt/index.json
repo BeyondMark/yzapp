@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../components/price/index",
+    "b": "/packages/goods-core/@y/gc/components/base-info-block/ump/goods-activity-banner-block/status/index",
+    "c": "/packages/goods-core/@y/gc/components/base-info-block/ump/goods-activity-banner-block/product/index",
+    "_": "../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_", "c": "_" }
+}

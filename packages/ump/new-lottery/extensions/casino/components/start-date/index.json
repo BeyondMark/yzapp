@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/ump/@vant/weapp/dist/count-down/index",
+    "_": "../../../../../../../components/_/index"
+  }
+}

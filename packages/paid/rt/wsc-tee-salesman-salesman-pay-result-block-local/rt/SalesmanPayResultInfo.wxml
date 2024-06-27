@@ -1,0 +1,4 @@
+<view wx:if="{{content}}">
+    <a bind:_init="_tic" bind:tap="_p" boldTextList="{{boldTextList}}" data-t="{{ tap:{en:'goPage'} }}" normalTextList="{{normalTextList}}" themeColor="{{themeColors.general||''}}" wx:if="{{type==='line-style'}}"></a>
+    <b bind:_init="_tic" bind:tap="_p" boldTextList="{{boldTextList}}" data-t="{{ tap:{en:'goPage'} }}" normalTextList="{{normalTextList}}" themeColors="{{themeColors}}" wx:else></b>
+</view>

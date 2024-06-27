@@ -1,0 +1,17 @@
+<view catch:tap="_p" class="user-authorize-btn custom-class {{customClass}}" data-t="{{ tap:{en:'true',et:'stop'} }}" style="{{customStyle}}">
+    <view bind:tap="_p" class="user-authorize__btn-empty" data-t="{{ tap:{en:'handleDisabledClick'} }}" wx:if="{{disabled}}">
+        <slot></slot>
+    </view>
+    <a appId="{{appId}}" bind:_init="_tic" bind:auth-click="_p" bind:auth-popup-show="_p" bind:fail="_p" bind:native-ability-change="_p" bind:on-open-webview="_p" bind:popup-show="_p" bind:success="_p" bind:toast="_p" bizDataMap="{{bizDataMap}}" class="user-authorize__comnponent" config="{{config}}" customStyle="{{btnStyle}}" data-t="{{ authClick:{en:'handleClick'},toast:{en:'showToast'},onOpenWebview:{en:'openWebview'},success:{en:'handleSuccess'},fail:{en:'handleFail'},popupShow:{en:'handlePopupShow'},authPopupShow:{en:'handleAuthPopupShow'},nativeAbilityChange:{en:'handleNativeAbliltyChange'} }}" downgrade="{{downgrade}}" noMobileFallback="{{noMobileFallback}}" wx:elif="{{buttonType===AuthButtonType.NativeMobile}}">
+        <slot></slot>
+    </a>
+    <b appId="{{appId}}" bind:_init="_tic" bind:auth-click="_p" bind:auth-popup-show="_p" bind:fail="_p" bind:success="_p" bind:toast="_p" class="user-authorize__comnponent" customStyle="{{btnStyle}}" data-t="{{ authClick:{en:'handleClick'},toast:{en:'showToast'},success:{en:'handleSuccess'},fail:{en:'handleFail'},authPopupShow:{en:'handleAuthPopupShow'} }}" desc="{{desc}}" executeImmediately="{{visible}}" kdtId="{{kdtId}}" userInfo="{{userInfo}}" wx:elif="{{buttonType===AuthButtonType.NativeNickAvatar}}">
+        <slot></slot>
+    </b>
+    <view bind:tap="_p" class="user-authorize__btn-empty" data-t="{{ tap:{en:'handleYZClick'} }}" wx:elif="{{buttonType===AuthButtonType.YZButton}}">
+        <slot></slot>
+    </view>
+    <view bind:tap="_p" class="user-authorize__btn-empty" data-t="{{ tap:{en:'handleEmptyClick'} }}" wx:else>
+        <slot></slot>
+    </view>
+</view>

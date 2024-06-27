@@ -1,0 +1,57 @@
+.cap-shopnote-fixedicon {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+}
+.cap-shopnote-fixedicon__left {
+  display: flex;
+  margin-left: 15px;
+}
+.cap-shopnote-fixedicon__left-thumb {
+  width: 38px;
+  height: 38px;
+  margin-right: 20px;
+  color: #fff;
+  line-height: 38px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100%;
+  border-radius: 50%;
+}
+.cap-shopnote-fixedicon__left-thumb-active {
+  color: #f44;
+}
+.cap-shopnote-fixedicon__left-share {
+  width: 38px;
+  height: 38px;
+  color: #fff;
+  line-height: 38px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 20px 20px;
+  border-radius: 50%;
+}
+.cap-shopnote-fixedicon__button {
+  background: #f44;
+  border-radius: 19px;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  width: 106px;
+  height: 38px;
+  line-height: 38px;
+  margin-right: 15px;
+}

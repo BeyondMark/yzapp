@@ -1,0 +1,26 @@
+.btn-wrapper {
+  margin: 0 auto;
+  padding: 8px 16px 16px;
+  background-color: #fff;
+}
+.btn-wrapper .action-btn {
+  width: 163px;
+  height: 40px;
+  line-height: 40px;
+  box-sizing: border-box;
+  border-color: #c09753;
+  color: #c09753;
+  background-color: transparent;
+}
+.btn-wrapper .action-btn:after {
+  border: none;
+}
+.btn-wrapper .action-btn__small {
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+}
+.untake {
+  width: 686rpx;
+}
+@import "/packages/benefit-card/style/theme-view.wxss";

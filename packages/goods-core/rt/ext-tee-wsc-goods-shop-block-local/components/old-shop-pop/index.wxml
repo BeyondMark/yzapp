@@ -1,0 +1,14 @@
+<a bind:_init="_tic" bind:close="_p" customClass="osp" data-t="{{ close:{en:'handleCloseModal'} }}" position="bottom" show="{{show}}">
+    <view class="osp__header" wx:if="{{show}}">
+        <b bind:_init="_tic" multistore="{{multistore}}" shopConfig="{{shopConfig}}" shopInfo="{{shopInfo}}">
+            <view class="{{'osp__header-badge'}} {{badgeClass}}" slot="right"></view>
+        </b>
+    </view>
+    <view class="osp__cnt">
+        <view class="osp__cnt-p1"> {{oldShopDesc.p1}}{{oldShopYears}}{{oldShopDesc.p2}} </view>
+        <view class="osp__cnt-p2">{{oldShopDesc.p3}}</view>
+        <view class="osp__cnt-logo"></view>
+        <view class="osp__cnt-mask"></view>
+    </view>
+    <view bind:tap="_p" class="osp__btn" data-t="{{ tap:{en:'handleCloseModal'} }}">{{oldShopDesc.p4}}</view>
+</a>

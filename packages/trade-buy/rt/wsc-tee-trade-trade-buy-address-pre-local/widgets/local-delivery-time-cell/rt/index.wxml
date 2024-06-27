@@ -1,0 +1,4 @@
+<view>
+    <b bind:_init="_tic" bind:tap="_p" border="{{false}}" center="{{true}}" customClass="d5a4c" data-t="{{ tap:{en:'onClick'} }}" isLink="{{expressWayEditable}}" style="{{cssVar}}" title="送达时间" titleStyle="flex-grow: 0;flex-shrink: 0;min-width: 60px;" titleWidth="70px" value="{{deliveryTime}}" valueClass="{{useGeneralClass}}" wx:if="{{showLocalDeliveryTime}}"></b>
+    <a bind:_init="_tic" bind:close="_p" bind:confirm="_p" config="{{delivery}}" data-ref="timePicker" data-t="{{ confirm:{en:'onConfirm'},close:{en:'onClose'} }}" id="time-picker" rmId="b36-43" show="{{showTimePicker}}" showTime="{{showLocalDeliveryTime}}" tips="{{delivery.tips}}" titles="{{['送达时间','更多送达时间']}}" type="delivery" value="{{delivery.text}}" wx:if="{{rmId==='b36-28'}}"></a>
+</view>

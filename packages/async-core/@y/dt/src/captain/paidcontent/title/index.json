@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y/dt/src/captain/title/index",
+    "_": "../../../../../../../../components/_/index"
+  }
+}

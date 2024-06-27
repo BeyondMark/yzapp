@@ -1,0 +1,73 @@
+.van-search {
+  background-color: #fff;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  display: -webkit-flex;
+  display: flex;
+}
+.van-search .minimalist-date {
+  font-size: 12px;
+  line-height: 12px;
+  padding: 5px;
+  border-radius: 2px;
+  color: #fff;
+  margin-right: 8px;
+  width: 56px;
+}
+.van-search .minimalist-date-day {
+  display: inline-block;
+  padding-left: 8px;
+}
+.van-search__content {
+  flex: 1;
+  padding-left: 12px;
+  background-color: #f7f8fa;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+}
+.van-search__content .van-search__label {
+  padding: 0 5px;
+  color: #323233;
+  font-size: 14px;
+  line-height: 34px;
+}
+.van-search__content .van-search__label .minimalist-city {
+  cursor: pointer;
+  width: 66px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.van-search__content .van-search__label .minimalist-city-down {
+  color: #9b9b9b;
+  font-size: 12px;
+  padding-left: 10px;
+}
+.van-search__content .search-cell {
+  flex: 1;
+  padding: 5px 8px 5px 0;
+  width: 100%;
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: #323233;
+  font-size: 14px;
+  line-height: 24px;
+  align-items: center;
+}
+.van-search__content .search-cell__left-icon {
+  margin-right: 4px;
+}
+.van-search__content .search-cell__value {
+  flex: 1;
+}
+.van-search__content--round {
+  border-radius: 999px;
+}
+.van-search__content--square {
+  border-radius: 8px;
+}

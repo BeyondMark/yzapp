@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./ServiceCashierBlock",
+    "b": "./../../../trade-buy-privacy-bill-local/rt/TradeBuyPrivacyBill",
+    "c": "./../../../wsc-tee-trade-trade-buy-service-block-local/rt/TradeBuyServiceBlock",
+    "_": "../../../../../../components/_/index"
+  }
+}

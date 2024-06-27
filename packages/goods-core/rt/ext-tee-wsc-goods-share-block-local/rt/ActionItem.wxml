@@ -1,0 +1,20 @@
+<view>
+    <block wx:if="{{item.type!=='copy'}}">
+        <a authTypeList="{{authTypeList}}" bind:_init="_tic" bind:next="_p" data-t="{{ next:{en:'onItemClick'} }}" kdtId="{{kdtId}}" needUpdateNicknameAndAvatar="{{false}}" rmId="@passport-tee/user-authorize~DDdJBmWG" type="separate" wx:if="{{rmId==='b7-5'||rmId==='b0-24'||rmId==='b33-6'}}">
+            <button class="f095c" data-item="{{item}}" hoverClass="none" openType="{{item.type==='native'?'share':''}}">
+                <view class="c96355">
+                    <image class="ce19f bd231" lazyLoad="true" src="{{item.icon}}"></image>
+                </view>
+                <view class="a2eeb c89585">{{item.name}}</view>
+                <view class="c9168 c89585">{{item.desc}}</view>
+            </button>
+        </a>
+    </block>
+    <button bind:tap="_p" class="f095c" data-item="{{item}}" data-t="{{ tap:{en:'onItemClick'} }}" hoverClass="none" wx:else>
+        <view class="c96355">
+            <image class="ce19f bd231" lazyLoad="true" src="{{item.icon}}"></image>
+        </view>
+        <view class="a2eeb c89585">{{item.name}}</view>
+        <view class="c9168 c89585">{{item.desc}}</view>
+    </button>
+</view>

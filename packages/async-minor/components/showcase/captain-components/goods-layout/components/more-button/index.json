@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../../../../@vant/weapp/dist/cell-group/index",
+    "b": "../../../../../../@vant/weapp/dist/cell/index",
+    "c": "../../../../../../@vant/weapp/dist/button/index",
+    "d": "/packages/async-main/@vant/weapp/dist/loading/index",
+    "_": "../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "d": "_" }
+}

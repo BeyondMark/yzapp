@@ -1,0 +1,4 @@
+<view class="van-coupon-list__empty">
+    <image class="van-coupon-list__empty__icon" mode="aspectFit	" src="https://b.yzcdn.cn/public_files/630ebfc2dcb65ddc8d1d3457aed8d7b5.png"></image>
+    <view class="van-coupon-list__empty__text">暂无优惠券码</view>
+</view>

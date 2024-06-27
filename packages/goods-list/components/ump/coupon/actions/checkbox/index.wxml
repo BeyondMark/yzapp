@@ -1,0 +1,5 @@
+<view class="f7c26 custom-class">
+    <a bind:change="handleChange" checkedColor="{{themeConfig.mainColor||'#fa1919'}}" disabled="{{disabled}}" iconSize="18px" labelClass="b4409" unavailable="{{unavailable}}" value="{{value}}">
+        <slot></slot>
+    </a>
+</view>

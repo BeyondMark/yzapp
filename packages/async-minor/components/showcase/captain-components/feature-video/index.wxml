@@ -1,0 +1,27 @@
+<view class="feat-video">
+    <a bind:play="handlePlay" class="capVideo" poster="{{video.displayCoverUrl}}" src="{{src}}"></a>
+    <view class="feat-video__extra-block">
+        <view class="feat-video__title-block">
+            <view class="feat-video__title">【{{video.title}}】</view>
+            <view class="feat-video__decp">{{video.description}}</view>
+        </view>
+        <view class="feat-video__extra">
+            <view class="feat-video__date">{{video.createdAtStr}}</view>
+            <view class="feat-video__more-goods">同款好物</view>
+        </view>
+        <view class="feat-video__goods" wx:if="{{video.itemList}}">
+            <b good="{{good}}" wx:for="{{video.itemList}}" wx:for-item="good" wx:key="id"></b>
+        </view>
+        <view class="feat-video__comments-block" wx:if="{{comments.length}}">
+            <view class="feat-video__loading-mask" wx:if="{{loadingComments}}">
+                <view class="zan-loading"></view>
+                <view>加载中</view>
+            </view>
+            <scroll-view bindscrolltolower="handleScrollComments" class="feat-video__comments-scroll" scrollY="{{true}}">
+                <view class="feat-video__comments">
+                    <c bind:tapheart="handleTapHeart" comment="{{commentItem}}" index="{{commentIndex}}" wx:for="{{comments}}" wx:for-index="commentIndex" wx:for-item="commentItem" wx:key="id"></c>
+                </view>
+            </scroll-view>
+        </view>{{comment}}<d bind:addcomment="handleAddComment"></d>
+    </view>
+</view>

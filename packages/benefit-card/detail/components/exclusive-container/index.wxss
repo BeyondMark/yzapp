@@ -1,0 +1,30 @@
+.exc-con {
+  padding: 26px 24px 0;
+  color: #111;
+}
+.exc-con .title {
+  font-size: 14px;
+  font-weight: 500;
+  padding-bottom: 12px;
+}
+.exc-con .exc-exp {
+  padding: 16px 0;
+  font-size: 14px;
+}
+.exc-con .exc-exp .exp-tit {
+  color: #111;
+  font-weight: 500;
+  line-height: 20px;
+}
+.exc-con .exc-exp .exp-da {
+  color: #999;
+  padding-top: 8px;
+}
+.exc-con .exc-exp .in-cont {
+  font-size: 14px;
+  line-height: 24px;
+  color: #999;
+  padding-top: 8px;
+  white-space: pre-wrap;
+  word-break: break-all;
+}

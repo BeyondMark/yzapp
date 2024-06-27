@@ -1,0 +1,129 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.long-cell {
+  padding: var(--theme-page-cell-padding-top, 10px)
+    var(--theme-page-cell-padding-right, 12px)
+    var(--theme-page-cell-padding-bottom, 10px)
+    var(--theme-page-cell-padding-left, 12px) !important;
+}
+.b6efb {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 51;
+  background-color: #fff;
+}
+.c72be {
+  width: 100%;
+  padding: 10px 15px;
+  line-height: 15px;
+  color: #ed6a0c;
+  background-color: #fffbe8;
+}
+.c561c4,
+.c72be {
+  font-size: 12px;
+  box-sizing: border-box;
+}
+.c561c4 {
+  justify-content: space-between;
+  color: #333;
+  padding: 0 15px;
+  line-height: 35px;
+  height: 35px;
+  background-color: var(--ump-coupon-bg, #fff);
+}
+.c561c4,
+.c8ab04 {
+  display: flex;
+}
+.c43640 {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: #fff9f3;
+  box-sizing: border-box;
+}
+.c970dd {
+  display: flex;
+  align-items: center;
+  color: #323233;
+}
+.c8efe8 {
+  margin-right: 6px;
+}
+.eee91 {
+  color: #969799;
+  padding-left: 20px;
+}
+.c1dcc {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.c6c486 {
+  display: flex;
+  height: 50px;
+  padding-left: 16px;
+  padding-right: 16px;
+  overflow: hidden;
+  box-shadow: var(
+    --theme-page-bottom-bar-box-shadow,
+    0 -2px 12px 0 rgba(150, 151, 153, 0.1)
+  );
+}
+.c55ac1 {
+  flex: 1;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 6px 0;
+}
+.c6c486__button {
+  width: 110px;
+  height: 40px;
+  font-size: 16px;
+  line-height: 40px;
+  border-radius: var(--theme-radius-button, 20px);
+}
+.c6c486__button:after {
+  border: none;
+}
+.disabled.c6c486__button {
+  color: #999 !important;
+  border: none !important;
+  background-color: #e5e5e5 !important;
+}
+.b6efb__btn--renewal {
+  display: block;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+}
+.use-theme-color {
+  color: inherit;
+  background-color: transparent;
+}
+.b6efb .c6c486 {
+  padding-bottom: env(safe-area-inset-bottom, 34px);
+}
+.b3eb4 {
+  color: #ee0a24;
+  padding-left: 8px;
+}
+.c41bdd {
+  color: #ee0a24;
+  font-size: 10px;
+  top: 1px;
+}
+.theme-btn-radius {
+  border-radius: 20px;
+}
+.theme-btn-radius--disabled {
+  border-radius: 20px;
+  background-color: none !important;
+}

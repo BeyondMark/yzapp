@@ -1,0 +1,1 @@
+<view class="b8e8a c93440" style="{{themeCss}}" wx:if="{{showTips||haitaoZeroOrder}}"> {{headPrompt}}</view>

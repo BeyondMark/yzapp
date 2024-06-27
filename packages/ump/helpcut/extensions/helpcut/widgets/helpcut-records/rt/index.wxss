@@ -1,0 +1,70 @@
+.helpcut-block {
+  background-color: #ef8f56;
+  padding-bottom: 16px;
+}
+.activity-records {
+  border-radius: 16px;
+  background-color: #fff;
+  margin: 0 16px;
+  overflow: hidden;
+}
+.activity-records .title {
+  line-height: 44px;
+  background: #ffefdb;
+  font-size: 16px;
+  color: #ff1c00;
+  font-weight: bolder;
+  text-align: center;
+}
+.activity-records .collapse {
+  max-height: 210px;
+  overflow: hidden;
+}
+.activity-records .detail {
+  padding: 7px 12px 0;
+  font-size: 14px;
+}
+.activity-records .detail .item {
+  display: flex;
+  align-items: center;
+  height: 70px;
+}
+.activity-records .detail .item > image {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  margin-right: 10px;
+}
+.activity-records .detail .item .info {
+  width: 170px;
+}
+.activity-records .detail .item .info .nickname {
+  font-weight: bolder;
+  font-size: 14px;
+  color: #333;
+  height: 20px;
+  line-height: 20px;
+}
+.activity-records .detail .item .info .extra {
+  font-size: 12px;
+  color: #969799;
+  height: 16px;
+  line-height: 16px;
+  margin-top: 4px;
+}
+.activity-records .detail .item .price {
+  font-weight: bolder;
+  font-size: 14px;
+  color: #ff1c00;
+  text-align: right;
+  flex: 1;
+}
+.show-all-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  color: #646566;
+  font-size: 12px;
+  text-align: center;
+}

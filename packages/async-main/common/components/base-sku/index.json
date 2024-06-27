@@ -1,0 +1,22 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@vant/weapp/dist/popup/index",
+    "b": "./price-calendar/index",
+    "c": "./sku-datepicker/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentGenerics": {
+    "sku-header": { "default": "./sku-header/index" },
+    "sku-header-price": true,
+    "sku-row": { "default": "./sku-row/index" },
+    "sku-row-item": { "default": "./sku-row-item/index" },
+    "sku-row-prop-item": { "default": "./sku-row-prop-item/index" },
+    "sku-stepper": { "default": "./sku-stepper/index" },
+    "sku-group-extra": true,
+    "sku-stepper-bottom-block": true,
+    "sku-messages": { "default": "./sku-messages/index" },
+    "sku-actions": { "default": "./sku-actions/index" },
+    "sku-extra": { "default": "./sku-extra/index" }
+  }
+}

@@ -1,0 +1,30 @@
+<view class="show-qr-code" style="{{containerStyle}}">
+    <view style="{{cardStyle}}">
+        <view class="type-one" wx:if="{{card.type===1}}">
+            <view class="card-img" style="{{card.cardImgStyle}}">
+                <image class="tee-image" lazyLoad="true" mode="aspectFill" showMenuByLongpress="{{true}}" src="{{card.qrCodeUrl}}"></image>
+            </view>
+            <view class="card-desc" style="{{textStyle}}"> {{card.qrCodeDesc}} </view>
+        </view>
+        <view class="type-two" wx:if="{{card.type===2}}">
+            <view>
+                <view class="card-title">{{card.qrCodeTitle}}</view>
+                <view class="card-desc"> {{card.qrCodeDesc}} </view>
+            </view>
+            <view class="card-img" style="{{card.cardImgStyle}}">
+                <image class="tee-image" lazyLoad="true" mode="aspectFill" showMenuByLongpress="{{true}}" src="{{card.qrCodeUrl}}"></image>
+            </view>
+        </view>
+        <view class="type-three" wx:if="{{card.type===3}}">
+            <view class="card-each" wx:for="{{card.configs}}" wx:key="index">
+                <view class="card-line" wx:if="{{index!==0}}"></view>
+                <view class="card-item">
+                    <view class="card-img" style="{{item.cardImgStyle}}">
+                        <image class="tee-image" lazyLoad="true" mode="aspectFill" showMenuByLongpress="{{true}}" src="{{item.qrCodeUrl}}"></image>
+                    </view>
+                    <view class="card-desc" style="{{textStyle}}">{{item.qrCodeDesc}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

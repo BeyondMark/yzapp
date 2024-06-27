@@ -1,0 +1,9 @@
+<view wx:if="{{list.length}}">
+    <swiper autoplay="{{!isShowPlanDialog}}" circular="true" class="plan-list-swiper" interval="5000" vertical="true">
+        <swiper-item wx:for="{{list}}" wx:key="unique">
+            <b bind:open="openPlanDialog" planDetail="{{item}}"></b>
+        </swiper-item>
+    </swiper>
+    <view class="split-border"></view>
+    <a bind:bindMobile="onBindMobile" bindclose="closePlanDialog" fromPage="memberCenterClick" planId="{{specificPlanId}}" wx:if="{{isShowPlanDialog}}"></a>
+</view>

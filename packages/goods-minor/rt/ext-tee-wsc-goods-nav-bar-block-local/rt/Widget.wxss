@@ -1,0 +1,30 @@
+.page-preview .c4f03b {
+  max-width: 540px;
+  margin: 0 auto;
+  left: auto;
+}
+.page-preview .c4f03b .nav-wrapper.t-tabs__nav.t-tabs__nav--line {
+  width: 100%;
+}
+.c4f03b {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  z-index: 60;
+  overflow-y: hidden;
+  height: 40px;
+}
+.c44a4d {
+  line-height: 40px !important;
+  color: #646566 !important;
+}
+.c4bdbf {
+  font-size: 15px !important;
+  color: #323233 !important;
+}
+.f9264 {
+  bottom: 4px;
+}

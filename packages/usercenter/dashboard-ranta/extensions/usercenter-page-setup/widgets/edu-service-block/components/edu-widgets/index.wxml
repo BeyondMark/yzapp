@@ -1,0 +1,4 @@
+<view class="edu-widgets">
+    <b badges="{{badges}}" bind:widgetClicked="handleWidgetClicked" iconMode="{{iconMode}}" links="{{links}}" services="{{services}}" wx:if="{{mode===1}}"></b>
+    <a badges="{{badges}}" bind:widgetClicked="handleWidgetClicked" iconMode="{{iconMode}}" links="{{links}}" services="{{services}}" wx:else></a>
+</view>

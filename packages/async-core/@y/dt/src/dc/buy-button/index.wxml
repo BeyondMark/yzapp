@@ -1,0 +1,10 @@
+<view class="cap-buy-button" style="{{bgStyle}}">
+    <view class="buy-inner">
+        <view class="buy-icons" wx:if="{{showIconList}}">
+            <image bind:tap="_p" class="tee-image" data-t="{{ tap:{ en:'onIconClick',args:[icon] } }}" lazyLoad="true" src="{{icon.imageUrl}}" wx:for="{{iconList}}" wx:for-item="icon" wx:key="index"></image>
+        </view>
+        <view class="buy-btn" style="{{btnStyle}}">
+            <a bind:_init="_tic" bind:next="_p" data-t="{{ next:{en:'onBtnClick'} }}" kdtId="{{kdtId}}" scene="add_shopping_car"> {{opt.btnText}} </a>
+        </view>
+    </view>
+</view>

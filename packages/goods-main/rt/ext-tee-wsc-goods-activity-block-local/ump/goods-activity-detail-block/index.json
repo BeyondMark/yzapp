@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./components/tuan/index",
+    "b": "./components/groupon/index",
+    "c": "./components/other/index",
+    "_": "../../../../../../components/_/index"
+  }
+}

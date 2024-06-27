@@ -1,0 +1,19 @@
+.c21ae3 {
+  overflow: scroll;
+}
+.c8092b {
+  margin: 20px 16px 12px;
+  font-size: 16px;
+  color: #323233;
+  line-height: 24px;
+  font-weight: 500;
+}
+.c21ae3 .f8c1a {
+  margin-top: 16px;
+  text-align: center;
+  height: 16px;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #969799;
+}

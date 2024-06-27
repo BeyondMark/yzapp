@@ -1,0 +1,27 @@
+<view class="dc-search" id="{{searchId}}" style="{{style}}">
+    <view bind:tap="_p" class="dc-search-con {{conClass}}" data-t="{{ tap:{en:'handleSearch'} }}" id="{{conId}}" style="{{conStyle+opt.customStyle}}">
+        <view class="{{'search-wrap'}} {{'search-wrap-'+opt.textAlign}}" style="{{inputStyle}}">
+            <view class="dc-search-input" wx:if="{{hotSearchKeys.length<=0}}">
+                <slot name="search-icon" wx:if="{{opt.userSearchIconSlot}}"></slot>
+                <a bind:_init="_tic" class="dc-search-icon" name="search" wx:else></a>
+                <view class="dc-search-cell t-text"> {{opt.placeholder||''}} </view>
+            </view>
+            <slot name="search-icon" wx:if="{{opt.userSearchIconSlot}}"></slot>
+            <a bind:_init="_tic" class="dc-search-icon" name="search" wx:elif="{{hotSearchKeys.length>0&&opt.textAlign!=='center'}}"></a>
+            <view class="{{'search-swipe'}} {{'weapp-search-swipe'}} {{'search-swipe-'+opt.textAlign}}" style="{{'height:'+opt.height+'px'}}" wx:if="{{hotSearchKeys.length>0}}">
+                <swiper autoplay="{{3000>0}}" bind:_init="_tic" bind:change="_p" circular="true" class="{{'search-swipe'}} {{'search-swipe-'+opt.textAlign}}" current="0" data-t="{{ change:{en:'handleSwiperChange'} }}" displayMultipleItems="1" duration="500" indicatorActiveColor="#000000" indicatorColor="rgba(0, 0, 0, .3)" indicatorDots="{{false}}" interval="{{3000}}" style="{{swiperStyle}}" vertical="true" wx:if="{{hotSearchKeys.length>0}}">
+                    <swiper-item bind:_init="_tic" itemId="{{vanSwiperKey}}" style="{{swiperItemStyle}}" wx:for="{{hotSearchKeys}}" wx:key="item">
+                        <view class="search-swipe__item content-item" style="{{'height:'+opt.height+'px'}}" wx:if="{{opt.textAlign!=='center'}}">
+                            <view class="search-swipe__item_left" style="{{swiperItemStyle}}"> {{item}} </view>
+                        </view>
+                        <view class="search-swipe__item content-item" wx:if="{{opt.textAlign==='center'}}">
+                            <view class="search-swipe__item_center" style="{{swiperItemStyle}}">
+                                <a bind:_init="_tic" class="dc-search-icon" name="search" wx:if="{{hotSearchKeys.length>0&&opt.textAlign==='center'}}"></a> {{item}} </view>
+                        </view>
+                    </swiper-item>
+                </swiper>
+            </view>
+            <a bind:_init="_tic" catch:tap="_p" class="dc-scan-icon" data-t="{{ tap:{en:'handleScan',et:'stop'} }}" name="scan" wx:if="{{showScan}}"></a>
+        </view>
+    </view>
+</view>

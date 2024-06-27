@@ -1,0 +1,45 @@
+.c61589 {
+  position: fixed;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  bottom: calc(50px + env(safe-area-inset-bottom, 34px));
+}
+.ump-tips-inSourcingFission {
+  height: 50px;
+  padding: 0 16px;
+  font-size: 13px;
+  background: #f7f8fa;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ump-tips-inSourcingFission-more {
+  display: flex;
+  align-items: center;
+  color: #969799;
+}
+.ump-tips-inSourcingFission-icon {
+  line-height: 14px;
+}
+.ump-tips-inSourcingFission-pop {
+  padding-right: 40px;
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  text-align: right;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.ump-tips-inSourcingFission-img-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 40px;
+}
+.ump-tips-inSourcingFission-img {
+  width: 236px;
+  height: 180px;
+  background: url(https://img01.yzcdn.cn/upload_files/2020/03/12/FsWOOfoVDWfohplCVEzodzpyIFOt.png);
+  background-size: 236px 180px;
+}

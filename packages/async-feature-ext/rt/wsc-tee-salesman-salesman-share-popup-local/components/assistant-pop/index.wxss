@@ -1,0 +1,29 @@
+.tee-image {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.assistant-pop {
+  text-align: center;
+  font-size: 14px;
+}
+.assistant-pop__title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 48px;
+}
+.assistant-pop__subtext {
+  color: #39393a;
+  margin: 18px 0 8px;
+}
+.assistant-pop__img {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+}
+.assistant-pop__action {
+  margin: 8px 0 16px;
+}
+.assistant-pop__confirm {
+  padding: 8px 16px;
+}

@@ -1,0 +1,4 @@
+<view bind:tap="_p" class="change-btn" data-t="{{ tap:{en:'handleClick'} }}">
+    <view class="change-icon"></view>
+    <view class="change-txt t-text">{{opt.text}}</view>
+</view>

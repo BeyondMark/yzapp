@@ -1,0 +1,122 @@
+.list {
+  display: -webkit-flex;
+  display: flex;
+  overflow-y: scroll;
+  padding: 12px 0;
+}
+.list .name {
+  height: 20px;
+  line-height: 20px;
+  font-size: 14px;
+  color: #323233;
+}
+.list .name,
+.list .price {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.list .price {
+  height: 25px;
+  line-height: 25px;
+  font-size: 18px;
+}
+.list .price,
+.list .price:before {
+  font-weight: 500;
+  color: var(--themeColor);
+}
+.list .price:before {
+  content: "¥";
+  height: 18px;
+  line-height: 18px;
+  font-size: 13px;
+}
+.list .tip {
+  position: absolute;
+  width: 52px;
+  height: 22px;
+  line-height: 22px;
+  border-radius: 11px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
+}
+.list .mode1 .item {
+  width: 686.002rpx;
+  position: relative;
+}
+.list .mode1 .tip {
+  left: 292.5rpx;
+  top: 197.002rpx;
+}
+.list .mode1 .img {
+  object-fit: cover;
+  border-radius: 8.6px;
+  width: 686.002rpx;
+  height: 393rpx;
+  margin-bottom: 10px;
+}
+.list .mode1 .img-disable {
+  opacity: 0.5;
+}
+.list .mode2 {
+  padding-right: 9px;
+}
+.list .mode2 .item {
+  width: 333.975rpx;
+  position: relative;
+}
+.list .mode2 .tip {
+  left: 123rpx;
+  top: 78rpx;
+}
+.list .mode2 .img {
+  border-radius: 11px;
+  width: 333.975rpx;
+  height: 192rpx;
+  margin-bottom: 10px;
+}
+.list .mode2 .img-disable {
+  opacity: 0.5;
+}
+.list .mode3 {
+  padding-right: 9px;
+}
+.list .mode3 .item {
+  width: 272.002rpx;
+  position: relative;
+  display: block;
+}
+.list .mode3 .tip {
+  left: 84rpx;
+  top: 56.002rpx;
+}
+.list .mode3 .img {
+  border-radius: 4.33px;
+  width: 272.002rpx;
+  height: 156rpx;
+  margin-bottom: 10px;
+}
+.list .mode3 .img-disable {
+  opacity: 0.5;
+}
+.list .mode2:first-child,
+.list .mode3:first-child {
+  padding-left: 0;
+}
+.list .mode2:last-child,
+.list .mode3:last-child {
+  padding-right: 0;
+}
+.list .mode1:first-child .item,
+.list .mode2:first-child .item,
+.list .mode3:first-child .item {
+  margin-left: 16px;
+}
+.list .mode1:last-child .item,
+.list .mode2:last-child .item,
+.list .mode3:last-child .item {
+  margin-right: 16px;
+}

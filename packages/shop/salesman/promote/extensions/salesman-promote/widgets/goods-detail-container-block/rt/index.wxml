@@ -1,0 +1,12 @@
+<view class="goods-detail-wrap" id="js-nav-detail">
+    <c active="{{selectedId}}" bind:click="handleTabChange" border="{{false}}" class="goods-detail__tab" color="{{mainColor}}" lineWidth="{{24}}" zIndex="{{1}}" wx:if="{{goodsDetailTabs.length>1}}">
+        <d title="{{item.desc}}" wx:for="{{goodsDetailTabs}}" wx:key="type"></d>
+    </c>
+    <view class="goods-header" wx:if="{{goodsDetailTabs.length===1&&componentsLength}}">商品描述</view>
+    <view class="goods-detail {{goodsDetailTabs.length?'goods-detail--in-tab':''}}" hidden="{{selectedId!==1}}">
+        <b rmId="b29-3" vIf="{{uniqueKey}}" wx:if="{{rmId==='b29-0'}}"></b>
+    </view>
+    <view hidden="{{selectedId!==0}}">
+        <a rmId="{{rmId}}" wx:if="{{rmId==='b29-0'}}"></a>
+    </view>
+</view>

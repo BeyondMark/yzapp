@@ -1,0 +1,20 @@
+<view class="exclusive-detail" wx:if="{{showDetail}}">
+    <view class="mid-l"></view>
+    <view class="c-lt" wx:if="{{benfitKey==='coupon'&&userBenefitDetail.couponList&&userBenefitDetail.couponList.length}}">
+        <view class="c-im" wx:for="{{userBenefitDetail.couponList}}" wx:key="{{ item.key }}">
+            <view class="im-l">{{item.title}}</view>
+            <view>{{item.number}}张</view>
+        </view>
+    </view>
+    <a cardIsExpired="{{cardIsExpired}}" gifts="{{userBenefitDetail.presentList}}" hasCarrier="{{userBenefitDetail.hasCarrierTpl}}" themeGeneral="{{themeGeneral}}" wx:if="{{benfitKey==='present'}}"></a>
+    <view class="btm-cont" wx:if="{{showCode}}">
+        <view class="rst-n-i">剩余：{{cycleTime}}{{benefit.resetNum||0}}次</view>
+        <view class="epd-tip" wx:if="{{cardIsExpired}}">权益卡已过期，无法使用</view>
+        <c benefitId="{{benefit.benefitId}}" stockNum="{{benefit.resetNum}}" themeGeneral="{{themeGeneral}}" wx:else></c>
+    </view>
+    <view class="btm-cont btm-cont-p" wx:if="{{usedCount>0}}">
+        <view class="rst-n-i">已用：{{usedCount}}次</view>
+        <c benefitId="{{benefit.benefitId}}" cardNo="{{cardNo}}" isRecord="{{true}}" themeGeneral="{{themeGeneral}}"></c>
+    </view>
+    <b experienceLog="{{experienceLog}}" number="{{benefit.stockNum||0}}" rewardTip="{{rewardTip}}" wx:if="{{hasCard&&benefit.key==='experienceCard'}}"></b>
+</view>

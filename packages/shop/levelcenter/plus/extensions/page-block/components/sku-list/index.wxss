@@ -1,0 +1,59 @@
+.swipe-chioce-wrapper {
+  min-height: 143px;
+  margin-top: 16px;
+  position: relative;
+  background-color: #fff;
+  padding-bottom: 16px;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.swipe-chioce-wrapper .item-active {
+  background-color: #fff9ee;
+  border-color: #e2bb7b;
+}
+.swipe-chioce-wrapper .item-active .origin-price {
+  color: #7d7e80;
+}
+.set-choice-wrapper {
+  width: 100%;
+  min-height: 143px;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.detail-loading {
+  width: 42px;
+  margin: 0 auto;
+}
+.sku-list {
+  overflow-y: hidden;
+  max-width: 100%;
+  overflow-x: auto;
+}
+.choice-item {
+  height: 143px;
+  min-width: 108px;
+  margin-right: 10px;
+  border: 1.4px solid #ebebeb;
+  border-radius: 10px;
+  color: #eee;
+  padding-top: 32px;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+}
+.choice-item:first-child {
+  margin-left: 16px;
+}
+.choice-item:last-child {
+  margin-right: 16px;
+}
+.task-label {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 24px;
+  font-weight: 700;
+  margin-left: 16px;
+}

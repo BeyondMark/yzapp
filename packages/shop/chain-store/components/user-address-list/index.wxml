@@ -1,0 +1,28 @@
+<view class="user-address">
+    <view class="current">
+        <view class="current-title">当前定位</view>
+        <view class="current-address">
+            <view class="current-name">
+                <a class="icon-location" name="location-o" size="20"></a>
+                <text class="text ml4px">{{currentLocation||'华泰创业园'}}</text>
+            </view>
+            <view bind:tap="onReset" class="current-reset">
+                <a name="aim" size="16"></a>
+                <text class="text ml4px">重新定位</text>
+            </view>
+        </view>
+    </view>
+    <view class="gap"></view>
+    <view class="title">收货地址</view>
+    <view bind:tap="onSelect" class="item" data-address="{{item}}" data-index="{{index}}" wx:for="{{userAddressList}}" wx:key="id">
+        <view class="left">
+            <view class="name">{{item.location||item.addressDetail}}</view>
+            <view class="address">{{item.province}}{{item.city}}{{item.county}}{{item.addressDetail}}{{item.houseNumber}}</view>
+            <view class="info">
+                <text>{{item.userName}}</text>
+                <text>{{item.tel}}</text>
+            </view>
+        </view>
+        <a class="arrow-icon" name="arrow" size="12"></a>
+    </view>
+</view>

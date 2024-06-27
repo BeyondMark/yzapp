@@ -1,0 +1,62 @@
+.trade-carousel {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  min-width: 210px;
+  height: 32px;
+  z-index: 22;
+  overflow: hidden;
+  color: #fff;
+}
+.trade-carousel__swipe {
+  height: 32px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+}
+.trade-carousel__swipe-item {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: 32px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 16px;
+  padding: 0 5px;
+}
+.trade-carousel__swipe-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.trade-carousel__swipe-text {
+  flex: 1;
+  margin-right: 1px;
+  line-height: normal;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.move-enter-active {
+  animation: move-in 0.5s;
+}
+.move-leave-active {
+  animation: move-out 0.3s;
+  animation-fill-mode: forwards;
+}
+@keyframes move-in {
+  0% {
+    transform: translateY(32px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes move-out {
+  0% {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-32px);
+  }
+}

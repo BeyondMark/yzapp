@@ -1,0 +1,98 @@
+.multi-select-field .multi-select {
+  box-sizing: border-box;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+.multi-select-field .field-input {
+  flex: 1;
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  padding: 10px 15px;
+  align-items: center;
+  font-size: 14px;
+}
+.multi-select-field .multi-values {
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+.multi-select-field .multi-values__item {
+  padding: 2px 5px;
+  margin: 5px 8px 0 0;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  background-color: #666;
+  border-radius: 3px;
+}
+.multi-select-field .field-label {
+  min-width: 90px;
+  color: #666;
+}
+.multi-select-field .input-se-icon {
+  position: absolute;
+  right: 15px;
+  font-size: 16px;
+  margin-top: 2px;
+  color: #999;
+}
+.multi-select-field .se-icon.van-icon {
+  position: absolute;
+  right: 15px;
+  font-size: 10px;
+  transform: scale(0.8);
+}
+.multi-select-field .field-placeholder {
+  color: #999;
+}
+.multi-select-field .select-popup {
+  flex-direction: column;
+  padding-bottom: 15px;
+  border-radius: 12px 12px 0 0;
+}
+.multi-select-field .options-header {
+  position: relative;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+}
+.multi-select-field .options-header-icon {
+  position: absolute;
+  right: 16px;
+  color: #969799;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+.multi-select-field .options-container {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+.multi-select-field .van-checkbox {
+  height: 48px;
+  padding: 14px;
+  box-sizing: border-box;
+}
+.multi-select-field .btn-container {
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  padding: 7px 16px;
+}
+.multi-select-field .btn-container .van-button {
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 18px;
+  color: inherit;
+  border: none;
+  background: transparent;
+}
+.multi-select-field .btn-container .theme-view {
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+}

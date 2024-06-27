@@ -1,0 +1,7 @@
+.customer-asset {
+  position: relative;
+}
+.auth-slot {
+  width: 100%;
+  height: 100%;
+}

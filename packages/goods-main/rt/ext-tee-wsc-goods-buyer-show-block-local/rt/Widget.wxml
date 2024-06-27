@@ -1,0 +1,4 @@
+<view class="c9f7b9" style="{{pageStyleCSS}}" wx:if="{{showBuyerShows&&buyerShowList.length>0}}">
+    <a alias="{{alias}}" bind:_init="_tic" count="{{count}}" kdtId="{{kdtId}}"></a>
+    <b alias="{{alias}}" bind:_init="_tic" kdtId="{{kdtId}}" showList="{{buyerShowList}}"></b>
+</view>

@@ -1,0 +1,12 @@
+<view class="van-sku-actions" wx:if="{{extraData&&extraData.presaleInfo}}">
+    <view class="van-sku-actions__btn van-sku-actions__btn--presale van-hairline--top">
+        <view class="van-sku-actions__time-wrap">
+            <view class="van-sku-actions__presale-time">{{extraData.presaleInfo.presaleEndTimeStr}}</view>
+            <view class="van-sku-actions__presale-time">{{extraData.presaleInfo.presaleShipTimeStr}}</view>
+        </view>
+    </view>
+    <view class="van-sku-actions__btn van-sku-actions__btn--disabled" wx:if="{{extraData.presaleInfo.isPresaleOutDate}}">已结束</view>
+    <b bind:next="onPayPresale" class="van-sku-actions__btn-wrap" wx:else>
+        <a bg="main-bg" customClass="van-sku-actions__btn van-sku-actions__btn--main">支付定金</a>
+    </b>
+</view>

@@ -1,0 +1,24 @@
+.c58146__disabled .c855c,
+.c58146__disabled .c18bf6 {
+  color: #969799;
+}
+.c58146__unavailable .c855c,
+.c58146__unavailable .c18bf6 {
+  color: #c8c9cc;
+}
+.c58146 {
+  display: flex;
+  font-size: 14px;
+  line-height: 18px;
+}
+.c855c {
+  overflow: hidden;
+  color: #323233;
+  font-weight: 500;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.c18bf6 {
+  flex: 0 0 auto;
+  color: #969799;
+}

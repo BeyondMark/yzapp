@@ -1,0 +1,26 @@
+<view bind:tap="_p" class="recommend-note {{isWaterFall?'isWaterFall':''}}" data-t="{{ tap:{en:'handleClick'} }}">
+    <view class="recommend-note-banner">
+        <view class="recommend-note-banner__img" style="{{paddingTopStyle}}">
+            <image class="recommend-note-banner__img-waterfall tee-image" lazyLoad="true" mode="widthFix" src="{{imgSrc}}" wx:if="{{isWaterFall}}"></image>
+            <view class="recommend-note-banner__img-bg {{imageFillStyleClass}}" style="{{imgStyle}}" wx:else></view>
+        </view>
+        <view class="recommend-note-wrapper {{noteClass}}">
+            <view class="recommend-note-wrapper__title" wx:if="{{opt.titleOpt||opt.subTitleOpt}}">
+                <view class="title" style="{{textStyle}}" wx:if="{{opt.titleOpt}}"> {{opt.titleOpt.title}} </view>
+                <view class="subtitle" wx:if="{{opt.subTitleOpt}}"> {{opt.subTitleOpt.description}} </view>
+            </view>
+            <view class="recommend-note-wrapper__info" wx:if="{{opt.priceOpt||opt.btnOpt}}">
+                <view class="recommend-note-wrapper__info-label" wx:if="{{opt.priceOpt}}">
+                    <view class="note-label">
+                        <view class="t-text">#{{opt.priceOpt&&opt.priceOpt.label}}</view>
+                        <view class="note-label-bg"></view>
+                    </view>
+                </view>
+                <view class="recommend-note-wrapper__info-view" wx:if="{{opt.btnOpt}}">
+                    <a bind:_init="_tic" class="icon-wrapper" name="eye-o" size="18px"></a>
+                    <view class="view-num">{{opt.btnOpt&&opt.btnOpt.pv}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,8 @@
+<view bind:tap="onClick" class="method {{disabled?'disabled':''}} {{loading?'loading':''}} {{hairline?'hairline':''}}">
+    <view class="content">
+        <view class="name" style="color: {{color}};" wx:if="{{!loading}}">{{name}}</view>
+        <view class="right" wx:if="{{!loading&&saleRight}}">{{saleRight}}</view>
+        <view class="desc" wx:if="{{!loading&&desc}}">{{desc}}</view>
+        <a wx:if="{{loading}}"></a>
+    </view>
+</view>

@@ -1,0 +1,39 @@
+.t-text {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.asset-info-nav {
+  display: -webkit-flex;
+  display: flex;
+}
+.asset-info-nav .ml-4 {
+  margin-left: 4px;
+}
+.asset-info-nav .info-container {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.asset-info-nav .info-container .asset-name {
+  display: -webkit-flex;
+  display: flex;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 2px 0;
+  color: var(--realTextColor);
+  font-weight: 700;
+}
+.asset-info-nav .info-container .asset-desc {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--realTextColor);
+  opacity: 0.5;
+}
+.asset-info-nav .info-container .asset-desc .align-middle {
+  vertical-align: middle;
+}
+.asset-info-nav .info-container .asset-desc .nav-icon {
+  font-size: 16px;
+}

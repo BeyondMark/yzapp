@@ -1,0 +1,5 @@
+.subscribe-guide-wrapper image {
+  width: 200px !important;
+  height: 146px !important;
+  border-radius: 4px;
+}

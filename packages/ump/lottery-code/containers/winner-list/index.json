@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../components/title-bar/index",
+    "b": "../../components/user-item/index",
+    "_": "../../../../../components/_/index"
+  }
+}

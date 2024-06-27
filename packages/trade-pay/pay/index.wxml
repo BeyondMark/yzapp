@@ -1,0 +1,46 @@
+<view bind:tap="_p" data-t="{{ tap:{en:'_tprc'} }}" style="{{_pageStyleStr}}">
+    <view style="{{_pageStyle}}">
+        <view>
+            <view class="c964a4">
+                <view class="c964a4">
+                    <a bind:_init="_tic" nr="true" rmId="b38-24" wx:if="{{RM&&RM['b38-24']}}"></a>
+                    <b bind:_init="_tic" nr="true" rmId="b38-0" wx:if="{{RM&&RM['b38-0']}}"></b>
+                </view>
+            </view>
+            <view class="c964a4">
+                <view class="c964a4">
+                    <c bind:_init="_tic" nr="true" rmId="b38-1" wx:if="{{RM&&RM['b38-1']}}"></c>
+                    <d bind:_init="_tic" nr="true" rmId="b38-30" wx:if="{{_normal&&RM&&RM['b38-30']}}"></d>
+                </view>
+                <view class="c964a4">
+                    <e bind:_init="_tic" nr="true" rmId="b38-10" wx:if="{{RM&&RM['b38-10']}}"></e>
+                    <f bind:_init="_tic" nr="true" rmId="b38-26" wx:if="{{_normal&&RM&&RM['b38-26']}}"></f>
+                    <g bind:_init="_tic" nr="true" rmId="b38-33" wx:if="{{_normal&&RM&&RM['b38-33']}}"></g>
+                </view>
+                <view class="c964a4">
+                    <h bind:_init="_tic" nr="true" rmId="b38-14" wx:if="{{RM&&RM['b38-14']}}"></h>
+                    <i bind:_init="_tic" isPayPage="{{true}}" nr="true" rmId="b38-34" wx:if="{{_normal&&RM&&RM['b38-34']}}"></i>
+                    <j bind:_init="_tic" nr="true" rmId="b38-18" wx:if="{{_normal&&RM&&RM['b38-18']}}"></j>
+                </view>
+                <view class="c964a4">
+                    <k bind:_init="_tic" nr="true" rmId="b38-12" wx:if="{{_normal&&RM&&RM['b38-12']}}"></k>
+                    <l bind:_init="_tic" nr="true" rmId="b38-15" wx:if="{{_normal&&RM&&RM['b38-15']}}"></l>
+                    <m bind:_init="_tic" nr="true" rmId="b38-20" yzGuaranteeEnsureMt="{{16}}" wx:if="{{_normal&&RM&&RM['b38-20']}}"></m>
+                    <n bind:_init="_tic" nr="true" rmId="b38-19" wx:if="{{_normal&&RM&&RM['b38-19']}}"></n>
+                </view>
+                <view class="c964a4">
+                    <o bind:_init="_tic" nr="true" rmId="b38-5" wx:if="{{RM&&RM['b38-5']}}"></o>
+                </view>
+            </view>
+            <view class="c964a4">
+                <view class="c964a4">
+                    <p bind:_init="_tic" nr="true" rmId="b38-27" wx:if="{{RM&&RM['b38-27']}}"></p>
+                    <q bind:_init="_tic" nr="true" rmId="b38-7" wx:if="{{RM&&RM['b38-7']}}"></q>
+                    <r bind:_init="_tic" nr="true" rmId="b38-6" wx:if="{{RM&&RM['b38-6']}}"></r>
+                </view>
+            </view>
+            <s bind:_init="_tic" data-ref="van-toast" isPageDefault="{{true}}"></s>
+            <t bind:_init="_tic" data-ref="van-dialog" isPageDefault="{{true}}"></t>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y-open/vt/dist/button/index.weapp",
+    "b": "./PrepaidRuleRightsDetail",
+    "c": "/@y-open/vt/dist/popup/index.weapp",
+    "d": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "e": "./Proto",
+    "f": "../../../../../@y-open/vt/dist/divider/index",
+    "_": "../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "d": "_" }
+}

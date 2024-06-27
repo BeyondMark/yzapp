@@ -1,0 +1,15 @@
+<view class="c45ed5 custom-class">
+    <view class="bar-class c0d352">
+        <view class="d9321" wx:if="{{hasPrice}}">
+            <view class="c89585">{{label||'合计：'}}</view>
+            <view class="c1779c price-class" style="color:{{themeColors['icon']}}">
+                <view class="c769bf c89585">{{currency}} </view>
+                <view class="c1779c-integer c89585">{{integerStr}}</view>
+                <view class="c23f90 c89585">{{decimalStr}}</view>
+            </view>
+            <view class="c6bdde c89585">{{suffixLabel}}</view>
+        </view>
+        <a bind:_init="_tic" bind:tap="_p" class="c988c3" customClass="button-class" customStyle="color: var(--main-text, #fff); background: var(--main-bg, #323233); border: 1px solid var(--main-bg, #323233)" data-t="{{ tap:{en:'onSubmit'} }}" disabled="{{disabled}}" loading="{{loading}}" round="{{true}}" type="{{buttonType}}"> {{loading?'':buttonText}} </a>
+    </view>
+    <view class="c45ed5__safe"></view>
+</view>

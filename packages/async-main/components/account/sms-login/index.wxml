@@ -1,0 +1,14 @@
+<view class="container" hoverClass="none" hoverStopPropagation="false">
+    <view class="title">{{title}}</view>
+    <view class="section">
+        <b bind:input="bindMobileInput" border="{{false}}" class="mobile-input" clearable="{{true}}" customStyle="padding-left:0px !important;" maxlength="11" placeholder="请输入手机号" type="number" value="{{formData.mobile}}"></b>
+    </view>
+    <view class="section">
+        <b bind:input="bindCaptchaInput" border="{{false}}" class="sms-input" clearable="{{true}}" customStyle="padding-left:0px !important;" maxlength="6" placeholder="请输入 6 位验证码" placeholderStyle="" type="number" value="{{formData.captcha}}"></b>
+        <view catchtap="fetchCaptcha" class="fetch-captcha-btn {{captcha.btnStyle}}">{{captcha.text}}</view>
+    </view>
+    <view catchtap="changeLoginType" class="login-type-change">账号密码登录</view>
+    <a bind:agreementChange="agreementChange"></a>
+    <c block="{{true}}" catchtap="login" class="button" customClass="login-btn" disabled="{{loginBtn.disabled}}" type="primary">{{loginBtn.text}}</c>
+</view>
+<d id="van-dialog"></d>

@@ -1,0 +1,10 @@
+<view>
+    <view bind:touchend="_p" bind:touchmove="_p" bind:touchstart="_p" class="t-swipe" data-t="{{ touchstart:{en:'onTouchStart'},touchmove:{en:'onTouchMove'},touchend:{en:'onTouchEnd'} }}" style="{{rootStyle}}">
+        <view class="t-swipe__track {{vertical?'vertical':''}}" style="{{swipeStyle}}">
+            <slot></slot>
+        </view>
+        <view class="{{'t-swipe__indicators'}} {{classes.indicators}}" wx:if="{{showIndicators}}">
+            <view class="{{'t-swipe__indicator'}} {{indicatorClass}} {{activeIndicator==index?'active':''}}" style="{{activeIndicator==index?indicatorStyle:''}}" wx:for="{{count}}" wx:for-item="i" wx:key="index"></view>
+        </view>
+    </view>
+</view>

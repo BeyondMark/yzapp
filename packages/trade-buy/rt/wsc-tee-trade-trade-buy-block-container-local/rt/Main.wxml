@@ -1,0 +1,5 @@
+<view class="c4200c" data-ref="blockContainer" style="margin-bottom:{{marginBottom+'px'}}">
+    <a bind:_init="_tic" class="block-content" rmId="b36-15" wx:if="{{rmId==='b36-20'}}"></a>
+    <b bind:_init="_tic" class="block-content" rmId="b36-30" wx:if="{{rmId==='b36-31'}}"></b>
+    <c bind:_init="_tic" class="block-content" rmId="b36-13" wx:if="{{rmId==='b36-32'}}"></c>
+</view>

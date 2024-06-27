@@ -1,0 +1,15 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../wsc-tee-salesman-salesman-pay-result-block-local/rt/SalesmanPayResultInfo",
+    "b": "./../components/award-items/Point",
+    "c": "./../components/award-items/StoreValue",
+    "d": "./../components/award-items/Member",
+    "e": "./../components/award-items/MemberGuide",
+    "f": "./../components/award-items/PriorUse",
+    "g": "./../components/award-items/coupon-block/index",
+    "h": "./../components/widgets/MaskBlock",
+    "i": "./../components/award-items/paid-promotion/index",
+    "_": "../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../../common/components/icon/index",
+    "b": "/packages/async-main/@vant/weapp/dist/toast/index",
+    "_": "../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_" }
+}

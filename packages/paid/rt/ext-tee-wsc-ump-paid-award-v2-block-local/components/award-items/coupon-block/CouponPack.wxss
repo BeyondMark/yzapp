@@ -1,0 +1,121 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.c6468f {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.d6e16 {
+  display: flex;
+  overflow: hidden;
+  height: 120px;
+  padding: 0;
+  border-radius: var(--theme-radius-card, 8px);
+  width: 100%;
+}
+.title {
+  color: #969799;
+  font-size: 14px;
+}
+.c59da8 {
+  flex: 1;
+  padding: 12px;
+  font-size: 12px;
+}
+.c64bc4 {
+  display: flex;
+  justify-content: space-around;
+}
+.c64bc4 .c66d06 {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid;
+  border-radius: var(--theme-radius-card, 4px);
+  width: 96px;
+  z-index: 1;
+}
+.c64bc4 .c66d06 .c78a5e {
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.c64bc4 .c66d06 .aa9f7 {
+  border-top: 1px dashed;
+  color: #646566;
+  height: 32px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.c84c17 {
+  margin-left: 8px;
+}
+.c8a887 {
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid;
+}
+.c50ea4 {
+  left: -5px;
+  top: -5px;
+}
+.c752d1 {
+  right: -5px;
+  top: -5px;
+}
+.c56e03 {
+  width: 106px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-left: dashed 1px var(--ump-border, #c9c9ff);
+  position: relative;
+}
+.c56e03 .ce50a {
+  display: block;
+  color: var(--ump-main-text, #fff);
+  background-color: var(--ump-main-bg, #323233);
+  border-color: var(--ump-main-bg, #323233);
+  font-size: 12px;
+  height: 24px;
+  margin-top: 12px;
+  padding: 0 12px;
+  width: 72px;
+  white-space: nowrap;
+  border-radius: var(--theme-radius-button, 999px) !important;
+}
+.c95dd7 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+}
+.c1fd7a {
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 4px;
+  color: #646566;
+}
+.a0868 {
+  overflow: hidden;
+  position: absolute;
+}
+.c9277d {
+  width: 88px;
+  height: 6px;
+  margin-left: 4px;
+  border-radius: var(--theme-radius-card, 4px);
+  border: 1px solid;
+  margin-top: 90px;
+}

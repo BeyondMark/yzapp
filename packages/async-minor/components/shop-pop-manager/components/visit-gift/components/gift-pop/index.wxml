@@ -1,0 +1,17 @@
+<a bind:close="onClose" customClass="gift-container" show="{{show}}" zIndex="{{10000}}">
+    <view bind:tap="onClose" class="gift-icon--close"></view>
+    <view>
+        <view class="gift-header" style="background-image: url({{detail.imageUrl}});" wx:if="{{detail.useSelfStyle}}"></view>
+        <view class="gift-wrap gift-wrap-{{detail.showType}}" style="{{detail.style}}">
+            <view bind:tap="toggleRules" class="rule-tag">活动规则</view>
+            <block wx:if="{{detail.hasCoupon}}">
+                <view class="gift-wrap__title {{detail.titleClass}}">
+                    <block wx:if="{{detail.showType===2&&detail.totalMoney}}">送你<text class="gift-wrap__title--strong">{{detail.totalMoney}}</text>元红包</block>
+                    <block wx:else>{{detail.title}}</block>
+                </view>
+                <c bind:close="onClose" bind:toggle-subscribe-mask="toggleSubscribeMask" detail="{{detail}}" source="{{source}}"></c>
+            </block>
+            <b detail="{{detail}}" wx:else></b>
+        </view>
+    </view>
+</a>

@@ -1,0 +1,45 @@
+<view class="sn-common-card">
+    <a _opt="{{opt.infoData.listType!==5&&opt.infoData.layoutOpt}}" bind:_init="_tic">
+        <b _opt="{{opt.infoData.listType!==5&&opt.infoData.layoutOpt}}" bind:_init="_tic" bind:tap="_p" data-alias="{{itemData.noteAlias}}" data-index="{{index}}" data-notetype="{{itemData.noteType}}" data-t="{{ tap:{en:'itemClick'} }}" wx:for="{{opt.list}}" wx:for-item="itemData" wx:key="index">
+            <view class="{{'common-layout-wrapper'}} {{'wrapper-'+opt.infoData.listType}}">
+                <view class="{{'common-layout'}} {{'card-'+opt.infoData.noteStyle}} {{'border-'+opt.infoData.noteCornerStyle}} {{'corner-'+opt.infoData.noteStyle}}">
+                    <view class="common-layout-container">
+                        <view class="img-wrapper">
+                            <image class="sn-img tee-image" lazyLoad="{{true}}" mode="aspectFill" src="{{itemData.imgUrl}}" wx:if="{{opt.infoData.listType!==5}}"></image>
+                            <d _opt="{{src:itemData.imgUrl,fill:'width'}}" bind:_init="_tic" wx:else></d>
+                            <view class="label" wx:if="{{opt.infoData.showNoteTypeTag&&opt.infoData.titlePosition===1}}">
+                                <view class="label-span">#</view>
+                                <view>{{itemData.label}}</view>
+                            </view>
+                            <view class="cover" wx:if="{{opt.infoData.titlePosition===0}}">
+                                <view class="cover-top">
+                                    <view class="label" wx:if="{{opt.infoData.showNoteTypeTag}}">
+                                        <view class="cover-top-span">#</view>
+                                        <view>{{itemData.label}}</view>
+                                    </view>
+                                    <view style="float: right">
+                                        <c _opt="{{itemData:itemData,infoData:opt.infoData,theme:'white',layout:'right',thumbClick:thumbClick}}" bind:_init="_tic"></c>
+                                    </view>
+                                </view>
+                                <view class="cover-bottom">
+                                    <view class="{{'cover-bottom-title'}} {{'font-'+opt.infoData.textStyle}}"> {{itemData.title||itemData.description}} </view>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="common-layout-summary" wx:if="{{opt.infoData.titlePosition===1||opt.infoData.titlePosition===3}}">
+                            <view class="label" wx:if="{{opt.infoData.showNoteTypeTag&&opt.infoData.titlePosition===3}}">
+                                <view class="label-span">#</view>
+                                <view style="color: #646566; display: inline-block">{{itemData.label}}</view>
+                            </view>
+                            <view class="{{'common-layout-summary-title'}} {{'font-'+opt.infoData.textStyle}}"> {{itemData.title||itemData.description}} </view>
+                            <c _opt="{{itemData:itemData,infoData:opt.infoData,thumbClick:thumbClick,customClass:'custom-style-1'}}" bind:_init="_tic"></c>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </b>
+        <b bind:_init="_tic" bind:tap="_p" data-t="{{ tap:{en:'linkToMore'} }}" wx:if="{{isSwipeLayout&&needLoadMore}}">
+            <e bind:_init="_tic"></e>
+        </b>
+    </a>
+</view>

@@ -1,0 +1,220 @@
+.feat-video {
+  color: #111;
+  font-size: 12px;
+  background-color: #fff;
+  padding-bottom: 25px;
+}
+.feat-video__video-container {
+  position: relative;
+  width: 100%;
+  visibility: hidden;
+}
+.feat-video__video-container video {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  background: #000;
+}
+.feat-video--visible {
+  visibility: visible;
+}
+.feat-video__extra-block {
+  margin: 14px 15px 7px;
+}
+.feat-video__extra {
+  color: #999;
+  display: flex;
+  align-items: center;
+}
+.feat-video__title-block {
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.feat-video__decp,
+.feat-video__title {
+  display: inline-block;
+}
+.feat-video__title {
+  font-weight: 700;
+}
+.feat-video__date {
+  line-height: 17px;
+  margin-top: 5px;
+  margin-bottom: 9px;
+  display: inline-block;
+  flex: 1;
+}
+.feat-video__more-goods {
+  float: right;
+  font-size: 10px;
+  line-height: 14px;
+  margin-top: -3px;
+}
+.feat-video__good__pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+}
+.feat-video__goods {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f5f4f2;
+  margin-bottom: 14px;
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.feat-video__good {
+  display: inline-block;
+  max-width: 184px;
+  text-align: left;
+  margin-right: 15px;
+}
+.feat-video__good__info {
+  float: right;
+  height: 80px;
+  position: relative;
+  margin-left: 5px;
+  line-height: 17px;
+}
+.feat-video__good__name {
+  width: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.feat-video__good__price {
+  position: absolute;
+  bottom: 0;
+  font-weight: 700;
+}
+.feat-video__good__decp {
+  color: #af9d76;
+  font-size: 10px;
+  display: inline-block;
+}
+.feat-video__comments {
+  padding: 7px 10px 0;
+}
+.feat-video__comment {
+  margin-bottom: 7px;
+}
+.feat-video__comment__likes {
+  display: flex;
+  align-items: center;
+  float: right;
+}
+.feat-video__comment__likes-count {
+  display: inline-block;
+  margin-bottom: -3px;
+}
+.feat-video__comment__likes image {
+  width: 13px;
+  height: 13px;
+  padding: 0 5px;
+}
+.feat-video__comment__header {
+  color: #4a4a4a;
+  line-height: 17px;
+  margin-bottom: 5px;
+  display: flex;
+}
+.feat-video__comment__name {
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  flex: 1;
+  padding-right: 20px;
+}
+.feat-video__comment__content {
+  color: #333;
+  line-height: 16px;
+  margin: 0 5px 5px 0;
+}
+.feat-video__comment__date {
+  color: #999;
+  line-height: 14px;
+  font-size: 10px;
+  padding-bottom: 5px;
+}
+.feat-video__comments {
+  border-radius: 8px;
+  height: 161px;
+}
+.feat-video__comment__reply {
+  padding-top: 9px;
+  border-top: 1px solid #979797;
+  padding-left: 16px;
+}
+.feat-video__comment__input {
+  background-color: #f7f7f7;
+  border-radius: 14.5px;
+  height: auto;
+  padding: 7px 10px 7px 30px;
+  display: block;
+  margin-right: 42px;
+}
+.feature-video__comment-button {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  top: 4px;
+  right: 5px;
+  z-index: 5;
+  border: none !important;
+}
+button:after {
+  border: none;
+}
+.feat-video__comment__input textarea {
+  font-size: 12px;
+  line-height: 16px;
+  background-color: initial;
+  z-index: 3;
+}
+.feat-video__comment__input view:first-child {
+  background-color: initial;
+  padding: 0;
+}
+.feat__video__add-comment-block image {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  top: 0;
+  right: 0;
+  z-index: 5;
+}
+.feat-video__comments-block {
+  position: relative;
+}
+.feat-video__comments-scroll {
+  height: 161px;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+}
+.feat-video__comments-scroll::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.feat__video__add-comment-block {
+  margin-top: 7px;
+  position: relative;
+}
+.feat-video__loading-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 8px;
+  top: 0;
+  left: 0;
+}

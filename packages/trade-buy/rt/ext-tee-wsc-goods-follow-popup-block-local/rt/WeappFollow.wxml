@@ -1,0 +1,11 @@
+<view style="{{themeVars}}">
+    <a bind:_init="_tic" customClass="a59d5" overlayStyle="{{popOverlayStyle}}" show="{{show}}">
+        <view bind:tap="_p" class="e2ada" data-t="{{ tap:{en:'closePopup'} }}"></view>
+        <view class="c760fd">
+            <view class="d5d3d">{{title}}</view>
+            <view class="c0e506">{{subTitle}}</view>
+            <button bind:tap="_p" class="c8839" data-t="{{ tap:{en:'onClick'} }}" wx:if="{{newRiseFollower}}"> {{btnText}} </button>
+            <button bind:contact="onContactBack" bind:tap="_p" class="c8839" data-t="{{ tap:{en:'onClick'} }}" openType="contact" sendMessageImg="{{messageImg}}" sendMessagePath="{{messagePath}}" sendMessageTitle=" " showMessageCard="{{true}}" wx:else> {{btnText}} </button>
+        </view>
+    </a>
+</view>

@@ -1,0 +1,13 @@
+<view class="group-hook" style="{{groupStyle}}">
+    <view class="group-title">{{opt.groupItem.title}}</view>
+    <view wx:if="{{list.length}}">
+        <view style="{{goodsStyle}}" wx:for="{{list}}" wx:for-item="goodsItem" wx:key="_id">
+            <b bind:_init="_tic" bind:load="_p" data-t="{{ load:{ en:'loadGoods',args:[goodsItem._id] } }}" wx:if="{{goodsItem._skeleton}}"></b>
+            <a _opt="{{goodsItem.itemCardOpt}}" bind:_init="_tic" bind:button-click="_p" bind:item-click="_p" data-t="{{ buttonClick:{ en:'handleGoodsBuy',args:[goodsItem.id] },itemClick:{en:'handleItemClick'} }}" isShowGoodsAddNumber="{{_opt.isShowGoodsAddNumber}}" textClass="tag-group-text-info-no-margin-top" type="screen-slide" wx:else></a>
+        </view>
+    </view>
+    <view class="group-empty" wx:else>
+        <view wx:if="{{isEmpty}}">此类下暂时没有商品</view>
+        <c bind:_init="_tic" wx:else></c>
+    </view>
+</view>

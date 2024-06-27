@@ -1,0 +1,40 @@
+.cap-layout {
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.cap-layout-three,
+.cap-layout-two {
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+.cap-layout-swipe {
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+}
+.cap-layout-item {
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.cap-layout-item.one {
+  position: relative;
+  display: block;
+}
+.cap-layout-item.two {
+  float: left;
+  width: 50%;
+}
+.cap-layout-item.three {
+  float: left;
+  width: 33.33%;
+}
+.cap-layout-item.swipe {
+  flex: 0 0 auto;
+  width: 210rpx;
+}
+.showcase-meet-reduction .hybrid-line {
+  display: -webkit-flex;
+  display: flex;
+}

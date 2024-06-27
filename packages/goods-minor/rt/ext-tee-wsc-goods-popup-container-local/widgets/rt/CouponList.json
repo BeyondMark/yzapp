@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./CouponItem",
+    "_": "../../../../../../components/_/index"
+  }
+}

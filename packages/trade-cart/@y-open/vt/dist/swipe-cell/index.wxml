@@ -1,0 +1,11 @@
+<view bind:touchcancel="_p" bind:touchend="_p" bind:touchstart="_p" capture-bind:touchmove="onDrag" catch:tap="_p" catchtouchmove="{{catchMove?'noop':''}}" class="c950c8" data-key="cell" data-t="{{ tap:{en:'onClick',et:'stop'},touchstart:{en:'startDrag'},touchend:{en:'endDrag'},touchcancel:{en:'endDrag'} }}">
+    <view style="{{wrapperStyle}}">
+        <view catch:tap="_p" class="c9e8c0" data-key="left" data-t="{{ tap:{en:'onClick',et:'stop'} }}" wx:if="{{leftWidth}}">
+            <slot name="left"></slot>
+        </view>
+        <slot></slot>
+        <view catch:tap="_p" class="e215b {{rightClass}}" data-key="right" data-t="{{ tap:{en:'onClick',et:'stop'} }}" wx:if="{{rightWidth}}">
+            <slot name="right"></slot>
+        </view>
+    </view>
+</view>

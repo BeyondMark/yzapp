@@ -1,0 +1,27 @@
+.c8299e {
+  padding: var(--theme-goods-direct-order-popup-cell-padding-top, 12px)
+    var(--theme-goods-direct-order-popup-cell-padding-right, 12px)
+    var(--theme-goods-direct-order-popup-cell-padding-bottom, 12px)
+    var(--theme-goods-direct-order-popup-cell-padding-left, 12px) !important;
+}
+.c95c55 {
+  color: #323233;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: right;
+}
+.delivery-scope__desc {
+  color: #969799;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0 24px;
+  word-break: break-all;
+}
+.delivery-scope__img {
+  line-height: 0;
+  padding: 0 24px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 40vh;
+}

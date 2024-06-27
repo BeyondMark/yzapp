@@ -1,0 +1,22 @@
+<view class="e2b84">
+    <view class="c1a782">相关推荐</view>
+    <view class="f2817" wx:if="{{recommendList.length===1}}">
+        <view catch:tap="_p" class="e472c" data-t="{{ tap:{ en:'goToGoodsPage',et:'stop',args:[ recommendList[0] ] } }}">
+            <image class="c486ac bd231" lazyLoad="true" src="{{recommendList[0].imageUrl}}"></image>
+        </view>
+        <view class="cd322">
+            <view class="c47e73 {{!recommendList[0].title?'c7d3e6':''}}">
+                <view class="c2d5ad"> {{recommendList[0].title}} </view>
+            </view>
+            <view class="c9d7e2">￥{{recommendList[0].price}}</view>
+        </view>
+    </view>
+    <view wx:else>
+        <view class="c24ba2" wx:for="{{recommendList}}" wx:for-index="idx" wx:for-item="it" wx:key="idx">
+            <view catch:tap="_p" class="c9f063" data-t="{{ tap:{ en:'goToGoodsPage',et:'stop',args:[it] } }}">
+                <image class="c8541f bd231" lazyLoad="true" src="{{it.imageUrl}}"></image>
+            </view>
+            <view class="c07d71">￥{{it.price}}</view>
+        </view>
+    </view>
+</view>

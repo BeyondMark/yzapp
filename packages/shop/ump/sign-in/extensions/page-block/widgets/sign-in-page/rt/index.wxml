@@ -1,0 +1,96 @@
+<i id="van-notify"></i>
+<j bind:close="toggleSubscribeMask" show="{{showSubscribeMask}}" zIndex="{{10010}}"></j>
+<view class="l-sign__container {{rewards.length?'container-center':''}}" style="background-image:url({{pageConfigs.backgroundImage}})" wx:if="{{preloading}}">
+    <view class="c-sign__header">
+        <view class="c-header__reward">{{checkInTitle}}</view>
+        <view class="c-header__duration">{{openCycle?'当前周期':''}}已连续签到{{continuesDay}}天</view>
+        <view bindtap="showSignRules" class="c-header__rule">签到玩法</view>
+    </view>
+    <view class="c-sign__info">
+        <c bind:changeReminderOpen="onChangeReminderOpen" bind:showAdjacent="showAdjacentMonth" bind:toggle-subscribe-mask="toggleSubscribeMask" canJumpNext="{{canJumpNext}}" canJumpPrevious="{{canJumpPrevious}}" canReminderOpen="{{canReminderOpen}}" class="c-sign__calendar" month="{{currentMonth}}" signDates="{{checkInDates}}" themeColor="{{pageConfigs.themeColor}}" year="{{currentYear}}"></c>
+        <b wx:if="{{showSignBtn}}">
+            <k authTypeList="{{['mobile']}}" bind:auth-popup-show="onAuthPopupShow" bind:next="signIn" wx:if="{{canSign}}">
+                <button class="l-general__btn c-sign__btn" disabled="{{isCheckin}}" style="background:{{pageConfigs.backgroundBtn}}">{{isCheckin?'今日已签到':'立即签到'}}</button>
+            </k>
+            <button bindtap="signIn" class="l-general__btn c-sign__btn" disabled="{{true}}" style="background:{{pageConfigs.backgroundBtn}}" wx:else>{{isCheckin?'今日已签到':'立即签到'}}</button>
+        </b>
+    </view>
+    <view class="c-sign__reward" wx:if="{{rewards.length!==0}}">
+        <view class="c-reward__time">{{checkInTimeDesc}}连续签到可领取以下奖励:</view>
+        <scroll-view scrollX="{{true}}">
+            <view class="l-reward__list" style="width: {{rewardsAllWidth}}px;">
+                <view bindtap="onTapPrizes" class="c-reward__item {{item.fetched?'c-reward__item--fetched':''}}" data-reward="{{item}}" wx:for="{{rewards}}" wx:key="duration">
+                    <view class="c-item__duration">连续{{item.duration}}天</view>
+                    <view class="l-award__list">
+                        <view class="l-award__item" wx:for="{{item.prize}}" wx:for-item="record">
+                            <view class="l-award__item--content" wx:if="{{record.type===awardType.bonus}}">{{record.desc.right}}</view>
+                            <view class="l-award__item--text" wx:else>
+                                <view class="l-award__item--credit">{{record.desc.left}}<view class="l-award__item--amount {{record.desc.middle>=1000?'l-award__amount':''}}">{{record.desc.middle}}</view>{{record.desc.right}}</view>
+                            </view>
+                            <image alt="" class="{{record.type===awardType.coupon?'l-award__small':'l-award__item--picture'}}" mode="widthFix" src="{{record.desc.picture}}"></image>
+                        </view>
+                    </view>
+                    <image class="l-award__icon" src="https://img01.yzcdn.cn/upload_files/2021/10/22/Fs_tt1Tvlcla4iF6G5zIdhucq_Vr.png" wx:if="{{item.receivedMark&&!item.sendFailInfo}}"></image>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>
+<a class="checkin-popup" customStyle="width: 324px; background-color: rgba(0,0,0,0); overflow-y: initial;" show="{{showResult}}">
+    <view class="c-result__container l-general__container" style="background: {{pageConfigs.dialogBackgroundColor}}">
+        <view class="c-popup__header">
+            <b>
+                <view bindtap="onTapHideResult" class="c-result__close-icon"></view>
+            </b>
+            <view class="c-result__title"></view>
+            <view class="c-result__subtitle">{{deservedRewards.desc}}</view>
+        </view>
+        <view class="c-popup__main">
+            <view class="coupon-list {{deservedRewards.awardType===checkinAwardType.noneAward?'coupon-list__noaward':''}}">
+                <view class="coupon-item {{deservedRewards.awardType!==checkinAwardType.noneAward&&!item.isSuccess?'coupon-item__prize-fail':''}}" wx:for="{{deservedRewards.list}}">
+                    <view class="coupon-item__value">
+                        <view class="coupon-detail" wx:if="{{item.type===awardType.coupon}}">
+                            <view class="coupon-value">
+                                <view class="coupon-goods-value" wx:if="{{item.infos.type===couponType.voucher}}">{{item.infos.copyWriting}}</view>
+                                <f color="general" wx:elif="{{item.infos.prefixWriting}}">
+                                    <view class="unit">{{item.infos.prefixWriting}}</view>
+                                    <d amount="{{item.infos.amount}}" maxFontSize="24" type="1">{{item.infos.amount}}</d>
+                                    <view class="unit">{{item.infos.copyWriting}}</view>
+                                </f>
+                                <f color="general" wx:else>
+                                    <d amount="{{item.infos.amount}}" amountUnit="{{item.infos.copyWriting}}" maxFontSize="30" type="2">{{item.infos.amount}}</d>
+                                    <view class="unit">{{item.infos.copyWriting}}</view>
+                                </f>
+                            </view>
+                        </view>
+                        <image alt="" class="coupon-condition" src="{{item.infos.picture}}" wx:else></image>
+                    </view>
+                    <view class="coupon-item__content">
+                        <view class="coupon-title">{{item.infos.title}}</view>
+                        <view class="coupon-time">{{item.infos.desc}}</view>
+                    </view>
+                    <f bg="main-bg" color="main-text" customClass="coupon-item__btn" wx:if="{{deservedRewards.awardType!==checkinAwardType.noneAward&&item.isSuccess}}">
+                        <view bindtap="onTapNavigate" data-infos="{{item.infos}}" data-type="{{item.type}}">{{item.action}}</view>
+                    </f>
+                </view>
+            </view>
+        </view>
+        <image alt="进店逛逛" bindtap="goToHome" class="c-home-button" src="https://img01.yzcdn.cn/upload_files/2021/10/19/FhhNmFKa8LwGsz_KzDRZSCHTTZal.png" wx:if="{{deservedRewards.isGoHome}}"></image>
+    </view>
+    <image alt="" bindtap="onTapHideResult" class="c-result-backages" src="https://img01.yzcdn.cn/upload_files/2021/10/11/FgQX1wlMF5v6i-b-bYWXihI6c7GA.png"></image>
+</a>
+<a bind:close="onTapHideRules" closeable="{{true}}" customClass="c-rules__popup" position="bottom" safeAreaInsetBottom="{{true}}" show="{{showRules}}">
+    <view class="c-rules__container">
+        <view class="c-rules__title">签到规则</view>
+        <view class="c-rules__message">
+            <view class="c-rules__message__item" wx:for="{{rules}}" wx:for-item="rule">{{rule}}</view>
+        </view>
+        <button bindtap="onTapHideRules" class="c-rules__btn" style="background:{{pageConfigs.backgroundBtn}}">知道了</button>
+    </view>
+</a>
+<view style="background-color: {{pageBgColor}}">
+    <h rmId="b35-2" wx:if="{{rmId==='b35-0'}}"></h>
+</view>
+<g cpsConfigKey="cps_goods_recommend_checkin"></g>
+<e bizName="cs~mg"></e>
+<l id="van-toast"></l>

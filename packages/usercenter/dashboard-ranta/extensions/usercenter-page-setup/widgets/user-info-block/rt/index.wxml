@@ -1,0 +1,81 @@
+<view class="member-center__user-info-wrapper">
+    <f authTypeList="{{['nicknameAndAvatar']}}" bind:fail="clearTapData" bind:next="handleProtocolAuthorize" bindgetuserinfo="goto" data-nav="authorize">
+        <view style="{{outerStyle}}">
+            <view class="member-center__user-info {{layoutClx[align-1]}}" style="{{layoutStyle}}">
+                <image bind:load="handlePerReport" src="{{imageUrl}}" style="display: none"></image>
+                <view bindtap="handleTap" class="user-info__sign" data-nav="sign" style="{{signAndCodeStyle}}" wx:if="{{isSupportSign}}">
+                    <b customClass="user-info__sign-img" name="{{isSigned&&userAgreePrivacy?'success':'edit'}}"></b>
+                    <text>{{isSigned&&userAgreePrivacy?'已签到':'签到'}}</text>
+                </view>
+                <view bindtap="handleTap" class="user-info__sign user-info__code" data-nav="code" style="{{signAndCodeStyle}}" wx:if="{{showMemberCode&&!needAuthMobileBeforeMemberCode}}">
+                    <b customClass="user-info__sign-img" name="qr"></b>
+                    <text>会员码</text>
+                </view>
+                <view bindtap="handleTap" class="user-info__avatar" data-nav="account" style="{{userAvatarStyle}}" wx:if="{{align}}">
+                    <image alt="avatar" src="{{avatar||deafultAvatar}}" style="object-fit: cover"></image>
+                </view>
+                <view class="user-info__info" style="{{userInfoStyle}}" wx:if="{{align}}">
+                    <view bindtap="handleTap" class="user-info__username" data-nav="account" style="{{userNameStyle}}">{{userName||'点击显示微信头像'}}</view>
+                    <view bindtap="handleTap" class="user-info__growth {{levelValue>0&&!isSupportGrowthValue?'user-info__consume-level':''}}" data-nav="growth" wx:if="{{showGrowth&&userAgreePrivacy}}">{{userAgreePrivacy?levelBtnText:''}}</view>
+                </view>
+                <view catchtap="noop" class="user-info__level-wrapper" wx:if="{{showLevel}}">
+                    <f authTypeList="{{['protocol','mobile']}}" bind:fail="handleRejectRegistryMem" bind:next="handleRegistryMem" bind:popup-show="handleRegistryMemStart" data-nav="authorize" wx:if="{{memberType===1}}">
+                        <view class="user-info__level-1">
+                            <text class="name {{levelIconType===1?'name--vip':''}}">{{benefitText||shopName}}</text>
+                            <view bindtap="handleTap" class="{{levelClx}}" data-nav="level">
+                                <text>{{userAgreePrivacy?grade:''}}</text>
+                                <b customClass="user-info__arrow" name="arrow"></b>
+                            </view>
+                        </view>
+                    </f>
+                    <view class="user-info__level-2-wrapper" wx:if="{{memberType===2}}">
+                        <f authTypeList="{{['protocol','mobile']}}" bind:fail="handleRejectRegistryMem" bind:next="handleRegistryMem" bind:popup-show="handleRegistryMemStart" data-nav="authorize">
+                            <view class="user-info__level-2" wx:if="{{memberType===2}}">
+                                <view class="level2-header">{{shopName}}</view>
+                                <view class="level2-body">
+                                    <a bindtap="handleTap" class="level" data-nav="level" plain="{{true}}" round="{{true}}">
+                                        <view class="level-name" style="{{type2LevelColor}}">
+                                            <text>{{userAgreePrivacy?grade:''}}</text>
+                                            <b name="arrow"></b>
+                                        </view>
+                                    </a>
+                                    <image alt="vip" class="level2-vip" src="https://img01.yzcdn.cn/weapp/wsc/YIQ5ItL.png"></image>
+                                </view>
+                            </view>
+                        </f>
+                    </view>
+                    <f authTypeList="{{['protocol','mobile']}}" bind:fail="handleRejectRegistryMem" bind:next="handleRegistryMem" bind:popup-show="handleRegistryMemStart" data-nav="authorize" wx:if="{{memberType===3}}">
+                        <view class="user-info__level-3">
+                            <text class="name {{levelIconType===1?'name--vip':''}}">{{benefitText||shopName}}</text>
+                            <view bindtap="handleTap" class="{{levelClx}}" data-nav="level">
+                                <text>{{userAgreePrivacy?grade:''}}</text>
+                                <b customClass="arrow-custom" name="arrow"></b>
+                            </view>
+                            <image alt="member" class="level3-member" src="https://img01.yzcdn.cn/upload_files/2023/09/06/FpciTcyWaYTAOJLeW5tpcI07AuIh.png"></image>
+                        </view>
+                    </f>
+                </view>
+            </view>
+        </view>
+    </f>
+    <f authTypeList="{{['nicknameAndAvatar','mobile']}}" bind:fail="handleMobileAuthFail" bind:next="handleTapNeedAuthMobileCode" class="user-info__code-auth" data-nav="code-authorize-mobile" style="{{signAndCodeStyle}}" wx:if="{{showMemberCode&&needAuthMobileBeforeMemberCode}}">
+        <view class="user-info__code-auth-btn">
+            <b customClass="user-info__code-auth-img" name="qr"></b>
+            <text>会员码</text>
+        </view>
+    </f>
+    <f authTypeList="{{['mobile']}}" bind:next="onAccountSuccess" wx:if="{{showBindUser}}">
+        <view class="bind-user__wrapper">
+            <view class="bind__container">
+                <view class="bind__title">{{bindTips}}</view>
+                <view class="bind__button">
+                    <c bg="main-bg" border="main-bg" borderAfter="main-bg">
+                        <button class="btn-userinfo btn-class">登录</button>
+                    </c>
+                </view>
+            </view>
+        </view>
+    </f>
+    <d id="account-wx-login"></d>
+</view>
+<e show="{{subscribeMarkShow}}"></e>

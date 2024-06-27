@@ -1,0 +1,3 @@
+<view bind:transitionend="onTransitionEnd" class="van-transition custom-class {{classes}}" style="{{computed.rootStyle( {currentDuration:currentDuration,display:display,customStyle:customStyle} )}}" wx:if="{{inited}}">
+    <slot></slot>
+</view>

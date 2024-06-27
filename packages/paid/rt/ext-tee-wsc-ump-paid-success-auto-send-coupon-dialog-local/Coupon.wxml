@@ -1,0 +1,27 @@
+<view class="d6e16">
+    <view class="c9a036" style="{{themeBackground5Style+themeBorder10Style}}">
+        <view class="ce2ca">
+            <view class="c81188 c6468f" style="{{themeColorStyle}}">
+                <a bind:_init="_tic" class="{{info.c3e34bDesc!==''?'c97262':''}}" curFontSize="{{30}}" maxWidth="{{100}}" minFontSize="{{16}}">
+                    <view class="c0c19d">
+                        <view class="c3e34b c89585">{{info.preDesc}}</view>
+                        <view class="c89585">{{info.valuesDesc}}</view>
+                        <view class="c3e34b c89585">{{info.unitDesc}}</view>
+                    </view>
+                </a>
+            </view>
+            <view class="c7c4f2">
+                <view class="c1dee8"> {{info.thresholdCopywriting}} </view>
+                <view class="c63ba9">
+                    <b bind:_init="_tic" bind:change="_p" data-t="{{ change:{en:'onChange'} }}" time="{{downTime}}" useSlot="{{true}}" wx:if="{{isReceived}}">
+                        <view class="d5f7f"> {{downTimeStr}} </view>
+                    </b>
+                    <view class="c89585" wx:else>{{info.validTimeCopywriting}}</view>
+                </view>
+            </view>
+            <view class="c5946" style="{{themeBorder50Style}}" wx:if="{{isReceived}}">
+                <view style="{{themeBorder50Style+themeBackground10Style+themeColor50Style}}">已领</view>
+            </view>
+        </view>
+    </view>
+</view>

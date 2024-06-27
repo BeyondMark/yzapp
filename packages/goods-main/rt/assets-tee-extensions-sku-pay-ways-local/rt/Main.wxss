@@ -1,0 +1,160 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.payways-list {
+  margin: 0-6px;
+}
+.c110de {
+  font-size: 14px;
+  color: #111;
+  margin-bottom: 6px;
+}
+.c110de .c6a213 {
+  line-height: 16px;
+  color: #bbb;
+  margin-top: 8px;
+  font-size: 12px;
+}
+.feae0 {
+  padding: 12px 16px 6px;
+}
+.c5b2f7 {
+  font-size: 14px;
+  color: #323233;
+  margin-bottom: 6px;
+}
+.c5b2f7 .eac82 {
+  font-size: 12px;
+  color: #969799;
+}
+.c0aa61 {
+  padding-top: 10px;
+}
+.c0aa61 .c6e2ba {
+  background-color: #f7f8fa;
+  width: 66px;
+  height: 32px;
+  line-height: 32px;
+  color: #323233;
+  font-size: 13px;
+  border-radius: 3px;
+  display: inline-block;
+  text-align: center;
+  margin-right: 12px;
+  position: relative;
+}
+.c0aa61 .c6e2ba.ed2b5 {
+  color: var(--tag-text, #323233);
+  background: var(--tag-bg, #f2f2ff);
+  position: relative;
+}
+.c0aa61 .c6e2ba.ed2b5 .fa06b {
+  color: var(--main-text, #fff);
+  background: var(--main-bg, #323233);
+}
+.c0aa61 .c6e2ba.c3262d {
+  color: #c8c9cc;
+  background-color: #f7f8fa;
+}
+.c0aa61 .c6e2ba.c3262d .img {
+  display: none !important;
+}
+.c0aa61 .c6e2ba .img {
+  height: 12px;
+  width: 44px;
+  position: absolute;
+  right: -6px;
+  top: -6px;
+}
+.fa06b {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  right: -6px;
+  z-index: 3;
+  min-width: 30px;
+  border-radius: 1.2rem;
+  font-size: 10px;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 12px;
+  padding: 0 4px;
+  color: var(--tag-text, #323233);
+  background: var(--tag-bg, #f2f2ff);
+}
+.c0aa61 .c609e6 {
+  width: auto;
+  padding: 0 5px;
+}
+.c0aa61 .baec6 {
+  display: inline-block;
+  vertical-align: text-top;
+  margin-right: 4px;
+  width: 16px;
+  background-size: cover;
+  height: 16px;
+  background-image: url(https://b.yzcdn.cn/assets-cashier/icon/prior-use-wechat2.png);
+}
+.c87b72 {
+  font-size: 13px;
+  color: #323233;
+  padding: 6px 6px 6px 0;
+  width: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.c33d42 {
+  background: #f7f8fa;
+  border-radius: 4px;
+  padding: 6px 12px;
+  line-height: 16px;
+  box-sizing: border-box;
+}
+.c81d98 {
+  color: var(--general);
+  position: relative;
+}
+.c81d98:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: currentColor;
+  opacity: 0.1;
+  border-radius: 4px;
+}
+.c87b72.c075ae {
+  color: #c8c9cc;
+  pointer-events: none;
+  border: none;
+}
+.c87b72.c075ae__inner {
+  background: #f7f8fa;
+}
+.payways-item {
+  font-size: 13px;
+  color: #323233;
+  padding: 6px;
+  width: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.payways-item__inner {
+  background: #f7f8fa;
+  border-radius: 4px;
+  padding: 6px 12px;
+  line-height: 16px;
+  box-sizing: border-box;
+}
+.payways-item.c075ae {
+  color: #c8c9cc;
+  pointer-events: none;
+  border: none;
+}
+.payways-item.c075ae__inner {
+  background: #f7f8fa;
+}

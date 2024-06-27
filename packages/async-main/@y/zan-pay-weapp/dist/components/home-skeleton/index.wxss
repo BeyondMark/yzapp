@@ -1,0 +1,23 @@
+.notice-bar {
+  margin-top: 24px;
+}
+.info {
+  margin-top: 16px;
+}
+.channel {
+  margin-top: 44px;
+  display: flex;
+  justify-content: space-between;
+}
+.key {
+  width: 56px;
+}
+.value {
+  width: 104px;
+}
+.submit {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 16px;
+}

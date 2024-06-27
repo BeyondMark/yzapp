@@ -1,0 +1,25 @@
+<view style="{{themeVars}}">
+    <view bind:tap="_p" class="c609e6" data-t="{{ tap:{en:'updatePopUp'} }}" wx:if="{{recommend&&!this.isSyncOrder}}">
+        <i bind:_init="_tic" class="{{true?'baec6':''}} {{true?recommend.payChannel:''}}"></i>
+        <view class="c64f39 c89585">{{recommend.payChannelAlias||recommend.payChannelName}}</view>
+        <view class="e36aa">{{recommend.channelNotice}}</view>
+        <a bind:_init="_tic" class="c31366" name="arrow" size="14" wx:if="{{recommend.payChannel==='PRIOR_USE'}}"></a>
+    </view>
+    <b bind:_init="_tic" bind:close="_p" button="去使用" class="e21e6" closeIcon="none" data-t="{{ close:{en:'toUse'} }}" wx:if="{{payWaysData.show}}">
+        <image bind:tap="_p" class="c3d839 bd231" data-t="{{ tap:{en:'closePopUp'} }}" lazyLoad="true" src="https://b.yzcdn.cn/wsc-h5-goods/close3.png"></image>
+        <view class="a4a71">
+            <image class="b798a bd231" lazyLoad="true" mode="widthFix" src="https://b.yzcdn.cn/assets-cashier/icon/prior-use-wechat2.png"></image>      先用后付
+    </view>
+        <view class="c38696">本服务由<em bind:_init="_tic">有赞</em> x <em bind:_init="_tic">微信支付分</em>提供</view>
+        <view class="d304b">0元下单，确认收货再付款</view>
+        <view class="eac82 c89585">      “先用后付”是针对满足微信支付分条件的消费者提供的专享权益。带有“先用后付”标识的商品可享受“0元下单，确认收货再付款”的服务。
+    </view>
+        <image class="bd5ba bd231" lazyLoad="true" src="https://b.yzcdn.cn/wsc-h5-goods/prior_use_steps.png"></image>
+        <view class="c7b5dd">
+            <view class="d70c1">微信授权</view>
+            <view class="d70c1">0元下单</view>
+            <view class="d70c1">到货验收</view>
+            <view class="d70c1">微信自动扣款</view>
+        </view>
+    </b>
+</view>

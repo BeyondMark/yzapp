@@ -1,0 +1,21 @@
+<view class="{{'dc-coupon'}} {{'dc-coupon-'+opt.style}} {{opt.color}} {{'layout-'+opt.layoutOpt.type}} {{item.disabled?'disabled':''}}">
+    <view class="received" wx:if="{{item.isRecevied}}">已领</view>
+    <view class="content">
+        <view class="value {{item.isIncludeChineseCharacter?'value-sp':''}}">
+            <view class="price t-text">{{item.valueCopyWriting}}</view>
+            <view class="unit t-text" wx:if="{{item.unitCopyWriting}}">{{item.unitCopyWriting}}</view>
+        </view>
+        <view class="desc" wx:if="{{opt.couponActiveType===1}}">
+            <view class="shop-name t-text">{{item.shopName}}</view>
+            <view class="name">{{item.title}}</view>
+            <view class="condition"> {{conditionText}} </view>
+        </view>
+        <view class="desc" wx:else>
+            <view class="name" wx:if="{{showName}}">{{item.title}}</view>
+            <view class="condition"> {{conditionText}} </view>
+        </view>
+    </view>
+    <view class="action" wx:if="{{showAction}}">
+        <view class="action-text t-text" wx:if="{{showText}}">{{item.text}}</view>
+    </view>
+</view>

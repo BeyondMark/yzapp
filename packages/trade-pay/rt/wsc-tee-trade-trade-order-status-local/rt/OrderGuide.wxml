@@ -1,0 +1,9 @@
+<view class="a0c39 c88b0e" wx:if="{{type}}">
+    <block wx:for="{{steps}}" wx:for-item="step">
+        <view class="c7680">
+            <image class="d9255 bd231" lazyLoad="true" src="{{step.logo}}"></image>
+            <view>{{step.title}}</view>
+        </view>
+        <a bind:_init="_tic" name="arrow" wx:if="{{index!==steps.length-1}}"></a>
+    </block>
+</view>

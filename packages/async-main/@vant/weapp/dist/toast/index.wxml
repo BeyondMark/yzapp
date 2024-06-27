@@ -1,0 +1,13 @@
+<c customStyle="{{mask?'':'background-color: transparent;'}}" show="{{show}}" zIndex="{{zIndex}}" wx:if="{{mask||forbidClick}}"></c>
+<d customClass="van-toast__container" customStyle="z-index: {{zIndex}}" show="{{show}}">
+    <view catch:touchmove="noop" class="van-toast van-toast--{{type==='text'||type==='html'?'text':'icon'}} van-toast--{{position}}">
+        <text wx:if="{{type==='text'}}">{{message}}</text>
+        <rich-text nodes="{{message}}" wx:elif="{{type==='html'}}"></rich-text>
+        <block wx:else>
+            <b color="white" customClass="van-toast__loading" type="{{loadingType}}" wx:if="{{type==='loading'}}"></b>
+            <a class="van-toast__icon" name="{{type}}" wx:else></a>
+            <text class="van-toast__text" wx:if="{{message}}">{{message}}</text>
+        </block>
+        <slot></slot>
+    </view>
+</d>

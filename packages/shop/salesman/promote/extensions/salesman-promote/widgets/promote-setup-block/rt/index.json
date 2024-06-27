@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "商品推广",
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "a": "/pages/common/page-container/index",
+    "b": "../../detail-base-block/rt/index",
+    "c": "../../bottom-hook/rt/index",
+    "d": "/packages/async-main/@vant/weapp/dist/toast/index",
+    "_": "../../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "d": "_" }
+}

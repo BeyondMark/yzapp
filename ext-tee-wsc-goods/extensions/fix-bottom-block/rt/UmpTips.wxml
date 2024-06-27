@@ -1,0 +1,1 @@
+<a bind:_init="_tic" bind:ump-countdown-click="_p" countDownIcon="{{cloudConfig.countdownIcon}}" data-t="{{ umpCountdownClick:{en:'umpClick'} }}" goodsBaseInfo="{{baseInfo}}" goodsPriceInfo="{{priceInfo}}" hideGroupBargin="{{hideGroupBargin}}" newCustomerCouponPopIcon="{{cloudConfig.newCustomerCouponPopIcon}}" opt="{{opt}}" userInfo="{{userInfo}}"></a>

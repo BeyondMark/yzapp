@@ -1,0 +1,38 @@
+<a>
+    <view class="gift-share" wx:if="{{!isFetching}}">
+        <view class="gift-share__header">
+            <view class="gift-share__header-margin"></view>
+            <b fromShare="{{true}}"></b>
+        </view>
+        <view class="gift-share__body-wrap">
+            <view class="gift-share__body" style="{{presenterView?'':'padding-bottom: 15px;'}}">
+                <image class="gift-share__body-avatar" src="{{presenterInfo.avatar}}"></image>
+                <view class="gift-share__body-title van-font-14 van-c-black">{{presenterInfo.nickName}}送你一份礼物</view>
+                <i type="ump-gift">
+                    <c giftId="{{giftId}}" message="{{message}}" presenterView="{{presenterView}}"></c>
+                </i>
+                <h bind:jump="handlePickGiftClick" goodsInfo="{{goodsInfo}}"></h>
+                <block wx:if="{{presenterView}}">
+                    <view class="gift-share__status-engage-time lottery-countdown van-font-12" wx:if="{{gameType===2}}">
+                        <block wx:if="{{!lotteryInfo.isEnd}}">距离开奖时间仅剩<view class="countdown-time-unit">{{lotteryInfo.countdown.hour}}</view>时<view class="countdown-time-unit">{{lotteryInfo.countdown.minute}}</view>分<view class="countdown-time-unit">{{lotteryInfo.countdown.second}}</view>秒</block>
+                        <block wx:else>抽奖已经结束</block>
+                    </view>
+                    <i type="ump-gift">
+                        <e bind:getuser="onGetUserInfo" bind:jump="handlePickGiftClick" bind:share="handleShareClick" btnClass="gift-share__btn" finallyTaken="{{finallyTaken}}" gameType="{{gameType}}" isPresenter="{{isPresenter}}" lotteryEnd="{{lotteryInfo.isEnd}}" outDated="{{outDated}}" presenterView="{{presenterView}}" useUp="{{useUp}}"></e>
+                    </i>
+                </block>
+                <f lotteryInfo="{{lotteryInfo}}" wx:if="{{gameType===2&&!presenterView}}"></f>
+                <view class="gift-share__tips van-font-12 van-c-black" wx:if="{{showFillAddressTips}}">请于 {{validEndTimeStr}} 前填写地址</view>
+                <view class="gift-share__use-up" wx:if="{{!presenterView&&(!engage||outDated)}}"></view>
+                <g gameType="{{gameType}}" giftNum="{{giftNum}}" givenNum="{{givenNum}}" lotteryInfo="{{lotteryInfo}}" receiverList="{{receiverList}}" userClass="{{presenterView?'':'user-list--margin'}}"></g>
+            </view>
+        </view>
+        <d currentAddress="{{currentAddress}}" logistics="{{logistics}}" wx:if="{{!presenterView}}"></d>
+        <i type="ump-gift">
+            <e bind:address="handleEditAddressClick" bind:getuser="onGetUserInfo" bind:jump="handlePickGiftClick" bind:represent="handleRepresent" btnClass="{{finallyTaken?'gift-share__receive-btn-group--padding':'gift-share__receive-btn-group'}}" finallyTaken="{{finallyTaken}}" gameType="{{gameType}}" giftOrderNo="{{giftOrderNo}}" isPresenter="{{isPresenter}}" outDated="{{outDated}}" presenterView="{{presenterView}}" useUp="{{useUp}}" wx:if="{{!presenterView}}"></e>
+        </i>
+    </view>
+    <j actions="{{actions}}" bind:cancel="closeActionSheet" bind:close="closeActionSheet" bind:select="handleActionClick" cancelText="取消" closeOnClickOverlay="{{true}}" show="{{showActionSheet}}"></j>
+    <k id="van-dialog"></k>
+    <canvas canvasId="giftsharecard" class="gift-share__canvas" style="width: 347px; height: 495px;"></canvas>
+</a>

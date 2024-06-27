@@ -1,0 +1,14 @@
+<a bind:_init="_tic" bind:click-overlay="_p" data-t="{{ clickOverlay:{en:'closeAssistantPop'} }}" position="bottom" round="{{true}}" show="{{show}}">
+    <view class="assistant-pop" wx:if="{{show}}">
+        <view class="assistant-pop__title">智能助理</view>
+        <view class="assistant-pop__subtext">想知道如何快速上手卖货？快来开通智能助理</view>
+        <view class="assistant-pop__img">
+            <image class="assistant-pop__img tee-image" lazyLoad="true" src="https://img01.yzcdn.cn/upload_files/2021/03/09/Fnxvvz23Njr8UTvjpm5Cf4q53PMb.jpg"></image>
+        </view>
+        <view class="assistant-pop__action">长按识别二维码关注</view>
+        <view class="assistant-pop__confirm">
+            <b bind:_init="_tic" bind:tap="_p" color="linear-gradient(45deg, #ffaa1e, #ff720d)" customStyle="height: 40px;" data-t="{{ tap:{en:'closeAssistantPop'} }}" round="{{true}}" size="large">        我知道了
+      </b>
+        </view>
+    </view>
+</a>

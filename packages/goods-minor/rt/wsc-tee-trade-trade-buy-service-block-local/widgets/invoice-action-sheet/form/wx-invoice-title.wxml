@@ -1,0 +1,1 @@
+<view bind:tap="_p" class="c37d5b" data-t="{{ tap:{en:'getWxInvoiceTitle'} }}">使用微信抬头</view>

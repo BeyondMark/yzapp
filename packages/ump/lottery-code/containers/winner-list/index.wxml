@@ -1,0 +1,17 @@
+<view class="winner-list">
+    <a title="中奖者名单"></a>
+    <view class="content">
+        <block wx:if="{{isOpenRank}}">
+            <view class="content-title">排行榜王者</view>
+            <scroll-view bindscrolltolower="getRankingResult" class="content-ranking" scrollY="{{true}}">
+                <b customClass="content-list" desc="{{item.tel}}" imgUrl="{{item.avatar}}" label="幸运码数" title="{{item.nickName}}" value="{{item.codeNum}}" wx:for="{{rankingResult}}" wx:key="{{ item.userId }}"></b>
+            </scroll-view>
+        </block>
+        <block wx:if="{{lotteryResult.length}}">
+            <view class="content-title second-title">运气值爆表</view>
+            <scroll-view bindscrolltolower="getLotteryResult" class="content-luck" scrollY="{{true}}">
+                <b customClass="content-list" desc="{{item.tel}}" imgUrl="{{item.avatar}}" title="{{item.nickName}}" value="{{item.code}}" wx:for="{{lotteryResult}}" wx:key="{{ item.userId }}"></b>
+            </scroll-view>
+        </block>
+    </view>
+</view>

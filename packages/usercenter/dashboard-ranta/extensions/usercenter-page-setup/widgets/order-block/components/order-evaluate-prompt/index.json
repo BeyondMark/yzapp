@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../../../../../@vant/weapp/dist/count-down/index",
+    "b": "../../../../../../../common/components/theme-view/index",
+    "c": "../basic-prompt/index",
+    "_": "../../../../../../../../../components/_/index"
+  }
+}

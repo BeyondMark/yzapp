@@ -1,0 +1,1 @@
+<view bind:touchcancel="onTouchEnd" bind:touchend="onTouchEnd" bind:touchmove="onTouchMove" bind:touchstart="onTouchStart" class="van-key van-key__hairline {{className}}" role="button" tabindex="0">{{text}}</view>

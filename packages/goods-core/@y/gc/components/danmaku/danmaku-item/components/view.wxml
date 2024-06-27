@@ -1,0 +1,6 @@
+<a bind:_init="_tic" bind:update="_p" bulletKey="{{bulletKey}}" customClass="{{'view-danmaku '+customClass}}" data-t="{{ update:{en:'updateBullet'} }}" isPlaying="{{isPlaying}}" left="{{left}}" maxTextLength="{{maxTextLength}}" sourceData="{{sourceData}}" top="{{top}}">
+    <view class="c4de8a" slot="header">
+        <image class="c1204d bd231" lazyLoad="true" mode="aspectFill" src="{{url}}" wx:for="{{sourceData.extra.buyerAvatars}}" wx:for-item="url" wx:key="url"></image>
+        <view class="c3e5a c89585" wx:if="{{sourceData.extra.buyerCount>3}}">…</view>
+    </view>
+</a>

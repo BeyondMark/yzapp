@@ -1,0 +1,8 @@
+<view class="c7c275" wx:if="{{showCombineGoods}}">
+    <view class="c0977" wx:if="{{selectedSkuValues}}">{{subGoodsListTitle}}</view>
+    <a _opt="{{capLayoutOpt}}" bind:_init="_tic" customClass="e286b">
+        <b _opt="{{capLayoutOpt}}" bind:_init="_tic" itemIndex="{{index}}" wx:for="{{curList}}" wx:key="index">
+            <c _opt="{{item}}" bind:_init="_tic" textClass="c9dcaa"></c>
+        </b>
+    </a>
+</view>

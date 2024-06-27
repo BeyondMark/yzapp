@@ -1,0 +1,12 @@
+<view>
+    <a bind:_init="_tic" bind:close="_p" closeOnClickOverlay="{{false}}" customClass="c0e6cf" customStyle="height: 75vh;" data-t="{{ close:{en:'onClose'} }}" position="bottom" round="{{true}}" safeAreaInsetBottom="{{true}}" show="{{show}}" wx:if="{{initialShow}}">
+        <view class="d8d67">      请选择余额或卡
+      <b bind:_init="_tic" bind:tap="_p" customClass="c4430b" data-t="{{ tap:{en:'onClose'} }}" name="cross" size="12px"></b>
+        </view>
+        <view class="c37fe9">
+            <view class="e3fed c62b9d">
+                <c amount="{{amount}}" bind:_init="_tic" bind:onConfirm="_p" bind:onRefreshData="_p" class="prepay-balance-content" data-t="{{ onConfirm:{en:'onConfirm'},onRefreshData:{en:'onRefreshData'} }}" disabledBalance="{{disabledBalance}}" hasExclusionCard="{{hasExclusionCard}}" kdtId="{{kdtId}}" newRecommend="{{newRecommend}}" prepayCardTotalAmount="{{prepayCardTotalAmount}}" product="{{product}}" recommendDetaid="{{recommendDetaid}}" show="{{show}}" that="{{that}}" themeColors="{{themeColors}}" useCustomerDiscount="{{useCustomerDiscount}}" valueCardList="{{valueCard}}"></c>
+            </view>
+        </view>
+    </a>
+</view>

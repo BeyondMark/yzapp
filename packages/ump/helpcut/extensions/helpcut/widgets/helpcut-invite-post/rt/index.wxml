@@ -1,0 +1,16 @@
+<view>
+    <a bind:cancel="onCancel" bind:click-overlay="onCancel" bind:select="onSelect" cancelText="取消" options="{{actions}}" show="{{showActionSheet}}" wx:if="{{isNewHelpCut}}">
+        <view slot="description">
+            <image class="activity-step-img" src="https://img01.yzcdn.cn/upload_files/2021/10/08/FguhvUXohWFi3QM2uKs4IhMp6vQv.png"></image>
+        </view>
+    </a>
+    <b customClass="invite-pop" show="{{showPoster}}">
+        <view bindtap="onClose" class="invite-pop-close">
+            <c name="close" slot="close-icon"></c>
+        </view>
+        <view class="invite-pop-content">
+            <image class="invite-pop-content__img" src="{{posterUrl}}"></image>
+        </view>
+        <view bind:tap="savePoster" class="invite-pop-btn--bottom">保存图片</view>
+    </b>
+</view>

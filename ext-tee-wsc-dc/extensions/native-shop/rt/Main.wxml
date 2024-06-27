@@ -1,0 +1,1 @@
+<a bind:_init="_tic" buyerAddress="{{buyerAddress}}" isRetailShelf="{{isRetailApp}}" navigationbarConfigData="{{navigationBarConfigData}}" showServiceDue="{{true}}" showShopStatus="{{true}}" showStoreSwitch="{{true}}" switchPageOptions="{{alias:alias}}" tableBooking="{{tableBooking}}" wx:if="{{showShopBar}}"></a>

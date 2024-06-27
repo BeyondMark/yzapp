@@ -1,0 +1,101 @@
+.t-text {
+  text-decoration: inherit;
+}
+.t-text,
+.tee-image {
+  display: inline-block;
+}
+.tee-image {
+  width: 100%;
+  height: 100%;
+}
+.tips-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0 14px;
+}
+.tips-content {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+.tip-item {
+  display: flex;
+  align-items: center;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #323233;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+.tip-text {
+  margin-left: 8px;
+}
+.error-text {
+  color: #ee0a24;
+}
+.cube-tip {
+  background: #f7f8fa;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+.cube-tip--main {
+  width: 100%;
+  padding-top: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+.cube-tip--main__container {
+  -webkit-user-select: none;
+  border-radius: 2px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.cube-tip--main__container,
+.cube-tip--main__img {
+  width: calc(33.33333vw - 10.66667px);
+  height: calc(33.33333vw - 10.66667px);
+}
+.cube-tip-status {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 47px 26px;
+  font-size: 14px;
+  line-height: 16px;
+}
+.cube-tip-status-item {
+  display: flex;
+  align-items: center;
+}
+.cube-tip-status-item .desc {
+  color: #969799;
+  margin-left: 2px;
+}
+.cube-tip-action-desc {
+  margin-bottom: 16px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 18px;
+}
+.cube-tip .no-img {
+  height: 192px;
+  background-size: 100% 100%;
+}
+.cube-tip--btn {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+  background: #fff;
+  width: 100vw;
+  height: 50px;
+  line-height: 50px;
+}
+.cube-tip .img-container {
+  display: flex;
+}

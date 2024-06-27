@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y/dt/src/captain/layout/layout",
+    "b": "/@y/dt/src/captain/layout/layout-item",
+    "c": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "d": "/@y-open/vt/dist/list/index",
+    "e": "./components/hybird-item-card/index",
+    "f": "./components/common-item-card/index",
+    "g": "./components/detail-item-card/index",
+    "_": "../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "c": "_" }
+}

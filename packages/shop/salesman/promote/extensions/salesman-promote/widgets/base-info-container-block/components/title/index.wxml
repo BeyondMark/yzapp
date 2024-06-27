@@ -1,0 +1,7 @@
+<view class="goods-title">
+    <view class="goods-title__box">
+        <view class="goods-title__left">
+            <view class="goods-title__main">{{goods.title}}</view>
+        </view>
+    </view>
+</view>

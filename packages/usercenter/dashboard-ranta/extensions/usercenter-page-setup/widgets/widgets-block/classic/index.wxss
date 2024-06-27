@@ -1,0 +1,108 @@
+.classic-group__item {
+  position: relative;
+  overflow: hidden;
+}
+.classic-group__item:first-of-type {
+  border-top-left-radius: var(--theme-radius-card, 0);
+  border-top-right-radius: var(--theme-radius-card, 0);
+}
+.classic-group__item:last-of-type {
+  border-bottom-left-radius: var(--theme-radius-card, 0);
+  border-bottom-right-radius: var(--theme-radius-card, 0);
+}
+.classic-group__item + .classic-group__item:after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  top: -1px;
+  height: 1px;
+  border-bottom: 1px solid #e5e5e5;
+  transform: scaleY(0.5);
+}
+.classic-group .classic-group__item--cart {
+  font-size: 12px;
+  color: #fff;
+  padding: 1px 0.4em;
+  text-align: center;
+  min-width: 1.2em;
+  border-radius: 0.8em;
+  box-sizing: border-box;
+  background-color: #f44;
+}
+.classic-group .van-cell {
+  align-items: center;
+  color: #111;
+}
+.classic-group .van-cell:active {
+  background: #fff;
+}
+.classic-group .van-cell__title text {
+  position: relative;
+}
+.classic-group .classic-group__item--gifts {
+  font-size: 12px;
+  color: #999;
+  position: relative;
+  display: inline-block;
+  padding-right: 12px;
+}
+.classic-group .classic-group__item--gifts:after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -3px;
+  border-radius: 50%;
+  background: red;
+}
+.classic-group .van-cell__left-icon {
+  margin-top: -4px;
+  margin-right: 10px;
+  color: #333;
+}
+.classic-group .van-cell__right-icon {
+  color: #999;
+}
+.classic-group__whitespace {
+  height: 10px;
+}
+.classic-group__arrow {
+  padding: 16px 8px !important;
+}
+.icon {
+  font-size: 22px !important;
+  margin: 2px 10px 2px 0;
+}
+.message__contact-container {
+  box-sizing: border-box;
+  display: flex;
+  padding: 16px 8px;
+  position: relative;
+}
+.message__contact-button,
+.message__contact-container {
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+  line-height: 24px;
+  width: 100%;
+}
+.message__contact-button {
+  text-align: left;
+  height: 24px;
+  padding: 0 0 0 2px;
+  margin: 0;
+  border: none;
+  outline: none;
+}
+.message__contact-button:after {
+  border: none;
+  outline: none;
+}
+.authorize-userinfo {
+  text-align: left;
+}

@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../widgets/rt/RecommendGoodsTitle",
+    "b": "/@y-open/vt/dist/list/index",
+    "c": "./../components/recommend-goods",
+    "_": "../../../../../components/_/index"
+  }
+}

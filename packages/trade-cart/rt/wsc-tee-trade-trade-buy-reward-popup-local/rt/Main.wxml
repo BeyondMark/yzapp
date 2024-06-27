@@ -1,0 +1,41 @@
+<c bind:_init="_tic" bind:close="_p" class="f9778" closeable="{{true}}" data-t="{{ close:{en:'handleClose'} }}" getContainer="body" overlayStyle="{{isCartScene?'background-color: transparent':''}}" position="bottom" round="{{true}}" safeAreaInsetBottom="{{true}}" show="{{show}}" zIndex="99999" wx:if="{{initialShow}}">
+    <view class="c00639">
+        <view class="c7bbbc">更换活动</view>
+        <view class="c98107">
+            <view class="c15079">
+                <view>{{popupTitle}}</view>
+                <view bind:tap="_p" data-t="{{ tap:{en:'onSwitchChange'} }}">
+                    <d bind:_init="_tic" class="c32dc" color="{{themeColors['main-bg']}}" name="checked" wx:if="{{isUse}}"></d>
+                    <d bind:_init="_tic" class="c32dc" color="#969799" name="circle" wx:if="{{!isUse}}"></d>
+                </view>
+            </view>
+            <view class="c3908b">
+                <view class="c1fd48" wx:if="{{hasPresent}}">
+                    <view class="c3e0c1">
+                        <view>              【赠品】
+              <view class="c89585" wx:if="{{sendInfo.canChoosePresentNum&&sendInfo.canChoosePresentNum!==sendInfo.presents.length}}">任选 {{sendInfo.canChoosePresentNum}} 种</view>
+                        </view>
+                    </view>
+                    <b bind:_init="_tic" canChooseSku="{{false}}" cardStyle="padding: 12px 12px 0 0;margin: 0;background: transparent;" customStyle="background: #f5f7f9;margin-left: 12px;" goods="{{present}}" isCanChoose="{{false}}" isPop="{{true}}" needTag="{{false}}" rmId="b4-13" wx:if="{{rmId==='b4-21'}}" wx:for="{{availablePresents}}" wx:for-item="present" wx:key="skuId"></b>
+                </view>
+                <view class="c1fd48">
+                    <view class="c3e0c1 c1b43" wx:if="{{hasCoupon}}">
+                        <view>【优惠券】</view>
+                    </view>
+                    <a bind:_init="_tic" canCheck="{{false}}" color="{{themeColor}}" coupon="{{item}}" needNum="{{true}}" noClick="{{true}}" priceColor="{{themeColors['ump-price']}}" rmId="b4-13" wx:if="{{rmId==='b4-21'}}" wx:for="{{sendInfo.coupons}}" wx:key="id"></a>
+                </view>
+                <view class="c1fd48">
+                    <view class="c3e0c1 c1b43" wx:if="{{hasCouponsCode}}">
+                        <view>【优惠码】</view>
+                    </view>
+                    <a bind:_init="_tic" canCheck="{{false}}" color="{{themeColor}}" coupon="{{item}}" needNum="{{true}}" noClick="{{true}}" priceColor="{{themeColors['ump-price']}}" rmId="b4-13" wx:if="{{rmId==='b4-21'}}" wx:for="{{sendInfo.couponsCode}}" wx:key="id"></a>
+                </view>
+                <view class="c3e0c1" wx:if="{{score}}">【{{score}}积分】</view>
+                <view class="c3e0c1" wx:if="{{noPostage}}">【本单包邮】</view>
+            </view>
+        </view>
+        <view class="c9275c">
+            <view bind:tap="_p" class="dc289" data-t="{{ tap:{en:'handleClose'} }}">不参与此活动</view>
+        </view>
+    </view>
+</c>

@@ -1,0 +1,16 @@
+.goods-extra-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.goods-extra-wrapper .goods-extra {
+  margin: 4px 0 4px;
+  overflow: hidden;
+  color: #ff720d;
+  font-size: 12px;
+  width: 100%;
+  height: 12px;
+  line-height: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}

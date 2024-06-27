@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../../../../components/share-tab/index",
+    "_": "../../../../../../../../components/_/index"
+  }
+}

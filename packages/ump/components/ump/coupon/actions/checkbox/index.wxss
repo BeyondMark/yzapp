@@ -1,0 +1,10 @@
+.coupon-checkbox {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  padding-right: 24px;
+  box-sizing: border-box;
+}
+.coupon-checkbox__label {
+  font-size: 12px;
+}

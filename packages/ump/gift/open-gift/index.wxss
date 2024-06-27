@@ -1,0 +1,64 @@
+.open-gift {
+  width: 300px;
+  height: 415px;
+  position: absolute;
+  left: 50%;
+  top: 80px;
+  margin-left: -150px;
+  border-radius: 5px;
+  background: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+.open-gift__avatar image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+.open-gift__desc {
+  margin-top: 5px;
+}
+.open-gift__img {
+  width: 177px;
+  height: 122px;
+  margin-top: 23px;
+}
+.open-gift__btn {
+  height: 40px;
+  line-height: 40px;
+  width: 120px;
+  margin: 0 auto;
+  margin-top: 52px;
+  border-radius: 5px;
+  color: #fff;
+  background: #e0493f;
+}
+.open-gift__btn--presenter {
+  margin-top: 46px;
+}
+.open-gift__presenter-link {
+  position: relative;
+  margin-top: 26px;
+  display: inline-block;
+  margin-left: -5px;
+}
+.open-gift__presenter-link .van-arrow {
+  border-color: #333;
+  right: -10px;
+  width: 5px;
+  height: 5px;
+}
+.time-unit {
+  display: inline-block;
+  color: #fff;
+  min-width: 20px;
+  background-color: #333;
+  border-radius: 2px;
+  height: 16px;
+  line-height: 16px;
+  font-size: 12px;
+}
+.count-down-wrapper {
+  margin-top: 8px;
+}

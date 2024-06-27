@@ -1,0 +1,39 @@
+.long-cell {
+  padding: var(--theme-page-cell-padding-top, 10px)
+    var(--theme-page-cell-padding-right, 12px)
+    var(--theme-page-cell-padding-bottom, 10px)
+    var(--theme-page-cell-padding-left, 12px) !important;
+}
+.label-class {
+  color: #323233;
+}
+.pay-idcard-title {
+  color: #969799;
+}
+.idcardInput {
+  color: #323233;
+  font-weight: var(--theme-common-field-font-weight, 500);
+}
+.idcardInput:after {
+  margin-left: 15px;
+  border-top-width: 1px;
+}
+.idcardInput .t-cell__title {
+  max-width: 70px;
+}
+.idcardInput .t-cell__value {
+  text-align: right;
+}
+.trade-pay-idcard {
+  color: #969799;
+}
+.trade-pay-idcard:after {
+  margin-left: 15px;
+  border-top-width: 1px;
+}
+.trade-pay-idcard .t-cell__title {
+  max-width: 70px;
+}
+.trade-pay-idcard .t-cell__value {
+  text-align: right;
+}

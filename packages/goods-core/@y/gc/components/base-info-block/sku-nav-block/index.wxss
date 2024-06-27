@@ -1,0 +1,20 @@
+.cf728 {
+  box-sizing: border-box;
+  padding: 8px 0 0 16px;
+  display: flex;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  background-color: #fff;
+}
+.cf728::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+.c1ba43 {
+  flex: 0 0 1px;
+  margin-right: 8px;
+  width: 1px;
+  height: 42px;
+  background-color: #f2f3f5;
+}

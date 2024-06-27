@@ -1,0 +1,5 @@
+<view class="{{'goods-ext-info'}} {{opt.align}}">
+    <view class="item" style="{{opt.itemHeight?'height:'+opt.itemHeight:''}}" wx:for="{{opt.list}}" wx:key="index">
+        <a _opt="{{item}}" bind:_init="_tic"></a>
+    </view>
+</view>

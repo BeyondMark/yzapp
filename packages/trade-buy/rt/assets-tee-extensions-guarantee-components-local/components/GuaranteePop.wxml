@@ -1,0 +1,48 @@
+<view>
+    <a bind:_init="_tic" bind:close="_p" closeable="{{true}}" data-t="{{ close:{en:'onClose'} }}" position="bottom" round="{{true}}" show="{{value}}" zIndex="{{zIndex}}">
+        <view class="guarantee-pop" wx:if="{{value}}">
+            <view class="guarantee-pop__container">
+                <view class="guarantee-pop__bg-bottom"></view>
+                <view class="guarantee-pop__title">
+                    <image class="{{true?'logo':''}} {{logoAddYouzan?'youzan':''}} tee-image" lazyLoad="true" src="{{logo}}"></image>
+                </view>
+                <view class="guarantee-pop__time" wx:if="{{time}}">
+                    <view class="guarantee-pop__time_img">
+                        <image class="icon tee-image" lazyLoad="true" src="https://b.yzcdn.cn/public_files/3da1c0379aa6d10591975119c6ab2615.png"></image>
+                        <view class="guarantee-pop__time_num">{{time}}</view>
+                    </view>
+                    <view>            店铺已持续
+            <view class="guarantee-pop__time_num2">{{time}}</view>            年为消费者提供消费保障服务
+          </view>
+                </view>
+                <view class="guarantee-pop__content hide-scrollbar">
+                    <view class="{{'guarantee-pop__life '+lifeCycle.class}}" wx:if="{{lifeCycle}}">
+                        <view class="label">{{lifeCycle.label}}</view>
+                        <view class="content">{{lifeCycle.content}}</view>
+                    </view>
+                    <b bind:_init="_tic" wx:if="{{loading}}"></b>
+                    <view wx:else>
+                        <d bind:_init="_tic" bind:onClick="_p" content="{{item}}" data-t="{{ onClick:{en:'clickItem'} }}" docs="{{docs}}" wx:for="{{items}}" wx:key="key"></d>
+                    </view>
+                </view>
+                <view class="guarantee-pop__footer">
+                    <view bind:tap="_p" data-t="{{ tap:{en:'onShowEffective'} }}">            有赞放心购具体生效情况与商品类目、支付方式有关
+            <c bind:_init="_tic" name="arrow"></c>
+                    </view>
+                    <view style="margin-top: 16px">
+                        <image class="{{true?'bottom-logo':''}} {{logoAddYouzan?'youzan':''}} tee-image" lazyLoad="true" src="{{bottomLogo}}"></image>
+                        <view class="t-text">提供保障</view>
+                    </view>
+                    <view bind:tap="_p" class="guarantee-pop__footer-help" data-t="{{ tap:{en:'goHelp'} }}" wx:if="{{hasPaid}}"> 联系放心购客服 </view>
+                </view>
+            </view>
+        </view>
+    </a>
+    <e bind:_init="_tic" bind:close="_p" content="{{docs.declare_2021}}" data-t="{{ close:{en:'onCloseDeclare'} }}" value="{{showDeclare}}" zIndex="{{zIndex+1}}" wx:if="{{docs.declare_2021}}"></e>
+    <f bind:_init="_tic" bind:close="_p" content="{{docs.effective}}" data-t="{{ close:{en:'onCloseEffective'} }}" value="{{showEffective}}" zIndex="{{zIndex+1}}"></f>
+    <g bind:_init="_tic" bind:close="_p" content="{{docs.pickup}}" data-t="{{ close:{en:'onClosePickup'} }}" icon="{{docs.icon}}" value="{{showPickup}}" zIndex="{{zIndex+1}}"></g>
+    <h bind:_init="_tic" bind:close="_p" content="{{docs.damageSubsidy}}" data-t="{{ close:{en:'onCloseDamageSubsidy'} }}" icon="{{docs.icon}}" value="{{showDamageSubsidy}}" zIndex="{{zIndex+1}}"></h>
+    <i bind:_init="_tic" bind:close="_p" content="{{docs.beautyRights}}" data-t="{{ close:{en:'onCloseBeautyRights'} }}" icon="{{docs.icon}}" value="{{showBeautyRights}}" zIndex="{{zIndex+1}}"></i>
+    <j bind:_init="_tic" bind:close="_p" content="{{docs.eatRights}}" data-t="{{ close:{en:'onCloseEatRights'} }}" icon="{{docs.icon}}" value="{{showEatRights}}" zIndex="{{zIndex+1}}"></j>
+    <k bind:_init="_tic" bind:close="_p" content="{{currentShowContent}}" data-t="{{ close:{en:'onCloseCommon'} }}" value="{{showCommon}}" zIndex="{{zIndex+1}}"></k>
+</view>

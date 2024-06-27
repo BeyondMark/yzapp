@@ -1,0 +1,5 @@
+<b bind:_init="_tic" bind:onUpdateCloseStatus="_p" bind:onUpdateHeadType="_p" bind:onUpdateShopInfo="_p" data-t="{{ onUpdateCloseStatus:{en:'onUpdateCloseStatus'},onUpdateShopInfo:{en:'onUpdateShopInfo'},onUpdateHeadType:{en:'onUpdateHeadType'} }}" launchArgs="{{launchArgs}}" show="{{show}}" userInfo="{{userInfo}}">
+    <view slot="header">
+        <a bind:_init="_tic" fastJoinHeaderInfo="{{fastJoinHeaderInfo}}" rmId="{{rmId}}" shopInfo="{{shopInfo}}" wx:if="{{rmId==='b7-60'}}"></a>
+    </view>
+</b>

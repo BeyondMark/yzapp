@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-checkbox": "/packages/async-main/@vant/weapp/dist/checkbox/index",
+    "user-authorize": "/components/account/user-authorize/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "van-checkbox": "_" }
+}

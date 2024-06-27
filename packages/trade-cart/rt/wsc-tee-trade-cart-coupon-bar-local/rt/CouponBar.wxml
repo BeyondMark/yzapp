@@ -1,0 +1,9 @@
+<view bind:tap="_p" class="c390f2" data-t="{{ tap:{ en:'setPopupVisible',args:[true] } }}">
+    <view style="display: inline-flex; vertical-align: top">
+        <view class="cc2f6 theme-color c89585" wx:for="{{topCouponList}}" wx:for-item="coupon" wx:key="id"> {{coupon.use_threshold_and_value_copywriting}} </view>
+    </view>
+    <view class="d60f4">
+        <view class="c6bd2 c89585">去领券</view>
+        <a bind:_init="_tic" class="d60f4" name="arrow"></a>
+    </view>
+</view>

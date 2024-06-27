@@ -1,0 +1,84 @@
+<view class="ec194 {{isRetailWeapp?'c50648':''}}" id="address-edit">
+    <l bind:_init="_tic" bind:closeAnalyzeDialog="_p" bind:handleSave="_p" bind:setCloseMarkerLabel="_p" bind:setShowMarkerLabel="_p" data-t="{{ setCloseMarkerLabel:{en:'setCloseMarkerLabel'},setShowMarkerLabel:{en:'setShowMarkerLabel'},closeAnalyzeDialog:{en:'handleCloseAnalyzeConfirmeDialog'},handleSave:{en:'handleSave'} }}" themeColors="{{themeColors}}" titleText="{{titleText}}"></l>
+    <view class="fe43b">
+        <block wx:if="{{!form.id&&!isShowRetailDeliveryAddress}}">
+            <a bind:_init="_tic" bind:save="_p" data-t="{{ save:{en:'onCurrentLocationUse'} }}" rmId="{{rmId}}" wx:if="{{rmId==='b37-4'}}"></a>
+        </block>
+        <view class="c44ba3">
+            <view class="b9292 c89585">收货信息</view>
+            <view class="c2cb01">
+                <block wx:if="{{!isCityForcePoiSelect&&!form.id}}">
+                    <b bind:_init="_tic" bind:save="_p" class="c795d5" data-t="{{ save:{en:'onPlatformAddressSave'} }}" rmId="b37-5" wx:if="{{rmId==='b37-4'}}"></b>
+                </block>
+                <block wx:if="{{!form.id&&!isShowRetailDeliveryAddress}}">
+                    <view class="c247ef" wx:if="{{isShowPasteAddressDivider}}"></view>
+                    <view bind:tap="_p" class="c7a7b8 c89585" data-t="{{ tap:{en:'onShowAnalyze'} }}">粘贴地址</view>
+                </block>
+            </view>
+        </view>
+        <view class="c6d959">
+            <view class="e3efd">
+                <j bind:_init="_tic" bind:change="_p" bind:clear="_p" bind:focus="_p" clearable="{{true}}" customStyle="{{fieldStyle}}" data-ref="addressEdit" data-t="{{ focus:{ en:'onFocus',args:['userName'] },change:{ en:'handleInputForm',args:['userName'] },clear:{ en:'handleFormClear',args:['userName'] } }}" errorMessage="{{errorInfoMsg.userName}}" label="收货人" placeholder="收货人姓名" titleWidth="72px" type="nickname" value="{{form.userName}}"></j>
+            </view>
+            <j bind:_init="_tic" bind:change="_p" bind:clear="_p" bind:focus="_p" clearable="{{true}}" customStyle="{{fieldStyle}}" data-t="{{ focus:{ en:'onFocus',args:['tel'] },change:{ en:'handleInputForm',args:['tel'] },clear:{ en:'handleFormClear',args:['tel'] } }}" errorMessage="{{errorInfoMsg.tel}}" label="手机号码" maxlength="{{20}}" placeholder="收货人手机号" titleWidth="72px" type="number" value="{{form.tel}}"></j>
+            <j bind:_init="_tic" bind:tap="_p" customStyle="{{fieldStyle}}" data-t="{{ tap:{en:'handleAreaShow'} }}" errorMessage="{{errorInfoMsg.areaCode}}" inputClass="{{areaValue?'c240fa':'c68996'}}" label="所在地区" placeholder="{{areaPlaceholder}}" readonly="{{true}}" titleWidth="72px" value="{{areaValue}}" wx:if="{{showAreaField}}">
+                <view catch:tap="_p" class="c51a70" data-t="{{ tap:{en:'onClickIcon',et:'stop'} }}" slot="right-icon" wx:if="{{!isShowRetailDeliveryAddress}}">
+                    <g bind:_init="_tic" class="ee994" name="location" size="12px"></g>          定位
+        </view>
+            </j>
+            <j autosize="{{true}}" bind:_init="_tic" bind:blur="_p" bind:change="_p" bind:clear="_p" bind:focus="_p" bind:tap="_p" border="{{!showPoiTips}}" clearable="{{true}}" customStyle="{{fieldStyle}}" data-t="{{ focus:{ en:'onFocus',args:['addressDetail'] },change:{ en:'handleInputForm',args:['addressDetail'] },tap:{ en:'onClickDetail',args:['addressDetail'] },clear:{ en:'handleFormClear',args:['addressDetail'] },blur:{ en:'onBlur',args:['addressDetail'] } }}" errorMessage="{{errorInfoMsg.addressDetail}}" inputClass="{{form.addressDetail?'c240fa':'c68996'}}" isLink="{{isShowRetailDeliveryAddress}}" label="{{isShowRetailDeliveryAddress?'收货地址':'详细地址'}}" placeholder="{{addressLabelPlaceholder}}" readonly="{{forcePoiSelect&&!form.downgrade||isShowRetailDeliveryAddress}}" titleWidth="72px" type="textarea" value="{{addressDetail}}"></j>
+            <view bind:tap="_p" class="c17121" data-t="{{ tap:{en:'onClickDetail'} }}" wx:if="{{showPoiTips}}">{{poiTipsText}}</view>
+            <m bind:_init="_tic" bind:tap="_p" data-t="{{ tap:{en:'onClickIcon'} }}" map="{{map}}" showMarkerLabel="{{showMarkerLabel}}" wx:if="{{!isShowRetailDeliveryAddress}}"></m>
+            <j autosize="{{true}}" bind:_init="_tic" bind:change="_p" bind:clear="_p" bind:focus="_p" border="{{false}}" clearable="{{true}}" customStyle="{{fieldStyle}}" data-t="{{ focus:{ en:'onFocus',args:['houseNumber'] },change:{ en:'handleInputForm',args:['houseNumber'] },clear:{ en:'handleFormClear',args:['houseNumber'] } }}" errorMessage="{{errorInfoMsg.houseNumber}}" label="门牌号" placeholder="{{isShowRetailDeliveryAddress?'填写详细地址，例：1层101室':'街道、门牌号等'}}" titleWidth="72px" type="textarea" value="{{form.houseNumber}}"></j>
+        </view>
+        <view class="c2e9a3">
+            <h bind:_init="_tic">
+                <f bind:_init="_tic" center="{{true}}" title="地址标签" titleClass="efe6b" valueClass="c996da">
+                    <k bind:_init="_tic" bind:changeLabel="_p" data-t="{{ changeLabel:{en:'onChangeLabel'} }}" themeCss="{{themeCSS}}" value="{{form.label}}"></k>
+                </f>
+                <f bind:_init="_tic" border="{{false}}" center="{{true}}" customClass="f772f" title="设为默认收货地址">
+                    <o activeColor="var(--main-bg, #323233)" bind:_init="_tic" bind:change="_p" checked="{{form.isDefault}}" customClass="c7f86c" data-t="{{ change:{ en:'handleInputForm',args:['isDefault'] } }}" size="24px"></o>
+                </f>
+            </h>
+        </view>
+    </view>
+    <view class="c9d8b3">
+        <view class="e2c6b" wx:if="{{form.id}}">
+            <c bind:_init="_tic" bind:tap="_p" block="{{true}}" customClass="b3472" data-t="{{ tap:{en:'handleDelete'} }}" loading="{{isDeleting}}" round="{{true}}" type="default">        删除收货地址
+      </c>
+        </view>
+        <view class="e2c6b">
+            <c bind:_init="_tic" bind:tap="_p" block="{{true}}" color="var(--main-bg, #323233)" customClass="{{'c6cf9d '+(isShowRetailDeliveryAddress&&showPoiTips?' b8e40 ':'')}}" data-t="{{ tap:{en:'handleSave'} }}" loading="{{isSaving}}" round="{{true}}" type="danger">        保存并使用
+      </c>
+        </view>
+    </view>
+    <d bind:_init="_tic" position="bottom" show="{{showArea}}">
+        <n areaList="{{areaList}}" bind:_init="_tic" bind:cancel="_p" bind:confirm="_p" columnsPlaceholder="{{['请选择','请选择','请选择']}}" customClass="area" data-ref="area" data-t="{{ confirm:{en:'handleAreaConfirm'},cancel:{en:'handleAreaCancel'} }}" id="area" loading="{{areaLoading}}" value="{{form.areaCode}}"></n>
+    </d>
+    <i bind:_init="_tic" id="van-toast"></i>
+    <view class="c2f2cd" wx:if="{{!dataLoaded}}"></view>
+    <e bind:_init="_tic" bind:cancel="_p" bind:close="_p" bind:confirm="_p" cancelButtonText="暂不填入" confirmButtonText="填入" data-t="{{ confirm:{en:'handleUseAnalyze'},close:{en:'handleCloseAnalyzeConfirmeDialog'},cancel:{en:'handleCloseAnalyze'} }}" show="{{isShowAnalyzeConfirmeDialog}}" showCancelButton="{{true}}" useSlot="{{true}}">
+        <view class="c7d8a6">
+            <view class="c601da">是否填入复制的地址信息？</view>
+            <view class="c7d8a6-list">
+                <view class="c88c6f" wx:if="{{analyzeAddress.userName}}">
+                    <view class="dc437 c89585">收货人</view>
+                    <view class="c1b695 c89585">{{analyzeAddress.userName}}</view>
+                </view>
+                <view class="c88c6f" wx:if="{{analyzeAddress.tel}}">
+                    <view class="dc437 c89585">手机号码</view>
+                    <view class="c1b695 c89585">{{analyzeAddress.tel}}</view>
+                </view>
+                <view class="c88c6f" wx:if="{{analyzeAddress.province}}">
+                    <view class="dc437 c89585">所在地区</view>
+                    <view class="c1b695 c89585">{{analyzeAddress.province}} {{analyzeAddress.city}}
+            {{analyzeAddress.county}}</view>
+                </view>
+                <view class="c88c6f" wx:if="{{analyzeAddress.addressDetail}}">
+                    <view class="dc437 c89585">详细地址</view>
+                    <view class="c1b695 c89585"> {{analyzeAddress.addressDetail}}</view>
+                </view>
+            </view>
+        </view>
+    </e>
+</view>

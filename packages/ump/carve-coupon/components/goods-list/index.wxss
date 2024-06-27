@@ -1,0 +1,40 @@
+.title-bar {
+  margin: 24px 0 16px;
+  font-family: PingFangSC-Semibold;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #333;
+}
+.title-bar:after,
+.title-bar:before {
+  content: "";
+  display: inline-block;
+  width: 28px;
+  height: 13px;
+  background: url(https://img01.yzcdn.cn/public_files/2018/10/26/af59631fc6797f85c2aaad02bf6440e5.png)
+    50%no-repeat;
+  background-size: 28px 13px;
+}
+.title-bar:before {
+  margin-right: 12px;
+}
+.title-bar:after {
+  transform: rotate(180deg);
+  margin-left: 12px;
+}
+.coupon-recommend {
+  padding: 0 16px;
+}
+.coupon-recommend__list {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+.goods-list-item {
+  margin-bottom: 8px;
+}
+.sample-goods {
+  flex: 100%;
+  justify-content: space-between;
+}

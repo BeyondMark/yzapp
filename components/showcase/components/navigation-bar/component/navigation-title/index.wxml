@@ -1,0 +1,3 @@
+<view class="c99ec3">
+    <view class="c1cb25" style="{{titleColor==='black'?'color: #000;':'color: #fff;'}}text-align: {{textAlign}}">{{title}}</view>
+</view>

@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-tee/@y-open/vt/native/weapp/toast/index/index",
+    "b": "./components/trigger-button/index",
+    "c": "/packages/async-tee/@y/pptc/lib/components/user-authorize/components/popup/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_", "c": "_" }
+}

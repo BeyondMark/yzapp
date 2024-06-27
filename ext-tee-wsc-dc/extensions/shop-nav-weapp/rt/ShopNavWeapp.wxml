@@ -1,0 +1,23 @@
+<view wx:if="{{forceShow||isTabPage||renderCustomTabbar}}">
+    <view>
+        <view class="{{deviceType}}" wx:if="{{navStyle===4}}">
+            <view class="{{'ea816'}}">
+                <view class="c31bd5" style="{{brandStyle}}"></view>
+                <view class="f5498" style="{{brandStyle}}"></view>
+                <view class="d540a" style="{{brandStyle}}"></view>
+            </view>
+            <view class="{{'c41317'}}" style="{{brandStyle}}"></view>
+        </view>
+    </view>
+    <view catch:touchmove="_p" class="{{classes}}" data-t="{{ touchmove:{en:'preventTouchMove',et:'stop'} }}" style="{{commonStyle}}">
+        <view bind:tap="_p" class="f79b4" data-t="{{ tap:{ en:'navCommonClick',args:[index] } }}" wx:for="{{navList}}" wx:key="index">
+            <b active="{{selectedIndex===index}}" activeColor="{{selectedColor}}" bind:_init="_tic" iconPath="{{item.iconPath}}" imgMode="{{imgMode}}" isMainIcon="{{(navStyle===2||navStyle===4)&&item.isMainIcon}}" linkInfo="{{item.linkInfo}}" notCoexist="{{notCoexist}}" rudderStyle="{{rudderStyle}}" selectedIconPath="{{item.selectedIconPath}}" text="{{item.text}}" type="{{item.type}}" unactivatedColor="{{color}}"></b>
+        </view>
+    </view>
+    <view class="{{'c49e87'}} {{deviceType}}" data-float="{{isCart}}" wx:if="{{navStyle===3}}"></view>
+    <view wx:if="{{navStyle===1&&brandNavStyle===2}}">
+        <view class="{{'c49e87'}} {{deviceType}}">
+            <a bind:_init="_tic" brandStyle="{{brandStyle}}" rmId="{{rmId}}" wx:if="{{rmId==='@wsc-tee-decorate/shop-nav-weapp~GaDMpaUB'}}"></a>
+        </view>
+    </view>
+</view>

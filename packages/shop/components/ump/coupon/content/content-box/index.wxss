@@ -1,0 +1,30 @@
+.coupon-contentbox {
+  width: 100%;
+  height: inherit;
+}
+.coupon-contentbox__section {
+  color: #323233;
+  text-align: inherit;
+}
+.coupon-contentbox__content,
+.coupon-contentbox__wrap {
+  width: inherit;
+  overflow: hidden;
+}
+.coupon-contentbox__content {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.coupon-contentbox__wrap {
+  margin-top: 12px;
+  word-break: break-all;
+}
+.coupon-contentbox__slot-default {
+  display: none;
+}
+.coupon-contentbox__slot:empty + .coupon-contentbox__slot-default {
+  display: block;
+}
+.coupon-contentbox__description {
+  color: #323233 !important;
+}

@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../../../common/components/theme-view/index",
+    "b": "../../../../../@vant/weapp/dist/tag/index",
+    "_": "../../../../../../../components/_/index"
+  }
+}

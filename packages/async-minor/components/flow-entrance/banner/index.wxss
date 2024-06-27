@@ -1,0 +1,9 @@
+.flow-entrance-banner {
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+.flow-entrance-banner image {
+  width: 100%;
+  border-radius: inherit;
+}

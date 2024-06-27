@@ -1,0 +1,3 @@
+<a bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'onClose'} }}" position="bottom" round="{{true}}" show="{{show}}" style="{{themeCss}}" wx:if="{{initialShow}}">
+    <b activeClass="dfaa2" bind:_init="_tic" bind:cancel="_p" bind:confirm="_p" columns="{{dateList}}" confirmButtonText="完成" data-t="{{ cancel:{en:'onClose'},confirm:{en:'selectDate'} }}" showToolbar="{{true}}" title="选择首次送达日期"></b>
+</a>

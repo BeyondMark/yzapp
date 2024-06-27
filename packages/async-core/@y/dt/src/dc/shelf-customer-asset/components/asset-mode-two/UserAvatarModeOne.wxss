@@ -1,0 +1,79 @@
+.tee-image {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.userinfo-mode-two-type-one {
+  width: 100%;
+}
+.userinfo-mode-two-type-one .auth-block {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.userinfo-mode-two-type-one .top {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.userinfo-mode-two-type-one .left {
+  flex-grow: 1;
+  position: relative;
+}
+.userinfo-mode-two-type-one .hello {
+  color: var(--realTextColor);
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 4px;
+}
+.userinfo-mode-two-type-one .username {
+  color: var(--realTextColor);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 190px;
+}
+.userinfo-mode-two-type-one .username-con {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+}
+.userinfo-mode-two-type-one .avatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.userinfo-mode-two-type-one .member-code {
+  width: 76px;
+  height: 24px;
+  border-radius: 16px;
+  background: var(--themeColor);
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  line-height: 18px;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.userinfo-mode-two-type-one .member-code-img {
+  width: 14px;
+  height: 14px;
+  margin-right: 2px;
+}
+.userinfo-mode-two-type-one .right {
+  text-align: center;
+  margin-top: -42px;
+}

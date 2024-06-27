@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y/ppt/lib/user-authorize/index",
+    "b": "./AssetEntryCardModeFour",
+    "c": "./AssetInfoBlockModeFour",
+    "_": "../../../../../../../../../components/_/index"
+  }
+}

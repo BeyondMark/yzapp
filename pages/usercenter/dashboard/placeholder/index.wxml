@@ -1,0 +1,50 @@
+<view class="c57365">
+    <view class="c01dd9" style="padding-top: {{navigationBarHeight}}px">
+        <view class="c325f">
+            <view class="c87289"></view>
+            <view class="c87289"></view>
+        </view>
+        <view class="a4a7b">
+            <view class="c696b2"></view>
+            <view class="right-photo">
+                <view class="b0689"></view>
+                <view class="c7c6fb"></view>
+            </view>
+        </view>
+        <view class="e1260">
+            <view class="c392f0">
+                <view class="b785c"></view>
+            </view>
+            <view class="c85b6d"></view>
+        </view>
+    </view>
+    <view class="c9a036">
+        <view class="c6e8b6">
+            <view class="stats-item" wx:for="{{stats}}" wx:key="index">
+                <view class="c22cc6"></view>
+                <view class="c18f7f"></view>
+            </view>
+        </view>
+        <view class="e7555">
+            <view class="c0f7d6">
+                <view class="ab7d1"></view>
+                <view class="e162a"></view>
+            </view>
+            <view class="a4633">
+                <view class="order-item" wx:for="{{orders}}" wx:key="index">
+                    <view class="d79b3"></view>
+                    <view class="c3ccaa"></view>
+                </view>
+            </view>
+        </view>
+        <view class="eece6" wx:for="{{widgets}}" wx:key="index">
+            <view class="c9d2b1" wx:for="{{item}}" wx:for-item="w" wx:key="index">
+                <view class="c6d5b0">
+                    <view class="ee52a"></view>
+                </view>
+                <view class="c98ccd"></view>
+                <view class="c68b5d"></view>
+            </view>
+        </view>
+    </view>
+</view>

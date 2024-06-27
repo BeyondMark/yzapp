@@ -1,0 +1,52 @@
+@import "/common/css/helper/index.wxss";
+.messages {
+  margin-top: 5px;
+  margin-bottom: 38px;
+  font-size: 28rpx;
+  height: 20px;
+  line-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.messages .icon-edit {
+  display: inline-block;
+  position: relative;
+  width: 16px;
+  height: 20px;
+  background-size: 13px 13px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-image: url(https://img01.yzcdn.cn/public_files/2018/09/25/04307d2d9c19524623cc482e745cf7b5.png);
+}
+.messages .message-edit-finish {
+  display: inline-block;
+  line-height: 26.5px;
+  color: #5f729a;
+  margin-left: 20px;
+}
+.messages .input-placeholder,
+.messages input {
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  min-height: auto;
+  max-width: 200px;
+  overflow: visible;
+}
+.messages .input--edit {
+  width: 220px;
+  text-align: left;
+}
+.messages .input-display-text {
+  max-width: 580rpx;
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  padding-right: 10px;
+  position: relative;
+}
+.messages .input-placeholder {
+  margin-top: 4px;
+  color: #999;
+}

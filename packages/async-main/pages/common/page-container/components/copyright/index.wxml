@@ -1,0 +1,12 @@
+<view catchlongpress="copyright__longpress" class="copyright-container {{copyright.showCustomerTips?'copyright-container--withtips':''}}" style="background-color: {{pageBgColor||'#F9F9F9'}}" wx:if="{{!copyright.hideFooter}}">
+    <view bindtap="linkToStoreInfo" class="zan-store-info" wx:if="{{isShowStoreInfo&&!copyright.hideQuickEntry}}">
+        <view class="zan-store-info__left"></view>
+        <view class="zan-store-info__text">店铺信息</view>
+        <view class="zan-store-info__right"></view>
+    </view>
+    <image bindtap="linkToHomePage" class="copyright-image" mode="aspectFit" src="{{copyright.logo}}" wx:if="{{(copyright.isCustomized||!copyright.showCustomerTips)&&!copyright.hideLogo}}"></image>
+    <text bindtap="linkToWeappWebsite" class="copyright-text {{copyright.isCustomized?'copyright-text--customized':''}}" wx:if="{{!copyright.showCustomerTips&&!copyright.hidePoweredBy}}">有赞提供技术支持</text>
+    <div wx:elif="{{!copyright.hidePoweredBy}}">
+        <div class="copyright-text copyright-text-tips">消费提醒：货款直接给商家，由商家承担全部售后服务</div>
+    </div>
+</view>

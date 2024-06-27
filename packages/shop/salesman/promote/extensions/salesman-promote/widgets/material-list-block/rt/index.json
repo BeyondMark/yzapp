@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-main/@vant/weapp/dist/dialog/index",
+    "b": "../components/feed-item/index",
+    "c": "/packages/async-main/@vant/weapp/dist/checkbox/index",
+    "d": "/packages/async-main/@vant/weapp/dist/icon/index",
+    "e": "/packages/async-main/@vant/weapp/dist/loading/index",
+    "_": "../../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_", "c": "_", "d": "_", "e": "_" }
+}

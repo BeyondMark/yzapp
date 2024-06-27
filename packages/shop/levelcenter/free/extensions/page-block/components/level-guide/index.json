@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-minor/components/scene-market-subscribe/index",
+    "b": "../../../../../level-common/protocol-guide/index",
+    "c": "./components/level-welcome/index/index",
+    "_": "../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

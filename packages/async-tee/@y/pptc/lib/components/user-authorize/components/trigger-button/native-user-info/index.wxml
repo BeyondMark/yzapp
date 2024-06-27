@@ -1,0 +1,8 @@
+<view class="user-authorize-nickname">
+    <view bind:tap="_p" class="user-authorize__btn-empty {{customClass}}" data-t="{{ tap:{en:'handleGetUserInfoFromAPI'} }}" style="{{customStyle}}" wx:if="{{canUseAPI}}">
+        <slot></slot>
+    </view>
+    <a bind:_init="_tic" bind:getuserinfo="_p" bind:tap="_p" block="{{true}}" class="user-authorize__btn-empty {{customClass}}" customStyle="{{customStyle}}" data-t="{{ tap:{en:'handleClick'},getuserinfo:{en:'handleGetUserInfo'} }}" disabled="{{loading}}" openType="getUserInfo" textStyle="{{customStyle}}" wx:else>
+        <slot></slot>
+    </a>
+</view>

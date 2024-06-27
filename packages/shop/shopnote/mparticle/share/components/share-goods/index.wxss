@@ -1,0 +1,26 @@
+@import "/common/css/helper/index.wxss";
+.share-canvas {
+  position: fixed;
+  top: -1000px;
+}
+.share-image__container,
+.share-image__content {
+  position: relative;
+  height: 100%;
+}
+.share-image__content {
+  width: 292px;
+  border-radius: 4px;
+  background: transparent;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+.share-image--preview {
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(50, 51, 50, 0.1);
+}

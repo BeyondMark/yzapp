@@ -1,0 +1,24 @@
+.c93f7f {
+  width: 310px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  border-radius: var(--theme-radius-dialog, 16px) !important;
+}
+.c5da0e {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 44px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.c3d1b7 {
+  font-size: 14px;
+  line-height: 20px;
+}
+.c2de75 {
+  height: 36px !important;
+  line-height: 34px !important;
+  margin: 24px 0;
+  border: none;
+  border-radius: var(--theme-radius-button, 999px);
+}

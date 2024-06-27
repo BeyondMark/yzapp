@@ -1,0 +1,11 @@
+<view class="mission-item">
+    <image class="mission-icon" src="{{mission.icon}}"></image>
+    <view class="mission-info">
+        <text class="mission-info__title">{{mission.subTitle}}</text>
+        <text class="mission-info__desc">{{mission.desc}}</text>
+    </view>
+    <a authTypeList="{{['mobile']}}" bind:next="bindGetPhoneNumber" bizDataMap="{{bizDataMap}}" wx:if="{{mission.name==='BINDPHONE'&&!mission.finished}}">
+        <button class="mission-action">去完成</button>
+    </a>
+    <view bindtap="handleClickDoMission" class="{{'mission-action '+(mission.finished?'mission-action__finished':'')}}" wx:if="{{mission.name!=='BINDPHONE'||mission.finished}}">{{mission.finished?'已完成':'去完成'}}</view>
+</view>

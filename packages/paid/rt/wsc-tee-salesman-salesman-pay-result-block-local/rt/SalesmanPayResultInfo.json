@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../components/line/index",
+    "b": "./../components/block/index",
+    "_": "../../../../../components/_/index"
+  }
+}

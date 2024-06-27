@@ -1,0 +1,22 @@
+<view class="c55fa6" wx:if="{{showCouponIntro}}">
+    <view class="fad58">
+        <view class="time">
+            <view class="d5d3d">使用时间</view>
+            <view>{{couponIntroDetail.validTimeCopywriting}}</view>
+        </view>
+        <view class="discount">
+            <view class="d5d3d">优惠内容</view>
+            <view bind:tap="_p" class="c1dee8" data-t="{{ tap:{en:'jumpAvailableGoods'} }}">
+                <view class="e1ee9"> {{couponIntroDetail.preferentialCopywritingDetail}} </view>
+                <a bind:_init="_tic" color="#979797" name="arrow" size="16px" wx:if="{{!isAllGoodsAvailable}}"></a>
+            </view>
+        </view>
+        <view class="state" wx:if="{{instruction}}">
+            <view class="d5d3d">使用说明</view>
+            <view class="{{showFoldBtn&&isFolded?'c620a3':''}}" id="instruction"> {{instruction}} </view>
+        </view>
+        <view bind:tap="_p" class="c33bdc" data-t="{{ tap:{en:'toggleFold'} }}" wx:if="{{showFoldBtn}}"> {{isFolded?'展开':'收起'}}全部
+      <a bind:_init="_tic" color="#979797" name="{{isFolded?'arrow-down':'arrow-up'}}" size="14px"></a>
+        </view>
+    </view>
+</view>

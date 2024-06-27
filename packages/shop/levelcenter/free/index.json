@@ -1,0 +1,15 @@
+{
+  "navigationStyle": "custom",
+  "backgroundColor": "#f7f7f7",
+  "usingComponents": {
+    "a": "/packages/shop/levelcenter/free/extensions/page-block/widgets/main/rt/index",
+    "b": "/packages/async-main/@vant/weapp/dist/toast/index",
+    "c": "/packages/async-main/@vant/weapp/dist/dialog/index",
+    "d": "/ext-tee-wsc-dc/extensions/page-style/rt/Main",
+    "e": "./../../rt/wsc-tee-dc-navigation-bar-local/rt/NavigationBar",
+    "f": "../../../async-tee/@y-open/vt/native/weapp/toast/index/index",
+    "g": "../../../async-tee/@y-open/vt/native/weapp/dialog/index/index",
+    "_": "../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_", "c": "_", "f": "_", "g": "_" }
+}

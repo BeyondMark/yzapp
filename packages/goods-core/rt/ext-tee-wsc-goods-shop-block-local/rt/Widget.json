@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../widgets/shop-tags/rt/index",
+    "b": "./../components/multi-store-info/index",
+    "c": "./../components/shop-base-info/index",
+    "d": "./../components/operate-btn/index",
+    "e": "./../components/benefit-content/index",
+    "f": "./../components/old-shop-pop/index",
+    "_": "../../../../../components/_/index"
+  }
+}

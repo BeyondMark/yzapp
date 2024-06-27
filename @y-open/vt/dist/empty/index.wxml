@@ -1,0 +1,15 @@
+<view class="t-empty {{customClass}}">
+    <view class="t-empty__image">
+        <slot name="image"></slot>
+    </view>
+    <view class="t-empty__image">
+        <image class="t-empty__image__img tee-image" lazyLoad="true" src="{{imageUrl}}" wx:if="{{imageUrl}}"></image>
+    </view>
+    <view class="t-empty__description">
+        <slot name="description"></slot>
+    </view>
+    <view class="t-empty__description"> {{description}} </view>
+    <view class="t-empty__bottom">
+        <slot></slot>
+    </view>
+</view>

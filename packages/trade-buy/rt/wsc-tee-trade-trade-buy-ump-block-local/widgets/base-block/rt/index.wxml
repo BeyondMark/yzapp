@@ -1,0 +1,28 @@
+<view class="bd1e6">
+    <b bind:_init="_tic" border="{{false}}" customClass="d5a4c" valueClass="dc895">
+        <view class="c83ec5" slot="title">
+            <view>商品总价</view>
+            <view class="c0e506">共{{info.goodsSumNum}}件商品</view>
+        </view>
+        <view style="font-family: Avenir; font-weight: var(--theme-common-price-font-weight, 800)">￥{{info.goodsSumPrice}}</view>
+    </b>
+    <a bind:_init="_tic" info="{{info}}" rmId="{{rmId}}" useCustomTitleSlot="{{true}}" wx:if="{{rmId==='b36-27'}}"></a>
+    <b bind:_init="_tic" border="{{false}}" customClass="d5a4c" valueClass="dc895" wx:if="{{info.postage}}">
+        <view class="c83ec5" slot="title">
+            <view>{{postage.postageTitle}}</view>
+            <view class="c0e506" wx:if="{{postage.discount>0}}">活动减{{postage.discountPrice}}配送费</view>
+        </view>
+        <view class="b2ce8">
+            <view class="c275c0" wx:if="{{postage.discount>0}}">￥{{postage.originPostage}}</view>
+            <view>￥{{info.postagePrice}}</view>
+        </view>
+    </b>
+    <b bind:_init="_tic" border="{{false}}" customClass="d5a4c" title="付费卡" valueClass="dc895" wx:if="{{showDisplayCardPrice}}">    ￥{{info.displayPrice}} </b>
+    <b bind:_init="_tic" border="{{false}}" customClass="d5a4c" valueClass="dc895" wx:if="{{info.umpPlusBuyNum}}">
+        <view class="c83ec5" slot="title">
+            <view>优惠换购</view>
+            <view class="c0e506">共{{info.umpPlusBuyNum}}件商品</view>
+        </view>
+        <view>￥{{info.umpPlusBuyPrice}}</view>
+    </b>
+</view>

@@ -1,0 +1,11 @@
+.t-text {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.extra-tip {
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #bbb;
+  box-sizing: border-box;
+  background: #fff;
+}

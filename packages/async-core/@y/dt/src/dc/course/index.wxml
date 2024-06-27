@@ -1,0 +1,10 @@
+<view class="dc-course" wx:if="{{goodList.length>0}}">
+    <view>
+        <a _opt="{{opt.titleOpt}}" bind:_init="_tic" custom="{{customTitle}}" url="{{url}}"></a>
+    </view>
+    <view class="knowleadge-item-container">
+        <view class="{{opt.listMode===5?'knowleadge-scroll-wrap':'cap-knowleadge-wrap'}}" style="{{'margin: '+pageMargin}}; {{'margin-top: 0;'}}">
+            <b _opt="{{item.itemOpt}}" bind:_init="_tic" class="{{'knowledge-good-item-mode'+opt.listMode}} {{opt.listMode===4?index%3===0?'big':'small':''}}" wx:for="{{goodList}}" wx:key="id"></b>
+        </view>
+    </view>
+</view>

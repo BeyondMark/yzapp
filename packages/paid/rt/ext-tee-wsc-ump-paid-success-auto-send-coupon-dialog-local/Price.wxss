@@ -1,0 +1,21 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.c78a5e {
+  display: flex;
+  align-items: baseline;
+  color: red;
+  line-height: 20px;
+  font-size: 11px;
+}
+.c78a5e .d8618 {
+  font-size: 13px;
+}
+.c065c9 {
+  font-size: 12px;
+}
+.c065c9 .d8618,
+.c065c9 .bdaa3 {
+  font-size: 14px;
+}

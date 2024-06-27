@@ -1,0 +1,13 @@
+<view class="coupon-list coupon-list-{{detail.showType}}">
+    <block wx:if="{{detail.fetchedCoupons.length}}">
+        <a bind:close="onClose" bind:toggle-subscribe-mask="toggleSubscribeMask" coupon="{{coupon}}" customClass="coupon-list__item" kdtId="{{detail.kdtId}}" source="{{source}}" wx:for="{{detail.fetchedCoupons}}" wx:for-item="coupon" wx:key="{{ coupon.id }}"></a>
+    </block>
+    <view class="coupon-list__tips" wx:if="{{detail.subTitle}}">
+        <view class="tips-content">
+            <text class="text">{{detail.subTitle}}</text>
+        </view>
+    </view>
+    <block wx:if="{{detail.payCoupons.length}}">
+        <a bind:close="onClose" bind:toggle-subscribe-mask="toggleSubscribeMask" coupon="{{coupon}}" customClass="coupon-list__item" disabled="{{true}}" kdtId="{{detail.kdtId}}" source="{{source}}" wx:for="{{detail.payCoupons}}" wx:for-item="coupon" wx:key="{{ coupon.id }}"></a>
+    </block>
+</view>

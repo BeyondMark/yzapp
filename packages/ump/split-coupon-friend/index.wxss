@@ -1,0 +1,15 @@
+.split-coupon-friend {
+  background: #fff;
+  min-height: 100vh;
+}
+.split-coupon-friend__container {
+  background-image: linear-gradient(0deg, rgba(255, 120, 59, 0), #ff073c 68%);
+}
+.split-coupon-friend-header {
+  height: 132px;
+  overflow: hidden;
+  text-align: center;
+}
+.split-coupon-friend-header__img {
+  height: 100%;
+}

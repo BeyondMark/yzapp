@@ -1,0 +1,4 @@
+<view class="c77542">
+    <a bind:_init="_tic" bind:tap="_p" customClass="c46110" data-t="{{ tap:{en:'handleSubmit'} }}">    提交
+  </a>
+</view>

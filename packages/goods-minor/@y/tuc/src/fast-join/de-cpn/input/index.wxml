@@ -1,0 +1,4 @@
+<view class="c3333a">
+    <view class="c295d0">{{item.name}}</view>
+    <a alwaysEmbed="{{true}}" bind:_init="_tic" bind:change="_p" border="{{false}}" center="{{true}}" class="d09ee" data-t="{{ change:{en:'onChange'} }}" inputClass="c3db58" placeholder="{{fieldPlaceHolder}}" type="{{inputType||'text'}}" value="{{value}}"></a>
+</view>

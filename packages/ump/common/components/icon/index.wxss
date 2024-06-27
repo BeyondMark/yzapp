@@ -1,0 +1,35 @@
+@font-face {
+  font-family: wsc;
+  src: url(https://b.yzcdn.cn/wsc/20180722/font/wsc.2c9380879b4df21148f108763d3d0d1d.ttf)
+    format("truetype");
+}
+.icon-arrow:before {
+  content: "";
+}
+.icon-arrow:before,
+.icon-cart:before {
+  font-family: wsc;
+  font-style: normal;
+  font-weight: 400;
+}
+.icon-cart:before {
+  content: "";
+}
+.icon-collect-gift-add-btn:before {
+  font-family: wsc;
+  font-style: normal;
+  font-weight: 400;
+  content: "";
+}
+.icon-collect-gift-share-icon:before {
+  font-family: wsc;
+  font-style: normal;
+  font-weight: 400;
+  content: "";
+}
+.icon-goods-share:before {
+  font-family: wsc;
+  font-style: normal;
+  font-weight: 400;
+  content: "";
+}

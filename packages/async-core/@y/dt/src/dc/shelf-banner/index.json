@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "b": "./../shelf-ump-content/index",
+    "c": "/packages/async-tee/@y-open/vt/dist/swipe-item/index",
+    "d": "/packages/async-tee/@y-open/vt/dist/swipe/index",
+    "_": "../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_", "c": "_", "d": "_" }
+}

@@ -1,0 +1,22 @@
+<view class="trade-records-block" style="{{themeVars}}" wx:if="{{showBlock}}">
+    <view bind:tap="_p" class="block-header" data-t="{{ tap:{en:'togglePop'} }}">
+        <view class="block-header-title">{{totalCount}}人已购买</view>
+        <view class="block-header-more">
+            <view class="t-text">查看全部</view>
+            <a bind:_init="_tic" class="block-header-more__icon" name="arrow" size="14px"></a>
+        </view>
+    </view>
+    <view class="block-body" wx:if="{{tradeRecords.length>0}}">
+        <view id="js-trade-records" style="{{'height:'+height+'px'}}" wx:if="{{isShowSwipe}}">
+            <swiper autoplay="{{3500>0}}" bind:_init="_tic" bind:change="_p" circular="true" class="trade-records-swipe" current="0" data-t="{{ change:{en:'onChange'} }}" displayMultipleItems="1" duration="500" indicatorActiveColor="#000000" indicatorColor="rgba(0, 0, 0, .3)" indicatorDots="{{false}}" interval="{{3500}}" vertical="{{true}}">
+                <swiper-item bind:_init="_tic" wx:for="{{swipeList}}" wx:for-index="groupIndex" wx:for-item="tradeRecordsSwipeItem" wx:key="groupIndex">
+                    <b avatar="{{record.avatar}}" bind:_init="_tic" bind:touchMainBtn="_p" buyBtnText="{{buyBtnText}}" buyerName="{{record.buyerName}}" data-t="{{ touchMainBtn:{en:'clickButton'} }}" num="{{record.num}}" payTime="{{record.payTime}}" position="{{[groupIndex+1,itemIndex+1]}}" showBuyBtn="{{showBuyBtn}}" showSwipe="{{showSwipe}}" wx:for="{{tradeRecordsSwipeItem}}" wx:for-index="itemIndex" wx:for-item="record" wx:key="itemIndex"></b>
+                </swiper-item>
+            </swiper>
+        </view>
+        <block wx:else>
+            <b avatar="{{record.avatar}}" bind:_init="_tic" buyerName="{{record.buyerName}}" index="{{index}}" num="{{record.num}}" payTime="{{record.payTime}}" showSwipe="{{showSwipe}}" wx:for="{{tradeRecords}}" wx:for-item="record" wx:key="index"></b>
+        </block>
+    </view>
+    <c bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'togglePop'} }}" goodsBaseInfo="{{goodsBaseInfo}}" shopBaseInfo="{{shopBaseInfo}}" show="{{showPop}}"></c>
+</view>

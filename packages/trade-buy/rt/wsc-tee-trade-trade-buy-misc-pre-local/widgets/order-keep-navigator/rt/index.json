@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../order-keep-dialog/rt/index",
+    "b": "./../../trade-carousel/rt/index",
+    "c": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "_": "../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "c": "_" }
+}

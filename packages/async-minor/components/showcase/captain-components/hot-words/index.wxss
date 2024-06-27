@@ -1,0 +1,31 @@
+.cap-hot-words-box {
+  padding: 10px;
+  background-color: #fff;
+}
+.cap-hot-words-box.cap-hot-words-box-inline {
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.cap-hot-words-box.cap-hot-words-box-inline::-webkit-scrollbar {
+  display: none;
+}
+.cap-hot-words-box.cap-hot-words-box-inline .hot-words-tags {
+  line-height: 32px !important;
+}
+.cap-hot-words-box .hot-words-title {
+  margin-bottom: 12px;
+  padding: 0 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+.cap-hot-words-box .hot-words-fire {
+  display: inline-block;
+  padding: 0 4px;
+  color: #969799;
+  font-size: 14px;
+}
+.cap-hot-words-box .hot-words-fire .van-icon-fire {
+  margin-right: 4px;
+}

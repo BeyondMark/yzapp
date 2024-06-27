@@ -1,0 +1,40 @@
+<a bind:close="onClose" closeable="{{true}}" position="bottom" round="{{true}}" show="{{value}}" zIndex="{{zIndex}}">
+    <view class="guarantee-pop">
+        <view class="guarantee-pop__container">
+            <view class="guarantee-pop__title">
+                <view class="guarantee-pop__title-bg" style="background-image: {{'url('+logo+')'}}"></view>
+            </view>
+            <view class="guarantee-pop__content">
+                <b wx:if="{{loading}}"></b>
+                <block wx:else>
+                    <view class="guarantee-pop__time" wx:if="{{time}}">
+                        <view class="guarantee-pop__time_img">
+                            <image src="https://img01.yzcdn.cn/upload_files/2020/08/11/FjHoPMsTKCoWY8X6kIclmRv4buRs.png"></image>
+                            <view class="guarantee-pop__time_num">{{time}}</view>
+                        </view>
+                        <view>店铺已持续<view class="guarantee-pop__time_num2">{{time}}</view>年为消费者提供消费保障服务</view>
+                    </view>
+                    <view class="{{'guarantee-pop__life '+lifeCycle.class}}" wx:if="{{lifeCycle}}">
+                        <view class="label">{{lifeCycle.label}}</view>
+                        <view class="content">{{lifeCycle.content}}</view>
+                    </view>
+                    <c bind:onClick="clickItem" data="{{item}}" docs="{{docs}}" wx:for="{{items}}" wx:key="key"></c>
+                </block>
+            </view>
+            <view class="guarantee-pop__footer">
+                <view bind:tap="onShowEffective">有赞放心购具体生效情况与商品类目、支付方式有关<i name="arrow"></i>
+                </view>
+                <view>
+                    <image src="{{bottomLogo}}"></image>
+                    <text>联合保障</text>
+                </view>
+                <view bind:tap="goHelp" class="guarantee-pop__footer-help" wx:if="{{hasPaid}}">联系放心购客服</view>
+            </view>
+        </view>
+    </view>
+</a>
+<d bind:close="onCloseDetail" value="{{showDetail}}" zIndex="{{zIndex+1}}"></d>
+<e bind:close="onCloseDeclare" data="{{docs.declare_2021}}" value="{{showDeclare}}" zIndex="{{zIndex+1}}"></e>
+<f bind:close="onCloseEffective" data="{{docs.effective}}" value="{{showEffective}}" zIndex="{{zIndex+1}}"></f>
+<g bind:close="onClosePickup" data="{{docs.pickup}}" icon="{{docs.icon}}" value="{{showPickup}}" zIndex="{{zIndex+1}}"></g>
+<h bind:close="onCloseDamageSubsidy" data="{{docs.damageSubsidy}}" icon="{{docs.icon}}" value="{{showDamageSubsidy}}" zIndex="{{zIndex+1}}"></h>

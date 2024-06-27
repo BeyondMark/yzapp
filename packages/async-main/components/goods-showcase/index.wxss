@@ -1,0 +1,39 @@
+.showcase-popup {
+  background-color: #f7f8fa !important;
+  border-radius: 20px 20px 0 0;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.showcase-popup__header {
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 12px;
+  text-align: center;
+}
+.showcase-popup__close {
+  position: absolute;
+  top: 13px;
+  right: 12px;
+}
+.showcase-popup__container {
+  padding-bottom: 49px;
+  max-height: calc(100vh - 190px - env(safe-area-inset-bottom));
+  overflow-y: auto;
+}
+.showcase-popup__empty-img {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 16px auto;
+}
+.showcase-popup__empty-text {
+  margin: 0 auto 62px;
+  text-align: center;
+  font-size: 14px;
+  color: #969799;
+}
+.ranking-showcase-item {
+  background-image: url(https://b.yzcdn.cn/public_files/9fdadc51e3c57aa73cb2a4d35c5f687b.png);
+  background-size: cover;
+}

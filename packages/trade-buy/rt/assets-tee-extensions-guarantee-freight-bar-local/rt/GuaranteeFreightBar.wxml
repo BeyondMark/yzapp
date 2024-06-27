@@ -1,0 +1,12 @@
+<view class="youzan-secured" wx:if="{{showYzGuaranteeFixed||showYzGuarantee||freightInsurance.title}}">
+    <block wx:if="{{showYzGuaranteeFixed}}">
+        <b bind:_init="_tic" bind:fetch-doc="_p" data-t="{{ fetchDoc:{en:'fetchDocs'} }}" docs="{{docs}}" hideYzGuarantee="{{hideYzGuarantee}}" padding="{{paddingConfig.guarantee}}" rmId="{{rmId}}" wx:if="{{rmId==='b36-10'}}"></b>
+    </block>
+    <block wx:if="{{showYzGuarantee}}">
+        <c bind:_init="_tic" bind:fetch-doc="_p" bind:open="_p" data-t="{{ open:{en:'openPopup'},fetchDoc:{en:'fetchDocs'} }}" hasPaid="{{guaranteeOrderInfo.orderPayTime>0}}" kdtId="{{kdtId}}" lifeCycle="{{lifeCycle}}" mainSupportContent="{{mainSupportContent}}" orderCreateTime="{{guaranteeOrderInfo.orderCreateTime}}" orderExtra="{{orderExtra}}" orderNo="{{guaranteeOrderInfo.orderNo}}" padding="{{paddingConfig.guarantee}}" rmId="{{rmId}}" wx:if="{{rmId==='b36-10'}}"></c>
+    </block>
+    <block wx:if="{{freightInsurance.title}}">
+        <d bind:_init="_tic" defaultVisible="{{defaultFreightInsurance}}" detailPageConfig="{{detailPageConfig}}" freightInsurance="{{freightInsurance}}" isOrderPage="{{isOrderPage}}" orderPageConfig="{{orderPageConfig}}" padding="{{paddingConfig.freight}}" rmId="{{rmId}}" themeColors="{{themeColors}}" wx:if="{{rmId==='b36-10'}}"></d>
+    </block>
+    <a bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'closePopup'} }}" featureKeys="{{mainSupportContent}}" hasPaid="{{guaranteeOrderInfo.orderPayTime>0}}" kdtId="{{kdtId}}" lifeCycle="{{lifeCycle}}" orderCreateTime="{{guaranteeOrderInfo.orderCreateTime}}" orderNo="{{guaranteeOrderInfo.orderNo}}" type="order" uuid="{{uuid}}" value="{{showPopup}}" zIndex="{{2003}}" wx:if="{{rmId==='b36-10'}}"></a>
+</view>

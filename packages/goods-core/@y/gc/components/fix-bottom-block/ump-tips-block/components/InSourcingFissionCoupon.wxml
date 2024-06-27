@@ -1,0 +1,12 @@
+<view class="c9718b" wx:if="{{inSourcingFissionTips}}">
+    <view> {{inSourcingFissionTips}} </view>
+    <view bind:tap="_p" class="c80625" data-t="{{ tap:{ en:'$emit',args:['show-share-pop',true] } }}" wx:if="{{!isEnoughCoupon}}">
+        <view>获取更多</view>
+        <a bind:_init="_tic" class="d6ce8" name="arrow"></a>
+    </view>
+    <b bind:_init="_tic" bind:close="_p" class="c7cc8b" closeable="{{true}}" customStyle="background: transparent" data-t="{{ close:{ en:'$emit',args:['show-share-pop',false] } }}" position="top" wx:if="{{showInSourcingSharePop}}">
+        <view class="b848b">
+            <view class="c65dcb"></view>
+        </view>
+    </b>
+</view>

@@ -1,0 +1,16 @@
+<view class="da1be" style="{{customStyle}}" wx:if="{{title}}">
+    <view class="c2317d c08ff9">
+        <view class="c53032">
+            <view class="ffbdc">
+                <view class="c0870b c89585"> {{value}} </view>
+                <view class="c3e34b c89585"> {{info.unit}} </view>
+            </view>
+            <view class="f0598"> {{threshold}} </view>
+        </view>
+        <view class="c13125">
+            <view class="bf289"> {{title}} </view>
+            <view class="b46df" wx:if="{{couponValidDesc}}"> {{couponValidDesc}} </view>
+            <view class="d5677 c89585"> 立即领取 </view>
+        </view>
+    </view>
+</view>

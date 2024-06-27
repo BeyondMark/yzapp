@@ -1,0 +1,60 @@
+.c08e58 {
+  width: inherit;
+  overflow: hidden;
+  color: #969799;
+  font-size: 12px;
+  line-height: 16px;
+}
+.c08e58__disabled .c8c3a0 {
+  color: #969799;
+}
+.c08e58__unavailable .c8c3a0 {
+  color: #c8c9cc;
+}
+.c8c3a0 {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.c8c3a0 view {
+  display: inline-block;
+  white-space: nowrap;
+}
+.c4641c {
+  color: #fa1919;
+  font-size: 0;
+}
+.da841 {
+  margin-right: 3px;
+  font-size: 12px;
+  vertical-align: middle;
+  display: inline;
+}
+.c2930 {
+  display: inline-block;
+  margin-right: 3px;
+  font-size: 12px;
+  vertical-align: middle;
+}
+.ae67c {
+  display: inline-block;
+  min-width: 54px;
+  font-size: 12px;
+  line-height: 16px;
+  vertical-align: middle;
+}
+.ae67c view {
+  display: inline;
+}
+.aea16 {
+  font-size: 12px;
+  position: fixed;
+  left: -100%;
+  bottom: -100%;
+  z-index: -1;
+}
+.cb005 {
+  white-space: nowrap;
+}

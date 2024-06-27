@@ -1,0 +1,8 @@
+<a bind:_init="_tic" bind:enter="_p" data-t="{{ enter:{en:'handleAfaterEnter'} }}" show="{{open}}">
+    <view bind:mouseEnd="_p" bind:mouseMove="_p" bind:touchend="_p" bind:touchmove="_p" class="{{'behavior-layout'}}" data-t="{{ touchmove:{en:'handleDragMove'},mouseMove:{en:'handleDragMove'},touchend:{en:'handleDragEnd'},mouseEnd:{en:'handleDragEnd'} }}" id="behavior-layout">
+        <view class="behavior-layout--main">
+            <b bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'close'} }}"></b>
+            <slot name="slide"></slot>
+        </view>
+    </view>
+</a>

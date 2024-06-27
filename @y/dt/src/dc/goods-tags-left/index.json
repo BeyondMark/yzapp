@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-core/@y/dt/src/dc/goods-tags-left/components/screen-slide/index",
+    "b": "./components/tag-slide/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

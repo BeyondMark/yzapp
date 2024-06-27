@@ -1,0 +1,39 @@
+.c0fba {
+  font-size: 12px;
+  overflow: hidden;
+  color: #969799;
+  position: relative;
+  line-height: 1.5;
+  width: 100%;
+}
+.c0fba:before {
+  content: "";
+  height: calc(100% - 18px);
+  float: right;
+}
+.c0fba:after {
+  content: "";
+  width: 999vw;
+  height: 999vw;
+  position: absolute;
+  box-shadow: inset calc(100px - 999vw) calc(30px - 999vw) 0 0#fff;
+  margin-left: -100px;
+}
+.d4f5c {
+  position: absolute;
+  font-size: 12px;
+  line-height: 22px;
+  color: #969799;
+  width: 32px;
+  height: 18px;
+  background: linear-gradient(
+    90deg,
+    hsla(0, 0%, 100%, 0.1) 10%,
+    hsla(0, 0%, 100%, 0.5) 30%,
+    #fff 60%
+  );
+  text-align: right;
+  z-index: 1;
+  right: 0;
+  bottom: 3px;
+}

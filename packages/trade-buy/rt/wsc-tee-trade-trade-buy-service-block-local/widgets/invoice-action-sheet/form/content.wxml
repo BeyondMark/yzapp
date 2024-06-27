@@ -1,0 +1,7 @@
+<view class="c86312 c0abf">
+    <view class="c00c23">发票内容</view>
+    <view bind:tap="_p" class="{{'cff63'}} {{item.value===invoiceDetailType?'c38182':''}}" data-t="{{ tap:{ en:'checkTag',args:[item] } }}" wx:for="{{filteredTags}}" wx:key="index">
+        <view class="d9c2c c89585">{{item.label}}</view>
+    </view>
+    <view class="c52cf7"> {{desc[invoiceDetailType]}} </view>
+</view>

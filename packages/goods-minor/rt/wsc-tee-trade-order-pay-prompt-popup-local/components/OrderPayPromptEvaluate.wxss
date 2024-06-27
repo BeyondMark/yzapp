@@ -1,0 +1,23 @@
+.c36227 {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.c6ac0a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.c5ebeb {
+  background-color: rgba(227, 20, 54, 0.1);
+  border-radius: var(--theme-radius-tag, 16px);
+  margin: 4px 6px;
+  height: 24px;
+  padding: 4px 8px;
+  box-sizing: border-box;
+  font-size: 12px;
+  color: #323233;
+}

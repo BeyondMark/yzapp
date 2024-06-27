@@ -1,0 +1,8 @@
+.tee-image {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.dc-oriented-poster .van-swipe {
+  position: relative;
+}

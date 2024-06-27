@@ -1,0 +1,72 @@
+.c13eed {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.c2d2d8 {
+  margin: 0;
+  min-height: 35px;
+  line-height: 35px;
+  background: #fff7cc;
+  font-size: 12px;
+  color: #f85;
+  text-align: center;
+}
+.c47363 {
+  color: #f85;
+  font-size: 14px;
+  line-height: 35px;
+}
+.c740fa {
+  box-sizing: border-box;
+  position: relative;
+  height: 72px;
+  padding: 15px 16px;
+  background-color: #f2f3f5;
+  border-radius: var(--theme-radius-dialog, 20px)
+    var(--theme-radius-dialog, 20px) 0 0;
+}
+.c088dd {
+  background-color: #fffbe8;
+}
+.c088dd .c205dd,
+.c088dd .c7eb71 {
+  color: #f85;
+}
+.c7eb71 {
+  width: 93%;
+  font-size: 16px;
+  line-height: 20px;
+  color: #323233;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+.c595af {
+  margin-top: 7px;
+  font-size: 13px;
+  color: #969799;
+}
+.c205dd {
+  position: absolute;
+  top: 50%;
+  margin-top: -9px;
+  right: 16px;
+  font-size: 18px;
+  color: #969799;
+  transform: rotate(-90deg);
+}
+.c8c552 {
+  transform: rotate(90deg);
+}
+.c9d176 {
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0-2px 16px rgba(100, 101, 102, 0.7607843137);
+  overflow: hidden;
+}
+.page-preview .c13eed,
+.page-preview .mrm {
+  max-width: 540px;
+  margin: 0 auto;
+}

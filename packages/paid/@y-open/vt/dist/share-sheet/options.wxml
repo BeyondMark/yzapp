@@ -1,0 +1,9 @@
+<view class="{{classes.options}}" style="{{optionsStyle}}">
+    <view bind:tap="_p" class="{{classes.option}}" data-t="{{ tap:{ en:'onSelect',args:[option,index] } }}" role="button" tabindex="0" wx:for="{{options}}" wx:for-item="option" wx:key="index">
+        <button class="{{classes.button}}" openType="{{option.openType}}" shareMode="{{option.shareMode}}">
+            <image class="{{classes.icon}} bd231" lazyLoad="true" src="{{icons[index]}}"></image>
+        </button>
+        <view class="{{classes.name}}" wx:if="{{option.name}}">{{option.name}}</view>
+        <view class="{{classes.optionDescription}}" wx:if="{{option.description}}"> {{option.description}} </view>
+    </view>
+</view>

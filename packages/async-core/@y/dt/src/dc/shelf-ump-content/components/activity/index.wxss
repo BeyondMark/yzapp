@@ -1,0 +1,39 @@
+.t-text {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.activity-item {
+  justify-content: space-between;
+  line-height: 16px;
+}
+.activity-item,
+.left-container {
+  display: -webkit-flex;
+  display: flex;
+}
+.tag {
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  box-sizing: border-box;
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+  color: var(--theme-color, #ee0a24);
+  background-color: var(--theme-rgb-color);
+  border-radius: 2px;
+  height: 16px;
+  min-width: 44px;
+}
+.content,
+.tag {
+  font-size: 12px;
+}
+.content {
+  color: #636566;
+  margin-left: 8px;
+}
+.go-to-detail {
+  flex-shrink: 0;
+  margin-left: 16px;
+  color: var(--theme-color, #ee0a24);
+}

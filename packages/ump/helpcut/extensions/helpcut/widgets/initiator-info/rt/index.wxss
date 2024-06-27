@@ -1,0 +1,20 @@
+.initiator-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: -25px;
+}
+.initiator-info .avatar-wrapper {
+  padding: 3px;
+  border-radius: 30px;
+}
+.initiator-info .avatar-wrapper .user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+.initiator-info .user-name {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+}

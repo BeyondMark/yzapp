@@ -1,0 +1,16 @@
+<view class="friend-avatar {{disabled?'friend-avatar_disabled':''}}">
+    <view class="friend-avatar__container">
+        <view bindtap="handleClickAvatar" class="friend-avatar__item-wrap {{'friend-avatar__item-wrap_'+avatarStyle.type}}" data-index="{{index}}" wx:for="{{avatarStyle.num}}" wx:key="index">
+            <view class="friend-avatar__ellipsis" wx:if="{{index+1===avatarStyle.num&&avatarStyle.type===3}}">
+                <view class="friend-avatar__ellipsis-item" wx:for="{{[0,1,2]}}" wx:key="i"></view>
+            </view>
+            <view class="friend-avatar__item {{helpUsers[index]&&helpUsers[index].userPicture?'hasUser':''}}" style="zIndex:{{avatarStyle.num-index}}">
+                <b name="plus" size="12px" wx:if="{{!helpUsers[index]||!helpUsers[index].userPicture}}"></b>
+                <block wx:else>
+                    <image class="friend-avatar__img" src="{{helpUsers[index].userPicture}}"></image>
+                    <a customClass="friend-avatar__nickname" round="{{true}}">{{helpUsers[index].userName}}</a>
+                </block>
+            </view>
+        </view>
+    </view>
+</view>

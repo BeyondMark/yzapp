@@ -1,0 +1,325 @@
+@import "/packages/usercenter/components/showcase/add-global-class/tag-list-top-tab.wxss";
+.phone__wrapper {
+  background-color: #f9f9f9;
+}
+.state-list {
+  display: flex;
+  justify-content: space-around;
+  background: #fff;
+  font-size: 12px;
+}
+.state-list__item {
+  flex: 1;
+  color: #333;
+  text-align: center;
+}
+.state-list__icon {
+  position: relative;
+  margin: 0 auto 10px;
+  width: 24px;
+  height: 24px;
+  color: #717171;
+  font-size: 24px;
+  line-height: 0;
+}
+.state-list__icon .icon__inner {
+  width: 100%;
+  height: 100%;
+}
+.cart-count {
+  z-index: 10;
+  display: inline-block;
+  box-sizing: border-box;
+  margin-right: 5px;
+  padding: 0 0.4em;
+  min-width: 1.6em;
+  height: 1.6em;
+  border-radius: 0.8em;
+  background: #f44;
+  box-shadow: 0 0 0 2px #fff;
+  color: #fff;
+  vertical-align: middle;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 10px;
+  line-height: 1.6;
+}
+.uc-normal__formid-btn {
+  overflow: visible;
+  background: transparent;
+  text-align: left;
+  appearance: none;
+}
+.uc-normal__form {
+  display: block;
+}
+.btn-order-userinfo {
+  padding: 4px 0;
+  width: 100%;
+}
+.btn-order-userinfo button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1;
+}
+.state-btn-container button {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  border-radius: 0;
+  background-color: #fff;
+  text-align: center;
+  font-size: 12px;
+  line-height: 18px;
+}
+.btn-userinfo {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0;
+  border-radius: 0;
+  background-color: initial;
+  font-size: inherit;
+  color: inherit;
+  line-height: inherit;
+  width: 50px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  font-size: 12px;
+}
+.btn-userinfo:after {
+  border: none;
+}
+.bind__container .bind__title {
+  flex: 1;
+  text-align: left;
+}
+.bind__container .bind__button {
+  margin-right: 15px;
+}
+.uc-fantasy .bind__container {
+  margin-top: 10px;
+  border: 0;
+}
+.uc-fantasy .bind__title {
+  color: #acacac;
+}
+.uc-fantasy .bind__img {
+  background-image: url(https://img01.yzcdn.cn/weapp/wsc/lRag0u.png);
+}
+.uc-status {
+  display: flex;
+  justify-content: space-around;
+  font-size: 12px;
+  background: #fff;
+}
+.uc-status__item {
+  position: relative;
+  flex: 1;
+  text-align: center;
+}
+.uc-status__item:after {
+  content: "";
+  position: absolute;
+  top: 21px;
+  right: 0;
+  width: 1px;
+  height: 12px;
+  background: #f7eceb;
+}
+.uc-status__item:last-child:after {
+  display: none;
+}
+.uc-status__item .zan-badge__count {
+  top: 10px;
+  right: calc(50% - 26px);
+}
+.uc-icons {
+  margin-top: 10px;
+  padding: 20px 40rpx;
+  background: #fff;
+}
+.uc-icons__list {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 0;
+  flex-wrap: wrap;
+}
+.uc-icons__item {
+  position: relative;
+  padding: 40px 0 0;
+  width: 70px;
+  line-height: 20px;
+  color: #acacac;
+  font-size: 12px;
+  text-align: center;
+  background: #fff;
+  margin: 0 0 10px;
+}
+.uc-icons__item:after {
+  display: none !important;
+}
+.uc-icons__icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  background-image: url(https://img01.yzcdn.cn/weapp/wsc/L3FIV0G.png);
+  background-size: 120px 90px;
+}
+.uc-icons__icon--points {
+  background-position: 60px 60px;
+}
+.uc-icons__icon--address {
+  background-position: 0 0;
+}
+.uc-icons__icon--cart {
+  background-position: -30px 0;
+}
+.uc-icons__icon--colletion {
+  background-position: 0-30px;
+}
+.uc-icons__icon--coupon {
+  background-position: -30px -30px;
+}
+.uc-icons__icon-memeber-card {
+  background-position: -90px 4px;
+}
+.uc-icons__icon--message {
+  background-position: -60px 0;
+}
+.uc-icons__icon--promotion-code {
+  background-position: 0-60px;
+}
+.uc-icons__icon--question {
+  background-position: -30px -60px;
+}
+.uc-icons__icon--setting {
+  background-position: -60px -60px;
+}
+.uc-icons__icon--cashback {
+  background-image: none;
+  font-size: 30px;
+  color: #acacac;
+  line-height: 30px;
+}
+.status-btn-container button {
+  position: static;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 0;
+  line-height: 18px;
+  padding: 18px 0;
+  color: #9a875f;
+}
+.uc-btn-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 0;
+}
+.uc-btn-center button {
+  position: relative;
+  padding: 40px 0 0;
+  width: 70px;
+  line-height: 20px;
+  color: #acacac;
+  font-size: 12px;
+  text-align: center;
+  background: #fff;
+  margin: 0 0 10px;
+}
+.btn-margin-left {
+  margin-left: -15px;
+}
+.uc-text {
+  font-size: 12px;
+  display: block;
+  margin-top: 35px;
+  color: #acacac;
+}
+.showcase-top-nav-search--fixed .search-position__wrap--fixed {
+  z-index: 121;
+}
+.top-nav__view--fixed {
+  position: fixed;
+  height: 44px;
+  width: 100%;
+  background: #fff;
+  z-index: 121;
+}
+.showcase-top-nav--fixed .showcase-top-nav__tabs > .van-tabs__wrap {
+  transition: top 0.3s linear;
+}
+.showcase-top-nav--normal .showcase-top-nav__tabs > .van-tabs__wrap {
+  top: 0 !important;
+}
+.showcase-top-nav .van-tab__pane--float {
+  min-height: 1px;
+}
+.showcase-top-nav .showcase-top-nav__tab--active {
+  color: #f44;
+  font-weight: 400;
+}
+.showcase-top-nav--2 .van-tabs__line {
+  height: 4px;
+  bottom: 4px;
+}
+.showcase-top-nav-nav-class3,
+.showcase-top-nav-wrap-class3 {
+  height: 44px !important;
+  border: none !important;
+}
+.showcase-top-nav-scroll-class3 {
+  margin: 0 !important;
+}
+.showcase-top-nav-tab-class3 {
+  background: #fff !important;
+  border: none !important;
+}
+.showcase-top-nav-line-class2 {
+  bottom: 3px !important;
+  height: 4px !important;
+}
+@import "/packages/usercenter/components/showcase/add-global-class/tag-list-top-tab.wxss";
+.page-locked {
+  height: calc(100vh - 45px) !important;
+  min-height: calc(100vh - 45px);
+  overflow: hidden !important;
+}
+.feature-takeAway {
+  padding-bottom: 50px;
+}
+.user-center-rivacy-agreement-page {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0;
+}
+.page-container {
+  position: relative;
+  margin: auto;
+  min-height: 100vh;
+}
+.page-container--tab-bottom {
+  padding-bottom: 50px;
+  background: #fff;
+}
+.page-container--tab-bottom.page-container--fixed-bottom.iPhone-X {
+  padding-bottom: 124px;
+}
+.page-container--tab-bottom.page-container--fixed-bottom {
+  padding-bottom: 90px;
+}
+.page-container--tab-bottom.iPhone-X {
+  padding-bottom: 84px;
+}

@@ -1,0 +1,15 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.db4bb {
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  color: #969799;
+}
+.c41b11 {
+  display: inline-block;
+  color: var(--ump-icon, #323233);
+  white-space: pre;
+}

@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../../../@y/wsc-tee-trade-common/components/InfoDialog",
+    "b": "./../MembershipDialogContent",
+    "_": "../../../../../../../components/_/index"
+  }
+}

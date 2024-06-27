@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./wechat",
+    "b": "./focus",
+    "_": "../../../../../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../../wsc-tee-trade-trade-buy-platform-address-local/rt/WechatAddress",
+    "b": "/@y-open/vt/dist/button/index.weapp",
+    "c": "./../../components/AddressListItem",
+    "_": "../../../../../../components/_/index"
+  }
+}

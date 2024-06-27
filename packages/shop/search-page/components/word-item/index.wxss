@@ -1,0 +1,21 @@
+.deco-word-item {
+  border: 1px solid #ebedf0;
+  font-size: 12px;
+  color: #323233;
+  line-height: 18px;
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 20px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  min-height: 18px;
+}
+.deco-word-item_img {
+  width: 16px;
+  height: 16px;
+  vertical-align: -3px;
+  margin-right: 5px;
+}
+.deco-word-item_hot {
+  color: #f44;
+}

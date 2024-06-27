@@ -1,0 +1,15 @@
+{
+  "enablePullDownRefresh": true,
+  "componentPlaceholder": {
+    "cap-paid-column": "_",
+    "cap-paid-content": "_",
+    "cap-paid-live": "_",
+    "cap-member-item": "_",
+    "punch-item": "_",
+    "account-login": "_",
+    "van-toast": "_",
+    "van-notify": "_",
+    "van-tabs": "_",
+    "van-tab": "_"
+  }
+}

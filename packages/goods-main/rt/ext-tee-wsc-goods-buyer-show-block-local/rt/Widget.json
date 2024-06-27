@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../components/ShowCell",
+    "b": "./../components/ShowDetail",
+    "_": "../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,4 @@
+<view style="{{themeCSS}}">
+    <b bind:_init="_tic" bind:tap="_p" border="{{false}}" class="fans-cell long-cell" data-t="{{ tap:{en:'onClick'} }}" isLink="{{true}}" title="{{title}}" value="{{value}}" wx:if="{{value}}"></b>
+    <a bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'onClose'} }}" rmId="{{rmId}}" show="{{show}}" title="{{title}}" useCustomTitleSlot="{{true}}" wx:if="{{rmId==='b36-27'}}"></a>
+</view>

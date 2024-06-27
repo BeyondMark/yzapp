@@ -1,0 +1,31 @@
+<view class="member-coupon" wx:if="{{planList.length}}">
+    <view class="title-box">
+        <view class="title">会员专享券</view>
+        <view class="sub-title">{{subTitle}}</view>
+    </view>
+    <view class="term-tab" wx:if="{{planList.length>1}}">
+        <view bindtap="checkTab" class="part-tab {{checkTabIndex==0?'checked':''}}" data-index="0">
+            <view class="tab-name">本期</view>
+            <view>{{curPlanTimeRange}}</view>
+        </view>
+        <view class="border"></view>
+        <view bindtap="checkTab" class="part-tab {{checkTabIndex==1?'checked':''}}" data-index="1">
+            <view class="tab-name">下期</view>
+            <view>{{nextPlanTimeRange}}</view>
+        </view>
+    </view>
+    <view class="coupon-container">
+        <view class="coupon-box-list {{couponsLength==3?'coupon-center':''}}">
+            <view class="coupon-item" wx:for="{{coupons}}" wx:for-item="coupon" wx:key="activityId">
+                <a bindreceiveCoupon="receiveCoupon" coupon="{{coupon}}" levelType="{{levelType}}"></a>
+            </view>
+            <view class="other-benefit" wx:if="{{couponsLength<3}}">
+                <view class="{{couponsLength==1?'line1':'line2'}}">
+                    <text>暂无其他</text>
+                    <text>可领权益</text>
+                </view>
+            </view>
+        </view>
+        <view class="mask" wx:if="{{couponsLength>3}}"></view>
+    </view>
+</view>

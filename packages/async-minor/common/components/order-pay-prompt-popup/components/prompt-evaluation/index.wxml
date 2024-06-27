@@ -1,0 +1,5 @@
+<view class="order-pay-prompt-popup-evaluation">
+    <view class="evaluation" wx:for="{{evaluateList}}" wx:for-item="evaluate">
+        <a bg="main-bg" customClass="evaluation-theme" opacity="0.1">{{evaluate.attitude}}({{evaluate.count}})</a>
+    </view>
+</view>

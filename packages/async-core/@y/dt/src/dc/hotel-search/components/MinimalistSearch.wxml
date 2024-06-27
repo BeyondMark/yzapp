@@ -1,0 +1,32 @@
+<view>
+    <view class="van-search" style="background:{{searchData.bgColor}}">
+        <view bind:tap="_p" class="minimalist-date" data-t="{{ tap:{en:'showCalender'} }}" style="background:{{themeColors.general}}">
+            <view>
+                <span bind:_init="_tic" class="minimalist-date-text">住</span>
+                <span bind:_init="_tic" class="minimalist-date-day">{{checkInDay}}</span>
+            </view>
+            <view>
+                <span bind:_init="_tic" class="minimalist-date-text">离</span>
+                <span bind:_init="_tic" class="minimalist-date-day">{{leaveDay}}</span>
+            </view>
+        </view>
+        <view class="{{inputClass}}" style="{{inputStyle}}">
+            <view class="van-search__label">
+                <view bind:tap="_p" class="minimalist-city" data-t="{{ tap:{en:'onChangeCity'} }}">
+                    <span bind:_init="_tic">{{city}}</span>
+                    <a bind:_init="_tic" class="minimalist-city-down" name="arrow-down"></a>
+                </view>
+            </view>
+            <view class="search-cell">
+                <view class="search-cell__left-icon">
+                    <a bind:_init="_tic" color="{{searchData.color}}" name="search"></a>
+                </view>
+                <view class="search-cell__value">
+                    <d bind:_init="_tic" bind:confirm="_p" clearable="{{true}}" customStyle="{{inputStyle}}" data-t="{{ confirm:{en:'onSearch'} }}" inputAlign="{{searchData.textAlign}}" placeholder="请输入酒店名/地址" type="search"></d>
+                </view>
+            </view>
+        </view>
+    </view>
+    <c bind:_init="_tic" hotel="{{hotel}}" themeColors="{{themeColors}}" wx:for="{{hotelList}}" wx:for-item="hotel" wx:key="hotel"></c>
+    <b bind:_init="_tic" bind:close="_p" bind:confirm="_p" color="{{themeColors.general}}" data-t="{{ confirm:{en:'onConfirm'},close:{en:'onClose'} }}" show="{{show}}" showConfirm="{{false}}" type="range"></b>
+</view>

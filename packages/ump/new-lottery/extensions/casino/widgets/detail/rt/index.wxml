@@ -1,0 +1,26 @@
+<a bind:close="hideDetail" closeable="{{true}}" customClass="rule-detail__popup" position="bottom" show="{{showDetail}}">
+    <view class="rule-detail__container">
+        <view class="rule-detail__title">玩法详情</view>
+        <view class="rule-detail__main">
+            <view class="rule-main__sect">
+                <view>活动时间：</view>
+                <view>{{start}} 至 {{end}}</view>
+            </view>
+            <view class="rule-main__sect">
+                <view>活动店铺：</view>
+                <view>{{shopName}}</view>
+            </view>
+            <view class="rule-main__sect" wx:if="{{description}}">
+                <view>活动说明：</view>
+                <view>{{description}}</view>
+            </view>
+            <view class="rule-main__sect" wx:if="{{joinThresholdDesc}}">
+                <view>参与人身份：</view>
+                <view>{{joinThresholdDesc}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="rule-detail__bottom">
+        <b bind:click="hideDetail" block="{{true}}" class="rule-detail__button" color="{{themeColor}}" round="{{true}}">知道了</b>
+    </view>
+</a>

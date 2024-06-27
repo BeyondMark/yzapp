@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./GiftPop",
+    "b": "/ext-tee-passport/extensions/user-authorize/widgets/rt/Popup",
+    "c": "./../../ump/visit-gift/visit-gift/components/rule-pop/index",
+    "_": "../../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,11 @@
+<view class="user-authorize">
+    <b aNickList="{{aNickList}}" appId="{{appId}}" bind:_init="_tic" bind:auth-click="_p" bind:auth-disabled-click="_p" bind:auth-popup-show="_p" bind:fail="_p" bind:native-ability-change="_p" bind:on-open-webview="_p" bind:popup-show="_p" bind:success="_p" bind:toast="_p" bizDataMap="{{bizDataMap}}" buttonType="{{buttonType}}" class="user-authorize__comnponent" config="{{config}}" customClass="{{buttonClass}}" customStyle="{{customStyle}}" data-t="{{ authDisabledClick:{en:'handleBtnDisabledClick'},authClick:{en:'handleBtnClick'},toast:{en:'showToast'},popupShow:{ en:'togglePopup',args:[true] },onOpenWebview:{en:'handleOpenWebview'},success:{en:'handleAuthorize'},fail:{en:'fail'},authPopupShow:{en:'handleAuthPopupShow'},nativeAbilityChange:{en:'handleNativeAbilityChange'} }}" desc="{{desc}}" disabled="{{disabled||authorizing||status!==InitStatus.READY}}" downgrade="{{downgrade}}" kdtId="{{kdtId}}" noMobileFallback="{{noMobileFallback}}" userInfo="{{userInfo}}" visible="{{popupVisible}}">
+        <slot></slot>
+    </b>
+    <c aNickList="{{aNickList}}" bind:_init="_tic" bind:auth-popup-show="_p" bind:fail="_p" bind:on-open-webview="_p" bind:popup-visible="_p" bind:success="_p" bind:toast="_p" bizDataMap="{{bizDataMap}}" class="user-authorize__popup" config="{{config}}" data-t="{{ toast:{en:'showToast'},onOpenWebview:{en:'handleOpenWebview'},popupVisible:{en:'togglePopup'},success:{en:'handleAuthorize'},fail:{en:'fail'},authPopupShow:{en:'handleAuthPopupShow'} }}" dialogType="{{dialogType}}" hooks="{{hooks}}" kdtId="{{kdtId}}" nativeAuthPopType="{{nativeAuthPopType}}" normal="{{true}}" popupCustomStyle="{{popupCustomStyle}}" privacyProtocol="{{privacyProtocol}}" protocolIsCloudSlot="{{protocolIsCloudSlot}}" protocolSource="{{protocolSource}}" supportFillNick="{{supportFillNick}}" userAuthList="{{userAuthList}}" userInfo="{{userInfo}}" userProtocol="{{userProtocol}}" visible="{{popupVisible}}" zIndex="{{zIndex}}" wx:if="{{kdtId&&type!=='separate'}}">
+        <slot name="ui-component" slot="ui-component"></slot>
+    </c>
+    <root-portal bind:_init="_tic">
+        <a bind:_init="_tic" data-ref="toast"></a>
+    </root-portal>
+</view>

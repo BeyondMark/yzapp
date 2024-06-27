@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../../../captain/paidcontent/knowledge-good/index",
+    "b": "/@y-open/vt/dist/list/index",
+    "_": "../../../../../../../../../components/_/index"
+  }
+}

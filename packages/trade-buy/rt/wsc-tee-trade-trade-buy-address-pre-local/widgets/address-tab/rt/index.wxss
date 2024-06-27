@@ -1,0 +1,160 @@
+.t-text {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.long-cell {
+  padding: var(--theme-page-cell-padding-top, 10px)
+    var(--theme-page-cell-padding-right, 12px)
+    var(--theme-page-cell-padding-bottom, 10px)
+    var(--theme-page-cell-padding-left, 12px) !important;
+}
+.tab__container {
+  padding: var(--theme-page-card-padding-top, 16px)
+    var(--theme-page-card-padding-right, 0)
+    var(--theme-page-card-padding-bottom, 16px)
+    var(--theme-page-card-padding-left, 0);
+}
+.tab__background {
+  height: 144px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  top: 90px;
+  background: url(https://img01.yzcdn.cn/upload_files/2020/11/18/FpDXPjknBjc8MOSbp0OZGG3bgonK.png)
+    no-repeat;
+  background-size: 100%;
+}
+.tab__bar {
+  position: relative;
+  display: inline-flex;
+  width: 176px;
+  border-radius: var(--theme-page-tab-radius-top-left, 19px)
+    var(--theme-page-tab-radius-top-right, 19px)
+    var(--theme-page-tab-radius-bottom-right, 19px)
+    var(--theme-page-tab-radius-bottom-left, 19px);
+  color: var(--theme-general, #ee0a24);
+  padding: var(--theme-page-tabbar-padding-top, 3px)
+    var(--theme-page-tabbar-padding-right, 3px)
+    var(--theme-page-tabbar-padding-bottom, 3px)
+    var(--theme-page-tabbar-padding-left, 3px);
+  background-color: var(--theme-page-tab-group-background-color, #fff);
+}
+.tab__pane {
+  position: relative;
+  flex: none;
+  padding: 0 4px;
+  box-sizing: border-box;
+  height: 32px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  border-radius: var(--theme-radius-button, 19px);
+  margin-right: var(--theme-page-tab-margin-right, 0);
+  will-change: color;
+  color: var(--theme-page-tab-color, var(--icon, #323233));
+  background-color: var(--theme-page-tab-background-color, transparent);
+  border-color: var(--theme-page-tab-border-color, transparent);
+}
+.tab__pane:last-child {
+  margin-right: 0;
+}
+.tab__pane-active {
+  color: var(--theme-page-tab-color-active, var(--main-text, #fff));
+  background-color: var(--theme-page-tab-background-color-active, transparent);
+  border-color: var(--theme-page-tab-border-color-active, transparent);
+}
+.tab__text {
+  font-size: 20px;
+  transform: scale(0.7);
+}
+.tab__slide {
+  position: absolute;
+  background-color: #ee0a24;
+  background-color: var(
+    --theme-page-tab-background-color-active,
+    var(--main-bg, #ee0a24)
+  );
+  color: var(--theme-page-tab-color-active, var(--main-text, #fff));
+  transition: transform 0.3s ease-in-out;
+  width: 88px;
+  margin: 0;
+}
+.badge {
+  width: 34px;
+  height: 17px;
+  border-radius: 8px;
+  border-bottom-left-radius: 1px;
+  background-image: linear-gradient(#ff6034, #ee0a24);
+  font-size: 12px;
+  transform: scale(0.83);
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  right: -12px;
+  top: -6px;
+}
+.re-tab {
+  display: flex;
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background: #e8e6e9;
+}
+.re-tab__container {
+  display: flex;
+  margin: 23px 0-19px;
+}
+.re-tab__bar {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+.re-tab__pane {
+  display: flex;
+  flex: 1;
+  padding: 6px 0 15px;
+  justify-content: center;
+}
+.re-tab__pane--group0:before {
+  background: no-repeat
+    url(https://b.yzcdn.cn/public_files/2022/9/27/group0.png);
+  background-size: 100%;
+}
+.re-tab__pane--group0:before,
+.re-tab__pane--group1:before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  pointer-events: none;
+}
+.re-tab__pane--group1:before {
+  background: no-repeat
+    url(https://b.yzcdn.cn/public_files/2022/9/27/group1.png);
+  background-size: 100%;
+}
+.re-tab__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #666;
+}
+.re-tab__text--active {
+  position: absolute;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #323233;
+  display: flex;
+  align-items: center;
+}
+.re-tab__text--active__icon {
+  margin-right: 4px;
+  height: 22px;
+}

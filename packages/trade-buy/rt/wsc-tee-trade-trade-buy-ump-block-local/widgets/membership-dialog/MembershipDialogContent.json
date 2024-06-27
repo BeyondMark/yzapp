@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y-open/vt/dist/cell/index",
+    "b": "/@y-open/vt/dist/cell-group/index",
+    "c": "/packages/async-tee/@y-open/vt/dist/tag/index",
+    "d": "/packages/async-tee/@y-open/vt/dist/radio/index",
+    "e": "../../../../@y/wsc-tee-trade-common/components/OrderActionSheetPopup",
+    "_": "../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "c": "_", "d": "_" }
+}

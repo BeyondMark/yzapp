@@ -1,0 +1,21 @@
+<view class="c12c38" wx:if="{{opt.salableStores.length>0}}">
+    <view bind:tap="_p" class="dbbaa c75e2d" data-t="{{ tap:{en:'showPop'} }}">
+        <view>{{text}}</view>
+        <view>      去看看
+      <b bind:_init="_tic" name="arrow"></b>
+        </view>
+    </view>
+    <a bind:_init="_tic" bind:close="_p" customClass="common-popup" data-t="{{ close:{en:'hidePop'} }}" position="bottom" round="{{true}}" show="{{show}}" showButton="{{false}}">
+        <view class="c79d1">
+            <view class="c0dd2d"> {{text}} </view>
+            <b bind:_init="_tic" bind:tap="_p" class="c80507" data-t="{{ tap:{en:'hidePop'} }}" name="cross" size="22"></b>
+        </view>
+        <view class="f540d">
+            <view bind:tap="_p" class="c004ba" data-t="{{ tap:{ en:'jumpSalesStore',args:[item] } }}" wx:for="{{opt.salableStores}}" wx:key="id">
+                <view class="c65c89">{{item.name}}</view>
+                <view class="f78d7" wx:if="{{item.distance}}">
+                    <b bind:_init="_tic" class="c11235" name="location-o"></b>          距离 {{item.distance}} </view>
+            </view>
+        </view>
+    </a>
+</view>

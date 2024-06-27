@@ -1,0 +1,14 @@
+<view class="c9fc5d">
+    <view class="fcb2e">
+        <a bind:_init="_tic" bind:save="_p" data-t="{{ save:{en:'onPlatformAddressSave'} }}" isCell="{{false}}" rmId="b7-72" wx:if="{{rmId==='b7-42'}}"></a>
+    </view>
+    <c bind:_init="_tic" bind:edit="_p" bind:select="_p" data-t="{{ select:{ en:'onSelect',args:[index,item] },edit:{en:'onEdit'} }}" forcePoiSelect="{{forcePoiSelect}}" item="{{item}}" switchable="{{switchable}}" themeColors="{{themeColors}}" themeTag="{{themeTag}}" value="{{addressId}}" wx:for="{{formattedActiveList}}" wx:key="index"></c>
+    <view wx:if="{{formattedInactiveList.length>0}}">
+        <view class="c2fcbb">以下地址超出配送范围</view>
+        <c bind:_init="_tic" bind:edit="_p" data-t="{{ edit:{en:'onEdit'} }}" inactive="{{true}}" item="{{item}}" switchable="{{switchable}}" themeColors="{{themeColors}}" themeTag="{{themeTag}}" value="{{addressId}}" wx:for="{{formattedInactiveList}}" wx:key="id"></c>
+    </view>
+    <view class="c261ea">
+        <b bind:_init="_tic" bind:tap="_p" block="{{true}}" color="{{themeColors.general}}" customClass="c2ea4d" data-t="{{ tap:{en:'onAdd'} }}" type="danger">      新增地址
+    </b>
+    </view>
+</view>

@@ -1,0 +1,3 @@
+<template name="presale">
+    <base-sku bind:buy="handleBuy" bind:sku-close="handleSkuClose" buyText="{{featureSkuData.buyText}}" extraData="{{extra}}" goods="{{featureSkuData.skuGoodsDetail}}" hideStock="{{featureSkuData.hideStock}}" properties="{{featureSkuData.itemSalePropList}}" quota="{{featureSkuData.quota}}" quotaText="{{featureSkuData.quotaText}}" quotaUsed="{{featureSkuData.quotaUsed}}" resetStepperOnHide="{{true}}" show="{{featureSkuData.showGoodsSku}}" showAddCartBtn="{{false}}" sku="{{featureSkuData.sku}}" startSaleNum="{{featureSkuData.startSaleNum}}" themeClass="{{themeClass}}"></base-sku>
+</template>

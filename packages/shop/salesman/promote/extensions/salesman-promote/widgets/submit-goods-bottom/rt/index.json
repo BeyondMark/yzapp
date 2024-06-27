@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../submit-goods-bottom-bar/rt/index",
+    "b": "../../submit-goods-bottom-btns/rt/index",
+    "_": "../../../../../../../../../components/_/index"
+  }
+}

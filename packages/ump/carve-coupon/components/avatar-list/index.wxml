@@ -1,0 +1,6 @@
+<view class="avatar-list {{activityCardInfo.avatarSlot==='bottom'?'avtart-list__top':''}} {{avatarList.length===4?'avatar-list__len':''}}">
+    <view class="avatar {{item.isFail?'avatar__opacity':''}}" wx:for="{{avatarList}}" wx:key="{{ index }}">
+        <image src="{{item.avatar}}" wx:if="{{!item.isShare}}"></image>
+        <button class="default-avatar" openType="share" wx:else></button>
+    </view>
+</view>

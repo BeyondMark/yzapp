@@ -1,0 +1,14 @@
+.c03ead {
+  background-color: #fff;
+}
+.c31683 {
+  box-sizing: border-box;
+  font-size: 14px;
+  padding-top: var(--theme-page-cell-padding, 10px);
+}
+.a4d34 {
+  color: #323233;
+}
+.c31683:after {
+  border-bottom-width: 0;
+}

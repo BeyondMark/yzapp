@@ -1,0 +1,10 @@
+<view class="b0e84" wx:if="{{shopTitle}}">
+    <view bind:tap="_p" class="f9f5c" data-t="{{ tap:{en:'goHome'} }}">
+        <a bind:_init="_tic" class="d4eed" color="#323233" name="shop-o" size="16px"></a>
+        <view class="a1b23">{{shopTitle}}</view>
+        <a bind:_init="_tic" catch:tap="_p" class="c93118" color="#969799" data-t="{{ tap:{en:'goHome',et:'stop'} }}" name="arrow" size="14px"></a>
+        <view catch:tap="_p" class="a1b23" data-t="{{ tap:{en:'switchShop',et:'stop'} }}" wx:if="{{isChainShop&&isSwitchOpen&&!isXhsApp}}">[切换]</view>
+    </view>
+    <view bind:tap="_p" class="c40826" data-t="{{ tap:{en:'goPurchaseOrder'} }}" wx:if="{{isWholesaler}}">查看进货单</view>
+    <view bind:tap="_p" class="c0916b" data-t="{{ tap:{en:'switchEditMode'} }}"> {{btnText}} </view>
+</view>

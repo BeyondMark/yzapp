@@ -1,0 +1,13 @@
+<view class="c386ab c9ef2c" wx:if="{{shopRest&&inited}}">
+    <view class="c11c6">
+        <view class="{{shopRestDesc?'c1aa9b':'c1aa9b c7110f'}}">      休息中,暂停接单
+    </view>
+        <view class="shop-rest__desc" wx:if="{{shopRestDesc}}">
+            <view class="ef5fd">
+                <view class="c00c21 c89585"></view>
+                <view class="c00293 c89585">{{shopRestDesc}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="ea794"></view>
+</view>

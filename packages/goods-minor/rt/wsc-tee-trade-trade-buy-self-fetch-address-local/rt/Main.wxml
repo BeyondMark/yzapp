@@ -1,0 +1,27 @@
+<view style="{{themeCSS}}">
+    <d bind:_init="_tic" bind:cancel="_p" bind:change="_p" bind:search="_p" data-t="{{ search:{en:'onSearch'},change:{en:'onChange'},cancel:{en:'onCancel'} }}" placeholder="请输入自提点名称" showAction="{{true}}" value="{{keyword}}" wx:if="{{inSearch}}"></d>
+    <view class="c12df5" wx:else>
+        <view bind:tap="_p" class="{{'beb3e'}} {{'van-c-gray-darker'}} {{'van-font-14'}} {{showLoading?'c4691d':''}}" data-t="{{ tap:{en:'selectCity'} }}"> {{selfFetch.cityName||'全部'}} </view>
+        <view bind:tap="_p" class="{{'c201e4'}} {{showInStock?'van-c-c48d62 acd8e':'van-c-gray-darker'}} {{showLoading?'c4691d':''}}" data-t="{{ tap:{en:'switchShowInStock'} }}" wx:if="{{showInStockBtn&&!isHideInStock}}">      只看有货网点
+    </view>
+        <c bind:_init="_tic" bind:tap="_p" class="t-c-gray" data-t="{{ tap:{en:'startSearch'} }}" name="search" size="16px"></c>
+    </view>
+    <view class="c8629" wx:if="{{showLoading}}">
+        <g bind:_init="_tic" vertical="{{true}}">加载中...</g>
+    </view>
+    <e bind:_init="_tic" bind:load="_p" data-t="{{ load:{en:'loadList'} }}" finished="{{finished}}" wx:if="{{showList}}">
+        <view wx:for="{{selfFetchList}}" wx:key="id">
+            <b bind:_init="_tic" bind:tap="_p" center="{{true}}" data-t="{{ tap:{ en:'handleSelect',args:[item] } }}" valueClass="c4f44" wx:if="{{!showInStock||item.orderSoldStatus!==shopStock.none&&item.orderSoldStatus!==shopStock.part}}">
+                <c bind:_init="_tic" class="{{item.id!=currentShopId?'van-c-gray-dark':'a7f2e'}}" name="{{item.id!=currentShopId?'circle':'checked'}}" size="20px" slot="icon" style="margin-right:16px"></c>
+                <view slot="title">
+                    <view class="t-font-14 t-c-333"> {{item.name}} <f bind:_init="_tic" plain="{{true}}" type="danger" wx:if="{{item.shopTag}}">{{item.shopTag}}</f>
+                    </view>
+                    <view class="t-font-12 ec798" style="margin-top: 2px">{{item.detail}}</view>
+                </view>
+                <view class="ec798 t-font-12"> {{item.distanceStr}} </view>
+            </b>
+        </view>
+    </e>
+    <view class="a6e8f t-font-14 ec798 t-hairline--top" wx:elif="{{selfFetch.finished}}"> {{inSearch||showInStock?'没有符合条件的提货点':'当前城市暂无提货点，请尝试更换城市'}} </view>
+    <a bind:_init="_tic" data-ref="selfFetchAddressDialog"></a>
+</view>

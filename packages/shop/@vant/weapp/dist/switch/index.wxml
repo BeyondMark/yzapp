@@ -1,0 +1,5 @@
+<view bind:tap="onClick" class="{{utils.bem( 'switch',{on:checked===activeValue,disabled:disabled} )}} custom-class" style="{{computed.rootStyle( {size:size,checked:checked,activeColor:activeColor,inactiveColor:inactiveColor,activeValue:activeValue} )}}">
+    <view class="van-switch__node node-class">
+        <a color="{{computed.loadingColor( {checked:checked,activeColor:activeColor,inactiveColor:inactiveColor,activeValue:activeValue} )}}" customClass="van-switch__loading" wx:if="{{loading}}"></a>
+    </view>
+</view>

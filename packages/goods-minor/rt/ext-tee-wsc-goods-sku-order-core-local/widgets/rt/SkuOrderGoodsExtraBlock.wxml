@@ -1,0 +1,6 @@
+<view class="a5c8e">
+    <view class="c2527f" wx:if="{{ecardInstructions.length}}">
+        <view class="c56218">卡券使用说明</view>
+        <view wx:for="{{ecardInstructions}}" wx:key="item">{{item}}</view>
+    </view>
+</view>

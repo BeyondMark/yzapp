@@ -1,0 +1,12 @@
+<view>
+    <a actions="{{actions}}" bind:cancel="onCancel" bind:click-overlay="onCancel" bind:select="onSelect" cancelText="取消" show="{{showActionSheet}}"></a>
+    <b customClass="invite-pop" show="{{showPoster}}">
+        <view bindtap="onClose" class="invite-pop-close">
+            <c name="close" slot="close-icon"></c>
+        </view>
+        <view class="invite-pop-content">
+            <image class="invite-pop-content__img" src="{{posterUrl}}"></image>
+        </view>
+        <view bind:tap="savePoster" class="invite-pop-btn--bottom">保存图片</view>
+    </b>
+</view>

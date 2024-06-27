@@ -1,0 +1,4 @@
+<view bind:tap="_p" class="member-code" data-t="{{ tap:{en:'handleCodeClick'} }}">
+    <a bind:_init="_tic" class="icon" name="qr"></a>
+    <view class="text">会员码</view>
+</view>

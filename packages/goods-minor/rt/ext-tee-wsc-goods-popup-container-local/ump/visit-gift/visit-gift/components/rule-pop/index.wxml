@@ -1,0 +1,15 @@
+<a bind:_init="_tic" bind:close="_p" closeOnClickOverlay="{{true}}" customClass="cedb3" data-t="{{ close:{en:'hideRule'} }}" position="bottom" round="{{true}}" show="{{show}}" title="活动规则" zIndex="{{10002}}">
+    <view class="c9377e">活动规则</view>
+    <view class="c981c1">    1.
+    <block wx:if="{{typeRule}}">{{typeRule}}</block>    可在“会员中心”-“优惠券”列表查看获得的优惠券；
+  </view>
+    <view class="c981c1">    2.
+    需购买消费后获得的优惠券，在24小时内完成支付首笔订单后即可获得，完成支付后可在“会员中心”-“优惠券”列表查看获得的优惠券；
+  </view>
+    <view class="c981c1">    3.
+    需购买消费后获得的优惠券数量有限，优惠券发放完后，即使完成支付也不再发放；
+  </view>
+    <view class="c981c1">    4. 若购买消费后获得优惠券的订单发生了全额退款，则所获得的优惠券失效。
+  </view>
+    <view bind:tap="_p" class="c29a3a" data-t="{{ tap:{en:'hideRule'} }}"> 我知道了 </view>
+</a>

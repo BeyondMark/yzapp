@@ -1,0 +1,22 @@
+<view class="userinfo-mode-two-type-one" style="{{'--themeColor: '+themeColor+';'}}">
+    <view class="top">
+        <view catch:tap="_p" class="left" data-t="{{ tap:{ en:'handleClick',et:'stop',args:['person'] } }}">
+            <a authTypeList="{{['nicknameAndAvatar']}}" bind:_init="_tic" bind:next="_p" class="auth-block" data-t="{{ next:{en:'handleAuthUserInfo'} }}" kdtId="{{kdtId}}" needUpdateNicknameAndAvatar="{{false}}" type="separate" wx:if="{{!authUser}}"></a>
+            <view class="hello">Hello</view>
+            <view class="username-con">
+                <view class="username">{{userName}}</view>
+                <b bind:_init="_tic" class="level-icon" currentFreeLevel="{{level}}" wx:if="{{showLevelIcon}}"></b>
+            </view>
+        </view>
+        <view class="right">
+            <view class="avatar">
+                <a authTypeList="{{['nicknameAndAvatar']}}" bind:_init="_tic" bind:next="_p" class="auth-block" data-t="{{ next:{en:'handleAuthUserInfo'} }}" kdtId="{{kdtId}}" needUpdateNicknameAndAvatar="{{false}}" type="separate" wx:if="{{!authUser}}"></a>
+                <image catch:tap="_p" class="tee-image" data-t="{{ tap:{ en:'handleClick',et:'stop',args:['person'] } }}" lazyLoad="true" mode="aspectFit" src="{{userAvatar}}"></image>
+            </view>
+            <view catch:tap="_p" class="member-code" data-t="{{ tap:{en:'handleCodeClick',et:'stop'} }}">
+                <image class="member-code-img tee-image" lazyLoad="true" mode="aspectFit" src="https://img01.yzcdn.cn/upload_files/2023/07/10/FiPIAQ_DwDBgQ9L4iKpD7O2r4Dd_.png"></image>会员码
+      </view>
+        </view>
+    </view>
+    <slot></slot>
+</view>

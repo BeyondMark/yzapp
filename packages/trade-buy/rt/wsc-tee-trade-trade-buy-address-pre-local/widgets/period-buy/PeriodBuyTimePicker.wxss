@@ -1,0 +1,3 @@
+.dfaa2 {
+  color: var(--general, #323233) !important;
+}

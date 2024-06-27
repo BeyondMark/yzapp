@@ -1,0 +1,15 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/ext-tee-passport/extensions/user-authorize/widgets/rt/Main",
+    "b": "/packages/async-tee/@y-open/vt/native/weapp/loading/index/index",
+    "c": "/@y-open/vt/dist/cell/index",
+    "d": "/packages/async-tee/@y-open/vt/dist/tag/index",
+    "e": "/@y-open/vt/dist/popup/index.weapp",
+    "f": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "g": "/@y-open/vt/dist/button/index.weapp",
+    "h": "/packages/async-tee/@y-open/vt/native/weapp/checkbox/index/index",
+    "_": "../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_", "d": "_", "f": "_", "h": "_" }
+}

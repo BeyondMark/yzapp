@@ -1,0 +1,16 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./ActivateBenefitcardDialog",
+    "b": "./TakeGoodsDialog",
+    "c": "./TakeGoodsContent",
+    "d": "./SelfFetchContent",
+    "e": "./../../../wsc-tee-trade-order-paid-groupbuy-self-fetch-dialog-local/rt/GroupbuySelfFetchButton",
+    "f": "./../../../retail-tee-group-groupbuy-share-dialog-local/rt/GroupbuyShareButton",
+    "g": "./../../../retail-tee-group-groupbuy-share-dialog-local/rt/GroupbuyContinueButton",
+    "h": "./../../../retail-tee-solitaire-solitaire-dialog-local/rt/SolitaireShareButton",
+    "i": "./../../../assets-tee-extensions-prior-use-dialog-local/rt/PriorUseDialog",
+    "j": "/@y-open/vt/dist/button/index.weapp",
+    "_": "../../../../../../components/_/index"
+  }
+}

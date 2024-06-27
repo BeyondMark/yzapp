@@ -1,0 +1,14 @@
+<view class="exc-con">
+    <view class="title" wx:if="{{benefitsList&&benefitsList.length}}">专属权益</view>
+    <a benefit="{{item}}" cardIsExpired="{{cardIsExpired}}" hasCard="{{hasCard}}" hasUseAbility="{{hasUseAbility}}" isCurrentShopAvailable="{{isCurrentShopAvailable}}" themeGeneral="{{themeGeneral}}" userBenefitDetail="{{userBenefitDetail}}" wx:for="{{benefitsList}}" wx:key="{{ item.key }}">
+        <b benefit="{{item}}" benfitKey="{{item.key}}" cardIsExpired="{{cardIsExpired}}" cardNo="{{cardNo}}" experienceLog="{{experienceLog}}" hasCard="{{hasCard}}" hasUseAbility="{{hasUseAbility}}" themeGeneral="{{themeGeneral}}" userBenefitDetail="{{userBenefitDetail}}"></b>
+    </a>
+    <view class="exc-exp" style="padding-top: 28px">
+        <view class="exp-tit">权益有效期</view>
+        <view class="exp-da">{{cardExpire}}</view>
+    </view>
+    <view class="exc-exp">
+        <view class="exp-tit">使用说明</view>
+        <view class="in-cont">{{cardDescription}}</view>
+    </view>
+</view>

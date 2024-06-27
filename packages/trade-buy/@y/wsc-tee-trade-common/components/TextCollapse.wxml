@@ -1,0 +1,8 @@
+<view class="{{'c0fba'}} {{'c0fba-'+alias}}" style="max-height:{{maxHeight}}" wx:if="{{showComp}}">
+    <view catch:tap="_p" class="d4f5c" data-t="{{ tap:{en:'onShowMore',et:'stop'} }}" wx:if="{{showMore}}">
+        <a bind:_init="_tic" name="arrow-down"></a>
+    </view>
+    <view class="{{'c0fba-text'}} {{'c0fba-text-'+alias}}">
+        <view class="c78364" wx:for="{{content}}" wx:for-index="i" wx:key="i"> {{item}} </view>
+    </view>
+</view>

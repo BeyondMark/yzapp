@@ -1,0 +1,6 @@
+<view class="cap-skeleton cap-skeleton--{{type}} custom-class">
+    <block wx:if="{{type=='text'}}">
+        <view class="cap-skeleton__text" style="{{rowStyle}}" wx:for="{{rowsList}}" wx:key="index"></view>
+    </block>
+    <view class="cap-skeleton__rect" style="background-color: {{color}}; {{rectStyle}}" wx:elif="{{type=='rect'}}"></view>
+</view>

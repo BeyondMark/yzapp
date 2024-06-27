@@ -1,0 +1,1 @@
+<a bg="general" class="c-goods__presale-tag" opacity="0.6" wx:if="{{goodsInfo.preSale==1}}">预售</a>

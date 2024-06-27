@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./cashier-icon",
+    "_": "../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y-open/vt/dist/button/index.weapp",
+    "b": "./recommend-base",
+    "_": "../../../../../components/_/index"
+  }
+}

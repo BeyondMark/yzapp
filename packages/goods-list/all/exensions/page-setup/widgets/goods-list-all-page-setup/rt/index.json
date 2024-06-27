@@ -1,0 +1,17 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../../../../@vant/weapp/dist/sticky/index",
+    "b": "/packages/async-main/components/account/inject-protocol/index",
+    "c": "/packages/async-minor/components/shop-pop-manager/index",
+    "d": "/custom-tab-bar-v2/index",
+    "e": "../../../../../../tag/exensions/search-bar/widgets/search-bar-main/rt/index",
+    "f": "../../../../../../tag/exensions/filter-bar/widgets/filter-bar-main/rt/index",
+    "g": "../../../../../../tag/exensions/share-tab/widgets/share-tab-main/rt/index",
+    "h": "../../../../../../tag/exensions/dc-goods/widgets/dc-goods-main/rt/index",
+    "i": "/packages/async-main/@vant/weapp/dist/toast/index",
+    "j": "/packages/async-main/@vant/weapp/dist/notify/index",
+    "_": "../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_", "c": "_", "i": "_", "j": "_" }
+}

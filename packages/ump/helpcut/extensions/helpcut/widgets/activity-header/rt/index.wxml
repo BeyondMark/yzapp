@@ -1,0 +1,7 @@
+<view class="activity-header">
+    <c rmId="{{rmId}}" wx:if="{{rmId==='b13-0'}}"></c>
+    <b rmId="{{rmId}}" wx:if="{{rmId==='b13-0'}}"></b>
+    <view class="activity-card-wrapper">
+        <a rmId="{{rmId}}" wx:if="{{rmId==='b13-0'}}"></a>
+    </view>
+</view>

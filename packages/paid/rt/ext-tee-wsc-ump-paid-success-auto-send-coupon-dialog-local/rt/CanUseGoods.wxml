@@ -1,0 +1,20 @@
+<view class="can-use-goods">
+    <view class="goods-divider">购买以下商品可用</view>
+    <view class="goods">
+        <b autoplay="3000" bind:_init="_tic" bind:change="_p" class="goods-swiper" data-ref="van-swiper-ref" data-t="{{ change:{en:'onSwipeChange'} }}" indicatorColor="#F05F10" pid="recommend-swipe" showIndicators="{{swpieList.length>1}}">
+            <c bind:_init="_tic" pid="recommend-swipe" wx:for="{{swpieList}}" wx:for-index="sindex" wx:for-item="sitem" wx:key="sindex">
+                <view class="{{'fission-goods-container'}} {{swpieList.length>1?'is-swipe':''}}">
+                    <view bind:tap="_p" class="{{'goods-item'}} {{itemClass}} {{item.logo?'':'empty-item'}}" data-t="{{ tap:{ en:'goodsClick',args:[item,index] } }}" wx:for="{{sitem}}" wx:key="alias">
+                        <view wx:if="{{item.logo}}">
+                            <image class="pic tee-image" lazyLoad="true" src="{{item.logo}}"></image>
+                            <view class="goods-context">
+                                <text bind:_init="_tic" class="{{'title'}} {{isSkyline?'':goodsList.length>1?'t-multi-ellipsis--l2':'t-ellipsis'}}" maxLines="{{goodsList.length>1?2:1}}" overflow="ellipsis"> {{item.title}} </text>
+                                <a bind:_init="_tic" isBigText="{{goodsList.length<2}}" price="{{''+item.price}}" themeColors="{{themeColors}}"></a>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </c>
+        </b>
+    </view>
+</view>

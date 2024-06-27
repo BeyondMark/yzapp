@@ -1,0 +1,5 @@
+<view>
+    <a bind:_init="_tic" position="bottom" round="{{true}}" show="{{showDatePicker}}" wx:if="{{initialShow}}">
+        <b bind:_init="_tic" bind:cancel="_p" bind:confirm="_p" data-t="{{ cancel:{en:'onPickerCancel'},confirm:{en:'onPickerConfirm'} }}" minDate="{{pickerOpts.minDate}}" title="{{pickerOpts.title}}" type="{{pickerOpts.type}}" value="{{pickerOpts.value}}" wx:if="{{showDatePicker}}"></b>
+    </a>
+</view>

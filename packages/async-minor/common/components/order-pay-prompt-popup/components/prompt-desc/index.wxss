@@ -1,0 +1,18 @@
+.order-pay-prompt-popup-tip {
+  margin-bottom: 8px;
+  display: flex;
+  line-height: 20px;
+  font-size: 14px;
+  color: #7d7e80;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.countdown {
+  max-width: 98px;
+  text-align: left;
+  font-size: 14px;
+}
+.countdown,
+.general {
+  padding: 0 4px;
+}

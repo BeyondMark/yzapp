@@ -1,0 +1,13 @@
+<view class="benefit-gift" wx:if="{{visible}}">
+    <view class="title">
+        <view>{{isMember?'新会员礼包':'新会员礼包，入会可领'}}</view>
+        <e bindtap="closeMemberGift" class="close" name="cross" wx:if="{{isMember}}"></e>
+    </view>
+    <view class="scroll-list">
+        <a present="{{present}}" wx:for="{{presentList}}" wx:for-item="present" wx:key="presentName"></a>
+        <b coupon="{{coupon}}" wx:for="{{couponList}}" wx:for-item="coupon" wx:key="preKey"></b>
+        <c point="{{point}}" wx:if="{{point.value>0}}"></c>
+    </view>
+    <d bind:confirm="handleButtonConfirm" bizDataMap="{{bizDataMap}}" neededMoreStoreBalance="{{neededMoreStoreBalance}}" wx:if="{{showRegisterBtn}}"></d>
+    <view bindtap="getMoreGrowth" class="bottom-btn" wx:if="{{!showRegisterBtn&&!isMember&&mode===1}}">获取更多成长值</view>
+</view>

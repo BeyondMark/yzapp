@@ -1,0 +1,12 @@
+<view class="store-list">
+    <view class="store-list__list {{storeConfig.isNewTemplate?'store-list__container':''}}" wx:if="{{storeList&&storeList.length>0}}">
+        <view wx:for="{{storeList}}" wx:key="storeKdtId || index">
+            <b bind:_init="_tic" bind:guideClick="_p" bind:nameClick="_p" bind:phoneClick="_p" data-t="{{ guideClick:{en:'handleGuideClick'},phoneClick:{en:'handlePhoneClick'},nameClick:{en:'handleNameClick'} }}" item="{{item}}" location="{{location}}" onSearching="{{onSearching}}" storeConfig="{{storeConfig}}" themeColor="{{themeColors.general}}" wx:if="{{storeConfig.isNewTemplate}}"></b>
+            <a bind:_init="_tic" bind:guideClick="_p" bind:nameClick="_p" bind:phoneClick="_p" data-t="{{ guideClick:{en:'handleGuideClick'},phoneClick:{en:'handlePhoneClick'},nameClick:{en:'handleNameClick'} }}" item="{{item}}" location="{{location}}" storeConfig="{{storeConfig}}" wx:else></a>
+        </view>
+    </view>
+    <view class="store-list__blank" wx:else>
+        <image class="blank-img tee-image" lazyLoad="true" src="{{blankImg}}"></image>
+        <view class="blank-text">{{blankText}}</view>
+    </view>
+</view>

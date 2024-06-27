@@ -1,0 +1,13 @@
+<view class="trade-buy-popup-container">
+    <block wx:if="{{rmId==='b36-25'}}">
+        <a bind:_init="_tic" rmId="b36-27" useCustomTitleSlot="{{true}}"></a>
+        <b bind:_init="_tic" rmId="b36-27" useCustomTitleSlot="{{true}}"></b>
+        <c bind:_init="_tic" rmId="b36-27" useCustomTitleSlot="{{true}}"></c>
+        <d bind:_init="_tic" rmId="b36-27" useCustomTitleSlot="{{true}}"></d>
+        <e bind:_init="_tic" rmId="b36-27" useCustomTitleSlot="{{true}}"></e>
+        <f bind:_init="_tic" rmId="b36-24"></f>
+        <g bind:_init="_tic" rmId="b36-27" useCustomTitleSlot="{{true}}"></g>
+        <h bind:_init="_tic" rmId="b36-33"></h>
+    </block>
+    <i bind:_init="_tic" bind:onConfirm="_p" data-t="{{ onConfirm:{en:'onBack'} }}" rmId="b36-27" useCustomTitleSlot="{{true}}" wx:if="{{rmId==='b36-25'}}"></i>
+</view>

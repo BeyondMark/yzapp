@@ -1,0 +1,6 @@
+{
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "订单详情",
+  "backgroundColor": "#f7f8fa",
+  "componentPlaceholder": { "k": "_", "l": "_" }
+}

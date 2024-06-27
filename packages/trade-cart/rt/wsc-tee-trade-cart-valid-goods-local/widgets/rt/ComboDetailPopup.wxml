@@ -1,0 +1,38 @@
+<c bind:_init="_tic" bind:click-overlay="_p" catch:touchmove="_p" customStyle="{{customPopupStyle}}" data-t="{{ touchmove:{en:'true',et:'stop'},clickOverlay:{en:'closePopup'} }}" position="bottom" round="{{true}}" show="{{showPopup}}">
+    <view class="c137c4">
+        <view class="c116d2">
+            <view class="c89585">套餐详情</view>
+            <view bind:tap="_p" class="c9a6c0" data-t="{{ tap:{en:'closePopup'} }}">
+                <b bind:_init="_tic" name="cross" size="18"></b>
+            </view>
+        </view>
+        <view class="c6e6d3">
+            <scroll-view class="c7c275" data-ref="wrapper" scrollTop="{{scrollTop}}" scrollY="{{true}}">
+                <view wx:for="{{comboDetail}}" wx:for-item="group" wx:key="id">
+                    <view class="c447b7" wx:for="{{group.subComboList}}" wx:key="index">
+                        <image class="b798a bd231" lazyLoad="true" src="{{item.thumbUrl}}"></image>
+                        <view class="c7c4f2">
+                            <view class="d5d3d"> {{item.title}} </view>
+                            <view class="f8c46" wx:if="{{item.skuDescArr||item.propDescArr}}">
+                                <view class="c89585" wx:for="{{item.skuDescArr}}" wx:for-index="i" wx:for-item="skuItem" wx:key="i">
+                                    <view class="c89585">{{skuItem.sn}}</view>
+                                    <view class="c6959e c89585"> {{skuItem.sp}} </view>
+                                    <view class="c89585" wx:if="{{item.propDescArr.length||i!==item.skuDescArr.length-1}}">;</view>
+                                </view>
+                                <view class="c89585" wx:for="{{item.propDescArr}}" wx:for-index="i" wx:for-item="propItem" wx:key="i">
+                                    <view class="c89585">{{propItem.pn}}</view>
+                                    <view class="c6959e c89585"> {{propItem.pp}} </view>
+                                    <view class="c89585" wx:if="{{i!==item.propDescArr.length-1}}">;</view>
+                                </view>
+                            </view>
+                            <view class="c71f26">
+                                <a bind:_init="_tic" class="f6ce6 c6959e" price="{{item.price}}" rmId="b4-13" wx:if="{{rmId==='b4-7'}}"></a>
+                                <view class="b1bc2 c89585">x{{item.num}}</view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+</c>

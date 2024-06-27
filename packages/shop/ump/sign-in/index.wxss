@@ -1,0 +1,13 @@
+.r-c {
+  flex-direction: column;
+}
+.r-c,
+.r-r {
+  display: flex;
+}
+.r-r {
+  flex-direction: row;
+}
+page {
+  background-color: #f7f7f7;
+}

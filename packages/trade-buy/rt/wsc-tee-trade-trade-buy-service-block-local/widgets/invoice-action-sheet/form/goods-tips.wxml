@@ -1,0 +1,7 @@
+<view wx:if="{{goods.noCode.length}}">
+    <view class="d9786">
+        <view class="ed268 c89585">      下单商品中有{{goods.noCode.length}}种商品无法开票
+    </view>
+        <van-icon bind:_init="_tic" bind:tap="_p" customClass="c28886" data-t="{{ tap:{en:'openDetail'} }}" name="info-o"></van-icon>
+    </view>
+</view>

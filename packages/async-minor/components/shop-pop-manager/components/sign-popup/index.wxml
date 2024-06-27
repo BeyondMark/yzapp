@@ -1,0 +1,22 @@
+<c id="account-wx-login"></c>
+<a bind:close="closePopup" closeOnClickOverlay="{{true}}" customContainerStyle="background-color: transparent;" customStyle="background-color: transparent;" lockScroll="{{true}}" overlayStyle="background-color: rgba(0, 0, 0, .6);" show="{{visible}}" zIndex="160">
+    <view class="l-popup__close">
+        <image bindtap="closePopup" class="c-close__img" src="https://img01.yzcdn.cn/upload_files/2021/10/18/FjwD8j4OOpmzZJF26rT_-dYgAutG.png"></image>
+    </view>
+    <div class="l-popup__custom" wx:if="{{popupCustomImage}}">
+        <view bind:tap="doCheckin">
+            <image alt="立即签到" bindtap="doCheckin" class="custom-image" mode="widthFix" src="{{popupCustomImage}}"></image>
+        </view>
+    </div>
+    <view class="l-popup__container" wx:else>
+        <image alt="签到有礼活动图标" class="c-sign__img" src="https://img01.yzcdn.cn/upload_files/2023/03/28/FmEze4O2iUcWrl5aKuRQfDHJYVlv.png"></image>
+        <view class="l-popup__footer">
+            <b class="c-sign__form">
+                <view bind:tap="doCheckin">
+                    <button class="c-sign__btn" disabled="{{!canSign}}">立即签到</button>
+                </view>
+            </b>
+            <view></view>
+        </view>
+    </view>
+</a>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "a": "/components/account/user-authorize/index",
+    "_": "../../../../../../../../../components/_/index"
+  }
+}

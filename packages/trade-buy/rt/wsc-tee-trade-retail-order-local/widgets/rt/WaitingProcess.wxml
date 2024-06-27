@@ -1,0 +1,7 @@
+<view class="c50751" wx:if="{{processData.needDisplay}}">
+    <view class="c07cc6" wx:if="{{!processData.orderNum}}">
+        <view class="c89585">现在下单立即制作</view>
+    </view>
+    <view class="c07cc6" wx:else>    前面还有<view class="e2942 c89585">{{processData.orderNum}}</view>单/<view class="e2942 c89585">{{processData.goodsNum}}</view>杯
+  </view>
+</view>

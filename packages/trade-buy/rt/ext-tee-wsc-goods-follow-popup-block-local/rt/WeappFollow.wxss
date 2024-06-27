@@ -1,0 +1,50 @@
+.a59d5 {
+  background-color: transparent !important;
+  z-index: 200;
+  padding: 36px 0;
+  text-align: center;
+}
+.a59d5 .e2ada {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  background-image: url(https://img01.yzcdn.cn/public_files/2018/05/16/c29879b23772965a3af7f5689ee61f58.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.c760fd {
+  padding: 24px 23px 30px;
+  background: #fff;
+  border-radius: 8px;
+}
+.c760fd .d5d3d {
+  font-size: 16px;
+  font-family: PingFangSC-Medium;
+}
+.c760fd .c0e506 {
+  margin: 12px 0 28px;
+  font-size: 14px;
+  color: #646566;
+}
+.c760fd .c8839 {
+  border-radius: 20px;
+  width: 270px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  color: #fff;
+  background-image: linear-gradient(90deg, #f72a3e, #f65a1c);
+}
+.a59d5__close {
+  margin: 20px auto 0;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px;
+}
+.a59d5__close,
+.a59d5__close image {
+  width: 28px;
+  height: 28px;
+}

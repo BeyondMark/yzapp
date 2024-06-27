@@ -1,0 +1,22 @@
+{
+  "navigationBarTitleText": "商品分组",
+  "usingComponents": {
+    "salesman-cube": "/packages/async-main/components/showcase/components/salesman-cube/index",
+    "cap-paid-content": "/packages/shop/components/showcase/components/paidcontent/cap-content-item/index",
+    "cap-paid-column": "/packages/shop/components/showcase/components/paidcontent/cap-column-item/index",
+    "r0": "/ext-tee-wsc-dc/extensions/showcase-container/rt/ShowcaseContainer",
+    "van-toast": "/packages/async-main/@vant/weapp/dist/toast/index",
+    "van-notify": "/packages/async-main/@vant/weapp/dist/notify/index",
+    "van-tabs": "/packages/async-main/vant-weapp/dist/tabs/index",
+    "van-tab": "/packages/async-main/vant-weapp/dist/tab/index",
+    "zan-loadmore": "/packages/shop/common/components/loadmore/index",
+    "_": "../../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": {
+    "salesman-cube": "_",
+    "van-toast": "_",
+    "van-notify": "_",
+    "van-tabs": "_",
+    "van-tab": "_"
+  }
+}

@@ -1,0 +1,8 @@
+.channel {
+  display: inline-flex;
+  position: relative;
+  color: #323233;
+}
+.disabled {
+  color: #c8c9cc;
+}

@@ -1,0 +1,117 @@
+.decorate-tee-cap-countdown.cap-countdown {
+  position: relative;
+}
+.decorate-tee-cap-countdown.cap-countdown .status {
+  color: var(--ump-main-text, #fff);
+}
+.decorate-tee-cap-countdown.cap-countdown .day-inner,
+.decorate-tee-cap-countdown.cap-countdown .main {
+  display: inline-block;
+}
+.decorate-tee-cap-countdown.cap-countdown .time {
+  display: inline-block;
+  margin: 0 3px;
+  padding: 0 3px;
+  font-size: 12px;
+  line-height: 16px;
+  border-radius: 2px;
+  color: var(--ump-main-text, #fff);
+  font-weight: 700;
+}
+.decorate-tee-cap-countdown.cap-countdown .time.first {
+  margin-left: 0;
+  padding-left: 0;
+}
+.decorate-tee-cap-countdown.cap-countdown .time-text {
+  display: inline-block;
+  font-size: 12px;
+  color: var(--ump-main-text, #fff);
+}
+.decorate-tee-cap-countdown.cap-countdown-normal {
+  display: -webkit-flex !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 8px;
+  min-height: 24px;
+  background: linear-gradient(
+    90deg,
+    var(--ump-start-bg, #fd3e20),
+    var(--ump-end-bg, #fc6340)
+  );
+}
+.decorate-tee-cap-countdown.cap-countdown-normal .main {
+  white-space: nowrap;
+  line-height: 16px;
+}
+.decorate-tee-cap-countdown.cap-countdown-normal .status {
+  margin-top: 2px;
+  font-size: 12px;
+}
+.decorate-tee-cap-countdown.cap-countdown-normal .time {
+  margin: 0 0;
+  padding: 0 2px;
+}
+.decorate-tee-cap-countdown.cap-countdown-big {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  background: linear-gradient(
+    90deg,
+    var(--ump-start-bg, #fd3e20),
+    var(--ump-end-bg, #fc6340)
+  );
+}
+.decorate-tee-cap-countdown.cap-countdown-big .tag {
+  color: var(--ump-main-text, #fff);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 40px;
+}
+.decorate-tee-cap-countdown.cap-countdown-big .status {
+  display: block;
+  height: 16px;
+  margin: 4px 0 0;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: left;
+  opacity: 0.6;
+}
+.decorate-tee-cap-countdown.cap-countdown-out {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 0;
+  padding: 0 15px;
+}
+.decorate-tee-cap-countdown.cap-countdown-out .tag {
+  margin-right: 16px;
+  color: var(--ump-icon, #323233);
+  font-weight: 700;
+  font-size: 16px;
+}
+.decorate-tee-cap-countdown.cap-countdown-out .status {
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--ump-icon, #323233);
+  align-items: center;
+}
+.decorate-tee-cap-countdown.cap-countdown-out .time {
+  background: var(--ump-main-bg, #323233);
+}
+.decorate-tee-cap-countdown.cap-countdown-out .time.first {
+  margin-left: 0;
+  padding: 0 3px;
+}
+.decorate-tee-cap-countdown.cap-countdown-out .time-text {
+  color: var(--ump-main-bg, #323233);
+  font-weight: 700;
+  margin: 0 2px;
+}

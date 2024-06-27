@@ -1,0 +1,125 @@
+.invalid-block {
+  margin: var(--theme-page-card-margin-top, 0)
+    var(--theme-page-card-margin-right, 12px)
+    var(--theme-page-card-margin-bottom, 0)
+    var(--theme-page-card-margin-left, 12px);
+  border-radius: var(--theme-page-card-border-radius, 8px);
+  overflow: hidden;
+  background: #fff;
+}
+.no-valid-goods {
+  margin-top: var(--theme-page-card-margin-top, 12px) !important;
+}
+.b79aa {
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+  line-height: 1.4;
+  padding: var(--theme-page-card-padding-top, 17px)
+    var(--theme-page-card-padding-right, 12px)
+    var(--theme-page-card-padding-botton, 17px)
+    var(--theme-page-card-padding-left, 16px);
+  position: relative;
+  justify-content: space-between;
+}
+.c3ebc4 {
+  background: #fff;
+}
+.c7a6a1 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 26px;
+  border-radius: var(--theme-radius-button, 26px);
+  font-size: 12px;
+  box-sizing: border-box;
+  color: #323233;
+}
+.c7a6a1:after {
+  border: 1px solid #dcdee0 !important;
+  border-radius: var(--theme-radius-button, 26px);
+}
+.bb69c {
+  overflow: hidden;
+}
+.goods-item {
+  min-height: 96px;
+  padding: 12px;
+}
+.goods-item--right {
+  position: relative;
+  margin-left: 104px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.goods-title {
+  margin-bottom: 8px;
+}
+.goods-title-not-exist {
+  margin-bottom: 0;
+}
+.goods-title-text {
+  font-size: 14px;
+  color: #323233;
+  line-height: 20px;
+  vertical-align: middle;
+}
+.goods-title-tag {
+  margin-right: 2px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.goods-title-tag.HAITAO {
+  width: 28px;
+}
+.goods-title-tag.PERIOD_BUY {
+  width: 38px;
+}
+.goods-img {
+  float: left;
+  height: 96px;
+  width: 96px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: cover;
+  border-radius: var(--theme-radius-card, 8px);
+  overflow: hidden;
+}
+.goods-img image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  background: #fff;
+}
+.err-msg {
+  font-size: 14px;
+  color: #323233;
+  line-height: 16px;
+}
+.c321e4 {
+  position: relative;
+}
+.c321e4:after {
+  position: absolute;
+  box-sizing: border-box;
+  transform-origin: center;
+  content: " ";
+  pointer-events: none;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  border: 0 solid #323233;
+  transform: scale(0.5);
+  border-width: 1px;
+}

@@ -1,0 +1,32 @@
+<view class="order-address__wrapper" wx:if="{{currentAddress.tel}}">
+    <view class="order-address__header van-font-14 van-c-black van-hairline--bottom">收礼地址</view>
+    <view wx:if="{{logistics.title}}">
+        <a>
+            <view class="order-logistics">
+                <view class="order-logistics__icon">
+                    <b name="logistics"></b>
+                </view>
+                <view class="order-logistics__desc">
+                    <view class="order-logistics__desc-item van-c-orange">{{logistics.title}}</view>
+                    <view class="order-logistics__desc-item van-c-gray-darker">{{logistics.context}}</view>
+                    <view class="order-logistics__desc-item van-c-gray-darker">{{logistics.time}}</view>
+                </view>
+            </view>
+        </a>
+    </view>
+    <a>
+        <view class="order-address">
+            <view class="order-logistics__icon">
+                <b name="location-o"></b>
+            </view>
+            <view class="order-address__detail">
+                <view class="order-address__title">
+                    <view class="van-pull-right">{{currentAddress.tel}}</view>
+                    <view class="order-address__uname van-ellipsis">收货人：{{currentAddress.name}}</view>
+                </view>
+                <view class="order-address__desc van-font-12 van-c-gray-darker">收货地址：{{currentAddress.province}}{{currentAddress.city}}{{currentAddress.district}} {{currentAddress.street}}</view>
+            </view>
+        </view>
+    </a>
+    <view class="order-address__border"></view>
+</view>

@@ -1,0 +1,21 @@
+<view class="component-container" style="{{containerStyle}}" wx:if="{{!hiddenCard}}">
+    <view class="card-title">
+        <view class="title">
+            <a bind:_init="_tic" customClass="align-middle" name="shop-o" size="16px"></a>
+            <view class="title-text t-text">{{componentData.customCopywriting.title}}</view>
+        </view>
+        <view bind:tap="_p" class="navigator" data-t="{{ tap:{en:'handleNavigatorClick'} }}">
+            <view class="navigator-text t-text"> {{componentData.customCopywriting.desc}} </view>
+            <a bind:_init="_tic" customClass="align-middle" name="arrow" size="14px"></a>
+        </view>
+    </view>
+    <view bind:tap="_p" class="shop-container" data-t="{{ tap:{en:'handleShopClick'} }}">
+        <image class="shop-pic tee-image" lazyLoad="true" src="{{shopImg}}" style="border-radius:{{componentData.styleSetting.borderRadius+'px'}}; height:{{imageHeight+'px'}}" wx:if="{{componentData.isShopImg}}"></image>
+        <view class="shop-name">{{storeData.storeName}}</view>
+        <view class="shop-info">
+            <view class="info-text t-text">
+                <view catch:tap="_p" class="t-text" data-t="{{ tap:{en:'handleDistanceClick',et:'stop'} }}"> {{storeData.distance?formatDistance:'点击获取距离'}}<view class="split-line t-text">|</view>{{storeData.storeAddress}} </view>
+            </view>
+        </view>
+    </view>
+</view>

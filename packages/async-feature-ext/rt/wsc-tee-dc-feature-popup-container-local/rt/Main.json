@@ -1,0 +1,28 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-minor/components/showcase/components/platform-coupon-pop/index",
+    "b": "/packages/async-minor/components/collect-tip/index",
+    "c": "/packages/async-feature-ext/components/showcase/components/share-feature/components/share-activity-pop/index",
+    "d": "/packages/async-minor/components/ump/collect-gift/entry-in-homepage/index",
+    "e": "/packages/async-minor/components/scene-market-subscribe/index",
+    "f": "/packages/async-minor/components/shop-pop-manager/index",
+    "g": "/packages/async-minor/components/bi-list-icon/index",
+    "h": "/packages/async-main/components/account/inject-protocol/index",
+    "i": "/packages/async-minor/components/ump/marketing-page/icon/index",
+    "j": "/packages/async-minor/components/showcase/components/lottery-code-icon/index",
+    "k": "/ext-tee-wsc-dc/extensions/feature-cloud/widgets/rt/DialogContent",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": {
+    "a": "_",
+    "b": "_",
+    "d": "_",
+    "e": "_",
+    "f": "_",
+    "g": "_",
+    "h": "_",
+    "i": "_",
+    "j": "_"
+  }
+}

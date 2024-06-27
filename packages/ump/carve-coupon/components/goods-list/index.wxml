@@ -1,0 +1,6 @@
+<view class="coupon-recommend" wx:if="{{goodsList.length}}">
+    <view class="title-bar">好货精选</view>
+    <view class="coupon-recommend__list">
+        <a class="goods-list-item {{goodsList.length<2?'sample-goods':''}}" goods="{{item}}" goodsIndex="{{index}}" wx:for="{{goodsList}}" wx:key="{{ index }}"></a>
+    </view>
+</view>

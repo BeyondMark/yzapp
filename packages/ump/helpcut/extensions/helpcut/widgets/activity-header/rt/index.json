@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../activity-card/rt/index",
+    "b": "../../bargain-rule/rt/index",
+    "c": "../../bargain-user/rt/index",
+    "_": "../../../../../../../../components/_/index"
+  }
+}

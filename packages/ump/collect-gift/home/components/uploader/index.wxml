@@ -1,0 +1,11 @@
+<image class="uploaded-image-class" mode="widthFix" src="{{upLoadController.uploadedImgUrl}}" wx:if="{{upLoadController.status.isUploaded}}"></image>
+<view catchtap="eventHandler" class="upload-container container-class" data-event="chooseImage" style="width: {{size}}px;height: {{size}}px" wx:else>
+    <a class="upload-container_add-icon icon-class" customClass="line-height-patch" name="icon-collect-gift-add-btn" style="font-size:{{iconSize}}px;line-height: {{iconSize}}px"></a>
+</view>
+<view catchtap="eventHandler" data-event="chooseImage" wx:if="{{upLoadController.status.isUploaded}}">
+    <slot name="uploadedTip"></slot>
+</view>
+<view wx:else>
+    <slot name="unUnloadedTip"></slot>
+</view>
+<b id="van-toast"></b>

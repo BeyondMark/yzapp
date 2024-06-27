@@ -1,0 +1,22 @@
+<view class="{{classes.tabs}}">
+    <a bind:_init="_tic" disabled="{{!sticky}}" offsetTop="{{offsetTop}}" zIndex="{{zIndex}}">
+        <view class="{{classes.wrap}} {{type==='line'&&border?'t-hairline--top-bottom':''}}">
+            <slot name="nav-left"></slot>
+            <scroll-view bind:scroll="_p" class="{{classes.scroll}}" data-t="{{ scroll:{en:'onTabNavScroll'} }}" scrollLeft="{{scrollLeft}}" scrollWithAnimation="{{true}}" scrollX="{{scrollable}}" style="{{color?'border-color: '+color:''}}">
+                <view class="{{classes.nav}}" data-ref="querydom">
+                    <view class="t-tabs__line {{lineClass}}" style="{{lineStyle}}" wx:if="{{type==='line'}}"></view>
+                    <view catch:tap="_p" class="{{'t-tab'}} {{tabClass}} {{index===currentIndex?activeClass:''}} {{!ellipsis?'t-tab--complete':''}}" data-index="{{index}}" data-t="{{ tap:{en:'onTap',et:'stop'} }}" style="{{tabStyle}}" wx:for="{{tabs}}" wx:key="index">
+                        <view class="{{ellipsis?'t-ellipsis':''}}" style="{{item.titleStyle}}"> {{item.title}} <b bind:_init="_tic" dot="{{item.dot}}" info="{{item.info}}" wx:if="{{item.info!==null||item.dot}}"></b>
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+            <slot name="nav-right"></slot>
+        </view>
+    </a>
+    <view bind:touchcancel="_p" bind:touchend="_p" bind:touchmove="_p" bind:touchstart="_p" class="t-tabs__content" data-t="{{ touchstart:{en:'onTouchStart'},touchmove:{en:'onTouchMove'},touchend:{en:'onTouchEnd'},touchcancel:{en:'onTouchEnd'} }}">
+        <view class="{{classes.track}}" style="{{trackStyle}}">
+            <slot></slot>
+        </view>
+    </view>
+</view>

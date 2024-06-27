@@ -1,0 +1,6 @@
+<view class="datetime-field">
+    <a bind:_init="_tic" bind:tap="_p" class="{{fieldValue!==''?'black-field':''}}" customStyle="{{fieldStyle}}" data-t="{{ tap:{en:'openDateActionsheet'} }}" disabled="{{true}}" isLink="{{true}}" label="{{fieldLabel}}" placeholder="{{fieldInfo.placeholder}}" value="{{fieldValue}}"></a>
+    <b bind:_init="_tic" bind:close="_p" class="date-popup" data-t="{{ close:{en:'cancelSelectDate'} }}" position="bottom" show="{{showDateSelector}}" zIndex="10000">
+        <c bind:_init="_tic" bind:cancel="_p" bind:confirm="_p" data-t="{{ confirm:{en:'confirmSelectDate'},cancel:{en:'cancelSelectDate'} }}" maxDate="{{maxDate}}" minDate="{{minDate}}" type="date" value="{{dateValue}}"></c>
+    </b>
+</view>

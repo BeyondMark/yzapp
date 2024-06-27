@@ -1,0 +1,16 @@
+<view class="location-bar" wx:if="{{show}}">
+    <view bind:tap="_p" class="location-bar__location" data-t="{{ tap:{en:'chooseLocation'} }}">
+        <view class="location-bar__text text-ellipsis-1">{{locationStr}}</view>
+        <view class="location-bar__edit">
+            <view>
+                <a bind:_init="_tic" class="location-bar__edit-icon" name="edit" size="18px"></a>
+            </view>
+        </view>
+    </view>
+    <view bind:tap="_p" class="location-bar__reset" data-t="{{ tap:{en:'invokeGetLocation'} }}">
+        <view class="location-bar__reset-icon">
+            <a bind:_init="_tic" class="location-bar__reset-aim" name="aim" size="18px"></a>
+        </view>
+        <view class="location-bar__reset-text t-text">重新定位</view>
+    </view>
+</view>

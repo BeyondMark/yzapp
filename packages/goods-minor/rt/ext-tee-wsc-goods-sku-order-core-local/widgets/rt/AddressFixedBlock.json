@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./AddressContactBlock",
+    "b": "./../../components/AddressCell",
+    "c": "./../../components/SelfFetchCell",
+    "_": "../../../../../../components/_/index"
+  }
+}

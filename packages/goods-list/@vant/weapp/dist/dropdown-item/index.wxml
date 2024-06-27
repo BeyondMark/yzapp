@@ -1,0 +1,9 @@
+<view class="{{utils.bem('dropdown-item',direction)}} custom-class" style="{{wrapperStyle}}" wx:if="{{showWrapper}}">
+    <a bind:after-enter="onOpened" bind:after-leave="onClosed" bind:close="toggle" bind:enter="onOpen" bind:leave="onClose" closeOnClickOverlay="{{closeOnClickOverlay}}" customStyle="position: absolute;{{popupStyle}}" duration="{{transition?duration:0}}" overlay="{{overlay}}" overlayStyle="position: absolute;" position="{{direction==='down'?'top':'bottom'}}" rootPortal="{{rootPortal}}" safeAreaTabBar="{{safeAreaTabBar}}" show="{{showPopup}}">
+        <b bind:tap="onOptionTap" class="{{utils.bem( 'dropdown-item__option',{active:item.value===value} )}}" clickable="{{true}}" data-option="{{item}}" icon="{{item.icon}}" wx:for="{{options}}" wx:key="value">
+            <view class="c8ead4 item-title-class" slot="title" style="{{item.value===value?'color:'+activeColor:''}}">{{item.text}}</view>
+            <c class="c52920" color="{{activeColor}}" name="success" wx:if="{{item.value===value}}"></c>
+        </b>
+        <slot></slot>
+    </a>
+</view>

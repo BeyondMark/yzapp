@@ -1,0 +1,3 @@
+<b bind:_init="_tic" channel="{{channel}}">
+    <a activeColor="{{themeColor}}" bind:_init="_tic" bind:change="_p" checked="{{checked}}" customClass="zan-pay-recommend-b__action" data-t="{{ change:{en:'onCheckedChange'} }}" inactiveColor="#C8C9CC" size="12px"></a>
+</b>

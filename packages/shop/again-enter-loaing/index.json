@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "a": "./../rt/wsc-tee-shop-again-enter-loaing-local/rt/Main",
+    "b": "../../async-tee/@y-open/vt/native/weapp/toast/index/index",
+    "c": "../../async-tee/@y-open/vt/native/weapp/dialog/index/index",
+    "_": "../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_", "c": "_" }
+}

@@ -1,0 +1,6 @@
+<view class="benefit-list">
+    <block wx:for="{{benefitList}}" wx:for-item="benefit" wx:key="{{ benefit.key }}">
+        <b benefit="{{benefit}}" experienceLog="{{experienceLog}}" hasActivated="{{hasActivated}}" hasCard="{{hasCard}}" needActivate="{{needActivate}}" wx:if="{{benefit.key==='experienceCard'}}"></b>
+        <a benefit="{{benefit}}" hasCard="{{hasCard}}" wx:else></a>
+    </block>
+</view>

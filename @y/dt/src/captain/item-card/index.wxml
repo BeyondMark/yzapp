@@ -1,0 +1,155 @@
+<view bind:tap="_p" class="{{'cap-item-card'}} {{opt.type}} {{opt.corner}} {{opt.layout}} {{opt.layoutType}} {{opt.theme}}" data-t="{{ tap:{en:'handleItemClick'} }}" style="{{'--skeleton-padding: 0px;'+opt.cardStyle}}">
+    <view class="cap-item-image {{itemImageClass}} {{itemImageSkeletonShow}}" style="{{itemImageStyle}}">
+        <i _opt="{{couponData}}" bind:_init="_tic" wx:if="{{imgOpt.useImgSlot}}"></i>
+        <image bind:load="_p" class="{{'image'}} {{imgOpt.fill}} tee-image" data-t="{{ load:{en:'onLoad'} }}" lazyLoad="{{true}}" mode="{{itemImageMode}}" src="{{itemImageUrl}}" wx:else></image>
+        <view class="{{true?'image-mask':''}} {{imgOpt.mask==='soldout'?'soldout':''}} {{imgOpt.mask==='end'?'end':''}}" style="{{itemImageMaskStyle}}" wx:if="{{imgOpt.mask==='soldout'||imgOpt.mask==='end'}}"></view>
+        <view class="corner-mark {{'mark-'+imgOpt.cornerMark}}" wx:if="{{itemImageCornerMarkIsIcon}}">
+            <view class="corner-mark-bg"></view>
+            <a bind:_init="_tic" class="corner-mark-icon" name="{{imgOpt.cornerMark}}" size="{{imgOpt.cornerMarkSize}}"></a>
+        </view>
+        <view class="corner-key-label" wx:if="{{imgOpt.showKeyLabel&&imgOpt.keyLabel}}"> {{imgOpt.keyLabel}} </view>
+        <view class="corner-mark-img" style="{{itemImageCornerMarkStyle}}" wx:elif="{{imgOpt.cornerMark!==false}}"></view>
+        <slot name="corner-mark"></slot>
+        <view class="girdle">
+            <view class="countdown" wx:if="{{opt.countdownOpt&&!opt.countdownOpt.isHideCountdown}}">
+                <b _opt="{{opt.countdownOpt}}" bind:_init="_tic"></b>
+            </view>
+            <view class="activity" wx:if="{{opt.activityOpt&&_opt.preSaleGoodsLabel===preSaleGoodsMap.DIAGRAM}}">
+                <view class="activity-bg" style="{{activityBgStyle}}"></view>
+                <view class="activity-text" style="{{activityTestStyle}}"> {{opt.activityOpt.text}} </view>
+            </view>
+        </view>
+    </view>
+    <view class="{{'text-info'}}" style="{{opt.textAreaOpt.textAreaStyle}}" wx:if="{{opt.textAreaOpt&&opt.textAreaOpt.useSkeleton&&opt.textAreaOpt.skeletonList}}">
+        <view style="{{skeletonItem.skeletonStyle}}" wx:for="{{opt.textAreaOpt.skeletonList}}" wx:for-item="skeletonItem" wx:key="index">
+            <d bind:_init="_tic" row="{{1}}"></d>
+        </view>
+    </view>
+    <view class="text-info-content {{'text-info'}} {{'text-info--'+opt.align}} {{textClass}} {{skeletonClass}}" id="textContent" style="{{opt.textAreaOpt&&opt.textAreaOpt.style}}" wx:if="{{isTextShow}}">
+        <view class="text-flex-first">
+            <view class="title" wx:if="{{opt.titleOpt}}">
+                <j bind:_init="_tic" height="{{titleEllipsis.maxHeight}}" needCustom="{{titleEllipsis.needCustom}}" wx:if="{{titleEllipsis}}">
+                    <view class="{{titleWrapCls.class}}" style="{{titleWrapCls.style}}" wx:if="{{opt.titleOpt.title}}">
+                        <view class="title-wrap" style="{{titleWrapStyle}}">
+                            <view class="title-main" style="{{titleStyle+titleEllipsis.style}}">
+                                <view class="title-tag-box" wx:for="{{titleTags}}" wx:key="index">
+                                    <view class="title-tag" style="{{item.colorStyle}}">
+                                        <view class="title-tag-text t-text">{{item.text}}</view>
+                                        <view class="title-tag-bg" style="{{item.bgStyle}}"></view>
+                                    </view>
+                                </view>
+                                <text bind:_init="_tic" class="{{isSkyline?'skyline-text':'title-text'}}" maxLines="2" overflow="ellipsis">
+                                    <text bind:_init="_tic" overflow="visible" style="display: inline-block" wx:if="{{opt.activityOpt&&_opt.preSaleGoodsLabel===preSaleGoodsMap.BEFORE_THE_TITLE}}">                    预售 |
+                  </text> {{opt.titleOpt.title}} </text>
+                            </view>
+                        </view>
+                    </view>
+                </j>
+            </view>
+            <view class="sub-title" wx:if="{{opt.subTitleOpt.title}}">
+                <view class="{{subTitleWrapCls.class}}" style="{{subTitleWrapCls.style}}">
+                    <view class="title-wrap" style="{{subTitleWrapStyle}}">
+                        <view class="title-main" style="{{subTitleStyle}}">
+                            <view class="title-text" style="{{subTitleStyle}}"> {{opt.subTitleOpt.title}} </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="expand-title" wx:if="{{opt.expandOpt}}">
+                <view class="{{expandTitleWrapCls.class}}" style="{{expandTitleWrapCls.style}}">
+                    <view class="title-wrap" style="{{expandTitleWrapStyle}}">
+                        <view class="title-main" style="{{expandTitleStyle}}" wx:if="{{opt.expandOpt.title}}">
+                            <view class="title-text" style="{{expandTitleStyle}}"> {{opt.expandOpt.title}} </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="progress-info" wx:if="{{opt.progressOpt}}">
+                <h _opt="{{opt.progressOpt}}" bind:_init="_tic"></h>
+            </view>
+            <view class="tag" wx:if="{{opt.tagsOpt&&!opt.useTagsSlot}}">
+                <view style="{{opt.tagsOpt.skeletonStyle}}" wx:if="{{opt.tagsOpt.useSkeleton&&!(opt.tagsOpt.list&&opt.tagsOpt.list.length)}}">
+                    <d bind:_init="_tic" row="{{1}}"></d>
+                </view>
+                <view class="{{'goods-tags'}} {{'goods-tags-'+opt.tagsOpt.textAlign}}" style="{{tagsStyle}}" wx:elif="{{opt.isTagsShow||opt.tagsOpt.list&&opt.tagsOpt.list.length}}">
+                    <view class="{{'tag-item'}} {{item.color?'default':item.type}}" style="{{'border-color:'+item.color+';'+item.warpStyle}}" wx:for="{{opt.tagsOpt.list||[]}}" wx:key="index">
+                        <view class="tag-sign" style="{{'color:'+item.color}}" wx:if="{{item.preLabel}}"> {{item.preLabel}} </view>
+                        <view class="tag-vip" style="{{'color:'+item.color}}" wx:if="{{item.matchIdentityLimitType===1}}">              VIP
+            </view>
+                        <view class="tag-text" style="{{'color:'+item.color+';'+item.labelStyle}}"> {{item.label}} </view>
+                    </view>
+                </view>
+            </view>
+            <slot name="card-custom-tags" wx:if="{{opt.useTagsSlot}}"></slot>
+            <view class="extra-info" wx:if="{{opt.extOpt}}">
+                <view class="{{'goods-ext-info'}} {{opt.extOpt.align}}">
+                    <view class="ext-info-item" wx:for="{{extraInfoList}}" wx:key="index">
+                        <view class="{{item.wrapCls.class}}" style="{{item.wrapCls.style}}">
+                            <view class="title-wrap" style="{{item.wrapStyle}}">
+                                <view class="title-main" style="{{item.titleStyle}}" wx:if="{{item.title}}">
+                                    <view class="title-text" style="{{item.titleStyle}}"> {{item.title}} </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="item-card-bottom" style="{{opt.itemCardBottomOpt&&opt.itemCardBottomOpt.style}}" wx:if="{{opt.itemCardBottomOpt&&opt.itemCardBottomOpt.useSkeleton}}">
+            <d bind:_init="_tic" row="{{1}}"></d>
+        </view>
+        <view class="item-card-bottom" wx:else>
+            <view class="{{'opera'}} {{!opt.priceOpt&&!opt.oPriceOpt?'opera-reverse':''}} {{opt.operaVend?'vend':''}} {{opt.btnOpt.fullLine?'full-line-btn':''}}" style="{{operaStyle}}" wx:if="{{opt.priceOpt||opt.oPriceOpt||opt.btnOpt||opt.buyBtnExtOpt}}">
+                <view class="price-box" wx:if="{{(opt.priceOpt||opt.oPriceOpt)&&!opt.usePriceSlot}}">
+                    <view class="cap-price cur-price {{capPriceOpt.delLine?'del':''}} {{capPriceOpt.preProcess?'cap-price-process':''}} {{opt.oPriceOpt?'has-origin':''}}" style="{{priceStyle}}" wx:if="{{!!capPriceOpt.price}}">
+                        <view class="cap-price-wrapper">
+                            <view wx:if="{{capPriceOpt.preProcess}}">{{capPriceOpt.price}}</view>
+                            <block wx:else>
+                                <view class="skyline-price" wx:if="{{isSkyline}}">
+                                    <view class="del-line" wx:if="{{capPriceOpt.delLine}}"></view>
+                                    <view class="skyline-tag" style="{{priceTagStyle}}">¥</view>
+                                    <text bind:_init="_tic" overflow="ellipsis">
+                                        <text bind:_init="_tic" class="price-int" overflow="visible" style="{{priceIntStyle}}">{{useNewPriceRule?priceNewInt:priceInt}}</text>
+                                        <text bind:_init="_tic" class="price-decimal" overflow="visible" style="{{priceDecimalStyle}}">{{useNewPriceRule?priceNewDecimal:priceDecimal}}</text>
+                                    </text>
+                                </view>
+                                <block wx:else>
+                                    <view class="del-line" wx:if="{{capPriceOpt.delLine}}"></view>
+                                    <view class="price-tag t-text" style="{{priceTagStyle}}">¥</view>
+                                    <view class="price-int t-text" style="{{priceIntStyle}}">{{useNewPriceRule?priceNewInt:priceInt}}</view>
+                                    <view class="price-decimal t-text" style="{{priceDecimalStyle}}">{{useNewPriceRule?priceNewDecimal:priceDecimal}}</view>
+                                </block>
+                            </block>
+                            <c _opt="{{capSoldNumOpt}}" bind:_init="_tic" wx:if="{{opt.soldNumOpt}}"></c>
+                        </view>
+                    </view>
+                    <view class="cap-price price-origin {{capOPriceOpt.delLine?'del':''}} {{capOPriceOpt.preProcess?'cap-price-process':''}}" style="{{oPriceStyle}}" wx:if="{{!!capOPriceOpt.price}}">
+                        <view wx:if="{{capOPriceOpt.preProcess}}">{{capOPriceOpt.price}}</view>
+                        <block wx:else>
+                            <view class="del-line" wx:if="{{capOPriceOpt.delLine}}"></view>
+                            <view class="price-tag t-text" style="{{oPriceTagStyle}}">¥</view>
+                            <view class="price-int t-text" style="{{oPriceIntStyle}}">{{useNewOPriceRule?oPriceNewInt:oPriceInt}}</view>
+                            <view class="price-decimal t-text" style="{{oPriceDecimalStyle}}">{{useNewOPriceRule?oPriceNewDecimal:oPriceDecimal}}</view>
+                        </block>
+                    </view>
+                    <view class="tag" style="{{opt.priceTagsOpt.tagStyle}}" wx:if="{{opt.priceTagsOpt&&opt.isTagsShow}}">
+                        <f _opt="{{opt.priceTagsOpt}}" bind:_init="_tic"></f>
+                    </view>
+                </view>
+                <slot name="card-custom-price" wx:if="{{opt.usePriceSlot}}"></slot>
+                <view catch:tap="_p" class="{{'buy-btn'}} {{'buy-button'}} {{opt.btnOpt.layout}}" data-t="{{ tap:{en:'handleBuyButtonClick',et:'stop'} }}" wx:if="{{opt.btnOpt}}">
+                    <view class="btn-wrap">
+                        <view class="badage-container" wx:if="{{opt.btnOpt.type==='icon'}}">
+                            <e bind:_init="_tic" content="{{goodsNumber}}" customClass="{{opt.btnGoodsNumberStyleOpt.badgeClass}}" max="{{99}}" style="{{badgeStyle}}" wx:if="{{isShowBadge}}"></e>
+                            <a bind:_init="_tic" class="buy-btn-icon" name="{{opt.btnOpt.name}}" size="{{opt.btnOpt.size||20}}" style="{{opt.btnOpt.btnStyle}}"></a>
+                        </view>
+                        <view class="{{'buy-btn-btn'}} {{opt.btnOpt.corner}} {{opt.btnOpt.theme}}" style="{{opt.btnOpt.btnStyle}}" wx:if="{{opt.btnOpt.type==='btn'}}"> {{buyButtonText}} </view>
+                    </view>
+                </view>
+                <view class="buy-button-extra-info" wx:if="{{opt.buyBtnExtOpt}}">
+                    <g _opt="{{opt.buyBtnExtOpt}}" bind:_init="_tic"></g>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

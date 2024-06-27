@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../fans-dialog/rt/index",
+    "b": "/@y-open/vt/dist/cell/index",
+    "_": "../../../../../../../components/_/index"
+  }
+}

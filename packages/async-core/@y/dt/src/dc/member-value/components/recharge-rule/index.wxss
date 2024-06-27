@@ -1,0 +1,214 @@
+.t-text {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.rule {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  padding: 6px 16px;
+  margin: 0 auto;
+  overflow-y: scroll;
+}
+.rule .card {
+  padding: 10px;
+  border-radius: 4px;
+}
+.rule .disable {
+  opacity: 0.5;
+}
+.rule .name,
+.rule .slogan {
+  display: block;
+  font-size: 16px;
+  height: 22px;
+  line-height: 22px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.rule .text {
+  font-weight: 700;
+}
+.rule .mode1 {
+  width: 100%;
+}
+.rule .mode1 .content {
+  display: inline-block;
+  width: calc(100% - 120px);
+}
+.rule .mode1 .btn {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 4px;
+}
+.rule .mode2 {
+  flex: 1;
+  min-width: 0;
+}
+.rule .mode2:first-child {
+  margin-right: 5px;
+}
+.rule .mode2:last-child {
+  margin-left: 5px;
+}
+.rule .mode3 {
+  margin-right: 10px;
+}
+.rule .mode3 .card {
+  width: 136px;
+}
+.rule .mode3:last-child {
+  padding-right: 16px;
+}
+.rule .red .card {
+  background-image: linear-gradient(0deg, #f58357, #e74c2c);
+}
+.rule .red .name,
+.rule .red .slogan {
+  color: #fff;
+}
+.rule .red .btn {
+  background-image: linear-gradient(0deg, #fff8d9, #ffeeb1);
+  color: #4a2214;
+}
+.rule .yellow .card {
+  background-image: linear-gradient(0deg, #fff8d9, #fffeb1);
+}
+.rule .yellow .name,
+.rule .yellow .slogan {
+  color: #4a2214;
+}
+.rule .yellow .btn {
+  background-image: linear-gradient(0deg, #4a2214, #6d3a27);
+  color: #fff;
+}
+.rule .white .card {
+  background-image: linear-gradient(0deg, #f7f7f7, #f7f7f7);
+}
+.rule .white .name,
+.rule .white .slogan {
+  color: #f44;
+}
+.rule .white .btn {
+  background-image: linear-gradient(0deg, #f58357, #e74c2c);
+  color: #fff;
+}
+.rule .black .card {
+  background-image: linear-gradient(179deg, #292929, #626262);
+}
+.rule .black .name,
+.rule .black .slogan {
+  color: #fff;
+}
+.rule .black .btn {
+  background-image: linear-gradient(0deg, #fff, #e6e6e6);
+  color: #323233;
+}
+.rule .green .card {
+  background-image: linear-gradient(0deg, #f0faf2, #dcede0);
+}
+.rule .green .name,
+.rule .green .slogan {
+  color: #2da641;
+}
+.rule .green .btn {
+  background-image: linear-gradient(180deg, #2da641, #75be83);
+  color: #fff;
+}
+.rule .btn {
+  border-radius: 18px;
+  width: 96px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  margin-left: 12px;
+  font-weight: 700;
+}
+.rule .template2 {
+  padding: 13px 16px 15px 16px;
+  width: 100%;
+  align-items: flex-end;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+.rule .template2,
+.rule .template2_content {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.rule .template2_content {
+  position: relative;
+  margin-right: 32px;
+  flex-direction: column;
+}
+.rule .template2_content_title {
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #323233;
+  font-weight: 500;
+  line-height: 24px;
+}
+.rule .template2_content_subtitle {
+  display: inline-block;
+}
+.rule .template2_content_subtitle_name {
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #323233;
+  vertical-align: bottom;
+}
+.rule .template2_content_subtitle_slogan {
+  overflow: hidden;
+  display: inline-block;
+  margin-top: 4px;
+  max-width: 190px;
+  max-width: calc(100vw - 185px);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #57983f;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align: bottom;
+}
+.rule .template2_content_subtitle_icon {
+  margin-right: 4px;
+  font-size: 20px;
+  line-height: 20px;
+}
+.rule .template2_content_rechargebtn {
+  display: -webkit-flex;
+  display: flex;
+  width: 88px;
+  height: 32px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+.rule .template2_content_inactive {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 94px;
+  height: 30px;
+  margin-left: -47px;
+  margin-top: -15px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 24px;
+  background-color: rgba(0, 0, 0, 0.6);
+}

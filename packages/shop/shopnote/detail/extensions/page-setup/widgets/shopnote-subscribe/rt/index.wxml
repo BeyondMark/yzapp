@@ -1,0 +1,18 @@
+<view>
+    <view class="nav-container" wx:if="{{showNav}}">
+        <view bind:tap="redirectToHome" class="nav-enter-shop">
+            <image src="{{shop.logo}}"></image>
+        </view>
+        <view class="nav-enter-name">{{shop.shopName}}</view>
+        <view class="nav-enter-right">
+            <b type="default">
+                <view bind:tap="handleSubscribe" class="nav-sub-btn {{subscribeStatus?'nav-enter-right__gray':''}}" wx:if="{{showSubBtn}}">{{subscribeStatus?'已订阅':'订阅'}}</view>
+            </b>
+        </view>
+        <a id="van-dialog"></a>
+        <a customStyle="{{dialogCustomStyle}}" show="{{guideShow}}" showConfirmButton="{{false}}" useSlot="{{true}}">
+            <image src="https://b.yzcdn.cn/public_files/2019/08/01/df3bfea69c6c333e48d7e4bf26d9ef1f.png"></image>
+            <button bind:tap="closeGuideDialog" class="nav-guide-confirm__btn">我知道了</button>
+        </a>
+    </view>
+</view>

@@ -1,0 +1,22 @@
+.c96a62 {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  background-color: #fff;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-top: var(--theme-page-ext-margin-top, 8px);
+}
+.c96a62:before {
+  content: "";
+  display: block;
+  margin: 0 16px;
+  border-top: var(--theme-page-ext-border-top, 0);
+}
+.c96a62 .t-cell:not(:last-child):after {
+  border-bottom: none;
+}
+.c96a62 .t-hairline--top-bottom:after {
+  border-width: 0;
+}

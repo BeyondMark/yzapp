@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../password-login/index",
+    "b": "../sms-login/index",
+    "c": "../../../@y/behavior-verify/src/miniapp/weapp/index",
+    "d": "/@vant/weapp/dist/popup/index",
+    "e": "../../../@vant/weapp/dist/icon/index",
+    "_": "../../../../../components/_/index"
+  }
+}

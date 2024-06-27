@@ -1,0 +1,1 @@
+<view class="placeholder-block" wx:if="{{showPlaceHolder}}"></view>

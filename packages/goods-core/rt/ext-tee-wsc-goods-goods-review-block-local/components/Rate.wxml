@@ -1,0 +1,6 @@
+<view class="c011a8">
+    <view class="b0e26" wx:for="{{scoreList}}" wx:for-index="key" wx:key="key">
+        <a bind:_init="_tic" color="{{item.color}}" name="star" size="{{size}}"></a>
+        <a bind:_init="_tic" color="{{item.voidColor}}" customClass="c9982a" name="star" size="{{size}}" wx:if="{{item.isHalf}}"></a>
+    </view>
+</view>

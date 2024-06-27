@@ -1,0 +1,4 @@
+<view class="dc-content" wx:if="{{list&&list.length>0}}">
+    <a _opt="{{opt.titleOpt}}" bind:_init="_tic" url="/packages/paidcontent/list/index?type=content"></a>
+    <b _opt="{{item.itemOpt}}" bind:_init="_tic" wx:for="{{list}}" wx:key="id"></b>
+</view>

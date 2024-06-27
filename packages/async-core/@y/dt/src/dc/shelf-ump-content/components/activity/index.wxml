@@ -1,0 +1,9 @@
+<view class="activity-item">
+    <view class="left-container">
+        <view class="tag">{{activity.groupTagName}}</view>
+        <view class="content">
+            <view class="t-text" wx:for="{{activity.richBriefs}}" wx:for-item="activityItem" wx:key="index"> {{activityItem.brief}} </view>
+        </view>
+    </view>
+    <view bind:tap="_p" class="go-to-detail" data-t="{{ tap:{ en:'goToActivityDetail',args:[activity] } }}" wx:if="{{showDetailButton}}">查看</view>
+</view>

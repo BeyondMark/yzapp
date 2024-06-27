@@ -1,0 +1,27 @@
+.r-c {
+  flex-direction: column;
+}
+.r-c,
+.r-r {
+  display: flex;
+}
+.r-r {
+  flex-direction: row;
+}
+page {
+  background-color: #fff;
+}
+.DGImPz {
+  z-index: 1;
+}
+.DGImPz,
+.FklhkA {
+  position: relative;
+}
+.FklhkA {
+  z-index: 10000;
+}
+.DVnXOW {
+  position: relative;
+  z-index: 999999;
+}

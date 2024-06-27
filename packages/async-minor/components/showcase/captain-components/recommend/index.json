@@ -1,0 +1,15 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../goods-layout/index",
+    "b": "../goods/components/goods-item-tag-info/index",
+    "c": "../goods-layout/components/goods-item-price/index",
+    "d": "../../../recommend/components/extra/index",
+    "e": "../goods-layout/components/goods-item-extra/index",
+    "_": "../../../../../../components/_/index"
+  },
+  "componentGenerics": {
+    "goods-item-corner-mark": true,
+    "goods-item-ump-tags": true
+  }
+}

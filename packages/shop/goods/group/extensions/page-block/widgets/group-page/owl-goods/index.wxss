@@ -1,0 +1,18 @@
+.owl-goods__section {
+  margin-bottom: 10px;
+}
+.owl-goods__label {
+  height: 44px;
+  line-height: 44px;
+  padding-left: 25px;
+  font-size: 15px;
+  color: #333;
+  background-color: #fff;
+}
+.owl-goods__footer {
+  line-height: 30px;
+  text-align: center;
+  color: #999;
+  font-size: 13px;
+  background-color: #fff;
+}

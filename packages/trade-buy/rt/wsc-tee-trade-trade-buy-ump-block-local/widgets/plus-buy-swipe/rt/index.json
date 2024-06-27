@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../plus-buy-swipe-item/rt/index",
+    "b": "/@y-open/vt/dist/popup/index.weapp",
+    "c": "/packages/async-tee/@y-open/vt/dist/swipe/index",
+    "_": "../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "c": "_" }
+}

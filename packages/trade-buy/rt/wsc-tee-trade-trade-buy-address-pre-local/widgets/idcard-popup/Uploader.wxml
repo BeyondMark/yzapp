@@ -1,0 +1,14 @@
+<view class="c764de">
+    <c accept="image" bind:_init="_tic" bind:after-read="_p" data-t="{{ afterRead:{en:'onAfterRead'} }}" disabled="{{value.length>0||disabled}}" previewSize="64">
+        <view class="c493ab" wx:if="{{value}}">
+            <image class="c9ffb9 bd231" lazyLoad="true" mode="aspectFit" src="{{value}}"></image>
+            <a bind:_init="_tic" bind:tap="_p" class="c2a76f" data-t="{{ tap:{en:'onDelete'} }}" name="clear" wx:if="{{!disabled}}"></a>
+        </view>
+        <slot name="empty" wx:else></slot>
+    </c>
+    <view class="c4b6ca">
+        <slot name="label"></slot>
+    </view>
+    <canvas bind:_init="_tic" id="firstCanvas" style="{{canvasStyle}}" type="2d" wx:if="{{showCanvas}}"></canvas>
+    <b bind:_init="_tic" id="van-toast"></b>
+</view>

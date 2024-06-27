@@ -1,0 +1,36 @@
+.f9ab0 {
+  padding: 24px;
+}
+.d5d3d {
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #323233;
+}
+.c9a036 {
+  padding: 16px;
+  background: url(https://b.yzcdn.cn/public_files/2022/7/23/second_confirm_dia2.png);
+  background-size: cover;
+  border-radius: 8px;
+}
+.b0689 {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+}
+.c951da {
+  margin-top: 4px;
+  font-weight: 400;
+  color: #999;
+}
+.c951da,
+.a74ec {
+  font-size: 13px;
+  line-height: 18px;
+}
+.a74ec {
+  margin-top: 8px;
+  font-weight: 600;
+}

@@ -1,0 +1,12 @@
+{
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "a": "/packages/usercenter/dashboard/index",
+    "b": "./placeholder/index",
+    "c": "/packages/async-main/@vant/weapp/dist/toast/index",
+    "d": "/packages/async-main/@vant/weapp/dist/notify/index",
+    "_": "../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "b", "c": "_", "d": "_" }
+}

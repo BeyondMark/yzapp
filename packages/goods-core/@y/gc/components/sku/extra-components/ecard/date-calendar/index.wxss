@@ -1,0 +1,74 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.c03e8f {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  background: #fff;
+  font-size: 12px;
+  color: #323233;
+  background-color: #f7f8fa;
+}
+.c03e8f .c29b1b {
+  flex: 1;
+  text-align: center;
+}
+.c03e8f .d8e1b {
+  color: var(--general);
+}
+.eb4d8 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #fff;
+}
+.af2a0 {
+  flex: 0 1 auto;
+  height: 64px;
+  text-align: center;
+  min-width: 14%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 16px;
+  color: #222;
+  position: relative;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+.c14443 {
+  font-size: 10px;
+  color: #555;
+  line-height: 14px;
+  transform: scale(0.8);
+}
+.f1088 {
+  line-height: 22px;
+}
+.c90f9d {
+  font-size: 10px;
+  color: #666;
+  line-height: 14px;
+  transform: scale(0.8);
+}
+.fac7f {
+  visibility: hidden;
+}
+.de708 {
+  pointer-events: none;
+  color: #ccc;
+}
+.de708 .c90f9d,
+.de708 .c14443 {
+  color: #a0a0a0;
+}
+.c15c5c {
+  background-color: var(--general, #ee0a24);
+}
+.c15c5c .f1088,
+.c15c5c .c90f9d,
+.c15c5c .c14443 {
+  color: #fff;
+}

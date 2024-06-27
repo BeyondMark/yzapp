@@ -1,0 +1,109 @@
+.c89585 {
+  text-decoration: inherit;
+}
+.c89585,
+.bd231 {
+  display: inline-block;
+}
+.bd231 {
+  width: 100%;
+  height: 100%;
+}
+.c17ff3 {
+  width: 702rpx;
+  height: 160px;
+  background: url(https://b.yzcdn.cn/flow-change-ump/seckill-bg-3.x.png)
+    no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  padding-top: 44px;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+.c4ee55 {
+  position: absolute;
+  top: 6px;
+  right: 16px;
+  width: 114px;
+  color: #fff;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+.c08df6 {
+  display: flex;
+  align-items: baseline;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  margin-right: 4px;
+}
+.c08df6 .c447b7 {
+  background: #fff;
+  color: #f44;
+  border-radius: 4px;
+  text-align: center;
+  width: 16px;
+  height: 16px;
+}
+.c08df6 .e7dfa {
+  margin: 0 1px;
+}
+.bf823 {
+  display: flex;
+  width: 100%;
+  padding-right: 16px;
+  box-sizing: border-box;
+}
+.bf823 .f0126 {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  margin-right: 8px;
+}
+.bf823 .c92a43 {
+  width: 460rpx;
+}
+.bf823 .c9dcaa {
+  font-size: 14px;
+  height: 38px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.bf823 .ee535 {
+  margin-top: 8px;
+  margin-bottom: 12px;
+  font-size: 12px;
+  color: #969799;
+}
+.bf823 .c40367 {
+  display: flex;
+  justify-content: space-between;
+}
+.bf823 .c40367 .c78a5e {
+  display: flex;
+  align-items: baseline;
+  font-size: 14px;
+  color: #f44;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 71.4285714286%;
+}
+.bf823 .c40367 .e5642 {
+  font-weight: 700;
+}
+.bf823 .c40367 .c6fedc {
+  font-size: 20px;
+}
+.bf823 .c40367 .ce50a {
+  display: block;
+  color: #fff;
+  background: #f44;
+  border-color: #f44;
+  font-size: 14px;
+  width: 82px;
+}

@@ -1,0 +1,4 @@
+<view class="d3a1f" wx:if="{{showProductLaunch}}">
+    <view>{{formatNum}}人</view>
+    <view>已预约</view>
+</view>

@@ -1,0 +1,29 @@
+.header-wrap {
+  position: relative;
+  padding: 15px 15px 10px;
+  background: url(https://b.yzcdn.cn/public_files/2e94cd94c4b4f2fcaff17293b3ce046b.png);
+  background-size: 100%auto;
+  background-repeat: no-repeat;
+  background-position: 0-64px;
+  background-color: #fff;
+}
+.header-title {
+  margin-top: 1px;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  height: 22px;
+  line-height: 22px;
+  font-family: PingFangSC-Semibold;
+}
+.header-title:before {
+  margin-right: 3px;
+  content: "";
+  display: inline-block;
+  background: url(https://b.yzcdn.cn/public_files/85419e92bfdd5324821fbaf1ffa7998b.png)
+    no-repeat 50%;
+  width: 25px;
+  height: 22px;
+  background-size: 22px 22px;
+  vertical-align: middle;
+}

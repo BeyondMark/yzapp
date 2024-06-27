@@ -1,0 +1,34 @@
+.bd231 {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.e16cd {
+  display: flex;
+  border-bottom: 1px solid #ebedf0 !important;
+}
+.c852dd {
+  min-width: 64px;
+  line-height: 60px;
+  font-size: 14px;
+}
+.e16cd__field {
+  width: auto;
+}
+.c2603 {
+  margin-left: 16px;
+}
+.c1b5b,
+.c2603 {
+  height: 30px;
+  width: 30px;
+  margin-top: 16px;
+  border-radius: 50%;
+}
+.c1b5b {
+  transform: translateX(-30px);
+}
+.e16cd .van-uploader__preview,
+.e16cd .van-uploader__preview-delete {
+  display: none;
+}

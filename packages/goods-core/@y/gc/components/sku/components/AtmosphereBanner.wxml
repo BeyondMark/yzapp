@@ -1,0 +1,26 @@
+<view class="c14511" wx:if="{{showAtmosphereBanner}}">
+    <view class="c12df5">
+        <view class="c1300">
+            <image class="c2e348 bd231" lazyLoad="true" src="{{bgImg}}"></image>
+        </view>
+        <view class="c897a7">
+            <view class="c87c85" wx:if="{{!isShowImgTitle}}">{{activityName}}</view>
+            <image class="c7fe33 bd231" lazyLoad="true" mode="heightFix" src="{{bannerTitleImg}}" wx:else></image>
+            <view class="c05ea6">{{skuBannerData.activityDesc}}</view>
+            <view class="c05ea6" wx:if="{{soldTag}}">{{soldTag}}</view>
+            <view class="c05ea6" wx:if="{{stockTag}}">{{stockTag}}</view>
+        </view>
+        <view class="c4f6f6">
+            <a bind:_init="_tic" bind:change="_p" data-t="{{ change:{en:'onChange'} }}" time="{{countDown}}" useSlot="{{true}}" wx:if="{{countDown}}">
+                <view class="c897a7 c5765">
+                    <view style="margin-right: 2px;" wx:if="{{remainObj.days}}">{{remainObj.days}}天</view>
+                    <view class="cd961">{{remainObj.hours}}</view>
+                    <view class="fe8ea c89585">:</view>
+                    <view class="cd961">{{minutes}}</view>
+                    <view class="fe8ea c89585">:</view>
+                    <view class="cd961">{{seconds}}</view>
+                </view>
+            </a>
+        </view>
+    </view>
+</view>

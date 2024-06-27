@@ -1,0 +1,3 @@
+<a color="general" customClass="package-sku-price">{{extraData.isMatchPackage?'￥'+extraData.activityPrice:''}}</a>
+<view class="package-sku-origin-price">原价<text class="{{extraData.isMatchPackage?'origin-price--del':''}}">￥{{extraData.originPrice}}</text>
+</view>

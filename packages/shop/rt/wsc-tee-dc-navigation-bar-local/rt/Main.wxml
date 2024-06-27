@@ -1,0 +1,59 @@
+<view class="nb" style="height:{{height+'px'}}" wx:if="{{canUseNav}}">
+    <b bind:_init="_tic" bind:scroll="_p" data-t="{{ scroll:{en:'handleScroll'} }}" offsetTop="0" stickyHeight="{{height}}" stickyWrapClass="nb__sticky-wrap" zIndex="10001">
+        <view class="nb__main" style="height:{{height+'px'}}; background:{{currentSupport&&configData.navColor}}">
+            <view class="{{'nb__icon'}} {{showMenuBack&&!isHalfScreen?'nb__icon__split':''}}" style="{{customIconStyle}}" wx:if="{{showMenuBack||showMenuMain}}">
+                <view bind:tap="_p" class="nb__icon-button" data-t="{{ tap:{en:'onBackTap'} }}" wx:if="{{showMenuBack}}">
+                    <view class="nb__iconfont nb__i-back"></view>
+                </view>
+                <view bind:tap="_p" class="nb__icon-button" data-t="{{ tap:{en:'onMenuTap'} }}" wx:if="{{showMenuMain}}">
+                    <view class="{{menuOrHomeIconClass}}"></view>
+                </view>
+            </view>
+            <view class="nb__title-text" style="color:{{currentSupport&&configData.textColor}}; padding-top:{{paddingTop+'px'}}; {{textStyle}}">
+                <view class="title-text" style="width:{{textWidth+'px'}}; font-size:{{fontSizeSetting+'px'}}"> {{title}} </view>
+            </view>
+        </view>
+    </b>
+    <view class="weapp-top-nav" style="display:{{isMenuOpen&&currentSupport?'block':'none'}}" wx:if="{{isMenuOpen&&currentSupport}}">
+        <view bind:tap="_p" catch:touchmove="_p" class="weapp-top-nav-bg" data-t="{{ touchmove:{en:'onMenuTouchMove',et:'stop'},tap:{en:'onMenuTap'} }}"></view>
+        <view class="weapp-top-nav-wrapper" style="{{openMenuStyle}}">
+            <view class="weapp-top-nav-wrapper__after" style="{{openMenuAfterStyle}}"></view>
+            <view class="weapp-top-nav__sys-path">
+                <view wx:for="{{configData.sysPath}}" wx:key="key">
+                    <view class="weapp-top-nav__item" style="margin-right:{{item._right}}" wx:if="{{item.key==='share'}}">
+                        <button class="weapp-top-nav__item btn" hoverClass="none" openType="share">
+                            <view class="weapp-top-nav__item-image">
+                                <image class="weapp-top-nav__item-img tee-image" lazyLoad="true" mode="aspectFill" src="{{item.image}}"></image>
+                            </view>
+                            <view class="weapp-top-nav__item-title">{{item.title}}</view>
+                        </button>
+                    </view>
+                    <view class="weapp-top-nav__item" style="margin-right:{{item._right}}" wx:elif="{{item.key==='contact'}}">
+                        <a bind:_init="_tic" bind:contact="_p" businessId="{{imConfig.businessId}}" contactClass="weapp-top-nav__item btn" data-t="{{ contact:{en:'onContactBack'} }}" openType="contact" sessionFrom="{{imConfig.sourceParam}}" wx:if="{{rmId==='b8-1'||rmId==='b35-1'||rmId==='b15-1'}}">
+                            <view class="weapp-top-nav__item-image">
+                                <image class="weapp-top-nav__item-img tee-image" lazyLoad="true" mode="aspectFill" src="{{item.image}}"></image>
+                            </view>
+                            <view class="weapp-top-nav__item-title">{{item.title}}</view>
+                        </a>
+                    </view>
+                    <view bind:tap="_p" class="weapp-top-nav__item" data-key="{{item.key}}" data-t="{{ tap:{en:'onMenuSysPathTap'} }}" style="margin-right:{{item._right}}" wx:else>
+                        <view class="weapp-top-nav__item-image">
+                            <image class="weapp-top-nav__item-img tee-image" lazyLoad="true" mode="aspectFill" src="{{item.image}}"></image>
+                        </view>
+                        <view class="weapp-top-nav__item-title">{{item.title}}</view>
+                    </view>
+                </view>
+            </view>
+            <view class="weapp-top-nav__custom-path" wx:if="{{configData.customPath.length>0}}">
+                <view wx:for="{{configData.customPath}}" wx:key="index">
+                    <view bind:tap="_p" class="weapp-top-nav__item" data-item="{{item}}" data-t="{{ tap:{en:'onMenuCustomPathTap'} }}" style="margin-right:{{item._right+'rpx'}}">
+                        <view class="weapp-top-nav__item-image">
+                            <image class="weapp-top-nav__item-img_custom tee-image" lazyLoad="true" mode="aspectFill" src="{{item.imageUrl}}" wx:if="{{item.imageUrl}}"></image>
+                        </view>
+                        <view class="weapp-top-nav__item-title">{{item.title}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

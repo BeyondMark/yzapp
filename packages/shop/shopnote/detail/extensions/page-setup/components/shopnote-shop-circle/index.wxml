@@ -1,0 +1,12 @@
+<view class="shopnote-shop-circle">
+    <view class="shopnote-shop-circle__content">
+        <a title="{{noteData.title}}"></a>
+        <e time="{{noteData.publishTime}}" wx:if="{{noteData.showPublishTime}}"></e>
+        <b desc="{{noteData.description}}"></b>
+        <view class="shopnote-shop-circle__content--goods">
+            <f bind:buy="showcaseHandleGoodsBuy" componentData="{{goodsInfo}}" kdtId="{{shopInfo.kdt_id}}" offlineId="{{shopInfo.offline_id}}" pageLifetimes="{{['onPageScroll']}}"></f>
+        </view>
+        <c bind:shareclick="shareClick" bind:showtoast="showToast" bind:thumbclick="thumbClick" goodsNum="{{goodsInfo.goods.length}}" showGoodsBtn="{{!!goodsInfo.goods.length}}" thumbsStatus="{{thumbsStatus}}"></c>
+        <d bind:closeClick="closeClick" goodsList="{{goodsInfo.contentGoods}}" show="{{toastShow}}"></d>
+    </view>
+</view>

@@ -1,0 +1,11 @@
+<view class="c13eed {{showContent?'c9d176':''}}" style="{{layoutStyle}}" wx:if="{{opt.show}}">
+    <view class="c2d2d8" wx:if="{{!hasRecommendGoods&&hasFetchData}}">
+        <view class="c47363">商品已售罄</view>
+    </view>
+    <view bind:tap="_p" class="{{'c740fa'}} {{isSoldPending?'c088dd':''}}" data-t="{{ tap:{en:'toggleContent'} }}" wx:if="{{hasRecommendGoods}}">
+        <view class="c7eb71"> {{noticeText}} </view>
+        <view class="c595af"> 店铺还有其他好东西，去看看 </view>
+        <a bind:_init="_tic" class="c205dd {{showContent?'c8c552':''}}" name="arrow" wx:if="{{hasRecommendGoods}}"></a>
+    </view>
+    <b bind:_init="_tic" recommendGoods="{{recommendGoods}}" showContent="{{showContent}}"></b>
+</view>

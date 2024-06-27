@@ -1,0 +1,17 @@
+<view class="dc-fans">
+    <button bind:contact="_p" businessId="{{businessId||''}}" data-t="{{ contact:{en:'handleContact'} }}" disabled="{{!sessionFrom}}" openType="contact" sendMessageImg="{{msgImg}}" sendMessagePath="{{messagePath}}" sendMessageTitle="{{''}}" sessionFrom="{{sessionFrom||''}}" showMessageCard="{{true}}" wx:if="{{opt.subType==='1'&&!isJumpH5}}">
+        <a _opt="{{_opt}}" bind:_init="_tic"></a>
+    </button>
+    <view bind:tap="_p" data-t="{{ tap:{en:'handleClick'} }}" wx:elif="{{opt.subType==='1'&&isJumpH5}}">
+        <a _opt="{{_opt}}" bind:_init="_tic"></a>
+    </view>
+    <view style="{{containerStyle}}" wx:elif="{{canIUse&&opt.isWeappSupport}}">
+        <official-account bind:_init="_tic" bind:error="_p" data-t="{{ error:{en:'handleOfficialAccountLoadError'} }}"></official-account>
+    </view>
+    <div bind:_init="_tic" bind:tap="_p" data-t="{{ tap:{en:'handleJumpPublic'} }}" wx:elif="{{opt.isWeappContactSupport&&publicNumberPath}}">
+        <b _opt="{{_opt}}" bind:_init="_tic" shopInfo="{{shopInfo}}"></b>
+    </div>
+    <button bind:contact="_p" businessId="{{businessId||''}}" data-t="{{ contact:{en:'handleContact'} }}" disabled="{{!sessionFrom}}" openType="contact" sendMessageImg="{{msgImg}}" sendMessagePath="{{messagePath}}" sendMessageTitle="{{''}}" sessionFrom="{{sessionFrom||''}}" showMessageCard="{{true}}" wx:elif="{{opt.isWeappContactSupport&&!publicNumberPath}}">
+        <b _opt="{{_opt}}" bind:_init="_tic" shopInfo="{{shopInfo}}"></b>
+    </button>
+</view>

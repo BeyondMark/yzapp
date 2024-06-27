@@ -1,0 +1,17 @@
+<view>
+    <b bind:_init="_tic" border="{{false}}" center="{{true}}" customClass="d5a4c" title="配送方式" wx:if="{{expressWayWords}}">
+        <view class="c46a2"> {{expressWayWords}} </view>
+    </b>
+    <b bind:_init="_tic" bind:tap="_p" border="{{false}}" center="{{true}}" customClass="d5a4c" data-t="{{ tap:{en:'onClick'} }}" isLink="{{isLink}}" title="配送方式" wx:else>
+        <view class="c46a2"> {{selected.postageTitle}} <view class="c89585" wx:if="{{selected.available&&(selected.postageTitle!=='同城配送'&&selected.postageTitle!=='快递'||!isRetailShop)}}"> {{selected.postage}} </view>
+        </view>
+    </b>
+    <a bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'onClose'} }}" disablePadding="{{true}}" show="{{showPopup}}" showClose="{{true}}" title="选择配送方式">
+        <c bind:_init="_tic" customClass="c08e04" value="{{postage.currentExpressType}}">
+            <b bind:_init="_tic" bind:tap="_p" border="{{false}}" center="{{true}}" clickable="{{item.available}}" customClass="c0cb82" data-t="{{ tap:{ en:'onSelectExpressWay',args:[index,item] } }}" label="{{item.postageWarnDesc}}" valueClass="c7571c" wx:for="{{formattedPostageItems}}" wx:key="expressType">
+                <view slot="title">{{item.cellTitle}}</view>
+                <d bind:_init="_tic" checkedColor="var(--main-bg, #323233)" customClass="a1fcd" disabled="{{!item.available}}" iconSize="18px" name="{{item.expressType}}" slot="right-icon" value="{{selected.expressType}}"></d>
+            </b>
+        </c>
+    </a>
+</view>

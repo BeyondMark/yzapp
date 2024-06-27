@@ -1,0 +1,6 @@
+<view class="c15a5d" style="{{themeVars}}" wx:if="{{showShopNote}}">
+    <a bind:_init="_tic" border="{{false}}" customClass="c8bb95">
+        <view class="c3f363" slot="title"> {{shopNoteBlockTitle}} </view>
+    </a>
+    <b bind:_init="_tic" goodsId="{{goodsId}}" noteList="{{noteList}}"></b>
+</view>

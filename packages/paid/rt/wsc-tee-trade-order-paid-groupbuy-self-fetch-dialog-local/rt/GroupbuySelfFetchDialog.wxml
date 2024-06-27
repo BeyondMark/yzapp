@@ -1,0 +1,52 @@
+<view>
+    <a bind:_init="_tic" bind:click-overlay="_p" bind:close="_p" closeOnClickOverlay="{{true}}" customClass="c9830a" customStyle="border-radius: 20px 20px 0 0; text-align: center;" data-t="{{ close:{en:'close'},clickOverlay:{en:'close'} }}" position="bottom" show="{{visible}}">
+        <view class="ba68c"> 提货码 </view>
+        <block wx:if="{{hasError}}">
+            <view class="d19a4">
+                <view class="c2efee">提货地址：-</view>
+                <view class="c2efee">团长名称：-</view>
+                <view class="c2efee">提货序号：-</view>
+            </view>
+            <view class="c238c8">
+                <view class="c8168f">          提货码获取失败
+        </view>
+            </view>
+            <view class="c3c411">
+                <b bind:_init="_tic" bind:tap="_p" customClass="ecced" data-t="{{ tap:{en:'queryOrder'} }}">          点击重试
+        </b>
+                <b bind:_init="_tic" bind:tap="_p" customClass="c5b856" data-t="{{ tap:{en:'close'} }}">          我知道了
+        </b>
+            </view>
+        </block>
+        <block wx:elif="{{loading}}">
+            <view class="a1c70"></view>
+            <view class="c4ab5f">
+                <view class="c676f5">          提货码生成中
+        </view>
+            </view>
+            <view class="c3c411">
+                <b bind:_init="_tic" customClass="ecced">          保存到相册
+        </b>
+                <b bind:_init="_tic" bind:tap="_p" customClass="c5b856" data-t="{{ tap:{en:'close'} }}">          我知道了
+        </b>
+            </view>
+        </block>
+        <block wx:else>
+            <view class="d19a4">
+                <view class="c2efee">提货地址：{{headerFetchAddress}}</view>
+                <view class="c2efee">团长名称：{{headerName}}</view>
+                <view class="c2efee">          提货序号：
+          <view class="c6b14c">{{payNo}}</view>
+                </view>
+            </view>
+            <image class="c58a1d bd231" lazyLoad="true" src="{{qrCode}}"></image>
+            <view class="e91c9"> {{qrNum}} </view>
+            <view class="c3c411">
+                <b bind:_init="_tic" bind:tap="_p" customClass="ecced" data-t="{{ tap:{en:'saveToLocal'} }}" style="margin-bottom: 5px">          保存到相册
+        </b>
+                <b bind:_init="_tic" bind:tap="_p" customClass="c5b856" data-t="{{ tap:{en:'close'} }}">          我知道了
+        </b>
+            </view>
+        </block>
+    </a>
+</view>

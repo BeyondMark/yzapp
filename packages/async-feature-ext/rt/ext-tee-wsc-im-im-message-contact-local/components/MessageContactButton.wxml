@@ -1,0 +1,14 @@
+<view class="button-wrapper">
+    <button bind:tap="_p" class="{{contactClass}} {{opacityFull?'opacity-full':''}}" data-t="{{ tap:{en:'onWXKFTap'} }}" hoverClass="{{hoverClass}}" style="{{contactStyle}}" wx:if="{{mode===WX_KF}}">
+        <slot></slot>
+    </button>
+    <button appParamter="{{appParamter}}" bind:contact="_p" bind:error="_p" bind:getphonenumber="_p" bind:lauchapp="_p" bind:opensetting="_p" bind:tap="_p" businessId="{{businessId}}" class="{{contactClass}} {{opacityFull?'opacity-full':''}}" data-t="{{ contact:{en:'onContact'},getphonenumber:{en:'onGetphonenumber'},error:{en:'onError'},opensetting:{en:'onOpensetting'},lauchapp:{en:'onLauchapp'},tap:{en:'onWXIMTap'} }}" disabled="{{disabled||!sessionFrom}}" formType="{{formType}}" hoverClass="{{hoverClass}}" hoverStartTime="{{hoverStartTime}}" hoverStayTime="{{hoverStayTime}}" hoverStopPropagation="{{hoverStopPropagation}}" lang="{{lang}}" loading="{{loading}}" openType="{{openType}}" plain="{{plain}}" sendMessageImg="{{sendMessageImg}}" sendMessagePath="{{sendMessagePath}}" sendMessageTitle="{{sendMessageTitle}}" sessionFrom="{{sessionFrom}}" showMessageCard="{{showMessageCard}}" size="{{size}}" style="{{contactStyle}}" type="{{type}}" wx:if="{{mode===WX_IM}}">
+        <slot></slot>
+    </button>
+    <button bind:tap="_p" class="{{contactClass}} {{opacityFull?'opacity-full':''}}" data-t="{{ tap:{en:'onYZIMTap'} }}" hoverClass="{{hoverClass}}" style="{{contactStyle}}" wx:if="{{mode===YZ_IM}}">
+        <slot></slot>
+    </button>
+    <button class="{{contactClass}} {{opacityFull?'opacity-full':''}}" disabled="{{disabled}}" formType="{{formType}}" hoverClass="{{hoverClass}}" hoverStartTime="{{hoverStartTime}}" hoverStayTime="{{hoverStayTime}}" hoverStopPropagation="{{hoverStopPropagation}}" loading="{{loading}}" plain="{{plain}}" size="{{size}}" style="{{contactStyle}}" type="{{type}}" wx:elif="{{mode===NO_IM}}">
+        <slot></slot>
+    </button>
+</view>

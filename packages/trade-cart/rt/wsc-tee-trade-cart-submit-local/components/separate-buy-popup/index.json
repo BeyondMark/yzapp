@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../Price",
+    "b": "/@y-open/vt/dist/popup/index.weapp",
+    "c": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "d": "/@y-open/vt/dist/button/index.weapp",
+    "_": "../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "c": "_" }
+}

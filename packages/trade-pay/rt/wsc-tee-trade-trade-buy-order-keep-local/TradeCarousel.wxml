@@ -1,0 +1,9 @@
+<view class="c457a1" style="top: {{customTop}}px" wx:if="{{show}}">
+    <view class="c09d6" wx:if="{{tradeRecords.length>0}}">
+        <view class="{{'c345a0'}} {{tradeRecord.showEnter?'c643f':''}} {{tradeRecord.showLeave?'e5b73':''}}" wx:if="{{tradeRecord.showEnter||tradeRecord.showLeave}}" wx:for="{{tradeRecords}}" wx:for-item="tradeRecord" wx:key="payTime">
+            <image class="c387df bd231" lazyLoad="true" src="{{tradeRecord.avatar}}"></image>
+            <view class="c8e229 c89585">{{tradeRecord.content}}</view>
+        </view>
+    </view>
+    <view style="font-size: 16px" wx:if="{{tradeRecords.length===0&&navBarText}}">{{navBarText}}</view>
+</view>

@@ -1,0 +1,14 @@
+<view class="{{classes.search}}" style="background:{{background}}">
+    <view class="{{classes.content}}">
+        <view class="c74bb3" wx:if="{{label}}">{{label}}</view>
+        <slot name="label" wx:else></slot>
+        <a bind:_init="_tic" bind:blur="_p" bind:change="_p" bind:clear="_p" bind:click-input="_p" bind:confirm="_p" bind:focus="_p" border="{{false}}" class="c5c3b field-class" clearTrigger="{{clearTrigger}}" clearable="{{clearable}}" confirmType="search" customStyle="padding: 5px 10px 5px 0; background-color: transparent;" data-t="{{ blur:{en:'onBlur'},focus:{en:'onFocus'},change:{en:'onChange'},clear:{en:'onClear'},confirm:{en:'onSearch'},clickInput:{en:'onClickInput'} }}" disabled="{{disabled}}" error="{{error}}" focus="{{focus}}" inputAlign="{{inputAlign}}" inputClass="input-class" leftIcon="{{useLeftIcon}}" maxlength="{{maxlength}}" placeholder="{{placeholder}}" placeholderStyle="{{placeholderStyle}}" readonly="{{readonly}}" rightIcon="{{useRightIcon}}" titleWidth="{{titleWidth}}" type="search" value="{{value}}">
+            <slot name="left-icon" slot="left-icon" wx:if="{{useLeftIconSlot}}"></slot>
+            <slot name="right-icon" slot="right-icon" wx:if="{{useRightIconSlot}}"></slot>
+        </a>
+    </view>
+    <view class="c27ff9" hoverClass="c5d003" hoverStayTime="70" wx:if="{{showAction||useActionSlot}}">
+        <slot name="action" wx:if="{{useActionSlot}}"></slot>
+        <view bind:tap="_p" class="cancel-class" data-t="{{ tap:{en:'onCancel'} }}" wx:else>{{actionText}}</view>
+    </view>
+</view>

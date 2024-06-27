@@ -1,0 +1,13 @@
+.account-captcha {
+  width: 100vw;
+  padding: 0 16px 16px;
+  box-sizing: border-box;
+}
+.account-captcha__title {
+  padding: 28px 0 16px;
+  line-height: 28px;
+  font-size: 20px;
+  color: #323233;
+  text-align: left;
+  font-weight: 500;
+}

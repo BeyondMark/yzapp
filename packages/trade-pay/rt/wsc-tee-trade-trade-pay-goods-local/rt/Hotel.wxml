@@ -1,0 +1,24 @@
+<view class="hotel t-hairline--bottom a100f">
+    <b bind:_init="_tic" goodsMsg="{{hotel.newHotelExtensions}}" wx:if="{{hotel.newHotelExtensions}}"></b>
+    <a bind:_init="_tic" class="c3ecd8" label="{{desc}}" title="{{firstGoods.title}}" wx:else></a>
+    <a bind:_init="_tic" border="{{false}}" class="d861e" wx:if="{{!isPreSale}}">
+        <view slot="title">
+            <p bind:_init="_tic" class="hotel__value">
+                <view class="c149c7 c89585">入住日期</view>{{startDate}}</p>
+            <p bind:_init="_tic" class="hotel__value">
+                <view class="c149c7 c89585">离店日期</view>{{endDate}}，共{{formattedGoods.length}}晚
+      </p>
+        </view>
+    </a>
+    <view class="c94452" wx:if="{{hotel.newHotelExtensions&&!hotel.newHotelExtensions.cancelRule}}">
+        <view class="d7d5b c89585">取消说明</view>
+        <view class="c89585">该订单支付后不支持取消</view>
+    </view>
+    <a bind:_init="_tic" label="{{isPreSale?'套餐数':'房间数'}}" readonly="{{true}}" titleWidth="75px" value="{{hotel.roomNumber+''}}" valueClass="a100f"></a>
+    <block wx:if="{{!isPreSale}}">
+        <block wx:if="{{hotel.recipients.length}}">
+            <a bind:_init="_tic" label="{{'入住人'+key===1?'':key}}" readonly="{{true}}" titleWidth="75px" value="{{hotel.recipients[index]}}" valueClass="a100f" wx:for="{{hotel.roomNumber}}" wx:for-item="key" wx:key="key"></a>
+        </block>
+        <a bind:_init="_tic" label="手机号码" readonly="{{true}}" titleWidth="75px" value="{{hotel.phone}}" valueClass="a100f" wx:if="{{hotel.phone}}"></a>
+    </block>
+</view>

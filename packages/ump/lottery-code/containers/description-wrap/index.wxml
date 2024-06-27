@@ -1,0 +1,4 @@
+<view class="description">
+    <a title="奖品说明"></a>
+    <view class="content">{{prizeDesc}}</view>
+</view>

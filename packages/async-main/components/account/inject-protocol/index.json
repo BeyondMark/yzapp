@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../protocol/index",
+    "_": "../../../../../components/_/index"
+  }
+}

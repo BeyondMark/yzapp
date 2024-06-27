@@ -1,0 +1,55 @@
+.dialog-button {
+  display: flex;
+  margin: 24px 0;
+}
+.dialog-button .benefit-btn {
+  width: 298px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 auto;
+  font-size: 16px;
+  background: linear-gradient(90deg, #e2bb7c, #e8c388);
+  color: #724804;
+  font-weight: 700;
+  border-radius: 999px;
+  text-align: center;
+}
+.info-dialog {
+  background-color: transparent;
+  width: 298px;
+}
+.info-dialog .content {
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 32px 0 48px;
+  border-radius: 16px;
+}
+.info-dialog .content .img {
+  height: 163px;
+  width: 212px;
+  background-size: 100%;
+}
+.info-dialog .content .prompt-title {
+  color: #323233;
+  margin: 23px 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.info-dialog .content .prompt-title .experience-num {
+  color: #ed6a0c;
+  padding: 0 4px;
+}
+.info-dialog .content .prompt-label {
+  font-size: 14px;
+  color: #7d7e80;
+  line-height: 14px;
+}
+.info-dialog .operator-bar {
+  margin-top: 24px;
+  text-align: center;
+  color: #969799;
+  font-size: 32px;
+}

@@ -1,0 +1,5 @@
+<a baseConfig="{{info.baseConfig}}" bind:_init="_tic" bind:close="_p" bind:custom="_p" bind:opened="_p" bind:preview="_p" bind:selected="_p" bind:submit="_p" customStyle="{{info.customStyle}}" data-t="{{ close:{ en:'onEvent',args:['close'] },preview:{ en:'onEvent',args:['preview'] },submit:{ en:'onEvent',args:['submit'] },selected:{ en:'onEvent',args:['selected'] },opened:{ en:'onEvent',args:['opened'] },custom:{ en:'onEvent',args:['custom'] } }}" event="{{info.event}}" extraData="{{extraData}}" goods="{{info.goods}}" initialSku="{{info.initialSku}}" kdtId="{{info.kdtId}}" messageConfig="{{info.messageConfig}}" pointsConfig="{{info.pointsConfig}}" show="{{show}}" sku="{{info.sku}}" skuConfig="{{info.skuConfig}}" themeTag="{{info.themeTag}}">
+    <view slot="sku-group-main">
+        <b bind:_init="_tic" bind:change="_p" data-t="{{ change:{en:'onChangeGoodsAttributes'} }}" opt="{{info.goodsAttributes}}" wx:if="{{info.goodsAttributes&&info.goodsAttributes.show}}"></b>
+    </view>
+</a>

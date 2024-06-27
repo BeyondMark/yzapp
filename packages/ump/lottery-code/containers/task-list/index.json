@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../components/title-bar/index",
+    "b": "../../components/task-item/index",
+    "c": "../../components/to-follow/index",
+    "d": "../../components/to-feature/index",
+    "e": "../../components/to-buy/index",
+    "_": "../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,3 @@
+<view>
+    <a amount="{{giftPackSelected.amount}}" bind:_init="_tic" bind:close="_p" bind:recharge="_p" bind:select="_p" data-t="{{ close:{en:'handleClose'},recharge:{en:'onRecharge'},select:{en:'onSelectGiftPack'} }}" generalThemeColor="{{generalThemeColor}}" giftPacks="{{giftPackSelectedGiftPacks}}" kdtId="{{kdtId}}" rechargeAndPay="{{newRecommend}}" selectedIndex="{{giftSelectedGiftPackIndex}}" show="{{showGiftPack}}" wx:if="{{giftPackSelected}}"></a>
+</view>

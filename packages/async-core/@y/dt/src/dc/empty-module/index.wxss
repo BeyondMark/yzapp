@@ -1,0 +1,39 @@
+.t-text {
+  text-decoration: inherit;
+}
+.t-text,
+.tee-image {
+  display: inline-block;
+}
+.tee-image {
+  width: 100%;
+  height: 100%;
+}
+.dc-empty-module {
+  padding: 40px 0 140px;
+  background-color: #f8f8f8;
+}
+.dc-empty-module .content {
+  position: relative;
+  text-align: center;
+}
+.dc-empty-module .image {
+  margin: 15px 0;
+  text-align: center;
+  height: 197px;
+  width: 160px;
+}
+.dc-empty-module .button {
+  text-align: center;
+}
+.dc-empty-module .button .navigator-btn {
+  display: inline-block;
+  height: 32px;
+  line-height: 32px;
+  margin-top: 8px;
+  padding: 2px 11px;
+  color: #ee0a24;
+  border: 1px solid #ee0a24;
+  border-radius: 32px;
+  font-size: 14px;
+}

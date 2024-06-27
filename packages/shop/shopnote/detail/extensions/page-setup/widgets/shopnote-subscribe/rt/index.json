@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "a": "/packages/async-main/@vant/weapp/dist/dialog/index",
+    "b": "/packages/async-main/common/components/form-view/index",
+    "_": "../../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_", "b": "_" }
+}

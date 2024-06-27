@@ -1,0 +1,40 @@
+.navigation-bar {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  height: 64px;
+  line-height: 64px;
+  text-align: center;
+  color: #fff;
+  font-size: 17px;
+  background-image: linear-gradient(-45deg, #fb1d60, #ff5644);
+  background-size: 100% 336px;
+  z-index: 999;
+}
+.home-icon {
+  position: absolute;
+  left: 15px;
+  bottom: 6px;
+  width: 30px;
+  height: 30px;
+}
+.home-icon image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.back-text {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  line-height: 24px;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+}
+.back-text__content {
+  margin-left: 5px;
+}
+.nav-title {
+  display: inline-block;
+}

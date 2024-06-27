@@ -1,0 +1,3 @@
+<view>
+    <a bind:_init="_tic" rewardModel="{{rewardModel}}"></a>
+</view>

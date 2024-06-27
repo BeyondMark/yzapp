@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-tee/@y-open/vt/native/weapp/loading/index/index",
+    "_": "../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

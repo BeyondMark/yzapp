@@ -1,0 +1,16 @@
+<view hidden="{{!(showWxSubscribe&&showSubscribeMsg)}}" style="{{themeCSS}}">
+    <view wx:if="{{showTips}}">
+        <a bind:_init="_tic" mask="{{true}}" show="{{showTips}}" zIndex="1"></a>
+        <view bind:tap="_p" class="c8238a" data-t="{{ tap:{en:'closeTips'} }}">
+            <image class="c3c4ae bd231" lazyLoad="true" src="https://img01.yzcdn.cn/upload_files/2020/03/25/Fq24gCcTJhE3bpk9giOf7LPqC-7H.gif"></image>
+        </view>
+    </view>
+    <view bind:tap="_p" class="c9138" data-t="{{ tap:{en:'clickSubscription'} }}" style="{{'background-color: '+bgColor+';'}}">
+        <image class="b8ee5 bd231" lazyLoad="true" src="https://b.yzcdn.cn/pay-result/images/weixin2.png"></image>
+        <view class="c88dd8">
+            <view class="fad58">订阅微信通知</view>
+            <view class="c0ecee">及时获取订单进度提醒</view>
+        </view>
+        <view class="c2dcab" style="{{btnStyle}}"> {{hasSubscribe?'已订阅':'立即订阅'}} </view>
+    </view>
+</view>

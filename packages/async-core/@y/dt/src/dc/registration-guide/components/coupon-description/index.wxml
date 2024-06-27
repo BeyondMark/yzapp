@@ -1,0 +1,3 @@
+<view class="description">
+    <view class="decription-content" style="{{valueStyle}}"> {{description}} </view>
+</view>

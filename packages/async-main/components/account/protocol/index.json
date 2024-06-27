@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../@y/ppp/lib/view/wx/protocol/index",
+    "b": "./ecloud-custom/index",
+    "_": "../../../../../components/_/index"
+  }
+}

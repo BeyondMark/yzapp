@@ -1,0 +1,10 @@
+<view class="address-list">
+    <view class="address-list__title">{{addressTitle}}</view>
+    <view class="address-list__list" wx:if="{{addressList&&addressList.length>0}}">
+        <view>
+            <a bind:_init="_tic" bind:clickItem="_p" data-t="{{ clickItem:{ en:'onItemClick',args:[item] } }}" item="{{item}}" wx:for="{{addressList}}" wx:key="id || index"></a>
+        </view>
+    </view>
+    <view class="address-list__blank" wx:elif="{{addressList&&addressList.length===0}}">    没有找到你要的地址，请尝试只输入小区、写字楼或学校名称试试
+  </view>
+</view>

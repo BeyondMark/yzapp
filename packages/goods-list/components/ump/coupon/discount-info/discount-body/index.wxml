@@ -1,0 +1,5 @@
+<view class="c8e207 {{disabledClass}} {{unavailableClass}}">
+    <view class="c79092">{{prefix}}</view>
+    <view class="c002b8" style="{{valueStyle}} {{themeMainStyle}}">{{money.value}}</view>
+    <view class="b7cd5" style="{{themeMainStyle}}">{{money.unit}}</view>
+</view>

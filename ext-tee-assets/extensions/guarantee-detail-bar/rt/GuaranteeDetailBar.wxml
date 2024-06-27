@@ -1,0 +1,22 @@
+<view class="guarantee-bar" style="{{themeVars}}" wx:if="{{guarantee.on&&abDisplay}}">
+    <b bind:_init="_tic" bind:tap="_p" border="{{false}}" center="{{true}}" customClass="{{guarantee.hideYzGuarantee?'guarantee-bar--0':'guarantee-bar--'+guarantee.style}}" data-t="{{ tap:{en:'showGuaranteeIntro'} }}" isLink="{{true}}" rightIconClass="{{'right-icon'}}">
+        <view class="guarantee-bar__black" wx:if="{{guarantee.hideYzGuarantee}}">
+            <view class="guarantee-bar__black-text t-text">保障</view>
+            <view class="guarantee-bar__desc" wx:if="{{guaranteeDesc.length}}">
+                <view class="guarantee-bar__desc-item" wx:for="{{guaranteeDesc}}" wx:key="index"> {{item}} </view>
+            </view>
+        </view>
+        <block wx:else>
+            <view class="guarantee-bar__info">
+                <image class="guarantee-bar__logo {{logoClass}} tee-image" lazyLoad="true" src="{{logo}}"></image>
+                <view class="guarantee-bar__desc guarantee-bar__desc-real" wx:if="{{realGuaranteeDesc.length}}">
+                    <view class="guarantee-bar__desc-item guarantee-bar__desc-item-real" wx:for="{{realGuaranteeDesc}}" wx:key="`realGuaranteeDesc-${index}`"> {{item}} </view>
+                </view>
+            </view>
+            <view class="guarantee-bar__desc" wx:if="{{guaranteeDesc.length}}">
+                <view class="guarantee-bar__desc-item" wx:for="{{guaranteeDesc}}" wx:key="index"> {{item}} </view>
+            </view>
+        </block>
+    </b>
+    <a alias="{{goodsBaseInfo.alias}}" bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'closePopup'} }}" featureKeys="{{featureKeys}}" kdtId="{{shopBaseInfo.kdtId}}" orderCreateTime="{{shopConfig.orderCreateTime}}" pageSource="{{shopConfig.pageSource}}" tpKey="{{tpKey}}" tpVersion="{{tpVersion}}" type="detail" uuid="{{uuid}}" value="{{showPopup}}" wx:if="{{rmId==='b7-3'}}"></a>
+</view>

@@ -1,0 +1,16 @@
+<view class="arrival-time" wx:if="{{show}}">
+    <a bind:_init="_tic" bind:tap="_p" border="{{false}}" customClass="arrival-time__block" data-t="{{ tap:{en:'onCellClick'} }}" isLink="{{true}}" title="配送" titleClass="arrival-time__title">
+        <view class="arrival-time__value">
+            <view class="arrival-time__address">
+                <view class="content">至</view>
+                <view class="{{addressClass}}" data-ref="addressRef">{{showDefaultAddressTips?addressDesc:formattedAddress}}</view>
+            </view>
+            <view class="arrival-time__time" wx:if="{{showTime}}">
+                <c bind:_init="_tic" class="tag" containerStyle="border-radius: 2px;" themeTag="{{themeTag}}" wx:if="{{tagName}}"> {{tagName}} </c>
+                <view class="{{'time'}} {{showDefaultTimeTips&&'time-tips'}}"> {{timeDesc}} <b bind:_init="_tic" catch:tap="_p" color="#969799" customClass="arrival-time__tips-icon" data-t="{{ tap:{en:'onTipsClick',et:'stop'} }}" name="info-o" size="14" wx:if="{{showTips}}"></b>
+                </view>
+            </view>
+        </view>
+    </a>
+    <d bind:_init="_tic" bind:close="_p" bind:select="_p" data-t="{{ select:{en:'onPopupSelect'},close:{en:'onPopupClose'} }}" selectedItem="{{region}}" show="{{showPopup}}" themeTag="{{themeTag}}"></d>
+</view>

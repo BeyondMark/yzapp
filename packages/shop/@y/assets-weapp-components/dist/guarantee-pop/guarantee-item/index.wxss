@@ -1,0 +1,34 @@
+@import "/packages/shop/@y/assets-weapp-components/dist/common/index.wxss";
+.guarantee-item {
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+.guarantee-item__icon {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+}
+.guarantee-item__right {
+  flex: 1;
+  text-align: left;
+}
+.guarantee-item__title {
+  color: #4a4a4c;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+}
+.guarantee-item__title-icon {
+  float: right;
+  color: #c8c9cc;
+}
+.guarantee-item__detail {
+  display: block;
+  margin-top: 8px;
+  color: #969799;
+  font-size: 14px;
+  line-height: 1.33;
+}

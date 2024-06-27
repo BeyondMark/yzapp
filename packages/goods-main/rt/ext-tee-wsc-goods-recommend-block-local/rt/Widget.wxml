@@ -1,0 +1,12 @@
+<view class="{{hasRecommendGoods?'e2b84':''}}" id="js-nav-recommend" style="{{themeVars}}" wx:if="{{showRecommend}}">
+    <block wx:if="{{!showGroupon}}">
+        <view wx:if="{{hasRecommendGoods}}">
+            <a bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b7-14'}}"></a>
+        </view>
+        <b bind:_init="_tic" rmId="b7-31" totalPageNum="{{3}}" useLoadMore="{{true}}" wx:if="{{rmId==='b7-14'}}"></b>
+        <view class="c760d1" wx:if="{{!appConfig.hideStroll&&hasRecommendGoods}}">
+            <c bind:_init="_tic" bind:tap="_p" block="{{true}}" data-t="{{ tap:{en:'goToPage'} }}" size="normal"> {{more.text}} </c>
+        </view>
+    </block>
+    <d bind:_init="_tic" currentActivity="{{currentActivity}}" goodsBaseInfo="{{goodsBaseInfo}}" kdtId="{{shopBaseInfo.kdtId}}" wx:else></d>
+</view>

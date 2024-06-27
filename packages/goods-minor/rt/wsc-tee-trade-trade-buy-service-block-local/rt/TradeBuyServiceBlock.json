@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../widgets/buyer-msg/rt/index",
+    "b": "./../widgets/invoice-cell/rt/index",
+    "_": "../../../../../components/_/index"
+  }
+}

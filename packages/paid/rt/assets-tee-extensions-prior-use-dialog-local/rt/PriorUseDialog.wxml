@@ -1,0 +1,28 @@
+<a bind:_init="_tic" bind:click-overlay="_p" class="prior-use-pop" data-t="{{ clickOverlay:{en:'onClose'} }}" show="{{visible}}">
+    <view class="c7ee4a">
+        <view bind:tap="_p" class="c7251d" data-t="{{ tap:{en:'onClose'} }}"></view>
+        <view class="af13d">
+            <view class="a7bc9">
+                <view class="c6d993">
+                    <view class="c11a21"></view>
+                    <view class="c7c35e">恭喜你获得“先用后付”权益</view>
+                    <view class="c05f8">领取后可享以下权益内容：</view>
+                    <view class="c32af8">
+                        <view class="equities">
+                            <image class="c9f0ee bd231" lazyLoad="true" src="https://b.yzcdn.cn/public_files/bf317b248f2153a405354edf39f69030.png"></image>
+                            <view class="d5d3d">
+                                <view class="c2ac43">0</view>元下单</view>
+                        </view>
+                        <view class="equities">
+                            <image class="c9f0ee bd231" lazyLoad="true" src="https://b.yzcdn.cn/public_files/fd1af776b680875cfb2d2ffb4df06f14.png"></image>
+                            <view class="d5d3d">收货后付款</view>
+                        </view>
+                    </view>
+                    <van-button bind:_init="_tic" bind:tap="_p" class="b5eda" data-t="{{ tap:{en:'getClick'} }}" loading="{{true}}" round="{{true}}">            立即领取
+          </van-button>
+                </view>
+            </view>
+        </view>
+    </view>
+    <b bind:_init="_tic" data-ref="priorUseDialog"></b>
+</a>

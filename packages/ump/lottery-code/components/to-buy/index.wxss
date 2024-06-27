@@ -1,0 +1,47 @@
+.buy-tips {
+  margin: 4px 16px 12px;
+  font-size: 13px;
+  line-height: 18px;
+}
+.buy-tips .strong {
+  color: #ff2638;
+  font-weight: 400;
+}
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 12px;
+  width: 100vw;
+  height: 50px;
+  box-shadow: 0 0 10px rgba(125, 126, 128, 0.16);
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.bottom-bar__btn {
+  width: 96px;
+  height: 36px;
+  line-height: 36px;
+  background-image: linear-gradient(270deg, #ff6034, #ee0a24);
+  border-radius: 18px;
+  font-size: 14px;
+  font-family: PingFangSC-Medium;
+  color: #fff;
+  text-align: center;
+}
+.selector-num {
+  font-size: 14px;
+}
+.goods-list {
+  padding: 0 24px 50px;
+  height: 55vh;
+  overflow-y: scroll;
+}
+.is-iphonex .bottom-bar {
+  padding-bottom: 34px;
+}

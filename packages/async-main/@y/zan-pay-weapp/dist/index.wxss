@@ -1,0 +1,80 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  line-height: 22px;
+}
+.header-icon {
+  position: absolute !important;
+  z-index: 1;
+  color: #c8c9cc;
+  font-size: 22px;
+  cursor: pointer;
+  top: 16px;
+}
+.header-icon--left {
+  left: 16px;
+}
+.header-icon--right {
+  right: 16px;
+}
+.header-title {
+  font-weight: 500;
+}
+.show-more {
+  text-align: center;
+  height: 50px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 18px;
+  color: #323233;
+  position: relative;
+}
+.show-more:before {
+  content: " ";
+  position: absolute;
+  left: -50%;
+  right: -50%;
+  top: 0;
+  border-top: 1px solid #dcdee0;
+  transform: scale(0.5);
+}
+.container {
+  font-size: 16px;
+  line-height: 20px;
+  color: #323233;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.b {
+  background: #fff;
+  height: 80vh;
+}
+.all,
+.home {
+  position: absolute;
+  bottom: 0;
+  transition: all 0.3s ease-in-out;
+}
+.home {
+  left: -100%;
+  right: 100%;
+}
+.home--show {
+  left: 0;
+  right: 0;
+}
+.all {
+  left: 100%;
+  right: -100%;
+}
+.show {
+  left: 0;
+  right: 0;
+  overflow-y: scroll;
+}

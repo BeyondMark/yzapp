@@ -1,0 +1,5 @@
+<view class="ba7db">
+    <view bind:tap="_p" class="d8fe5" data-index="{{index}}" data-t="{{ tap:{en:'showDetail'} }}" wx:for="{{formatedImages}}" wx:for-item="image" wx:key="index">
+        <image class="c12c8c bd231" lazyLoad="true" mode="aspectFill" src="{{image}}"></image>
+    </view>
+</view>

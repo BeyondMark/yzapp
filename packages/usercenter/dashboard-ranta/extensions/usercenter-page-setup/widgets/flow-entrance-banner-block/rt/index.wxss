@@ -1,0 +1,4 @@
+.uc-flow-entrance-banner {
+  border-radius: var(--theme-radius-card, 0) !important;
+  padding: 0 8px 8px !important;
+}

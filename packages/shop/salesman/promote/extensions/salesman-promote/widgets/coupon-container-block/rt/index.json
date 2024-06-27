@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../goods-coupon-block/rt/index",
+    "b": "../../optimal-goods-coupon-block/rt/index",
+    "_": "../../../../../../../../../components/_/index"
+  }
+}

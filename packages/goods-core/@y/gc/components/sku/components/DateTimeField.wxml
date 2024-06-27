@@ -1,0 +1,5 @@
+<view>
+    <view bind:tap="_p" data-t="{{ tap:{en:'onClick'} }}">
+        <a bind:_init="_tic" center="{{true}}" enableNative="{{false}}" inputClass="e9f3a" isLink="{{true}}" label="{{message.name}}" placeholder="{{message.placeholder}}" readonly="{{true}}" required="{{message.required===1}}" type="{{message.type}}" value="{{value}}"></a>
+    </view>
+</view>

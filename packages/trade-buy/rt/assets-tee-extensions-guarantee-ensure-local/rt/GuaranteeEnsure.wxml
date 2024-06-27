@@ -1,0 +1,7 @@
+<view class="guarantee-footer" style="margin-top:{{mt}}" wx:if="{{yzGuarantee}}">
+    <image class="{{true?'guarantee-footer__icon':''}} {{logoAddYouzan?'youzan':''}} tee-image" lazyLoad="true" mode="aspectFit" src="{{logo}}" wx:if="{{!hideYzGuarantee}}"></image>
+    <view class="guarantee-footer__services">
+        <view class="guarantee-footer__service-item" wx:for="{{itemList}}" wx:key="key">
+            <image class="icon tee-image" lazyLoad="true" src="{{guaranteeIcons[item.key]}}"></image> {{item.desc}} </view>
+    </view>
+</view>

@@ -1,0 +1,24 @@
+<view class="index__block" wx:if="{{hasPrescriptionDrugGood&&showDrug}}">
+    <view bind:tap="_p" class="c5fab8" data-t="{{ tap:{en:'gotoDrugMsg'} }}" wx:if="{{!hasRxNo}}">
+        <view class="c9d2db">
+            <view class="c0cb32 c89585">填写用药人</view>
+            <view class="c8f2d5">
+                <view class="c20975 c89585" style="color:{{themeColors.general}}">去填写</view>
+                <c bind:_init="_tic" class="c5fab8__arrow" color="#969799" name="arrow" size="16px"></c>
+            </view>
+        </view>
+        <view class="c277ef">据国家规定，处方药需填写用药信息。</view>
+    </view>
+    <view bind:tap="_p" class="c5fab8" data-t="{{ tap:{en:'gotoDrugMsg'} }}" wx:if="{{hasRxNo}}">
+        <view class="c9d2db">
+            <view class="c586ef">
+                <view class="c0cb32 c89585">{{info.title}}</view>
+                <a bind:_init="_tic" class="c9e973 theme-background-alpha-10" round="{{true}}" style="{{general}}" type="primary">          用药人
+        </a>
+            </view>
+            <c bind:_init="_tic" class="c5fab8__arrow" color="#969799" name="arrow" size="16px"></c>
+        </view>
+        <view class="c277ef"> {{checkMedical}} </view>
+    </view>
+    <b bind:_init="_tic" data-ref="van-dialog-drug"></b>
+</view>

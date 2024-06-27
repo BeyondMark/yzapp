@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/ext-tee-passport/extensions/user-authorize/widgets/rt/Main",
+    "_": "../../../../../components/_/index"
+  }
+}

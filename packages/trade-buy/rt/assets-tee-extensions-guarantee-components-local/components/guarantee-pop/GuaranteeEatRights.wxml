@@ -1,0 +1,30 @@
+<a bind:_init="_tic" bind:close="_p" closeIcon="arrow-left" closeIconPosition="top-left" closeable="{{true}}" data-t="{{ close:{en:'onClose'} }}" position="bottom" round="{{true}}" show="{{value}}" zIndex="{{zIndex}}">
+    <view class="guarantee-eat_rights" wx:if="{{value}}">
+        <view class="guarantee-eat_rights__container">
+            <view class="guarantee-eat_rights__title">{{content.title}}</view>
+            <view class="guarantee-eat_rights__content" wx:if="{{content.content}}">
+                <view class="guarantee-eat_rights__green">
+                    <view style="margin-bottom: 8px; font-size: 14px; font-weight: bold">
+                        <image class="icon tee-image" lazyLoad="true" src="{{logo}}"></image>
+                        <view class="t-text">{{content.title}}</view>
+                    </view>
+                    <view>{{content.content.shortDesc}}</view>
+                </view>
+                <view class="guarantee-eat_rights__support">
+                    <view class="support1">售后流程须知</view>
+                    <view class="support2">
+                        <view class="support-item" wx:for="{{content.content.support}}" wx:for-item="s" wx:key="index">
+                            <image class="icon tee-image" lazyLoad="true" src="{{s.icon}}"></image>
+                            <view class="name"> {{s.name}} </view>
+                            <view class="desc">{{s.desc}}</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="guarantee-eat_rights__desc">
+                    <view class="desc1">消费者提供凭证须知</view>
+                    <view class="desc2" wx:for="{{content.content.noticeList}}" wx:for-item="n" wx:key="index"> {{n}} </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</a>

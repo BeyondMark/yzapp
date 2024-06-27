@@ -1,0 +1,24 @@
+<view style="{{themeCss}}">
+    <view class="c37304">
+        <b bind:_init="_tic" bind:change="_p" checkedColor="{{themeGeneralColor}}" customClass="c10ae9" data-goods-id="{{item.goodsId}}" data-t="{{ change:{ en:'onChange',args:[item.goodsId] } }}" labelClass="c78cb1" name="{{item.goodsId}}" value="{{item.checked}}" wx:for="{{formatGoodsList}}" wx:key="index">
+            <view class="c74e55">
+                <view class="c44870">
+                    <image catch:tap="_p" class="b798a bd231" data-t="{{ tap:{ en:'goDetail',et:'stop',args:[item.alias] } }}" lazyLoad="true" mode="aspectFit" src="{{item.picture}}"></image>
+                </view>
+                <view class="caf9b">
+                    <view class="d5d3d"> {{item.title}} </view>
+                    <view class="c1779d" wx:if="{{item.desc}}">
+                        <view catch:tap="_p" class="c66de2 {{item.thinSkus.length>1?'c60574':''}}" data-t="{{ tap:{ en:'handleClickSku',et:'stop',args:[item] } }}">
+                            <view class="d5afa c89585">{{item.desc}}</view>
+                            <van-icon bind:_init="_tic" class="c63a4c" name="arrow-down" size="10px" wx:if="{{item.thinSkus.length>1}}"></van-icon>
+                        </view>
+                    </view>
+                    <view class="f65a3" style="{{priceStyle[index]}}">
+                        <a bind:_init="_tic" isPop="{{isPop}}" originPrice="{{item.originalPrice}}" price="{{item.exchangePrice}}" rmId="b4-13" themeCss="{{themeCss}}" wx:if="{{rmId==='b4-2'}}"></a>
+                    </view>
+                </view>
+            </view>
+        </b>
+    </view>
+    <c bind:_init="_tic" data-ref="van-toast"></c>
+</view>

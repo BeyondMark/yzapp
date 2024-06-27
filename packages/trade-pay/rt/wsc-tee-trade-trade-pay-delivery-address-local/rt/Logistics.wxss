@@ -1,0 +1,42 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.c9d070 {
+  background-color: #fff;
+  display: block;
+  overflow: hidden;
+  padding: 6px 0;
+}
+.c9d070 .c79c0c {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  height: 24px;
+  margin: 0 6px 0-1px;
+  font-size: 14px;
+}
+.c9d070 .c9a036 {
+  flex: 1;
+}
+.c9d070 .d5d3d {
+  display: flex;
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+  justify-content: space-between;
+}
+.c9d070 .d304b {
+  margin-top: 5px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #666;
+}
+.c9d070 .c55422 {
+  display: none;
+}
+.c9d070 .left-icon-add {
+  margin-right: 5px;
+  font-size: 40px;
+  color: #38f;
+}

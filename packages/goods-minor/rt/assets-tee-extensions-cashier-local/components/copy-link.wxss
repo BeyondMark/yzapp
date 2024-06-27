@@ -1,0 +1,79 @@
+.t-text {
+  text-decoration: inherit;
+}
+.t-text,
+.tee-image {
+  display: inline-block;
+}
+.tee-image {
+  width: 100%;
+  height: 100%;
+}
+.zan-pay-copy-link {
+  z-index: 120;
+}
+.zan-pay-copy-link__container {
+  padding: 25px 22px;
+}
+.zan-pay-copy-link__container--b {
+  height: 290px;
+  box-sizing: border-box;
+}
+.zan-pay-copy-link__header {
+  height: 24px;
+  line-height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+.zan-pay-copy-link__description {
+  height: 18px;
+  line-height: 18px;
+  margin: 30px 0;
+  display: flex;
+  font-weight: 500;
+  font-size: 14px;
+}
+.zan-pay-copy-link__steps-container {
+  position: relative;
+}
+.zan-pay-copy-link__steps-line {
+  position: absolute;
+  top: 24px;
+  left: 9.5px;
+  height: 45px;
+  width: 0;
+  border: 0.5px solid #dcdee0;
+}
+.zan-pay-copy-link__steps-step {
+  height: 42px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+.zan-pay-copy-link__steps-icon {
+  height: 20px;
+  width: 20px;
+}
+.zan-pay-copy-link__steps-description {
+  line-height: 20px;
+  display: flex;
+}
+.zan-pay-copy-link__steps-text {
+  margin-left: 10px;
+  line-height: 20px;
+  font-size: 14px;
+}
+.zan-pay-copy-link__steps-text--secondary {
+  font-size: 12px;
+  color: #969799;
+}
+.zan-pay-copy-link__steps-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 1px;
+}

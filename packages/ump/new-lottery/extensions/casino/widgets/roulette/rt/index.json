@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/ump/components/ump/guide-button/index",
+    "b": "/packages/async-main/@vant/weapp/dist/icon/index",
+    "c": "/packages/ump/@vant/weapp/dist/button/index",
+    "_": "../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_" }
+}

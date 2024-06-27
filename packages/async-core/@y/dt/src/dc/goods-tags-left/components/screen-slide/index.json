@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y/dt/src/dc/goods-tags-left/components/tags-nav/index",
+    "b": "./../tag-group/index",
+    "c": "./../empty-block/index",
+    "_": "../../../../../../../../../components/_/index"
+  }
+}

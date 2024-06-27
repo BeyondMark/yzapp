@@ -1,0 +1,17 @@
+.e2dec {
+  position: absolute;
+  z-index: 91;
+  top: 43px;
+  width: 100%;
+}
+.address-cell-fixed {
+  padding: 12px;
+}
+.address-cell-fixed-content__value {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #323233;
+  text-align: left;
+  font-weight: var(--theme-common-field-font-weight, normal);
+}

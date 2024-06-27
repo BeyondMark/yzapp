@@ -1,0 +1,38 @@
+<view class="ump-banner-wrapper" style="{{themeColorStyle}}">
+    <c announcement="{{shopAnnouncementText}}" bind:_init="_tic" bind:more="_p" data-t="{{ more:{en:'togglePop'} }}" umpList="{{frontTwoUmp}}">
+        <view slot="fix">
+            <c announcement="{{shopAnnouncementText}}" bind:_init="_tic" umpList="{{frontTwoUmp}}"></c>
+        </view>
+        <view class="more" slot="more" wx:if="{{!(showCoupon&&bannerVouchers.length>0)}}">
+            <view class="text t-text">更多</view>
+            <a bind:_init="_tic" color="#A0A1A3" customClass="icon" name="arrow-down"></a>
+        </view>
+    </c>
+    <view catch:tap="_p" class="coupons" data-t="{{ tap:{en:'togglePop',et:'stop'} }}" wx:if="{{showCoupon&&bannerVouchers.length>0}}">
+        <view class="coupons-list">
+            <view catch:tap="_p" class="item" data-t="{{ tap:{ en:'handleTakeCoupon',et:'stop',args:[voucher.id,'banner'] } }}" wx:for="{{bannerVouchers}}" wx:for-item="voucher" wx:key="id">
+                <view class="item-value">
+                    <view class="exchange-coupon" wx:if="{{voucher.type==='goods'}}">            商品兑换券
+          </view>
+                    <block wx:else>
+                        <view class="t-text" wx:if="{{voucher.type==='discount'}}"> {{voucher.value}} <view class="hint t-text">折</view>
+                        </view>
+                        <view class="bold-little-text" wx:elif="{{voucher.type==='meetGive'}}"> {{voucher.value}} </view>
+                        <view class="bold-little-text" wx:elif="{{voucher.type==='express'}}"> {{voucher.value}} </view>
+                        <view wx:else>
+                            <view class="yen t-text">¥</view>
+                            <view class="value t-text">{{voucher.value}}</view>
+                        </view>
+                        <view class="threshold t-text">{{voucher.value2}}</view>
+                    </block>
+                </view>
+                <view class="item-opt">领取</view>
+            </view>
+        </view>
+        <view class="more">
+            <view class="text t-text">更多</view>
+            <a bind:_init="_tic" color="#A0A1A3" customClass="icon" name="arrow-down"></a>
+        </view>
+    </view>
+    <b bind:_init="_tic" bind:close="_p" bind:goToActivityDetail="_p" bind:goToShopCertification="_p" bind:takeCoupon="_p" data-t="{{ close:{en:'onClose'},takeCoupon:{en:'handleTakeCoupon'},goToActivityDetail:{en:'handleGoToActivityDetail'},goToShopCertification:{en:'handleGoToShopCertification'} }}" groups="{{groups}}" isTabPage="{{isTabPage}}" lat="{{currentShop&&currentShop.lat}}" lon="{{currentShop&&currentShop.lon}}" shopAnnouncementText="{{shopAnnouncementText}}" shopInfo="{{shopNodeInfo}}" shopName="{{shopName}}" showDetailButton="{{showDetailButton}}" showPop="{{showPop}}" showShopCertification="{{showShopCertification}}" style="{{themeColorStyle}}" vouchers="{{vouchers}}"></b>
+</view>

@@ -1,0 +1,29 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./CurrentAddress",
+    "b": "/packages/goods-minor/rt/wsc-tee-trade-trade-buy-platform-address-local/rt/WechatAddress",
+    "c": "/@y-open/vt/dist/button/index.weapp",
+    "d": "/@y-open/vt/dist/popup/index.weapp",
+    "e": "/packages/async-tee/@y-open/vt/native/weapp/dialog/index/index",
+    "f": "/@y-open/vt/dist/cell/index",
+    "g": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "h": "/@y-open/vt/dist/cell-group/index",
+    "i": "/packages/async-tee/@y-open/vt/native/weapp/toast/index/index",
+    "j": "/packages/async-tee/@y-open/vt/native/weapp/field/index/index",
+    "k": "./../Labels",
+    "l": "./../NavigationBar",
+    "m": "./../MapPiece",
+    "n": "/packages/async-tee/@y-open/vt/dist/area/index",
+    "o": "../../../@y-open/vt/dist/switch/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": {
+    "b": "_",
+    "e": "_",
+    "g": "_",
+    "i": "_",
+    "j": "_",
+    "n": "_"
+  }
+}

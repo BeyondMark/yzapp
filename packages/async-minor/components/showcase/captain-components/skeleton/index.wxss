@@ -1,0 +1,9 @@
+.cap-skeleton--rect {
+  display: inline-block;
+}
+.cap-skeleton__text {
+  background-clip: content-box;
+}
+.cap-skeleton__text:nth-child(2) {
+  width: 94%;
+}

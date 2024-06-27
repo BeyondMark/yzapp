@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../../../@y/wsc-tee-trade-common/components/OrderActionSheet",
+    "_": "../../../../../../../components/_/index"
+  }
+}

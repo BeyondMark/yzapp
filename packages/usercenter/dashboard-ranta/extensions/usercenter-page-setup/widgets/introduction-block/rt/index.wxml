@@ -1,0 +1,13 @@
+<view bindtap="onJumpToActivity" class="introduction-card" wx:if="{{hasActivity&&showIntroduceCard&&isShowInviteEntry}}">
+    <b center="{{true}}" customClass="introduction-card__cell" labelClass="introduction-card__desc" title="赢机构大礼" titleClass="introduction-card__title" useLabelSlot="{{true}}">
+        <view class="introduction-card__label" slot="label">
+            <text>邀请好友上课</text>
+            <view class="introduction-card__share">去分享<a name="arrow" size="10px"></a>
+            </view>
+        </view>
+        <image class="introduction-card__icon" slot="right-icon" src="https://b.yzcdn.cn/public_files/6adbadf4f5f99c9d70549018a119c187.svg"></image>
+    </b>
+    <view bindtap="onIntroduceCardHide" class="introduction-card__close">
+        <a name="cross" size="10px"></a>
+    </view>
+</view>

@@ -1,0 +1,32 @@
+.t-text {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.message-contact {
+  position: relative;
+}
+.message-contact,
+.message-contact__btn_wrapper {
+  display: flex;
+  flex: 1;
+}
+.message-contact__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 43px;
+  font-size: 14px;
+  color: #323233;
+  background-color: #fff;
+}
+.message-contact__btn:after {
+  border: none;
+}
+.message-contact__btn__icon {
+  height: 14px;
+  margin-right: 4px;
+  font-size: 0;
+}
+.user-authorize-wrapper {
+  flex: 1;
+}

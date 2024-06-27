@@ -1,0 +1,10 @@
+.c2ebb4 {
+  position: relative;
+  margin-top: var(--theme-page-card-margin-top, 0);
+  margin-bottom: var(--theme-page-card-margin-bottom, 12px);
+  margin-right: var(--theme-page-card-margin-right, 12px);
+  margin-left: var(--theme-page-card-margin-left, 12px);
+  border-radius: var(--theme-page-card-border-radius, 8px);
+  overflow: hidden;
+  background: #fff;
+}

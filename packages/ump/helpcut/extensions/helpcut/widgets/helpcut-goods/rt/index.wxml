@@ -1,0 +1,10 @@
+<view class="activity-header">
+    <block wx:if="{{activityStatus!==15}}">
+        <b rmId="{{rmId}}" wx:if="{{rmId==='b13-0'}}"></b>
+    </block>
+    <a rmId="{{rmId}}" wx:if="{{rmId==='b13-0'}}"></a>
+    <view class="activity-block">
+        <image bindtap="gotoGoodsDetail" class="image" mode="aspectFill" src="{{goodsDetail.cover}}"></image>
+        <view class="title">{{goodsDetail.title}}</view>
+    </view>
+</view>

@@ -1,0 +1,3 @@
+<view wx:if="{{url}}">
+    <a bind:message="onMessage" src="{{url}}"></a>
+</view>

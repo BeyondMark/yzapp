@@ -1,0 +1,22 @@
+<view class="f49f8">
+    <a bind:_init="_tic" bind:tap="_p" border="{{false}}" customClass="c9d7b1" data-t="{{ tap:{en:'onSelect'} }}" valueClass="d2821">
+        <b bind:_init="_tic" checkedColor="var(--main-bg, #323233)" disabled="{{inactive}}" iconSize="16px" labelClass="a9a2d" name="{{item.id}}" value="{{value}}" wx:if="{{switchable}}">
+            <view class="f5a4c">{{item.address}}</view>
+            <view class="c0ea45 {{inactive?'f2d41':''}}">
+                <c bind:_init="_tic" color="{{themeTag.plain?'var(--tag-bg)':'var(--main-bg, #f2f2ff)'}}" customClass="bc4b2" hairline="{{themeTag.plain}}" plain="{{themeTag.plain}}" round="{{true}}" textColor="{{themeTag.plain?'var(--tag-text)':'#fff'}}" wx:if="{{item.isDefault}}">          默认
+        </c>
+                <c bind:_init="_tic" color="{{themeTag.plain?'var(--tag-bg)':'var(--main-bg, #f2f2ff)'}}" customClass="bc4b2" hairline="{{themeTag.plain}}" plain="{{themeTag.plain}}" round="{{true}}" textColor="{{themeTag.plain?'var(--tag-text)':'#fff'}}" wx:if="{{item.label}}"> {{item.label}} </c> {{item.name}} {{item.tel}} </view>
+        </b>
+        <view wx:else>
+            <view class="f5a4c">{{item.address}}</view>
+            <view class="c0ea45 {{inactive?'f2d41':''}}"> {{item.name}} {{item.tel}} <c bind:_init="_tic" color="var(--main-bg, #f2f2ff)" customClass="bc4b2" round="{{true}}" textColor="#fff" type="danger" wx:if="{{item.isDefault}}">          默认
+        </c>
+                <c bind:_init="_tic" class="bc4b2-root" color="var(--tag-bg, #f2f2ff)" customClass="bc4b2" round="{{true}}" textColor="var(--tag-text, #323233)" wx:if="{{item.label}}"> {{item.label}} </c>
+            </view>
+        </view>
+        <d bind:_init="_tic" catch:tap="_p" customClass="c94b08" data-t="{{ tap:{en:'onEdit',et:'stop'} }}" name="edit" slot="right-icon"></d>
+    </a>
+    <view catch:tap="_p" class="{{'c77677'}} {{switchable?'c7a515':''}}" data-t="{{ tap:{en:'onEdit',et:'stop'} }}" wx:if="{{showPoiPrompt}}">    为提高同城配送准确性，请进行地图定位选点
+    <d bind:_init="_tic" class="c96171" name="arrow"></d>
+    </view>
+</view>

@@ -1,0 +1,29 @@
+<view class="sku-order-block-main">
+    <view class="loading">
+        <s bind:_init="_tic" customStyle="{{styles.overlay}}" show="{{isLoading}}" zIndex="{{1000}}" wx:if="{{isLoading}}"></s>
+    </view>
+    <view class="e6dca">
+        <r bind:_init="_tic" bind:behaviorDidMount="_p" data-ref="behavior" data-t="{{ behaviorDidMount:{en:'behaviorDidMount'} }}"></r>
+    </view>
+    <s bind:_init="_tic" show="{{true}}" zIndex="{{90}}" wx:if="{{showDiscountDetail}}"></s>
+    <f bind:_init="_tic" customStyle="height: 75vh;" rmId="b7-64" wx:if="{{rmId==='b7-42'}}"></f>
+    <b bind:_init="_tic" rmId="{{rmId}}" show="{{isShowAddressDeliveryPopup}}" wx:if="{{rmId==='b7-42'}}"></b>
+    <d bind:_init="_tic" bind:add="_p" bind:close="_p" bind:edit="_p" bind:select="_p" bodyStyle="max-height: 75vh" customStyle="height: 75vh;padding-bottom: env(safe-area-inset-bottom)" data-t="{{ close:{en:'onContactListClose'},select:{en:'onContactListSelect'},edit:{en:'onContactListEdit'},add:{en:'onContactListEdit'} }}" rmId="b7-70" show="{{isShowContactListPopup}}" title="选择联系人" wx:if="{{rmId==='b7-42'}}"></d>
+    <g bind:_init="_tic" rmId="b7-64" wx:if="{{rmId==='b7-42'}}"></g>
+    <h bind:_init="_tic" rmId="b7-68" wx:if="{{rmId==='b7-42'}}"></h>
+    <i bind:_init="_tic" rmId="b7-64" wx:if="{{rmId==='b7-42'}}"></i>
+    <e bind:_init="_tic" rmId="b7-64" wx:if="{{rmId==='b7-42'}}"></e>
+    <j bind:_init="_tic" rmId="b7-44" themeColor="{{themeColors.general}}" wx:if="{{rmId==='b7-42'}}"></j>
+    <p bind:_init="_tic" rmId="b7-44" wx:if="{{rmId==='b7-42'}}"></p>
+    <k bind:_init="_tic" rmId="b7-64" wx:if="{{rmId==='b7-42'}}"></k>
+    <l bind:_init="_tic" rmId="b7-66" wx:if="{{rmId==='b7-42'}}"></l>
+    <a bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'togglePrivacyBillRulePopup'} }}" themeColors="{{themeColors}}" value="{{showPrivacyBillRulePopup}}" wx:if="{{rmId==='b7-42'}}"></a>
+    <m bind:_init="_tic" bind:close="_p" bind:confirm="_p" config="{{delivery}}" data-t="{{ confirm:{en:'onTimePickerConfirm'},close:{en:'onTimePickerClose'} }}" rmId="b7-70" show="{{isShowTimePickerPopup}}" showTime="{{showLocalDeliveryTime}}" titles="{{['送达时间','更多送达时间']}}" type="delivery" value="{{delivery.text}}" wx:if="{{rmId==='b7-42'}}"></m>
+    <m bind:_init="_tic" bind:close="_p" bind:confirm="_p" config="{{selfFetch}}" data-t="{{ confirm:{en:'onSelfFetchTimePickerConfirm'},close:{en:'onTimePickerClose'} }}" rmId="b7-70" show="{{isShowSelfFetchTimePopup}}" titles="{{['选择自提时间','选择自提时间']}}" type="selfFetch" value="{{selfFetch.time}}" wx:if="{{rmId==='b7-42'}}"></m>
+    <n bind:_init="_tic" rmId="b7-70" wx:if="{{rmId==='b7-42'}}"></n>
+    <c bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b7-42'}}"></c>
+    <block wx:if="{{prepareIsReady}}">
+        <o bind:_init="_tic" bind:onConfirm="_p" data-t="{{ onConfirm:{en:'handlePointConfirm'} }}" rmId="b7-64" wx:if="{{rmId==='b7-42'}}"></o>
+    </block>
+    <q bind:_init="_tic" rmId="b7-64" wx:if="{{rmId==='b7-42'}}"></q>
+</view>

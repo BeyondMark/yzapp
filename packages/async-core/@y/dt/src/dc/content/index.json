@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../captain/paidcontent/title/index",
+    "b": "./../../captain/paidcontent/item/index",
+    "_": "../../../../../../../components/_/index"
+  }
+}

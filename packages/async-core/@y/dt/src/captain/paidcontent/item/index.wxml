@@ -1,0 +1,51 @@
+<view bind:tap="_t_hn_" class="cap-paidcontent-item" data-href="{{opt.url}}" hoverClass="none" path="{{opt.url}}" type="{{opt.navigateType}}" url="{{opt.url}}">
+    <view class="thumbnail-wrapper">
+        <slot name="thumbnail" wx:if="{{opt.slots.thumbnail}}"></slot>
+        <image class="thumbnail tee-image" lazyLoad="true" mode="aspectFill" src="{{_thumbnail}}" style="{{'width: '+_thumbnailWidth}}; {{'height: '+_thumbnailHeight}}" wx:else></image>
+        <view class="status-tag" wx:if="{{opt.statusTag}}">{{opt.statusTag}}</view>
+        <slot name="icon" wx:if="{{opt.slots.icon}}"></slot>
+        <view class="thumbnail-icon" wx:else>
+            <image class="thumbnail-icon-image tee-image" lazyLoad="true" src="{{opt.icon}}"></image>
+        </view>
+        <view class="course-type-name" wx:if="{{opt.courseTypeName}}">{{opt.courseTypeName}}</view>
+    </view>
+    <view class="detail" style="{{'height: '+_thumbnailHeight}}">
+        <view class="row">
+            <view class="col">
+                <view class="title-bar">
+                    <slot name="title" wx:if="{{opt.slots.title}}"></slot>
+                    <block wx:else>
+                        <a bind:_init="_tic" color="{{opt.titleTagClass?'':'#969799'}}" customClass="title-tag" round="{{true}}" type="{{opt.titleTagClass}}" wx:if="{{opt.titleTag}}"> {{opt.titleTag}} </a>
+                        <view class="{{'title'}} {{opt.supportsMultiLines?'title--multi':''}} t-text"> {{opt.title}} </view>
+                    </block>
+                </view>
+                <view class="{{'subtitle'}} {{opt.bottomTagText?'':'subtitle--notag'}}" wx:if="{{opt.slots.subtitle||_subtitle}}">
+                    <slot name="subtitle" wx:if="{{opt.slots.subtitle}}"></slot>
+                    <view class="t-text" wx:else>{{_subtitle}}</view>
+                </view>
+            </view>
+            <view class="col corner-top" wx:if="{{!isIOS}}">
+                <slot name="topTag" wx:if="{{opt.slots.topTag}}"></slot>
+                <block wx:else>
+                    <view class="{{'corner-top-text'}} {{opt.topCornerClass}}"> {{opt.topCornerText}} </view>
+                    <a bind:_init="_tic" customClass="top-tag tag" plain="{{true}}" type="danger" wx:if="{{opt.topTagText}}"> {{opt.topTagText}} </a>
+                </block>
+            </view>
+        </view>
+        <view class="row detail__footer">
+            <view class="col status-list">
+                <slot name="status" wx:if="{{opt.slots.status}}"></slot>
+                <block wx:else>
+                    <view class="status t-text" style="{{item.color?'color:'+item.color:''}}" wx:for="{{opt.statusList}}" wx:key="index"> {{item.text?item.text:item}} </view>
+                </block>
+            </view>
+            <view class="col corner-bottom" wx:if="{{!isIOS}}">
+                <slot name="bottomTag" wx:if="{{opt.slots.bottomTag}}"></slot>
+                <block wx:else>
+                    <a bind:_init="_tic" color="{{opt.themeColors.general}}" customClass="bottom-tag tag" plain="{{true}}" wx:if="{{opt.bottomTagText}}"> {{opt.bottomTagText}} </a>
+                    <view class="corner-bottom-text" style="{{opt.bottomCornerClass?'color:'+opt.themeColors.general:''}}"> {{opt.bottomCornerText}} </view>
+                </block>
+            </view>
+        </view>
+    </view>
+</view>

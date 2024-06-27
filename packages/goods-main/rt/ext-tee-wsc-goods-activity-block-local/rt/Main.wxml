@@ -1,0 +1,7 @@
+<view>
+    <block wx:if="{{presaleProgressOpt.show}}">
+        <a bind:_init="_tic" data-ref="presaleProgressBlock" opt="{{presaleProgressOpt}}" rmId="{{rmId}}" wx:if="{{rmId==='b7-54'}}"></a>
+    </block>
+    <b bind:_init="_tic" opt="{{actDetailOpt}}" wx:if="{{actDetailOpt.show}}"></b>
+    <c bind:_init="_tic" opt="{{newProductLaunchOpt}}" wx:if="{{newProductLaunchOpt.show}}"></c>
+</view>

@@ -1,0 +1,24 @@
+<view style="{{theme}}">
+    <block wx:if="{{umpBannerOpt.show&&youzanyunBanner}}">
+        <d bind:_init="_tic" goodsStockOpt="{{goodsStockOpt}}" opt="{{umpBannerOpt}}" rmId="{{rmId}}" themeType="{{themeType}}" wx:if="{{rmId==='b7-51'}}"></d>
+    </block>
+    <g bind:_init="_tic" bind:update="_p" data-t="{{ update:{en:'onNavUpdate'} }}" opt="{{skuNavOpt}}" wx:if="{{skuNavOpt.show}}"></g>
+    <view class="m-base-info">
+        <block wx:if="{{priceOpt.show&&youzanyunPrice}}">
+            <c bind:_init="_tic" opt="{{priceOpt}}" rmId="{{rmId}}" wx:if="{{rmId==='b7-51'}}"></c>
+        </block>
+        <j bind:_init="_tic" opt="{{goodsNewCustomerCouponOpt}}" wx:if="{{goodsNewCustomerCouponOpt.show}}"></j>
+        <e bind:_init="_tic" preposition="{{1}}" rmId="b7-55" wx:if="{{rmId==='b7-51'}}"></e>
+        <f bind:_init="_tic" opt="{{presaleOpt}}" themeTag="{{themeTag}}" wx:if="{{presaleOpt.show}}"></f>
+        <i bind:_init="_tic" bind:follow="_p" bind:wecomBenefit="_p" data-t="{{ follow:{en:'setFollowShow'},wecomBenefit:{en:'setWecomBenefitShow'} }}" opt="{{goodsFansBenefitOpt}}" wx:if="{{!customerCardOpt.show&&goodsFansBenefitOpt.show}}"></i>
+        <h bind:_init="_tic" opt="{{customerCardOpt}}" wx:if="{{customerCardOpt.show}}"></h>
+        <block wx:if="{{titleOpt.title}}">
+            <a bind:_init="_tic" bind:share="_p" data-t="{{ share:{en:'setShareShow'} }}" opt="{{titleOpt}}" rmId="{{rmId}}" wx:if="{{rmId==='b7-51'}}"></a>
+        </block>
+        <k bind:_init="_tic" profit="{{profit}}" wx:if="{{profit}}"></k>
+    </view>
+    <block wx:if="{{showGuaranteeBar}}">
+        <b bind:_init="_tic" rmId="b7-3" wx:if="{{rmId==='b7-51'}}"></b>
+    </block>
+    <l bind:_init="_tic"></l>
+</view>

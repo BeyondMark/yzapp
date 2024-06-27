@@ -1,0 +1,15 @@
+<view class="dc-shop" style="{{heightStyle}}">
+    <view class="banner {{opt.position}} {{opt.descLayout}}" style="{{bannerImage}}">
+        <view class="mask {{opt.bgMask}}"></view>
+        <view class="content {{opt.position}} {{opt.descLayout}}" style="{{bottomStyle}}">
+            <view class="logo {{opt.corner}} {{opt.descLayout}} {{logoBgCls}}" style="{{logoImage}}"></view>
+            <view class="msg {{opt.descLayout}}">
+                <view class="name {{opt.position}} {{opt.descLayout}}"> {{opt.name}} </view>
+                <view wx:if="{{opt.descList}}">
+                    <view bind:tap="_p" class="{{opt.position}} {{'desc'}} {{opt.descList.length>1?'split':''}}" data-t="{{ tap:{ en:'itemClick',args:[item] } }}" wx:for="{{opt.descList}}" wx:key="index">
+                        <view class="tag t-text" wx:if="{{item.tag}}">{{item.tag}}</view> {{item.title}} </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

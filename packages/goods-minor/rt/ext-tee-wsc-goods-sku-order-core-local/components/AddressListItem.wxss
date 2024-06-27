@@ -1,0 +1,109 @@
+.c77f0d {
+  position: relative;
+  padding: var(--theme-trade-address-list-popup-card-padding-top, 12px)
+    var(--theme-trade-address-list-popup-card-padding-right, 12px)
+    var(--theme-trade-address-list-popup-card-padding-bottom, 12px)
+    var(--theme-trade-address-list-popup-card-padding-left, 12px);
+  margin: var(--theme-goods-direct-order-popup-card-margin-top, 12px)
+    var(--theme-goods-direct-order-popup-card-margin-right, 12px)
+    var(--theme-goods-direct-order-popup-card-margin-bottom, 12px)
+    var(--theme-goods-direct-order-popup-card-margin-left, 12px);
+  background-color: #fff;
+  border-radius: var(--theme-radius-card, 8px);
+  --radio-label-margin: 12px;
+  --radio-checked-icon-color: var(--main-bg, #323233);
+}
+.c77f0d:after {
+  position: absolute;
+  box-sizing: border-box;
+  content: " ";
+  pointer-events: none;
+  right: 16px;
+  left: 16px;
+  top: 0;
+  border-bottom: 1px solid #ebedf0;
+  transform: scaleY(0.5);
+}
+.c06268 {
+  margin-bottom: 0 !important;
+}
+.c330c8 {
+  margin-left: var(--theme-trade-address-list-popup-card-padding-left, 10px);
+}
+.c167fa {
+  padding: 0 !important;
+}
+.c07a78 {
+  padding-right: 44px;
+  text-align: left !important;
+  color: #323233 !important;
+}
+.c5d2eb {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: left;
+  color: #969799;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.c77f0d__inactive {
+  color: #c8c9cc;
+}
+.e9ab4 {
+  position: relative;
+  top: -1px;
+  justify-content: center;
+  margin-right: 4px;
+  height: 16px;
+  min-width: 32px;
+  box-sizing: border-box;
+}
+.e9ab4:after {
+  border-radius: var(--theme-radius-tag, 8px) !important;
+}
+.c0ceb6 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: var(--theme-common-field-font-weight, 500);
+  line-height: 20px;
+}
+.c77f0d--disabled .address-item__address,
+.c77f0d--disabled .address-item__name {
+  color: #c8c9cc;
+}
+.d586e {
+  padding: 10px 0 10px 10px;
+  position: absolute !important;
+  top: 50%;
+  right: 0;
+  color: #969799;
+  font-size: 20px !important;
+  transform: translateY(-50%);
+}
+.defb4 {
+  font-size: 12px;
+  color: #ed6a0c;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  margin: 8px 6px 0 0;
+  position: relative;
+  justify-content: space-between;
+}
+.c4b107 {
+  margin-left: 30px;
+}
+.c1c77b {
+  height: 1em;
+}
+.c77f0d .t-radio__icon {
+  border: 1px solid #969799;
+}
+.c77f0d .van-radio__label {
+  margin-left: var(--theme-trade-address-list-popup-card-padding-left, 10px);
+}

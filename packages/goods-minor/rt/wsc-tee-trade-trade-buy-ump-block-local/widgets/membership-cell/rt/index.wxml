@@ -1,0 +1,16 @@
+<view style="{{themeCSS}}">
+    <c bind:_init="_tic" bind:tap="_p" border="{{false}}" customClass="membership-cell d5a4c" data-t="{{ tap:{en:'onClickCell'} }}" isLink="{{canMembershipLink}}" titleClass="c9d89c" valueClass="c0d4b6" wx:if="{{showMembershipCell}}">
+        <view slot="title">
+            <view class="c2485c c89585">会员优惠</view>
+            <b bind:_init="_tic" catch:tap="_p" class="c9de40" data-t="{{ tap:{en:'onShowTips',et:'stop'} }}" name="info-o"></b>
+        </view>
+        <view>
+            <view class="c2485c">
+                <view class="{{isMembershipDisabled?'f5856':'c670f3'}}"> {{membershipTitle}} </view>
+            </view>
+            <view class="d27d7" wx:if="{{displayCustomerCard.id}}"> {{displayCustomerCard.desc}} </view>
+        </view>
+        <d bind:_init="_tic" bind:change="_p" checkedColor="{{themeColors.general}}" class="f4988" data-t="{{ change:{en:'onChangeSwitch'} }}" value="{{!!customerCards.id}}" wx:if="{{showCustomerCardCheck}}"></d>
+    </c>
+    <a bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b7-64'}}"></a>
+</view>

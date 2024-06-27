@@ -1,0 +1,14 @@
+<view>
+    <a bind:close="handleClose" closeOnClickOverlay="{{true}}" closeable="{{true}}" customStyle="border-radius:4rpx;" show="{{show}}" zIndex="20000">
+        <view class="number-captcha-popup">
+            <text class="number-captcha-popup__title">请完成安全验证</text>
+            <view class="number-captcha-popup__content">
+                <view class="display">
+                    <image mode="widthFix" src="{{numberImg}}"></image>
+                    <b bind:change="handleInputChange" customStyle="border: 1px solid #000;padding: 7px 15px;" maxlength="{{4}}" placeholder="请输入左侧的数字" type="text" value="{{value}}"></b>
+                </view>
+                <c bind:click="handleSubmit" size="large" type="primary">确定</c>
+            </view>
+        </view>
+    </a>
+</view>

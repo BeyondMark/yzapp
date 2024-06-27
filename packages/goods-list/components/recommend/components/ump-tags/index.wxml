@@ -1,0 +1,9 @@
+<view class="c4d393" wx:if="{{show}}">
+    <view wx:if="{{normalTags.length>0}}">
+        <a color="{{colors.tagBgColor}}" customClass="c76dca" key="{{index}}" round="{{true}}" textColor="{{colors.tagTextColor}}" wx:for="{{normalTags}}">{{item}}</a>
+    </view>
+    <view class="c17f06" wx:else>
+        <view class="c26f7b c26f7b-{{item.id}} }}" key="{{item.id}}" wx:for="{{defaultTags}}">
+            <text class="c76b8a"></text>{{item.name}}</view>
+    </view>
+</view>

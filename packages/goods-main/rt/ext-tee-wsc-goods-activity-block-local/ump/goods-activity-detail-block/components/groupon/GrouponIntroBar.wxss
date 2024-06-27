@@ -1,0 +1,17 @@
+.c6bf1b {
+  padding-top: var(--theme-page-cell-padding, 10px);
+  padding-bottom: var(--theme-page-cell-padding, 10px);
+}
+.c68f8c {
+  padding: 0 16px 12px;
+  line-height: 18px;
+  font-size: 14px;
+  background-color: #fff;
+}
+.groupon-value {
+  line-height: 25px;
+}
+.d248b {
+  font-family: sans-serif;
+  font-weight: var(--theme-common-field-font-weight, 500);
+}

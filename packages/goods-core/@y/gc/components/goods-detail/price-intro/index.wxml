@@ -1,0 +1,14 @@
+<view class="c3446f">
+    <view bind:tap="_p" class="d5d3d" data-t="{{ tap:{en:'toggle'} }}">
+        <view class="c668df"> {{goodsPriceIntro.title}} <a bind:_init="_tic" customClass="{{vanIconClass}}" name="arrow"></a>
+        </view>
+    </view>
+    <view class="c9a036 c4ebb0" hidden="{{!show}}">
+        <view class="c14511 c7711c">
+            <view class="c1cb25">{{goodsPriceIntro.subtitle1}}</view> {{goodsPriceIntro.info1}} </view>
+        <view class="c14511">
+            <view class="c1cb25">{{goodsPriceIntro.subtitle2}}</view> {{goodsPriceIntro.info2}} </view>
+        <view class="c14511 d3453"> {{goodsPriceIntro.note}} </view>
+        <view class="c14511 d3453"> {{goodsPriceIntro.block1}}{{shopName}}{{goodsPriceIntro.block2}}{{shopName}}{{goodsPriceIntro.block3}}{{shopName}}{{goodsPriceIntro.block4}} </view>
+    </view>
+</view>

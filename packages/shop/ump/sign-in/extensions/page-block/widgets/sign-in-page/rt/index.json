@@ -1,0 +1,19 @@
+{
+  "navigationBarTitleText": "签到送好礼",
+  "usingComponents": {
+    "a": "/@vant/weapp/dist/popup/index",
+    "b": "/packages/async-main/common/components/form-view/index",
+    "c": "../../../components/sign-calendar/index",
+    "d": "../../../components/font-calculate/index",
+    "e": "/packages/async-usecenter/components/recommend-goods/index",
+    "f": "/packages/shop/common/components/theme-view/index",
+    "g": "/packages/async-minor/components/cps-goods-recommend/index",
+    "h": "/ext-tee-wsc-dc/extensions/showcase-container/rt/ShowcaseContainer",
+    "i": "/packages/async-main/@vant/weapp/dist/notify/index",
+    "j": "/packages/shop/components/message/subscribe-message/index",
+    "k": "/components/account/user-authorize/index",
+    "l": "/packages/async-main/@vant/weapp/dist/toast/index",
+    "_": "../../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_", "e": "_", "g": "_", "i": "_", "l": "_" }
+}

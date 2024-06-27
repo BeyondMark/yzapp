@@ -1,0 +1,37 @@
+<a bind:_init="_tic" bind:close="_p" closeOnClickOverlay="{{false}}" closeable="{{true}}" customClass="{{classnames.root}}" data-t="{{ close:{ en:'$emit',args:['close'] } }}" position="bottom" round="{{cashierType==='B'}}" safeAreaInsetBottom="{{true}}" show="{{show}}">
+    <view class="{{classnames.container}}">
+        <view class="{{classnames.header}}">
+            <c bind:_init="_tic" channel="{{lowercase}}" customStyle="margin-right: 5px" scale="1.1"></c>
+            <view class="t-text" style="{{'color: '+color}}">{{payChannelName}}</view>
+        </view>
+        <view class="{{classnames.description}}" wx:if="{{description}}"> {{description}} </view>
+        <view class="{{classnames.steps.container}}">
+            <view class="{{classnames.steps.line}}"></view>
+            <view class="{{classnames.steps.step}}">
+                <view class="{{classnames.steps.description}}">
+                    <image class="{{classnames.steps.icon}} tee-image" lazyLoad="true" src="https://b.yzcdn.cn/assets-cashier/icon/link.svg"></image>
+                    <view>
+                        <view class="{{classnames.steps.text}}">复制链接</view>
+                        <view class="{{classnames.steps.subtext}}">              点击右侧按钮复制链接
+            </view>
+                    </view>
+                </view>
+                <view class="{{classnames.steps.action}}">
+                    <b bind:_init="_tic" bind:tap="_p" color="{{themeColor}}" customStyle="height: 32px; width: 72px" data-t="{{ tap:{en:'copy'} }}" round="{{true}}" type="danger">            复制
+          </b>
+                </view>
+            </view>
+            <view class="{{classnames.steps.step}}">
+                <view class="{{classnames.steps.description}}">
+                    <image class="{{classnames.steps.icon}} tee-image" lazyLoad="true" src="https://b.yzcdn.cn/assets-cashier/icon/browser.svg"></image>
+                    <view>
+                        <view class="{{classnames.steps.text}}">在浏览器粘贴链接</view>
+                        <view class="{{classnames.steps.subtext}}">              打开手机浏览器，粘贴链接并使用{{payChannelName}}购买
+            </view>
+                    </view>
+                </view>
+                <view class="{{classnames.steps.action}}"></view>
+            </view>
+        </view>
+    </view>
+</a>

@@ -1,0 +1,33 @@
+.user-item {
+  justify-content: space-between;
+}
+.user-item,
+.user-item .left {
+  display: flex;
+  align-items: center;
+}
+.user-item .left-img {
+  margin-right: 6px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+.user-item .left .title {
+  margin-bottom: 1px;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: PingFangSC-Medium;
+}
+.user-item .desc {
+  color: #969799;
+  font-size: 12px;
+  line-height: 17px;
+}
+.user-item .right {
+  text-align: right;
+}
+.user-item .right-value {
+  font-size: 18px;
+  color: #f44;
+  font-family: PingFangSC-Medium;
+}

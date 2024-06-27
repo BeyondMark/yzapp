@@ -1,0 +1,20 @@
+<view>
+    <view class="ff829">
+        <image class="b798a bd231" lazyLoad="true" src="{{item.reviewerAvatar}}"></image>
+        <view class="a695b">
+            <view class="{{'b0689'}} {{customNameClass}}"> {{item.reviewerNickName}} </view>
+            <view class="b3c6b">
+                <image class="c2454 bd231" lazyLoad="true" src="{{memberLevel}}" wx:if="{{memberLevel}}"></image>
+                <view class="b68ad {{isSvipMember?'af99f':''}}" wx:if="{{memberName}}">
+                    <image class="a4346 bd231" lazyLoad="true" src="{{svipIcon}}" wx:if="{{isSvipMember}}"></image>
+                    <view class="eb084 c89585">{{memberName}}</view>
+                </view>
+                <a bind:_init="_tic" customClass="f6117" hairline="{{themeTag.plain}}" plain="{{themeTag.plain}}" wx:if="{{item.userReBuyModel}}">买了又买</a>
+            </view>
+        </view>
+        <view class="c67942">
+            <b bind:_init="_tic" color="{{rateColor}}" count="{{5}}" readonly="{{true}}" score="{{score}}" size="{{rateSize}}" voidColor="#DCDEE0" voidIcon="star"></b>
+        </view>
+    </view>
+    <view class="c0935d" wx:if="{{showDate}}"> {{item.datetime}} </view>
+</view>

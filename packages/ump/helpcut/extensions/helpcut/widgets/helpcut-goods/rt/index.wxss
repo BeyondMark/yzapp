@@ -1,0 +1,39 @@
+.activity-header {
+  position: relative;
+  background: url(https://b.yzcdn.cn/public_files/d3675aa9be2945b2ed0a2cff8ecaf1af.png);
+  width: 100%;
+  background-size: cover;
+  padding: 149px 0 30px 0;
+}
+.activity-header .activity-block {
+  position: relative;
+  background: url(https://b.yzcdn.cn/public_files/3eb922f932a531647f7cce821bf87143.png);
+  width: 248px;
+  height: 118px;
+  background-size: cover;
+  margin: auto;
+}
+.activity-header .activity-block .title {
+  position: relative;
+  top: 75px;
+  margin: 0 24px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bolder;
+  color: #947a00;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.activity-header .activity-block .image {
+  position: absolute;
+  top: -70px;
+  left: 60px;
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  border: 6px solid transparent;
+  background-image: linear-gradient(180deg, #ffd59c, #ffa619),
+    linear-gradient(180deg, #ffa619, #ffa619);
+  background-origin: border-box;
+}

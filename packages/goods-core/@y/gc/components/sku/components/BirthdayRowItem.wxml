@@ -1,0 +1,7 @@
+<view bind:tap="_p" class="c32ced {{choosed?'ac1ef':''}}" data-t="{{ tap:{en:'onSelect'} }}">
+    <view class="c257de">
+        <view class="c44d21">
+            <view class="c44d21-text">{{name}}</view>
+        </view>
+    </view>
+</view>

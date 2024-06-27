@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../../../@vant/weapp/dist/loading/index",
+    "_": "../../../../../../../components/_/index"
+  }
+}

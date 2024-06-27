@@ -1,0 +1,28 @@
+<view class="component-container">
+    <view class="customer-asset-container" style="{{cardStyle}}">
+        <view class="container-row-one" wx:if="{{authMobile&&!loadingData}}">
+            <view class="user-avatar">
+                <a authTypeList="{{['nicknameAndAvatar']}}" bind:_init="_tic" bind:next="_p" class="auth-block" data-t="{{ next:{en:'handleAuthUserInfo'} }}" kdtId="{{kdtId}}" type="separate" wx:if="{{!authUser}}"></a>
+                <view class="avatar-content">
+                    <view catch:tap="_p" class="avatar" data-t="{{ tap:{en:'handleAvatarClick',et:'stop'} }}" wx:if="{{extraSetting.showAvatar}}">
+                        <image class="tee-image" lazyLoad="true" mode="aspectFit" src="{{userAvatar}}"></image>
+                    </view>
+                    <view catch:tap="_p" class="info-container" data-t="{{ tap:{en:'handleUserClick',et:'stop'} }}">
+                        <view class="name"> {{userName}} </view>
+                        <view class="member t-text">{{memberInfo.vipName}}</view>
+                    </view>
+                </view>
+            </view>
+            <view class="asset-info">
+                <a authTypeList="{{['mobile']}}" bind:_init="_tic" bind:next="_p" class="auth-block" customStyle="height: 100%" data-t="{{ next:{en:'handleLogin'} }}" kdtId="{{kdtId}}" type="separate" wx:if="{{!authMobile}}"></a>
+                <c bind:_init="_tic" bind:jumpToLink="_p" data-t="{{ jumpToLink:{en:'handleNavigate'} }}" infoSetting="{{assetInfoSetting}}" infoValue="{{assetInfoValue}}" mode="{{styleSetting.textAlign}}" numberColor="{{styleSetting.textColor}}" pointName="{{extraData.pointName}}" style="width: 100%"></c>
+            </view>
+        </view>
+        <view class="container-row-one" wx:else>
+            <slot name="unAuth"></slot>
+        </view>
+        <view class="container-row">
+            <b bind:_init="_tic" bind:jumpToLink="_p" cardStyle="{{innerCardBorderStyle}}" data-t="{{ jumpToLink:{en:'handleNavigate'} }}" entries="{{entries}}" style="width: 100%" type="{{templateType}}"></b>
+        </view>
+    </view>
+</view>

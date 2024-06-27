@@ -1,0 +1,17 @@
+<view class="protocol">
+    <view class="protocol-check">
+        <a bind:_init="_tic" bind:change="_p" checkedColor="#155bd4" customClass="protocol-check__box" data-t="{{ change:{en:'onChange'} }}" disabled="{{disabled}}" iconClass="protocol-check__icon" iconSize="16" shape="square" value="{{checked}}"></a>
+        <view class="protocol-check__tip">
+            <b bind:_init="_tic" name="fade-down" show="{{showTip}}">
+                <view class="protocol-tip">请先阅读并勾选</view>
+            </b>
+        </view>
+    </view>
+    <view class="protocol-list">
+        <view bind:tap="_p" class="protocol-txt" data-t="{{ tap:{en:'onChange'} }}">我已阅读并同意</view>
+        <view bind:tap="_p" class="protocol-txt protocol-txt--link" data-t="{{ tap:{ en:'onItemTap',args:[item] } }}" wx:for="{{protocols}}" wx:key="id">
+            <view class="protocol-txt" wx:if="{{index>0&&index===protocols.length-1}}">以及</view>
+            <view class="protocol-txt">《{{item.name}}》</view>
+        </view>
+    </view>
+</view>

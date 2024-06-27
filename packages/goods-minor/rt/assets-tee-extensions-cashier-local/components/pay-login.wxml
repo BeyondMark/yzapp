@@ -1,0 +1,23 @@
+<b bind:_init="_tic" closeOnClickOverlay="{{false}}" customClass="pay-login__wrapper" round="{{true}}" show="{{show}}">
+    <view class="pay-login--root">
+        <view class="zan-pay__header">
+            <view class="zan-pay__title">        安全验证
+      </view>
+            <a bind:_init="_tic" bind:tap="_p" class="zan-pay__header-icon zan-pay__header-icon--right" data-t="{{ tap:{ en:'$emit',args:['close'] } }}" name="close" size="20px"></a>
+        </view>
+        <view class="pay-login__content">
+            <view class="pay-login__main">
+                <view class="pay-login__hint"> {{hintText}} </view>
+                <view class="zan-pay__login-input-wrapper t-hairline--surround">
+                    <c bind:_init="_tic" bind:change="_p" class="pay-login__input" data-t="{{ change:{en:'onPasswordChange'} }}" focus="{{show}}" password="{{true}}" placeholder="请输入登录密码" type="password" value="{{password}}"></c>
+                </view>
+            </view>
+            <d bind:_init="_tic" bind:tap="_p" block="{{true}}" class="pay-login__btn" data-t="{{ tap:{ en:'$emit',args:['submit',password] } }}" size="normal" type="primary">        支付
+      </d>
+            <view class="pay-login__footer">
+                <view bind:tap="_p" class="pay-login__forget" data-t="{{ tap:{ en:'$emit',args:['forget'] } }}">          忘记密码?
+        </view>
+            </view>
+        </view>
+    </view>
+</b>

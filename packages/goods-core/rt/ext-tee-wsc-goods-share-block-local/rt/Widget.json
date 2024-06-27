@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./SharePop",
+    "b": "./../components/poster-pop/index",
+    "c": "./../components/guide/index",
+    "_": "../../../../../components/_/index"
+  }
+}

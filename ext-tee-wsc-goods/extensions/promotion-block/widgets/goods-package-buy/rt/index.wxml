@@ -1,0 +1,1 @@
+<a bind:_init="_tic" opt="{{opt}}"></a>

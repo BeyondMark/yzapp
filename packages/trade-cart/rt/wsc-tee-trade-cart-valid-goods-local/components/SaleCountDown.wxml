@@ -1,0 +1,6 @@
+<view class="c54f75">
+    <view class="c89585" wx:for="{{descArray}}" wx:key="type">
+        <view class="b504c c89585">{{item.value}}{{item.text}}</view>
+    </view>
+    <view class="c89585">后开售</view>
+</view>

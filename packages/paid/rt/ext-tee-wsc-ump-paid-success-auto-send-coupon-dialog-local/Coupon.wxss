@@ -1,0 +1,102 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.d6e16 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.d6e16 .title {
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+}
+.d6e16 .c9a036 {
+  height: 80px;
+  width: 262px;
+  border: 1px solid #eb8b8b;
+  border-radius: 6px;
+  margin-top: 12px;
+  position: relative;
+  overflow: hidden;
+}
+.d6e16 .c9a036 .ce2ca {
+  display: flex;
+  height: 100%;
+}
+.d6e16 .c9a036 .ce2ca .c81188 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px 0 10px;
+  min-width: 60px;
+  flex: none;
+}
+.d6e16 .c9a036 .ce2ca .c81188 .c97262 {
+  font-size: 30px;
+  font-weight: 700;
+}
+.d6e16 .c9a036 .ce2ca .c81188 .c3e34b {
+  font-size: 12px;
+  text-align: center;
+  line-height: 16px;
+  padding: 0 2px;
+}
+.d6e16 .c9a036 .ce2ca .c7c4f2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.d6e16 .c9a036 .ce2ca .c7c4f2 .c1dee8 {
+  font-size: 14px;
+  color: #323233;
+  line-height: 20px;
+}
+.d6e16 .c9a036 .ce2ca .c7c4f2 .c63ba9 {
+  font-size: 12px;
+  color: #9b9b9b;
+  line-height: 16px;
+  margin-top: 8px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.d6e16 .c9a036 .ce2ca .c7c4f2 .c63ba9 .d5f7f {
+  font-size: 11px;
+  line-height: 12px;
+  color: #9b9b9b;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.d6e16 .c9a036 .ce2ca .c7c4f2 .c63ba9 .d5f7f .block {
+  display: inline-block;
+}
+.d6e16 .c9a036 .c5946 {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  position: absolute;
+  right: -12px;
+  bottom: -12px;
+  transform: rotate(-45deg);
+}
+.c6468f {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.c0c19d {
+  display: flex;
+  align-items: baseline;
+}

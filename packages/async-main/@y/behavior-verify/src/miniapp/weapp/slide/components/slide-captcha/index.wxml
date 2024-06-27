@@ -1,0 +1,31 @@
+<view>
+    <c bind:close="handleClose" closeOnClickOverlay="{{true}}" customStyle="border-radius:8rpx;" show="{{show}}" status="{{status}}" zIndex="20000">
+        <view class="slide-popup">
+            <view class="slide-popup__title">
+                <text>请完成安全验证</text>
+                <view bindtap="handleClose" class="slide-popup__title__close">
+                    <d name="cross" size="16px"></d>
+                </view>
+            </view>
+            <view class="content">
+                <a bind:load="handleBGLoad" bind:refresh="handleRefresh" class="slide-popup__display slide-popup__display--{{status}}" slideData="{{slideData}}" status="{{status}}">
+                    <movable-area class="component-display__area" style="top: {{cy}}px;left: {{slideData.initLeft||0}}px">
+                        <movable-view animation="{{false}}" bindchange="{{touch.handleDisplayMove}}" bindtouchcancel="handleTouchEnd" bindtouchend="handleTouchEnd" class="component-display__area-block" direction="horizontal" disabled="{{status!=='ready'}}" x="{{moveX}}">
+                            <image bindload="handleIconLoad" class="component-display__area-image" mode="widthFix" src="{{slideData.smallUrl}}" style="width: {{samllImgWith}}px;height: {{samllImgWith}}px;"></image>
+                        </movable-view>
+                    </movable-area>
+                </a>
+                <b bind:refresh="handleRefresh" class="slide-popup__control--{{status}}" slideData="{{slideData}}" status="{{status}}" statusText="{{statusText}}">
+                    <movable-area class="slide-popup__control-movables" style="left: {{slideData.initLeft}}px;">
+                        <movable-view animation="{{false}}" bindchange="{{touch.handleTouchMove}}" bindtouchcancel="handleTouchEnd" bindtouchend="handleTouchEnd" class="slide-popup__control-movables__block" direction="horizontal" disabled="{{status!=='ready'}}" x="{{moveX}}">
+                            <view class="slide-popup__control-movables__view">
+                                <d color="#fff" customStyle="top: 50%;transform: translateY(50%);" name="{{slideIconName}}" size="18px"></d>
+                            </view>
+                        </movable-view>
+                        <view class="slide-popup__control-mask slide-popup__control-mask--inner"></view>
+                    </movable-area>
+                </b>
+            </view>
+        </view>
+    </c>
+</view>

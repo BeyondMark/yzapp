@@ -1,0 +1,9 @@
+<view style="{{opt.wrapStyle}}">
+    <a _opt="{{opt.layoutOpt}}" bind:_init="_tic">
+        <b _opt="{{opt.layoutOpt}}" bind:_init="_tic" wx:for="{{coupons}}" wx:key="alias">
+            <d authTypeList="{{opt.authTypeList}}" bind:_init="_tic" bind:next="_p" class="authorize" customStyle="height: auto; border: 0; padding: 0;" data-t="{{ next:{ en:'handleClickCoupon',args:[index] } }}" kdtId="{{kdtId}}" scene="{{opt.authScene}}">
+                <c bind:_init="_tic" item="{{item}}" opt="{{opt}}"></c>
+            </d>
+        </b>
+    </a>
+</view>

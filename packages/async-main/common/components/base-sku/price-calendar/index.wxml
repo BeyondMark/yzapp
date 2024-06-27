@@ -1,0 +1,20 @@
+<view class="m-calendar-header">
+    <view wx:for="{{monthList}}" wx:for-index="idx" wx:key="{{ item.paramName }}">
+        <a bindtap="onChangeMonth" border="{{activeMonth===idx?'general':''}}" customClass="m-calendar-select" data-index="{{idx}}" data-month="{{item.month}}" data-year="{{item.year}}">
+            <view class="u-month-show">{{item.month}}月</view>
+            <a color="general" customClass="u-price-show">{{nearlyFourMonthMinPriceMap[item.paramName]!==-1?'￥'+tools.price( nearlyFourMonthMinPriceMap[item.paramName] )+'起':''}}</a>
+        </a>
+    </view>
+</view>
+<view class="m-calendar-week-list">
+    <view class="u-week-item {{item==='六'||item==='日'?'u-week-item-week':''}}" wx:for="{{weekList}}" wx:key="weekList">{{item}}</view>
+</view>
+<view class="m-calendar-date-list">
+    <view bindtap="onDateItemClick" class="u-data-item-box" data-activityprice="{{item.info.activityPrice?item.info.activityPrice:item.info.originPrice}}" data-date="{{item.taskDate}}" data-dateskuid="{{item.info.dateSkuId}}" data-disable="{{item.info.isEnable===0}}" data-infodate="{{item.infoDate}}" data-month="{{currentMonth}}" data-originprice="{{item.info.originPrice}}" data-stocknum="{{item.info.stockNum}}" data-year="{{currentYear}}" wx:for="{{dateList}}" wx:key="dateList">
+        <a bg="{{item.active?'main-bg':''}}" customClass="u-date-item" wx:if="{{item.taskDate}}">
+            <a color="{{item.active?'main-text':'main-bg'}}" customClass="u-date-item-left">{{item.info.isEnable===1?'余'+item.info.stockNum:''}}</a>
+            <a color="{{item.active?'main-text':''}}" customClass="{{item.info.isEnable===1?'':'u-date-item-date'}}">{{item.taskDate}}</a>
+            <a color="{{item.active?'main-text':''}}" customClass="u-date-item-price">{{item.info.isEnable===1?'￥'+tools.price(item.info.originPrice):''}}</a>
+        </a>
+    </view>
+</view>

@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y-open/vt/dist/button/index.weapp",
+    "b": "/@y-open/vt/dist/cell/index",
+    "c": "/@y-open/vt/dist/cell-group/index",
+    "d": "../../../@y-open/vt/dist/search/index",
+    "_": "../../../../../components/_/index"
+  }
+}

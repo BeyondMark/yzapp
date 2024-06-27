@@ -1,0 +1,3 @@
+<view class="labels__selection" style="{{themeCss}}">
+    <view bind:tap="_p" class="{{'label'}} {{value===label?'label__active':''}}" data-t="{{ tap:{ en:'onSelectLabel',args:[label] } }}" wx:for="{{labels}}" wx:for-item="label" wx:key="label"> {{label}} </view>
+</view>

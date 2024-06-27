@@ -1,0 +1,24 @@
+<view class="coupon-box custom-class">
+    <view class="{{boxCls}}" style="{{themeBgStyle}} {{themeBorderStyle}}">
+        <view class="coupon-box__section">
+            <view class="coupon-box__block coupon-box__block-discount">
+                <slot name="A"></slot>
+            </view>
+            <view class="coupon-box__block coupon-box__block-content">
+                <slot name="C"></slot>
+            </view>
+            <view class="coupon-box__block coupon-box__block-action custom-action-class">
+                <slot name="B"></slot>
+            </view>
+        </view>
+        <view class="coupon-box__section">
+            <view class="coupon-box__block coupon-box__block-des">
+                <slot name="D"></slot>
+            </view>
+        </view>
+    </view>
+    <view class="{{collapseCls}}" wx:if="{{showCollapse}}">
+        <view class="coupon-box__collapse-card"></view>
+        <view class="coupon-box__collapse-card" wx:if="{{collapse>=3}}"></view>
+    </view>
+</view>

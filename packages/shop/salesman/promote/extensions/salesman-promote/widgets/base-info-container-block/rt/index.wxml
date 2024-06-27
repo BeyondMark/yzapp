@@ -1,0 +1,10 @@
+<view class="module-unit">
+    <view class="m-base-info">
+        <d activityNotStart="{{activityNotStart}}" activityPrice="{{activityPrice}}" bind:count-end="countdownEnded" commissionData="{{commissionData}}" countdown="{{countdown}}" tag="{{baseInfoBarTag}}" wx:if="{{showActivityBanner}}"></d>
+        <b class="u-base-info-row" commissionData="{{commissionData}}" goods="{{goods}}" showOriginPrice="{{showOriginPrice}}" wx:if="{{!showActivityBanner}}"></b>
+        <f rmId="{{rmId}}" wx:if="{{rmId==='b29-0'}}"></f>
+        <a class="u-base-info-row" goods="{{goods}}"></a>
+        <e class="u-base-info-row last-child" salesmanActivityTags="{{salesmanActivityTags}}" soldNumText="{{soldNumText}}"></e>
+    </view>
+    <c alias="{{goods.alias}}" bind:onShow="guaranteeOnShow" isWxPromise="{{isWxPromise}}" kdtId="{{shop.kdtId}}"></c>
+</view>

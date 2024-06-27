@@ -1,0 +1,7 @@
+<view>
+    <a bind:_init="_tic" bind:tap="_p" border="{{false}}" center="{{true}}" customClass="d5a4c" data-t="{{ tap:{en:'onShow'} }}" isLink="{{!orderCreated}}" title="送达日期" valueClass="c39039">
+        <view style="color:{{themeColors.general}}">{{periodBuy.planTime}}</view>
+        <view style="color:{{themeColors.general}}">{{timeText}}</view>
+    </a>
+    <b bind:_init="_tic" bind:changeChosen="_p" bind:close="_p" data-t="{{ close:{en:'onClose'},changeChosen:{en:'handleChangeChosen'} }}" periodBuy="{{periodBuy}}" show="{{showPicker}}" themeCss="{{themeCss}}"></b>
+</view>

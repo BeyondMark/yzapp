@@ -1,0 +1,23 @@
+<view bind:tap="_p" class="edu_brand" data-t="{{ tap:{en:'jumpToBrandPage'} }}" style="{{containerStyle}}" wx:if="{{show}}">
+    <view class="edu_brand__title-wrapper" wx:if="{{opt.showTitle}}">
+        <view class="edu_brand__title t-text" style="{{titleStyle}}">品牌介绍</view>
+        <a bind:_init="_tic" class="edu_brand__right-icon" color="#c8c9cc" name="arrow" size="{{16}}"></a>
+    </view>
+    <view class="edu_brand__wrapper">
+        <view class="edu_brand__info-wrapper">
+            <view class="edu_brand__img-wrapper">
+                <view class="edu_brand__img-wrap">
+                    <image class="edu_brand__img-wrap-bg tee-image" lazyLoad="true" src="{{logo}}"></image>
+                    <image class="edu_brand__img-wrap-img tee-image" lazyLoad="{{true}}" mode="aspectFit" src="{{logo}}"></image>
+                </view>
+            </view>
+            <view class="edu_brand__info">
+                <view class="edu_brand__name t-text" style="{{nameStyle}}">{{name}}</view>
+                <view class="edu_brand__age" style="{{ageTagStyle}}" wx:if="{{age}}">
+                    <view class="edu_brand__age-text t-text">{{ageText}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="edu_brand__description" style="{{descStyle}}"> {{description}} </view>
+    </view>
+</view>

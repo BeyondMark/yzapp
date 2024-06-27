@@ -1,0 +1,25 @@
+<view class="c83f99">
+    <view class="c7f612">
+        <c active="{{active}}" bind:_init="_tic" bind:change="_p" color="{{themeColors['main-bg']}}" data-ref="vanTabs" data-t="{{ change:{en:'onTabChange'} }}" id="vanTabs" lineWidth="40" pid="swipeable">
+            <b bind:_init="_tic" color="{{themeColors['main-bg']}}" pid="swipeable" title="{{item.title}}" wx:for="{{TAB_LIST}}" wx:key="value"></b>
+        </c>
+    </view>
+    <view class="c235c0" hidden="{{active===1}}">
+        <view class="c1e2ab" wx:if="{{emptyCard}}">
+            <image class="c00725 bd231" lazyLoad="true" src="https://img01.yzcdn.cn/upload_files/2020/02/12/Fj15gE7mqO3jldfspJ2UtVTHk1Ii.png"></image>
+            <view class="c77c1b"> 暂无余额或卡 </view>
+        </view>
+        <d agreementUrl="{{agreementUrl}}" bind:_init="_tic" bind:onCheck="_p" bind:onRefreshData="_p" cardType="valueCard" data-t="{{ onCheck:{en:'onCheck'},onRefreshData:{en:'onRefreshData'} }}" disabledBalance="{{disabledBalance}}" newRecommend="{{newRecommend}}" product="{{product}}" themeColors="{{themeColors}}" valueCard="{{valueCard}}" valueCardRecommend="{{recommendDetaid}}"></d>
+        <e bind:_init="_tic" bind:onCheck="_p" cardType="valueCard" data-t="{{ onCheck:{en:'onCheck'} }}" hasExclusionCard="{{hasExclusionCard}}" show="{{show}}" that="{{that}}" themeColors="{{themeColors}}" valueCard="{{valueCard2Render}}"></e>
+    </view>
+    <view class="c235c0" hidden="{{active===0}}">
+        <view class="c1e2ab" wx:if="{{emptyDisabledCard}}">
+            <image class="c00725 bd231" lazyLoad="true" src="https://img01.yzcdn.cn/upload_files/2020/02/12/Fj15gE7mqO3jldfspJ2UtVTHk1Ii.png"></image>
+            <view class="c77c1b"> 暂无余额或卡 </view>
+        </view>
+        <d bind:_init="_tic" bind:onCheck="_p" cardType="valueCard" data-t="{{ onCheck:{en:'onCheck'} }}" disabled="{{true}}" kdtId="{{kdtId}}" payAssetActivityTagDesc="{{payAssetActivityTagDesc}}" product="{{product}}" that="{{that}}" themeColors="{{themeColors}}" valueCard="{{valueCard}}" valueCardRecommend="{{recommendDetaid}}"></d>
+        <e bind:_init="_tic" bind:onCheck="_p" cardType="valueCard" data-t="{{ onCheck:{en:'onCheck'} }}" disabled="{{true}}" hasExclusionCard="{{hasExclusionCard}}" show="{{show}}" that="{{that}}" themeColors="{{themeColors}}" valueCard="{{valueCard}}"></e>
+    </view>
+    <a bind:_init="_tic" scrollable="{{false}}" text="{{noticeText}}" wx:if="{{customerDiscountNotFullPay}}"></a>
+    <f bind:_init="_tic" bind:submit="_p" buttonText="确认" customClass="c2b469" data-t="{{ submit:{en:'onConfirm'} }}" label="可抵扣：" price="{{prepayCardTotalAmount}}" themeColors="{{themeColors}}"></f>
+</view>

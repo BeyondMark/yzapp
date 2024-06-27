@@ -1,0 +1,1 @@
+<a alignLeft="{{true}}" bindtap="handleSearch" componentData="{{searchConfig}}" disabled="{{true}}" inputStyle="border-radius: var(--theme-radius-card, 4rpx) !important" placeholder="搜索商品"></a>

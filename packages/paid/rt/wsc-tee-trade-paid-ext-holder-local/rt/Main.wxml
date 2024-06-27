@@ -1,0 +1,22 @@
+<view>
+    <view class="ext-holder" wx:if="{{showExtHolder}}">
+        <official-account bind:_init="_tic" wx:if="{{showOfficialAccount}}"></official-account>
+        <block wx:if="{{widgetPaidSubscriptionMsgInit}}">
+            <d bind:_init="_tic" rmId="b21-3" wx:if="{{rmId==='b21-6'}}"></d>
+        </block>
+        <block wx:if="{{!isWholesaleOrder}}">
+            <a bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b21-6'}}"></a>
+        </block>
+        <block wx:if="{{(hasPaid||isWxReceipt)&&inSourcingFission.isDisplay}}">
+            <e activityUrl="{{inSourcingFission.activityUrl}}" bind:_init="_tic" rmId="b21-12" weappImg="{{weappImg}}" webImg="{{webImg}}" wx:if="{{rmId==='b21-6'}}"></e>
+        </block>
+        <block wx:if="{{(hasPaid||isWxReceipt)&&!canUseTradeUmpV1&&fissionCoupon.quantity>0}}">
+            <b bind:_init="_tic" rmId="b21-12" wx:if="{{rmId==='b21-6'}}"></b>
+        </block>
+        <block wx:if="{{(hasPaid||isWxReceipt)&&!canUseTradeUmpV1&&paidPromotion&&paidPromotion.detailUrl}}">
+            <c bind:_init="_tic" rmId="b21-2" wx:if="{{rmId==='b21-6'}}"></c>
+        </block>
+    </view>
+    <f bind:_init="_tic" rmId="@passport-tee/protocol~Duv5tmrK" wx:if="{{rmId==='b21-6'}}"></f>
+    <g bind:_init="_tic" bind:jump="_p" customStyle="{{maskStyle}}" data-t="{{ jump:{en:'expandAll'} }}" wx:if="{{showMask}}"></g>
+</view>

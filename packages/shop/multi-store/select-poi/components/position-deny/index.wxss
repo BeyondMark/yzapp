@@ -1,0 +1,27 @@
+.position-deny {
+  position: fixed;
+  top: 53px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: #f8f8f8;
+  flex-direction: column;
+  text-align: center;
+}
+.position-deny__title {
+  font-size: 18px;
+  color: #333;
+  margin-top: 14px;
+}
+.position-deny__desc {
+  font-size: 14px;
+  color: #999;
+  margin-top: 10px;
+}
+.position-deny image {
+  width: 64px;
+  height: 67px;
+  margin-bottom: 20px;
+  margin: 100px auto 0 0;
+}

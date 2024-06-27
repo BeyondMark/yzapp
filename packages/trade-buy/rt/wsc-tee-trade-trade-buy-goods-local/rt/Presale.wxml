@@ -1,0 +1,6 @@
+<view class="a095e" style="{{themeCSS}}" wx:if="{{show}}">
+    <view class="c0d3b4 t-hairline--top">
+        <view class="c96c10 c89585">定金</view>
+        <view class="c95876 c3b8df c89585">{{text}}{{price}}</view>
+    </view>
+</view>

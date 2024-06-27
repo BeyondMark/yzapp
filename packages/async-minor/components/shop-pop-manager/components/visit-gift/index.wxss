@@ -1,0 +1,15 @@
+.icon__send-coupon {
+  width: 42px;
+  height: 50px;
+  background: url(https://img01.yzcdn.cn/public_files/2018/09/25/0d12be649e64d251cb5b066495cb14fe.png)
+    no-repeat 0 0 / contain;
+  position: fixed;
+  bottom: 115px;
+  right: 9px;
+  width: 48px;
+  height: 48px;
+  background: url(https://img01.yzcdn.cn/cdn/coupon-into-shop.png) no-repeat 0 0 /
+    contain;
+  z-index: 99;
+  cursor: pointer;
+}

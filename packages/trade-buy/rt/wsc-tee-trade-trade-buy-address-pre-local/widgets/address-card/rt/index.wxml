@@ -1,0 +1,24 @@
+<view class="page-container-class">
+    <view class="address-card">
+        <view bind:tap="_p" data-t="{{ tap:{en:'onClick'} }}" wx:if="{{hasAddress}}">
+            <a bind:_init="_tic" showArrow="{{addressEditable}}">
+                <view class="address__sub t-ellipsis"> {{area}} <c bind:_init="_tic" class="address-card__tag-root" color="{{themeTag.plain?'var(--tag-bg)':'var(--main-bg, #f2f2ff)'}}" customClass="address-card__tag" hairline="{{themeTag.plain}}" plain="{{themeTag.plain}}" round="{{true}}" textColor="{{themeTag.plain?'var(--tag-text)':'#fff'}}" wx:if="{{currentAddress.isDefault}}">            默认
+          </c>
+                    <c bind:_init="_tic" class="address-card__tag-root" color="{{themeTag.plain?'var(--tag-bg)':'var(--tag-bg, #f2f2ff)'}}" customClass="address-card__tag" hairline="{{themeTag.plain}}" plain="{{themeTag.plain}}" round="{{true}}" textColor="{{themeTag.plain?'var(--tag-text)':'var(--tag-text, #323233)'}}" wx:if="{{currentAddress.label}}"> {{currentAddress.label}} </c>
+                </view>
+                <view class="address__title t-ellipsis"> {{addressDetail}} </view>
+                <view class="address__sub t-ellipsis"> {{currentAddress.userName}}
+          {{maskedTel}} </view>
+            </a>
+            <view catch:tap="_p" class="address__tip" data-t="{{ tap:{en:'onEdit',et:'stop'} }}" style="{{addressTipsStyle}}" wx:if="{{showPoiPrompt}}">        为提高同城配送准确性，请进行地图定位选点
+        <b bind:_init="_tic" name="arrow"></b>
+            </view>
+        </view>
+        <a bind:_init="_tic" bind:tap="_p" data-t="{{ tap:{en:'onClick'} }}" wx:else>
+            <view class="address__sub t-ellipsis">        暂未获取到收货地址
+        
+      </view>
+            <view class="address__title t-ellipsis">请新建收货地址</view>
+        </a>
+    </view>
+</view>

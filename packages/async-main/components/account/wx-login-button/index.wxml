@@ -1,0 +1,10 @@
+<button bindagreeprivacyauthorization="handleAgreePrivacyAuth" bindgetphonenumber="handleGetMobile" bindtap="handleClick" buttonId="{{btnId}}" class="account-wx-button btn-class" openType="{{openType}}" phoneNumberNoQuotaToast="{{mobileQuotaToast}}" style="{{customStyle}}" wx:if="{{showWxButton}}">
+    <slot></slot>
+</button>
+<block wx:else>
+    <button bind:tap="handleShowLogin" class="account-wx-button btn-class" style="{{customStyle}}">
+        <slot></slot>
+    </button>
+    <a bind:closeAccountLogin="handlePopupClose" bind:loginFail="handleLoginYzFail" bind:loginSuccess="handleLoginYzSuccess" isFromAuthComponent="{{isFromAuthComponent}}" show="{{showYzLogin||autoShowYzLogin}}"></a>
+</block>
+<b id="van-toast"></b>

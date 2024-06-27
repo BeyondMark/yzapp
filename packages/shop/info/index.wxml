@@ -1,0 +1,1 @@
+<web-view src="https://h5.youzan.com/wscassets/shopinfo?kdt_id={{kdtId}}&show=supplier&no_footer=1&no_btn=1"></web-view>

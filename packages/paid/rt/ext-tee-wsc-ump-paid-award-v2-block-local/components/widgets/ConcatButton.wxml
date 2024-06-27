@@ -1,0 +1,3 @@
+<a bind:_init="_tic" bind:contact="_p" businessId="{{messageConcat.businessId}}" customClass="{{customClass}}" data-t="{{ contact:{en:'onContactBack'} }}" openType="contact" sendMessageImg="{{messageConcat.msgImg}}" sendMessagePath="{{messageConcat.messagePath}}" sendMessageTitle="{{messageConcat.messageTitle}}" sessionFrom="{{messageConcat.sessionFrom}}" showMessageCard="{{messageConcat.showMessageCard}}">
+    <slot></slot>
+</a>

@@ -1,0 +1,16 @@
+<d class="navigator" title="{{isFocus?focusTitle:normalTitle}}">
+    <view class="page-container">
+        <view class="search-container">
+            <a adjustPosition="{{false}}" alignLeft="{{true}}" bind:cancel="handleCancel" bind:change="handleInput" bind:focus="searchFocus" bind:search="handleSearch" cancelStyle="color: black" inputStyle="background: #f9f9f9; border-radius: 18px; height: 36px;" keyword="{{keyword}}" placeholder="{{placeholder}}" style="flex: auto" useCancel="{{useCancel}}"></a>
+            <view bind:tap="toAddAddress" class="add-address" wx:if="{{addCreate&&!isFocus}}">添加地址</view>
+        </view>
+        <e bind:onSelectKeyword="onSelectKeyword" hidden="{{!keyword.length&&isFocus}}" id="retail-shop-search-histroy" wx:if="{{isLocalRetailCustom&&isFocus&&(showHistory||!keyword)}}"></e>
+        <view hidden="{{isFocus}}">
+            <slot></slot>
+        </view>
+        <view class="shop-list-container">
+            <c bind:choose="handleChooseItem" blankContent="{{blankContent}}" hidden="{{hiddenShopList}}" hiddenTitle="{{hiddenListTitle}}" isOffline="{{isOffline}}" isFocus="{{isFocus}}" noMore="{{noMore}}" shopLists="{{shopLists}}" title="{{title}}" wx:if="{{isLocalRetailCustom}}"></c>
+            <b bind:choose="handleChooseItem" blankContent="{{blankContent}}" hidden="{{hiddenShopList}}" hiddenTitle="{{hiddenListTitle}}" isOffline="{{isOffline}}" noMore="{{noMore}}" shopLists="{{shopLists}}" title="{{title}}" wx:else></b>
+        </view>
+    </view>
+</d>

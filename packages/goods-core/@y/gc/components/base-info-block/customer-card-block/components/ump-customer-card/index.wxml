@@ -1,0 +1,18 @@
+<view class="b065e" style="{{bgStyle}}">
+    <view class="a7aad">
+        <view class="c6bb1f c89585" style="{{opt.smFontSize}}">￥</view>
+        <view class="c89585" style="{{opt.xlFontSize}}">{{opt.showPrice[0]}}</view>
+        <view class="c89585" style="{{opt.smFontSize}}" wx:if="{{opt.showPrice[1]}}">.{{opt.showPrice[1]}}</view>
+        <view class="c59660 c89585" wx:if="{{opt.isRange}}">起</view>
+    </view>
+    <view class="e7ceb">
+        <view class="aad27"> {{opt.cardContent.title}} </view>
+        <view class="c673ca">      距结束剩
+      <b bind:_init="_tic" bind:change="_p" data-t="{{ change:{en:'onChange'} }}" time="{{countdown}}" useSlot="{{true}}">
+                <view class="b9e95">{{countDownText}}</view>
+            </b>
+        </view>
+    </view>
+    <view class="ba6a7"> {{opt.cardContent.actionText}} <a bind:_init="_tic" name="arrow"></a>
+    </view>
+</view>

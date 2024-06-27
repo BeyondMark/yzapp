@@ -1,0 +1,106 @@
+<template name="image-item-top2end">
+    <view class="image__itemview image__top2end" style="margin-bottom: {{margin}}px">
+        <button bind:contact="handleContactBack" businessId="{{im.businessId||''}}" class="image-top2end-btn--transparent chat-btn" openType="contact" sessionFrom="{{im.sourceParam||''}}" wx:if="{{linkType==='chat'}}">
+            <image class="image-item" data-img-index="{{index}}" id="img-ad-{{index}}" lazyLoad="true" mode="aspectFill" src="{{imageUrl}}" style="width: {{showWidth}}rpx; height: {{showHeight}}rpx;"></image>
+        </button>
+        <view bind:tap="handleImageClick" data-img-index="{{index}}" wx:else>
+            <image class="image-item" id="img-ad-{{index}}" lazyLoad="true" mode="aspectFill" showMenuByLongpress="{{!linkUrl&&!linkType}}" src="{{imageUrl}}" style="width: {{showWidth}}rpx; height: {{showHeight}}rpx;"></image>
+        </view>
+        <block wx:if="{{linkType=='hotarea'&&hotAreas&&hotAreas.length}}">
+            <b appId="{{hotarea.extraData.otherWeappAppid}}" bind:contactback="handleContactBack" bind:navigate="handleHotareaNavigate" customStyle="position: absolute; left: 0; right: 0; top: 0; bottom: 0;" data-hotarea="{{hotarea}}" data-imgurl="{{imageUrl}}" im="{{im}}" linkType="{{hotarea.linkType}}" path="{{hotarea.extraData.otherWeappLink}}" shortLink="{{hotarea.extraData.shortLink}}" style="position: absolute; left: {{hotarea.left}}rpx; top: {{hotarea.top}}rpx; width: {{hotarea.width}}rpx; height: {{hotarea.height}}rpx;" useShortLink="{{hotarea.extraData.useShortLink==='1'||hotarea.extraData.useShortLink===1?1:0}}" wx:for="{{hotAreas}}" wx:for-item="hotarea" wx:key="unique"></b>
+        </block>
+        <view class="image__title zan-ellipsis" wx:if="{{title}}">{{title}}</view>
+    </view>
+</template>
+<template name="image-item-swiper">
+    <view class="image-item__wrapper" style="padding-left: {{pageMargin}}px; padding-right: {{pageMargin}}px;">
+        <image class="image-item" lazyLoad="true" mode="{{imageFillStyle}}" src="{{imageUrl}}" style="width: 100%; height: {{swipeHeight}}rpx;"></image>
+        <view class="image__title zan-ellipsis" style="margin: 0 {{pageMargin}}px;" wx:if="{{title}}">{{title}}</view>
+    </view>
+</template>
+<template name="text-item-nav">
+    <view>
+        <view class="text-nav__title" style="color: {{color}}">{{title}}</view>
+    </view>
+</template>
+<template name="image-item-nav">
+    <view>
+        <view class="image-nav__itemview" style="background-color: {{backgroundColor}}; color: {{color}}">
+            <image class="scroll-image__item image-item" mode="aspectFill" src="{{imageUrl}}" style="height: {{showHeight}}px; width: {{showWidth}}px"></image>
+            <view class="image-nav__text" style="max-width: {{showWidth}}px" wx:if="{{title}}">{{title}}</view>
+        </view>
+    </view>
+</template>
+<template name="image-item-scroll">
+    <view>
+        <view class="image__itemview" style="height: {{showHeight}}rpx; width: {{showWidth}}rpx; margin-right: {{borderWidth}}px;">
+            <image class="scroll-image__item image-item" lazyLoad="true" mode="aspectFill" src="{{imageUrl}}" style="height: {{showHeight}}rpx; width: {{showWidth}}rpx"></image>
+            <view class="scroll-image__item-title scroll-image__item-title-{{slideShowCnt>2?'small':'big'}}" wx:if="{{title}}">{{title}}</view>
+        </view>
+    </view>
+</template>
+<view class="cap-image {{'cap-image__'+useScene}} {{imageStyle===IMAGE_STYLE_MAP.shadow?'cap-image__img-shadow':''}} {{cornerType===CORNER_TYPE_MAP.fillet?'cap-image__fillet':''}} {{currentItemHasTitle?'has-title':''}}" style="margin: 0 {{SHOW_TYPES.SWIPE===showType||SHOW_TYPES.SLIDE===showType?0:pageMargin}}px; background-color: {{backgroundColor&&backgroundColor||'transparent'}}">
+    <block wx:if="{{showType==='swipe'}}">
+        <swiper autoplay="{{true}}" bind:change="handleImageChange" circular="{{true}}" class="cap-image-swiper" style="height: {{swipeHeight+(imageStyle===IMAGE_STYLE_MAP.shadow?60:0)}}rpx;">
+            <block wx:for="{{listData}}" wx:key="unique">
+                <swiper-item bind:tap="handleImageClick" data-img-index="{{index}}" style="position: absolute;" wx:if="{{item.linkType!=='chat'}}">
+                    <template is="image-item-swiper" data="{{swipeHeight:swipeHeight,imageFillStyle:imageFillStyle,...item,pageMargin:pageMargin}}"></template>
+                </swiper-item>
+                <swiper-item data-component-index="{{componentIndex}}" data-img-index="{{index}}" style="position: absolute;" wx:else>
+                    <button bind:contact="handleContactBack" businessId="{{im.businessId||''}}" class="image-swipe-btn--transparent chat-btn" openType="contact" sessionFrom="{{im.sourceParam||''}}">
+                        <template is="image-item-swiper" data="{{swipeHeight:swipeHeight,...item,pageMargin:pageMargin}}"></template>
+                    </button>
+                </swiper-item>
+            </block>
+        </swiper>
+        <block wx:if="{{listData.length>1}}">
+            <view class="cap-indicator cap-indicator--{{indicator}} " wx:if="{{indicator==1||indicator==2}}">
+                <view class="cap-indicator__dot {{index===current?'cap-indicator__dot--active':''}}" wx:for="{{listData}}" wx:key="unique"></view>
+            </view>
+            <view class="cap-indicator cap-indicator--3" style="right: {{15+pageMargin}}px;" wx:elif="{{indicator==3}}">
+                <a color="main-bg" customClass="cap-indicator__dot--active">{{current+1}}</a>/{{listData.length}}</view>
+            <view class="cap-indicator cap-indicator--4" style="right: {{15+pageMargin}}px;" wx:elif="{{indicator==4}}">
+                <text class="cap-indicator__dot">{{current+1}}/{{listData.length}}</text>
+            </view>
+        </block>
+    </block>
+    <scroll-view class="image__scrollview" scrollX="true" wx:elif="{{showType==='slide'}}">
+        <view class="image__scrollview-container" style="box-sizing: border-box; width: {{slideTotalWidth}}rpx; padding-left: {{pageMargin}}px; padding-right: {{pageMargin}}px; ">
+            <block wx:for="{{listData}}" wx:key="unique">
+                <button bind:contact="handleContactBack" businessId="{{im.businessId||''}}" class="image-slide-btn--transparent chat-btn image__scrollview-item" openType="contact" sessionFrom="{{im.sourceParam||''}}" wx:if="{{item.linkType==='chat'}}">
+                    <template is="image-item-scroll" data="{{borderWidth:borderWidth,slideShowCnt:slideShowCnt,imageFillStyle:imageFillStyle,...item}}"></template>
+                </button>
+                <view bind:tap="handleImageClick" class="image__scrollview-item" data-img-index="{{index}}" wx:else>
+                    <template is="image-item-scroll" data="{{imageFillStyle:imageFillStyle,borderWidth:borderWidth,slideShowCnt:slideShowCnt,...item}}"></template>
+                </view>
+            </block>
+        </view>
+    </scroll-view>
+    <scroll-view class="image__scrollview" scrollX="{{fixedMode?false:true}}" wx:elif="{{showType==='image_nav'}}">
+        <view class="image__scrollview-container">
+            <block wx:for="{{listData}}" wx:key="unique">
+                <button bind:contact="handleContactBack" businessId="{{im.businessId||''}}" class="image-imgnav-btn--transparent chat-btn" openType="contact" sessionFrom="{{im.sourceParam||''}}" wx:if="{{item.linkType==='chat'}}">
+                    <template is="image-item-nav" data="{{imageFillStyle:imageFillStyle,backgroundColor:backgroundColor,color:color,...item}}"></template>
+                </button>
+                <view bind:tap="handleImageClick" data-img-index="{{index}}" wx:else>
+                    <template is="image-item-nav" data="{{imageFillStyle:imageFillStyle,backgroundColor:backgroundColor,color:color,...item}}"></template>
+                </view>
+            </block>
+        </view>
+    </scroll-view>
+    <scroll-view class="image__scrollview" scrollX="{{fixedMode?false:true}}" wx:elif="{{showType==='text_nav'}}">
+        <view class="text-nav__item-wraper">
+            <block wx:for="{{listData}}" wx:key="unique">
+                <button bind:contact="handleContactBack" businessId="{{im.businessId||''}}" class="text-nav__itemview image-textnav-btn--transparent chat-btn" openType="contact" sessionFrom="{{im.sourceParam||''}}" style="width: {{fixedMode?'auto':textNavShowWidth+'rpx'}}; background-color: {{backgroundColor}}; flex: {{fixedMode?1:'none'}};" wx:if="{{item.linkType==='chat'}}">
+                    <template is="text-item-nav" data="{{imageFillStyle:imageFillStyle,color:color,...item,fixedMode:fixedMode}}"></template>
+                </button>
+                <view bind:tap="handleImageClick" class="text-nav__itemview" data-img-index="{{index}}" style="width: {{fixedMode?'auto':textNavShowWidth+'rpx'}}; background-color: {{backgroundColor}}; flex: {{fixedMode?1:'none'}};" wx:else>
+                    <template is="text-item-nav" data="{{imageFillStyle:imageFillStyle,color:color,...item,fixedMode:fixedMode}}"></template>
+                </view>
+            </block>
+        </view>
+    </scroll-view>
+    <view class="image__top2end-wrapper" wx:else>
+        <template is="image-item-top2end" data="{{index:index,...item,componentIndex:componentIndex,hasHotArea:hasHotArea,margin:borderWidth,imageFillStyle:imageFillStyle,im:im}}" wx:for="{{listData}}" wx:key="index"></template>
+    </view>
+</view>

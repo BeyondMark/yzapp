@@ -1,0 +1,1 @@
+<text style="color: {{utils.isHighlight(highlightText,item)?highlightColor:color}}" wx:for="{{textArray}}" wx:key="*this">{{item}}</text>

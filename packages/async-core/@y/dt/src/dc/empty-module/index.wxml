@@ -1,0 +1,10 @@
+<view class="dc-empty-module">
+    <view class="content">
+        <image class="image tee-image" lazyLoad="true" mode="widthFix" src="https://img01.yzcdn.cn/upload_files/2021/05/22/FumLAfynGFClQkfbReA_duu33L0U.png"></image>
+    </view>
+    <view class="recommend">
+        <view class="button">
+            <view bind:tap="_p" class="navigator-btn t-text" data-t="{{ tap:{en:'handleGoHome'} }}"> 进店逛逛 </view>
+        </view>
+    </view>
+</view>

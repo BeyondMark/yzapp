@@ -1,0 +1,33 @@
+.task-award-main {
+  position: relative;
+  display: block;
+  background: #fff;
+  margin-top: 8px;
+  overflow: auto;
+}
+.task-award-main .task-award-content,
+.task-award-main .task-award-van-cell .van-cell__title {
+  display: flex;
+  align-items: center;
+}
+.task-award-main .task-award-info__title {
+  font-weight: 500;
+  font-size: 14px;
+  color: #323233;
+  line-height: 20px;
+  margin-right: 8px;
+}
+.task-award-main .task-award-info__icon {
+  margin-right: 4px;
+  line-height: 20px;
+}
+.task-award-main .task-award-info__desc {
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 20px;
+  margin-right: 6px;
+}
+.task-award-main .red-theme {
+  font-weight: 500;
+  color: #f44;
+}

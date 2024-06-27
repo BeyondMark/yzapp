@@ -1,0 +1,24 @@
+{
+  "navigationStyle": "custom",
+  "backgroundColor": "#f7f7f7",
+  "usingComponents": {
+    "a": "/packages/shop/ump/sign-in/extensions/page-block/widgets/sign-in-page/rt/index",
+    "b": "/packages/async-main/@vant/weapp/dist/toast/index",
+    "c": "/packages/async-main/@vant/weapp/dist/dialog/index",
+    "d": "/packages/async-feature-ext/rt/wsc-tee-dc-feature-user-authorize-popup-local/rt/Main",
+    "e": "/ext-tee-wsc-dc/extensions/page-style/rt/Main",
+    "f": "./../../rt/wsc-tee-dc-navigation-bar-local/rt/NavigationBar",
+    "g": "/packages/async-feature-ext/rt/ext-tee-wsc-goods-biz-sku-manage-local/rt/Main",
+    "h": "../../../async-tee/@y-open/vt/native/weapp/toast/index/index",
+    "i": "../../../async-tee/@y-open/vt/native/weapp/dialog/index/index",
+    "_": "../../../../components/_/index"
+  },
+  "componentPlaceholder": {
+    "b": "_",
+    "c": "_",
+    "d": "_",
+    "g": "_",
+    "h": "_",
+    "i": "_"
+  }
+}

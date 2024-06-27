@@ -1,0 +1,28 @@
+<a bind:_init="_tic" customStyle="display: flex;padding: 12px;height: 144px;justify-content: space-between;background-image: url('https://img01.yzcdn.cn/upload_files/2023/09/13/FiyphvZYtNE_n0xSxgjg2aRjddRG.png');background-repeat: no-repeat;background-size: 100% 100%;" isWxReceipt="{{isWxReceipt}}">
+    <view>
+        <view class="d5d3d">{{info.title}}</view>
+        <view class="e4c94" wx:if="{{isPerson}}">
+            <image class="baec6 bd231" lazyLoad="true" src="{{cloudConfig.activityCodeCustomerIcon||'https://b.yzcdn.cn/public_files/b48d25e3fd8e8b0c8fba0f7a630f501c.png'}}" style="width: 60px"></image>      售后、商品上新都问我
+    </view>
+        <view class="e4c94" wx:else>
+            <image class="baec6 bd231" lazyLoad="true" src="{{cloudConfig.activityCodePreferentialIcon||'https://b.yzcdn.cn/public_files/7f7118cbfef177a1875d269a925c836c.png'}}" style="width: 50px"></image>限时抢购、商品上新福利
+    </view>
+        <view class="c0d9c8" wx:if="{{!isWxReceipt}}">
+            <image class="d42dc bd231" lazyLoad="true" src="https://b.yzcdn.cn/public_files/8d84791002a76fa071039b5cba32dc35.svg"></image>
+            <view style="margin: 0 4px">长按识别二维码{{isPerson?'立即添加':'立即加群'}}</view>
+            <image class="fe763 bd231" lazyLoad="true" src="https://b.yzcdn.cn/public_files/12ce371fdd87272ca09f8a363944dd34.svg"></image>
+        </view>
+    </view>
+    <view wx:if="{{!isWxReceipt}}">
+        <image bind:touchstart="_p" class="c4441c bd231" data-t="{{ touchstart:{en:'longTouch'} }}" lazyLoad="true" mode="aspectFit" showMenuByLongpress="{{true}}" src="{{info.activityQrUrl}}"></image>
+        <view class="c9eab">
+            <view class="c1cb25">无法识别？</view>
+            <b bind:_init="_tic" bind:after-contact="_p" customClass="c2249b" data-t="{{ afterContact:{en:'afterContact'} }}" h5Link="{{info.detailUrl}}" navigateTo="{{navigateTo}}">
+                <view class="c09da5">点击此处</view>
+            </b>
+        </view>
+    </view>
+    <view wx:if="{{isWxReceipt}}">
+        <c bind:_init="_tic" bind:tap="_p" class="ce50a" color="{{themeColor}}" data-t="{{ tap:{en:'clickBtn'} }}" round="{{true}}" size="small">{{isPerson?'立即添加':'立即加群'}}</c>
+    </view>
+</a>

@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-tee/@y-open/vt/native/weapp/dialog/index/index",
+    "b": "./yz-mobile/index",
+    "c": "./yz-protocol/index",
+    "d": "./yz-authorize/index",
+    "e": "./yz-user-info/index",
+    "f": "./yz-external/index",
+    "_": "../../../../../../../../../components/_/index"
+  }
+}

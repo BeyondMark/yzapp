@@ -1,0 +1,4 @@
+<view class="empty-view__container">
+    <image src="{{image||'https://img01.yzcdn.cn/weapp/wsc/uR7rur.png'}}"></image>
+    <text class="van-c-gray van-font-14">{{text}}</text>
+</view>

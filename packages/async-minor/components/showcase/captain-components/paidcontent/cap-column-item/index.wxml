@@ -1,0 +1,1 @@
+<a bottomCornerClass="{{isPaid?'':'theme-color'}}" bottomCornerText="{{computed.priceText}}" bottomTagText="{{computed.priceTagText}}" class="cap-column-item" statusList="{{computed.statusList}}" subtitle="{{computed.subtitle}}" thumbnail="{{computed.thumbnailUrl}}" title="{{column.title}}" url="{{computed.columnUrl}}"></a>

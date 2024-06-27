@@ -1,0 +1,3 @@
+<view>
+    <a bind:_init="_tic" buttonText="{{layoutConfig.buttonText}}" imageFillStyle="{{layoutConfig.imageFillStyle}}" imageRatio="{{layoutConfig.imageRatio}}" isSkyline="{{isSkyline}}" layout="{{layoutConfig.layout}}" layoutConfig="{{layoutConfig}}" list="{{list}}" logger="{{logger}}" openSwipePagination="{{layoutConfig.openSwipePagination}}" showCornerMark="{{layoutConfig.showCornerMark}}" showMoreButton="{{layoutConfig.showMoreButton}}" showOriginPrice="{{layoutConfig.showOriginPrice}}" showPriceLabel="{{layoutConfig.showPriceLabel}}" showSubTitle="{{layoutConfig.showSubTitle}}" showUmpAmbience="{{layoutConfig.showUmpAmbience}}" themeColors="{{themeColors}}"></a>
+</view>

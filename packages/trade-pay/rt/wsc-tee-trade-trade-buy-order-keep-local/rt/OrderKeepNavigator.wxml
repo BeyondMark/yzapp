@@ -1,0 +1,18 @@
+<view>
+    <view class="c2cb60" slot="page-top-hook" style="height: {{height}}px; z-index: 998;" wx:if="{{canUseNav}}">
+        <view class="c0eb6e" style="height: {{height}}px; z-index: 998;">
+            <view class="eb28c" style="height: {{height}}px;">
+                <view class="c554f1" style="{{customIconStyle}}">
+                    <view bind:tap="_p" class="c8c343" data-t="{{ tap:{en:'onBackTap'} }}">
+                        <b bind:_init="_tic" name="arrow-left" size="20px"></b>
+                    </view>
+                </view>
+                <view class="c7e5de" style="padding-top: {{paddingTop}}px;">
+                    <c bind:_init="_tic" customTop="{{paddingTop}}" goodsList="{{goodsList}}" navBarText="{{titleText}}" show="{{showTradeCarousel}}" wx:if="{{showTradeCarousel&&initShow}}"></c>
+                    <view class="c89585" style="font-size: {{fontSizeSetting}}px;" wx:else> {{titleText}} </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <a bind:_init="_tic" bind:close="_p" bind:confirm="_p" data-t="{{ close:{en:'orderKeepGiveup'},confirm:{en:'orderKeepComfirm'} }}" displayData="{{displayData}}" rmId="{{rmId}}" show="{{showOrderkeep}}" wx:if="{{rmId==='b38-24'}}"></a>
+</view>

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "权益卡列表",
+  "navigationBarBackgroundColor": "#FFF",
+  "usingComponents": {
+    "a": "/components/znb-web-view/index",
+    "_": "../../../components/_/index"
+  }
+}

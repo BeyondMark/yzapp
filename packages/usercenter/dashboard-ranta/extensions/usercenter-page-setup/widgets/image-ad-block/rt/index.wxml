@@ -1,0 +1,1 @@
+<a bind:contactback="handleContactBack" bind:itemChange="handleImageChange" bind:itemClick="handleImageClick" bind:navigate="handleImageClick" images="{{images}}" pageMargin="20" swipeFill="{{true}}" template="{{template}}" useScene="usercenter"></a>

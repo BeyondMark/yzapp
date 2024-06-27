@@ -1,0 +1,28 @@
+<view class="fa618 {{explainVideoFullScreen?'c69848':''}}">
+    <block wx:if="{{pageReady}}">
+        <block wx:if="{{rmId==='b7-39'}}">
+            <c bind:_init="_tic" rmId="b7-11"></c>
+            <d bind:_init="_tic" rmId="b7-27"></d>
+            <e bind:_init="_tic" rmId="b7-33"></e>
+            <f bind:_init="_tic" rmId="b7-56"></f>
+            <g bind:_init="_tic" rmId="b7-35"></g>
+            <h bind:_init="_tic" rmId="b7-37"></h>
+            <i bind:_init="_tic" rmId="b7-42"></i>
+        </block>
+        <e bind:_init="_tic" rmId="b33-19" wx:if="{{rmId==='b33-5'}}"></e>
+        <n bind:_init="_tic" bind:dmc-jump="_p" bind:log="_p" ctxObj="{{loggerObj}}" data-t="{{ log:{en:'doLog'},dmcJump:{en:'dmcJump'} }}" goodsBaseInfo="{{goodsBaseInfo}}" kdtId="{{kdtId}}" marketing="{{marketing}}" offlineId="{{offlineId}}" themeVars="{{themeVars}}" wx:if="{{showMakeupOrder&&openGoodsMakeupOrder}}"></n>
+        <o bind:_init="_tic" bind:dmc-jump="_p" data-t="{{ dmcJump:{en:'dmcJump'} }}" goodsBaseInfo="{{goodsBaseInfo}}" routeData="{{routeData}}" shopBaseInfo="{{shopBaseInfo}}" shopMpInfo="{{shopMpInfo}}" themeVars="{{themeVars}}"></o>
+        <p bind:_init="_tic" bind:dmc-jump="_p" bind:stock-reminder-success="_p" data-t="{{ dmcJump:{en:'dmcJump'},stockReminderSuccess:{en:'handleReminderSuccess'} }}" goodsActivity="{{goodsActivity}}" goodsBaseInfo="{{goodsBaseInfo}}" goodsMetaInfo="{{goodsMetaInfo}}" kdtId="{{kdtId}}" serverStatus="{{serverStatus}}" staticConfig="{{staticConfig}}" themeVars="{{themeVars}}" umpActivity="{{umpActivity}}"></p>
+        <q bind:_init="_tic" bind:update-icon="_p" data-t="{{ updateIcon:{en:'updateIcon'} }}" goodsBaseInfo="{{goodsBaseInfo}}"></q>
+        <j bind:_init="_tic" bind:dmc-jump="_p" data-t="{{ dmcJump:{en:'dmcJump'} }}" goodsBaseInfo="{{goodsBaseInfo}}"></j>
+        <k bind:_init="_tic" shopBaseInfo="{{shopBaseInfo}}" shopMpInfo="{{shopMpInfo}}" themeVars="{{themeVars}}"></k>
+        <goods-showcase bind:_init="_tic"></goods-showcase>
+        <l alias="{{alias}}" bind:_init="_tic" bind:dmc-jump="_p" currentActivity="{{currentActivity}}" data-t="{{ dmcJump:{en:'dmcJump'} }}" kdtId="{{kdtId}}"></l>
+        <m bind:_init="_tic"></m>
+        <block wx:if="{{showVisitGift}}">
+            <a bind:_init="_tic" bind:wechat-subscribe-message-push="_p" data-t="{{ wechatSubscribeMessagePush:{en:'handleWechatSubscribeMessagePush'} }}" getUserInfo="{{getUserInfo}}" hideProtocol="{{1}}" kdtId="{{kdtId}}" rmId="{{i[0]}}" wx:if="{{i[1]}}" wx:for="{{[ [rmId,rmId==='b7-39'],[rmId,rmId==='b33-5'] ]}}" wx:for-item="i" wx:key="0"></a>
+        </block>
+    </block>
+    <b bind:_init="_tic" rmId="@passport-tee/user-authorize~DDdJBmWG" wx:if="{{rmId==='b7-39'||rmId==='b33-5'}}"></b>
+    <r bind:_init="_tic" wx:if="{{!hideProtocol}}"></r>
+</view>

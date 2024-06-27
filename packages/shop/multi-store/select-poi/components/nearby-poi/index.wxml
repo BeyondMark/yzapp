@@ -1,0 +1,8 @@
+<view class="container near-poi list">
+    <view class="h4">附近地址</view>
+    <view class="scroll-block">
+        <view bindtap="handleClick" class="item zan-cell zan-field" data-poi="{{poi}}" wx:for="{{list}}" wx:for-item="poi" wx:key="index">
+            <view class="p zan-field__title">{{poi.title}}</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,8 @@
+<a bind:close="onClosePop" customClass="share-activity-pop" customStyle="height: {{safeBottom?300:265}}px;" position="bottom" round="{{true}}" show="{{showPop}}" zIndex="{{900}}" wx:if="{{init}}">
+    <view class="share-activity-pop__header">登录提示</view>
+    <view class="share-activity-pop__main">你还没有登录，登录后浏览商品好友可获得分享奖励，你也可以分享获得好礼！</view>
+    <b authTypeList="{{['mobile']}}" bind:fail="onClosePop" bind:next="joinActivity">
+        <c bg="main-bg" block="{{true}}" color="main-text" customClass="share-activity-pop__btn">立即登录</c>
+    </b>
+    <view bind:tap="onClosePop" class="share-activity-pop__bottom">暂不登录，先逛逛</view>
+</a>

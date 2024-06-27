@@ -1,0 +1,14 @@
+<view class="{{isIphoneX?'is-iphone-x':'is-not-x'}}">
+    <view class="{{hasButton?'has-btn':'no-btn'}}">
+        <view class="subscribe-box  {{!hideMsgOperation?'to-show':'to-hide'}}">
+            <view class="subscribe-box_body {{hasTabbar?'box-bottom':''}}">
+                <view class="subscribe-box_btn" style="background-image: url({{bgUrl}}); background-size: cover; backgroud-repeat: no-repeat;">
+                    <view bindtap="handleSubscribe" class="subscribe-box_confirm">
+                        <image class="icon" src="{{iconUrl}}"></image>
+                        <view class="tips">有活动时通知我</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

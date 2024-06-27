@@ -1,0 +1,20 @@
+.r-c {
+  flex-direction: column;
+}
+.r-c,
+.r-r {
+  display: flex;
+}
+.r-r {
+  flex-direction: row;
+}
+.KMfSzE {
+  z-index: 100000;
+}
+.iWHYRp,
+.KMfSzE {
+  position: relative;
+}
+.iWHYRp {
+  z-index: 999999;
+}

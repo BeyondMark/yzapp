@@ -1,0 +1,3 @@
+.shopnote-single-product__content {
+  padding: 0 15px;
+}

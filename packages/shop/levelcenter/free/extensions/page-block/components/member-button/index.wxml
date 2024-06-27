@@ -1,0 +1,3 @@
+<a authTypeList="{{['mobile']}}" bind:next="handleButtonConfirm" bizDataMap="{{bizDataMap}}">
+    <view class="bottom-btn">{{neededMoreStoreBalance?'充值入会':'加入会员'}}</view>
+</a>

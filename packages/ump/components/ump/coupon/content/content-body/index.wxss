@@ -1,0 +1,24 @@
+.coupon-contentbody__disabled .coupon-contentbody__content,
+.coupon-contentbody__disabled .coupon-contentbody__extra {
+  color: #969799;
+}
+.coupon-contentbody__unavailable .coupon-contentbody__content,
+.coupon-contentbody__unavailable .coupon-contentbody__extra {
+  color: #c8c9cc;
+}
+.coupon-contentbody {
+  display: flex;
+  font-size: 14px;
+  line-height: 18px;
+}
+.coupon-contentbody__content {
+  overflow: hidden;
+  color: #323233;
+  font-weight: 500;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.coupon-contentbody__extra {
+  flex: 0 0 auto;
+  color: #969799;
+}

@@ -1,0 +1,21 @@
+.e1c9b {
+  position: relative;
+  padding: 30px 0;
+  background: #fff;
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+}
+.e1c9b .c48a17 {
+  display: block;
+  height: 60px;
+  background: url(https://img01.yzcdn.cn/public_files/2019/01/30/d49cb17b1bc9246f2d166276c7bfdc09.png)
+    no-repeat 50%;
+  background-size: 60px 60px;
+}
+.e1c9b .b9c37 {
+  margin-top: 10px;
+}
+.e1c9b .e4c94 {
+  line-height: 20px;
+}

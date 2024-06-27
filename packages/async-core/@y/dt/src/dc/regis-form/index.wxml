@@ -1,0 +1,23 @@
+<view class="dc-regis-form">
+    <e _opt="{{headerOpt}}" bind:_init="_tic"></e>
+    <view class="field-list">
+        <b bind:_init="_tic">
+            <view wx:for="{{list}}" wx:key="itemId">
+                <m bind:_init="_tic" bind:change="_p" data-t="{{ change:{en:'changeFormData'} }}" fieldInfo="{{item}}" fieldStyle="{{fieldStyle}}" fieldValue="{{formData[item.itemId].value}}" type="{{item.itemType===1?'number':'text'}}" wx:if="{{item.itemType===0||item.itemType===1}}"></m>
+                <h bind:_init="_tic" bind:change="_p" data-t="{{ change:{en:'changeFormData'} }}" fieldInfo="{{item}}" fieldStyle="{{fieldStyle}}" fieldValue="{{formData[item.itemId].value}}" wx:elif="{{item.itemType===2}}"></h>
+                <f bind:_init="_tic" bind:change="_p" data-t="{{ change:{en:'changeFormData'} }}" fieldInfo="{{item}}" fieldStyle="{{fieldStyle}}" fieldValue="{{formData[item.itemId].value}}" wx:elif="{{item.itemType===9}}"></f>
+                <g bind:_init="_tic" bind:change="_p" data-t="{{ change:{en:'changeFormData'} }}" fieldInfo="{{item}}" fieldValue="{{formData[item.itemId].value}}" wx:elif="{{item.itemType===5}}"></g>
+                <i bind:_init="_tic" bind:change="_p" data-t="{{ change:{en:'changeFormData'} }}" detailAddress="{{item.itemType===6}}" fieldInfo="{{item}}" fieldStyle="{{fieldStyle}}" fieldValue="{{formData[item.itemId].value}}" wx:elif="{{item.itemType===6||item.itemType===3}}"></i>
+                <j bind:_init="_tic" bind:change="_p" data-t="{{ change:{en:'changeFormData'} }}" fieldInfo="{{item}}" fieldValue="{{formData[item.itemId].value}}" options="{{item.itemValueList}}" themeColors="{{themeColors}}" wx:elif="{{item.itemType===8}}"></j>
+                <k bind:_init="_tic" bind:change="_p" data-t="{{ change:{en:'changeFormData'} }}" fieldInfo="{{item}}" fieldValue="{{formData[item.itemId].value}}" wx:elif="{{item.itemType===4}}"></k>
+                <l bind:_init="_tic" bind:change="_p" data-t="{{ change:{en:'changeFormData'} }}" fieldInfo="{{item}}" fieldStyle="{{fieldStyle}}" fieldValue="{{formData[item.itemId].value}}" themeColors="{{themeColors}}" wx:elif="{{item.itemType===7}}"></l>
+            </view>
+        </b>
+    </view>
+    <d bind:_init="_tic" bind:tap="_p" businessModule="owlMiniProgram" data-t="{{ tap:{en:'submit'} }}">
+        <view class="footer-operate">
+            <c bind:_init="_tic" color="{{themeColors.general}}" customClass="submit-btn" loading="{{isSubmit}}" loadingText="提交中" size="large" type="danger"> {{opt.submitText}} </c>
+        </view>
+    </d>
+    <a bind:_init="_tic" data-ref="van-toast"></a>
+</view>

@@ -1,0 +1,8 @@
+<b authTypeList="{{['nicknameAndAvatar']}}" bind:next="goto" bindgetuserinfo="handleBindGetUserInfo" data-nav="authorize">
+    <view class="benefit-wrapper">
+        <view class="benefit-content">{{memberVoucher.text}}</view>
+        <view class="benefit-action">
+            <a color="#999" name="arrow" size="16"></a>
+        </view>
+    </view>
+</b>

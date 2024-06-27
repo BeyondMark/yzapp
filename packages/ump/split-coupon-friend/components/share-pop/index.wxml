@@ -1,0 +1,12 @@
+<view>
+    <a bind:cancel="onCancel" bind:click-overlay="onCancel" bind:select="onSelect" cancelText="取消" options="{{actions}}" show="{{sheetShow}}"></a>
+    <b bind:click-overlay="onClose" customClass="share-popup" show="{{showPoster}}">
+        <view class="share-popup__close">
+            <c bind:tap="onClose" color="#fff" name="close" size="21px"></c>
+        </view>
+        <view class="share-popup__content">
+            <image class="share-popup__content_img" src="{{posterUrl}}"></image>
+        </view>
+        <d bind:tap="savePoster" customClass="share-popup__tip" round="{{true}}" type="danger">保存海报，发送给好友</d>
+    </b>
+</view>

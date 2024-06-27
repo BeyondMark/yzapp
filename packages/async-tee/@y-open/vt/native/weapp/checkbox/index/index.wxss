@@ -1,0 +1,77 @@
+.t-checkbox {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  user-select: none;
+}
+.t-checkbox__icon-wrap,
+.t-checkbox__label {
+  line-height: 20px;
+  line-height: var(--checkbox-size, 20px);
+}
+.t-checkbox__icon-wrap {
+  flex: none;
+  width: 1em;
+  height: 1em;
+}
+.t-checkbox__icon {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  color: transparent;
+  text-align: center;
+  transition-property: color, background-color;
+  font-size: 20px;
+  font-size: var(--checkbox-size, 20px);
+  border: 1px solid #c8c9cc;
+  border: 1px solid var(--checkbox-border-color, #c8c9cc);
+  transition-duration: 0.2s;
+  transition-duration: var(--checkbox-transition-duration, 0.2s);
+  background-color: #fff;
+  background-color: var(--checkbox-background-color, #fff);
+}
+.t-checkbox__icon--round {
+  border-radius: 100%;
+}
+.t-checkbox__icon--checked {
+  color: #fff;
+  color: var(--white, #fff);
+  background-color: #1989fa;
+  background-color: var(--checkbox-checked-icon-color, #1989fa);
+  border-color: #1989fa;
+  border-color: var(--checkbox-checked-icon-color, #1989fa);
+}
+.t-checkbox__icon--disabled {
+  background-color: #ebedf0;
+  background-color: var(--checkbox-disabled-background-color, #ebedf0);
+  border-color: #c8c9cc;
+  border-color: var(--checkbox-disabled-icon-color, #c8c9cc);
+}
+.t-checkbox__icon--disabled.t-checkbox__icon--checked {
+  color: #c8c9cc;
+  color: var(--checkbox-disabled-icon-color, #c8c9cc);
+}
+.t-checkbox__label {
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-left: var(--checkbox-label-margin, 10px);
+  color: #323233;
+  color: var(--checkbox-label-color, #323233);
+}
+.t-checkbox__label--left {
+  float: left;
+  margin: 0 10px 0 0;
+  margin: 0 var(--checkbox-label-margin, 10px) 0 0;
+}
+.t-checkbox__label--disabled {
+  color: #c8c9cc;
+  color: var(--checkbox-disabled-label-color, #c8c9cc);
+}
+.t-checkbox__label:empty {
+  margin: 0;
+}

@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "跨店优惠券",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "a": "../components/coupon-item/index",
+    "b": "../components/empty/index",
+    "c": "../../../async-main/@vant/weapp/dist/loading/index",
+    "_": "../../../../components/_/index"
+  },
+  "componentPlaceholder": { "c": "_" }
+}

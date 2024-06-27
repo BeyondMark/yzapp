@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../promotion-pop-block/rt/index",
+    "b": "/packages/shop/@vant/weapp/dist/cell/index",
+    "_": "../../../../../../../../../components/_/index"
+  }
+}

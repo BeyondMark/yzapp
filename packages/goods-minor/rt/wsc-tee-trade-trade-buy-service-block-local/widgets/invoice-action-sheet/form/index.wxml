@@ -1,0 +1,12 @@
+<view class="new-invoice">
+    <view class="f71bb">
+        <view class="c1398e" wx:if="{{disabled}}"> {{text}} </view>
+        <view wx:else>
+            <d bind:_init="_tic" bind:open-goods-message="_p" data-t="{{ openGoodsMessage:{en:'openInvalidGoodMessage'} }}" goods="{{goods}}" wx:if="{{isElectronic}}"></d>
+            <b bind:_init="_tic" bind:assign-invoice-common="_p" bind:assign-invoice-enterprise="_p" bind:assign-invoice-personal="_p" bind:assign-invoice-type="_p" bind:open-invoice-tips="_p" data-t="{{ openInvoiceTips:{en:'onOpenInvoiceTips'},assignInvoiceCommon:{en:'modifyCommon'},assignInvoiceType:{en:'modifyInvoiceType'},assignInvoiceEnterprise:{en:'modifyEnterprise'},assignInvoicePersonal:{en:'modifyPersonal'} }}" invoice="{{internalInvoice}}" invoiceLimitType="{{invoiceLimitType}}" invoiceType="{{invoiceType}}" raiseType="{{raiseType}}" themeColors="{{themeColors}}"></b>
+            <c bind:_init="_tic" bind:assign-invoice-enterprise="_p" bind:assign-invoice-personal="_p" data-t="{{ assignInvoiceEnterprise:{en:'modifyEnterprise'},assignInvoicePersonal:{en:'modifyPersonal'} }}" invoice="{{internalInvoice}}" invoiceDetailTypeSwitch="{{invoiceDetailTypeSwitch}}" raiseType="{{raiseType}}"></c>
+            <e bind:_init="_tic" bind:assign-invoice-common="_p" data-t="{{ assignInvoiceCommon:{en:'modifyMessage'} }}" invoice="{{internalInvoice}}"></e>
+        </view>
+        <a bind:_init="_tic" data-ref="new-invoice-toast"></a>
+    </view>
+</view>

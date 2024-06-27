@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y/dt/src/captain/layout/layout",
+    "b": "/@y/dt/src/captain/layout/layout-item",
+    "c": "./../../../../captain/coupon/index",
+    "d": "/@y/ppt/lib/user-authorize/index",
+    "_": "../../../../../../../../../components/_/index"
+  }
+}

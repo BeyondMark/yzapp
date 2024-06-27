@@ -1,0 +1,19 @@
+<view class="{{'d324e'}} {{showEstimatePriceTip?'':'c96e3e'}} {{customClass}}">
+    <view class="c90f57 {{listClass}}" wx:for="{{list}}" wx:for-index="index1" wx:key="index1">
+        <a bind:_init="_tic" class="d5793" innerStyle="{{innerStyle}}" themeTag="{{themeTag}}">{{item.title}}</a>
+        <view class="c297c8" wx:if="{{item.key==='umpCouponList'}}">
+            <a bind:_init="_tic" class="cc2f6" containerStyle="border-radius: 2px;" themeTag="{{themeTag}}" wx:for="{{item.couponList}}" wx:for-index="index2" wx:for-item="coupon" wx:key="index2"> {{coupon.useThresholdAndValueCopywriting}} </a>
+        </view>
+        <block wx:elif="{{item.key==='present'||item.key==='meetSend'}}">
+            <view class="c7bab4" wx:for="{{item.presentOutList}}" wx:for-index="presentLevelIndex" wx:for-item="presentLevelItem" wx:key="presentLevelIndex">
+                <view class="e8079" wx:if="{{isVip(item)}}">VIP</view> {{presentLevelItem.presentPrefix}}
+        {{!presentLevelItem.goodsModelsV2.length?'':'送'+presentLevelItem.chosenPresentsNum+'种赠品（'}} <view class="c0f779" wx:for="{{presentLevelItem.goodsModelsV2}}" wx:for-index="presentIndex" wx:for-item="presentItem" wx:key="presentIndex">
+                    <view bind:tap="_p" class="c2c05f" data-t="{{ tap:{ en:'goGoodsDetail',args:[presentItem.alias] } }}"> {{presentItem.title}}x{{presentItem.num}} </view> {{presentIndex==presentLevelItem.goodsModelsV2.length-1?'':'、'}} </view> {{!presentLevelItem.goodsModelsV2.length?'':')'}}
+                {{presentLevelItem.goodsModelsV2.length&&presentLevelItem.presentSuffix?'、':''}}
+        {{presentLevelItem.presentSuffix||''}}
+        {{item.presentOutList[item.presentOutList.length-1]['presentPrefix']==presentLevelItem.presentPrefix?'':'；'}} </view>
+        </block>
+        <view class="c7bab4" wx:else>
+            <view class="e8079" wx:if="{{isVip(item)}}">VIP</view> {{item.desc}} </view>
+    </view>
+</view>

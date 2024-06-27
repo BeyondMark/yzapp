@@ -1,0 +1,37 @@
+.current-position {
+  padding: 60px 15px 0 15px;
+  background-color: #fff;
+}
+.current-position .title {
+  font-size: 12px;
+  color: #999;
+}
+.current-position.container {
+  margin-top: 0;
+}
+.current-position > view {
+  justify-content: space-between;
+}
+.current-position > view .poi-name {
+  padding: 15px 0;
+  flex: 1;
+  display: inline-block;
+  font-size: 14px;
+}
+.current-position .re-location {
+  float: right;
+  display: flex;
+  align-items: center;
+}
+.current-position .re-location image {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  display: inline-block;
+}
+.current-position .re-location view {
+  color: #38f;
+  display: inline-block;
+  padding: 15px 0;
+  font-size: 14px;
+}

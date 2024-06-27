@@ -1,0 +1,9 @@
+<view class="c-goods-layout__info-goods-tag {{exhibitionTag?'good_info_tag':''}}" wx:if="{{infoData.showTags}}">
+    <view catchtap="showMoreTag" class="goods-tag  {{arrowDirection?'':'exhibition-tag'}}" style="flex-wrap:{{exhibitionTag?'wrap':'nowrap'}}">
+        <a bg="{{item.theme==='primary'?item.color||'var(--ump-main-bg, #323233)':'var(--ump-tag-bg, #f2f2ff)'}}" border="{{item.theme==='primary'?item.color||'var(--ump-main-bg, #323233)':'var(--ump-tag-bg, #f2f2ff)'}}" color="{{item.theme==='primary'?'var(--ump-main-text, #fff)':item.color||'var(--ump-tag-text, #323233)'}}" customClass="goods-tag_item" style="flex: none" wx:if="{{item.label}}" wx:for="{{curTagsList}}" wx:key="index">
+            <a border="var(--ump-border, #C9C9FF)" class="good-sign" customClass="goods-tag_item--sign" wx:if="{{item.preLabel}}">{{item.preLabel}}</a>
+            <view class="goods-tag_item--padding">{{item.label}}</view>
+        </a>
+    </view>
+    <view catchtap="showMoreTag" class=" goods-tag-img {{arrowDirection?'goods-tag-down':''}}" wx:if="{{showDropDown}}"></view>
+</view>

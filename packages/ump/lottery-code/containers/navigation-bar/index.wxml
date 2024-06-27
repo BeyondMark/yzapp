@@ -1,0 +1,10 @@
+<view class="navigation-bar" style="padding-top: {{navigationInfo.statusBarHeight}}px; height: {{navigationInfo.navHeight}}px; line-height: {{navigationInfo.navHeight}}px">
+    <view bind:tap="toHome" class="home-icon" wx:if="{{showHomeIcon}}">
+        <image src="https://b.yzcdn.cn/public_files/8c8e992944cff0dc3b9f3f71a3f8596a.png"></image>
+    </view>
+    <view bind:tap="toBack" class="back-text" wx:else>
+        <a color="#fff" customStyle="vertical-align: text-bottom" name="arrow-left" size="20px"></a>
+        <text class="back-text__content">返回</text>
+    </view>
+    <text class="nav-title">{{name}}</text>
+</view>

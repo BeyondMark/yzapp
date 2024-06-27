@@ -1,0 +1,17 @@
+<view class="price-intro-wrap">
+    <view class="goods-price-intro">
+        <view bind:tap="toggle" class="goods-price-intro__title">
+            <view class="white-block">价格说明<a class="goods-price-intro__icon" customStyle="{{show?'transform: rotate(-90deg);':'transform: rotate(90deg);'}}" name="arrow"></a>
+            </view>
+        </view>
+        <view class="goods-price-intro__content goods-price-intro__content-show" hidden="{{!show}}">
+            <view class="goods-price-intro__block goods-price-intro__block-top">
+                <view class="goods-price-intro__text">划线价格：</view>划线的价格是商品的专柜价、吊牌价、正品零售价、指导价、曾经展示过的销售价等，并非原价，仅供参考。</view>
+            <view class="goods-price-intro__block">
+                <view class="goods-price-intro__text">未划线价格：</view>未划线的价格是商品的实时价格，不会因具体表述形式的差异改变性质。具体成交价格会因商品参加促销活动，优惠券、积分抵扣等情形发生变化，最终以订单结算页面展示的价格为准。</view>
+            <view class="goods-price-intro__block goods-price-intro__block--small">*商家详情页以图片或文字标注的一口价、促销价、优惠价等价格，可能是通过优惠券、积分折扣、满减或特定的促销活动，在特定时间段内形成的价格，具体请以商家促销规则、优惠条件和结算页面的标价为准。</view>
+            <view class="goods-price-intro__block goods-price-intro__block--small">*此说明仅当出现价格比较时有效，若商家对商品的划线价做了特殊说明，则以特殊说明为准。</view>
+            <view class="goods-price-intro__block goods-price-intro__block--small">此页面下商品/服务的标题、价格、详情等信息均由商家发布，其准确性、真实性与合法性均由该商家负责。如消费者对服务的标题、价格、详情等信息有疑问的，请在购买前与商家工作人员沟通确认。</view>
+        </view>
+    </view>
+</view>

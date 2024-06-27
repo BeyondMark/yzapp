@@ -1,0 +1,7 @@
+.t-text {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.cashier-pre-rich-text__segment {
+  display: inline;
+}

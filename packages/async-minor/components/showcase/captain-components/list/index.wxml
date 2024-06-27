@@ -1,0 +1,7 @@
+<view class="c-list">
+    <slot></slot>
+    <view class="c-hook"></view>
+    <view class="c-loading-wrap" wx:if="{{!finished&&!disabled}}">
+        <a customClass="c-list-loading" wx:if="{{loading}}"></a>
+    </view>
+</view>

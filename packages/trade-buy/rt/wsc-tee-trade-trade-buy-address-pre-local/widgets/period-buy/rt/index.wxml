@@ -1,0 +1,4 @@
+<view class="c63c41" wx:if="{{periodBuy&&periodBuy.show}}">
+    <a bind:_init="_tic" periodBuy="{{periodBuy}}"></a>
+    <b bind:_init="_tic" bind:changeChosen="_p" data-t="{{ changeChosen:{en:'handleChangeChosen'} }}" orderCreated="{{orderCreated}}" periodBuy="{{periodBuy}}" themeColors="{{themeColors}}" themeCss="{{themeCSS}}"></b>
+</view>

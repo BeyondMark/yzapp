@@ -1,0 +1,15 @@
+<view>
+    <view>
+        <view class="ae952 ce25d c9420b">
+            <view class="ae952__title">
+                <view class="c6b511 c89585">{{activityTitle}}</view>
+                <view class="f9b97 c89585" wx:if="{{canPick}}">          （可选{{activityInfo.selectableNum}}种）
+        </view>
+            </view>
+            <view catch:tap="_p" class="c71833" data-t="{{ tap:{en:'handlePickPresent',et:'stop'} }}" wx:if="{{canPick}}">        去挑选
+        <a bind:_init="_tic" name="arrow"></a>
+            </view>
+        </view>
+        <b bind:_init="_tic" present="{{present}}" wx:for="{{selectedPresents}}" wx:for-item="present" wx:key="skuId"></b>
+    </view>
+</view>

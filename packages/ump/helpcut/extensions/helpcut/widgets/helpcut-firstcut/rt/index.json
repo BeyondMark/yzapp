@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/ump/components/animate-number/index",
+    "b": "/@vant/weapp/dist/popup/index",
+    "_": "../../../../../../../../components/_/index"
+  }
+}

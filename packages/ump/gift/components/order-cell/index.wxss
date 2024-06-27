@@ -1,0 +1,65 @@
+@import "/common/css/helper/index.wxss";
+.order-cell {
+  margin-top: 10px;
+  font-size: 14px;
+  background: #fff;
+  padding-top: 13px;
+}
+.order-cell.first-cell {
+  margin-top: 0;
+}
+.order-cell__more {
+  color: #3283fa;
+  line-height: 40px;
+  text-align: center;
+  position: relative;
+}
+.order-cell__status {
+  font-size: 12px;
+  line-height: 20px;
+  padding: 10px 15px;
+  overflow: hidden;
+  color: #666;
+  position: relative;
+}
+.order-cell__status-text {
+  float: left;
+}
+.order-cell__status-action {
+  float: right;
+  color: #3283fa;
+}
+.order-cell__status:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e5e5e5;
+}
+.thumb-class {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto !important;
+  height: auto !important;
+  max-width: 100%;
+  max-height: 100%;
+}
+.van-card__detail-row {
+  overflow: hidden;
+  line-height: 20px;
+  min-height: 20px;
+  margin-top: 25px;
+}
+.van-card__detail-status {
+  font-size: 12px;
+  color: #666;
+}

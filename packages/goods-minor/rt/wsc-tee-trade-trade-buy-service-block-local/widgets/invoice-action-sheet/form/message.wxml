@@ -1,0 +1,4 @@
+<view class="c86312">
+    <view class="c00c23">收票信息</view>
+    <a bind:_init="_tic" bind:change="_p" border="{{false}}" customStyle="padding-left:0px" data-t="{{ change:{en:'onEmailChange'} }}" inputClass="c92b3f" label="收票邮箱" placeholder="用于向你发送电子发票" titleWidth="72px" value="{{emailList[0]}}"></a>
+</view>

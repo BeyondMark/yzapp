@@ -1,0 +1,6 @@
+<view class="{{'t-cell-group'}} {{inset?'t-cell-group--inset':''}}">
+    <view class="t-cell-group__title" wx:if="{{title}}">{{title}}</view>
+    <view class="{{'t-cell-group'}} {{border?'t-hairline--top-bottom':''}} {{customClass}}">
+        <slot></slot>
+    </view>
+</view>

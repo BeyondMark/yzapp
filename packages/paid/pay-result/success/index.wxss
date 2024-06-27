@@ -1,0 +1,13 @@
+.c964a4 {
+  flex-direction: column;
+}
+.c964a4,
+.r-r {
+  display: flex;
+}
+.r-r {
+  flex-direction: row;
+}
+.f25c0 {
+  background: #f7f8fa;
+}

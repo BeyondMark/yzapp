@@ -1,0 +1,15 @@
+.c64356 {
+  position: relative;
+}
+.c61780 {
+  text-align: right;
+  font-weight: 500;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--theme-general, #323233) !important;
+}
+.c27ddd {
+  flex: 0;
+  min-width: 70px;
+}

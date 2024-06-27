@@ -1,0 +1,20 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-tee/@y-open/vt/native/weapp/toast/index/index",
+    "b": "/@y-open/vt/dist/cell-group/index",
+    "c": "/@y-open/vt/dist/button/index.weapp",
+    "d": "./../../captain/form-button/index",
+    "e": "./components/form-header/index",
+    "f": "./components/mobile-field/index",
+    "g": "./components/img-upload-field/index",
+    "h": "./components/datetime-field/index",
+    "i": "./components/area-field/index",
+    "j": "./components/multi-select-field/index",
+    "k": "./components/gender-field/index",
+    "l": "./components/radio-field/index",
+    "m": "./components/input-field/index",
+    "_": "../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

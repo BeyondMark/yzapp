@@ -1,0 +1,25 @@
+<view class="wxvideo-live-item-wrap" style="{{wrapStyle}}">
+    <view bind:tap="_p" class="wxvideo-live-item" data-t="{{ tap:{en:'onClick'} }}" style="{{itemStyle}}">
+        <view class="item-bg" style="{{bgStyle}}"></view>
+        <view class="wxvideo-live-item-content">
+            <image class="item-banner tee-image" lazyLoad="true" src="{{liveInfo.headUrl}}"></image>
+            <view class="item-content">
+                <view class="item-title">{{title}}</view>
+                <view class="item-bottom" wx:if="{{isLiving}}">
+                    <view class="icon-wrap">
+                        <view class="default-live-icon-wave">
+                            <view class="wave-wrap">
+                                <view class="wave-item wave-1"></view>
+                                <view class="wave-item wave-2"></view>
+                                <view class="wave-item wave-3"></view>
+                            </view>
+                        </view>
+                        <view class="text">直播中</view>
+                    </view>
+                    <view class="handle-btn"> 立即观看 </view>
+                </view>
+                <view class="item-bottom-end" wx:else>直播结束</view>
+            </view>
+        </view>
+    </view>
+</view>

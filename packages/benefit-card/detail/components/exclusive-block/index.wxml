@@ -1,0 +1,20 @@
+<view class="ecs-c">
+    <view class="t-in">
+        <view class="i-m">
+            <view class="m-n">{{benefit.appName||benefit.title}}</view>
+            <text class="mid-d">{{benefit.label}}</text>
+        </view>
+        <view class="he-ex" wx:if="{{exInfo}}">
+            <button bindtap="{{exInfo.onClick}}" class="b-r" disabled="{{exInfo.disabled}}" id="{{exInfo.btnId}}" openType="{{exInfo.openType?exInfo.openType:''}}" round="{{true}}" size="small" type="default" wx:if="{{exInfo.isBtn}}">{{exInfo.label}}</button>
+            <view class="dis-in" style="color: {{themeGeneral}}" wx:elif="{{exInfo.opposite}}">
+                <view class="dis-u-l">{{exInfo.unit}}</view>
+                <view class="dis-n">{{exInfo.value}}</view>
+            </view>
+            <view class="dis-in" style="color: {{themeGeneral}}" wx:else>
+                <view class="dis-n">{{exInfo.value}}</view>
+                <view class="dis-u-r">{{exInfo.unit}}</view>
+            </view>
+        </view>
+    </view>
+    <slot></slot>
+</view>

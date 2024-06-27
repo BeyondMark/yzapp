@@ -1,0 +1,121 @@
+.banner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 12px;
+  box-sizing: border-box;
+  padding: 23px 20px 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.banner .co-u-bg {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.banner .co-u-bg,
+.banner .exp-t {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 7px;
+  width: 100%;
+  height: 100%;
+}
+.banner .exp-t {
+  display: flex;
+  background-color: hsla(0, 0%, 100%, 0.5);
+  flex-direction: column;
+  justify-content: center;
+}
+.banner .exp-t.no-co {
+  background-color: transparent;
+}
+.banner .exp-t .t-c {
+  display: flex;
+  align-content: center;
+  bottom: 16px;
+  right: 16px;
+  color: #fff;
+  padding: 7px 16px;
+  border-radius: 20px;
+}
+.banner .exp-t .t-c,
+.ca-co {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.ca-co {
+  width: 64rpx;
+  height: 64rpx;
+  top: 12px;
+  right: 12px;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+.ca-co .code-image {
+  width: 100%;
+  height: 100%;
+}
+.code-dialog {
+  color: #333;
+  text-align: center;
+}
+.code-dialog .content {
+  width: 610rpx;
+  padding-bottom: 40px;
+  margin: 0 auto 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.code-dialog .content .code-loading {
+  height: 160px;
+  text-align: center;
+}
+.code-dialog .content .code-loading .van-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -45px 0 0-15px;
+}
+.code-dialog .van-dialog__header {
+  height: 80px;
+  line-height: 80px;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #fafcff;
+  margin-bottom: 24px;
+  box-sizing: border-box;
+}
+.code-dialog .van-dialog__content {
+  box-sizing: border-box;
+}
+.code-dialog .qrcode {
+  width: 320rpx;
+  height: 320rpx;
+  margin: 0 auto;
+}
+.code-dialog .barcode {
+  width: 546rpx;
+  height: 170rpx;
+  margin: 0 auto;
+}
+.code-dialog .b-num {
+  margin: 8px 0 16px;
+  height: 17px;
+  line-height: 17px;
+  font-size: 12px;
+  color: #999;
+}
+.code-dialog .dialog-close {
+  color: #979797;
+  font-size: 32px;
+}

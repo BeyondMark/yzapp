@@ -1,0 +1,3 @@
+<b bind:_init="_tic" bind:agree="_p" bind:disagree="_p" data-t="{{ agree:{en:'handleAgree'},disagree:{en:'handleDisagree'} }}" source="{{source}}" useUIComponentSlot="{{isCloudSlot}}" visible="{{visible}}">
+    <a bind:_init="_tic" rmId="{{rmId}}" slot="ui-component" wx:if="{{rmId==='@passport-tee/protocol~Duv5tmrK'}}"></a>
+</b>

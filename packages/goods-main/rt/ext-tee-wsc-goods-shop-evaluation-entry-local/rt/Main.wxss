@@ -1,0 +1,25 @@
+.evaluation-entry {
+  overflow: hidden;
+  background: #fff;
+  --cell-vertical-padding: var(--theme-page-title-padding, 10px);
+  margin-top: var(--theme-page-ext-margin-top, 8px);
+}
+.evaluation-entry:before {
+  content: "";
+  display: block;
+  margin: 0 16px;
+  border-top: var(--theme-page-ext-border-top, 0);
+}
+.evaluation-entry__header-left {
+  font-weight: var(--theme-common-field-font-weight, 500);
+}
+.evaluation-entry__header-right {
+  font-size: 12px;
+  color: #969799;
+  margin-right: -3px;
+}
+.evaluation-entry__tags {
+  max-height: 64px;
+  height: auto !important;
+  margin-bottom: var(--theme-page-inline-margin-bottom, 12px);
+}

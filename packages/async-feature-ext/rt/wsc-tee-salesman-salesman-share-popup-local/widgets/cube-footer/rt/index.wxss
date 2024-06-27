@@ -1,0 +1,22 @@
+.salesman-list-row {
+  position: relative;
+  display: flex;
+  padding: 16px 0 16px 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.salesman-list-row--border:before {
+  position: absolute;
+  box-sizing: border-box;
+  content: " ";
+  pointer-events: none;
+  top: 0;
+  right: 0;
+  left: 16px;
+  border-top: 1px solid #ebedf0;
+  transform: scaleY(0.5);
+}
+.hasTopBorder {
+  border-top: 8px solid #f7f8fa;
+}

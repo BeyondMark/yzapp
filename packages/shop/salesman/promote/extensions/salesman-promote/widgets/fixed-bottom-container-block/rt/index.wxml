@@ -1,0 +1,5 @@
+<view class="module-bottom {{displayPop.maskShow?'module-bottom-upper':''}}" id="module-bottom">
+    <a rmId="{{rmId}}" wx:if="{{rmId==='b29-0'}}">
+        <slot></slot>
+    </a>
+</view>

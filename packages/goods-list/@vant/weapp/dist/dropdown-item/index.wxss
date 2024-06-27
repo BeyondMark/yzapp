@@ -1,0 +1,24 @@
+@import "/@vant/weapp/dist/common/index.wxss";
+.van-dropdown-item {
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+}
+.van-dropdown-item__option {
+  text-align: left;
+}
+.van-dropdown-item__option--active .c52920,
+.van-dropdown-item__option--active .c8ead4 {
+  color: var(--dropdown-menu-option-active-color, #ee0a24);
+}
+.van-dropdown-item--up {
+  top: 0;
+}
+.van-dropdown-item--down {
+  bottom: 0;
+}
+.c52920 {
+  display: block;
+  line-height: inherit;
+}

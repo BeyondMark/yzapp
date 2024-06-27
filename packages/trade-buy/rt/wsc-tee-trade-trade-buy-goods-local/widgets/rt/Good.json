@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../../@y/wsc-tee-trade-common/components/TextCollapse",
+    "b": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "c": "/packages/async-tee/@y-open/vt/native/weapp/loading/index/index",
+    "d": "/packages/async-tee/@y-open/vt/dist/tag/index",
+    "e": "../../../../@y/wsc-tee-trade-common/components/Stepper",
+    "f": "../../../../@y-open/vt/dist/card/index",
+    "g": "./../../components/GoodsMessage",
+    "_": "../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_", "c": "_", "d": "_" }
+}

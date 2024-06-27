@@ -1,0 +1,37 @@
+.c4f1d6 {
+  background-color: var(--theme-page-address-bg-color, #f7f8fa) !important;
+  border-radius: var(--theme-radius-dialog, 16px)
+    var(--theme-radius-dialog, 16px) 0 0 !important;
+}
+.c116d2 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 48px;
+  line-height: 22px;
+  background-color: #fff;
+  z-index: 99;
+}
+.c116d2 .b76f9 {
+  position: absolute;
+  right: 16px;
+  color: #c8c9cc;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 1;
+}
+.c11adc {
+  padding: 0 12px 12px 12px;
+}
+.c110db {
+  border: none;
+  border-radius: 8px;
+  background-color: #fff;
+}

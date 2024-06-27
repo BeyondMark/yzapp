@@ -1,0 +1,46 @@
+var BUY_STATUS = {
+  PAID: 0,
+  FREE: 1,
+  NORMAL: 2,
+  VIP_FREE: 3,
+  VIP_DISCOUNT: 4,
+  GROUPON: 5,
+};
+module.exports = {
+  subtitle: function subtitle(column, isPaid) {
+    var lastUpdatedInfo = column.lastUpdatedInfo || {};
+    var summary = column.summary || "";
+    return isPaid && lastUpdatedInfo && lastUpdatedInfo.lastUpdatedTitle
+      ? lastUpdatedInfo.publishAt + "更新：" + lastUpdatedInfo.lastUpdatedTitle
+      : summary;
+  },
+  statusList: function statusList(column, isPaid) {
+    var list = [];
+    var periodInfo =
+      (column.isUpdate ? "已更新" : "共") + column.contentsCount + "期";
+    if (column.contentsCount) list.push(periodInfo);
+    var subscriptionsCount = column.subscriptionsCount + "人已购";
+    if (!isPaid && column.subscriptionsCount) list.push(subscriptionsCount);
+    return list;
+  },
+  priceText: function priceText(column, buyStatus) {
+    var price = column.price / 100;
+    var priceText = "￥" + price.toFixed(2);
+    return ["已购买", "免费", priceText, "会员免费", priceText, priceText, ""][
+      ((nt_0 = buyStatus),
+      null == nt_0 ? undefined : "number" === typeof nt_0 ? nt_0 : "" + nt_0)
+    ];
+  },
+  priceTagText: function priceTagText(column, buyStatus) {
+    if (buyStatus === BUY_STATUS.VIP_DISCOUNT) return "会员价";
+    if (buyStatus === BUY_STATUS.GROUPON) return column.groupOnNum + "人团购价";
+    return "";
+  },
+  columnUrl: function columnUrl(column) {
+    return "/packages/paidcontent/column/index?alias\x3d" + column.alias;
+  },
+  thumbnailUrl: function thumbnailUrl(column) {
+    var cover = column.cover || "";
+    return cover;
+  },
+};

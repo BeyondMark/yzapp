@@ -1,0 +1,23 @@
+<scroll-view bindscrolltolower="fetchCouponAllList" class="coupon-list-valid" lowerThreshold="150" scrollY="{{true}}">
+    <view class="coupon-text">
+        <view>说明：</view>
+        <view>1. 以下是你在本店添加的跨店优惠券，点击优惠券即可前往发放店铺领取使用;</view>
+        <view>2. 已领取的优惠券仅在本店铺显示7天，有效期内的优惠券在7天后所属店铺中仍可以使用。</view>
+    </view>
+    <view class="coupon-list">
+        <view class="coupon-list__container" wx:if="{{coupons.length>0}}">
+            <a coupon="{{item}}" wx:for="{{coupons}}" wx:key="{{ item.id }}"></a>
+        </view>
+        <view wx:elif="finished">
+            <b></b>
+        </view>
+        <view class="coupon-loading">
+            <c wx:if="{{loading}}"></c>
+        </view>
+        <view class="tip" wx:if="{{!loading&&!isInvalid}}">
+            <navigator url="/packages/user/mediator-coupon/invalid-list/index">
+                <view class="goto-invalid-tip">查看失效的优惠券 ></view>
+            </navigator>
+        </view>
+    </view>
+</scroll-view>

@@ -1,0 +1,11 @@
+<a>
+    <view class="split-coupon" style="{{backgroundStyle}}">
+        <e></e>
+        <b>
+            <g slot="{{activityCardInfo.avatarSlot}}" wx:if="{{activityCardInfo.avatarSlot}}"></g>
+        </b>
+        <f></f>
+        <d></d>
+        <c></c>
+    </view>
+</a>

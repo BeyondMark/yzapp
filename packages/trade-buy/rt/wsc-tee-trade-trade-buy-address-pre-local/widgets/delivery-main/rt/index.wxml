@@ -1,0 +1,16 @@
+<view>
+    <block wx:if="{{showAddressCard}}">
+        <b addressDetail="{{addressDetail}}" addressEditable="{{addressEditable}}" addressVisible="{{addressVisible}}" area="{{addressArea}}" bind:_init="_tic" bind:onAddressVisibleChange="_p" bind:onClick="_p" bind:onEdit="_p" currentAddress="{{currentAddress}}" data-t="{{ onClick:{en:'onAddressCardClick'},onEdit:{en:'onAddressCardEdit'},onAddressVisibleChange:{en:'onAddressVisibleChange'} }}" expressType="{{expressType}}" hasAddress="{{hasAddress}}" maskedTel="{{maskedTel}}" rmId="{{rmId}}" show="{{showAddressCard}}" showGrouponHeader="{{showGrouponHeader}}" showPoiPrompt="{{showPoiPrompt}}" wx:if="{{rmId==='b36-28'}}"></b>
+    </block>
+    <e bind:_init="_tic" grouponModel="{{grouponModel}}" themeColors="{{themeColors}}"></e>
+    <f bind:_init="_tic" bind:setGrouponIsChecked="_p" data-t="{{ setGrouponIsChecked:{en:'onToggleGrouponChecked'} }}" grouponModel="{{grouponModel}}" themeColors="{{themeColors}}"></f>
+    <g bind:_init="_tic" bind:onClick="_p" bind:onClose="_p" bind:onSelectExpressWay="_p" data-t="{{ onClick:{en:'onExpressWayCellClick'},onClose:{en:'onExpressWayClose'},onSelectExpressWay:{en:'onSelectExpressWay'} }}" expressWayWords="{{expressWayWords}}" formattedPostageItems="{{formattedPostageItems}}" isLink="{{hasMorePostageItems}}" isRetailShop="{{isRetailShop}}" postage="{{postage}}" selected="{{expressWaySelected}}" show="{{hasSomePostageItems}}" showPopup="{{showExpressWayPopup}}" wx:if="{{hasSomePostageItems}}"></g>
+    <h bind:_init="_tic" bind:showPopup="_p" data-t="{{ showPopup:{en:'handleShowDeliveryScopePopup'} }}" delivery="{{delivery}}" wx:if="{{showDeliveryScope}}"></h>
+    <block wx:if="{{showLocalDeliveryTime}}">
+        <c bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b36-28'}}"></c>
+    </block>
+    <block wx:if="{{showAddressList||addressListIsDirty}}">
+        <a bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'onAddressListClose'} }}" rmId="{{rmId}}" show="{{showAddressList}}" wx:if="{{rmId==='b36-28'}}"></a>
+    </block>
+    <d bind:_init="_tic" rmId="b36-43" wx:if="{{rmId==='b36-28'}}"></d>
+</view>

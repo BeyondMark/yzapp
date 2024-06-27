@@ -1,0 +1,2 @@
+@import "/packages/goods-list/components/showcase/topNav/index.wxss";
+@import "/packages/goods-list/components/showcase/add-global-class/tag-list-top-tab.wxss";

@@ -1,0 +1,10 @@
+<view class="sc-sku-price {{themeClass}}">
+    <b class="sc-sku-price__label" color="general" wx:if="{{extraData.isGroupon}}">单人购买价：</b>
+    <b class="sc-sku-price__show" color="general">
+        <text class="sc-sku-price__symbol">￥</text>
+        <text class="sc-sku-price__num">{{price}}</text>
+    </b>
+    <a color="{{themeGeneral}}" customClass="sc-sku-price__tag" plain="{{true}}" type="danger" wx:if="{{extraData.isMember}}">会员折扣</a>
+    <a color="{{themeGeneral}}" customClass="sc-sku-price__tag" plain="{{true}}" type="danger" wx:elif="{{extraData.priceTitle}}">{{extraData.priceTitle}}</a>
+    <view class="sc-sku-price__origin" wx:if="{{extraData.isMember&&originPrice}}">{{originPrice}}</view>
+</view>

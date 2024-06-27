@@ -1,0 +1,13 @@
+<view class="store-business__status-container {{isFill?'store-business__status-container--fill':''}}" style="bottom: {{noSafeBottom}}px">
+    <view class="store-business__status-wrapper {{isFill?'store-business__status-wrapper-noradius':''}}">
+        <view class="store-business__status-tip">
+            <view class="store-business__status-tip-title">店铺休息中</view>
+            <view class="store-business__status-content">
+                <image class="store-business__status-tip-image" src="//img01.yzcdn.cn/public_files/2018/11/27/6a2a73b0915bd1024d747f8d53b24b5f.png"></image>
+                <view class="store-business__status-tip-content" wx:if="{{!isMultiStore}}">{{businessTime}}</view>
+                <view class="store-business__status-tip-text zan-font-12 zan-c-gray-darker" wx:else>{{businessTime}}</view>
+            </view>
+        </view>
+        <image class="store-business__status-container-image" src="//b.yzcdn.cn/public_files/2018/11/27/015d934e75f86b1b244ace514be549c9.png"></image>
+    </view>
+</view>

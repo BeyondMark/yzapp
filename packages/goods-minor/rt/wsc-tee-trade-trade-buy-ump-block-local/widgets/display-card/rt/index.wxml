@@ -1,0 +1,17 @@
+<view>
+    <c bind:_init="_tic" bind:onShowVirtualCouponList="_p" bind:onToggle="_p" bind:openAgree="_p" bind:postLog="_p" data-t="{{ onToggle:{en:'onToggle'},onShowVirtualCouponList:{en:'onShowVirtualCouponList'},openAgree:{en:'openAgree'},postLog:{en:'postLog'} }}" display="{{display}}" displayCardStyles="{{displayCardStyles}}" info="{{displayCard}}" kdtId="{{kdtId}}" orderCreated="{{orderCreated}}" wx:if="{{hasDisplayCard}}"></c>
+    <view class="c7d224" wx:if="{{hasFreeMemberCard&&hasCurrentAddress}}">
+        <view class="c7017a">
+            <view class="c6ec6f">
+                <image class="c0e6a4 bd231" lazyLoad="true" src="https://b.yzcdn.cn/public_files/78ef143d5200b6bf12ccb8fe6c1f4463.png"></image> {{freecardBenefitInfo}} </view>
+            <b authTypeList="{{['mobile','nicknameAndAvatar']}}" bind:_init="_tic" bind:next="_p" class="ac6ce" data-t="{{ next:{en:'onRegister'} }}" kdtId="{{kdtId}}" rmId="@passport-tee/user-authorize~DDdJBmWG" type="separate" wx:if="{{rmId==='b7-64'}}">
+                <view>立即领取</view>
+            </b>
+        </view>
+        <view bind:tap="_p" class="c8b46f" data-t="{{ tap:{ en:'openAgree',args:['17yj5tgu6'] } }}">
+            <view>注册即同意</view>
+            <view class="c70dda">商家会员注册及授权协议</view>
+        </view>
+    </view>
+    <a bind:_init="_tic" wx:if="{{rmId==='b7-64'}}"></a>
+</view>

@@ -1,0 +1,7 @@
+<view class="task-list">
+    <a title="做任务获取幸运码，提高中奖率"></a>
+    <b bind:click="handleClick" bottomLine="{{false}}" btnText="{{item.btnText}}" data-item="{{item}}" disabled="{{!!item.status}}" icon="{{item.icon}}" nextDesc="{{item.nextDesc}}" num="{{item.num}}" preDesc="{{item.preDesc}}" title="{{item.title}}" wx:for="{{taskList}}" wx:key="index"></b>
+    <c></c>
+    <d></d>
+    <e></e>
+</view>

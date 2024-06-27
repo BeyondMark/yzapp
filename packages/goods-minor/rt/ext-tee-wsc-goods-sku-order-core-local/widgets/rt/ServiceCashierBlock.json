@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../../assets-tee-extensions-cashier-pre-local/rt/SingleRow",
+    "_": "../../../../../../components/_/index"
+  }
+}

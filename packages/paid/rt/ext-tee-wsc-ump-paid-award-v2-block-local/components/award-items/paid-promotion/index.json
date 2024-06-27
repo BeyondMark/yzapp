@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../widgets/ConcatButton",
+    "b": "./ActivityCode",
+    "c": "./../Container",
+    "d": "./Present",
+    "e": "./LuckyGame",
+    "f": "./Simple",
+    "_": "../../../../../../../components/_/index"
+  }
+}

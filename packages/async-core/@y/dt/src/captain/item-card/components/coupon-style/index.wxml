@@ -1,0 +1,14 @@
+<view class="coupon-container" id="points-coupon-box">
+    <view class="coupon-bg" style="{{containerStyle}}">
+        <view class="coupon-title">{{couponData.title}}</view>
+        <view class="{{'price-box'}} {{fontStyle}}" wx:if="{{!couponData.isExchange}}">
+            <view class="price-content t-text">{{couponData.value}}</view>
+            <view class="unit">{{couponData.unit}}</view>
+        </view>
+        <view class="desc-box" wx:else>
+            <view class="desc-text t-text">商品</view>
+            <view class="desc-text t-text">兑换</view>
+        </view>
+        <view class="coupon-desc">{{couponData.conditionText}}</view>
+    </view>
+</view>

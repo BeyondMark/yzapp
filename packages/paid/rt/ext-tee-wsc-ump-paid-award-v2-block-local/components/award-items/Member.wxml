@@ -1,0 +1,18 @@
+<a bind:_init="_tic" isWxReceipt="{{isWxReceipt}}">
+    <view class="f6317">
+        <view class="b8735">
+            <view class="d5d3d">
+                <view class="c1cb25">{{curInfo.text}}</view>
+            </view>
+            <view class="f62e8">
+                <view class="a8012" wx:for="{{curInfo.memberCards}}" wx:key="index">
+                    <view class="c9d818">
+                        <image class="c326a6 bd231" lazyLoad="true" src="{{item.icon}}"></image>
+                    </view>
+                    <view class="c6518f"> {{item.showName}} </view>
+                </view>
+            </view>
+            <view bind:tap="_p" class="ce50a" data-t="{{ tap:{en:'handelClick'} }}"> {{curInfo.buttonText}} </view>
+        </view>
+    </view>
+</a>

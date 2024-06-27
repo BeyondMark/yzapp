@@ -1,0 +1,35 @@
+<view>
+    <optional-goods-combo bind:_init="_tic" bind:close="_p" bind:preview="_p" bind:submit="_p" data-t="{{ close:{en:'onHideSku'},preview:{en:'onPreview'},submit:{en:'doSkuSubmit'} }}" event="{{showEvent}}" goods="{{skuGoods}}" goodsBaseInfo="{{goodsBaseInfo}}" show="{{showSku&&showSelfSelectedCombo}}" sku="{{skuData}}" themeColors="{{themeColors}}" themeTag="{{themeTag}}">
+        <view slot="sku-footer-info">
+            <k bind:_init="_tic" bind:change="_p" bind:visible="_p" data-t="{{ visible:{en:'onCouponVisible'},change:{en:'onPluginsChange'} }}" opt="{{couponTipsOpt}}" wx:if="{{couponTipsOpt.show}}"></k>
+        </view>
+    </optional-goods-combo>
+    <e bind:_init="_tic" bind:close="_p" bind:num-change="_p" bind:opened="_p" bind:preview="_p" bind:selected="_p" bind:submit="_p" customStyle="{{popCustomStyle}}" data-ref="goodsSku" data-t="{{ close:{en:'onHideSku'},preview:{en:'onPreview'},numChange:{en:'onNumChange'},selected:{en:'skuSelected'},submit:{en:'doSkuSubmit'},opened:{en:'onSkuOpened'} }}" enterIsSleep="{{needIsSleep}}" event="{{showEvent}}" extraData="{{extraData}}" goods="{{skuGoods}}" initialSku="{{initialSku}}" kdtId="{{kdtId}}" multiSkuDecision="{{multiSkuDecision}}" pointsConfig="{{pointsConfig}}" popCloseClear="{{false}}" show="{{showSku&&!showSelfSelectedCombo}}" sku="{{skuData}}" skuConfig="{{skuConfig}}" themeTag="{{themeTag}}" themeType="{{themeType}}" zIndex="{{zIndex}}">
+        <view slot="sku-price-extra"></view>
+        <view slot="sku-header" wx:if="{{showSkuHeader}}">
+            <a bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b7-13'}}"></a>
+        </view>
+        <view slot="sku-group-header">
+            <l bind:_init="_tic" opt="{{sellingPointOpt}}" wx:if="{{sellingPointOpt.show}}"></l>
+        </view>
+        <view slot="sku-group-main">
+            <f bind:_init="_tic" bind:change="_p" data-t="{{ change:{en:'onPluginsChange'} }}" opt="{{goodsAttributesOpt}}" wx:if="{{goodsAttributesOpt.show}}"></f>
+            <g bind:_init="_tic" bind:change="_p" data-t="{{ change:{en:'onPluginsChange'} }}" opt="{{periodBuyOpt}}" wx:if="{{periodBuyOpt.show}}"></g>
+            <i bind:_init="_tic" bind:change="_p" data-t="{{ change:{en:'onPluginsChange'} }}" opt="{{ecardOpt}}" wx:if="{{ecardOpt.show}}"></i>
+            <j bind:_init="_tic" bind:change="_p" data-t="{{ change:{en:'onPluginsChange'} }}" opt="{{ladderGrouponOpt}}" wx:if="{{ladderGrouponOpt.show}}"></j>
+            <block wx:if="{{couponIntroOpt.show}}">
+                <d bind:_init="_tic" rmId="b7-53" skuCouponIntroDetail="{{couponIntroOpt.detail}}" wx:if="{{rmId==='b7-13'}}"></d>
+            </block>
+            <b bind:_init="_tic" rmId="b7-29" wx:if="{{rmId==='b7-13'}}"></b>
+            <combine-goods-block bind:_init="_tic"></combine-goods-block>
+        </view>
+        <view slot="sku-group-footer">
+            <combine-goods-placeholder bind:_init="_tic"></combine-goods-placeholder>
+        </view>
+        <view slot="sku-footer-info">
+            <h bind:_init="_tic" opt="{{periodBuyOpt}}" wx:if="{{periodBuyOpt.show}}"></h>
+            <k bind:_init="_tic" bind:change="_p" bind:visible="_p" data-t="{{ visible:{en:'onCouponVisible'},change:{en:'onPluginsChange'} }}" opt="{{couponTipsOpt}}" wx:if="{{couponTipsOpt.show}}"></k>
+            <c bind:_init="_tic" rmId="b7-29" wx:if="{{rmId==='b7-13'}}"></c>
+        </view>
+    </e>
+</view>

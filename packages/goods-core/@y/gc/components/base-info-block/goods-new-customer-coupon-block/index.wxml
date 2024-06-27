@@ -1,0 +1,20 @@
+<view class="c1441b">
+    <view class="{{'bfd17'}} {{!opt.showPriceBlock?'c08ebe':''}}" wx:if="{{opt.show&&showContent}}">
+        <view class="c44492">
+            <view class="c3e34b c89585" wx:if="{{isYuanUnit}}">¥</view>
+            <view class="c2063c c89585" wx:if="{{isYuanUnit&&showDecimal}}">{{couponPriceDecimal[0]}}<view class="c3e34b c89585">.{{couponPriceDecimal[1]}}</view>
+            </view>
+            <view class="c2063c c89585" wx:else>{{opt.value}}</view>
+            <view class="c3e34b c89585" wx:if="{{!isYuanUnit}}">折</view>
+        </view>
+        <view class="bf289">
+            <view class="d5d3d">新人专享券</view>
+            <view class="c1dee8">本商品下单可抵扣</view>
+        </view>
+        <view class="c6b263">
+            <a bind:_init="_tic" bind:next="_p" class="c1bc50" customStyle="height: 144px;width: 144px;position: absolute;" data-t="{{ next:{en:'handleCouponClick'} }}" kdtId="{{opt.kdtId}}" scene="get_coupon" type="separate">
+                <view class="c2f1a5">立即领取</view>
+            </a>
+        </view>
+    </view>
+</view>

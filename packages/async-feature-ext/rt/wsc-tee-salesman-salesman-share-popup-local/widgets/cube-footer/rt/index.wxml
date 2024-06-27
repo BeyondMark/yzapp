@@ -1,0 +1,7 @@
+<view class="{{showGoodsDetail?'hasTopBorder':''}}" hidden="{{!showTab}}">
+    <scroll-view class="panel-icon" scrollX="{{true}}">
+        <view class="{{index>0?'salesman-list-row salesman-list-row--border':'salesman-list-row'}}" wx:for="{{iconGroup}}" wx:for-item="iconList" wx:key="index">
+            <a bind:_init="_tic" bind:iconClick="_p" data-t="{{ iconClick:{en:'handleIconClick'} }}" option="{{option}}" wx:for="{{iconList}}" wx:for-item="option" wx:key="title"></a>
+        </view>
+    </scroll-view>
+</view>

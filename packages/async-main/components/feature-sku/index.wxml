@@ -1,0 +1,3 @@
+<import src="./presale-sku/index.wxml"></import>
+<import src="./default-sku/index.wxml"></import>
+<template is="{{featureSkuData.type}}" data="{{featureSkuData:featureSkuData,themeClass:themeClass,extra:extra}}" wx:if="{{featureSkuData.type&&show}}"></template>

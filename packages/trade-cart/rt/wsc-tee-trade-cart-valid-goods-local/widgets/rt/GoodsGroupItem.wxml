@@ -1,0 +1,22 @@
+<view>
+    <custom-list-header bind:_init="_tic" wx:if="{{isShowCustomGoodsListHeader}}"></custom-list-header>
+    <block wx:if="{{goodsGroup.groupActivityInfo&&!isShowCustomGoodsListHeader}}">
+        <d activityInfo="{{goodsGroup.groupActivityInfo}}" bind:_init="_tic" bind:change-item-checked="_p" bind:refresh-cart-goods-list="_p" checkedGoodsList="{{checkedGoodsList}}" cloudActivityId="{{goodsGroup.groupActivityInfo&&goodsGroup.groupActivityInfo.activityId||0}}" cloudIndex="{{goodsGroupIndex}}" data-t="{{ changeItemChecked:{ en:'handleItemChecked',args:[goodsIndex,goodsGroupIndex] },refreshCartGoodsList:{ en:'$emit',args:['refresh-cart-goods-list'] } }}" goodsList="{{goodsGroup.goodsList}}" isEditing="{{isEditing}}" kdtId="{{kdtId}}" logger="{{logger}}" offlineId="{{offlineId}}" rmId="b4-2" themeColors="{{themeColors}}" themeCss="{{themeCSS}}" themeGeneralAlpha10Color="{{themeGeneralAlpha10Color}}" themeGeneralColor="{{themeGeneralColor}}" wx:if="{{rmId==='b4-7'}}"></d>
+    </block>
+    <custom-goods-item bind:_init="_tic" goodsGroup="{{goodsGroup}}" wx:if="{{isShowCustomGoodsItem}}"></custom-goods-item>
+    <view wx:else>
+        <view wx:for="{{goodsGroup.goodsList}}" wx:for-index="goodsIndex" wx:for-item="goods" wx:key="goodsId">
+            <view>
+                <e bind:_init="_tic" goodsItem="{{goods}}" rmId="b4-2" wx:if="{{rmId==='b4-7'}}"></e>
+                <b bind:_init="_tic" bind:change-goods-sku="_p" bind:goods-img-load="_p" bind:hide-count-down="_p" bind:item-checked="_p" bind:item-delete="_p" bind:item-num-change="_p" bind:item-num-change-logger="_p" bind:open-combo-popup="_p" bind:to-goods-detail="_p" cloudCartId="{{goods.cartId}}" cloudGoodsId="{{goods.goodsId}}" cloudIndex="{{goodsIndex}}" customClass="goods-group__goods-item" data-t="{{ itemChecked:{ en:'handleItemChecked',args:[goodsIndex,goodsGroupIndex] },itemNumChange:{ en:'handleItemNumChange',args:[goodsIndex,goodsGroupIndex] },itemNumChangeLogger:{en:'handleItemNumChangeLogger'},itemDelete:{ en:'handleItemDelete',args:[goodsIndex,goodsGroupIndex] },changeGoodsSku:{en:'handleChangeGoodsSku'},openComboPopup:{ en:'openComboPopup',args:[goods] },toGoodsDetail:{en:'toGoodsDetail'},hideCountDown:{en:'hideCountDown'},goodsImgLoad:{ en:'onGoodsImgLoad',args:[goodsGroupIndex,goodsIndex] } }}" editMode="{{isEditing}}" goods="{{goods}}" index="{{goodsGroupIndex}}" isActivity="{{!!goodsGroup.groupActivityInfo}}" isCanChoose="{{!(!isEditing&&isIOS&&goods.goodsType===31&&goods.bizExtension&&goods.bizExtension.cartBizMark&&goods.bizExtension.cartBizMark.isOnlineCourse==='1')}}" isChoose="{{!!(isEditing?editCheckedGoods[goods.cartId+'']:goods.checked)}}" logger="{{logger}}" rmId="{{rmId}}" showEstimatedPrice="{{showEstimatedPrice}}" themeColors="{{themeColors}}" themeGeneralAlpha10Color="{{themeGeneralAlpha10Color}}" themeGeneralColor="{{themeGeneralColor}}" themeStyle="{{themeStyle}}" themeTag="{{themeTag}}" total="{{goodsGroup.goodsList&&goodsGroup.goodsList.length}}" wx:if="{{rmId==='b4-7'}}"></b>
+            </view>
+        </view>
+    </view>
+    <view wx:if="{{goodsGroup.groupActivityInfoList&&goodsGroup.groupActivityInfoList.length>0}}">
+        <a activityId="{{groupActivityInfo.activityId}}" bind:_init="_tic" bind:change-sku="_p" bind:on-show="_p" canSelectPresent="{{canSelectPresent}}" data-t="{{ onShow:{en:'handleChangePresentPopup'},changeSku:{en:'handleChangePresentSku'} }}" groupActivityInfo="{{groupActivityInfo}}" presentList="{{presentData[groupActivityInfo.activityId]}}" rmId="{{rmId}}" themeGeneralColor="{{themeGeneralColor}}" wx:if="{{rmId==='b4-7'}}" wx:for="{{goodsGroup.groupActivityInfoList}}" wx:for-item="groupActivityInfo" wx:key="index"></a>
+    </view>
+    <block wx:elif="{{goodsGroup.groupActivityInfo}}">
+        <a activityId="{{goodsGroup.groupActivityInfo.activityId}}" bind:_init="_tic" bind:change-sku="_p" bind:on-show="_p" canSelectPresent="{{canSelectPresent}}" data-t="{{ onShow:{en:'handleChangePresentPopup'},changeSku:{en:'handleChangePresentSku'} }}" groupActivityInfo="{{goodsGroup.groupActivityInfo}}" presentList="{{presentData[goodsGroup.groupActivityInfo&&goodsGroup.groupActivityInfo.activityId]}}" rmId="{{rmId}}" themeGeneralColor="{{themeGeneralColor}}" wx:if="{{rmId==='b4-7'}}"></a>
+    </block>
+    <c bind:_init="_tic" data-ref="combo-detail-popup" rmId="{{rmId}}" wx:if="{{rmId==='b4-7'}}"></c>
+</view>

@@ -1,0 +1,6 @@
+{
+  "navigationBarBackgroundColor": "#FFF",
+  "navigationBarTitleText": "活动详情",
+  "enablePullDownRefresh": true,
+  "componentPlaceholder": { "e": "_", "f": "_", "g": "_" }
+}

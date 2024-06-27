@@ -1,0 +1,2 @@
+<div bind:_init="_tic" bind:tap="_p" class="hot-words-tags {{extraCls}}" data-t="{{ tap:{en:'onClick'} }}" style="{{themeStyle}}"> {{wordItem.text}} <image class="hot-words-tags-hot tee-image" lazyLoad="true" src="https://img01.yzcdn.cn/upload_files/2022/01/06/FmoeLhFurmOAUT97urR-pmoMRl9k.png" wx:if="{{showHot}}"></image>
+</div>

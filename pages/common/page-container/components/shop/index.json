@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-main/pages/common/page-container/components/shop/components/service-due/index",
+    "b": "/packages/async-main/pages/common/page-container/components/shop/components/shop-status/index",
+    "c": "./components/store-switch/index",
+    "d": "./components/chain-store-switch/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_", "b": "_" }
+}

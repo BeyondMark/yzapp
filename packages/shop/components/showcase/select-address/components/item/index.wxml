@@ -1,0 +1,19 @@
+<view bindtap="onSelect" class="address-item">
+    <a border="{{false}}" customClass="address-item__cell" valueClass="address-item__value">
+        <b disabled="{{inactive}}" name="{{item.id}}" value="{{value}}" wx:if="{{switchable}}">
+            <view class="address-item__name {{inactive?'address-item__inactive':''}}">{{item.name}} {{item.tel}}<c class="address-item__tag-root" customClass="address-item__tag" round="{{true}}" type="danger" wx:if="{{item.isDefault}}">默认</c>
+                <c class="address-item__tag-root" color="rgba(238, 10, 36, .1)" customClass="address-item__tag" round="{{true}}" textColor="#ee0a24" wx:if="{{item.label}}">{{item.label}}</c>
+            </view>
+            <view class="address-item__address">{{item.addressDetail}}</view>
+        </b>
+        <view wx:else>
+            <view class="address-item__name {{inactive?'address-item__inactive':''}}">{{item.name}} {{item.tel}}<c customClass="address-item__tag" round="{{true}}" type="danger" wx:if="{{item.isDefault}}">默认</c>
+                <c class="address-item__tag-root" color="rgba(238, 10, 36, .1)" customClass="address-item__tag" round="{{true}}" textColor="#ee0a24" wx:if="{{item.label}}">{{item.label}}</c>
+            </view>
+            <view class="address-item__address">{{item.addressDetail}}</view>
+        </view>
+        <d bind:click="onEdit" catchtap="noop" customClass="address-item__edit" name="edit" slot="right-icon"></d>
+    </a>
+    <view catchtap="onEdit" class="address-item__tip {{switchable?'address-item__tip--switchable':''}}" wx:if="{{computed.showPoiPrompt(forcePoiSelect,item)}}">为提高同城配送准确性，请进行地图定位选点<d class="address-item__tip__icon" name="arrow"></d>
+    </view>
+</view>

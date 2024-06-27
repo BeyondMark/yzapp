@@ -1,0 +1,3 @@
+<view class="list">
+    <a avatar="{{true}}" avatarShape="square" avatarSize="20px" class="item" title="{{true}}" titleWidth="100%" wx:for="{{7}}" wx:key="index"></a>
+</view>

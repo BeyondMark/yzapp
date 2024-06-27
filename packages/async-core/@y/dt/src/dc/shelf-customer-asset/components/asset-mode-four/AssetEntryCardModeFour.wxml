@@ -1,0 +1,12 @@
+<view class="entries {{'entries-'+type}}">
+    <view class="part-one">
+        <view bind:tap="_p" class="entry" data-t="{{ tap:{ en:'handleNavigate',args:[formatEntries[item].link] } }}" style="{{cardStyle}}" wx:if="{{formatEntries[item]}}" wx:for="{{typePartIndexMap[type].oneIndex}}">
+            <image class="entry-image tee-image" lazyLoad="true" mode="aspectFill" src="{{formatEntries[item].image}}"></image>
+        </view>
+    </view>
+    <view class="part-two" wx:if="{{typePartIndexMap[type].twoIndex}}">
+        <view bind:tap="_p" class="entry" data-t="{{ tap:{ en:'handleNavigate',args:[formatEntries[item].link] } }}" style="{{cardStyle}}" wx:if="{{formatEntries[item]}}" wx:for="{{typePartIndexMap[type].twoIndex}}">
+            <image class="entry-image tee-image" lazyLoad="true" mode="aspectFill" src="{{formatEntries[item].image}}"></image>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,3 @@
+<view class="order-pay-prompt-popup-tip">
+    <a color="{{tpl.color}}" customClass="{{tpl.classname}}" wx:for="{{tplsArr}}" wx:for-item="tpl" wx:key="index">{{tpl.type==='countdown'?remainTime:tpl.value}}</a>
+</view>

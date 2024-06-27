@@ -1,0 +1,117 @@
+.split-coupon-friend-activity-info {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+.split-coupon-friend-activity-info__container {
+  background: #fff;
+  padding: 18px 16px 16px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.02), 0 8px 8px 0 rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.split-coupon-friend-activity-info__container_no-button {
+  padding-bottom: 0;
+}
+.split-coupon-friend-activity-info__tip {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+.split-coupon-friend-activity-info__coupon {
+  margin-bottom: 12px;
+}
+.split-coupon-friend-activity-info__coupon_action {
+  min-width: 0 !important;
+}
+.split-coupon-friend-activity-info__friend-tip {
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+}
+.split-coupon-friend-activity-info__friend-get {
+  font-size: 14px;
+  font-weight: 500;
+}
+.split-coupon-friend-activity-info__coupon-tag {
+  display: flex;
+  margin-left: 8px;
+  border: 1px solid red;
+  border-radius: 2px;
+  font-size: 0;
+  color: red;
+  letter-spacing: 0;
+  padding: 0 4px;
+  align-items: center;
+}
+.split-coupon-friend-activity-info__coupon-tag .coupon-tag-text {
+  font-size: 12px;
+}
+.split-coupon-friend-activity-info__coupon-tag .coupon-tag-text:first-child {
+  padding-right: 1.5px;
+  border-right: 1px dashed red;
+}
+.split-coupon-friend-activity-info__coupon-tag .coupon-tag-text:last-child {
+  padding-left: 1.5px;
+}
+.split-coupon-friend-activity-info__fail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #969799;
+  margin-bottom: 16px;
+  white-space: nowrap;
+}
+.split-coupon-friend-activity-info__fail:after,
+.split-coupon-friend-activity-info__fail:before {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 1px;
+  background: linear-gradient(90deg, #fff 0, #f5958c);
+  opacity: 0.3;
+  margin-right: 8px;
+  flex-grow: 1;
+}
+.split-coupon-friend-activity-info__fail:after {
+  transform: rotate(180deg);
+  margin-right: 0;
+  margin-left: 8px;
+}
+@keyframes breathe {
+  0% {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.95);
+  }
+}
+.split-coupon-friend-activity-info__btn {
+  height: 48px !important;
+  background: linear-gradient(270deg, #ff572f, #ff0438) !important;
+  font-size: 18px !important;
+  font-weight: 500;
+}
+.split-coupon-friend-activity-info__btn_animation {
+  animation: breathe 0.4s linear infinite alternate;
+}
+.split-coupon-friend-activity-info__isPlain {
+  background: #fff !important;
+}
+.split-coupon-friend-activity-info__btn_use {
+  margin-bottom: 32px;
+}
+.finished-before-join {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.finished-before-join__img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 15.6px;
+}
+.finished-before-join__text {
+  font-size: 16px;
+  color: #969799;
+}

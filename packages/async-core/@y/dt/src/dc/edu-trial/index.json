@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y/ppt/lib/user-authorize/index",
+    "b": "./components/trial-popup/index",
+    "_": "../../../../../../../components/_/index"
+  }
+}

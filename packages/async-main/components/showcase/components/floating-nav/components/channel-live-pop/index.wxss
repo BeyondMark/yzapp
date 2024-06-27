@@ -1,0 +1,226 @@
+@keyframes wave {
+  0% {
+    height: 8px;
+  }
+  50% {
+    height: 18px;
+  }
+  to {
+    height: 8px;
+  }
+}
+@keyframes wave_low {
+  0% {
+    height: 8px;
+  }
+  50% {
+    height: 16px;
+  }
+  to {
+    height: 8px;
+  }
+}
+@keyframes wave_new {
+  0% {
+    height: 8rpx;
+  }
+  50% {
+    height: 18rpx;
+  }
+  to {
+    height: 8rpx;
+  }
+}
+@keyframes wave_low_new {
+  0% {
+    height: 8rpx;
+  }
+  50% {
+    height: 16rpx;
+  }
+  to {
+    height: 8rpx;
+  }
+}
+@keyframes circle_outside {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+}
+@keyframes circle_inside {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.channel-live-floating-new {
+  position: fixed;
+  top: 262rpx;
+  right: 10rpx;
+  z-index: 140;
+}
+.channel-live-floating-new .top {
+  position: relative;
+  width: 104rpx;
+  height: 104rpx;
+  padding: 10.4rpx;
+  padding-bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.channel-live-floating-new .circle-outside {
+  animation: circle_outside 0.8s linear infinite;
+}
+.channel-live-floating-new .circle-middle,
+.channel-live-floating-new .circle-outside {
+  position: absolute;
+  border-radius: 50%;
+  border: 3rpx solid #ff2281;
+  width: 104rpx;
+  height: 104rpx;
+  box-sizing: border-box;
+  top: 10.4rpx;
+  right: 10.4rpx;
+}
+.channel-live-floating-new .circle-inside {
+  border-radius: 50%;
+  border: 2rpx solid #ff2281;
+  width: 88rpx;
+  height: 88rpx;
+  top: 8rpx;
+  right: 8rpx;
+  overflow: hidden;
+  animation: circle_inside 1.6s linear infinite;
+}
+.channel-live-floating-new .circle-inside image {
+  width: 88rpx;
+  height: 88rpx;
+}
+.channel-live-floating-new .bottom {
+  position: absolute;
+  width: 96rpx;
+  height: 30rpx;
+  background-image: linear-gradient(146deg, #ff2282, #e23d49);
+  border-radius: 15rpx;
+  top: 86.4rpx;
+  right: 14.4rpx;
+  overflow: hidden;
+}
+.channel-live-floating-new .bottom image {
+  width: 96rpx;
+  height: 30rpx;
+}
+.channel-live-floating-new .live-icon-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16rpx;
+  height: 18rpx;
+}
+.channel-live-floating-new .default-live-icon-wave {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 8rpx;
+  left: 8rpx;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+}
+.channel-live-floating-new .default-live-icon-wave .wave-wrap {
+  height: 18rpx;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.channel-live-floating-new .default-live-icon-wave .wave-item {
+  width: 4rpx;
+  height: 8rpx;
+  border-radius: 2rpx;
+  background: #fff;
+}
+.channel-live-floating-new .default-live-icon-wave .wave-item + .wave-item {
+  margin-left: 3rpx;
+}
+.channel-live-floating-new .default-live-icon-wave .wave-item.wave-1 {
+  animation: wave_low_new 1s ease-in-out infinite;
+}
+.channel-live-floating-new .default-live-icon-wave .wave-item.wave-2 {
+  animation: wave_new 1s ease-in-out 0.4s infinite;
+}
+.channel-live-floating-new .default-live-icon-wave .wave-item.wave-3 {
+  animation: wave_low_new 1s ease-in-out 0.8s infinite;
+}
+.channel-live-floating {
+  position: fixed;
+  right: 32rpx;
+  width: 96rpx;
+  height: 96rpx;
+  top: 136px;
+  z-index: 141;
+}
+.custom-icon {
+  width: 100rpx;
+  height: 100rpx;
+}
+.custom-icon image {
+  width: 100%;
+  height: 100%;
+}
+.default-icon {
+  position: absolute;
+  width: 96rpx;
+  height: 104rpx;
+}
+.default-icon image,
+.default-live-icon {
+  width: 100%;
+  height: 100%;
+}
+.default-icon .default-live-icon-wave {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  padding: 10px;
+  box-sizing: border-box;
+  justify-content: center;
+}
+.default-icon .default-live-icon-wave .wave-wrap {
+  height: 18px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.default-icon .default-live-icon-wave .wave-item {
+  width: 3px;
+  height: 8px;
+  border-radius: 1.5px;
+  background: #fff;
+}
+.default-icon .default-live-icon-wave .wave-item + .wave-item {
+  margin-left: 3px;
+}
+.default-icon .default-live-icon-wave .wave-item.wave-1 {
+  animation: wave_low 1s ease-in-out infinite;
+}
+.default-icon .default-live-icon-wave .wave-item.wave-2 {
+  animation: wave 1s ease-in-out 0.4s infinite;
+}
+.default-icon .default-live-icon-wave .wave-item.wave-3 {
+  animation: wave_low 1s ease-in-out 0.8s infinite;
+}

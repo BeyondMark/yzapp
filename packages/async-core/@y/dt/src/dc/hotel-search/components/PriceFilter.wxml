@@ -1,0 +1,24 @@
+<view class="filter-content">
+    <view class="filter-content-title t-text">筛选</view>
+    <view class="filter-content-range">
+        <view class="t-text">价格范围: ¥0-{{value}}</view>
+        <view class="filter-content-range-detail">
+            <view class="filter-content-range-detail-text t-text">¥0</view>
+            <view class="t-text">¥2000+</view>
+        </view>
+        <view class="filter-content-range-slider">
+            <b activeColor="{{themeColors.general}}" bind:_init="_tic" bind:change="_p" data-t="{{ change:{en:'changeVal'} }}" max="{{2000}}" min="{{0}}" range="{{true}}" value="{{value}}"></b>
+        </view>
+    </view>
+    <view class="van-sku-actions">
+        <view class="van-sku-actions-reset">
+            <a bind:_init="_tic" bind:tap="_p" block="{{true}}" color="{{themeColors['vice-bg']}}" data-t="{{ tap:{en:'onReset'} }}" type="warning">
+                <span bind:_init="_tic" style="{{textColor}}">重置</span>
+            </a>
+        </view>
+        <view class="van-sku-actions-complete">
+            <a bind:_init="_tic" bind:tap="_p" block="{{true}}" color="{{themeColors.general}}" data-t="{{ tap:{en:'onComfirm'} }}" type="danger">        完成
+      </a>
+        </view>
+    </view>
+</view>

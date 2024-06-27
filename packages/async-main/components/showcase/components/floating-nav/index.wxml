@@ -1,0 +1,63 @@
+<template name="panel-item">
+    <view class="item sub {{item.hasBadge?'has-badge':''}}" style="background-image: url({{item.iconUrl}});"></view>{{iconTextMap[item.navType]||item.customeTitle}}</template>
+<template name="sub-item">
+    <button bindcontact="onContactBack" bindtap="handleNavTap" businessId="{{im.businessId}}" class="item sub {{item.independent?'independent':''}}  {{item.isReplace?'share-animation':''}}" data-nav-type="{{item.navType}}" hoverClass="none" openType="{{forbidShare?'':'share'}}" sessionFrom="{{im.sourceParam}}" style="background-image: url({{item.iconUrl}}); transform: translateY(-{{index*gap}}px);" wx:if="{{item.navType===typeMap.SHARE}}">
+        <view class="share-share-corner" wx:if="{{hasShareActivity}}">领</view>
+    </button>
+    <b bindcontact="onContactBack" bindtap="handleNavTap" businessId="{{im.businessId}}" class="asd item sub {{item.independent?'independent':''}}  {{item.isReplace?'share-animation':''}}" data-nav-type="{{item.navType}}" hoverClass="none" opacityFull="{{true}}" openType="contact" sessionFrom="{{im.sourceParam}}" style="background-image: url({{item.iconUrl}}); transform: translateY(-{{index*gap}}px);" wx:elif="{{item.navType===typeMap.CONTACT}}"></b>
+    <view bindtap="handleNavTap" class="item sub {{item.independent?'independent':''}} {{item.hasBadge?'has-badge':''}} {{item.customClass||''}}" data-nav-type="{{item.navType}}" style="background-image: url({{item.iconUrl}}); transform: translateY(-{{index*gap}}px);" wx:else>
+        <view class="tag" wx:if="{{item.tag}}">{{item.tag}}</view>
+    </view>
+</template>
+<view class="custom-class theme-floating-nav {{active?'active':''}} {{hidden?'hidden':''}} {{isIphoneX?'is-iphone-x':''}}" wx:if="{{subFloatingNavs.length>0&&!isChannels}}">
+    <block wx:if="{{subFloatingNavs.length===1}}">
+        <button bindcontact="onContactBack" bindtap="handleNavTap" businessId="{{im.businessId}}" class="item main {{first.isReplace?'share-animation':''}}" data-nav-type="{{first.navType}}" hoverClass="none" openType="{{forbidShare?'':'share'}}" sessionFrom="{{im.sourceParam}}" style="background-image: url({{first.iconUrl}});" wx:if="{{first.navType===typeMap.SHARE}}">
+            <view class="share-share-corner" wx:if="{{hasShareActivity}}">领</view>
+        </button>
+        <b bindcontact="onContactBack" bindtap="handleNavTap" businessId="{{im.businessId}}" contactClass="item main {{first.isReplace?'share-animation':''}}" contactStyle="background-image: url({{first.iconUrl}});" data-nav-type="{{first.navType}}" hoverClass="none" openType="contact" sessionFrom="{{im.sourceParam}}" wx:elif="{{first.navType===typeMap.CONTACT}}"></b>
+        <view bindtap="handleNavTap" class="item main {{first.hasBadge?'has-badge':''}} {{first.customClass||''}}" data-nav-type="{{first.navType}}" style="background-image: url({{first.iconUrl}});" wx:else>
+            <view class="tag" wx:if="{{first.tag}}">{{first.tag}}</view>
+        </view>
+    </block>
+    <block wx:else>
+        <view bindtap="handleMainNavTap" wx:if="{{normalList.length>0}}">
+            <view class="item main main-1" style="background-image: url({{mainFloatingNav.foldedIconUrl}});">
+                <view class="share-share-corner" wx:if="{{hasShareActivity&&shareActivityIcon===1}}">领</view>
+            </view>
+            <view class="item main main-2" style="background-image: url({{mainFloatingNav.unfoldedIconUrl}});"></view>
+        </view>
+        <view class="line {{normalList.length===0?'line--only-independent':''}}">
+            <block wx:if="{{isLine}}">
+                <template is="sub-item" data="{{hasShareActivity:hasShareActivity,shareActivityIcon:shareActivityIcon,item:item,index:active?index+1:0,forbidShare:forbidShare,typeMap:typeMap,gap:gap,im:im}}" wx:for="{{normalList}}" wx:key="navType"></template>
+            </block>
+            <template is="sub-item" data="{{hasShareActivity:hasShareActivity,shareActivityIcon:shareActivityIcon,item:item,index:active&&isLine?normalList.length+index+1:index+1,forbidShare:forbidShare,typeMap:typeMap,gap:gap,im:im}}" wx:for="{{independentList}}" wx:key="navType"></template>
+        </view>
+        <block wx:if="{{!isLine}}">
+            <view bindtouchstart="handleClosePanel" class="outer-space"></view>
+            <view class="panel {{normalList.length>6?'panel--three-rows':''}}">
+                <block wx:for="{{normalList}}" wx:key="navType">
+                    <button bindcontact="onContactBack" bindtap="handleNavTap" businessId="{{im.businessId}}" class="panel-item" data-nav-type="{{item.navType}}" hoverClass="none" openType="{{forbidShare?'':'share'}}" sessionFrom="{{im.sourceParam}}" wx:if="{{item.navType===typeMap.SHARE}}">
+                        <view class="share-share-corner" style="top: 0;right: 7px;z-index: 1;" wx:if="{{hasShareActivity}}">领</view>
+                        <template is="panel-item" data="{{item:item,iconTextMap:iconTextMap}}"></template>
+                    </button>
+                    <b bindcontact="onContactBack" bindtap="handleNavTap" businessId="{{im.businessId}}" class="panel-item-wrap" contactClass="panel-item" data-nav-type="{{item.navType}}" hoverClass="none" openType="contact" sessionFrom="{{im.sourceParam}}" wx:elif="{{item.navType===typeMap.CONTACT}}">
+                        <template is="panel-item" data="{{item:item,iconTextMap:iconTextMap}}"></template>
+                    </b>
+                    <view bindtap="handleNavTap" class="panel-item" data-nav-type="{{item.navType}}" wx:else>
+                        <template is="panel-item" data="{{item:item,iconTextMap:iconTextMap}}"></template>
+                    </view>
+                </block>
+                <view class="panel-item" wx:for="{{skeletonNum}}" wx:key="navType"></view>
+            </view>
+        </block>
+    </block>
+    <f bind:finished="hideSharePop" bind:update-share-status="updateShareStatus" featureAlias="{{featureAlias}}" pageType="{{shareCardPageType}}" salesman="{{salesman}}" showSharePop="{{showSharePop}}" wx:if="{{shareCard==='share-feature'}}"></f>
+</view>
+<a bind:close="closeGoodsShowcase" show="{{showGoodsShowcase}}"></a>
+<view hidden="{{active||isWxvideoLiveShow}}">
+    <c></c>
+</view>
+<e></e>
+<view hidden="{{active}}">
+    <d bind:update-live-status="updateWxvideoLiveStatus" info="{{liveNav}}"></d>
+</view>

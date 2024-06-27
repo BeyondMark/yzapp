@@ -1,0 +1,24 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.e7350 {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  padding: 0 16px;
+  font-size: 14px;
+  color: #323233;
+  background-color: #f2f3f5;
+}
+.fc434 {
+  flex: 1 1 40%;
+}
+.f6b1f {
+  flex: 1 1 20%;
+  text-align: center;
+}
+.e517a {
+  flex: 1 1 40%;
+  text-align: right;
+}

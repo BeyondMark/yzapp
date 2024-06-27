@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "商品搜索",
+  "usingComponents": {
+    "a": "../../../components/keys-map/index",
+    "b": "../../../../../../@vant/weapp/dist/sticky/index",
+    "c": "../../../../../../tag/exensions/filter-bar/widgets/filter-bar-main/rt/index",
+    "d": "../../../../../../tag/exensions/dc-goods/widgets/dc-goods-main/rt/index",
+    "e": "../../../../../../@vant/weapp/dist/search/index",
+    "f": "/packages/async-main/@vant/weapp/dist/icon/index",
+    "_": "../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "f": "_" }
+}

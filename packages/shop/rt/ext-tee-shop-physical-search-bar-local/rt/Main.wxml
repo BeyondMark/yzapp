@@ -1,0 +1,1 @@
+<a bind:_init="_tic" bind:cancel="_p" bind:change="_p" bind:clear="_p" bind:focus="_p" customClass="physical-search-bar" data-t="{{ focus:{en:'onFocus'},change:{en:'onChange'},clear:{en:'onClear'},cancel:{en:'onCancel'} }}" placeholder="{{placeholder}}" shape="round" showAction="{{showAction}}" value="{{keyword}}"></a>

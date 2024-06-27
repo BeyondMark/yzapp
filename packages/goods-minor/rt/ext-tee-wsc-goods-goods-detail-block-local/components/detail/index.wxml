@@ -1,0 +1,5 @@
+<view>
+    <slot></slot>
+    <slot name="haitao-notification"></slot>
+    <slot name="price-intro"></slot>
+</view>

@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y/ppt/lib/user-authorize/index",
+    "b": "./../common/GrowthValue",
+    "c": "./AssetInfoBlockModeThree",
+    "d": "./AssetEntryCard",
+    "e": "./../common/LevelIcon",
+    "_": "../../../../../../../../../components/_/index"
+  }
+}

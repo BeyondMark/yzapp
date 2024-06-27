@@ -1,0 +1,7 @@
+<b bind:_init="_tic" bind:close="_p" customClass="c93f7f" data-t="{{ close:{en:'onClose'} }}" round="{{true}}" show="{{show}}" wx:if="{{initialShow}}">
+    <view class="c5da0e"> {{title}} </view>
+    <view class="c3d1b7" style="white-space:{{whiteSpace}}">
+        <slot></slot>
+    </view>
+    <a bind:_init="_tic" bind:tap="_p" block="{{true}}" color="{{themeColors.general||buttonColor}}" customClass="c2de75" data-t="{{ tap:{en:'onClose'} }}" round="{{true}}" textStyle="{{btnTextStyle}}" type="danger"> {{buttonText}} </a>
+</b>

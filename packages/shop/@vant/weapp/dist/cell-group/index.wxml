@@ -1,0 +1,4 @@
+<view class="{{utils.bem( 'cell-group__title',{inset:inset} )}}" wx:if="{{title}}">{{title}}</view>
+<view class="custom-class {{utils.bem( 'cell-group',{inset:inset} )}} {{border?'van-hairline--top-bottom':''}}">
+    <slot></slot>
+</view>

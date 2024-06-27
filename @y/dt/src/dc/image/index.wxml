@@ -1,0 +1,55 @@
+<view class="dc-image {{opt.style===2?'shadow':''}} {{opt.tpl===3||opt.tpl===4||opt.tpl===5?'shadowInScroll':''}} {{opt.radius===2?'radius':''}}" style="{{style}}">
+    <view class="top2end" wx:if="{{opt.tpl===1}}">
+        <view class="item {{item.hotAreas&&item.hotAreas.length>0?'hotarea-container':''}}" style="{{item.style+'height:'+item.showHeight+'px;'}}" wx:for="{{commonPicData}}" wx:key="index">
+            <block wx:if="{{item.linkType==='hotarea'}}">
+                <view class="{{'title-'+opt.tpl}}" wx:if="{{item.title}}">{{item.title}}</view>
+                <d bind:_init="_tic" bind:error="_p" bind:load="_p" data-t="{{ load:{ en:'imageLoad',args:[index] },error:{ en:'onImageLoadError',args:[index] } }}" minImg="{{item.minImg}}" mode="{{aspectFill}}" shadow="{{useShadow}}" src="{{item.imageUrl}}" style="height:{{item.showHeight+'px'}}; width:100%"></d>
+                <c _opt="{{_opt}}" bind:_init="_tic" bind:contact="_p" bind:handleCouponClick="_p" bind:jumpToLink="_p" bind:showGuideDialog="_p" class="hotarea-link" customStyle="width:100%;height:100%;" data-t="{{ jumpToLink:{ en:'handleClick',args:[area,index] },handleCouponClick:{ en:'handleCouponClick',args:[item,index] },contact:{en:'handleContactBack'},showGuideDialog:{en:'handleShowGuideDialog'} }}" extra="{{extra}}" item="{{area}}" kdtId="{{kdtId}}" needSubscribeMessage="{{needSubscribeMessage}}" style="{{area.style}}" wx:for="{{item.hotAreas}}" wx:for-index="indexAreas" wx:for-item="area" wx:key="indexAreas">
+                    <view style="{{area.style}}"></view>
+                </c>
+            </block>
+            <c _opt="{{_opt}}" bind:_init="_tic" bind:contact="_p" bind:handleCouponClick="_p" bind:jumpToLink="_p" bind:showGuideDialog="_p" data-t="{{ jumpToLink:{ en:'handleClick',args:[item,index] },handleCouponClick:{ en:'handleCouponClick',args:[item,index] },contact:{en:'handleContactBack'},showGuideDialog:{en:'handleShowGuideDialog'} }}" extra="{{extra}}" item="{{item}}" kdtId="{{kdtId}}" needSubscribeMessage="{{needSubscribeMessage}}" wx:else>
+                <view class="{{'title-'+opt.tpl}}" wx:if="{{item.title}}"> {{item.title}} </view>
+                <d bind:_init="_tic" bind:error="_p" bind:load="_p" data-t="{{ load:{ en:'imageLoad',args:[index] },error:{ en:'onImageLoadError',args:[index] } }}" minImg="{{item.minImg}}" mode="{{aspectFill}}" shadow="{{useShadow}}" src="{{item.imageUrl}}" style="height:{{item.showHeight+'px'}}; width:100%"></d>
+            </c>
+        </view>
+    </view>
+    <view class="swipe {{opt.tpl===10?'swipeDouble':''}}" style="{{swipeStyle.box}}" wx:elif="{{opt.tpl===2||opt.tpl===10}}">
+        <view class="position">
+            <view class="swipe-double-bg" style="{{swipeBgStyle}}" wx:if="{{opt.tpl===10}}">
+                <view bind:error="_p" class="image-item {{index===current?'active':''}}" data-t="{{ error:{ en:'onImageLoadError',args:[index] } }}" mode="aspectFill" style="background-image:{{'url('+item.imageBgUrl+')'}}" wx:for="{{commonPicData}}" wx:key="index"></view>
+            </view>
+            <swiper autoplay="{{true}}" bind:change="_p" circular="{{true}}" class="swipe-box" data-t="{{ change:{en:'onChange'} }}" interval="{{opt.swipeTime}}" pid="{{vanSwiperKey}}" showIndicators="{{false}}" style="{{swipeStyle.swipe}}">
+                <swiper-item customStyle="{{position:'relative'}}" pid="{{vanSwiperKey+index}}" wx:for="{{commonPicData}}" wx:key="index">
+                    <view class="swipe-item-wrapper" style="{{swipeItemStyle}}">
+                        <block wx:if="{{item.linkType==='hotarea'}}">
+                            <view class="{{'title-'+opt.tpl}}" wx:if="{{item.title}}">{{item.title}}</view>
+                            <d bind:_init="_tic" bind:error="_p" bind:load="_p" data-t="{{ load:{ en:'imageLoad',args:[index] },error:{ en:'onImageLoadError',args:[index] } }}" minImg="{{item.minImg}}" mode="{{mode}}" shadow="{{useShadow}}" src="{{item.imageUrl}}" style="{{setImageHeight}}"></d>
+                            <c _opt="{{_opt}}" bind:_init="_tic" bind:contact="_p" bind:handleCouponClick="_p" bind:jumpToLink="_p" bind:showGuideDialog="_p" class="hotarea-link" customStyle="width:100%;height:100%;" data-t="{{ jumpToLink:{ en:'handleClick',args:[area,index] },handleCouponClick:{ en:'handleCouponClick',args:[item,index] },contact:{en:'handleContactBack'},showGuideDialog:{en:'handleShowGuideDialog'} }}" extra="{{extra}}" item="{{area}}" kdtId="{{kdtId}}" needSubscribeMessage="{{needSubscribeMessage}}" style="{{area.style}}" wx:for="{{item.hotAreas}}" wx:for-index="indexAreas" wx:for-item="area" wx:key="indexAreas">
+                                <view style="{{area.style}}"></view>
+                            </c>
+                        </block>
+                        <c _opt="{{_opt}}" bind:_init="_tic" bind:contact="_p" bind:handleCouponClick="_p" bind:jumpToLink="_p" bind:showGuideDialog="_p" customClass="swipe-item item" data-t="{{ jumpToLink:{ en:'handleClick',args:[item,index] },handleCouponClick:{ en:'handleCouponClick',args:[item,index] },contact:{en:'handleContactBack'},showGuideDialog:{en:'handleShowGuideDialog'} }}" extra="{{extra}}" item="{{item}}" kdtId="{{kdtId}}" needSubscribeMessage="{{needSubscribeMessage}}" wx:else>
+                            <view class="{{'swipe-title'}} {{'title-'+opt.tpl}}" style="{{'margin: 0 '+opt.pageMargin+'px'}}" wx:if="{{item.title}}">{{item.title}}</view>
+                            <d bind:_init="_tic" bind:error="_p" bind:load="_p" data-t="{{ load:{ en:'imageLoad',args:[index] },error:{ en:'onImageLoadError',args:[index] } }}" minImg="{{item.minImg}}" mode="{{mode}}" shadow="{{useShadow}}" src="{{item.imageUrl}}" style="{{setImageHeight}}"></d>
+                        </c>
+                    </view>
+                </swiper-item>
+            </swiper>
+            <b bind:_init="_tic" current="{{current}}" imgs="{{opt.imgs}}" margin="{{opt.pageMargin}}" overlapHeight="{{computedOverlapHeight}}" type="{{opt.indicator}}" zIndex="{{opt.tpl===10?1:'auto'}}" wx:if="{{opt.imgs.length>1}}"></b>
+        </view>
+    </view>
+    <scroll-view scrollX="{{true}}" wx:elif="{{opt.tpl===3||opt.tpl===4||opt.tpl===5}}">
+        <view class="scroll-view-con">
+            <view style="{{slidePadding}}"></view>
+            <view class="{{'item'}} {{'scroll-view-item'}} {{'scroll-view-item-'+opt.tpl}}" style="{{item.style}}" wx:for="{{slidePics}}" wx:key="index">
+                <c _opt="{{_opt}}" bind:_init="_tic" bind:contact="_p" bind:handleCouponClick="_p" bind:jumpToLink="_p" bind:showGuideDialog="_p" data-t="{{ jumpToLink:{ en:'handleClick',args:[item,index] },handleCouponClick:{ en:'handleCouponClick',args:[item,index] },contact:{en:'handleContactBack'},showGuideDialog:{en:'handleShowGuideDialog'} }}" extra="{{extra}}" item="{{item}}" kdtId="{{kdtId}}" needSubscribeMessage="{{needSubscribeMessage}}">
+                    <d bind:_init="_tic" bind:error="_p" bind:load="_p" data-t="{{ load:{ en:'imageLoad',args:[index] },error:{ en:'onImageLoadError',args:[index] } }}" minImg="{{item.minImg}}" mode="{{item.mode}}" shadow="{{useShadow}}" src="{{item.imageUrl}}" style="{{item.imgStyle}}" wx:if="{{opt.tpl!==5}}"></d>
+                    <view class="{{'title-'+opt.tpl}}" style="{{item.titleStyle}}" wx:if="{{item.title}}">{{item.title}}</view>
+                </c>
+            </view>
+            <view style="{{slidePadding}}"></view>
+        </view>
+    </scroll-view>
+    <a beforGuide="{{beforGuide}}" bind:_init="_tic" bind:closeGuide="_p" data-t="{{ closeGuide:{en:'closeGuide'} }}" guideInfo="{{guideInfo}}" guideType="coupon" kdtId="{{kdtId}}" mobile="{{mobile}}" redirectUrl="{{redirectUrl}}" showPop="{{showGuide}}"></a>
+</view>

@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../material-list-block/rt/index",
+    "b": "/ext-tee-wsc-dc/extensions/showcase-container/rt/ShowcaseContainer",
+    "c": "/packages/async-main/vant-weapp/dist/tabs/index",
+    "d": "/packages/async-main/vant-weapp/dist/tab/index",
+    "_": "../../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "c": "_", "d": "_" }
+}

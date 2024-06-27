@@ -1,0 +1,19 @@
+<view>
+    <view class="{{'cashier-pre__container '+customClass}}" style="{{customStyle}}">
+        <i bind:_init="_tic" inset="{{inset}}" wx:if="{{visible}}">
+            <view class="cashier-pre__channel-wrap">
+                <f amount="{{amount}}" bind:_init="_tic" bind:change="_p" channel="{{it}}" data-t="{{ change:{en:'onChannelChange'} }}" instalment="{{instalment}}" selected="{{selected}}" themeColors="{{themeColors}}" wx:for="{{visibleChannels}}" wx:for-item="it" wx:key="payChannel"></f>
+                <view bind:tap="_p" class="cashier-pre__show-more" data-t="{{ tap:{en:'doShowMore'} }}" wx:if="{{showMoreTrigger}}">
+                    <view class="t-text">更多支付方式</view>
+                    <b bind:_init="_tic" color="#969799" name="arrow-down"></b>
+                </view>
+            </view>
+            <a bind:_init="_tic" bind:cancel="_p" bind:close="_p" bind:confirm="_p" cancelButtonText="{{dialogOptions.cancelButtonText}}" confirmButtonText="{{dialogOptions.confirmButtonText}}" data-t="{{ close:{en:'closeDialog'},confirm:{en:'onDialogConfirm'},cancel:{en:'onDialogCancel'} }}" message="{{dialogOptions.message}}" show="{{showDialog}}" showCancelButton="{{dialogOptions.showCancelButton}}"></a>
+            <c bind:_init="_tic" data-ref="van-toast"></c>
+            <g bind:_init="_tic" bind:change="_p" bind:close="_p" bind:forget="_p" bind:submit="_p" data-t="{{ close:{en:'onPayLoginClose'},change:{en:'onPayLoginChange'},submit:{en:'onPayLoginSubmit'},forget:{en:'onPayLoginForget'} }}" login="{{loginPass}}" mobile="{{mobile}}" show="{{showPayLogin}}"></g>
+            <h bind:_init="_tic" bind:close="_p" bind:forget-pass="_p" bind:full="_p" bind:update="_p" data-t="{{ forgetPass:{en:'onPayPassForget'},update:{en:'onPayPassUpdate'},full:{en:'onPayPassCheck'},close:{en:'onPayPassClose'} }}" password="{{payPass}}" show="{{showPayPasser}}"></h>
+            <d bind:_init="_tic" bind:close="_p" bind:confirm="_p" data-t="{{ close:{en:'onOfflinePayFormClose'},confirm:{en:'onOfflinePayFormConfirm'} }}" origin="{{origin}}" show="{{showOfflinePayForm}}" themeColor="{{themeColors.general}}"></d>
+            <e bind:_init="_tic" bind:close="_p" bind:refetch="_p" bind:submit="_p" data-t="{{ close:{en:'onCaptchPadClose'},submit:{en:'verifyCaptcha'},refetch:{en:'sendCaptcha'} }}" phone="{{mobile}}" show="{{showCaptchaPad}}" themeColor="{{themeColors.general}}"></e>
+        </i>
+    </view>
+</view>

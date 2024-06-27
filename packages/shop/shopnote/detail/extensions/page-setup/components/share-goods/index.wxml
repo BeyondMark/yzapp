@@ -1,0 +1,21 @@
+<canvas canvasId="{{canvasId}}" class="share-canvas {{wrapperClass}}" style="width: 260px; display: {{showCanvas?'block':'none'}}"></canvas>
+<c bind:click-overlay="closeShareImageModal" customClass="share-image__popup" show="{{showModal}}" zIndex="{{1000}}">
+    <view class="share-image__container {{wrapperClass}}">
+        <image class="share-image--preview {{wrapperClass}}" src="{{src}}"></image>
+        <view class="share-image__btn">
+            <b bg="main" bindtap="clickSaveImage" color="main-text" customClass="zan-btn zan-btn--danger save-image--btn">保存图片</b>
+        </view>
+    </view>
+</c>
+<a bind:cancel="closeActionSheet" bind:close="closeActionSheet" closeOnClickOverlay="{{sheet.closeOnClickOverlay}}" show="{{sheet.show}}">
+    <view>
+        <button bind:tap="handleRecommend" class="action-sheet__item van-hairline--top action-recommend" hoverClass="action-sheet__item--hover" wx:if="{{isSupportOpenBusinessView&&isShowRecommendGoodThings}}">
+            <view class="big-word">
+                <view class="recommend-icon icon-like-bold"></view>推荐好物</view>
+            <view class="small-word">(分享到好物圈)</view>
+        </button>
+        <button class="action-sheet__item van-hairline--top" hoverClass="action-sheet__item--hover" openType="share">发送给朋友</button>
+        <button bind:tap="handlePoster" class="action-sheet__item van-hairline--top" hoverClass="action-sheet__item--hover">生成海报</button>
+    </view>
+    <view bind:tap="closeActionSheet" class="action-sheet__cancel" hoverClass="action-sheet__cancel--hover" hoverStayTime="70">取消</view>
+</a>

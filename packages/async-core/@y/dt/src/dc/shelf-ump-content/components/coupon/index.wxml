@@ -1,0 +1,24 @@
+<view class="ump-coupon">
+    <view class="ump-coupon__left">
+        <view>
+            <view class="condition-price small t-text" wx:if="{{item.activityType===13}}">        商品兑换
+      </view>
+            <view class="condition-price {{item.valueCopywriting.length>4?'medium':''}} {{item.activityType===15||item.activityType===16&&!item.unitCopywriting?'small':''}} t-text" wx:else> {{item.valueCopywriting}} </view>
+            <view class="condition-unit t-text" wx:if="{{item.unitCopywriting}}">{{item.unitCopywriting}}</view>
+        </view>
+        <view class="condition-text t-text">{{item.useThresholdCopywriting}}</view>
+    </view>
+    <view class="ump-coupon__mid">
+        <view class="coupon-name t-text">{{item.title}}</view>
+        <view class="coupon-date t-text">{{item.validTimeCopywriting}}</view>
+    </view>
+    <view class="coupon-mark" wx:if="{{item.hasTaken}}">
+        <view class="coupon-mark__inner">
+            <view class="coupon-mark__text t-text">已领</view>
+        </view>
+    </view>
+    <view class="ump-coupon__right">
+        <view bind:tap="_p" class="coupon-btn" data-t="{{ tap:{ en:'takeCoupon',args:[item.activityId] } }}"> {{item.hasTaken?'继续领取':'立即领取'}} </view>
+    </view>
+    <view class="ump-coupon__newer" wx:if="{{item.isNewcomerVoucher}}">新人券</view>
+</view>

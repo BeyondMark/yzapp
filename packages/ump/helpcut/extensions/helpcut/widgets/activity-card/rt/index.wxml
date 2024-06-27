@@ -1,0 +1,22 @@
+<view class="activity-card {{isActionSuccess?'':'fail-status'}}">
+    <a rmId="{{rmId}}" wx:if="{{rmId==='b13-0'}}"></a>
+    <view class="bargain-slogan">{{sloganCopywriting}}</view>
+    <view class="bargain-goods">
+        <view class="stamp-copywriting" wx:if="{{stampCopywriting}}">{{stampCopywriting}}</view>
+        <image bindtap="gotoGoodsDetail" class="goods-image" mode="aspectFill" src="{{goodsDetail.cover}}"></image>
+        <view class="goods-info">
+            <view class="goods-title">{{goodsDetail.title}}</view>
+            <view>
+                <text class="goods-stock">仅剩:{{bargainDetail.activityStock}}件</text>
+                <view>
+                    <view class="goods-price">
+                        <text class="price-lower">最低价 ¥</text>
+                        <text class="price-yuan">{{minPriceYuan}}</text>
+                        <text class="price-fen">.{{minPriceFen}}</text>
+                        <text class="origin-price">¥{{goodsDetail.originPrice}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

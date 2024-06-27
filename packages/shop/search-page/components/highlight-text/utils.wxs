@@ -1,0 +1,4 @@
+function isHighlight(words, key) {
+  return words.indexOf(key) > -1;
+}
+module.exports = { isHighlight: isHighlight };

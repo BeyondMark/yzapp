@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/ump/components/goods-recommend/index",
+    "b": "../../task-item/rt/index",
+    "c": "/@vant/weapp/dist/popup/index",
+    "_": "../../../../../../../../components/_/index"
+  }
+}

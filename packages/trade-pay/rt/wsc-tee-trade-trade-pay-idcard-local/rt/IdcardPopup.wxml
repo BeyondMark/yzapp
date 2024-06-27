@@ -1,0 +1,30 @@
+<view class="c582c">
+    <c bind:_init="_tic" bind:close="_p" bodyBackgroundColor="#fff" bodyStyle="padding: 12px 12px 80px" class="ef25c" closeOnConfirm="{{false}}" color="var(--main-bg, #323233)" data-t="{{ close:{en:'onClose'} }}" show="{{show}}" showClose="{{true}}" themeColors="{{themeColors}}">
+        <view class="f776c" slot="title"> 查看身份信息 </view>
+        <view class="c53643 a987c">      你已完成身份绑定，每个用户仅能绑定一个身份证号购买跨境商品，且绑定后不可换绑，如有疑问请联系商家。
+    </view>
+        <a bind:_init="_tic" clearable="{{true}}" disabled="{{true}}" inputClass="c92ae0" label="真实姓名" labelClass="e8d90" maxlength="{{15}}" readonly="{{true}}" titleWidth="72px" value="{{idcard.name}}"></a>
+        <a bind:_init="_tic" clearable="{{true}}" disabled="{{true}}" inputClass="c92ae0" label="身份证号" labelClass="e8d90" maxlength="{{18}}" readonly="{{true}}" titleWidth="72px" type="idcard" value="{{idcard.number}}"></a>
+        <view wx:if="{{order.needIdCardPhoto}}">
+            <d bind:_init="_tic" customClass="c4508d" title="身份证照" titleClass="c67a70" valueClass="f14ef">
+                <view class="b4713">
+                    <view class="c15126">
+                        <image class="c687cb bd231" lazyLoad="true" mode="aspectFit" src="{{idcard.backPhoto}}"></image>
+                        <view class="c2c0e2">人像面</view>
+                    </view>
+                    <view class="c15126">
+                        <image class="c687cb bd231" lazyLoad="true" mode="aspectFit" src="{{idcard.frontPhoto}}"></image>
+                        <view class="c2c0e2">国徽面</view>
+                    </view>
+                </view>
+            </d>
+        </view>
+        <view class="c394f c841e2__tri" wx:if="{{showIdCardList}}">
+            <view class="ff5c3">历史身份信息</view>
+            <view class="c841e2" scrollY="{{true}}">
+                <view bind:tap="_p" class="c0b9a9" data-t="{{ tap:{ en:'onSelectIdCard',args:[item] } }}" wx:for="{{idCardList}}" wx:key="number"> {{item.name}}，{{item.number}} </view>
+            </view>
+        </view>
+    </c>
+    <b bind:_init="_tic" data-ref="idcardDialog"></b>
+</view>

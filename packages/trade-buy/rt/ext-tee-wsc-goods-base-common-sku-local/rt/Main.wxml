@@ -1,0 +1,1 @@
+<a bind:_init="_tic" bind:close="_p" bind:custom="_p" bind:opened="_p" bind:preview="_p" bind:selected="_p" bind:submit="_p" data-t="{{ close:{en:'onClose'},preview:{en:'onPreview'},submit:{en:'onSubmit'},selected:{en:'onSelected'},opened:{en:'onOpened'},custom:{en:'onCustom'} }}" info="{{skuInfo}}" show="{{show}}"></a>

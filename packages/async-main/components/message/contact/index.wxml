@@ -1,0 +1,12 @@
+<button bind:tap="onWeixinKfTap" class="contact-class {{opacityFull?'opacity-full':''}}" hoverClass="{{hoverClass}}" size="{{size}}" style="{{contactStyle}}" type="{{type}}" wx:if="{{mode===WX_KF}}">
+    <slot></slot>
+</button>
+<button appParamter="{{appParamter}}" bind:contact="onContact" bind:error="onError" bind:lauchapp="onLauchapp" bind:opensetting="onOpensetting" bind:tap="onWXIMTap" businessId="{{businessId}}" class="contact-class {{opacityFull?'opacity-full':''}}" disabled="{{disabled||!sessionFrom}}" formType="{{formType}}" hoverClass="{{hoverClass}}" hoverStartTime="{{hoverStartTime}}" hoverStayTime="{{hoverStayTime}}" hoverStopPropagation="{{hoverStopPropagation}}" lang="{{lang}}" loading="{{loading}}" openType="{{openType}}" plain="{{plain}}" sendMessageImg="{{sendMessageImg}}" sendMessagePath="{{sendMessagePath}}" sendMessageTitle="{{sendMessageTitle}}" sessionFrom="{{sessionFrom}}" showMessageCard="{{showMessageCard}}" size="{{size}}" style="{{contactStyle}}" type="{{type}}" wx:if="{{mode===WX_IM}}">
+    <slot></slot>
+</button>
+<button bind:tap="onYZIMTap" class="contact-class {{opacityFull?'opacity-full':''}}" hoverClass="{{hoverClass}}" style="{{contactStyle}}" wx:elif="{{mode===YZ_IM}}">
+    <slot></slot>
+</button>
+<button class="contact-class {{opacityFull?'opacity-full':''}}" disabled="{{disabled}}" formType="{{formType}}" hoverClass="{{hoverClass}}" hoverStartTime="{{hoverStartTime}}" hoverStayTime="{{hoverStayTime}}" hoverStopPropagation="{{hoverStopPropagation}}" loading="{{loading}}" plain="{{plain}}" size="{{size}}" style="{{contactStyle}}" type="{{type}}" wx:elif="{{mode===NO_IM}}">
+    <slot></slot>
+</button>

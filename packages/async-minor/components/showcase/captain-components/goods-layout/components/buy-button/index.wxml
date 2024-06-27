@@ -1,0 +1,18 @@
+<template name="button-content">
+    <a class="btn-{type} icon-btn" color="{{themeColor}}" customClass="van-icon" name="cart-circle-o" wx:if="{{type==1}}"></a>
+    <a class="btn-2 icon-btn" color="{{themeColor}}" customClass="van-icon" name="add-o" wx:if="{{type==2}}"></a>
+    <b class="cap-btn btn-3" customClass="van-button" type="danger" wx:if="{{type==3}}">{{buttonText?buttonText:'马上抢'}}</b>
+    <b class="cap-btn btn-4" customClass="van-button" wx:if="{{type==4}}">{{buttonText?buttonText:'购买'}}</b>
+    <a class="btn-2 icon-btn" color="{{themeColor}}" customClass="van-icon" name="add" wx:if="{{type==5}}"></a>
+    <a class="btn-2 icon-btn" color="{{themeColor}}" customClass="van-icon" name="shopping-cart-o" wx:if="{{type==6}}"></a>
+    <b class="cap-btn btn-7" customClass="van-button" type="danger" wx:if="{{type==7}}">{{buttonText?buttonText:'马上抢'}}</b>
+    <b class="cap-btn btn-8" customClass="van-button" wx:if="{{type==8}}">{{buttonText?buttonText:'购买'}}</b>
+    <b class="btn-9" customClass="van-button" type="danger" wx:if="{{type==9}}">我要抢购</b>
+    <b class="btn-10 cap-btn" customClass="van-button" type="danger" wx:if="{{type==10}}">{{buttonText?buttonText:'兑换'}}</b>
+</template>
+<navigator appId="{{appId}}" catch:tap="handleGoodsBuy" class="goods__btn-wrap goods__btn-wrap--type-{{type}} btn-wrap-class {{buttonSize}}" extraData="{{extraData}}" openType="navigate" path="/pages/goods/detail/index?alias={{alias}}" target="miniProgram" wx:if="{{redirectType===2}}">
+    <template is="button-content" data="{{type:type,buttonText:buttonText,themeColor:'var(--icon, #323233)'}}"></template>
+</navigator>
+<view btnClass="btn-userinfo" catch:tap="handleGoodsBuy" class="goods__btn-wrap goods__btn-wrap--type-{{type}} btn-wrap-class {{buttonSize}}" wx:else>
+    <template is="button-content" data="{{type:type,buttonText:buttonText,themeColor:'var(--icon, #323233)'}}"></template>
+</view>

@@ -1,0 +1,26 @@
+.number-captcha-popup {
+  width: 632rpx;
+  padding: 34rpx 36rpx 40rpx;
+  box-sizing: border-box;
+}
+.number-captcha-popup__title {
+  display: block;
+  margin-bottom: 40rpx;
+  font-size: 32rpx;
+}
+.number-captcha-popup__content {
+  display: flex;
+  height: 320rpx;
+  padding-bottom: 40rpx;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.display > image {
+  width: 200rpx;
+  max-height: 80rpx;
+}

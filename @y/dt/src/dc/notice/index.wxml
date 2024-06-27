@@ -1,0 +1,6 @@
+<view class="dc-notice" style="{{rootStyle}}">
+    <b background="{{opt.background}}" bind:_init="_tic" color="#ed6a0c" customClass="dc-notice-bar" speed="{{opt.speed}}">
+        <a bind:_init="_tic" color="{{themeColors.general}}" customClass="mr8px" name="volume" size="16" slot="left-icon"></a>
+        <view class="t-text" style="color:{{opt.color}}">{{opt.text||''}}</view>
+    </b>
+</view>

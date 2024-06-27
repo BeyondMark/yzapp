@@ -1,0 +1,14 @@
+<view class="coupon-contentbox {{disabledClass}} {{unavailableClass}}">
+    <view class="coupon-contentbox__section coupon-contentbox__content">
+        <view class="coupon-contentbox__slot">
+            <slot name="C1"></slot>
+        </view>
+        <a class="coupon-contentbox__slot-default" content="{{content}}" disabled="{{disabled}}" extra="{{extra}}" unavailable="{{unavailable}}"></a>
+    </view>
+    <view class="coupon-contentbox__section coupon-contentbox__wrap">
+        <view class="coupon-contentbox__slot">
+            <slot name="C2"></slot>
+        </view>
+        <b class="coupon-contentbox__slot-default" customClass="{{disabled||unavailable?'':'coupon-contentbox__description'}}" description="{{description}}" disabled="{{disabled}}" unavailable="{{unavailable}}" validEndTime="{{validEndTime}}" validStartTime="{{validStartTime}}"></b>
+    </view>
+</view>

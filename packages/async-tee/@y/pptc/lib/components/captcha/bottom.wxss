@@ -1,0 +1,33 @@
+.t-text {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.captcha-bottom .links {
+  margin: 15px 0 0 !important;
+  font-size: 12px;
+}
+.captcha-bottom .links .warn {
+  color: #969799;
+}
+.captcha-bottom .links .link {
+  color: #155bd4;
+}
+.captcha-bottom .btns {
+  padding: 24px 0 8px !important;
+}
+.captcha-bottom .btns-btn {
+  width: 100%;
+  height: 40px !important;
+  line-height: 40px !important;
+  border: 0 !important;
+  border-radius: 4px !important;
+  margin: 8px 0 0;
+  background-color: rgba(103, 159, 255, 0.1490196078) !important;
+  color: #155bd4 !important;
+}
+.captcha-bottom .action {
+  margin-top: 8px;
+  line-height: 20px;
+  color: #576b95;
+  font-size: 14px;
+}

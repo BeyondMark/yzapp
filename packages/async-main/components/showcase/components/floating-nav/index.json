@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../goods-showcase/index",
+    "b": "../../../message/contact/index",
+    "c": "../../../live-pop/index",
+    "d": "./components/channel-live-pop/index",
+    "e": "/packages/async-feature-ext/components/showcase/components/floating-nav/components/dine-entry/index",
+    "f": "/packages/async-feature-ext/components/showcase/components/share-feature/index",
+    "_": "../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "e": "_", "f": "_" }
+}

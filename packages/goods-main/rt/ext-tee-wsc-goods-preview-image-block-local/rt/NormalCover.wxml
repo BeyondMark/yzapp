@@ -1,0 +1,16 @@
+<view class="c66b05">
+    <view class="c67c6e"> {{goodsBaseInfo.title}} </view>
+    <view class="c97283">
+        <view class="c7adc8">
+            <view class="c41e54" wx:if="{{goodsPriceInfo.price}}">
+                <view class="f6f50 c89585">¥</view>
+                <view class="ab01c c89585"> {{price}} </view>
+            </view>
+        </view>
+        <view class="c386f4" wx:if="{{buttons.length>0}}">
+            <a authTypeList="{{item.authTypeList}}" bind:_init="_tic" bind:next="_p" data-t="{{ next:{ en:'handleBigButtonClick',args:[item.btn] } }}" dataset="{{item.btn}}" kdtId="{{item.kdtId}}" rmId="@passport-tee/user-authorize~DDdJBmWG" scene="{{item.btn.needSkuPop?'':item.scene}}" wx:if="{{rmId==='b7-33'||rmId==='b33-19'}}" wx:for="{{buttons}}" wx:key="key">
+                <b bind:_init="_tic" customClass="{{!item.btn.primary?'c335d7 c4fc79':'c335d7'}}" disabled="{{item.btn.disabled}}" openType="{{item.btn.share?'share':''}}" plain="{{!item.btn.primary}}" round="{{true}}" size="small"> {{item.btnText}} </b>
+            </a>
+        </view>
+    </view>
+</view>

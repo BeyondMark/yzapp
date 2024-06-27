@@ -1,0 +1,97 @@
+<view class="member-con" style="{{memberCardStyle}}">
+    <view class="member {{borderRadiusType===1?'no-radius':''}}" style="background-image:{{backgroundImage}}; background-color:{{cardColor}}" wx:if="{{loaded}}">
+        <view bind:tap="_p" class="member-paid-level" data-t="{{ tap:{en:'navigateToMemberCenter'} }}" wx:if="{{isPaidMember}}">
+            <view class="paid-header">
+                <view class="paid-name t-text">{{paidLevelInfo.level.name}}</view>
+                <view class="paid-date t-text">
+                    <block wx:if="{{expired}}"> 已于 {{endDate}} 到期 </block>
+                    <block wx:elif="{{willExpiredFlag}}"> 将于 {{endDate}} 到期 </block>
+                    <block wx:else> 有效期至 {{endDate}} </block>
+                </view>
+                <view catch:tap="_p" class="qrcode" data-t="{{ tap:{en:'navigateToLevelCode',et:'stop'} }}">
+                    <image class="qrcode-icon tee-image" lazyLoad="{{true}}" src="{{imageCdn.qrcodeImage}}"></image>
+                </view>
+            </view>
+            <view class="benefit-num">尊享 {{benefitNum}} 项专享权益</view>
+            <view catch:tap="_p" class="benefit-btn" data-t="{{ tap:{en:'navigateToLevelDetail',et:'stop'} }}" wx:if="{{willExpireFlag}}">立即续费</view>
+        </view>
+        <block wx:else>
+            <view class="member-overlay" wx:if="{{hasCoverUrl&&!hasPaidLevel}}"></view>
+            <view bind:tap="_p" class="member-content" data-t="{{ tap:{en:'navigateToMemberCenter'} }}" wx:if="{{isMember}}">
+                <view class="content-header">
+                    <view class="content-level">
+                        <view class="level-name t-text"> {{level===0?'客户':levelName}} </view>
+                        <view class="level-icon" wx:if="{{levelMode===LevelMode.Prepaid}}">
+                            <view class="prefix"></view>
+                            <view class="icon-content">Lv.{{level}}</view>
+                        </view>
+                    </view>
+                    <view catch:tap="_p" class="qrcode" data-t="{{ tap:{en:'handleOpenPopup',et:'stop'} }}">
+                        <image class="qrcode-icon tee-image" lazyLoad="{{true}}" src="{{imageCdn.qrcodeImage}}"></image>
+                    </view>
+                </view>
+                <block wx:if="{{levelMode===LevelMode.Growth}}">
+                    <view class="content-growth">
+                        <view class="growth-value t-text"> {{currentGrowth}} </view>
+                        <view class="growth-text t-text">成长值</view>
+                        <view catch:tap="_p" class="content-upgrade" data-t="{{ tap:{en:'navigateToPaidLevels',et:'stop'} }}" wx:if="{{supportPaidLevel}}">                升级付费会员
+                <van-icon bind:_init="_tic" name="arrow"></van-icon>
+                        </view>
+                    </view>
+                    <view class="content-progress">
+                        <view class="progress" style="{{'width: '+progress+'%'}}"></view>
+                    </view>
+                    <view catch:tap="_p" class="content-desc" data-t="{{ tap:{en:'navigateToCompletePage',et:'stop'} }}" wx:if="{{!isRegistryComplete}}">              完善资料尊享更多会员权益
+            </view>
+                    <view class="content-desc" wx:elif="{{isMaxLevel}}">              已是最高等级
+            </view>
+                    <view class="content-desc" wx:elif="{{nextLevelGrowthGap}}">              再获得 {{nextLevelGrowthGap}} 成长值成为 VIP
+              {{level?level+1:1}} </view>
+                </block>
+                <block wx:if="{{levelMode===LevelMode.Consume}}">
+                    <view class="content-growth">
+                        <view catch:tap="_p" class="content-upgrade" data-t="{{ tap:{en:'navigateToPaidLevels',et:'stop'} }}" wx:if="{{supportPaidLevel}}">                升级付费会员
+                <van-icon bind:_init="_tic" name="arrow"></van-icon>
+                        </view>
+                    </view>
+                    <view class="content-progress" style="margin-top: 90px">
+                        <view class="progress" style="{{'width: '+consumeProgress+'%'}}"></view>
+                    </view>
+                    <view catch:tap="_p" class="content-desc" data-t="{{ tap:{en:'navigateToCompletePage',et:'stop'} }}" wx:if="{{!isRegistryComplete}}">              完善资料尊享更多会员权益
+            </view>
+                    <view class="content-desc" wx:else> {{consumeText}} </view>
+                </block>
+                <block wx:if="{{levelMode===LevelMode.Prepaid}}">
+                    <view class="content-growth">
+                        <view catch:tap="_p" class="content-upgrade" data-t="{{ tap:{en:'navigateToPaidLevels',et:'stop'} }}" wx:if="{{supportPaidLevel}}">                升级付费会员
+                <van-icon bind:_init="_tic" name="arrow"></van-icon>
+                        </view>
+                    </view>
+                    <view catch:tap="_p" class="content-desc" data-t="{{ tap:{en:'navigateToCompletePage',et:'stop'} }}" wx:if="{{!isRegistryComplete}}">              完善资料尊享更多会员权益
+            </view>
+                    <view class="content-desc" wx:elif="{{prepaidMemberInfo.isMaxLevel}}">              已是最高等级
+            </view>
+                    <view class="content-desc" wx:elif="{{prepaidMemberInfo.nextLevelRechargeGap}}">              单笔充值 {{prepaidMemberInfo.nextLevelRechargeGap}} 元成为 VIP
+              {{level?level+1:1}} </view>
+                </block>
+            </view>
+            <view class="member-card" wx:else>
+                <view class="text-container">
+                    <image class="prefix-icon tee-image" lazyLoad="{{true}}" src="{{imageCdn.prefixImage}}"></image>
+                    <view class="text">
+                        <view class="title">{{cardTitle}}</view>
+                        <view class="desc">{{cardDesc}}</view>
+                    </view>
+                </view>
+                <view wx:if="{{!hasMobile}}">
+                    <a authTypeList="{{['mobile']}}" bind:_init="_tic" bind:fail="_p" bind:next="_p" data-t="{{ next:{en:'becomeMember'},fail:{en:'handleAuthFail'} }}" kdtId="{{kdtId}}" type="separate">
+                        <view class="action"> 注册/登录 </view>
+                    </a>
+                </view>
+                <view bind:tap="_p" class="action" data-t="{{ tap:{en:'becomeMember'} }}" wx:else> 领取权益 </view>
+            </view>
+        </block>
+    </view>
+    <b bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'handleClosePopup'} }}" identity="{{identity}}" level="{{level}}" levelName="{{levelName}}" nickName="{{nickName}}" show="{{showPopup}}" wx:if="{{showPopup}}"></b>
+    <c bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'handleCloseNotice'} }}" kdtId="{{kdtId}}" logComponent="ShelfMemberCard" show="{{showBenefitsNotice}}"></c>
+</view>

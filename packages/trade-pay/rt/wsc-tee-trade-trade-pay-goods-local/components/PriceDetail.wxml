@@ -1,0 +1,10 @@
+<view class="f65a3">
+    <a bind:_init="_tic" title="总计" value="{{price}}"></a>
+    <a bind:_init="_tic" class="c932b4">
+        <view class="c26d20" wx:for="{{itemList}}" wx:for-index="key" wx:key="key">
+            <view class="c75fee c89585"> {{item.goodsDate}} </view>
+            <view class="c75fee c74430 c89585">        ¥{{item.payPriceStr}} <i bind:_init="_tic">{{'x'+item.num}}</i>
+            </view>
+        </view>
+    </a>
+</view>

@@ -1,0 +1,12 @@
+<view class="t-picker {{customClass}}" disableScroll="{{true}}">
+    <b bind:_init="_tic" bind:emit="_p" cancelButtonText="{{cancelButtonText}}" confirmButtonStyle="{{confirmButtonStyle}}" confirmButtonText="{{confirmButtonText}}" data-t="{{ emit:{en:'emit'} }}" title="{{title}}" toolbarClass="{{toolbarClass}}" wx:if="{{showToolbar&&toolbarPosition==='top'}}"></b>
+    <view class="t-picker__loading" wx:if="{{loading}}">
+        <a bind:_init="_tic" color="#1989fa"></a>
+    </view>
+    <view catch:touchmove="_p" class="t-picker__columns" data-t="{{ touchmove:{en:'true',et:'stop'} }}" style="height:{{itemHeight*visibleItemCount+'px'}}">
+        <c activeClass="{{activeClass}}" bind:_init="_tic" bind:change="_p" bind:link="_p" bind:unlink="_p" class="t-picker__column" customClass="{{columnClass}}" data-index="{{index}}" data-t="{{ link:{en:'onLink'},unlink:{en:'onUnLink'},change:{ en:'onChange',args:[index] } }}" defaultIndex="{{item.defaultIndex||defaultIndex}}" initialOptions="{{item.values}}" itemHeight="{{itemHeight}}" valueKey="{{valueKey}}" visibleItemCount="{{visibleItemCount}}" wx:for="{{realColumns}}" wx:key="index"></c>
+        <view class="t-picker__mask" style="{{styles.mask}}"></view>
+        <view class="t-picker__frame t-hairline--top-bottom" style="height:{{itemHeight+'px'}}"></view>
+    </view>
+    <b bind:_init="_tic" bind:emit="_p" cancelButtonText="{{cancelButtonText}}" confirmButtonStyle="{{confirmButtonStyle}}" confirmButtonText="{{confirmButtonText}}" data-t="{{ emit:{en:'emit'} }}" title="{{title}}" toolbarClass="{{toolbarClass}}" wx:if="{{showToolbar&&toolbarPosition==='bottom'}}"></b>
+</view>

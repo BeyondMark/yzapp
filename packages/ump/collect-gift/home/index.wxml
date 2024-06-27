@@ -1,0 +1,65 @@
+<view>
+    <a class="{{themeClass}} page-{{deviceType}}" fixedBottom="{{collectGiftJoinDetail.status.isUnSubmittedAudit||collectGiftJoinDetail.status.isAuditFault}}">
+        <view class="container" style="background-image: url({{backImage}}), linear-gradient(#FF9913 70%, #f9f9f9);">
+            <view class="container_content {{pageController.status.isInitializing?'container-hidden':''}}" id="main">
+                <block wx:if="{{collectGiftJoinDetail.status.isUnSubmittedAudit||collectGiftJoinDetail.status.isAuditFault}}">
+                    <text style="font-size: 12px; color: #999999;">参与步骤：</text>
+                    <view class="content-step-1">
+                        <view class="desc__content">1. 点击右上角“<c class="desc__icon-1" name="icon-collect-gift-share-icon"></c>”将{{weappAccountDetail.nickName}}小程序添加至我的小程序<text class="description_label">（需升级至微信最新版）</text>
+                        </view>
+                        <view class="desc__img">
+                            <image mode="aspectFill" src="{{guideImages.step1}}" style="width: 100%; height: 340rpx;"></image>
+                        </view>
+                    </view>
+                    <view class="content-step-2">
+                        <view class="desc__content">2. 微信首页下拉任务栏(下图所示)截图，点击进入小程序并在下方上传正确截图，{{isRandomCoupon?'最高':'即'}}可获得 “<text style="color: #FF4444;">{{collectGiftRewardText}}</text>”</view>
+                        <view class="desc__img desc__img-step2">
+                            <view class="desc__img-middle">
+                                <view class="desc__shop-info">
+                                    <view class="logo">
+                                        <image class="logo-img" mode="scaleToFill" src="{{CURRENT_GLOBAL_SHOP.logo}}"></image>
+                                        <view class="text van-ellipsis">{{weappAccountDetail.nickName}}</view>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="upload-container">
+                        <d binduploadFileFailure="uploadFileFailureHandler" binduploadFileSuccess="uploadFileSuccessHandler" containerClass="align-center" size="80" uploadedImageClass="upload-container_uploaded-image-class">
+                            <view class="upload-container_reloaded-tip" slot="uploadedTip">重新上传</view>
+                            <view class="upload-container_un-reloaded-tip" slot="unUnloadedTip">请在此上传符合要求的截图</view>
+                        </d>
+                    </view>
+                    <g authTypeList="{{['nicknameAndAvatar']}}" isOnce="{{true}}">
+                        <b type="collect_gift">
+                            <h bindclick="submitHandler" customClass="container_submit-button" disabled="{{!collectGiftDetail.isOpen}}" size="large" type="primary">{{collectGiftDetail.isOpen?'提交审核':'活动已结束'}}</h>
+                        </b>
+                    </g>
+                </block>
+                <view class="submitted-panel" wx:elif="{{collectGiftJoinDetail.status.isWaitForAudit}}">
+                    <view class="submitted-panel_logo submitted-panel_logo-wait-for-audit"></view>
+                    <view class="submitted-panel_status">礼物正在路上</view>
+                    <view class="submitted-panel_tip">审核通过后我们会向你推送服务通知，并将奖励发放至你的账户，请耐心等待。</view>
+                    <view class="submitted-panel_redirect-button_container">
+                        <view class="submit-panel__button_line" wx:if="{{hasSubscribeAbility}}">
+                            <h bindclick="onSubscribeMessage" customClass="{{isAuthPush?'submit-panel__button option-button disabled':'submit-panel__button option-button'}}">{{isAuthPush?'已':''}}订阅通知</h>
+                        </view>
+                        <view class="submit-panel__button_line">
+                            <h bindclick="navigateToHomePage" customClass="{{hasSubscribeAbility?'submit-panel__button link-button':'submit-panel__button option-button'}}">进店逛逛</h>
+                        </view>
+                    </view>
+                </view>
+                <view class="submitted-panel" wx:elif="{{collectGiftJoinDetail.status.isAuditSuccess}}">
+                    <view class="submitted-panel_logo submitted-panel_logo-audit-success"></view>
+                    <view class="submitted-panel_status">奖励已发放至你的账户</view>
+                    <e customClass="reward-list-wrapper" isMultiOnlineShop="{{isMultiOnlineShop}}" rewardData="{{rewardData}}"></e>
+                </view>
+            </view>
+        </view>
+    </a>
+    <i id="van-toast"></i>
+    <view hidden="{{!collectGiftJoinDetail.status.isAuditFault}}">
+        <j id="van-notify"></j>
+    </view>
+    <f bind:close="closeSubscribeFailPopup" openImageSrc="https://img01.yzcdn.cn/public_files/2019/12/23/88bee8283256caaf81d194b0c8036db9.png" show="{{showSubscirbeFail}}"></f>
+</view>

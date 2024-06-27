@@ -1,0 +1,55 @@
+.dc-store {
+  background-color: #fff;
+}
+.dc-store .banner {
+  height: 150px;
+  background-size: cover;
+  background-position: 50%;
+}
+.dc-store .logo-box {
+  margin: -35px 15px 0;
+}
+.dc-store .logo {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: 50%;
+  border: 1px solid #fff;
+  position: relative;
+}
+.dc-store .header {
+  position: relative;
+  height: 150px;
+}
+.dc-store .van-swipe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.dc-store .shop-img-wrap {
+  position: relative;
+  height: 100%;
+  text-align: center;
+}
+.dc-store .shop-img {
+  width: 100%;
+  margin: auto;
+  height: 150px;
+}
+.dc-store-empty {
+  padding: 45px;
+  color: #88c4dd;
+  line-height: 20px;
+  text-align: center;
+  background-color: #e8f7fd;
+}
+.dc-store-empty .dc-store-empty-title {
+  font-size: 14px;
+}
+.dc-store-empty .dc-store-empty-sub-title {
+  font-size: 12px;
+}

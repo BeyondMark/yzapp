@@ -1,0 +1,67 @@
+.c1b86f {
+  padding: 24px;
+  --button-default-background-color: var(--main-bg, #e7c5a5);
+  --button-default-border-color: var(--main-bg, #e7c5a5);
+  --button-default-color: var(--main-text, #573413);
+}
+.c8f96a {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.b8722,
+.c8f96a {
+  letter-spacing: 0;
+  text-align: center;
+}
+.b8722 {
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #979798;
+}
+.c4f966 {
+  margin-top: 20px;
+  margin-left: 59px;
+  width: 104px;
+}
+.c6a31e {
+  display: inline-flex;
+  width: 100%;
+}
+.c6a31e:not(:first-child) {
+  margin-top: 4;
+}
+.c9f85c {
+  margin-left: 4px;
+  flex: 1;
+}
+.a74d7,
+.c9f85c {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.a74d7 {
+  font-weight: 600;
+}
+.ce037 {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  color: #979798;
+}
+.f61eb {
+  line-height: 20px;
+  font-size: 18px;
+}
+.e754e {
+  margin-top: 8px;
+  width: 100%;
+  background: var(--main-bg, #e7c5a5);
+  border-radius: var(--theme-radius-button, 21px);
+  color: var(--main-text, #573413);
+  border-color: var(--main-bg, #e7c5a5);
+}

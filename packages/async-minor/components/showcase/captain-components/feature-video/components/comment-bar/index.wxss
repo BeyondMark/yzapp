@@ -1,0 +1,39 @@
+.feature-video__comment-button {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  top: 4px;
+  right: 5px;
+  z-index: 5;
+  border: none !important;
+}
+.feat-video__comment__input {
+  background-color: #f7f7f7;
+  border-radius: 14.5px;
+  height: auto;
+  padding: 7px 10px 7px 30px;
+  display: block;
+  margin-right: 42px;
+}
+.feat-video__comment__input textarea {
+  font-size: 12px;
+  line-height: 16px;
+  background-color: initial;
+  z-index: 3;
+}
+.feat-video__comment__input view:first-child {
+  background-color: initial;
+  padding: 0;
+}
+.feat__video__add-comment-block image {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  top: 0;
+  right: 0;
+  z-index: 5;
+}
+.feat__video__add-comment-block {
+  margin-top: 7px;
+  position: relative;
+}

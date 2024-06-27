@@ -1,0 +1,33 @@
+.van-sku-row__item {
+  color: #323233;
+  background-color: #f7f8fa;
+}
+.van-sku-row__item,
+.van-sku-row__item--active,
+.van-sku-row__item--disabled {
+  padding: 0 8px;
+  margin: 0 12px 12px 0;
+  height: 32px;
+  min-width: 52px;
+  font-size: 12px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.van-sku-row__item--active {
+  color: #fff;
+}
+.van-sku-row__item--disabled {
+  background: #f7f8fa;
+  color: #c8c9cc;
+}
+.van-sku-row__item--disabled:after {
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: hsla(0, 0%, 100%, 0.67);
+}

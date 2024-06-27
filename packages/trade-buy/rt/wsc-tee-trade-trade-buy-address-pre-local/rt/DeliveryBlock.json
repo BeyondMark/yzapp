@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../widgets/delivery-main/rt/index",
+    "b": "./../widgets/self-fetch/rt/index",
+    "c": "./../widgets/contact-main/rt/index",
+    "d": "./../widgets/idcard-main/rt/index",
+    "e": "./../widgets/period-buy/rt/index",
+    "f": "./../widgets/address-tab/rt/index",
+    "g": "/packages/async-tee/@y-open/vt/native/weapp/dialog/index/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "g": "_" }
+}

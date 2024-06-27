@@ -1,0 +1,11 @@
+<view class="zan-search zan-cell {{onlySearch&&!alignLeft?'center-placeholder':''}} {{searchClass}}" style="{{searchStyle}}">
+    <view class="zan-cell__bd zan-search__form {{useCancel?'zan-search__form--cancel':''}} input-class" style="max-width: auto; {{inputStyle}}">
+        <a class="search__icon" color="{{textColor}}" name="search" style="{{searchIconStyle}}"></a>
+        <picker bindchange="pickerChange" class="zan-search__selector" mode="selector" range="{{range}}" style="width: {{pickerWidth||55}}px" value="{{rangeIndex}}" wx:if="{{range.length>0}}">
+            <view class="picker">{{range[rangeIndex]}}</view>
+        </picker>
+        <input adjustPosition="{{adjustPosition}}" bindblur="blur" bindconfirm="search" bindfocus="focus" bindinput="inputChange" class="zan-search__input" confirmType="search" disabled="{{disabled}}" focus="{{focus}}" placeholder="{{placeholderText}}" placeholderClass="zan-search__placeholder" placeholderStyle="color: {{textColor}}" style="{{onlySearch&&!alignLeft?'width:'+inputWidth:''}};{{innerInputStyle}}" value="{{keyword}}"></input>
+        <icon bindtap="clearInput" class="zan-search__clear" color="#bbb" size="14" type="clear" wx:if="{{keyword}}"></icon>
+    </view>
+    <view bindtap="cancelSearch" class="zan-search__cancel zan-cell__ft cancel-class" style="{{cancelStyle}}" wx:if="{{useCancel}}">{{cancelText||'取消'}}</view>
+</view>

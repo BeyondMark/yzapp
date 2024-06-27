@@ -1,0 +1,10 @@
+<view class="c13e3a">
+    <view class="c30893" wx:for="{{text}}" wx:key="item">
+        <view class="c62e2" style="color:{{themeColors.general}}" wx:if="{{'${field1}'===item}}"> {{desc.field1}} </view>
+        <view class="c62e2" style="color:{{themeColors.general}}" wx:elif="{{'${field2}'===item}}"> {{desc.field2}} </view>
+        <a bind:_init="_tic" bind:change="_p" class="c94293" data-t="{{ change:{en:'onChangeTime'} }}" time="{{remianingSeconds}}" useSlot="{{true}}" wx:elif="{{'${expireTime}'===item}}">
+            <view class="c89585" style="color:{{themeColors.general}}"> {{timeData.days?timeData.days+'天 ':''}}{{timeData.hours}}:{{timeData.minutes}}:{{timeData.seconds}} </view>
+        </a>
+        <view class="order-pay-prompt-expire__text" wx:else>{{item}}</view>
+    </view>
+</view>

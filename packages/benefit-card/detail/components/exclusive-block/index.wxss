@@ -1,0 +1,59 @@
+.ecs-c {
+  color: #111;
+  border-radius: 8px;
+  padding-top: 20px;
+  background: #f7f7f7;
+  margin-bottom: 12px;
+}
+.ecs-c .t-in {
+  padding: 0 24px 20px;
+  display: flex;
+  align-items: center;
+}
+.ecs-c .t-in .i-m {
+  overflow: hidden;
+  flex: 1 1 auto;
+}
+.ecs-c .t-in .i-m .m-n {
+  font-size: 16px;
+  line-height: 22px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ecs-c .t-in .i-m .mid-d {
+  color: #999;
+  font-size: 12px;
+  line-height: 18px;
+}
+.ecs-c .he-ex .b-r {
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #f5f5f7;
+  padding: 0 21px;
+  border-radius: 20px;
+  border: 1px solid #e0e0e0;
+}
+.ecs-c .he-ex .dis-in {
+  width: 55px;
+  text-align: right;
+}
+.ecs-c .he-ex .dis-in .dis-n {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 500;
+}
+.ecs-c .he-ex .dis-in .dis-u-r {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  padding-left: 3px;
+}
+.ecs-c .he-ex .dis-in .dis-u-l {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  padding-right: 3px;
+}

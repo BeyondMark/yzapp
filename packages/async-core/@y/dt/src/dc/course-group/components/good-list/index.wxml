@@ -1,0 +1,13 @@
+<view class="dc-course-group-list">
+    <b bind:_init="_tic" bind:load="_p" data-t="{{ load:{en:'loadMore'} }}" finished="{{finished}}" finishedText="{{''}}" loading="{{loading}}" offset="{{offset}}">
+        <view class="{{'knowleadge-container'}} {{'template-type'+opt.templateType}}">
+            <view>
+                <view class="knowleadge-item-container">
+                    <view class="{{opt.listMode===5?'knowleadge-scroll-wrap':'cap-knowleadge-wrap'}}" style="{{'margin: '+pageMargin}}">
+                        <a _opt="{{item.itemOpt}}" bind:_init="_tic" class="{{'knowledge-good-item-mode'+opt.listMode}} {{opt.listMode===4?index%3===0?'big':'small':''}}" wx:for="{{goodList}}" wx:key="id"></a>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </b>
+</view>

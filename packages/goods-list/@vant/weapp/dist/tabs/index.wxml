@@ -1,0 +1,22 @@
+<view class="custom-class {{utils.bem('tabs')}}">
+    <b bind:scroll="onTouchScroll" container="{{container}}" disabled="{{!sticky}}" offsetTop="{{offsetTop}}" zIndex="{{zIndex}}">
+        <view class="{{utils.bem('tabs--')+type}} {{utils.bem( 'tabs__wrap',{scrollable:scrollable} )}} {{type==='line'&&border?'van-hairline--top-bottom':''}} wrap-class">
+            <slot name="nav-left"></slot>
+            <scroll-view class="{{utils.bem( 'tabs__scroll',[type] )}}" scrollLeft="{{scrollLeft}}" scrollWithAnimation="{{scrollWithAnimation}}" scrollX="{{scrollable}}" style="{{color?'border-color: '+color:''}}">
+                <view class="{{utils.bem( 'tabs__nav',[ type,{complete:!ellipsis} ] )}} nav-class" style="{{computed.navStyle(color,type)}}">
+                    <view class="eed00" style="{{computed.lineStyle( {color:color,lineOffsetLeft:lineOffsetLeft,lineHeight:lineHeight,skipTransition:skipTransition,duration:duration,lineWidth:lineWidth,inited:inited} )}}" wx:if="{{type==='line'}}"></view>
+                    <view bind:tap="onTap" class="{{computed.tabClass(index===currentIndex,ellipsis)}} {{utils.bem( 'tab',{active:index===currentIndex,disabled:item.disabled,complete:!ellipsis} )}}" data-index="{{index}}" style="{{computed.tabStyle( {active:index===currentIndex,ellipsis:ellipsis,color:color,type:type,disabled:item.disabled,titleActiveColor:titleActiveColor,titleInactiveColor:titleInactiveColor,swipeThreshold:swipeThreshold,scrollable:scrollable} )}}" wx:for="{{tabs}}" wx:key="index">
+                        <view class="{{ellipsis?'van-ellipsis':''}}" style="{{item.titleStyle}}">{{item.title}}<a customClass="e2ec2" dot="{{item.dot}}" info="{{item.info}}" wx:if="{{item.info!==null||item.dot}}"></a>
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+            <slot name="nav-right"></slot>
+        </view>
+    </b>
+    <view bind:touchcancel="onTouchEnd" bind:touchend="onTouchEnd" bind:touchmove="onTouchMove" bind:touchstart="onTouchStart" class="fbd3a">
+        <view class="{{utils.bem( 'tabs__track',[ {animated:animated} ] )}} c2f139" style="{{computed.trackStyle( {duration:duration,currentIndex:currentIndex,animated:animated} )}}">
+            <slot></slot>
+        </view>
+    </view>
+</view>

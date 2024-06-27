@@ -1,0 +1,14 @@
+<view class="custom-class">
+    <view class="c5ce7d">
+        <view class="c9a3ae">
+            <view class="c0819d c89585" wx:if="{{opt.pricePrefix}}"> {{opt.pricePrefix}} </view>
+            <view class="c1e81 c89585" wx:if="{{opt.priceSymbol}}">{{opt.priceSymbol}}</view>
+            <view class="c7ed80 {{priceSmall}} c89585" style="{{opt.priceStyle}}">{{opt.price}}</view>
+        </view>
+        <a bind:_init="_tic" round="{{true}}" tags="{{umpTags}}" wx:if="{{umpTags.length}}"></a>
+    </view>
+    <view wx:if="{{normalTags.length}}">
+        <a bind:_init="_tic" customTagStyle="{{customTagStyle}}" plain="{{themeTag.plain}}" tags="{{normalTags}}"></a>
+    </view>
+    <view class="c9b77c" style="{{customOldPriceStyle}}" wx:if="{{opt.oldPrice}}">    价格 ¥{{opt.oldPrice}} </view>
+</view>

@@ -1,0 +1,14 @@
+<view class="{{'ec39c'}} {{hairline?'c47937':''}}">
+    <view class="ac091">
+        <image class="a4b59 bd231" lazyLoad="{{true}}" mode="aspectFill" src="{{avatarUrl}}"></image>
+        <view class="c89585">{{buyerName||'**'}}</view>
+    </view>
+    <block wx:if="{{showSwipe}}">
+        <view class="c1f614" style="{{lastStyle}}">{{relativePayTime}}买了{{num}}件</view>
+        <view bind:tap="_p" class="c56eda" data-t="{{ tap:{en:'placeOrder'} }}" wx:if="{{showBuyBtn}}"> {{buyBtnText}} </view>
+    </block>
+    <block wx:else>
+        <view class="ee628">+{{num}}</view>
+        <view class="c2bb73">{{relativePayTime}}</view>
+    </block>
+</view>

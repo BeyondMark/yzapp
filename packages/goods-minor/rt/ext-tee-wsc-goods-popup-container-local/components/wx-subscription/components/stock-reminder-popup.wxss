@@ -1,0 +1,41 @@
+.c9ca10 {
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh !important;
+  max-height: 80vh !important;
+}
+.c9ca10 .d5d3d {
+  flex-shrink: 0;
+  font-size: 16px;
+  line-height: 44px;
+  font-weight: 500;
+  text-align: center;
+}
+.c9ca10 .d5aa7 {
+  padding: 0 16px;
+  height: 100%;
+  flex: 1;
+  overflow: auto;
+  box-sizing: border-box;
+}
+.c9ca10 .c71f26 {
+  flex-shrink: 0;
+  padding: 8px 16px;
+}
+.c9ca10 .c69d1e {
+  width: 100%;
+  height: 40px;
+  font-size: 14px;
+  color: var(--main-text) !important;
+  background-color: var(--general) !important;
+  border-color: var(--general) !important;
+}
+.c9ca10 .c9a036 {
+  width: 100%;
+  padding: 16px 12px 36px;
+  border-radius: 4px;
+  background-color: #f7f8fa;
+  font-size: 14px;
+  line-height: 20px;
+  box-sizing: border-box;
+}

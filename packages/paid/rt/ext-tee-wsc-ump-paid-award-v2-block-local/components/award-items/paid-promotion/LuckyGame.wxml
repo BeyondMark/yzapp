@@ -1,0 +1,23 @@
+<a bind:_init="_tic" bind:tap="_p" customStyle="padding: 0;position: relative;justify-content: space-between;background-image: url('https://img01.yzcdn.cn/upload_files/2023/09/13/FqPfGI4Cc-QljaCTOd2q5ncLMp5k.png');background-repeat: no-repeat;background-size: 100% 100%;height: 120px;" data-t="{{ tap:{en:'clickHandle'} }}" isWxReceipt="{{isWxReceipt}}">
+    <view class="c9437d">
+        <view class="c447b7">
+            <view class="c667a6">
+                <image class="c78805 bd231" lazyLoad="true" src="{{reward[1].imgUrl}}"></image>
+            </view>
+            <view class="c6468f f049c">{{reward[1].name}}</view>
+        </view>
+        <view class="c447b7 bada5">
+            <view class="c667a6">
+                <image class="c78805 bd231" lazyLoad="true" src="{{reward[0].imgUrl}}"></image>
+            </view>
+            <view class="c6468f f049c">{{reward[0].name}}</view>
+        </view>
+        <view class="c447b7">
+            <view class="c667a6">
+                <image class="c78805 bd231" lazyLoad="true" src="{{reward[2].imgUrl}}"></image>
+            </view>
+            <view class="c6468f f049c">{{reward[2].name}}</view>
+        </view>
+    </view>
+    <image class="d4f5c bd231" lazyLoad="true" src="//img01.yzcdn.cn/public_files/092ecc49fa630cf68c79c6b8e5e0c73e.png"></image>
+</a>

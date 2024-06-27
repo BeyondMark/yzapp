@@ -1,0 +1,53 @@
+<view style="{{displayCardStyles.themeStyle}}">
+    <view class="c4bcdd">
+        <view class="c8d309">
+            <block wx:if="{{info.cardType===1&&labelText}}">
+                <view class="c2b3b0">{{labelText}}</view>
+                <view class="b88d9"></view>
+            </block>
+            <image class="c77a89 bd231" lazyLoad="true" src="//img01.yzcdn.cn/upload_files/2023/10/11/Fpn70u3e8If7r4MtbLkp6DXTuVVk.png" wx:elif="{{info.cardType===2}}"></image>
+        </view>
+        <view class="cd57a {{info.cardType===1?'a240b':'ce066'}}">
+            <block wx:if="{{!(info.totalRecommendedDiscountPrice===0&&info.couponNum)}}">
+                <image class="c2f3a9 bd231" lazyLoad="true" mode="aspectFill" src="{{info.coverUrl}}" wx:if="{{info.coverUrl}}"></image>
+                <view class="c2f3a9 c53f64" style="{{'background: '+info.bgColor}}" wx:else>
+                    <block wx:if="{{info.cardType===2}}">
+                        <view class="c6fb16 c38d53">{{info.cardName}}</view>
+                        <view class="c38d53">{{info.expiryDateDesc}}</view>
+                        <view class="c38a3"></view>
+                    </block>
+                </view>
+            </block>
+            <view style="flex: 1">
+                <view class="c67e80">
+                    <view class="c715f8" style="display: flex" wx:if="{{info.totalRecommendedDiscountPrice>0}}">                        本单可省<view class="a21d7 c89585">{{info.formatDiscountPrice}}元</view>
+                    </view>
+                    <view class="c715f8" wx:elif="{{info.totalRecommendedDiscountPrice===0&&info.couponNum}}">            本单可省
+                        <view class="a21d7 c89585">
+                            <view class="c89585" style="font-size: 16px">{{info.displayVirtualCouponDiscountPrice||isSelect?info.formatVirtualDiscountPrice:' ? '}}</view>元</view>，含{{info.couponNum}}张优惠券
+          </view>
+                    <block wx:elif="{{info.totalRecommendedDiscountPrice===0&&!info.couponNum}}">            本单{{info.displayMemberCardDiscountPostage?'可省'+info.formatPostagePrice+'元，':''}}享{{info.benefitNum}}大权益
+          </block>
+                    <block wx:else>{{info.cardName}}</block>
+                </view>
+                <view class="e826b">{{!info.benefitNum?'查看详情':'全部'+info.benefitNum+'项权益'}}<a bind:_init="_tic" name="arrow"></a>
+                </view>
+            </view>
+            <view class="c30ac {{info.expiryDateIsRange?'acf2a':''}}">
+                <view>￥<view class="c345a c89585">{{info.formatPrice}}</view>
+                </view>
+                <view class="a59a9"> {{!info.expiryDateIsRange?'/':''}}{{info.expiryDate}} </view>
+            </view>
+            <a bind:_init="_tic" color="{{isSelect?displayCardStyles.iconColor:'#999'}}" name="{{isSelect?'checked':'circle'}}" size="20" wx:if="{{!orderCreated}}"></a>
+        </view>
+        <view class="c67243" style="{{displayCardStyles.couponGuideStyle}}" wx:if="{{info.totalRecommendedDiscountPrice===0&&info.couponNum}}">      勾选享优惠价
+    </view>
+        <view class="f374b">
+            <view bind:tap="_p" data-t="{{ tap:{en:'handleDetail'} }}" style="flex: 2"></view>
+            <view bind:tap="_p" data-t="{{ tap:{en:'handleToggle'} }}" style="flex: 1"></view>
+        </view>
+    </view>
+    <view class="c65137">勾选即阅读并同意<view bind:tap="_p" class="c89585" data-t="{{ tap:{en:'handleLookProtocol'} }}" style="color: var(--protocol-name-color)">《{{info.cardType===1?'权益卡使用协议':'付费会员协议'}}》</view>
+    </view>
+    <b bind:_init="_tic" data-ref="guideDialog"></b>
+</view>

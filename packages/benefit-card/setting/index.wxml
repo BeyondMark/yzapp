@@ -1,0 +1,47 @@
+<a class="{{themeClass}} page-{{deviceType}}">
+    <view class="membercard-active">
+        <view class="setting-panel">
+            <b>
+                <c center="{{true}}" customClass="setting-item">
+                    <view class="setting-item__title" slot="icon">姓名</view>
+                    <input bindinput="onNameInputBlur" class="slot-item" placeholder="请输入姓名" slot="title" value="{{name}}"></input>
+                </c>
+                <c center="{{true}}" customClass="setting-item">
+                    <view class="setting-item__title" slot="icon">生日</view>
+                    <picker bindchange="bindDatePickerChange" class="slot-item" mode="date" placeholder="请输入生日" slot="title" value="{{birthday}}">
+                        <view class="picker">
+                            <view wx:if="{{slectedBirth}}">{{birthday}}</view>
+                            <view wx:else>请选择</view>
+                        </view>
+                    </picker>
+                </c>
+                <c center="{{true}}" customClass="setting-item">
+                    <view class="setting-item__title" slot="icon">性别</view>
+                    <picker bindchange="bindSexPickerChange" class="slot-item" range="{{sexArray}}" slot="title" value="{{sexIndex}}">
+                        <view class="picker">
+                            <view wx:if="{{slectedSex}}">{{sexArray[sexIndex]}}</view>
+                            <view wx:else>请选择</view>
+                        </view>
+                    </picker>
+                </c>
+                <c center="{{true}}" customClass="setting-item">
+                    <view class="setting-item__title" slot="icon">所在地</view>
+                    <view class="slot-item address-edit__pickers" slot="title">
+                        <picker bindchange="onAreaChange" class="address-edit__picker" data-type="province" mode="selector" range="{{area.province}}" rangeKey="text" value="{{edit_data.provinceIndex}}">
+                            <view class="picker">{{area.province[edit_data.provinceIndex].text}}</view>
+                        </picker>
+                        <picker bindchange="onAreaChange" class="address-edit__picker" data-type="city" mode="selector" range="{{area.city}}" rangeKey="text" value="{{edit_data.cityIndex}}">
+                            <view class="picker">{{area.city[edit_data.cityIndex].text}}</view>
+                        </picker>
+                        <picker bindchange="onAreaChange" class="address-edit__picker" data-type="county" mode="selector" range="{{area.county}}" rangeKey="text" value="{{edit_data.countyIndex}}">
+                            <view class="picker">{{area.county[edit_data.countyIndex].text}}</view>
+                        </picker>
+                    </view>
+                </c>
+            </b>
+        </view>
+        <view class="btn-container">
+            <d bind:click="saveUserInfo" customClass="active_btn" size="large" type="primary">保存</d>
+        </view>
+    </view>
+</a>

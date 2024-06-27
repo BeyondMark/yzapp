@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/goods-core/@y/gc/components/base-info-block/points-price/index",
+    "b": "./../components/price/index",
+    "c": "./../components/old-price/index",
+    "_": "../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

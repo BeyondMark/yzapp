@@ -1,0 +1,131 @@
+.c89585 {
+  text-decoration: inherit;
+}
+.c89585,
+.bd231 {
+  display: inline-block;
+}
+.bd231 {
+  width: 100%;
+  height: 100%;
+}
+.sf-dialog {
+  border-radius: 20px 20px 0 0;
+  text-align: center;
+}
+.c9c9a9 {
+  padding: 11px 0;
+  font-weight: 500;
+  color: #323233;
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+.d92f3 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+  padding: 16px 26px 0;
+  text-align: left;
+}
+.d92f3:after {
+  content: "";
+  width: 100%;
+  border-bottom: 1px dashed #e5e5e5;
+  display: block;
+  margin-top: 8px;
+}
+.d92f3 > view {
+  line-height: 1.4em;
+}
+.d92f3 > view:first-child {
+  margin-bottom: 12px;
+}
+.d92f3 > view:last-child {
+  margin-bottom: 24px;
+}
+.c23966 {
+  font-size: 14px;
+  color: #323233;
+}
+.f29e3 {
+  display: block;
+  width: 178px;
+  height: 178px;
+  margin: 24px auto 8px;
+  border: 1px solid #dcdee0;
+}
+.c6a3dc {
+  text-align: center;
+  color: #333;
+  font-family: Avenir, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.c485c0 {
+  display: block;
+  font-family: PingFangSC-Regular, sans-serif;
+  font-size: 12px;
+  color: #636566;
+  width: 225px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.e4962 {
+  margin: 0 24px 24px;
+}
+.ee1cd {
+  display: block;
+  width: 100%;
+  height: 44px !important;
+  line-height: 44px !important;
+  font-size: 16px !important;
+  border-radius: var(--theme-radius-button, 22px) !important;
+  border: none !important;
+  color: var(--main-text, #fff) !important;
+  background: var(--main-bg, #323233) !important;
+}
+.c0682c {
+  color: #969799 !important;
+}
+.c0682c,
+.c8c55 {
+  display: block;
+  width: 100%;
+  height: 44px !important;
+  line-height: 44px !important;
+  font-size: 14px !important;
+  border-radius: var(--theme-radius-button, 22px) !important;
+  border: none !important;
+  margin-top: 4px;
+}
+.c8c55 {
+  color: #fff !important;
+  background: #dcdee0 !important;
+}
+.c293bd {
+  padding: 34px 30px 50px 30px;
+}
+.c4d028 {
+  width: 160px;
+  height: 160px;
+  margin-bottom: 24px;
+}
+.de848 {
+  color: #969799;
+  font-size: 14px;
+  line-height: 20px;
+}
+.c08dd {
+  padding: 96px 24px 50px 24px;
+}
+.a6dce {
+  width: 35px;
+  height: 35px;
+}
+.c5f176 {
+  color: #969799;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 87px;
+}

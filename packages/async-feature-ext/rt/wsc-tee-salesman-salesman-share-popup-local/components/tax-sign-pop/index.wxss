@@ -1,0 +1,43 @@
+.tee-image {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.task-sign {
+  width: 270px;
+  background: #fff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.task-sign__banner {
+  width: 180px;
+  height: 100px;
+  margin: 24px 0;
+}
+.task-sign__text {
+  font-size: 13px;
+  color: #323233;
+  text-align: center;
+  line-height: 20px;
+  width: 223px;
+}
+.task-sign__btn {
+  width: 200px;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 18px;
+  font-size: 14px;
+  color: #fff;
+  margin: 24px 0 16px;
+  text-align: center;
+  background-image: linear-gradient(135deg, #ffaa1e, #ff720d);
+  box-shadow: 0 3px 6px 0 rgba(255, 114, 13, 0.2);
+}
+.task-sign__next {
+  font-size: 13px;
+  color: #969799;
+  text-align: center;
+  margin-bottom: 24px;
+}

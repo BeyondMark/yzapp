@@ -1,0 +1,19 @@
+<view class="dc-teacher">
+    <view class="{{'wrap'}} {{'wrap--listMode'+opt.listMode}}" style="{{'margin: '+wrapMargin}}">
+        <a bind:_init="_tic" bind:tap="_p" businessModule="owlMiniProgram" class="{{'form-button'}}" data-t="{{ tap:{ en:'onTeacherTap',args:[item.id] } }}" wx:for="{{list}}" wx:key="index">
+            <view class="{{'item'}} {{'item--size'+opt.listMode}} {{'item--cardStyle'+opt.cardStyle}} {{opt.listMode===2?'item--avatarPos'+opt.avatarPos:''}} {{'item--avatarShape'+opt.avatarShape}} {{'item--goodsRadius'+opt.goodsRadius}} {{'item--imgSize'+opt.imgSize}} {{'item--textStyle'+opt.textStyle}} {{'item--textAlign'+opt.textAlign}}">
+                <view class="item__link" style="{{'margin: '+itemLinkMargin}}">
+                    <view class="item__img">
+                        <image class="tee-image" lazyLoad="true" src="{{item.icon}}"></image>
+                    </view>
+                    <view class="item__info">
+                        <view class="item__label" wx:if="{{opt.displayContent.label}}"> {{item.teacherName?item.teacherName:item.staffName}} </view>
+                        <view class="item__duty" wx:if="{{opt.displayContent.duty}}"> {{item.duty}} </view>
+                        <view class="item__desc" wx:if="{{opt.displayContent.desc}}"> {{item.description}} </view>
+                    </view>
+                </view>
+            </view>
+        </a>
+    </view>
+    <test bind:_init="_tic"></test>
+</view>

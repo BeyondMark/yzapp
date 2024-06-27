@@ -1,0 +1,20 @@
+{
+  "navigationBarTitleText": "活动详情",
+  "navigationStyle": "custom",
+  "backgroundColor": "#FFF",
+  "usingComponents": {
+    "a": "../../@vant/weapp/dist/image/index",
+    "b": "../../@vant/weapp/dist/nav-bar/index",
+    "c": "../components/submit-popup/index",
+    "d": "../components/desc-card/index",
+    "e": "../components/abnormal/index",
+    "f": "../components/applied-popup/index",
+    "g": "../../../async-main/components/account/inject-protocol/index",
+    "h": "../../../async-usecenter/components/showcase/rich-text/index",
+    "i": "../../../async-main/@vant/weapp/dist/icon/index",
+    "j": "../../@vant/weapp/dist/button/index",
+    "k": "/components/account/user-authorize/index",
+    "_": "../../../../components/_/index"
+  },
+  "componentPlaceholder": { "g": "_", "h": "_", "i": "_" }
+}

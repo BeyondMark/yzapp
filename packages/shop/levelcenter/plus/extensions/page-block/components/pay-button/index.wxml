@@ -1,0 +1,28 @@
+<view class="mobile-check-action {{isIphoneX?'is-new-phone':''}}">
+    <view class="can-not-promot" wx:if="{{currentCycleSku.goodsSkuType===2&&!isWaitReNewStatus}}">
+        <view class="text-line">根据小程序平台运营规则，小程序暂不支持付费会员连续订购，请复制链接后，在浏览器环境中打开并订购。</view>
+    </view>
+    <view class="check-text {{skuInfo.showPrice||skuInfo.showPrice===0?'check-text-left':''}}" wx:if="{{currentCycleSku.goodsSkuType!==2&&!isWaitReNewStatus}}">
+        <a bind:change="handleChecked" checkedColor="#e2bb7b" class="agreement" iconSize="18px" value="{{checked}}"></a>
+        <view class="agreement">已阅读并同意<view bind:tap="handleReadAgreement" class="link">《付费会员协议》</view>
+        </view>
+    </view>
+    <view class="button-wrapper" wx:if="{{skuInfo.showPrice||skuInfo.showPrice===0}}">
+        <view class="check-btn">
+            <b authTypeList="{{['mobile']}}" bind:next="handleBuy" bizDataMap="{{bizDataMap}}">{{btnText||''}}</b>
+        </view>
+        <view class="promot-info">
+            <b authTypeList="{{['mobile']}}" bind:next="handleBuyExperience" bizDataMap="{{bizDataMap}}">
+                <view class="experience-price">{{skuInfo.showPrice}}元特价体验</view>
+            </b>
+            <view class="limit-discount first-limit" wx:if="{{currentCycleSku.goodsSkuType!==2}}">限时特价优惠</view>
+        </view>
+    </view>
+    <view class="button-wrapper" wx:else>
+        <b authTypeList="{{['mobile']}}" bind:next="handleBuy" bizDataMap="{{bizDataMap}}" style="width:100%">
+            <c block="{{true}}" class="check-full-btn" color="linear-gradient(to right, #E2BB7C, #E8C388)" customStyle="border: 0px;color: #724804;" round="{{true}}" size="large">{{btnText}}<view class="limit-discount" wx:if="{{limitTime}}">限时优惠</view>
+            </c>
+        </b>
+    </view>
+    <view class="check-text upgrade-text" wx:if="{{hasAlias&&!isWaitReNewStatus}}">升级后，当前等级剩余有效期保留，可与商家协商退款</view>
+</view>

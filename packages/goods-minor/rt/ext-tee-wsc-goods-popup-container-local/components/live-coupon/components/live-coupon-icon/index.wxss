@@ -1,0 +1,98 @@
+.t-text {
+  display: inline-block;
+  text-decoration: inherit;
+}
+@keyframes move {
+  10% {
+    transform: rotate(-6deg);
+  }
+  18% {
+    transform: rotate(6deg);
+  }
+  26% {
+    transform: rotate(-6deg);
+  }
+  34% {
+    transform: rotate(6deg);
+  }
+  42% {
+    transform: rotate(-6deg);
+  }
+  50% {
+    transform: rotate(6deg);
+  }
+  0%,
+  60%,
+  to {
+    transform: rotate(0deg);
+  }
+}
+.live-coupon-flat {
+  position: fixed;
+  right: 10px;
+  bottom: 200px;
+  width: 48px;
+  height: 48px;
+  z-index: 99;
+  cursor: pointer;
+  transition: transform 0.2s;
+  visibility: hidden;
+}
+.live-coupon-flat.goaway {
+  transform: translate3d(100px, 0, 0);
+}
+.live-coupon-flat.show {
+  visibility: visible;
+}
+.live-coupon-flat .live-coupon-icon {
+  height: 100%;
+  width: 100%;
+  background-image: url(https://img01.yzcdn.cn/public_files/bf42b42af4a1e345174a01ea575daf79.png!small.png);
+  background-size: cover;
+  background-position: 50%;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  color: #ff1812;
+  animation: move 1.8s 0s infinite;
+  transform-origin: center;
+  position: relative;
+}
+.live-coupon-flat .live-coupon-icon .price {
+  position: absolute;
+  top: 4px;
+  transform: scale(0.8);
+  display: flex;
+  align-items: flex-end;
+}
+.live-coupon-flat .live-coupon-icon .price.price-top-6,
+.live-coupon-flat .live-coupon-icon .price.price-top-7 {
+  top: 6px;
+}
+.live-coupon-flat .live-coupon-icon .price--text {
+  font-size: 16px;
+  font-weight: 700;
+}
+.live-coupon-flat .live-coupon-icon .price--text.price-length-1,
+.live-coupon-flat .live-coupon-icon .price--text.price-length-2,
+.live-coupon-flat .live-coupon-icon .price--text.price-length-3,
+.live-coupon-flat .live-coupon-icon .price--text.price-length-4 {
+  font-size: 16px;
+}
+.live-coupon-flat .live-coupon-icon .price--text.price-length-5 {
+  font-size: 14px;
+}
+.live-coupon-flat .live-coupon-icon .price--text.price-length-6 {
+  font-size: 12px;
+}
+.live-coupon-flat .live-coupon-icon .price--text.price-length-7 {
+  font-size: 10px;
+}
+.live-coupon-flat .live-coupon-icon .time {
+  position: absolute;
+  bottom: -2px;
+  transform: scale(0.6);
+  font-weight: 700;
+  font-size: 20px;
+  color: #ff1812;
+}

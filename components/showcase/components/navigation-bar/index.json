@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-minor/components/showcase/captain-components/sticky/index",
+    "b": "./immersion-bar/index",
+    "c": "/packages/async-core/components/showcase/components/navigation-bar/nav-bar-open-panel/index",
+    "_": "../../../_/index"
+  },
+  "componentPlaceholder": { "a": "view", "c": "_" }
+}

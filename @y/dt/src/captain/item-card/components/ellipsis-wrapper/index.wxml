@@ -1,0 +1,9 @@
+<view>
+    <view class="ellipsis-wrapper" style="{{'max-height:'+maxHeight+'px'}}" wx:if="{{needCustom}}">
+        <slot></slot>
+        <view class="ellipsis" wx:if="{{showEllipsis}}">...</view>
+    </view>
+    <view wx:else>
+        <slot></slot>
+    </view>
+</view>

@@ -1,0 +1,35 @@
+<view class="use-detail">
+    <view class="mar_bot_10">
+        <b border="{{false}}" center="{{false}}" class="benefit-item" label="{{validTime}}">
+            <view class="benefit-item__icon" slot="icon">
+                <image class="icon-pic" src="{{benefit.icon}}"></image>
+            </view>
+            <view class="benefit-item__title" slot="title">
+                <view class="benefit_name">{{benefit.pluginName}}<view class="benefit_detail">有效期：{{rule}}</view>
+                </view>
+            </view>
+        </b>
+    </view>
+    <view class="mar_bot_10">
+        <d headerClass="panel-title" title="使用信息">
+            <view class="info_wrapper">
+                <view class="first-name">
+                    <text class="use-detail_info-label">消费时间:</text>{{createdAt}}</view>
+                <view class="use-detail_info">
+                    <text class="use-detail_info-label">数量:</text>{{record.num}}</view>
+            </view>
+        </d>
+    </view>
+    <d headerClass="panel-title" title="商家信息">
+        <view class="shop-info_wrapper">
+            <view class="first-name">内容</view>
+            <view class="shop-info">
+                <c name="location-o" size="20"></c>
+                <text class="shop-address">{{address}}</text>
+                <a bindtap="takeCall" class="shop-service_phone" vIf="servicePhone">
+                    <c name="phone-o" size="20"></c>
+                </a>
+            </view>
+        </view>
+    </d>
+</view>

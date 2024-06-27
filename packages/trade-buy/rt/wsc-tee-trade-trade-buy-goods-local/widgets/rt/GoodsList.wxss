@@ -1,0 +1,16 @@
+.long-cell {
+  padding: var(--theme-page-cell-padding-top, 10px)
+    var(--theme-page-cell-padding-right, 12px)
+    var(--theme-page-cell-padding-bottom, 10px)
+    var(--theme-page-cell-padding-left, 12px) !important;
+}
+.shop__name {
+  padding: 10px 12px !important;
+  border-radius: 8px 8px 0 0;
+}
+.shop__name .t-icon {
+  display: flex;
+  font-size: 18px;
+  line-height: 18px !important;
+  margin-right: 8px;
+}

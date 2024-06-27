@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "抢礼物",
+  "usingComponents": {
+    "a": "/pages/common/page-container/index",
+    "b": "../../../async-main/common/components/form-view/index",
+    "c": "../../../async-main/components/account/wx-login/index",
+    "d": "/components/account/user-authorize/index",
+    "_": "../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_", "c": "_" }
+}

@@ -1,0 +1,14 @@
+<b bind:_init="_tic" isWxReceipt="{{isWxReceipt}}">
+    <view class="c39c28" style="{{themeBackground5Style}}">
+        <view class="c81188">
+            <image class="c326a6 bd231" lazyLoad="true" src="{{info.icon}}" wx:if="{{info.icon}}"></image>
+            <view class="c9a036">
+                <view class="c1cb25">{{info.text}}</view>
+                <view class="c1dee8">{{info.desc}}</view>
+            </view>
+        </view>
+        <view class="c7c4f2">
+            <a bind:_init="_tic" bind:tap="_p" customClass="ce50a" data-t="{{ tap:{en:'selfClick'} }}" round="{{true}}" size="small"> {{info.buttonText}} </a>
+        </view>
+    </view>
+</b>

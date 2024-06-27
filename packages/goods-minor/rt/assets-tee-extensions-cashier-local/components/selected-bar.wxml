@@ -1,0 +1,12 @@
+<view class="{{classnames.root}}">
+    <view class="{{classnames.left}}">
+        <view class="{{classnames.icon}}" wx:if="{{showIcon&&lowercase}}">
+            <a bind:_init="_tic" channel="{{lowercase}}" scale="0.8"></a>
+        </view>
+        <view>
+            <view class="{{classnames.text}}"> {{formattedText}} </view>
+            <view class="{{classnames.subtext}}" wx:if="{{subtext}}"> {{subtext}} </view>
+        </view>
+    </view>
+    <view bind:tap="_p" class="{{classnames.right}}" data-t="{{ tap:{ en:'$emit',args:['action'] } }}" style="{{'color: '+themeColor}}"> {{buttonText||''}} </view>
+</view>

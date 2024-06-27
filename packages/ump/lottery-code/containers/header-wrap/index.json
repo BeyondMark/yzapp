@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../components/tips-content/index",
+    "b": "../../components/rules-content/index",
+    "c": "../../components/goods-card/index",
+    "d": "../../components/draw-notice/index",
+    "_": "../../../../../components/_/index"
+  }
+}

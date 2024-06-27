@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../cell/index/index",
+    "b": "../../icon/index/index",
+    "c": "../../../../../tu/native/weapp/input/index/index",
+    "_": "../../../../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,62 @@
+.benefit-popup {
+  min-width: 300px;
+  max-width: 414px;
+  margin: 0 auto;
+  background-color: transparent;
+  text-align: center;
+}
+.image {
+  width: 100%;
+  height: 125px;
+  z-index: 1;
+  transform: translateY(32px);
+}
+.pop-content {
+  z-index: -1;
+  text-align: center;
+  padding: 32px 0;
+  border-radius: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.vip-mask {
+  width: 158px;
+  height: 85px;
+  position: absolute;
+  right: 0;
+  top: 129px;
+  background: url(//b.yzcdn.cn/public_files/fc3e4ef5cbed764b0756392af1b93e95.png)
+    no-repeat 50% / contain;
+}
+.pop-actions {
+  text-align: center;
+}
+.pop-actions .action-btn {
+  margin: 24px 0;
+  color: #724804;
+  background: #e2bb7c;
+  background: linear-gradient(90deg, #e2bb7c, #e8c388);
+  font-weight: 700;
+  border-color: transparent;
+  border-radius: 22px;
+  font-size: 16px;
+}
+.gift-tip {
+  font-size: 12px;
+  color: #646566;
+  text-align: center;
+  height: 0;
+  overflow: visible;
+  position: relative;
+  top: 8px;
+}
+.close-btn {
+  font-size: 32px;
+  color: #969799;
+}
+.benefit-list-box {
+  padding: 0 20px;
+  margin-top: 16px;
+  overflow: scroll;
+  max-height: 160px;
+}

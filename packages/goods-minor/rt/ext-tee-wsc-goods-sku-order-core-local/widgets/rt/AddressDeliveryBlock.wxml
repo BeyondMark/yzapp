@@ -1,0 +1,19 @@
+<view class="c4834f">
+    <view wx:if="{{isShowAddressCell}}">
+        <b bind:_init="_tic" bind:cell-click="_p" data-t="{{ cellClick:{en:'onAddressCellClick'} }}" expressWaySelected="{{expressWaySelected}}" item="{{selectAddress}}" preSaleTips="{{preSaleTips}}"></b>
+        <view>
+            <view catch:tap="_p" class="c52b00" data-t="{{ tap:{en:'onAddressEdit',et:'stop'} }}" wx:if="{{isShowPoiPrompt}}">        为提高同城配送准确性，请进行地图定位选点
+        <a bind:_init="_tic" name="arrow"></a>
+            </view>
+            <d bind:_init="_tic" bind:showPopup="_p" data-t="{{ showPopup:{en:'handleShowDeliveryScopePopup'} }}" delivery="{{delivery}}" wx:if="{{showDeliveryScope}}"></d>
+            <f bind:_init="_tic" bind:onDeliveryTimeClick="_p" bind:onDeliveryTimeClose="_p" data-t="{{ onDeliveryTimeClick:{en:'onDeliveryTimeClick'},onDeliveryTimeClose:{en:'onDeliveryTimeClose'} }}" deliveryTime="{{deliveryTime}}" isLink="{{expressWayEditable}}" showLocalDeliveryTime="{{showLocalDeliveryTime}}" themeColors="{{themeColors}}"></f>
+        </view>
+    </view>
+    <view wx:if="{{isShowSelfFetch}}">
+        <c bind:_init="_tic" bind:cell-click="_p" data-t="{{ cellClick:{en:'onAddressCellClick'} }}" selfFetchShop="{{selfFetchShop}}" themeTag="{{themeTag}}"></c>
+        <view wx:if="{{!isFirstOpen}}">
+            <e bind:_init="_tic" bind:cell-click="_p" data-t="{{ cellClick:{en:'onSelfFetchCellClick'} }}" item="{{selectContact}}" labelTitle="提货人"></e>
+            <g bind:_init="_tic" bind:cell-click="_p" data-t="{{ cellClick:{en:'onSelfFetchTimeClick'} }}" isLink="{{canSelectSelfFetchTime}}" isSelected="{{!!selfFetchSelectedTime}}" show="{{showSelfFetchTime}}" value="{{selfFetchTimeStringFormat}}"></g>
+        </view>
+    </view>
+</view>

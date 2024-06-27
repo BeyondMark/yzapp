@@ -1,0 +1,30 @@
+.tee-image {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.yz-guarantee__title {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  flex: 1 0;
+}
+.yz-guarantee__icon {
+  width: 59px;
+  height: 16px;
+  margin-right: 8px;
+  display: inline-block;
+}
+.yz-guarantee__icon.youzan {
+  width: 95px;
+}
+.yz-guarantee__text {
+  display: inline;
+  font-size: 13px;
+  color: #969799;
+  line-height: 18px;
+  flex: 1;
+}
+.yz-guarantee__value {
+  flex: 0 0 auto !important;
+}

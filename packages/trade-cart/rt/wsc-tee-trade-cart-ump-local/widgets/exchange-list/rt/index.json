@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../../../wsc-tee-trade-common-widgets-local/rt/Price",
+    "b": "/packages/async-tee/@y-open/vt/native/weapp/checkbox/index/index",
+    "c": "/packages/async-tee/@y-open/vt/native/weapp/toast/index/index",
+    "_": "../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_", "c": "_" }
+}

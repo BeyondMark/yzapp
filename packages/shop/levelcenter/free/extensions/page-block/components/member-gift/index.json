@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../present/index",
+    "b": "../coupon/index",
+    "c": "../point/index",
+    "d": "../member-button/index",
+    "e": "/packages/async-main/@vant/weapp/dist/icon/index",
+    "_": "../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "e": "_" }
+}

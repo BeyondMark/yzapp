@@ -1,0 +1,27 @@
+{
+  "navigationBarTitleText": "砍价购",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "a": "/pages/common/page-container/index",
+    "b": "/packages/ump/components/follow-popup/index",
+    "c": "/packages/async-main/common/components/base-sku/index",
+    "d": "/packages/async-main/@y/behavior-verify/src/miniapp/weapp/index",
+    "e": "/packages/ump/common/products-featured/index",
+    "f": "../../../components/fixed-sku-price/index",
+    "g": "../../activity-coupon/rt/index",
+    "h": "../../activity-header/rt/index",
+    "i": "../../activity-records/rt/index",
+    "j": "../../activity-status/rt/index",
+    "k": "../../helpcut-firstcut/rt/index",
+    "l": "../../helpcut-goods/rt/index",
+    "m": "../../helpcut-invite-post/rt/index",
+    "n": "../../helpcut-popup/rt/index",
+    "o": "../../helpcut-records/rt/index",
+    "p": "../../helpcut-status/rt/index",
+    "q": "../../helpcut-success/rt/index",
+    "r": "../../invite-post/rt/index",
+    "s": "/packages/async-main/@vant/weapp/dist/toast/index",
+    "_": "../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "c": "_", "d": "_", "s": "_" }
+}

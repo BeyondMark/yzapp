@@ -1,0 +1,42 @@
+.long-cell {
+  padding: var(--theme-page-cell-padding-top, 10px)
+    var(--theme-page-cell-padding-right, 12px)
+    var(--theme-page-cell-padding-bottom, 10px)
+    var(--theme-page-cell-padding-left, 12px) !important;
+}
+.page {
+  min-height: 100vh;
+  background: #f9f9f9;
+}
+.c3c6e0 {
+  color: #999;
+  padding: 0 15px;
+  font-size: 12px;
+  line-height: 26px;
+}
+.ce50a {
+  height: 32px !important;
+  line-height: 30px !important;
+  padding: 0 10px !important;
+  margin: 10px 0 20px;
+  border-radius: 2px !important;
+}
+.c96e89 {
+  background: #fff;
+  padding: 15px 15px 10px;
+}
+.c1cb25 {
+  color: #999;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+}
+.c09eda {
+  color: #999;
+  font-size: 14px;
+  text-align: center;
+  padding-top: 180px;
+}
+.c55422 {
+  display: none;
+}

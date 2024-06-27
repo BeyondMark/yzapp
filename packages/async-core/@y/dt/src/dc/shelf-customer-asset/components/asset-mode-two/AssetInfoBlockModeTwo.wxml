@@ -1,0 +1,14 @@
+<view class="asset-info-block {{'asset-info-block-'+mode}}">
+    <view catch:tap="_p" class="asset-info" data-t="{{ tap:{ en:'handleClick',et:'stop',args:[item.type] } }}" wx:for="{{infoSetting}}" wx:key="type">
+        <view class="info-item" wx:if="{{mode==='vertical'}}">
+            <view class="item-placeholder t-text" wx:if="{{infoValue[ assetTypeSwitch[item.type] ]==null}}">*</view>
+            <view class="value t-text" style="color:{{numberColor}}; font-size:{{infoValue[ assetTypeSwitch[item.type] ].length>8?'16px':'20px'}}" wx:else> {{infoValue[ assetTypeSwitch[item.type] ]}} </view>
+            <view class="title t-text">{{titleMap[item.type]}}</view>
+        </view>
+        <view class="info-item" wx:else>
+            <view class="title t-text">{{titleMap[item.type]}}：</view>
+            <view class="item-placeholder t-text" wx:if="{{infoValue[ assetTypeSwitch[item.type] ]==null}}">*</view>
+            <view class="value t-text" style="color:{{numberColor}}" wx:else>{{infoValue[ assetTypeSwitch[item.type] ]}}</view>
+        </view>
+    </view>
+</view>

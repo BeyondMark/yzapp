@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-icon": "/packages/async-main/@vant/weapp/dist/icon/index",
+    "_": "../../../../../../../../../../components/_/index"
+  }
+}

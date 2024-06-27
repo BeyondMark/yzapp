@@ -1,0 +1,265 @@
+.c89585 {
+  text-decoration: inherit;
+}
+.c89585,
+.bd231 {
+  display: inline-block;
+}
+.bd231 {
+  width: 100%;
+  height: 100%;
+}
+.c01c22 {
+  padding: 48px 0;
+  width: 310px;
+  max-width: 310px;
+  min-height: 370px;
+  background-color: transparent !important;
+}
+.c4c13 {
+  display: flex;
+  align-items: baseline;
+}
+.c45b1d {
+  width: 700rpx;
+  height: 400rpx;
+}
+.c32465 {
+  width: 100%;
+  height: 100%;
+}
+.c41683 {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 17px;
+  text-align: center;
+  padding: 0 12px 12px 12px;
+  box-sizing: border-box;
+  min-height: 210px;
+  background-image: url(https://b.yzcdn.cn/flow-change-ump/lottery-popup-bg-2.x.x.png);
+}
+.c41683 .c0e506 {
+  display: flex;
+  margin: 58px auto 12px;
+  font-size: 16px;
+  color: #fff;
+}
+.c41683 .c0e506 .c1cb25 {
+  font-weight: 700;
+}
+.c41683 .c192d5 {
+  background: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  box-sizing: border-box;
+  display: flex;
+}
+.c41683 .c192d5 .c78805 {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  margin-right: 8px;
+}
+.c41683 .c192d5 .caf9b {
+  text-align: left;
+}
+.c41683 .c192d5 .caf9b .d5d3d {
+  font-size: 14px;
+  width: 174px;
+  height: 38px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.c41683 .c192d5 .caf9b .c78a5e {
+  font-size: 14px;
+  margin-top: 16px;
+  color: #f44;
+}
+.c41683 .c192d5 .caf9b .e5642 {
+  font-weight: 700;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 105px;
+}
+.c41683 .c192d5 .caf9b .c6fedc {
+  font-size: 20px;
+}
+.c0fc42 {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 17px;
+  text-align: center;
+  padding: 0 12px 12px 12px;
+  box-sizing: border-box;
+  min-height: 366px;
+  background-image: url(https://b.yzcdn.cn/flow-change-ump/lottery-popup-bg-3.x.x.png);
+}
+.c0fc42 .c0e506 {
+  display: flex;
+  margin: 58px auto 12px;
+  font-size: 16px;
+  color: #fff;
+}
+.c0fc42 .c0e506 .c1cb25 {
+  font-weight: 700;
+}
+.c0fc42 .c0e005 {
+  background: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.c0fc42 .c0e005 .d6e16 {
+  width: 262px;
+  height: 80px;
+  border-radius: 5px;
+  background: rgba(255, 68, 68, 0.1);
+  border: 1px solid rgba(238, 10, 36, 0.1);
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 16px;
+  padding-right: 23px;
+}
+.c0fc42 .c0e005 .d6e16 .c4758e {
+  width: 86px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #f44;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.c0fc42 .c0e005 .d6e16 .c4758e .c3e34b {
+  font-size: 12px;
+  font-weight: 400;
+}
+.c0fc42 .c0e005 .ba2aa {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 25px;
+}
+.c0fc42 .c0e005 .c2d783 {
+  font-size: 14px;
+}
+.c0fc42 .c0e005 .e78f8 {
+  font-size: 12px;
+  color: #9b9b9b;
+  margin-top: 10px;
+}
+.c0fc42 .c0e005 .c8d249 {
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+}
+.c0fc42 .c0e005 .cff53 {
+  width: 73px;
+  height: 0;
+  display: flex;
+  border-color: #ebedf0;
+  border-style: solid;
+  border-width: 0;
+}
+.c0fc42 .c0e005 .cff53:before {
+  content: "";
+  display: block;
+  flex: 1;
+  box-sizing: border-box;
+  height: 1px;
+  border-color: inherit;
+  border-style: inherit;
+  border-width: 1px 0 0;
+}
+.c0fc42 .c0e005 .f7e3f {
+  font-size: 12px;
+  color: #969799;
+  margin: 0 8px;
+}
+.c0fc42 .c0e005 .d0ebd {
+  display: flex;
+  justify-content: space-between;
+}
+.c0fc42 .c0e005 .d0ebd .c59da8 {
+  width: 82px;
+  height: 118px;
+  display: flex;
+  flex-direction: column;
+}
+.c0fc42 .c0e005 .d0ebd .f0126 {
+  width: 82px;
+  height: 82px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.c0fc42 .c0e005 .d0ebd .f65a3 {
+  width: 82px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #f44;
+  background: #f7f8fa;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.c0fc42 .c0e005 .d0ebd .f65a3 .c5f0b6 {
+  justify-content: center;
+  width: inherit;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.c0fc42 .c0e005 .d0ebd .f65a3 .c5f0b6 .e5642 {
+  font-weight: 700;
+  margin-left: 3px;
+}
+.c0fc42 .c0e005 .d0ebd .f65a3 .c5f0b6 .c6fedc {
+  font-size: 16px;
+}
+.c45b1d .c36b32 {
+  position: absolute;
+  right: 16px;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  background-image: url(https://img01.yzcdn.cn/public_files/2018/05/16/c29879b23772965a3af7f5689ee61f58.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.c45b1d .c74308 {
+  display: block;
+  height: 40px;
+  width: 240px;
+  margin: 16px auto 0;
+  padding: 0 12px;
+  border: none;
+  background-image: url(https://img01.yzcdn.cn/upload_files/2021/08/06/FutKN9BG4KGgwI1TVAyYTYFi7NTF.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: transparent;
+  animation: breath 0.8s linear infinite;
+}
+@keyframes breath {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  to {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,26 @@
+<view class="c08e58 custom-class {{unavailableClass}} {{disabledClass}}" style="{{valueStyle}}">
+    <view class="c8c3a0" wx:if="{{computedDescription&&computedDescription.length}}">
+        <block wx:if="{{computedDescription.length===1}}">{{computedDescription[0]}}</block>
+        <block wx:else>
+            <view wx:for="{{computedDescription}}" wx:key="*this">{{item}}<block wx:if="{{index+1!==computedDescription.length}}">-</block>
+            </view>
+        </block>
+    </view>
+    <view class="c4641c" wx:elif="{{validEndTime}}">
+        <block wx:if="{{showTimeData}}">
+            <view class="da841">距到期仅剩</view>
+            <view class="c2930" wx:if="{{timeDate.days}}">{{timeDate.days}}天</view>
+            <view class="ae67c">
+                <view>{{util.padZero(timeDate.hours)}}</view>
+                <view>:</view>
+                <view>{{util.padZero(timeDate.minutes)}}</view>
+                <view>:</view>
+                <view>{{util.padZero(timeDate.seconds)}}</view>
+            </view>
+        </block>
+    </view>
+    <a bind:change="handleCountDownChange" class="c08e58__countdown" format="{{format}}" time="{{time}}" useSlot="{{true}}"></a>
+</view>
+<view class="aea16">
+    <view class="cb005" wx:if="{{description}}">{{description}}</view>
+</view>

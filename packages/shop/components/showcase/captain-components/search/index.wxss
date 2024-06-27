@@ -1,0 +1,123 @@
+.search-view {
+  position: relative;
+}
+.search-position__view,
+.search-position__wrap {
+  width: 100vw;
+  height: 50px;
+}
+.search-position__wrap {
+  transition: top 0.3s linear;
+}
+.search-position__wrap--fixed-show {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+@keyframes fixed-show {
+  0% {
+    top: -50px;
+  }
+  to {
+    top: 0;
+  }
+}
+.search-position__wrap--fixed-hide {
+  position: fixed;
+  top: -50px;
+  left: 0;
+  z-index: 9;
+}
+@keyframes fixed-hide {
+  0% {
+    top: 0;
+  }
+  to {
+    top: -50px;
+  }
+}
+.zan-search {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+}
+.zan-search.center-placeholder {
+  background: #fff;
+}
+.zan-search.center-placeholder .zan-search__form {
+  justify-content: center;
+}
+.zan-search.zan-cell:after {
+  display: none;
+}
+.zan-search__form {
+  display: flex;
+  flex: 1;
+  background: #fff;
+  border-radius: 4rpx;
+  height: 40px;
+  line-height: 28px;
+  justify-content: space-between;
+  align-items: center;
+}
+.zan-search picker {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-right: 10px;
+}
+.zan-search__form .picker {
+  position: relative;
+  width: 55px;
+  height: 100%;
+  color: #666;
+  font-size: 14px;
+  margin-left: 10px;
+}
+.zan-search__form .picker:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -3px;
+  border-top: 6px solid #333;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+.zan-search__form input {
+  height: 40px;
+  flex: 1;
+  padding: 0 12px 0 6px;
+  font-size: 14px;
+  color: #333;
+}
+.zan-search.center-placeholder .zan-search__form input {
+  flex: none;
+  text-align: center;
+}
+.search__icon {
+  margin: 0-2px 0 10px;
+}
+.zan-search__clear {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 10px;
+}
+.zan-search__placeholder {
+  font-size: 14px;
+  color: #cacaca;
+}
+.zan-search__cancel {
+  align-self: stretch;
+  display: inline-flex;
+  align-items: center;
+  padding-left: 15px;
+  font-size: 14px;
+  color: #38f;
+}

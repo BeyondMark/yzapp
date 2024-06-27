@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 7px;
+  color: #fd3852;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: PingFangSC-Medium;
+}
+.header:after,
+.header:before {
+  display: inline-block;
+  content: "";
+  width: 36px;
+  height: 2px;
+  border-radius: 1px;
+  background: #fd3852;
+}
+.header-icon {
+  margin: 0 2px;
+  background: #fd3852;
+  border-radius: 2px;
+  width: 6px;
+  height: 6px;
+  transform: rotate(45deg);
+}
+.header-title {
+  margin: 0 6px;
+}

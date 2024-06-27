@@ -1,0 +1,4 @@
+.fixed-tabs .van-tabs__wrap {
+  position: fixed !important;
+  width: 100%;
+}

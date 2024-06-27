@@ -1,0 +1,8 @@
+<view class="helpcut-carousel">
+    <view class="swipe">
+        <view class="item {{helpCutUser.showEnter?'move-enter-active':''}} {{helpCutUser.showLeave?'move-leave-active':''}} " wx:if="{{helpCutUser.showEnter||helpCutUser.showLeave}}" wx:for="{{helpcutRecords}}" wx:for-item="helpCutUser" wx:key="index">
+            <image class="avatar" src="https://img01.yzcdn.cn/public_files/2019/03/13/36455f825857a9a44e13f4c147731e1c.png"></image>
+            <text class="text">{{helpCutUser.message}}</text>
+        </view>
+    </view>
+</view>

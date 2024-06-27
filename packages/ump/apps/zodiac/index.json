@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "生肖翻翻看",
+  "usingComponents": {
+    "a": "/components/znb-web-view/index",
+    "b": "../../../async-main/components/account/inject-protocol/index",
+    "_": "../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_" }
+}

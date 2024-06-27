@@ -1,0 +1,17 @@
+.zan-pay-skeleton-list {
+  display: flex;
+  flex-direction: column;
+}
+.zan-pay-skeleton-list__item {
+  margin: 18px 0;
+}
+.zan-pay-skeleton-list .t-skeleton__avatar {
+  border-radius: 4px;
+}
+.zan-pay-skeleton-list .t-skeleton__content {
+  padding-top: 0;
+}
+.zan-pay-skeleton-list .t-skeleton__title {
+  border-radius: 4px;
+  height: 20px;
+}

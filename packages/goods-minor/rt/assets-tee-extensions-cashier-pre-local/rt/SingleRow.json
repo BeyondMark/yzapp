@@ -1,0 +1,15 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-tee/@y-open/vt/native/weapp/dialog/index/index",
+    "b": "/packages/async-tee/@y-open/vt/native/weapp/toast/index/index",
+    "c": "./../components/list",
+    "d": "./../components/pay-passer",
+    "e": "./../components/selected",
+    "f": "./../components/selected-cell",
+    "g": "./../components/pay-login",
+    "h": "/packages/async-tee/@y-open/vt/dist/skeleton/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_", "b": "_", "h": "_" }
+}

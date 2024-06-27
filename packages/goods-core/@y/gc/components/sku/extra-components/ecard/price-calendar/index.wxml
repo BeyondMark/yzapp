@@ -1,0 +1,13 @@
+<view class="c5f091">
+    <a bind:_init="_tic" border="{{false}}" title="日期" titleClass="c8d76e-title" titleWidth="50px" valueClass="c8d76e">
+        <view wx:if="{{itemPreOrderTimeStr}}">最晚需在<view class="a1de2 c89585">使用{{itemPreOrderTimeStr}}</view>      前购买</view>
+    </a>
+    <view class="bae39">
+        <view bind:tap="_p" class="a1439" data-t="{{ tap:{ en:'onMonthClick',args:[item,months] } }}" wx:for="{{calendarData.months}}" wx:key="name">
+            <view class="month-name">{{item.name}}月</view>
+            <view class="f4e33">{{item.label}}</view>
+            <view class="a10fb" wx:if="{{activeMonth.name===item.name||!activeMonth.name&&index===0}}"></view>
+        </view>
+    </view>
+    <b activeId="{{activeDateId}}" activeMonth="{{activeMonth}}" bind:_init="_tic" bind:select="_p" data-t="{{ select:{en:'onCalendarSelect'} }}" dates="{{activeItem}}" wx:if="{{activeItem&&activeItem.days.length}}"></b>
+</view>

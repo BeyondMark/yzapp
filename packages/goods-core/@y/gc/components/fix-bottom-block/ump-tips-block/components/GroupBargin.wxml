@@ -1,0 +1,43 @@
+<view>
+    <view bind:tap="_p" class="goods-buttom-groupon-container" data-t="{{ tap:{en:'openDialog'} }}">
+        <a bind:_init="_tic" center="{{true}}" customClass="a84f1" isLink="{{true}}" rightIconClass="b0ef8" value="领取优惠" valueClass="c371d3" wx:if="{{!drainageInfo.isPromotionEffect&&drainageInfo.isDrainage}}">
+            <view class="bbcd1" slot="title">
+                <view class="eed8e">
+                    <image class="c6a633 bd231" lazyLoad="true" src="{{avatarPlaceHolder}}"></image>
+                </view>
+                <view class="c309bc">
+                    <view class="c89585">加好友领优惠，</view>
+                    <view class="acb1f c89585">            额外再减{{weComFriendDecrease}}元
+          </view>
+                </view>
+            </view>
+        </a>
+        <a bind:_init="_tic" center="{{true}}" customClass="a84f1" rightIcon="{{true}}" rightIconClass="b0ef8" valueClass="c371d3" wx:if="{{!closeStorage&&drainageInfo.isPromotionEffect}}">
+            <view class="bbcd1" slot="title">
+                <view class="eed8e">
+                    <image class="c6a633 bd231" lazyLoad="true" src="{{avatarPlaceHolder}}"></image>
+                </view>
+                <view class="c309bc">
+                    <view class="c89585">获得加好友优惠，已减{{weComFriendDecrease}}元</view>
+                </view>
+            </view>
+            <b bind:_init="_tic" bind:tap="_p" class="b0ef8" data-t="{{ tap:{en:'setCloseStorage'} }}" name="cross" size="18" slot="right-icon"></b>
+        </a>
+    </view>
+    <c bind:_init="_tic" duration="{{300}}" position="bottom" round="{{true}}" show="{{showPop}}">
+        <view class="b4827" wx:if="{{showPop}}">
+            <view class="eede8">
+                <view class="c89585">加好友领优惠，</view>
+                <view class="c7df99 c89585">          额外再减
+          <span bind:_init="_tic" class="c3faf7">{{weComFriendDecrease}}</span>          元
+        </view>
+            </view>
+            <view class="c174ec">优惠后拼团价¥{{preferentialPrice}}</view>
+            <viw bind:_init="_tic" class="c4f6e9">
+                <image class="c1a55b bd231" lazyLoad="true" mode="aspectFit" showMenuByLongpress="{{true}}" src="{{drainageInfo.weComDrainageQrCode}}"></image>
+                <view class="c3c1f5">长按识别二维码</view>
+            </viw>
+            <b bind:_init="_tic" bind:tap="_p" class="c5174a" data-t="{{ tap:{en:'closePop'} }}" name="cross" size="22"></b>
+        </view>
+    </c>
+</view>

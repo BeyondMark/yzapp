@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../salesman-commission/index",
+    "b": "/packages/shop/common/components/theme-view/index",
+    "_": "../../../../../../../../../../components/_/index"
+  }
+}

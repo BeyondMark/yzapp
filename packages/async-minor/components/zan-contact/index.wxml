@@ -1,0 +1,4 @@
+<view class="custom-class" style="position: relative">
+    <slot></slot>
+    <button bind:contact="onContactBack" businessId="" class="message__contact-button" openType="contact" sendMessageImg="{{messageImg}}" sendMessagePath="{{messagePath}}" sendMessageTitle="{{messageTitle}}" sessionFrom="{{sourceParam}}" showMessageCard="{{messageCard}}"></button>
+</view>

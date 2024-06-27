@@ -1,0 +1,11 @@
+<view class="cube-header">
+    <a bind:_init="_tic" bind:tap="_p" customClass="panel-close" data-t="{{ tap:{en:'handleCloseMainFrame'} }}" name="close" size="16"></a>
+    <view class="cube-header__title">
+        <view class="panel-title" wx:if="{{shareMoneyRange.length}}"> {{hireFeeFinalTextInfo.text}} <view class="panel-title__money t-text" wx:if="{{hasHireFeeRange}}"> {{hireFeeFinalTextInfo.commission}} </view>
+        </view>
+        <view class="panel-title" wx:else> {{shareMoney>0?'分享后预计可赚':'立即分享给好友'}} <view class="panel-title__money t-text" wx:if="{{shareMoney>0}}">¥{{shareMoney}}</view>
+        </view>
+        <view class="panel-desc" wx:if="{{shareMoney>0||hasHireFeeRange}}">      佣金可在“{{shareData.salesmanName||'分销员'}}中心”里查看
+    </view>
+    </view>
+</view>

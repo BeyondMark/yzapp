@@ -1,0 +1,1 @@
+<a bind:_init="_tic" bind:change="_p" bind:close="_p" channels="{{prePayFilteredChannels}}" data-t="{{ change:{en:'onChannelChange'},close:{en:'closeList'} }}" height="{{computedHeight}}" instalment="{{prePayInstalment}}" selected="{{prePaySelected}}" show="{{prePayShowList}}" themeColor="{{themeColor}}"></a>

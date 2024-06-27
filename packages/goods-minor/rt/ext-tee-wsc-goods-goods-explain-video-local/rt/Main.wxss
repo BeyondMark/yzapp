@@ -1,0 +1,138 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.dd592 {
+  position: fixed;
+  left: 8px;
+  right: 8px;
+  bottom: calc(66px + constant(safe-area-inset-bottom));
+  bottom: calc(66px + env(safe-area-inset-bottom));
+  pointer-events: none;
+  z-index: 99;
+}
+.dd592 .c65eb5 {
+  width: 94px;
+  height: 166px;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--theme-radius-card, 2px);
+  background-color: #000;
+}
+.dd592 .c33b54 {
+  width: 100%;
+  height: 100%;
+}
+.dd592 .df8d3 {
+  width: 19px;
+  height: 19px;
+  cursor: pointer;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dd592 .c8f28d {
+  font-size: 12px;
+  height: 16px;
+  text-align: center;
+  line-height: 16px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.dd592 .c65eb5 .e64bd,
+.dd592 .c65eb5 .goods-video__play {
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+}
+.dd592 .c65eb5 .c3fa3b,
+.dd592 .c65eb5 .goods-video__controls {
+  z-index: 1;
+  background: none;
+  opacity: 1 !important;
+  bottom: calc(constant(safe-area-inset-bottom));
+  bottom: calc(env(safe-area-inset-bottom));
+}
+.goods-explain-video--fullscreen {
+  top: 0 !important;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-color: #000;
+  pointer-events: auto;
+  z-index: 10001;
+  transition-property: left, bottom;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+.goods-explain-video--fullscreen .movable-view,
+.goods-explain-video--fullscreen movable-view {
+  width: 100% !important;
+  height: 100% !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+.goods-explain-video--fullscreen .c65eb5 {
+  width: 100%;
+  height: 100%;
+}
+.goods-explain-video--fullscreen .fullscreen-close {
+  font-size: 24px;
+  color: #fff;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+.goods-explain-video--fullscreen .fullscreen-close--weapp {
+  top: 56px;
+}
+.goods-explain-video--fullscreen .full-screen-element {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: 0 12px;
+  box-sizing: border-box;
+  bottom: calc(46px + env(safe-area-inset-bottom));
+  pointer-events: none;
+}
+.goods-explain-video--fullscreen .linear-gradient {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  height: 196px;
+}
+.goods-explain-video--fullscreen .placeholder-top {
+  top: 0;
+  height: 100px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), transparent);
+  transform: rotate(-180deg);
+}
+.goods-explain-video--fullscreen .placeholder-bottom {
+  bottom: 0;
+  background: linear-gradient(1turn, rgba(0, 0, 0, 0.5), transparent);
+}
+.goods-explain-video div {
+  width: auto;
+  height: auto;
+}
+.explain-video--opening .t-popup,
+.explain-video--opening .vt-fade-enter-active {
+  z-index: 10006 !important;
+}
+.explain-video--opening .passport-protocol-popup {
+  z-index: 10008 !important;
+}

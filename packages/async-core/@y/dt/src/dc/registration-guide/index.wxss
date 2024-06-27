@@ -1,0 +1,365 @@
+.tee-image {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.dc-registration-guide {
+  padding: 16px;
+}
+.dc-registration-guide .registration-guide-card {
+  border-radius: 4px;
+}
+.dc-registration-guide .halo-background {
+  position: relative;
+}
+.dc-registration-guide .halo-background:before {
+  content: "";
+  top: 0;
+  left: -10%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://img01.yzcdn.cn/upload_files/2021/06/18/FpQ2VD0t2xhhTNk-nL5OG4MHra72.png);
+  background-size: 110%;
+  background-repeat: no-repeat;
+  z-index: -1;
+  opacity: 0.4;
+}
+.dc-registration-guide .main-theme {
+  color: #fff;
+  color: var(--main-text);
+  background-image: linear-gradient(80deg, #f3dfc7, #fedaae);
+  background-image: linear-gradient(80deg, var(--start-bg), var(--end-bg));
+}
+.dc-registration-guide .main-theme .join-us {
+  background-color: #fff;
+  color: #000;
+  color: var(--main-bg);
+}
+.dc-registration-guide .main-theme .benefit-name,
+.dc-registration-guide .main-theme .subtitle {
+  opacity: 1;
+}
+.dc-registration-guide .main-theme .ticket-area {
+  color: #646566;
+}
+.dc-registration-guide
+  .main-theme
+  .ticket-area
+  .cap-coupon-description__content,
+.dc-registration-guide .main-theme .ticket-area .tips {
+  color: #969799;
+  opacity: 1;
+}
+.dc-registration-guide .gloden-theme {
+  background-image: linear-gradient(80deg, #f3dfc7, #fedaae);
+  color: #74410c;
+}
+.dc-registration-guide .gloden-theme .ticket-area {
+  color: #b66f0f;
+}
+.dc-registration-guide .gloden-theme .join-us {
+  color: #fff;
+  background-image: linear-gradient(90deg, #feae79, #ff3d3d);
+}
+.dc-registration-guide .black-theme {
+  background-image: linear-gradient(80deg, #353841, #2b2b2d);
+  color: #f6e2b5;
+}
+.dc-registration-guide .black-theme .ticket-area {
+  color: #886e36;
+}
+.dc-registration-guide .black-theme .join-us {
+  color: #776043;
+  background-image: linear-gradient(90deg, #f6e2b5, #e0c19b);
+}
+.dc-registration-guide .white-theme {
+  background-color: #fff;
+  background-image: url(https://img01.yzcdn.cn/upload_files/2021/06/18/Fsi_PbWu6l87HuqMCvactnWrYlEZ.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: #34333f;
+}
+.dc-registration-guide .white-theme .ticket-area {
+  color: #4e5164;
+}
+.dc-registration-guide .white-theme .ticket-mask {
+  top: 12px;
+}
+.dc-registration-guide .white-theme .point,
+.dc-registration-guide .white-theme .present {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.08);
+}
+.dc-registration-guide .white-theme .coupon-list {
+  margin: -12px 0-8px 0;
+}
+.dc-registration-guide .white-theme .coupon-list.twoLine-coupon {
+  width: calc(100% + 32px);
+  margin-left: -16px;
+}
+.dc-registration-guide .white-theme .coupon-list.twoLine-coupon .list-content {
+  padding: 0 16px;
+}
+.dc-registration-guide .white-theme .list-content {
+  margin-left: 2px;
+  box-shadow: 6px 0 6px -6px rgba(0, 0, 0, 0.08);
+}
+.dc-registration-guide .white-theme .list-content .point,
+.dc-registration-guide .white-theme .list-content .present {
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+.dc-registration-guide .white-theme .list-content .registration-guide-coupon {
+  margin-top: 12px;
+  margin-bottom: 8px;
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.08));
+}
+.dc-registration-guide .white-theme .join-us {
+  color: #fff;
+  background-image: linear-gradient(90deg, #a7a9b9, #75788f);
+}
+.dc-registration-guide .dark-theme,
+.dc-registration-guide .light-theme {
+  background-color: #c8c9cc;
+}
+.dc-registration-guide .dark-theme:before,
+.dc-registration-guide .light-theme:before {
+  display: none;
+}
+.dc-registration-guide .dark-theme {
+  color: #323232;
+}
+.dc-registration-guide .dark-theme .join-us {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.3);
+}
+.dc-registration-guide .dark-theme .ticket-area {
+  color: #646566;
+}
+.dc-registration-guide .light-theme {
+  color: #fff;
+}
+.dc-registration-guide .light-theme .join-us {
+  color: #fff;
+  background: hsla(0, 0%, 100%, 0.3);
+}
+.dc-registration-guide .light-theme .ticket-area {
+  color: #646566;
+}
+.registration-guide-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px;
+}
+.registration-guide-card .benefit-name,
+.registration-guide-card .subtitle,
+.registration-guide-card .tips {
+  opacity: 0.8;
+}
+.registration-guide-card .card-header {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.registration-guide-card .title-area {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.registration-guide-card .title-area .value {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+}
+.registration-guide-card .title-area .title-main {
+  display: block;
+  line-height: 22px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.registration-guide-card .title-area .subtitle {
+  display: block;
+  line-height: 18px;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.registration-guide-card .join-us {
+  display: block;
+  width: 56px;
+  min-width: 56px;
+  height: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.registration-guide-card .benefit-area {
+  margin-top: 12px;
+}
+.registration-guide-card .benefit-area .benefit-list {
+  display: -webkit-flex;
+  display: flex;
+}
+.registration-guide-card .benefit-area .benefit-item {
+  flex: 1;
+}
+.registration-guide-card .benefit-area .benefit-name {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 32px;
+  margin-left: 8px;
+}
+.registration-guide-card .benefit-area .benefit-img {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  vertical-align: middle;
+  overflow: hidden;
+}
+.registration-guide-card .benefit-area .more .benefit-item {
+  text-align: center;
+}
+.registration-guide-card .benefit-area .more .benefit-name {
+  display: block;
+  line-height: 18px;
+  margin-top: 4px;
+  margin-left: 0;
+}
+.registration-guide-card .ticket-area {
+  margin-top: 12px;
+}
+.registration-guide-card .coupon-list {
+  width: 100%;
+  overflow-x: scroll;
+}
+.registration-guide-card .coupon-list .list-content {
+  display: -webkit-flex;
+  display: flex;
+}
+.registration-guide-card .coupon-list::-webkit-scrollbar {
+  display: none;
+}
+.registration-guide-card .coupon-list .present {
+  min-width: 196px;
+  margin-right: 8px;
+}
+.registration-guide-card .coupon-list .point {
+  min-width: 108px;
+}
+.registration-guide-card .second-line {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+.registration-guide-card .second-line-item:nth-child(2) {
+  margin-left: 8px;
+}
+.registration-guide-card .second-line .point {
+  padding: 6px 12px 8px 12px;
+}
+.registration-guide-card .point,
+.registration-guide-card .present {
+  border-radius: 4px;
+  flex: 1;
+  background-color: #fff;
+}
+.registration-guide-card .point .name,
+.registration-guide-card .point .tips,
+.registration-guide-card .present .name,
+.registration-guide-card .present .tips {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.registration-guide-card .point .tips,
+.registration-guide-card .present .tips {
+  line-height: 16px;
+  font-size: 12px;
+}
+.registration-guide-card .present {
+  padding: 12px;
+  display: -webkit-flex;
+  display: flex;
+  overflow: hidden;
+}
+.registration-guide-card .present-img {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+.registration-guide-card .present .present-info {
+  overflow: hidden;
+}
+.registration-guide-card .present .present-info .name {
+  width: 100%;
+  font-weight: 600;
+  line-height: 20px;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+.registration-guide-card .point {
+  text-align: center;
+  padding: 6px 0 8px 0;
+}
+.registration-guide-card .point .count {
+  line-height: 34px;
+  font-size: 26px;
+  font-weight: 600;
+}
+.registration-guide-card .ticket-mask {
+  position: relative;
+  width: 100%;
+}
+.registration-guide-card .ticket-mask:after {
+  left: 0;
+  background-image: linear-gradient(90deg, #fff, hsla(0, 0%, 100%, 0));
+}
+.registration-guide-card .ticket-mask:before {
+  right: 0;
+  background-image: linear-gradient(90deg, hsla(0, 0%, 100%, 0), #fff);
+}
+.registration-guide-card .ticket-mask:after,
+.registration-guide-card .ticket-mask:before {
+  position: absolute;
+  top: 0;
+  content: "";
+  width: 32px;
+  height: 64px;
+  z-index: 10;
+  opacity: 0;
+}
+.registration-guide-card .ticket-mask-left:after,
+.registration-guide-card .ticket-mask-right:before {
+  opacity: 1;
+}
+.registration-guide-coupon {
+  width: 100%;
+  flex: 1;
+  border-radius: 4px;
+  margin-right: 8px;
+  background: radial-gradient(circle at right, transparent 6px, #fff 0) 100%/51%
+      100%no-repeat,
+    radial-gradient(circle at left, transparent 6px, #fff 0) 0/51% 100%no-repeat;
+}
+.registration-guide-coupon:last-child {
+  margin-right: 0;
+}
+.registration-guide-coupon.short {
+  width: inherit;
+  min-width: 108px;
+}

@@ -1,0 +1,99 @@
+.dc-fans {
+  position: relative;
+}
+.dc-fans button {
+  display: block;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+}
+.dc-fans button:after {
+  border: none;
+}
+.group,
+.official {
+  padding: 0 16px;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+.group .logo {
+  border-radius: 8px;
+}
+.official .default {
+  border: 1px solid #f4f4f4;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.official .left {
+  position: relative;
+}
+.official .icon {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  bottom: 0;
+  left: 35px;
+}
+.left {
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+.left .logo {
+  display: block;
+  width: 48px;
+  height: 48px;
+}
+.left .cnt {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex: 1;
+  overflow: hidden;
+  margin-left: 10px;
+}
+.left .title {
+  font-size: 14px;
+  line-height: 24px;
+  text-align: left;
+  color: #323233;
+  font-weight: 500;
+}
+.left .desc {
+  text-align: left;
+  color: #969799;
+  font-size: 12px;
+  line-height: 18px;
+}
+.left .desc,
+.left .title {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.left .tag {
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  color: #b3b3b3;
+  font-size: 8px;
+  line-height: 8px;
+}
+.right .btn {
+  width: 64px;
+  display: block;
+  height: 32px;
+  font-size: 12px;
+  border-radius: 16px;
+  line-height: 32px;
+  text-align: center;
+  color: var(--main-text, #fff);
+  background-color: var(--main-bg, #a8865d);
+}

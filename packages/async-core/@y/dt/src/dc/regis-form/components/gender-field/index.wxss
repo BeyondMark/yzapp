@@ -1,0 +1,12 @@
+.gender-field .van-cell__title {
+  flex: 0 0 90px;
+  color: #666;
+}
+.gender-field .radio-wrapper {
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.gender-field .radio-item {
+  margin-right: 32px;
+}

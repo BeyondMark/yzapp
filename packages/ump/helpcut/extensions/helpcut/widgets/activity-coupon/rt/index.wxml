@@ -1,0 +1,36 @@
+<view>
+    <a bind:close="closeCouponPop" customClass="coupon-pop" show="{{showCouponPop}}">
+        <view class="coupon-wrapper">
+            <view class="coupon-content">
+                <view class="cut-tip">老铁稳，一刀帮我砍了<text class="coupon-price">{{userCutPrice}}</text>元</view>
+                <view class="coupon-tip">感谢助力，送你一张优惠券</view>
+                <view>
+                    <view class="tap"></view>
+                    <view class="coupon-detail">
+                        <view class="detail-content">
+                            <view class="left-block">
+                                <view wx:if="{{couponResult.preferentialType===1}}">
+                                    <view class="coupon-value">
+                                        <text class="van-font-12">¥</text>{{couponResult.value}}</view>
+                                </view>
+                                <view wx:elif="{{couponResult.preferentialType===2}}">
+                                    <view class="coupon-value">{{couponResult.value}}折</view>
+                                </view>
+                                <view wx:else>
+                                    <view class="coupon-value">{{couponResult.value}}</view>
+                                </view>
+                                <view class="coupon-limit">{{couponResult.thresholdAmountMsg}}</view>
+                            </view>
+                            <view class="right-block">
+                                <view class="coupon-name">{{couponResult.title}}</view>
+                                <view class="coupon-time">{{couponResult.availableDateMsg}}</view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <button bindtap="useCoupon" class="use-button">立即使用</button>
+            </view>
+            <b bindclick="closeCouponPop" class="coupon-close" name="close"></b>
+        </view>
+    </a>
+</view>

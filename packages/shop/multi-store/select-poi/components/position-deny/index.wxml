@@ -1,0 +1,5 @@
+<view class="position-deny flex">
+    <image src="https://b.yzcdn.cn/public_files/2018/05/09/22ab512cdbf277dd70e04c54d9bd09a9.png"></image>
+    <view class="position-deny__title">抱歉，你没有授权位置权限</view>
+    <view class="position-deny__desc">你可以手动输入收货地址或同意位置授权</view>
+</view>

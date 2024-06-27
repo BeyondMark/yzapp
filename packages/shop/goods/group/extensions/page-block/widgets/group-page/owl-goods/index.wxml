@@ -1,0 +1,24 @@
+<template name="owl-goods">
+    <view class="owl-goods">
+        <view class="owl-goods__section" wx:if="{{columnList.length}}">
+            <view class="owl-goods__label van-hairline--bottom">专栏</view>
+            <view wx:for="{{columnList}}" wx:key="id">
+                <cap-paid-column column="{{item}}" showPriceInfo="{{item.showPriceInfo}}" themeClass="{{themeClass}}"></cap-paid-column>
+            </view>
+            <view class="owl-goods__footer">
+                <view bindtap="fetchMorePaidContent" class="owl-goods__footer--more" data-type="1" wx:if="{{columnList.length<columnTotal}}">点击查看更多</view>
+                <view class="owl-goods__footer--more" wx:else>没有更多了</view>
+            </view>
+        </view>
+        <view class="owl-goods__section" wx:if="{{contentList.length}}">
+            <view class="owl-goods__label van-hairline--bottom">内容</view>
+            <view wx:for="{{contentList}}" wx:key="id">
+                <cap-paid-content content="{{item}}" showPriceInfo="{{item.showPriceInfo}}" themeClass="{{themeClass}}"></cap-paid-content>
+            </view>
+            <view class="owl-goods__footer">
+                <view bindtap="fetchMorePaidContent" class="owl-goods__footer--more" data-type="2" wx:if="{{contentList.length<contentTotal}}">点击查看更多</view>
+                <view class="owl-goods__footer--more" wx:else>没有更多了</view>
+            </view>
+        </view>
+    </view>
+</template>

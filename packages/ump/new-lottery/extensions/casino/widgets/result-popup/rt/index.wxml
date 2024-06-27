@@ -1,0 +1,29 @@
+<c bind:click-overlay="hidePopup" customClass="result-popup result__winning-popup" show="{{showResult}}" style="overflow: visible;" wx:if="{{isWinning}}">
+    <view class="result-container">
+        <view class="result__sub-title">获得以下奖励</view>
+        <view class="result-prize">
+            <image class="result-prize__icon" mode="aspectFill" src="{{award.imageUrl||defaultImage[award.awardType]}}"></image>
+            <view class="result-prize__name">{{title}}</view>
+            <view class="result-prize__desc">{{desc}}</view>
+            <view class="result-btns">
+                <button bind:tap="handleUse" class="result-btns__general result-btns__use">{{buttonText}}</button>
+            </view>
+        </view>
+    </view>
+    <a bind:tap="hidePopup" class="close-btn" name="close"></a>
+</c>
+<c customClass="result-popup result__unwinning-popup" overlayStyle="{ zIndex: 1999 }" show="{{showResult}}" wx:else>
+    <view class="result__unwinning-container">
+        <image class="result__unwinning-icon" mode="aspectFill" src="{{award.imageUrl||defaultImage[award.awardType]}}"></image>
+        <view class="result__unwinning-title">{{award.awardName||'谢谢参与'}}</view>
+        <view class="result__unwinning-sub-title">{{award.awardWords||'你离中奖只差一丢丢'}}</view>
+        <view class="result-btns__groups">
+            <b bind:contact="onContactBack" businessId="{{im.businessId}}" contactClass="result-btns__message-contact" openType="contact" sessionFrom="{{im.sourceParam}}" wx:if="{{hasLink&&isImLink}}">去看看</b>
+            <button bind:tap="wander" class="result-btns__general result-btns__use" wx:elif="{{hasLink}}">去看看</button>
+            <button bind:tap="handleRoulette" class="result-btns__general result-btns__use" wx:else>再抽一次</button>
+        </view>
+        <view bind:tap="handleRoulette" class="result-count-down" wx:if="{{hasLink}}">再抽一次</view>
+    </view>
+    <a bind:tap="hidePopup" class="close-btn" name="close"></a>
+</c>
+<d id="van-toast"></d>

@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../../rt/CouponListPopupBottom",
+    "b": "./../../coupon-container/rt/index",
+    "c": "./../ActionSheet",
+    "_": "../../../../../../../components/_/index"
+  }
+}

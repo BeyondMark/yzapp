@@ -1,0 +1,15 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../../../../@vant/weapp/dist/cell/index",
+    "b": "/packages/async-main/@vant/weapp/dist/icon/index",
+    "c": "../../../../../../@vant/weapp/dist/tabbar/index",
+    "d": "../../../../../../@vant/weapp/dist/tabbar-item/index",
+    "e": "../components/order-pay-prompt/index",
+    "f": "../components/order-evaluate-prompt/index",
+    "g": "/components/account/user-authorize/index",
+    "h": "../../../../../../components/message/subscribe-message/index",
+    "_": "../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_" }
+}

@@ -1,0 +1,28 @@
+.goods-bottom {
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(125, 126, 128, 0.16);
+}
+.goods-bottom .van-goods-action {
+  position: static;
+  box-shadow: 0 0 10px rgba(125, 126, 128, 0.16);
+}
+.goods-bottom .van-goods-action-button {
+  height: 40px;
+}
+.goods-bottom .van-goods-action .van-goods-action-button--last {
+  margin-right: 8px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.goods-bottom .van-goods-action .van-goods-action-button--first {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.goods-bottom.iPhone-X:after {
+  content: " ";
+  height: 34px;
+  background: #fff;
+  width: 100%;
+  display: block;
+}

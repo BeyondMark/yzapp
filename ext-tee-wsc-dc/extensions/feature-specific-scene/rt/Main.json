@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/components/home-video-ad/index",
+    "b": "/packages/async-minor/components/showcase/components/timeline-share/index",
+    "c": "/components/znb-web-view/index",
+    "_": "../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_" }
+}

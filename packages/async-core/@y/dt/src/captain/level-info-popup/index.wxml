@@ -1,0 +1,21 @@
+<a bind:_init="_tic" bind:close="_p" customClass="level-info__popup" data-t="{{ close:{en:'closePopup'} }}" show="{{show}}" zIndex="999">
+    <view bind:tap="_p" data-t="{{ tap:{en:'handleTapCode'} }}">
+        <view class="level-info__popup-header">
+            <view class="level-info__popup-title">{{nickName||'***'}}</view>
+            <view class="level-info__popup-level"> {{levelName||'***'}} <block wx:if="{{level}}">LV.{{level}}</block>
+            </view>
+            <view catch:tap="_p" class="level-info__popup-close" data-t="{{ tap:{en:'closePopup',et:'stop'} }}"></view>
+        </view>
+        <view class="level-info__popup-body {{!showWechatPayBtn?'noButton':''}}">
+            <block wx:if="{{!isLoading}}">
+                <image class="level-info__popup-barcode tee-image" lazyLoad="true" src="{{barcode}}"></image>
+                <view class="level-info__popup-code"> {{encodeCode}} </view>
+                <image class="level-info__popup-qrcode tee-image" lazyLoad="true" src="{{qrcode}}"></image>
+                <view class="level-info__popup-tips">二维码每 60 秒自动更新</view>
+            </block>
+            <loading bind:_init="_tic" color="#000" size="60px" wx:else></loading>
+        </view>
+    </view>
+    <b bind:_init="_tic" bind:tap="_p" customClass="level-info__popup-wechat" customStyle="line-height: 1;color: #22AC38;display: block;border-color:#22ac38" data-t="{{ tap:{en:'handleToWechatPay'} }}" icon="{{wechatPayIcon}}" round="{{true}}" wx:if="{{showWechatPayBtn}}">    打开微信付款码
+  </b>
+</a>

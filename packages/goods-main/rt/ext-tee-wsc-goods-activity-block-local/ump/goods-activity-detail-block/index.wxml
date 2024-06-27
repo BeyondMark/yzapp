@@ -1,0 +1,5 @@
+<view class="c0332">
+    <b bind:_init="_tic" goodsPriceInfo="{{opt.goodsPriceInfo}}" grouponActivity="{{opt.currentActivity}}" kdtId="{{opt.kdtId}}" wx:if="{{groupOnShow}}"></b>
+    <a activity="{{opt.currentActivity}}" bind:_init="_tic" theme="{{opt.theme}}" wx:if="{{tuanShow}}"></a>
+    <c activity="{{opt.currentActivity}}" bind:_init="_tic" goodsTitle="{{opt.goodsTitle}}" shopName="{{opt.shopName}}" shopPhone="{{opt.shopPhone}}" wx:else></c>
+</view>

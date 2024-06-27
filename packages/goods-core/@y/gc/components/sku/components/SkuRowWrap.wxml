@@ -1,0 +1,5 @@
+<view class="sku-row-wrap" wx:if="{{opt.tree.length}}">
+    <a bind:_init="_tic" isFirst="{{index===0}}" isLast="{{index===opt.tree.length-1}}" skuRow="{{skuTreeItem}}" wx:for="{{opt.tree}}" wx:for-item="skuTreeItem" wx:key="index">
+        <b bind:_init="_tic" bind:preview="_p" bind:select="_p" data-t="{{ preview:{en:'onPreview'},select:{en:'onSelect'} }}" disableSoldoutSku="{{opt.disableSoldoutSku}}" index="{{i}}" labelData="{{labelData}}" largeImageMode="{{skuTreeItem.largeImageMode}}" multiSkuDecision="{{opt.multiSkuDecision}}" price="{{priceMap[skuValue.id]}}" selectedSku="{{selected}}" skuKeyStr="{{skuTreeItem.kS}}" skuValue="{{skuValue}}" topLength="{{skuTreeItem.topLength}}" updateTime="{{updateTime}}" wx:for="{{skuTreeItem.v}}" wx:for-index="i" wx:for-item="skuValue" wx:key="id"></b>
+    </a>
+</view>

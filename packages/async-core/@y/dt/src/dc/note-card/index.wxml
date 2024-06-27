@@ -1,0 +1,36 @@
+<view class="dc-note-card">
+    <a _opt="{{opt.wrapperLayoutOpt}}" bind:_init="_tic">
+        <b _opt="{{opt.wrapperLayoutOpt}}" bind:_init="_tic">
+            <view bind:tap="_p" class="sn-title" data-t="{{ tap:{en:'linkToMore'} }}">
+                <view class="topic"> {{opt.pageTitle}} </view>
+                <view class="link" wx:if="{{opt.showEnterShop&&!isSwipeLayout}}">
+                    <view class="link-text">查看更多</view>
+                    <c bind:_init="_tic" color="#969799" customStyle="{{iconStyle}}" name="arrow" size="{{13}}"></c>
+                </view>
+            </view>
+            <d bind:_init="_tic" bind:load="_p" data-t="{{ load:{en:'fetchNoteCardList'} }}" finished="{{!needLoadMore||isSwipeLayout}}" finishedText="{{''}}" loading="{{loading}}" wx:if="{{opt.listType===0||opt.listType===1||opt.listType===2}}">
+                <f _opt="{{list:curList,infoData:infoData}}" bind:_init="_tic" bind:item-click="_p" bind:link-to-more="_p" data-t="{{ itemClick:{en:'itemClick'},linkToMore:{en:'linkToMore'} }}" isSwipeLayout="{{isSwipeLayout}}" needLoadMore="{{needLoadMore}}"></f>
+            </d>
+            <d bind:_init="_tic" bind:load="_p" data-t="{{ load:{en:'fetchNoteCardList'} }}" finished="{{!needLoadMore}}" finishedText="{{''}}" loading="{{loading}}" wx:elif="{{opt.listType===3}}">
+                <e _opt="{{list:hybirdList,infoData:infoData}}" bind:_init="_tic" bind:item-click="_p" data-t="{{ itemClick:{en:'itemClick'} }}"></e>
+            </d>
+            <d bind:_init="_tic" bind:load="_p" data-t="{{ load:{en:'fetchNoteCardList'} }}" finished="{{!needLoadMore}}" finishedText="{{''}}" loading="{{loading}}" wx:elif="{{opt.listType===4}}">
+                <g _opt="{{list:curList,infoData:infoData,itemClick:itemClick}}" bind:_init="_tic" bind:item-click="_p" data-t="{{ itemClick:{en:'itemClick'} }}"></g>
+            </d>
+            <d bind:_init="_tic" bind:load="_p" data-t="{{ load:{en:'fetchNoteCardList'} }}" finished="{{!needLoadMore}}" finishedText="{{''}}" loading="{{loading}}" wx:elif="{{opt.listType===5}}">
+                <view>
+                    <a _opt="{{opt.layoutOpt}}" bind:_init="_tic">
+                        <b _opt="{{opt.layoutOpt}}" bind:_init="_tic" wx:for="{{waterfallList}}" wx:for-index="waterfallIndex" wx:for-item="waterfallListSub" wx:key="waterfallIndex">
+                            <a _opt="{{type:'one'}}" bind:_init="_tic">
+                                <f _opt="{{list:waterfallListSub,infoData:infoData}}" bind:_init="_tic" bind:item-click="_p" bind:link-to-more="_p" data-t="{{ itemClick:{en:'itemClick'},linkToMore:{en:'linkToMore'} }}" isSwipeLayout="{{isSwipeLayout}}" needLoadMore="{{needLoadMore}}"></f>
+                            </a>
+                        </b>
+                    </a>
+                </view>
+            </d>
+            <view bind:tap="_p" class="sn-common-bottom" data-t="{{ tap:{en:'linkToMore'} }}" wx:if="{{opt.listType!==2&&opt.showMore}}">        查看更多
+        <c bind:_init="_tic" color="#969799" customStyle="{{iconStyle}}" name="arrow" size="{{13}}"></c>
+            </view>
+        </b>
+    </a>
+</view>

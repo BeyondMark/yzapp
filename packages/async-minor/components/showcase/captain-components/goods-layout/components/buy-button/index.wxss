@@ -1,0 +1,64 @@
+.btn-userinfo {
+  overflow: visible;
+}
+.goods__btn-wrap.big .icon-btn .van-icon {
+  font-size: 24px;
+  line-height: 24px;
+  height: 24px;
+}
+.goods__btn-wrap.big .cap-btn .van-button {
+  line-height: 24px;
+  height: 24px;
+  padding: 0 7px;
+}
+.goods__btn-wrap.big .btn-3 .van-button,
+.goods__btn-wrap.big .btn-8 .van-button {
+  border-radius: 12px;
+}
+.goods__btn-wrap.big .btn-2.icon-btn .van-icon {
+  font-size: 20px;
+  line-height: 20px;
+  height: 20px;
+}
+.goods__btn-wrap.small .icon-btn .van-icon {
+  font-size: 18px;
+  line-height: 18px;
+  height: 18px;
+}
+.goods__btn-wrap.small .cap-btn .van-button {
+  line-height: 18px;
+  height: 18px;
+  font-size: 12px;
+  padding: 0 5px;
+}
+.goods__btn-wrap.small .btn-3 .van-button,
+.goods__btn-wrap.small .btn-8 .van-button {
+  border-radius: 10px;
+  padding: 0 7px;
+}
+.icon-btn .van-icon {
+  color: #f44;
+}
+.btn-4 .van-button,
+.btn-8 .van-button {
+  font-size: 14px;
+  border-color: #f44;
+  color: #f44;
+  min-width: auto;
+  cursor: pointer;
+  border-radius: 2px;
+  background-color: inherit;
+}
+.btn-3 .van-button,
+.btn-7 .van-button {
+  min-width: auto;
+}
+.btn-9 .van-button {
+  width: 72px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 12px;
+  padding: 0;
+  border-radius: 12px;
+  transform: translateY(8px);
+}

@@ -1,0 +1,27 @@
+<view class="shelf-entry" style="{{'--bgColor: '+bgColor+';--cardBgColor: '+cardBgColor+';--pageMargin: '+pageMargin+'px;'}}">
+    <view class="table-code-layout" style="{{tableCodeStyle}}" wx:if="{{tableCode}}">
+        <view bind:tap="_p" class="table-code {{'border-type-'+borderRadiusType}} {{'type-'+cardType}}" data-t="{{ tap:{en:'handleTableCodeClick'} }}">
+            <a bind:_init="_tic" class="food" name="https://img01.yzcdn.cn/upload_files/2023/02/27/Fq61km5PO2WUTyHb3oIYq10RQ56-.png" size="24px"></a> {{tableCode}}桌
+    </view>
+    </view>
+    <view class="entry-layout vertical" style="{{entryCardRowGap}}" wx:if="{{templateType===0}}">
+        <b bind:_init="_tic" bind:jumpToLink="_p" borderRadiusType="{{borderRadiusType}}" cardData="{{card}}" cardType="{{cardType}}" class="entry-card-custom" data-t="{{ jumpToLink:{en:'handleNavigation'} }}" templateMode="{{templateMode}}" templateType="{{templateType}}" wx:for="{{sliceCards}}" wx:for-item="card" wx:key="type"></b>
+    </view>
+    <view class="entry-layout horizontal" style="{{entryCardColumnGap}}" wx:elif="{{multipleALine}}">
+        <b bind:_init="_tic" bind:jumpToLink="_p" borderRadiusType="{{borderRadiusType}}" cardData="{{card}}" cardType="{{cardType}}" class="entry-card-custom" data-t="{{ jumpToLink:{en:'handleNavigation'} }}" iconPosition="{{iconPosition}}" imageAlignType="{{imageAlignType}}" templateMode="{{templateMode}}" templateType="{{templateType}}" textAlignType="{{textAlignType}}" wx:for="{{sliceCards}}" wx:for-item="card" wx:key="type"></b>
+    </view>
+    <view class="entry-layout type-three" style="{{entryCardColumnGap}}" wx:elif="{{templateType===2}}">
+        <b bind:_init="_tic" bind:jumpToLink="_p" borderRadiusType="{{borderRadiusType}}" cardData="{{cards[0]}}" cardType="{{cardType}}" class="entry-card-custom" customClass="left-one" customerStyle="height: 100%" data-t="{{ jumpToLink:{en:'handleNavigation'} }}" iconPosition="{{iconPosition}}" iconSize="large" imageAlignType="{{imageAlignType}}" templateMode="{{templateMode}}" templateType="{{templateType}}" textAlignType="{{textAlignType}}"></b>
+        <view class="type-three--right" style="{{entryCardRowGap}}">
+            <b bind:_init="_tic" bind:jumpToLink="_p" borderRadiusType="{{borderRadiusType}}" cardData="{{card}}" cardType="{{cardType}}" class="entry-card-custom" data-t="{{ jumpToLink:{en:'handleNavigation'} }}" iconPosition="{{iconPosition}}" imageAlignType="{{imageAlignType}}" templateMode="{{templateMode}}" templateType="{{templateType}}" textAlignType="{{textAlignType}}" wx:for="{{sliceCards}}" wx:for-item="card" wx:key="type"></b>
+        </view>
+    </view>
+    <view class="entry-layout vertical type-five" style="{{entryCardRowGap}}" wx:elif="{{templateType===5}}">
+        <view class="type-five--top-row" style="{{entryCardColumnGap}}">
+            <b bind:_init="_tic" bind:jumpToLink="_p" borderRadiusType="{{borderRadiusType}}" cardData="{{cards[item]}}" cardType="{{cardType}}" class="entry-card-custom" data-t="{{ jumpToLink:{en:'handleNavigation'} }}" iconPosition="{{iconPosition}}" imageAlignType="{{imageAlignType}}" isFiveTop="{{true}}" templateMode="{{templateMode}}" templateType="{{templateType}}" textAlignType="{{textAlignType}}" wx:for="{{typeFiveLeft}}" wx:key="item"></b>
+        </view>
+        <view class="type-five--bottom-row" style="{{entryCardColumnGap}}">
+            <b bind:_init="_tic" bind:jumpToLink="_p" borderRadiusType="{{borderRadiusType}}" cardData="{{cards[item]}}" cardType="{{cardType}}" class="entry-card-custom" data-t="{{ jumpToLink:{en:'handleNavigation'} }}" imageAlignType="{{imageAlignType}}" templateMode="{{templateMode}}" templateType="{{templateType}}" textAlignType="2" wx:for="{{typeFiveRight}}" wx:key="item"></b>
+        </view>
+    </view>
+</view>

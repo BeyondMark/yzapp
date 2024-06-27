@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../rt/Present",
+    "b": "./GoodsItem",
+    "c": "./ComboDetailPopup",
+    "d": "./../../../wsc-tee-trade-cart-ump-local/widgets/rt/GoodsGroupUmp",
+    "e": "./../../../wsc-tee-trade-cart-ump-local/widgets/rt/GoodsItemUmp",
+    "_": "../../../../../../components/_/index"
+  }
+}

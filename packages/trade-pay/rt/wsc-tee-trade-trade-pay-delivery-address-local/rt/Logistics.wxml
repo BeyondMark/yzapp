@@ -1,0 +1,12 @@
+<view class="c9d070" wx:if="{{showLogistics}}">
+    <a bind:_init="_tic" border="{{false}}" center="{{true}}" isLink="{{false}}" valueClass="c55422" wx:if="{{hasAddress&&dataLoaded}}">
+        <b bind:_init="_tic" class="c79c0c" name="location-o" slot="icon"></b>
+        <view class="c9a036" slot="title">
+            <view class="d5d3d">
+                <view class="c89585">收货人：{{currentAddress.userName}}</view>
+                <view class="c89585">{{currentAddress.tel}}</view>
+            </view>
+            <view class="d304b">收货地址：{{fullAddress}}</view>
+        </view>
+    </a>
+</view>

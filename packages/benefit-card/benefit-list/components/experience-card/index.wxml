@@ -1,0 +1,13 @@
+<a border="{{false}}" customClass="list-item" wx:if="{{benefit}}">
+    <view class="list-item__icon" slot="icon">
+        <image class="icon-pic" src="{{benefit.icon}}"></image>
+    </view>
+    <view slot="title">
+        <view class="van-cell__title">
+            <text>{{benefit.appName}}</text>
+            <view class="van-cell__label">{{benefit.label||benefit.desc}}</view>
+        </view>
+        <b experienceLog="{{experienceLog}}" rewardTip="{{rewardTip}}" wx:if="{{hasCard}}"></b>
+    </view>
+    <c bind:click="handleClickShare" border="{{false}}" color="#7232dd" customClass="{{disabled?'disabled-button':'share-button'}}" disabled="{{disabled}}" icon="share" openType="{{openType}}" round="{{true}}" size="small" wx:if="shareBtnVisible">分享</c>
+</a>

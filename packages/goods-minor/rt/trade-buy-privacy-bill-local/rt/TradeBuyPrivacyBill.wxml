@@ -1,0 +1,12 @@
+<view class="privacy-bill-block {{classes}}" wx:if="{{isOpened}}">
+    <d bind:_init="_tic" bind:tap="_p" clickable="{{true}}" customClass="privacy-bill" data-t="{{ tap:{en:'toggle'} }}" label="{{cellLabel}}">
+        <view class="{{isPayPage||isOrderDetailPage?'gray':''}}" slot="title">      号码保护
+      <b bind:_init="_tic" catch:tap="_p" color="#969799" data-t="{{ tap:{en:'onOpenPopup',et:'stop'} }}" name="info-o"></b>
+        </view>
+        <c bind:_init="_tic" checkedColor="var(--general)" data-ref="checkboxRefs" slot="right-icon" value="{{checked}}" wx:if="{{isGoodsDetailPage||isOrderPage}}"></c>
+        <view class="privacy-bill-status" slot="right-icon" wx:else>{{statusText}}</view>
+    </d>
+    <block wx:if="{{!(isGoodsDetailPage&&isSkuOrder)}}">
+        <a bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'onClosePopup'} }}" value="{{showRulePopup}}" wx:if="{{rmId==='b18-83'||rmId==='b7-62'||rmId==='b38-34'||rmId==='b36-38'}}"></a>
+    </block>
+</view>

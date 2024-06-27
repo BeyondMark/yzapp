@@ -1,0 +1,24 @@
+<view class="f1b5e">
+    <b bind:_init="_tic" bind:tap="_p" border="{{false}}" customClass="c283a1" data-t="{{ tap:{ en:'handleChangeShowPopup',args:[true] } }}" isLink="{{true}}">
+        <view class="c5b46e c30faf" slot="title">
+            <view class="c0c0ea c89585">服务</view>{{opt.serviceBarTitle}} </view>
+    </b>
+    <d bind:_init="_tic" bind:close="_p" closeable="{{false}}" customClass="c341e4" data-t="{{ close:{ en:'handleChangeShowPopup',args:[false] } }}" position="bottom" round="{{true}}" safeAreaInsetBottom="{{true}}" show="{{showPopup}}">
+        <scroll-view class="a485f" scrollY="{{true}}">
+            <view class="d920b" wx:for="{{opt.serviceDescList}}" wx:for-index="index1" wx:key="index1">
+                <view class="b4721">{{item.tag}}</view>
+                <view bind:tap="_p" class="c115d0" data-t="{{ tap:{ en:'onClickItem',args:[item] } }}">
+                    <view class="b79e1" wx:if="{{item.descList}}">
+                        <text class="d920b-text {{value.className}} c89585" decode="true" wx:for="{{item.descList}}" wx:for-index="index2" wx:for-item="value" wx:key="index2">{{value.text}}</text>
+                    </view>
+                    <view class="b79e1" wx:else>{{item.desc}}</view>
+                    <a bind:_init="_tic" class="c31366" name="arrow" size="16" wx:if="{{item.url&&item.noArrow!==true}}"></a>
+                </view>
+            </view>
+        </scroll-view>
+        <view catch:tap="_p" class="c1f5cb" data-t="{{ tap:{en:'true',et:'stop'} }}">
+            <c bind:_init="_tic" bind:tap="_p" customClass="c96ff0" data-t="{{ tap:{ en:'handleChangeShowPopup',args:[false] } }}" round="{{true}}" type="primary">        我知道了
+      </c>
+        </view>
+    </d>
+</view>

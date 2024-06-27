@@ -1,0 +1,8 @@
+.activity-header {
+  background: url(https://b.yzcdn.cn/wsc-minapp/bargain-detail/header/2018-08-06/background.png);
+  width: 100%;
+  background-size: cover;
+}
+.activity-header .activity-card-wrapper {
+  padding: 45px 15px 16px 15px;
+}

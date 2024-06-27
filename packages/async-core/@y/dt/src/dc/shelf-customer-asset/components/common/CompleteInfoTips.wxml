@@ -1,0 +1,6 @@
+<view class="container" style="{{cardStyle+bgType==='image'?'background: #fff !important;':''}}">
+    <view class="benefits-text">完善资料{{title}}</view>
+    <view bind:tap="_p" class="actions" data-t="{{ tap:{en:'handleClick'} }}">    去完善
+    <a bind:_init="_tic" color="#999" name="arrow"></a>
+    </view>
+</view>

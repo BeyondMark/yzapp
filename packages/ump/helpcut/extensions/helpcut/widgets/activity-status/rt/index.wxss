@@ -1,0 +1,315 @@
+@keyframes customscale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.activity-status-fail {
+  display: flex;
+  margin: 0 15px;
+}
+.activity-status-fail .button {
+  height: 40px;
+  text-align: center;
+  border-radius: 20px;
+  background: #fbc31b;
+  padding: 0 12px 0 12px;
+  line-height: 40px;
+  flex-grow: 1;
+  color: #911414;
+  font-size: 14px;
+}
+.activity-status-fail .second-button {
+  flex-grow: 3;
+  margin-left: 12px;
+}
+.activity-status-success {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 8px;
+  margin: 0 15px 20px 15px;
+}
+.activity-status-success .success-container {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 15px;
+  position: relative;
+}
+.activity-status-success .success-container .tentacle-right {
+  left: 15px;
+}
+.activity-status-success .success-container .tentacle-left,
+.activity-status-success .success-container .tentacle-right {
+  position: absolute;
+  top: -30px;
+  height: 45px;
+  background: url(https://img01.yzcdn.cn/wsc-minapp/bargain-detail/home/2018-08-06/tentacle.png)
+    no-repeat;
+  background-size: contain;
+  width: 8px;
+}
+.activity-status-success .success-container .tentacle-left {
+  right: 15px;
+}
+.activity-status-success .success-container .action-tip {
+  padding: 0 25px 0 25px;
+  background: #fff0f2;
+  height: 28px;
+  line-height: 28px;
+  align-self: center;
+  border-radius: 14px;
+  color: #f72a3e;
+}
+.activity-status-success .success-container .action-tip-nosuccess {
+  color: #646566;
+}
+.activity-status-success .success-container .action-tip-nosuccess .strong {
+  color: #d00800;
+}
+.activity-status-success .success-container .total-wrapper {
+  position: relative;
+  margin-top: 20px;
+  background: #fff0f2;
+  height: 4px;
+  border-radius: 8px;
+}
+.activity-status-success .success-container .total-wrapper .total-bar {
+  position: absolute;
+  left: 0;
+  right: 23px;
+  display: flex;
+  align-items: center;
+  height: 4px;
+}
+.activity-status-success
+  .success-container
+  .total-wrapper
+  .total-bar
+  .solid-bar {
+  height: 4px;
+  flex-shrink: 0;
+  background: #f72a3e;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  display: inline-block;
+}
+.activity-status-success
+  .success-container
+  .total-wrapper
+  .total-bar
+  .end-point {
+  display: inline-block;
+  height: 23px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  width: 23px;
+  border-radius: 15px;
+  background: #f72a3e
+    url(https://img01.yzcdn.cn/wsc-minapp/bargain-detail/home/2018-08-06/cut.png)
+    no-repeat 50%;
+  background-size: 70%;
+}
+.activity-status-success
+  .success-container
+  .total-wrapper
+  .total-bar
+  .end-point
+  .patch-negate-1px {
+  left: -1px;
+}
+.activity-status-success .success-container .remain-time {
+  color: #f44;
+  width: 100%;
+  margin-top: 20px;
+  display: inline-block;
+  line-height: 20px;
+  height: 20px;
+}
+.activity-status-success .success-container .remain-time .time-wrapper {
+  margin: 0 8px 0 8px;
+}
+.activity-status-success .success-container .remain-time .time-block {
+  background: #f72a3e;
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  min-width: 18px;
+  padding: 0 2px 0 2px;
+  border-radius: 3px;
+}
+.activity-status-success .success-container .remain-time .time-block.fat {
+  min-width: 36px;
+}
+.activity-status-success .success-container .buttons-group {
+  margin: 20px 0 0 0;
+  height: 40px;
+  display: flex;
+}
+.activity-status-success .success-container .buttons-group button {
+  overflow: visible !important;
+}
+.activity-status-success
+  .success-container
+  .buttons-group
+  .gradient-red-background {
+  color: #fff;
+  background-image: linear-gradient(270deg, #f72a3e, #f65a1c);
+  box-shadow: 0 2px 8px 0 rgba(156, 0, 0, 0.2), inset 0-5px 10px 0#f75123,
+    inset 0 5px 10px 0#ff7070;
+  position: relative;
+}
+.activity-status-success
+  .success-container
+  .buttons-group
+  .gradient-red-background:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 4px;
+  left: 22px;
+  opacity: 0.8;
+  background: #fff;
+  width: 12px;
+  height: 3px;
+  border-radius: 2.5px;
+}
+.activity-status-success
+  .success-container
+  .buttons-group
+  .gradient-red-background:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 4px;
+  left: 37px;
+  opacity: 0.8;
+  width: 74px;
+  height: 3px;
+  border-radius: 2.5px;
+  transform: scale(1);
+  border: none;
+  background-image: linear-gradient(
+    270deg,
+    hsla(0, 0%, 100%, 0),
+    hsla(0, 0%, 100%, 0.8)
+  );
+}
+.activity-status-success
+  .success-container
+  .buttons-group
+  .gradient-red-background
+  .bargain-userinfo {
+  animation: customscale 1s infinite;
+}
+.activity-status-success .success-container .buttons-group .yellow-background {
+  color: #911414;
+  border: none;
+  background-image: linear-gradient(90deg, #ffc71c, #ffda29);
+  box-shadow: 0 2px 8px 0 rgba(156, 113, 0, 0.2), inset 0-5px 10px 0#ffd84c,
+    inset 0 5px 10px 0#ffdf55;
+}
+.activity-status-success
+  .success-container
+  .buttons-group
+  .yellow-background:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 4px;
+  left: 16px;
+  opacity: 0.8;
+  background: #fff;
+  width: 6px;
+  height: 3px;
+  border-radius: 2.5px;
+}
+.activity-status-success
+  .success-container
+  .buttons-group
+  .yellow-background:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 4px;
+  left: 25px;
+  opacity: 0.8;
+  width: 50px;
+  height: 3px;
+  border-radius: 2.5px;
+  transform: scale(1);
+  border: none;
+  background-image: linear-gradient(
+    270deg,
+    hsla(0, 0%, 100%, 0),
+    hsla(0, 0%, 100%, 0.8)
+  );
+}
+.activity-status-success .success-container .buttons-group .price {
+  color: #fff;
+}
+.activity-status-success
+  .success-container
+  .buttons-group
+  .price
+  .price-button {
+  height: 40px;
+}
+.activity-status-success
+  .success-container
+  .buttons-group
+  .price
+  .price-button
+  .price-button-content {
+  line-height: 16px;
+  padding-top: 7px;
+}
+.activity-status-success
+  .success-container
+  .buttons-group
+  .price
+  .price-button
+  .price-now {
+  font-size: 10px;
+  line-height: 12px;
+}
+.activity-status-success .success-container .buttons-group .gray-background {
+  background: #bbb;
+  color: #fff;
+}
+.activity-status-success
+  .success-container
+  .buttons-group
+  .gray-background:after,
+.activity-status-success
+  .success-container
+  .buttons-group
+  .gray-background:before {
+  display: none;
+}
+.activity-status-success .success-container .buttons-group .prime {
+  border-radius: 20px;
+  line-height: 40px;
+  font-size: 3.5vw;
+  flex-grow: 1;
+  z-index: 2;
+}
+.activity-status-success .success-container .buttons-group .margin-patch {
+  margin: 0 0 0 10px;
+}
+.activity-status-success .success-container .buttons-group .minor {
+  border-radius: 20px;
+  line-height: 40px;
+  font-size: 3.5vw;
+}

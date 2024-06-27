@@ -1,0 +1,7 @@
+<view bindtap="handleGoodsClick" class="goods-wrap" data-alias="{{goodsInfo.alias}}">
+    <view class="icon-bowknot"></view>
+    <view class="goods-img">
+        <image mode="aspectFit" src="{{goodsInfo.goodsImg}}"></image>
+    </view>
+    <view class="goods-title van-font-14 van-c-black van-ellipsis">{{goodsInfo.goodsTitle}}</view>
+</view>

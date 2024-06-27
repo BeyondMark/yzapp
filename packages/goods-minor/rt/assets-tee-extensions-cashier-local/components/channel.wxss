@@ -1,0 +1,12 @@
+.t-text {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.zan-pay__channel {
+  display: inline-flex;
+  position: relative;
+  color: #323233;
+}
+.zan-pay__channel--disabled {
+  color: #c8c9cc;
+}

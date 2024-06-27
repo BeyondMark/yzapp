@@ -1,0 +1,15 @@
+<view class="c74a76" style="{{(isWxReceipt?'margin: 0;padding: 16px 0;':'')+themeVars}}" wx:if="{{showAwardV2Block}}">
+    <view class="d5d3d c89585">{{awardTitle}}</view>
+    <view class="award-block" data-ref="award-block" style="{{awardStyle}}">
+        <fission-coupon-ump bind:_init="_tic" wx:if="{{isWxReceipt&&haveFission}}"></fission-coupon-ump>
+        <g bind:_init="_tic" bind:log-attach="_p" data-t="{{ logAttach:{en:'logAttach'} }}" info="{{cur}}" isSkyline="{{isSkyline}}" isWxReceipt="{{isWxReceipt}}" kdtId="{{kdtId}}" navigateTo="{{navigateTo}}" orderNo="{{orderNo}}" themeColor="{{themeGeneralColor}}" wx:for="{{curCoupon}}" wx:for-item="cur" wx:key="id"></g>
+        <c bind:_init="_tic" bind:log-attach="_p" cloudConfig="{{cloudConfig}}" data-t="{{ logAttach:{en:'logAttach'} }}" info="{{award.cashBack}}" isWxReceipt="{{isWxReceipt}}" navigateTo="{{navigateTo}}" themeColor="{{themeGeneralColor}}" wx:if="{{award.cashBack}}"></c>
+        <i bind:_init="_tic" bind:log-attach="_p" cloudConfig="{{cloudConfig}}" data-t="{{ logAttach:{en:'logAttach'} }}" isSkyline="{{isSkyline}}" isWxReceipt="{{isWxReceipt}}" navigateTo="{{navigateTo}}" orderNo="{{orderNo}}" promotionInfo="{{paidPromotionInfo}}" returnUrl="{{returnUrl}}" themeColor="{{themeGeneralColor}}" themeTag="{{themeTag}}" wx:for="{{paidPromotionInfoList}}" wx:for-item="paidPromotionInfo" wx:key="id"></i>
+        <a bind:_init="_tic" bind:show-salesman="_p" data-t="{{ showSalesman:{en:'showSalesman'} }}" navigateTo="{{navigateTo}}" rmId="b21-16" type="block-style" wx:if="{{rmId==='b21-2'}}"></a>
+        <e afterPayGuide="{{afterPayGuide}}" bind:_init="_tic" bind:log-attach="_p" data-t="{{ logAttach:{en:'logAttach'} }}" kdtId="{{kdtId}}" navigateTo="{{navigateTo}}" wx:if="{{showMemberGuide}}"></e>
+        <d bind:_init="_tic" bind:log-attach="_p" data-t="{{ logAttach:{en:'logAttach'} }}" info="{{curMember}}" isWxReceipt="{{isWxReceipt}}" navigateTo="{{navigateTo}}" wx:if="{{curMember&&!hideBenefitcard}}"></d>
+        <f bind:_init="_tic" bind:log-attach="_p" data-t="{{ logAttach:{en:'logAttach'} }}" info="{{award.prior}}" isWxReceipt="{{isWxReceipt}}" kdtId="{{kdtId}}" navigateTo="{{navigateTo}}" wx:if="{{curPriorUse}}"></f>
+        <b bind:_init="_tic" bind:log-attach="_p" canUsePointsScene="{{usePointsExpireScene}}" cloudConfig="{{cloudConfig}}" data-t="{{ logAttach:{en:'logAttach'} }}" info="{{award.credit}}" isWxReceipt="{{isWxReceipt}}" navigateTo="{{navigateTo}}" themeColor="{{themeGeneralColor}}" wx:if="{{award.credit}}"></b>
+    </view>
+    <h bind:_init="_tic" bind:jump="_p" customStyle="{{maskStyle}}" data-t="{{ jump:{en:'expandAll'} }}" wx:if="{{showMask}}"></h>
+</view>

@@ -1,0 +1,3 @@
+<view class="{{cls}}" wx:if="{{visible}}">
+    <image src="{{defaultUrl}}" style="{{style}}"></image>
+</view>

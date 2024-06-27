@@ -1,0 +1,5 @@
+<movable-area bind:_init="_tic" class="c47bf">
+    <movable-view bind:_init="_tic" bind:change="_p" bind:touchend="_p" class="c1d2cd" damping="20" data-t="{{ change:{en:'handleChange'},touchend:{en:'handleTouchend'} }}" direction="all" disabled="{{isFullScreen}}" x="{{x}}" y="{{y}}">
+        <slot></slot>
+    </movable-view>
+</movable-area>

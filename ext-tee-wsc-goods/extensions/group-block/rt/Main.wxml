@@ -1,0 +1,10 @@
+<view class="group-block">
+    <c bind:_init="_tic" rmId="b7-30" wx:if="{{rmId==='b7-52'}}"></c>
+    <block wx:if="{{goodsServiceOpt.serviceBarTitle&&showServiceBar}}">
+        <a bind:_init="_tic" kdtId="{{kdtId}}" opt="{{goodsServiceOpts}}" rmId="{{rmId}}" wx:if="{{rmId==='b7-52'}}"></a>
+    </block>
+    <block wx:if="{{SelectSkuOpt.show}}">
+        <b bind:_init="_tic" bind:skuShow="_p" data-t="{{ skuShow:{en:'onSkuShow'} }}" opt="{{SelectSkuOpt}}" rmId="{{rmId}}" wx:if="{{rmId==='b7-52'}}"></b>
+    </block>
+    <d bind:_init="_tic" opt="{{ServiceCategoryOpt}}"></d>
+</view>

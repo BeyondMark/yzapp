@@ -1,0 +1,48 @@
+.level-welcome-popup {
+  min-width: 290px;
+  max-width: 414px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 16px;
+  background-color: #fff;
+  padding: 24px 0;
+}
+.pop-content {
+  text-align: center;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+.pop-actions {
+  text-align: center;
+  margin: 24px auto 0;
+}
+.pop-actions .action-btn {
+  width: 258px;
+  height: 44px;
+  color: #463c32;
+  background: #e7c5a5;
+  border-color: transparent;
+  border-radius: 22px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 12px auto 0 auto;
+}
+.gift-tip {
+  font-size: 12px;
+  color: #969799;
+  overflow: visible;
+}
+.close-btn {
+  font-size: 32px;
+  color: #969799;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}
+.benefit-list-box {
+  padding: 0 16px;
+  margin-top: 16px;
+  overflow: scroll;
+  max-height: 160px;
+}

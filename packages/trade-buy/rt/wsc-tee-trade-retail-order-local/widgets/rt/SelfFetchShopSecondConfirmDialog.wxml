@@ -1,0 +1,10 @@
+<a bind:_init="_tic" bind:cancel="_p" bind:confirm="_p" cancelButtonText="更换门店" confirmButtonColor="{{general}}" data-t="{{ confirm:{en:'onCreateOrder'},cancel:{en:'onSelectShop'} }}" show="{{show}}" showCancelButton="{{true}}" showConfirmButton="{{true}}" useSlot="{{true}}" zIndex="52">
+    <view class="f9ab0" wx:if="{{show}}">
+        <view class="d5d3d">请确认取货门店</view>
+        <view class="c9a036">
+            <view class="b0689">{{name}}</view>
+            <view class="c951da">{{detail}}</view>
+            <view class="a74ec" style="color:{{general}}">距离你 {{distance}}</view>
+        </view>
+    </view>
+</a>

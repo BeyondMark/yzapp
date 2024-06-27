@@ -1,0 +1,3 @@
+<view class="c77ecc" data-ref="blockContainer">
+    <slot></slot>
+</view>

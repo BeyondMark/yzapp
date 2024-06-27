@@ -1,0 +1,40 @@
+.c9acb4 {
+  position: relative;
+  background: #fff;
+  padding: 10px 6px;
+}
+.c9acb4:after {
+  position: absolute;
+  box-sizing: border-box;
+  content: "";
+  pointer-events: none;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #ebedf0;
+  transform: scaleY(0.5);
+}
+.c9f7c0 {
+  height: 40px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px 10px 5px 60px;
+  background-size: 40px 40px;
+  background-position: 10px 5px;
+  background-repeat: no-repeat;
+}
+.c43ddd {
+  font-weight: 500;
+  font-size: 14px;
+}
+.c0f0d3 {
+  color: #b1b1b1;
+  font-size: 12px;
+  margin-top: 2px;
+  line-height: 14px;
+}
+.c9acb4 .c35c36 {
+  padding: 10px 10px 6px;
+}

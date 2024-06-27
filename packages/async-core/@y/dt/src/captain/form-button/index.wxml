@@ -1,0 +1,4 @@
+<form bind:submit="_p" class="form-button--wrap" data-t="{{ submit:{en:'onButtonTap'} }}" reportSubmit="true">
+    <button class="form-button" formType="submit"></button>
+    <slot></slot>
+</form>

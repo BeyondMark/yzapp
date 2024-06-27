@@ -1,0 +1,7 @@
+<view class="trade-buy-header-container">
+    <b bind:_init="_tic" rmId="b36-26" wx:if="{{rmId==='b36-29'}}"></b>
+    <c bind:_init="_tic" display="{{display}}" env="{{env}}" haitaoZeroOrder="{{haitaoZeroOrder}}" themeCss="{{themeCSS}}" tradeTag="{{tradeTag}}"></c>
+    <view wx:if="{{(grouponModel.isGroupon||tradeTag.hasHotelGoods)&&isGrouponModelShow}}">
+        <a bind:_init="_tic" grouponModel="{{grouponModel}}" rmId="{{rmId}}" themeColors="{{themeColors}}" tradeTag="{{tradeTag}}" wx:if="{{rmId==='b36-29'}}"></a>
+    </view>
+</view>

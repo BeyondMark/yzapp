@@ -1,0 +1,102 @@
+.showcase-search {
+  background: #fff;
+}
+.showcase-search .destination-title {
+  font-size: 14px;
+  color: #969799;
+}
+.showcase-search .destination-value {
+  font-size: 18px;
+  font-weight: 500;
+  color: #323233;
+}
+.showcase-search .van-icon-arrow.van-cell__right-icon {
+  line-height: 22px;
+  font-size: 18px;
+  color: #969799;
+}
+.showcase-search .filter-container {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  line-height: 20px;
+}
+.showcase-search .filter-container .filter-icon {
+  font-size: 18px;
+  color: #969799;
+}
+.showcase-search .filter-container-text {
+  color: #155bd4;
+  flex: 1;
+  text-align: right;
+  padding-right: 5px;
+}
+.showcase-search .filter-container-time {
+  flex: 0 0 67%;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.showcase-search .filter-container-time-title {
+  color: #969799;
+  font-size: 14px;
+}
+.showcase-search .filter-container-time-content {
+  font-weight: 500;
+  color: #323233;
+  line-height: 24px;
+  font-size: 18px;
+}
+.showcase-search .filter-container-time-tag {
+  color: #969799;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 10px;
+  border: 1px solid #979797;
+  font-size: 14px;
+}
+.showcase-search .search-btn {
+  padding: 5px 15px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.showcase-search .van-search {
+  padding: 5px 16px;
+}
+.showcase-search .van-search__content--round {
+  border-radius: 999px;
+}
+.showcase-search .van-search__content--square {
+  border-radius: 8px;
+}
+.showcase-search .van-search .search-cell {
+  flex: 1;
+  padding: 5px 8px 5px 0;
+  width: 100%;
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: #323233;
+  font-size: 14px;
+  line-height: 24px;
+  align-items: center;
+}
+.showcase-search .van-search .search-cell__left-icon {
+  padding-left: 8px;
+  height: 18px;
+}
+.showcase-search .van-search .search-cell__value {
+  flex: 1;
+}
+.showcase-search
+  .van-search
+  .search-cell__value
+  .van-field__body
+  .van-field__body--search {
+  height: 100%;
+}

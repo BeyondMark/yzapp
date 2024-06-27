@@ -1,0 +1,26 @@
+<view>
+    <i bind:_init="_tic" bind:after-enter="_p" bind:close="_p" closeOnClickOverlay="{{!showPayPass}}" closeable="{{cashierType!=='A'&&!showAll}}" data-t="{{ close:{en:'onCashierClose'},afterEnter:{en:'onCashierOpened'} }}" position="bottom" round="{{cashierType!=='A'}}" safeAreaInsetBottom="{{true}}" show="{{show}}" wx:if="{{initialShow}}">
+        <view class="{{true?'zan-pay__container':''}} {{cashierType==='A'?'zan-pay__container--a':''}} {{cashierType==='B'?'zan-pay__container--b':''}}">
+            <block wx:if="{{cashierType==='A'}}">
+                <e bind:_init="_tic" bind:pay="_p" channel="{{channel}}" data-t="{{ pay:{en:'onACashierChannelClick'} }}" hairline="{{!!index}}" paying="{{paying&&active.payChannel===channel.payChannel}}" wx:for="{{exposedPayChannels}}" wx:for-item="channel" wx:key="payChannel"></e>
+                <view bind:tap="_p" class="zan-pay-a__show-more" data-t="{{ tap:{en:'onACashierShowMore'} }}" wx:if="{{needShowMoreButton}}">          更多支付
+        </view>
+            </block>
+            <block wx:else>
+                <view class="zan-pay__header">
+                    <j bind:_init="_tic" bind:tap="_p" class="zan-pay__header-icon zan-pay__header-icon--left" data-t="{{ tap:{en:'onBack'} }}" name="arrow-left" size="22" wx:if="{{showAll}}"></j>
+                    <view class="zan-pay__title t-text">{{title}}</view>
+                </view>
+                <a active="{{active}}" bind:_init="_tic" bind:change="_p" bind:click-selected-bar="_p" bind:navigate="_p" bind:pay="_p" bind:recommend-click="_p" bind:show-all="_p" class="{{true?'zan-pay__home':''}} {{!showAll?'zan-pay__home--show':''}}" data-t="{{ showAll:{en:'doShowAll'},navigate:{en:'navigate'},pay:{en:'onPay'},change:{en:'onChannelChange'},recommendClick:{en:'onRecommendClick'},clickSelectedBar:{en:'onClickSelectedBar'} }}" info="{{info}}" instalment="{{instalment}}" kdtId="{{kdtId}}" paying="{{paying}}" recommend="{{recommend}}" recommendType="{{info.recommendType}}" showGuarantee="{{showGuarantee}}" style="{{contentHeight}}" themeColor="{{themeColor}}" userAuthorize="{{UserAuthorize}}"></a>
+                <b active="{{active}}" bind:_init="_tic" bind:change="_p" channels="{{channels}}" class="{{true?'zan-pay__all':''}} {{showAll?'zan-pay__all--show':''}}" data-ref="all" data-t="{{ change:{en:'onChannelChange'} }}" instalment="{{instalment}}" loading="{{!allFetched}}" style="{{contentHeight}}" themeColor="{{themeColor}}"></b>
+            </block>
+        </view>
+    </i>
+    <l bind:_init="_tic" bind:cancel="_p" bind:close="_p" bind:confirm="_p" cancelButtonText="{{dialogOptions.cancelButtonText}}" confirmButtonText="{{dialogOptions.confirmButtonText}}" data-t="{{ close:{en:'onDialogClose'},confirm:{en:'onDialogConfirm'},cancel:{en:'onDialogCancel'} }}" message="{{dialogOptions.message}}" show="{{showDialog}}" showCancelButton="{{dialogOptions.showCancelButton}}"></l>
+    <k bind:_init="_tic" data-ref="van-toast"></k>
+    <c bind:_init="_tic" bind:close="_p" bind:forget-pass="_p" bind:full="_p" bind:update="_p" cashierType="{{cashierType}}" data-t="{{ forgetPass:{en:'onPayPassForget'},update:{en:'onPayPassUpdate'},full:{en:'onPayPassCheck'},close:{en:'onPayPassClose'} }}" overlay="{{!show}}" password="{{paypass}}" round="{{cashierType!=='A'}}" show="{{showPayPass}}" wx:if="{{!isCfca}}"></c>
+    <d bind:_init="_tic" bind:change="_p" bind:close="_p" bind:forget="_p" bind:submit="_p" data-t="{{ close:{en:'onPayLoginClose'},change:{en:'onPayLoginChange'},submit:{en:'onPayLoginSubmit'},forget:{en:'onPayLoginForget'} }}" login="{{paylogin}}" mobile="{{mobile}}" show="{{showLoginInput}}"></d>
+    <f bind:_init="_tic" bind:close="_p" bind:copy="_p" cashierType="{{cashierType}}" channel="{{active}}" data-t="{{ close:{en:'closeCopyLink'},copy:{en:'onCopy'} }}" link="{{copiedLink}}" show="{{showCopyLink}}" themeColor="{{themeColor}}"></f>
+    <g bind:_init="_tic" bind:close="_p" bind:confirm="_p" data-t="{{ close:{en:'onOfflinePayFormClose'},confirm:{en:'onOfflinePayFormConfirm'} }}" origin="{{origin}}" show="{{showOfflinePayForm}}" themeColor="{{themeColor}}"></g>
+    <h bind:_init="_tic" bind:close="_p" bind:refetch="_p" bind:submit="_p" data-t="{{ close:{en:'onCaptchPadClose'},submit:{en:'verifyCaptcha'},refetch:{en:'sendCaptcha'} }}" overlay="{{!show}}" phone="{{mobile}}" show="{{showCaptchaPad}}" themeColor="{{themeColor}}"></h>
+</view>

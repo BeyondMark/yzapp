@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./NoteItemHead",
+    "b": "./NoteItemBody",
+    "_": "../../../../../components/_/index"
+  }
+}

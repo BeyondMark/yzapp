@@ -1,0 +1,72 @@
+.c4921c {
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: var(--theme-radius-dialog, 20px)
+    var(--theme-radius-dialog, 20px) 0 0;
+  box-sizing: border-box;
+}
+.c1aa70 {
+  padding: 11px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #323233;
+  font-weight: 500;
+}
+.ccedc {
+  overflow: auto;
+  box-sizing: border-box;
+  min-height: calc(50vh - 122px);
+  min-height: calc(50vh - 122px - constant(safe-area-inset-bottom));
+  min-height: calc(50vh - 122px - env(safe-area-inset-bottom));
+  max-height: calc(80vh - 122px);
+  max-height: calc(80vh - 122px - constant(safe-area-inset-bottom));
+  max-height: calc(80vh - 122px - env(safe-area-inset-bottom));
+}
+.c09e4c {
+  font-size: 14px;
+  margin-bottom: 12px;
+  font-weight: 700;
+  color: #323233;
+}
+.c77c6d {
+  font-size: 12px;
+}
+.c77c6d,
+.e0270 {
+  margin-bottom: 24px;
+  color: #323233;
+}
+.c0f8e1,
+.e0270 {
+  font-size: 13px;
+}
+.c0f8e1 {
+  color: #323233;
+}
+.e37f5 {
+  margin-right: 4px;
+  padding: 0 4px;
+  line-height: 16px;
+  vertical-align: middle;
+  color: var(--theme-tag-ump-color, --main-bg) !important;
+  background: var(--theme-tag-ump-bg-color, --main-bg) !important;
+}
+.e37f5:after {
+  border-color: var(--theme-tag-ump-border-color, --main-bg) !important;
+  border-radius: var(--theme-radius-tag, 0) !important;
+}
+.c67412 {
+  line-height: 17px;
+  vertical-align: middle;
+  display: inline;
+}
+.c83343 {
+  margin: 32px auto 10px;
+  height: 36px;
+  line-height: 36px;
+  border-radius: var(--theme-radius-button, 18px);
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  background: var(--main-bg, #f44);
+}

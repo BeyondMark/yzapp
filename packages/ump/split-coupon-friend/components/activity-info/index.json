@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../components/ump/coupon/index",
+    "b": "../../../@vant/weapp/dist/button/index",
+    "c": "../friend-avatar/index",
+    "d": "../start-time/index",
+    "e": "/components/account/user-authorize/index",
+    "_": "../../../../../components/_/index"
+  }
+}

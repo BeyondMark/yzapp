@@ -1,0 +1,1 @@
+<view class="{{'t-info'}} {{dot?'t-info--dot':''}} {{customClass}}" style="{{customStyle}}" wx:if="{{info!==null&&info!==''||dot}}">{{dot?'':info}}</view>

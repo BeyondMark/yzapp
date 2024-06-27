@@ -1,0 +1,12 @@
+<view class="slide-captcha-control" id="slide-captcha-control">
+    <view bind:error="_p" bind:load="_p" catch:mouseDown="_p" catch:touchstart="_p" class="{{'slider-block'}} {{status}}" data-t="{{ load:{en:'onLoad'},error:{en:'onError'},touchstart:{en:'handleDragStart',et:'stop'},mouseDown:{en:'handleDragStart',et:'stop'} }}" style="left:{{left}}; top:{{'-'+blockTop}}; width:{{blockWidth}}; height:{{blockHeight}}; transform:{{'scale('+scale+')'}}" wx:if="{{!behaviorLoading&&behaviorData.smallUrl}}">
+        <image class="slider-block__image tee-image" lazyLoad="true" src="{{behaviorData.smallUrl}}"></image>
+    </view>
+    <view class="slide-captcha-control-bar">
+        <view catch:tap="_p" class="slide-captcha-control-bar-placeholder" data-t="{{ tap:{en:'handleErrorRefresh',et:'stop'} }}"> {{statusText}} </view>
+        <view catch:mouseDown="_p" catch:touchstart="_p" class="{{'slide-captcha-control-bar-block'}} {{status}} {{'can-drag-'+canDrag}}" data-t="{{ touchstart:{en:'handleDragStart',et:'stop'},mouseDown:{en:'handleDragStart',et:'stop'} }}" id="slide-captcha-control-bar-block" style="left:{{left}}">
+            <a bind:_init="_tic" class="slide-captcha-control-bar-block-icon" name="{{slideIconName}}"></a>
+        </view>
+        <view class="{{'slide-captcha-control-bar-mask'}} {{status}} {{'can-drag-'+canDrag}}" style="width:{{left}}"></view>
+    </view>
+</view>

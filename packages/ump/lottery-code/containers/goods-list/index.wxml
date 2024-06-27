@@ -1,0 +1,12 @@
+<view class="goods-list">
+    <view class="title">更多精选商品</view>
+    <view class="lists">
+        <navigator class="goods" url="/pages/goods/detail/index?alias={{goods.alias}}&banner_id={{goods.bannerId}}&alg={{goods.algs}}" wx:for="{{recommendGoods}}" wx:for-item="goods" wx:key="{{ goods.id }}">
+            <view class="goods-img">
+                <image class="img" mode="aspectFit" src="{{goods.imgUrl}}"></image>
+            </view>
+            <view class="goods-title">{{goods.title}}</view>
+            <text class="goods-price">￥{{goods.price}}</text>
+        </navigator>
+    </view>
+</view>

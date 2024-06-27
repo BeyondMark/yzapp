@@ -1,0 +1,28 @@
+<a _opt="{{infoData.layoutOpt}}" bind:_init="_tic">
+    <b _opt="{{infoData.layoutOpt}}" bind:_init="_tic" bind:tap="_p" data-alias="{{itemData.noteAlias}}" data-index="{{index}}" data-notetype="{{itemData.noteType}}" data-t="{{ tap:{en:'itemClick'} }}" wx:for="{{opt.list}}" wx:for-item="itemData" wx:key="index">
+        <view class="{{'detail-list'}} {{'card-'+infoData.noteStyle}} {{'corner-'+infoData.noteStyle}} {{'border-'+infoData.noteCornerStyle}}">
+            <view class="wrapper">
+                <view class="left">
+                    <view class="{{'title'}} {{'font-'+infoData.textStyle}}"> {{itemData.title||itemData.description}} </view>
+                    <view class="desc" wx:if="{{itemData.title}}"> {{itemData.description}} </view>
+                    <view style="position: absolute; bottom: 0">
+                        <c _opt="{{itemData:itemData,infoData:opt.infoData,layout:'left',thumbClick:thumbClick,customClass:'custom-style-2'}}" bind:_init="_tic"></c>
+                    </view>
+                </view>
+                <view class="right">
+                    <view class="img-wrapper">
+                        <image class="sn-img tee-image" lazyLoad="{{true}}" mode="aspectFit" src="{{itemData.imgUrl}}"></image>
+                        <view class="cover">
+                            <view class="cover-top">
+                                <view class="label" wx:if="{{infoData.showNoteTypeTag}}">
+                                    <view class="cover-top-span">#</view>
+                                    <view>{{itemData.label}}</view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </b>
+</a>

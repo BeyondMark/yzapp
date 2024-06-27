@@ -1,0 +1,17 @@
+<view>
+    <view bind:tap="_p" class="ae594" data-t="{{ tap:{en:'handleSelect'} }}">
+        <view class="c7671c">{{item.name}}</view>
+        <view class="{{'c2031f'+(!showValue?' a2e48':'')}}">{{displayValue}}</view>
+    </view>
+    <a bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'onClose'} }}" show="{{show}}" title="{{item.name}}" zIndex="{{7011}}">
+        <view class="c57825">
+            <b bind:_init="_tic" customClass="d11cd">
+                <c bind:_init="_tic" bind:tap="_p" data-t="{{ tap:{ en:'handleClick',args:[selectItem.id] } }}" title="{{selectItem.value}}" valueClass="c68c9e" wx:for="{{item.sysValues}}" wx:for-item="selectItem" wx:key="value">
+                    <d bind:_init="_tic" name="success" wx:if="{{currentValue===selectItem.id}}"></d>
+                </c>
+            </b>
+            <view bind:tap="_p" class="c021df" data-t="{{ tap:{en:'handleSubmit'} }}">        确定
+      </view>
+        </view>
+    </a>
+</view>

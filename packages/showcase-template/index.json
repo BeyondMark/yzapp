@@ -1,0 +1,23 @@
+{
+  "navigationBarTitleText": "首页",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTextStyle": "black",
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": true,
+  "componentPlaceholder": {
+    "shop-pop-manager": "_",
+    "salesman-cube": "_",
+    "marketing-page-icon": "_",
+    "sc-category": "_",
+    "sc-double-eleven": "_",
+    "showcase-search": "_",
+    "van-tabs": "_",
+    "van-tab": "_",
+    "van-loading": "_",
+    "base-sku": "_",
+    "van-toast": "_",
+    "van-notify": "_",
+    "floating-nav": "_",
+    "collect-gift": "_"
+  }
+}

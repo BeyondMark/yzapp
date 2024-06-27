@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "使用记录",
+  "navigationBarBackgroundColor": "#FFF",
+  "backgroundColor": "#f7f8fa",
+  "usingComponents": {
+    "a": "../new-benefits/components/record-list/index",
+    "_": "../../../components/_/index"
+  }
+}

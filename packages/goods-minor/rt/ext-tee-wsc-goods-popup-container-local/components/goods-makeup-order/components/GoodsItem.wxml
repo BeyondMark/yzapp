@@ -1,0 +1,12 @@
+<view class="a2b0a">
+    <view catch:tap="_p" class="c27394" data-t="{{ tap:{en:'handleGoDetail',et:'stop'} }}">
+        <view class="b8c1e" wx:if="{{goods.isAddToShoppingCart}}">已加购</view>
+        <view catch:tap="_p" class="{{'dbdd4'}} {{goods.c43666?'c43666':'c52830'}}" data-t="{{ tap:{en:'handleCheckboxTap',et:'stop'} }}" wx:else>
+            <a bind:_init="_tic" class="{{'c784de'}} {{goods.c43666?'c92d40':'ad36a'}}" name="{{iconName}}" size="18px"></a>
+        </view>
+        <image class="d2cfa bd231" lazyLoad="true" mode="widthFix" src="{{goods.picture}}"></image>
+        <view class="c473ed">￥{{totalPrice}}</view>
+    </view>
+    <view class="c6932b">{{goods.title}}</view>
+    <view class="c5d236">{{goods.skuName||''}}</view>
+</view>

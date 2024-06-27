@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../recharge-list/components/List",
+    "_": "../../../../../../../components/_/index"
+  }
+}

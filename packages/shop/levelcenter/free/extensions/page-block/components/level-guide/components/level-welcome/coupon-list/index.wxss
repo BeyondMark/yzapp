@@ -1,0 +1,11 @@
+.coupon-list {
+  padding: 24px 20px 0;
+  position: relative;
+  margin-bottom: -12px;
+}
+.cap-coupon:last-child .cap-couponbox__box {
+  margin-bottom: 0;
+}
+.coupon-box-action__hide {
+  display: none;
+}

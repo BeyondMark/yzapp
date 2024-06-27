@@ -1,0 +1,51 @@
+.c89585 {
+  text-decoration: inherit;
+}
+.c89585,
+.bd231 {
+  display: inline-block;
+}
+.bd231 {
+  width: 100%;
+  height: 100%;
+}
+.page-preview .c5c4fe {
+  z-index: 100;
+}
+.c5c4fe {
+  position: fixed;
+  top: 40px;
+  left: 16px;
+  height: 32px;
+  z-index: 50;
+  overflow: hidden;
+}
+.b370a {
+  height: 32px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+}
+.c276c {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: 32px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 16px;
+  padding-right: 8px;
+}
+.d22b2 {
+  width: 24px;
+  height: 24px;
+  margin-left: 4px;
+  border-radius: 50%;
+}
+.c35132 {
+  flex: 1;
+  margin-left: 8px;
+  line-height: normal;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../components/follow-popup/index",
+    "_": "../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,3 @@
+<view wx:if="{{!loading}}">
+    <a bind:_init="_tic" bind:select="_p" data-t="{{ select:{en:'onSelect'} }}" generalThemeColor="{{generalThemeColor}}" hideBadge="{{newRecommend}}" intro="{{intro}}" kdtId="{{kdtId}}" list="{{productGiftPacks}}" selectedIndex="{{selectedIndex}}" wx:if="{{!introPrepaidMember}}"></a>
+</view>

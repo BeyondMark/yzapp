@@ -1,0 +1,34 @@
+.c82f84 {
+  position: relative;
+  padding: 0;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #f0f0f0;
+}
+.c7afd3 {
+  height: 0;
+  transition: all 0.3s;
+  max-height: 240px;
+  visibility: hidden;
+  z-index: -1;
+}
+.c82f84__show.c7afd3 {
+  padding: 20px 0 10px;
+  height: 240px;
+  visibility: visible;
+  z-index: auto;
+}
+.c65a04 {
+  overflow: hidden;
+}
+.c65a04 .c5ffeb {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-top: 8px !important;
+}
+.c65a04 .c55ea2 {
+  width: 136px;
+}
+.c82f84 .cap-layout.cap-layout-swipe {
+  margin-bottom: -10px !important;
+}

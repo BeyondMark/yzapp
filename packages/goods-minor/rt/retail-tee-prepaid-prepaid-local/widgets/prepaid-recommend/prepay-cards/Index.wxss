@@ -1,0 +1,71 @@
+.bd231 {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.c83f99 {
+  width: 100vw;
+  min-width: 100%;
+  background: #f2f2f2;
+  padding: 0 !important;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.c83f99__pop-header {
+  font-size: 16px;
+  line-height: 44px;
+  text-align: center;
+  background-color: #fff;
+  position: relative;
+}
+.c83f99__pop-close {
+  position: absolute !important;
+  top: 12px;
+  right: 0;
+  padding: 0 12px;
+  color: #969799;
+  font-size: 22px !important;
+  line-height: 44px;
+  text-align: center;
+}
+.c7f612 {
+  width: 100%;
+}
+.c7f612 .t-hairline--top-bottom:after {
+  border-width: 0 0 !important;
+}
+.c7f612 .t-tabs__wrap {
+  box-shadow: 0 2px 12px rgba(150, 151, 153, 0.1);
+}
+.c235c0 {
+  flex: 1;
+  box-sizing: border-box;
+  padding-bottom: 30px;
+  overflow: scroll;
+}
+.c1e2ab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.c00725 {
+  width: 150px;
+  height: 150px;
+  margin-top: 15vh;
+}
+.c77c1b {
+  font-size: 14px;
+  text-align: center;
+  color: #999;
+  margin-top: 20px;
+}
+.c2b469 {
+  z-index: 1;
+  height: 50px;
+  position: relative;
+}
+.t-submit-bar__text {
+  text-align: left;
+}

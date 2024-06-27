@@ -1,0 +1,16 @@
+.bd231 {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.c29be0 {
+  width: calc(100vw - 48px);
+  max-height: 144px;
+  border-radius: var(--theme-radius-card, 8px);
+}
+.c2249b {
+  width: 100%;
+  height: 144px !important;
+  padding: 0 !important;
+  border: none !important;
+}

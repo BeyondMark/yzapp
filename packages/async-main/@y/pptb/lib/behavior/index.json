@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./slide/slide-display",
+    "b": "./slide/slide-control",
+    "c": "./components/container/index",
+    "d": "./components/layout/index",
+    "_": "../../../../../../components/_/index"
+  }
+}

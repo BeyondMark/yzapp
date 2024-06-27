@@ -1,0 +1,3 @@
+<view bindtap="eventHandler" class="entry-container {{goaway||pGoaway?'goaway':''}}" data-event="navigateToActivityHomePage" style="z-index:{{zIndex}};{{bottom||pBottom?'bottom:'+(bottom||pBottom):''}}" wx:if="{{state.isShow&&!isChannels}}">
+    <a catchtap="eventHandler" class="entry-container_close-button" data-event="closeContainer" name="close"></a>
+</view>

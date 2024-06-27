@@ -1,0 +1,43 @@
+<view class="{{'c6f170'}} {{customClass}}">
+    <view class="c65806">
+        <view class="fddb1">
+            <b bind:_init="_tic" bind:change="_p" bind:clear="_p" border="{{false}}" clearable="{{true}}" customStyle="padding: 0 12px; background-color: transparent;" data-t="{{ change:{en:'inInputCode'},clear:{en:'onInputClear'} }}" inputClass="c5010c" maxlength="{{20}}" placeholder="{{inputPlaceholder}}" placeholderStyle="color: #c8c9cc !important;" value="{{currentCode}}"></b>
+        </view>
+        <c bind:_init="_tic" bind:tap="_p" color="{{themeColors['ump-icon']}}" customClass="c85b5" data-t="{{ tap:{en:'onClickExchangeButton'} }}" disabled="{{isExchangeButtonDisabled}}" plain="{{true}}" type="danger">{{exchangeButtonText}}</c>
+    </view>
+    <e bind:_init="_tic" border="{{false}}" color="{{themeColors['icon']}}" customClass="c88ce" data-ref="tabs" lineWidth="{{40}}" navClass="c6f170__nav" pid="coupon-list-tab">
+        <d bind:_init="_tic" pid="coupon-list-tab" title="{{enabledTitleStr}}">
+            <view class="f9ad8" wx:if="{{coupons.length&&isInCouponOverWhitelist}}">
+                <view class="a8274" hidden="{{!chosenCoupons.length}}"> {{chosenCouponsTips}}，共减免
+          <view class="coupon-list__tips-total c89585" style="color:{{themeColors['ump-price']}}"> {{currency}}{{totalDiscount}} <view class="b4479 c89585" wx:if="{{showExtraDelivery}}">运费</view>
+                    </view>
+                </view>
+                <view class="a8274" hidden="{{!!chosenCoupons.length}}">请选择优惠券</view>
+                <c bind:_init="_tic" bind:tap="_p" customClass="customer-button ec86d" customStyle="{{btnCustomStyle}}" data-t="{{ tap:{en:'onClickRecommend'} }}" round="{{true}}" size="mini" wx:if="{{isRecommendedCoupons==='notRecommend'}}">使用最优券</c>
+            </view>
+            <view class="{{tabListCls}}">
+                <view wx:for="{{coupons}}" wx:key="id">
+                    <a bind:_init="_tic" bind:onChange="_p" chosenCoupons="{{chosenCoupons}}" color="{{themeColor}}" coupon="{{item}}" currency="{{currency}}" data-index="{{item.id}}" data-t="{{ onChange:{en:'onChangeCoupon'} }}" priceColor="{{themeColors['ump-price']}}" rmId="{{rmId}}" useCustomTitleSlot="{{true}}" wx:if="{{rmId==='b36-27'}}"></a>
+                </view>
+                <view class="f5b12" wx:if="{{!coupons.length}}">
+                    <image class="d6ed7 bd231" lazyLoad="true" mode="aspectFit" src="{{emptyImage}}"></image>
+                    <view class="c7c3dd">暂无优惠券</view>
+                </view>
+            </view>
+        </d>
+        <d bind:_init="_tic" pid="coupon-list-tab" title="{{disabledTitle}}">
+            <view class="{{tabListCls}}">
+                <view wx:for="{{disabledCoupons}}" wx:key="id">
+                    <a bind:_init="_tic" color="{{themeColor}}" coupon="{{item}}" currency="{{currency}}" disabled="{{true}}" rmId="{{rmId}}" useCustomTitleSlot="{{true}}" wx:if="{{rmId==='b36-27'}}"></a>
+                </view>
+                <view class="f5b12" wx:if="{{!disabledCoupons.length}}">
+                    <image class="d6ed7 bd231" lazyLoad="true" mode="aspectFit" src="{{emptyImage}}"></image>
+                    <view class="c7c3dd">暂无优惠券</view>
+                </view>
+            </view>
+        </d>
+    </e>
+    <view class="bbd7c" wx:if="{{showCloseButton}}">
+        <c bind:_init="_tic" bind:tap="_p" block="{{true}}" class="c3c8d0" data-t="{{ tap:{en:'onClickCloseBtn'} }}" round="{{true}}" text="{{closeButtonText||'不使用优惠券'}}" type="danger"></c>
+    </view>
+</view>

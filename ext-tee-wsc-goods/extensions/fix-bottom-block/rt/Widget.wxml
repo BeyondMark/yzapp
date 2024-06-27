@@ -1,0 +1,13 @@
+<view class="goods-bottom {{soldOutRecOpt.show?'goods-bottom--border':''}}" style="{{themeVars}}" wx:if="{{fixBottomOpt.show}}">
+    <f bind:_init="_tic" opt="{{soldOutRecOpt}}"></f>
+    <g bind:_init="_tic" opt="{{multiStoreRecOpt}}" wx:if="{{multiStoreRecOpt.show}}"></g>
+    <block wx:if="{{showUmpTips}}">
+        <b baseInfo="{{goodsBaseInfo}}" bind:_init="_tic" bind:ump-click="_p" data-t="{{ umpClick:{en:'umpClick'} }}" hideGroupBargin="{{fixBottomOpt.waitToSold||soldOutRecOpt.show}}" opt="{{umpTipsOpt}}" priceInfo="{{goodsPriceInfo}}" rmId="{{rmId}}" wx:if="{{rmId==='b7-10'}}"></b>
+    </block>
+    <d bind:_init="_tic" risk="{{fixBottomOpt.risk}}" wx:if="{{fixBottomOpt.risk.match}}"></d>
+    <e bind:_init="_tic" commonTip="{{fixBottomOpt.disabledTip}}" serverStatus="{{fixBottomOpt.serverStatus}}" waitToSold="{{fixBottomOpt.waitToSold}}" wx:if="{{fixBottomOpt.serverStatus||fixBottomOpt.disabledTip}}"></e>
+    <c bind:_init="_tic" bind:btn-click="_p" bind:mini-btn-click="_p" data-t="{{ miniBtnClick:{en:'onMiniBtnClick'},btnClick:{en:'onBigBtnClick'} }}" opt="{{btnsOpt}}" safeArea="{{isPhone13}}" umpActivity="{{umpTipsOpt}}" wx:if="{{showBottomBtns}}">
+        <a bind:_init="_tic" bind:contact="_p" contactClass="message__contact-button" data-ref="messageBtn" data-t="{{ contact:{en:'onContactBack'} }}" openType="contact" sendMessageImg="{{imConfig.picture}}" sendMessagePath="{{imConfig.path}}" sendMessageTitle="{{imConfig.title}}" sessionFrom="{{imConfig.sourceParam}}" showMessageCard="{{true}}" wx:if="{{rmId==='b7-10'}}"></a>
+    </c>
+    <slot></slot>
+</view>

@@ -1,0 +1,16 @@
+<view>
+    <a bind:_init="_tic" bind:tap="_p" border="{{false}}" center="{{true}}" customClass="{{opt.customClass?opt.customClass:'d5a4c'}}" data-t="{{ tap:{en:'showCouponList'} }}" isLink="{{!isTTVerifyRetailScene}}" title="{{title}}" titleWidth="{{titleWidth}}">
+        <view class="e012d" slot="title">
+            <view class="bf289 c89585">{{opt.customTitle||'优惠券'}}</view>
+            <b bind:_init="_tic" color="{{tagBackgroundColor}}" size="medium" textColor="{{themeColors.general}}" wx:if="{{opt.chosenCoupons.length>1}}">        已选{{opt.isRecommendedCoupons==='recommend'?'最佳':''}}{{opt.chosenCoupons.length}}张
+      </b>
+        </view>
+        <view class="c5f7d0" wx:if="{{opt.allCoupons.length===0}}">暂无可用</view>
+        <view class="c7d531" wx:elif="{{!opt.chosenCoupon.id}}"> {{opt.allCoupons.length}}张可用
+    </view>
+        <view wx:elif="{{opt.chosenCoupon.id}}">
+            <view class="c7d531" style="color:{{themeColors.general}}">-¥ {{opt.newCouponValue}}</view>
+        </view>
+    </a>
+    <slot></slot>
+</view>

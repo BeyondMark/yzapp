@@ -1,0 +1,18 @@
+<view class="{{showPayPlusExtraCls?'pay-plus-extra-cls':''}} {{isIphoneX?'is-iphone-x':'is-not-x'}}" wx:if="{{isMsgOperationOpen}}">
+    <view class="{{hasButton?'has-btn':'no-btn'}}">
+        <view class="subscribe-box  {{!hideMsgOperation?'to-show':'to-hide'}}">
+            <view class="subscribe-box_body {{hasTabbar?'box-bottom':''}}">
+                <view class="subscribe-box_btn" style="background-image: url({{bgUrl}}); background-size: cover; backgroud-repeat: no-repeat;">
+                    <view bindtap="openReminder" class="subscribe-box_confirm">
+                        <image class="icon" src="{{iconUrl}}"></image>
+                        <view class="tips">订阅更多特权通知</view>
+                    </view>
+                    <view bindtap="closeReminderPopup" class="subscribe-box_cancel">
+                        <a color="#945623" name="cross" size="12"></a>
+                    </view>
+                </view>
+            </view>
+            <b bind:close="closeSubscribeFailPopup" openImageSrc="https://img01.yzcdn.cn/public_files/2019/12/23/7b987495fc6bbd066262153577881592.png" show="{{showSubscirbeFail}}"></b>
+        </view>
+    </view>
+</view>

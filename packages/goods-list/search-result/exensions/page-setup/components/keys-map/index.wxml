@@ -1,0 +1,9 @@
+<view class="c7fd73">
+    <view class="c7c53">{{title}}</view>
+    <view class="c778e0">
+        <slot name="km__right-icon"></slot>
+    </view>
+    <view class="aaee8">
+        <view catch:tap="onKeyTap" class="f898d" data-text="{{item}}" wx:for="{{showKeys}}" wx:key="*this">{{item}}</view>
+    </view>
+</view>

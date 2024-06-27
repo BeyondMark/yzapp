@@ -1,0 +1,11 @@
+.e319d {
+  position: fixed;
+  bottom: 115px;
+  right: 9px;
+  width: 48px;
+  height: 48px;
+  background: url(https://img01.yzcdn.cn/cdn/coupon-into-shop.png) no-repeat 0 0 /
+    contain;
+  z-index: 99;
+  cursor: pointer;
+}

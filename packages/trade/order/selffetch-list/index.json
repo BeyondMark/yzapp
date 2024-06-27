@@ -1,0 +1,5 @@
+{
+  "navigationBarTitleText": "待自提订单",
+  "enablePullDownRefresh": true,
+  "componentPlaceholder": { "van-divider": "_" }
+}

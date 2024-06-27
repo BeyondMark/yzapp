@@ -1,0 +1,7 @@
+<a bind:attached="onTabPageAttached" id="feature" wx:if="{{attachedPageId==='feature'}}"></a>
+<b id="cart" wx:if="{{attachedPageId==='cart'}}"></b>
+<retail-shelf id="retail-shelf" wx:if="{{attachedPageId==='retail-shelf'}}"></retail-shelf>
+<c bind:attached="onTabPageAttached" id="member-code" wx:if="{{attachedPageId==='member-code'}}"></c>
+<d bind:attached="onTabPageAttached" id="order-list" wx:if="{{attachedPageId==='order-list'}}"></d>
+<e id="van-toast"></e>
+<f id="van-notify"></f>

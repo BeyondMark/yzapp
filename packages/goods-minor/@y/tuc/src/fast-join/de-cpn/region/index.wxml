@@ -1,0 +1,9 @@
+<view>
+    <view bind:tap="_p" class="c92869" data-t="{{ tap:{en:'handleSelectRegion'} }}">
+        <view class="eae8b">{{item.name}}</view>
+        <view class="{{'f44b3'+(!showValue?' a2e48':'')}}">{{displayValue}}</view>
+    </view>
+    <a bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'handleClose'} }}" position="bottom" show="{{showRegionSelector}}" zIndex="{{7011}}">
+        <b areaList="{{regionInfo}}" bind:_init="_tic" bind:cancel="_p" bind:confirm="_p" data-t="{{ confirm:{en:'handleConfirm'},cancel:{en:'handleClose'} }}" value="{{areaValue}}"></b>
+    </a>
+</view>

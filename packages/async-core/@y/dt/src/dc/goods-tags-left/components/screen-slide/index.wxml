@@ -1,0 +1,15 @@
+<view class="dc-goods-tags-left">
+    <view class="tag-list-nav">
+        <a _opt="{{navList:opt.tags,selectedGroup:selectedGroup}}" bind:_init="_tic" bind:handle-change="_p" data-t="{{ handleChange:{en:'handleNavChange'} }}"></a>
+    </view>
+    <view class="tag-list-goods">
+        <scroll-view bind:scroll="_p" bind:touchstart="_p" class="group-container" data-t="{{ scroll:{en:'handleGroupScroll'},touchstart:{en:'handleGroupTouch'} }}" scrollTop="{{scrollPosition}}" scrollY="{{true}}" style="{{scrollStyle}}">
+            <view id="{{'GROUP'+group.alias}}" wx:for="{{tags}}" wx:for-item="group" wx:key="alias">
+                <b _opt="{{...groupItemOpt,groupItem:group,type:opt.type}}" bind:_init="_tic" bind:buy="_p" bind:item-click="_p" bind:set-height="_p" data-t="{{ setHeight:{en:'setItemHeight'},buy:{en:'handleBuyClick'},itemClick:{en:'handleItemClick'} }}" wx:if="{{loadTag[group.alias]}}"></b>
+                <view style="height:{{group.height+'px'}}" wx:else>
+                    <c bind:_init="_tic" bind:load="_p" data-t="{{ load:{ en:'addGroup',args:[group.alias] } }}"></c>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>

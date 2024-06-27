@@ -1,0 +1,39 @@
+<view class="category">
+    <scroll-view class="nav {{navFixed?'nav--fixed':''}}" scrollTop="{{navScrollTop}}" scrollWithAnimation="{{true}}" scrollY="{{true}}">
+        <view bindtap="handleNavClick" class="nav-item {{index===activeIndex?'nav-item--select':''}}" data-nav-index="{{index}}" id="nav-item-{{index}}" wx:for="{{categoryList}}" wx:key="{{ index }}">{{item.title}}</view>
+        <view class="nav-skeleton"></view>
+    </scroll-view>
+    <view class="container">
+        <view class="hairline"></view>
+        <view class="active-title {{navFixed?'active-title--fixed':''}}" wx:if="{{activeTitleIndex>-1}}">{{categoryList[activeTitleIndex].title}}</view>
+        <scroll-view bindscroll="handleScroll" bindtouchstart="handleGroupTouchStart" class="groups" scrollIntoView="{{!shouldCheckActive?'group-'+activeIndex:null}}" scrollWithAnimation="{{true}}" scrollY="{{true}}">
+            <view class="group" id="group-{{index}}" wx:for="{{categoryList}}" wx:key="{{ index }}">
+                <a appId="{{item.navInfo.appId}}" bind:contactback="handleContactBack" bind:navigate="handleNavigate" im="{{extraData}}" itemInfo="{{item.banner}}" linkType="{{item.navInfo.linkType}}" path="{{item.navInfo.path}}" wx:if="{{item.banner&&item.banner.imageUrl}}">
+                    <view class="banner">
+                        <view class="banner-img-wrap">
+                            <image class="banner-img" lazyLoad="{{true}}" mode="aspectFill" src="{{item.banner.imageUrl}}"></image>
+                        </view>
+                    </view>
+                </a>
+                <view class="group-title">{{item.title}}</view>
+                <view class="list">
+                    <view class="list-item" style="text-align: {{['left','center','right'][linkIndex%3]}}" wx:for="{{item.subCategoryList}}" wx:for-index="linkIndex" wx:for-item="link" wx:key="{{ linkIndex }}">
+                        <a appId="{{link.navInfo.appId}}" bind:contactback="handleContactBack" bind:navigate="handleNavigate" customClass="link" im="{{extraData}}" itemInfo="{{link}}" linkType="{{link.navInfo.linkType}}" path="{{link.navInfo.path}}">
+                            <view class="link-img-wrap">
+                                <image class="link-img" lazyLoad="{{true}}" mode="aspectFill" src="{{link.imageUrl}}"></image>
+                            </view>
+                            <text class="link-title" wx:if="{{link.title}}">{{link.title}}</text>
+                        </a>
+                    </view>
+                    <view class="list-item" wx:for="{{skeletonNumList[index]}}" wx:for-index="skeletonIndex" wx:key="{{ skeletonIndex }}">
+                        <view class="link">
+                            <view class="link-img-wrap">
+                                <view class="link-img"></view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>

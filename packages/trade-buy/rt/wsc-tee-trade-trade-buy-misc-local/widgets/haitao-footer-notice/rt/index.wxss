@@ -1,0 +1,36 @@
+.c87a1 {
+  padding: var(--theme-page-card-padding-top, 0)
+    var(--theme-page-card-padding-right, 0)
+    var(--theme-page-card-padding-bottom, 0)
+    var(--theme-page-card-padding-left, 0);
+  color: #323233;
+  font-size: 12px;
+}
+.c87a1 .c1cb25 {
+  color: #576b95;
+  cursor: pointer;
+  display: inline;
+  font-size: 12px;
+}
+.c81682 > .c1bda8 {
+  padding: 12px 24px 12px;
+  color: #323233;
+  font-size: 14px;
+}
+.c81682 .c1cb25 {
+  display: inline;
+  color: #333;
+  font-weight: 700;
+}
+.b3de1 > .c1bda8 {
+  padding-bottom: 22px;
+}
+.b3de1 > .c1bda8:last-child {
+  padding-bottom: 0;
+}
+.c988e5 {
+  padding: 0 24px 16px;
+}
+.c267ef {
+  width: 100%;
+}

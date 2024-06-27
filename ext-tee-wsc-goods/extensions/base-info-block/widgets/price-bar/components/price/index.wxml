@@ -1,0 +1,19 @@
+<view class="f65a3">
+    <view class="c8fd80 c89585" wx:if="{{hasMemberPriceTag}}">    会员价
+  </view>
+    <view class="ee048">
+        <view class="c9b36e">
+            <view class="c17ca6 c13b20 c89585" wx:if="{{priceInfo.priceLabel}}"> {{priceInfo.priceLabel}} </view>
+            <view class="c17ca6 c89585">¥</view>
+            <view class="b21e1 c89585">{{price}}</view>
+        </view>
+        <block wx:if="{{filteredPriceTags&&filteredPriceTags.length}}">
+            <view class="cb8a3 cb255" style="{{tag.containerStyle}}" wx:for="{{filteredPriceTags}}" wx:for-item="tag" wx:key="index">
+                <view class="c1f61d" wx:if="{{!tag.preText}}"></view>
+                <view class="c89585" style="{{tag.preStyle}}" wx:if="{{tag.preText}}"> {{tag.preText}} </view>
+                <view class="c148cc c89585" style="{{tag.textStyle}}" wx:if="{{tag.text}}"> {{tag.text}} </view>
+                <view class="c89585" style="{{tag.sufStyle}}" wx:if="{{tag.sufText}}"> {{tag.sufText}} </view>
+            </view>
+        </block>
+    </view>
+</view>

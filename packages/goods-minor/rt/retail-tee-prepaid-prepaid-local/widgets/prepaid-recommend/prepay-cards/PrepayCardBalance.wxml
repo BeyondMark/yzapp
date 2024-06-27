@@ -1,0 +1,28 @@
+<view wx:if="{{showBalance}}">
+    <view class="f937e">余额</view>
+    <view class="c9431e">
+        <view bind:tap="_p" class="{{'c21c7'}} {{showDisabled?'c9a738':''}}" data-t="{{ tap:{en:'onCheck'} }}" style="{{themeStyle}}">
+            <view class="d2620">
+                <view class="d51da">
+                    <view class="title-h2">储值余额</view>
+                </view>
+                <view class="c0e1cb">
+                    <view class="c89fbd">￥</view> {{balance.balanceInt}} <view class="c3fc2">.{{balance.balanceCent}}</view>
+                </view>
+            </view>
+            <view class="c0dbf5" wx:if="{{!disabled&&!balanceZero}}">
+                <a bind:_init="_tic" name="checked" wx:if="{{checked}}"></a>
+                <a bind:_init="_tic" name="circle" wx:if="{{!checked}}"></a>
+            </view>
+        </view>
+        <view class="e516c" wx:if="{{giveRecharge}}">      选择使用余额即表示同意
+      
+      <view bind:tap="_t_hn_" class="c53fec" data-href="{{agreementUrl}}" hoverClass="none">        《{{prepaidPrefix}}协议》
+      </view>
+        </view>
+        <view class="c313d0" wx:if="{{showReason}}"> {{balance.unusableReason}} </view>
+        <view class="c313d0" wx:elif="{{balance.useSpecification}}"> {{checked?'取消使用余额，可重新享受店铺活动、优惠券、积分、储值专享折扣等优惠':'余额不可与店铺活动、优惠券、积分、储值专享折扣同时使用，限原价购买'}} </view>
+        <view class="c313d0" wx:if="{{showFreeze}}">      待付款订单冻结金额{{formatBalanceFreezingSumDnom}}元，取消后冻结余额可释放。
+    </view>
+    </view>
+</view>

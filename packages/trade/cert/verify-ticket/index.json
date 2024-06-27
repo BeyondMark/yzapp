@@ -1,0 +1,4 @@
+{
+  "navigationBarTitleText": "电子卡券凭证",
+  "componentPlaceholder": { "van-toast": "_", "van-notify": "_" }
+}

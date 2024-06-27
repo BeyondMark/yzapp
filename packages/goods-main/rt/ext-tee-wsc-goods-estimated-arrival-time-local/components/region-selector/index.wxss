@@ -1,0 +1,16 @@
+.d5585 {
+  margin-bottom: 12px;
+  background-color: #fff;
+}
+.d5585 .c431be {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 48px;
+  z-index: 99;
+}
+.d5585 .c2dae9 {
+  padding: 10px 0;
+}
+.d5585 .c84668 {
+  color: #ee0a24;
+}

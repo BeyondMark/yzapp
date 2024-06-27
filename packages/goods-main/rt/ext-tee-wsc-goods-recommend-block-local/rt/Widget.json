@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../widgets/recommend-title/rt/index",
+    "b": "./../../wsc-tee-statcenter-recommend-goods-local/rt/Main",
+    "c": "/@y-open/vt/dist/button/index.weapp",
+    "d": "./../ump/components/groupon-recommend/index",
+    "_": "../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,23 @@
+.ed25f {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.ed25f .baec6 {
+  display: block;
+  line-height: 16px;
+  padding: 0 4px;
+  font-size: 12px;
+  color: var(--theme-tag-color, #323233) !important;
+  background: var(--theme-tag-bg-color, #fff) !important;
+}
+.ed25f .baec6:after {
+  border-radius: var(--theme-radius-tag, 8px) !important;
+  border-color: var(--theme-tag-border-color, transparent) !important;
+}
+.ed25f .c1dee8 {
+  margin-left: 4px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #969799;
+}

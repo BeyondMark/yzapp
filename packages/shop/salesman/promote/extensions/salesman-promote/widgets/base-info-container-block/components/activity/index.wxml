@@ -1,0 +1,12 @@
+<view class="promote-goods-activity">
+    <view class="promote-goods-activity-banner">
+        <view class="wrap-right">
+            <b class="promote-goods-activity__tag">{{tag}}</b>
+            <a activityPrice="{{activityPrice}}"></a>
+        </view>
+        <view class="countdown-wrap" wx:if="{{countdown}}">
+            <c activityNotStart="{{activityNotStart}}" bind:countdown-ended="handleCountEnded" countdown="{{countdown}}"></c>
+        </view>
+    </view>
+    <d commissionData="{{commissionData}}"></d>
+</view>

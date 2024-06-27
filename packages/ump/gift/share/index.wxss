@@ -1,0 +1,83 @@
+.gift-share__header-margin {
+  padding-top: 66px;
+  background: #e0493f;
+}
+.gift-share__body {
+  background: #fff;
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding-bottom: 25px;
+}
+.gift-share__body-wrap {
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+  text-align: center;
+  z-index: 5;
+  margin-top: -148px;
+  position: relative;
+}
+.gift-share__body-avatar {
+  width: 55px;
+  height: 55px;
+  border-radius: 55px;
+  margin-top: -28px;
+}
+.gift-share__body-title {
+  margin-top: 6px;
+}
+.gift-share__tips {
+  margin-top: 12px;
+  position: relative;
+}
+.gift-share__use-up {
+  position: absolute;
+  height: 75px;
+  width: 75px;
+  background-image: url(https://img01.yzcdn.cn/public_files/2018/07/08/09013da2815cf063eee470eb2fd14d96.png);
+  background-size: 75px 75px;
+  right: 19.5px;
+  top: 308px;
+}
+.gift-share__receive-btn-group,
+.gift-share__receive-btn-group--padding {
+  padding: 0 15px;
+  box-sizing: border-box;
+  margin-top: 15px;
+}
+.gift-share__receive-btn-group--padding {
+  padding: 0 30px;
+}
+.gift-share__btn {
+  margin-top: 52px;
+  width: 100%;
+  background: #e0493f;
+  color: #fff;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 2px;
+}
+.gift-share__canvas {
+  position: absolute;
+  top: -2000px;
+}
+.lottery-countdown {
+  position: relative;
+  top: 45px;
+  color: #333;
+}
+.countdown-time-unit {
+  display: inline-block;
+  background: #000;
+  min-width: 18px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  margin: 0 1px;
+}
+.user-list--margin {
+  margin-top: 17px !important;
+}
+@import "/common/css/helper/index.wxss";

@@ -1,0 +1,9 @@
+<view style="{{themeStyle}}">
+    <view bind:tap="_p" class="c958ca" data-t="{{ tap:{en:'onPopupOpen'} }}" wx:if="{{addOnCopywriting&&hasCheckedGoods}}">
+        <view class="d3579">{{addOnPromotionStr}}</view>
+        <view class="c740f5"> {{addOnCopywriting}} </view>
+        <view class="ba805" wx:if="{{couponAddOnData.actionTagStr}}"> {{couponAddOnData.actionTagStr}} <a bind:_init="_tic" class="d60f4" name="arrow"></a>
+        </view>
+    </view>
+    <b bind:_init="_tic" bind:clickItem="_p" bind:close="_p" bind:sendCoupon="_p" bind:to-navigate="_p" couponList="{{coupons}}" data-t="{{ close:{en:'onPopupClose'},sendCoupon:{en:'handleSendCoupon'},clickItem:{en:'onClickItem'},toNavigate:{en:'toNavigate'} }}" kdtId="{{kdtId}}" loggers="{{loggers}}" showPopup="{{showPopup}}" themeColors="{{themeColors}}" wx:if="{{isDirty||showPopup}}"></b>
+</view>

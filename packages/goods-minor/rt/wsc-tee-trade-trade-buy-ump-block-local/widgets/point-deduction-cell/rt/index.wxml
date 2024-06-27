@@ -1,0 +1,8 @@
+<view>
+    <a bind:_init="_tic" border="{{false}}" customClass="long-cell" isLink="{{canUse}}">
+        <view class="point-deduction__title" slot="title"> {{pointsName}} <view class="point-deduction__question" wx:if="{{isUse}}">共{{pointTotal}}</view>
+            <b bind:_init="_tic" bind:tap="_p" class="point-deduction__question" data-t="{{ tap:{en:'onShowInfoDialog'} }}" name="info-o" size="16px"></b>
+        </view>
+        <view bind:tap="_p" class="{{'point-deduction__value'}} {{disableValueClass}}" data-t="{{ tap:{en:'onShowPointDialog'} }}" style="color:{{isUse?themeColors['main-bg']:'#333'}}"> {{pointDesc}} </view>
+    </a>
+</view>

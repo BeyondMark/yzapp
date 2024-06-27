@@ -1,0 +1,14 @@
+<c bind:_init="_tic" customClass="popup-content" round="{{true}}" show="{{showPop}}">
+    <view class="popup-container">
+        <view class="popup-container__title">{{popupTitle}}</view>
+        <view class="popup-container__msg">当前身份不满足条件</view>
+    </view>
+    <view bind:tap="_p" class="popup-button" data-t="{{ tap:{en:'onCancel'} }}">
+        <b bind:_init="_tic" customClass="popup-button-cancel" type="default">取消</b>
+    </view>
+    <view class="popup-button">
+        <a authTypeList="{{['mobile']}}" bind:_init="_tic" bind:next="_p" data-t="{{ next:{en:'onConfirm'} }}" kdtId="{{kdtId}}">
+            <view class="popup-button-main"> {{confirmButtonText}} </view>
+        </a>
+    </view>
+</c>

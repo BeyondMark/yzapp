@@ -1,0 +1,2 @@
+<view wx:if="{{false}}"></view>
+<a bind:_init="_tic" bind:auth-popup-show="_p" bind:close="_p" bind:fail="_p" bind:on-open-webview="_p" bind:success="_p" bind:toast="_p" contentCustomStyle="{{contentStyle}}" data-t="{{ success:{en:'handleAuthSuccess'},fail:{en:'handleAuthFail'},close:{en:'handleAuthClose'},toast:{en:'handleShowToast'},onOpenWebview:{en:'handleOpenWebview'},authPopupShow:{en:'handleAuthPopupShow'} }}" kdtId="{{kdtId}}" popupCustomStyle="{{popupCustomStyle}}" theme="{{theme}}" visible="{{visible}}" zIndex="{{zIndex}}" wx:elif="{{isReady}}"></a>

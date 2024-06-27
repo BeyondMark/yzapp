@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/ext-tee-passport/extensions/user-authorize/components/UserAuthorizePopup",
+    "b": "/ext-tee-passport/extensions/user-authorize/widgets/rt/Main",
+    "c": "./../PaidCard",
+    "_": "../../../../../../../components/_/index"
+  }
+}

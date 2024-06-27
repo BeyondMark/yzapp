@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-tee/@y-open/vt/native/weapp/dialog/index/index",
+    "b": "/@y-open/vt/dist/cell/index",
+    "c": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "d": "../../../@y-open/vt/dist/search/index",
+    "e": "/@y-open/vt/dist/list/index",
+    "f": "/packages/async-tee/@y-open/vt/dist/tag/index",
+    "g": "/packages/async-tee/@y-open/vt/native/weapp/loading/index/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_", "c": "_", "f": "_", "g": "_" }
+}

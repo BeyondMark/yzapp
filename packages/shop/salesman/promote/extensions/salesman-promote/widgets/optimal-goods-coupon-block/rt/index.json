@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../promotion-card-block/rt/index",
+    "_": "../../../../../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/shop/@y/captain-weapp/dist/packages/rich-text/index",
+    "_": "../../../../../../../../../../components/_/index"
+  }
+}

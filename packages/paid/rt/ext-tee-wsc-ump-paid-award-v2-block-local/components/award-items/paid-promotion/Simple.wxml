@@ -1,0 +1,10 @@
+<a bind:_init="_tic" isWxReceipt="{{isWxReceipt}}" wx:if="{{curInfo}}">
+    <view class="c5f0b6">
+        <image class="baec6 bd231" lazyLoad="true" src="{{curInfo.img}}"></image>
+        <view class="c9a036">
+            <text bind:_init="_tic" class="c4402b {{isSkyline?'fd77b':curInfo.desc?'c1b86a':'d56d4'}}" maxLines="{{curInfo.desc?1:2}}" overflow="ellipsis"> {{curInfo.text||''}} </text>
+            <view class="c842b6" wx:if="{{curInfo.desc}}">{{curInfo.desc||''}}</view>
+        </view>
+        <b bind:_init="_tic" bind:tap="_p" color="var(--ump-main-bg, #323233)" customClass="ce50a" data-t="{{ tap:{en:'clickBtn'} }}" round="{{true}}" size="small" textStyle="color: var(--ump-main-text, #fff)">{{curInfo.btnText}}</b>
+    </view>
+</a>

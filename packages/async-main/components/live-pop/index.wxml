@@ -1,0 +1,15 @@
+<view bind:tap="onTap" class="live-pop" style="top: {{top}}px;" wx:if="{{hasLiving}}">
+    <view class="border ouside"></view>
+    <view class="live-pop__img">
+        <image src="{{logo}}"></image>
+    </view>
+    <view class="border"></view>
+    <view class="live-pop__text">
+        <view class="live-pop__text-effect">
+            <span class="effect low"></span>
+            <span class="effect top"></span>
+            <span class="effect mid"></span>
+        </view>
+        <image src="https://img01.yzcdn.cn/upload_files/2020/09/22/FnG9nujxdBpYwaqirMf8QKRoHsCD.png"></image>
+    </view>
+</view>

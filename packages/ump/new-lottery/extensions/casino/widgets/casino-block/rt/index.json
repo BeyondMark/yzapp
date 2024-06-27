@@ -1,0 +1,22 @@
+{
+  "navigationBarTitleText": "幸运大抽奖",
+  "navigationBarBackgroundColor": "#FFF",
+  "usingComponents": {
+    "a": "/pages/common/page-container/index",
+    "b": "../../../components/start-date/index",
+    "c": "../../../components/list-container/index",
+    "d": "/packages/async-main/components/showcase/components/salesman-cube/index",
+    "e": "/packages/ump/components/follow-popup/index",
+    "f": "../../fail-popup/rt/index",
+    "g": "../../result-popup/rt/index",
+    "h": "../../roulette/rt/index",
+    "i": "../../detail/rt/index",
+    "j": "../../wecom-qr-code-popup/rt/index",
+    "k": "../../winner-list/rt/index",
+    "l": "../../task-item/rt/index",
+    "m": "/packages/async-main/@vant/weapp/dist/toast/index",
+    "n": "/packages/async-main/@vant/weapp/dist/dialog/index",
+    "_": "../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "d": "_", "m": "_", "n": "_" }
+}

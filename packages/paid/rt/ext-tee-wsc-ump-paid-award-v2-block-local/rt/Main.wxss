@@ -1,0 +1,19 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.c74a76 {
+  padding: 16px 12px;
+  background: #fff;
+  margin: 0 12px;
+  border-radius: var(--theme-radius-card, 12px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.d5d3d {
+  color: #969799;
+  font-size: 14px;
+}

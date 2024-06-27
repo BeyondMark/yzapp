@@ -1,0 +1,15 @@
+<view bind:tap="_p" class="live-pop" data-t="{{ tap:{en:'onTap'} }}" style="{{'top: '+top+'px'}}" wx:if="{{hasLiving}}">
+    <view class="border ouside"></view>
+    <view class="live-pop__img">
+        <image class="tee-image" lazyLoad="true" src="{{logo}}" style="width: 100%; height: 100%"></image>
+    </view>
+    <view class="border"></view>
+    <view class="live-pop__text">
+        <view class="live-pop__text-effect" style="width: 11px; height: 15px; overflow: hidden; flex-shrink: 0">
+            <view class="effect low"></view>
+            <view class="effect top"></view>
+            <view class="effect mid"></view>
+        </view>
+        <image class="tee-image" lazyLoad="true" src="https://img01.yzcdn.cn/upload_files/2020/09/22/FnG9nujxdBpYwaqirMf8QKRoHsCD.png"></image>
+    </view>
+</view>

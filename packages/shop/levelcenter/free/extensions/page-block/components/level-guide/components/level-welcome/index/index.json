@@ -1,0 +1,15 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../../present/index",
+    "b": "../../../../coupon/index",
+    "c": "../../../../point/index",
+    "d": "../pop-header/index",
+    "e": "../benefits/index",
+    "f": "/@vant/weapp/dist/popup/index",
+    "g": "/packages/shop/@vant/weapp/dist/button/index",
+    "h": "/packages/async-main/@vant/weapp/dist/icon/index",
+    "_": "../../../../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "h": "_" }
+}

@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../shopnote-base/shopnote-title/index",
+    "b": "../shopnote-base/shopnote-desc/index",
+    "c": "../shopnote-base/shopnote-time/index",
+    "d": "../shopnote-base/shopnote-fixedicon/index",
+    "e": "../shopnote-base/shopnote-toast/index",
+    "f": "/packages/async-usecenter/components/showcase/goods/index",
+    "_": "../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "f": "_" }
+}

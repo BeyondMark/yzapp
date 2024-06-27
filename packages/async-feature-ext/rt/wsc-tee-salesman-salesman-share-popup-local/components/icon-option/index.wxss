@@ -1,0 +1,43 @@
+.t-text {
+  text-decoration: inherit;
+}
+.t-text,
+.tee-image {
+  display: inline-block;
+}
+.tee-image {
+  width: 100%;
+  height: 100%;
+}
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+.option:active {
+  opacity: 0.7;
+}
+.option:after {
+  border: none;
+}
+.option__icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 16px;
+}
+.option__name {
+  max-width: 72px;
+  margin-top: 8px;
+  padding: 0 4px;
+  color: #646566;
+  line-height: 12px;
+  font-size: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

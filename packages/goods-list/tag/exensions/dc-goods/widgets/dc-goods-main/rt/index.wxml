@@ -1,0 +1,1 @@
+<a _opt="{{goodsOpt}}" bind:button-click="showcaseHandleGoodsBuy" bind:item-click="handleItemClick" bind:on-item-image-loaded="handleItemImageLoaded" kdtId="{{kdt_id}}" uuid="{{uuid}}" wx:if="{{rmId==='b9-5'||rmId==='b32-5'||rmId==='b10-7'}}"></a>

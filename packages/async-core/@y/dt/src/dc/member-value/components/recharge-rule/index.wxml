@@ -1,0 +1,30 @@
+<view>
+    <view class="rule" wx:if="{{memberTemplateType==='0'}}">
+        <view class="{{className}}" wx:for="{{rechargeRuleList}}" wx:key="productNos">
+            <view bind:tap="_p" class="card" data-t="{{ tap:{ en:'clickRechageRule',args:[item] } }}">
+                <view class="content">
+                    <view class="name">            充<view class="text t-text">{{item.formatAmount}}元</view>
+                    </view>
+                    <view class="slogan text"> {{item.slogan||item.giftPackContext}} </view>
+                </view>
+                <view class="btn t-text" wx:if="{{isMode1}}"> 立即充值 </view>
+            </view>
+        </view>
+    </view>
+    <view class="rule" style="{{'background-color: '+cardBgColor+';padding: 6px '+pageMargin+'px;'}}" wx:else>
+        <view class="template2" style="{{'background-color: '+bgColor+';border-radius: '+cardBorderRadius+'px;'}}">
+            <view class="template2_content">
+                <view class="template2_content_title t-text">储值余额</view>
+                <view class="template2_content_subtitle">
+                    <view class="template2_content_subtitle_name">
+                        <view class="template2_content_subtitle_icon t-text">¥</view>
+                        <view class="t-text">{{balance}}</view>
+                    </view>
+                    <view class="template2_content_subtitle_slogan t-text" style="color:{{themeColors.general}}" wx:if="{{firstItem.slogan||firstItem.giftPackContext}}"> {{rechargeText}} </view>
+                </view>
+            </view>
+            <view bind:tap="_p" class="template2_content_rechargebtn" data-t="{{ tap:{ en:'clickRechageRule',args:[firstItem] } }}" style="{{'background-color: '+themeColors.general+';'}}">        马上充值
+      </view>
+        </view>
+    </view>
+</view>

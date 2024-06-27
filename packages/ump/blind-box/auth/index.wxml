@@ -1,0 +1,2 @@
+<a bind:message="handlePostMessage" src="{{viewSrc}}"></a>
+<b noAutoAuth="{{true}}"></b>

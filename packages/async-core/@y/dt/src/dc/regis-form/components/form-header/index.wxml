@@ -1,0 +1,9 @@
+<view class="regis-form-header">
+    <view wx:if="{{opt.cover}}">
+        <image class="header-img tee-image" lazyLoad="true" mode="widthFix" src="{{opt.cover}}"></image>
+    </view>
+    <view class="header-content" wx:if="{{opt.title}}">
+        <view class="header-content-title"> {{opt.title}} </view>
+        <view class="header-content-desc" wx:if="{{opt.desc}}"> {{opt.desc}} </view>
+    </view>
+</view>

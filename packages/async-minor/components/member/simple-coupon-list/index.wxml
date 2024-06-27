@@ -1,0 +1,15 @@
+<view class="coupon-list-wrapper">
+    <view class="coupon-list-title">可用优惠券<view class="coupon-count-wrapper">
+            <c class="coupon-count" size="14" wx:if="{{initialWaiting||couponTotal===0&&couponLoading}}"></c>
+            <block wx:else>
+                <text class="coupon-count">共{{couponCount}}张</text>
+                <b bindtap="refreshCouponData" name="replay"></b>
+            </block>
+        </view>
+    </view>
+    <scroll-view bindscrolltolower="getCouponList" class="coupon-list" enhanced="{{true}}" scrollY="{{true}}" style="max-height: 522px;" wx:if="{{couponTotal>0||couponLoading}}">
+        <a bind:clickBtn="handleNavigateCouponQrCode" bind:clickCoupon="handleCouponClick" btnText="券码" coupon="{{item}}" wx:for="{{couponList}}" wx:key="activityId"></a>
+    </scroll-view>
+    <view class="coupon-list-empty" wx:elif="{{initialWaiting}}">加载中</view>
+    <view class="coupon-list-empty" wx:else>暂无可用优惠券</view>
+</view>

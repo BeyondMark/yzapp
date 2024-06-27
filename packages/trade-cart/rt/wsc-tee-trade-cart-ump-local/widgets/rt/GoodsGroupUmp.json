@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./ExchangeModel",
+    "b": "./UmpInfoPopup",
+    "c": "/packages/async-tee/@y-open/vt/dist/tag/index",
+    "d": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "_": "../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "c": "_", "d": "_" }
+}

@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../wsc-tee-trade-paid-action-local/widgets/rt/SelfFetchDialog",
+    "b": "./../../wsc-tee-trade-paid-action-local/widgets/rt/VoucherCardDialog",
+    "c": "./../../wsc-tee-trade-paid-action-local/widgets/rt/SubscriptionDialog",
+    "_": "../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,21 @@
+<view class="b0c2e" id="t-contact-edit" style="{{themeVars}}">
+    <view class="ed13b">
+        <f bind:_init="_tic" bind:change="_p" bind:clear="_p" bind:focus="_p" clearable="{{true}}" data-t="{{ clear:{en:'onClearName'},change:{en:'onInputName'},focus:{en:'onNameFocus'} }}" errorMessage="{{errorInfo.userName}}" label="姓名" maxlength="{{30}}" placeholder="{{textInfo.userNamePlaceholder}}" placeholderStyle="color: #c8c9cc !important;" value="{{item.userName}}"></f>
+        <f bind:_init="_tic" bind:change="_p" bind:clear="_p" bind:focus="_p" border="{{false}}" clearable="{{true}}" data-t="{{ clear:{en:'onClearTel'},change:{en:'onInputTel'},focus:{en:'onPhoneFocus'} }}" errorMessage="{{errorInfo.telephone}}" label="{{textInfo.phoneLabel}}" placeholder="{{textInfo.phonePlaceholder}}" placeholderStyle="color: #c8c9cc !important;" type="number" value="{{item.telephone}}">
+            <block wx:if="{{isRetailOrderScene}}">
+                <a bgColor="{{themeColors.general}}" bind:_init="_tic" bind:getPhone="_p" data-t="{{ getPhone:{en:'getPhone'} }}" phone="{{retailPhone}}" rmId="{{rmId}}" slot="button" wx:if="{{rmId==='b37-9'}}"></a>
+            </block>
+        </f>
+    </view>
+    <d bind:_init="_tic" border="{{false}}" customClass="c4ad01" title="{{textInfo.setDefaultTitle}}">
+        <g activeColor="var(--main-bg, #323233)" bind:_init="_tic" bind:change="_p" checked="{{item.isDefault}}" data-t="{{ change:{en:'onChangeDefault'} }}" size="24px"></g>
+    </d>
+    <view class="ff4fc">
+        <e bind:_init="_tic" bind:tap="_p" block="{{true}}" customClass="c9c4e2" customStyle="{{btnCustomStyle}}" data-t="{{ tap:{en:'onSave'} }}" loading="{{isSaving}}" round="{{true}}" type="danger">      保存并使用
+    </e>
+        <e bind:_init="_tic" bind:tap="_p" block="{{true}}" customClass="c9c4e2" data-t="{{ tap:{en:'onDelete'} }}" loading="{{isDeleting}}" round="{{true}}" type="default" wx:if="{{item.id}}">      删除
+    </e>
+        <c bind:_init="_tic" data-ref="vanContactEditToast"></c>
+        <b bind:_init="_tic" data-ref="vanContactEditDialog"></b>
+    </view>
+</view>

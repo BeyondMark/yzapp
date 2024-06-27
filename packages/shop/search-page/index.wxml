@@ -1,0 +1,15 @@
+<import src="./custom-tpl.wxml"></import>
+<view>
+    <block wx:for="{{design}}" wx:key="type">
+        <search-input bind:automated-word-click="handleWordItemClick" bind:search="handleInputSearch" data-type="suggest" defaultValue="{{searchDefaultValue}}" focus="{{inputFocus}}" wx:if="{{item.type==='search-input'}}"></search-input>
+        <block wx:elif="{{item.type==='history-words-list'}}">
+            <words-list bind:clear="handleClearHistory" bind:word-item-click="handleWordItemClick" data-type="history" list="{{historyList}}" maxLineNum="{{2}}" showClear="{{true}}" title="历史搜索" wx:if="{{historyList&&historyList.length>0}}"></words-list>
+        </block>
+        <block wx:elif="{{item.type==='hot-words-list'}}">
+            <words-list bind:word-item-click="handleWordItemClick" data-type="hot" list="{{hotList}}" loggerParams="{{hotListLoggerParams}}" title="热门搜索" wx:if="{{hotList&&hotList.length>0}}"></words-list>
+        </block>
+        <template is="{{item.type}}" data wx:elif="{{item.custom}}"></template>
+    </block>
+    <van-dialog id="van-dialog"></van-dialog>
+</view>
+<inject-protocol noAutoAuth="{{true}}"></inject-protocol>

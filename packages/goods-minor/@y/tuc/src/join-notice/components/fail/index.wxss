@@ -1,0 +1,82 @@
+.bd231 {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.e98a7 {
+  --button-default-background-color: var(--main-bg, #e7c5a5);
+  --button-default-border-color: var(--main-bg, #e7c5a5);
+  --button-default-color: var(--main-text, #573413);
+  padding: 24px;
+}
+.c3fee2 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+}
+.c81671 .f90f0 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #969799;
+  text-align: center;
+  margin-top: 8px;
+}
+.c81671 .c4dd42 {
+  display: inline;
+  color: #d37721;
+}
+.c81671 .f62dc {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #969799;
+  text-align: center;
+  margin-top: 24px;
+}
+.e98a7 .c29bfe {
+  display: flex;
+  width: 100%;
+  padding: 8px 0;
+}
+.e98a7 .c29bfe:not(:first-child) {
+  margin-top: 8px;
+}
+.e98a7 .c4c841 {
+  width: 48px;
+}
+.e98a7 .c40dec {
+  height: 40px;
+}
+.e98a7 .ae15a {
+  flex: 1;
+}
+.e98a7 .c42f60 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #323233;
+}
+.e98a7 .b82bc {
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #969799;
+}
+.e98a7 .d92cf {
+  margin-top: 8px;
+  width: 60px;
+}
+.e98a7 .cbda7,
+.e98a7 .d92cf {
+  background: var(--main-bg, #e7c5a5);
+  border-radius: var(--theme-radius-button, 21px);
+  color: var(--main-text, #573413);
+  border-color: var(--main-bg, #e7c5a5);
+}
+.e98a7 .cbda7 {
+  margin-top: 32px;
+  width: 100%;
+}

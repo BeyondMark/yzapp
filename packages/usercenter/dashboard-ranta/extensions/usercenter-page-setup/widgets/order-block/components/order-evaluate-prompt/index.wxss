@@ -1,0 +1,6 @@
+.mc__orderEvaluatePrompt_text-dec {
+  margin-right: 4px;
+}
+.mc__orderEvaluatePrompt .mc__orderEvaluatePrompt_rest-time {
+  display: inline;
+}

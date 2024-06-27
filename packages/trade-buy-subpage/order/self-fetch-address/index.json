@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "选择提货地点",
+  "usingComponents": {
+    "a": "/packages/goods-minor/rt/wsc-tee-trade-trade-buy-self-fetch-address-local/rt/Main",
+    "b": "../../../async-tee/@y-open/vt/native/weapp/toast/index/index",
+    "c": "../../../async-tee/@y-open/vt/native/weapp/dialog/index/index",
+    "d": "/pages/common/page-container/index",
+    "e": "/components/global-custom-loading/index",
+    "_": "../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_", "b": "_", "c": "_" }
+}

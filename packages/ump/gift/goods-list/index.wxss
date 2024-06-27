@@ -1,0 +1,98 @@
+.gift-goods__banner {
+  width: 100%;
+}
+.gift-goods__banner-wrapper {
+  width: 100%;
+  max-height: 310rpx;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+.gift-goods__list {
+  width: 100%;
+  padding: 0 7.5px;
+  box-sizing: border-box;
+}
+.gift-goods--empty {
+  text-align: center;
+  padding-top: 176px;
+}
+.gift-goods--empty__icon {
+  display: block;
+  width: 109px;
+  height: 92px;
+  background-image: url(https://img01.yzcdn.cn/public_files/2018/07/04/f5f975967d98e136fb8c59dcfebc6af3.png);
+  background-size: 109px 92px;
+  margin: 0 auto;
+}
+.gift-goods--empty__desc {
+  margin-top: 24px;
+}
+.goods-item {
+  width: 50%;
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  margin-top: 6px;
+}
+.goods-item--end .goods-item__image-mask:after,
+.goods-item--soldout .goods-item__image-mask:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.6);
+  background-image: url(https://img01.yzcdn.cn/public_files/2018/09/10/f132f394c4ba881758dd0cd806c911f9.png);
+  background-size: contain;
+}
+.goods-item--end .goods-item__image-mask:after {
+  background-image: url(https://img01.yzcdn.cn/public_files/2018/08/02/fe97dab4a6bd8ff01e46a9ea97315e73.png);
+}
+.goods-item__wrapper {
+  margin: 0 2.5px;
+  background: #fff;
+}
+.goods-item__image-wrap {
+  min-height: 0;
+  padding-top: 100%;
+  height: 0;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+.goods-item__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+.goods-item__title {
+  margin-top: 4px;
+  height: 34px;
+  line-height: 17px;
+  margin-left: 5px;
+}
+.goods-item__price {
+  color: #e0493f;
+  margin-left: 5px;
+  padding-bottom: 8px;
+  margin-top: 10px;
+}
+.goods-item__buy-icon {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+}
+.icon-gift {
+  width: 24px;
+  height: 24px;
+  background-image: url(https://b.yzcdn.cn/fix-base64/892cd110e1ea63d7c1808ad93c3b0fc64f17ce4c56a3a5126df2ab44bc1c24a8.png);
+  background-size: 24px 24px;
+}

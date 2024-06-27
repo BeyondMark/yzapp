@@ -1,0 +1,84 @@
+page {
+  background: #e0493f;
+  padding: 0 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.using-tips {
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 5px;
+  padding-left: 42px;
+  padding-right: 18px;
+  margin-bottom: 20px;
+}
+.tips-img-1,
+.tips-img-2 {
+  width: 250px;
+}
+.tips-img-1 {
+  margin-top: 5px;
+  height: 133px;
+  margin-bottom: 26px;
+}
+.tips-img-2 {
+  margin-top: 9px;
+  height: 152px;
+}
+.tips-text {
+  line-height: 17px;
+}
+.bottom-section .tips-text {
+  margin-top: 15px;
+}
+.bottom-section {
+  padding-bottom: 30px;
+}
+.top-section .using-tips-title {
+  padding-top: 23px;
+}
+.bottom-section .using-tips-title {
+  padding-top: 33px;
+}
+.bottom-section .using-tips-title:after {
+  top: 33px;
+}
+.using-tips-title {
+  position: relative;
+}
+.using-tips-title:after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-image: url(https://img01.yzcdn.cn/public_files/2018/11/16/a2c0299600d56e8f5e3ad9efe58ee205.png);
+  background-size: 15px 15px;
+  background-position: 50%;
+  position: absolute;
+  top: 23px;
+  left: -22px;
+}
+.first-line-text {
+  margin-top: 7px;
+}
+.tips-img-wrap {
+  position: relative;
+}
+.touch-icon {
+  position: absolute;
+  width: 29px;
+  height: 43px;
+  background-size: 29px 43px;
+  background-image: url(https://img01.yzcdn.cn/public_files/2018/07/03/abef47b956e3b67de56deef6b833a4fc.png);
+}
+.tips-img-wrap-1 .touch-icon {
+  top: 93px;
+  left: 186px;
+}
+.tips-img-wrap-2 .touch-icon {
+  top: 121px;
+  left: 173px;
+}
+.emphasize {
+  color: #e0493f;
+}

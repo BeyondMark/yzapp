@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "我要送礼",
+  "navigationBarBackgroundColor": "#e0493f",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "a": "/pages/common/page-container/index",
+    "b": "../components/goods-item/index",
+    "c": "../components/gift-header/index",
+    "_": "../../../../components/_/index"
+  }
+}

@@ -1,0 +1,13 @@
+<view>
+    <c bind:_init="_tic" customClass="c7ec0c" num="{{good.canChangeNum?null:good.num+''}}" originPrice="{{good.PriceStr}}" price="{{good.payPriceStr}}" style="{{themeStyle}}" tag="{{good.acvitityTag}}" thumb="{{good.url}}" title="{{good.title}}" titleClass="c5ebcc">
+        <view class="c64fc1" slot="desc">
+            <view>{{good.desc}}</view>
+            <view>{{good.effectiveTime}}</view>
+        </view>
+        <view slot="tags" wx:if="{{good.tags.length}}">
+            <a bind:_init="_tic" color="{{themeColors.general}}" plain="{{true}}" wx:for="{{good.tags}}" wx:for-item="tag" wx:key="tag"> {{tag}} </a>
+        </view>
+        <b bind:_init="_tic" bind:tap="_p" class="c23b13" data-t="{{ tap:{en:'showGoodsMessage'} }}" round="{{true}}" size="small" slot="footer" wx:if="{{good.message}}">      查看留言
+    </b>
+    </c>
+</view>

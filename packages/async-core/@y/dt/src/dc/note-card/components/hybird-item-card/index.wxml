@@ -1,0 +1,45 @@
+<a _opt="{{opt.infoData.layoutOpt}}" bind:_init="_tic">
+    <b _opt="{{opt.infoData.layoutOpt}}" bind:_init="_tic" wx:for="{{opt.list}}" wx:for-index="idx" wx:for-item="flatList" wx:key="idx">
+        <view class="{{'list-hybrid'}} {{'card-'+opt.infoData.noteStyle}} {{'border-'+opt.infoData.noteCornerStyle}} {{'corner-'+opt.infoData.noteStyle}}">
+            <view bind:tap="_p" class="list-hybrid-wrapper" data-alias="{{itemData.noteAlias}}" data-index="{{index}}" data-notetype="{{itemData.noteType}}" data-t="{{ tap:{en:'itemClick'} }}" wx:for="{{flatList}}" wx:for-item="itemData" wx:key="index">
+                <view class="list-hybrid-content common-layout" wx:if="{{index===0}}">
+                    <view class="common-layout-container">
+                        <view class="img-wrapper" style="{{'background-image: url('+itemData.imgUrl+')'}}">
+                            <view class="cover">
+                                <view class="cover-center">
+                                    <view class="label" wx:if="{{opt.infoData.showNoteTypeTag}}">
+                                        <span bind:_init="_tic" class="cover-center-span">#</span>
+                                        <span bind:_init="_tic">{{itemData.label}}</span>
+                                    </view>
+                                    <view style="float: right">
+                                        <c _opt="{{itemData:itemData,infoData:opt.infoData,layout:'right',theme:'white',thumbClick:thumbClick}}" bind:_init="_tic"></c>
+                                    </view>
+                                </view>
+                                <view class="cover-bottom">
+                                    <view class="{{'cover-bottom-title'}} {{'font-'+opt.infoData.textStyle}}"> {{itemData.title||itemData.description}} </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="hybrid-small" wx:else>
+                    <view class="small-left">
+                        <view class="{{'small-left-title'}} {{'font-'+opt.infoData.textStyle}}"> {{itemData.title||itemData.description}} </view>
+                        <c _opt="{{itemData:itemData,infoData:opt.infoData,layout:'left',thumbClick:thumbClick,customClass:'custom-style-2'}}" bind:_init="_tic"></c>
+                    </view>
+                    <view class="small-right">
+                        <view class="img-wrapper">
+                            <image class="sn-img tee-image" lazyLoad="{{true}}" mode="aspectFit" src="{{itemData.imgUrl}}"></image>
+                            <view class="cover">
+                                <view class="cover-center">
+                                    <view class="label" wx:if="{{opt.infoData.showNoteTypeTag}}">
+                                        <view class="cover-center-span t-text">#</view> {{itemData.label}} </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </b>
+</a>

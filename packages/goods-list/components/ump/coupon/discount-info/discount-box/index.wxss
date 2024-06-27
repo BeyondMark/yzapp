@@ -1,0 +1,15 @@
+.c37ff7 {
+  width: inherit;
+}
+.c560c7 {
+  text-align: inherit;
+}
+.c560c7 ~ .c560c7 {
+  margin-top: 6px;
+}
+.f5e5d {
+  display: none;
+}
+.e3163:empty + .f5e5d {
+  display: block;
+}

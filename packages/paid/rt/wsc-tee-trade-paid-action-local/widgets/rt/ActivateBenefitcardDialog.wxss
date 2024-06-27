@@ -1,0 +1,84 @@
+.bd231 {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.c285f2 {
+  overflow: visible;
+}
+.f5e2b {
+  border-radius: 20px;
+  position: relative;
+  background: #fff;
+}
+.c14ebf {
+  position: absolute;
+  right: 0;
+  width: 178px;
+  height: 85px;
+}
+.c8553e .c6f538 {
+  padding-top: 48px;
+}
+.c8553e .c6f538 .c38dfa {
+  font-size: 18px;
+  color: #323233;
+  letter-spacing: 0;
+  text-align: center;
+  font-weight: 500;
+}
+.c8553e .c6f538 .c8a6cb {
+  font-size: 14px;
+  color: #7d7e80;
+  text-align: center;
+  line-height: 20px;
+  margin-top: 8px;
+}
+.c9be8f {
+  padding: 16px 0 24px;
+}
+.c9be8f .b6197 {
+  display: block;
+  margin: 0 auto;
+  width: 214px;
+  height: 160px;
+}
+.c8a70 {
+  padding: 32px 16px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.c8a70 .c43b68 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 4px;
+  width: 66px;
+}
+.c8a70 .c43b68:first-child {
+  margin-left: 0;
+}
+.c8a70 .d92ae {
+  height: 40px;
+  width: 40px;
+}
+.c8a70 .c2b63 {
+  font-size: 12px;
+  color: #646566;
+  margin-top: 4px;
+}
+.c183e5 {
+  margin-top: 24px;
+  width: 100%;
+  text-align: center;
+}
+.b7fca {
+  margin: 24px auto 0;
+  height: 32px;
+  width: 32px;
+  display: block;
+}
+.a834f {
+  border-radius: 22px !important;
+}

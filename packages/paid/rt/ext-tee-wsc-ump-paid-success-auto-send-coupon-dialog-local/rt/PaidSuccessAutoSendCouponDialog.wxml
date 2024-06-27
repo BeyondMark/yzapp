@@ -1,0 +1,21 @@
+<c bind:_init="_tic" bind:click-overlay="_p" closeOnClickOverlay="{{true}}" customClass="c5cf47" data-t="{{ clickOverlay:{en:'handleClose'} }}" show="{{visible&&recommendCoupon.recommendItems.length}}">
+    <view bind:tap="_p" class="c7251d" data-t="{{ tap:{en:'handleClose'} }}"></view>
+    <view class="e2847">
+        <view class="c9b3a4" style="{{couponBg}}">
+            <view class="ce2ca">
+                <view class="c9a036">
+                    <e bind:_init="_tic" info="{{recommendCoupon.couponInfo}}" isReceived="{{isReceived}}" themeColors="{{themeColors}}"></e>
+                    <a bind:_init="_tic" goods="{{recommendCoupon.recommendItems}}" isSkyline="{{isSkyline}}" loggerSpm="{{loggerSpm}}" rmId="{{rmId}}" themeColors="{{themeColors}}" wx:if="{{rmId==='b21-8'}}"></a>
+                </view>
+            </view>
+        </view>
+        <d bind:_init="_tic" bind:tap="_p" customClass="ce50a c42f3f" data-t="{{ tap:{en:'clickNowUse'} }}" round="{{true}}" size="small" wx:if="{{isReceived}}"></d>
+        <block wx:if="{{!isReceived}}">
+            <b authTypeList="{{['mobile','nicknameAndAvatar']}}" bind:_init="_tic" bind:next="_p" class="cap-coupon__userauth" data-t="{{ next:{en:'handleLogin'} }}" kdtId="{{kdtId}}" rmId="@passport-tee/user-authorize~DDdJBmWG" type="separate" wx:if="{{rmId==='b21-8'}}">
+                <view class="share-box">
+                    <d bind:_init="_tic" customClass="ce50a" loading="{{loading}}" round="{{true}}" size="small"></d>
+                </view>
+            </b>
+        </block>
+    </view>
+</c>

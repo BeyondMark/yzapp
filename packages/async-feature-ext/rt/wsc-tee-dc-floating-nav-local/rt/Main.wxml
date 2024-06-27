@@ -1,0 +1,84 @@
+<view wx:if="{{isShowFloatingNav&&isShowContian}}">
+    <block wx:if="{{!tableBooking}}">
+        <view hidden="{{active}}" wx:if="{{hasLivePop&&!isWxvideoLiveShow}}">
+            <f bind:_init="_tic" rmId="b7-41" wx:if="{{rmId==='b7-25'}}"></f>
+        </view>
+        <h bind:_init="_tic" bind:updateWxvideoLiveStatus="_p" data-t="{{ updateWxvideoLiveStatus:{en:'updateWxvideoLiveStatus'} }}" wx:if="{{showChannellive}}"></h>
+        <view class="{{'custom-class'}} {{'theme-floating-nav'}} {{active?'active':''}} {{hidden?'hidden':''}} {{isIphoneX?'is-iphone-x':''}}" wx:if="{{subFloatingNavs.length>0}}">
+            <g bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'onClosePoster'} }}" show="{{showPoster}}">
+                <image class="tee-image" lazyLoad="true" src="{{poster}}" style="width:70vw; vertical-align:middle"></image>
+            </g>
+            <block wx:if="{{subFloatingNavs.length===1}}">
+                <button bind:contact="_p" bind:tap="_p" businessId="{{im.businessId}}" class="{{'item'}} {{'main'}} {{'share-item'}} {{shareBlockStyle}}" data-nav-type="{{first.navType}}" data-t="{{ contact:{en:'onContactBack'},tap:{en:'handleNavTap'} }}" hoverClass="none" openType="{{forbidShare?'':'share'}}" sessionFrom="{{im.sourceParam}}" style="{{firstImage}}" wx:if="{{first.navType===typeMap.SHARE}}">
+                    <view class="share-share-corner" wx:if="{{hasShareActivity}}">领</view>
+                </button>
+                <block wx:elif="{{first.navType===typeMap.CONTACT}}">
+                    <c bind:_init="_tic" bind:contact="_p" bind:tap="_p" businessId="{{im.businessId}}" contactClass="item main" contactStyle="{{firstImage}}" data-nav-type="{{first.navType}}" data-t="{{ contact:{en:'onContactBack'},tap:{en:'handleNavTap'} }}" hoverClass="none" openType="contact" sessionFrom="{{im.sourceParam}}" wx:if="{{rmId==='b1-5'||rmId==='b7-25'||rmId==='b9-6'||rmId==='b0-5'||rmId==='b10-9'}}"></c>
+                </block>
+                <view bind:tap="_p" class="{{'item'}} {{'main'}} {{first.hasBadge?'has-badge':''}} {{first.customClass||''}}" data-nav-type="{{first.navType}}" data-t="{{ tap:{en:'handleNavTap'} }}" style="{{firstImage}}" wx:else>
+                    <view class="tag" wx:if="{{first.tag}}">{{first.tag}}</view>
+                </view>
+                <d bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b1-5'||rmId==='b7-25'||rmId==='b9-6'||rmId==='b0-5'||rmId==='b10-9'}}"></d>
+            </block>
+            <block wx:else>
+                <view bind:tap="_p" data-t="{{ tap:{en:'handleMainNavTap'} }}" wx:if="{{normalList.length>0}}">
+                    <view class="item main main-1" style="{{mainFloatBg}}">
+                        <view class="share-share-corner" wx:if="{{hasShareActivity&&shareActivityIcon===1}}">领</view>
+                    </view>
+                    <view class="item main main-2" style="{{mainFloatUnfoldedBg}}"></view>
+                    <view class="floating-main-bg">
+                        <d bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b1-5'||rmId==='b7-25'||rmId==='b9-6'||rmId==='b0-5'||rmId==='b10-9'}}"></d>
+                    </view>
+                </view>
+                <view class="line">
+                    <block wx:if="{{isLine}}">
+                        <view wx:for="{{normalList}}" wx:key="navType">
+                            <block wx:if="{{item.navType!==typeMap.CONTACT&&active}}">
+                                <e bind:_init="_tic" bind:handle-nav-tap="_p" data-t="{{ handleNavTap:{en:'handleNavTap'} }}" forbidShare="{{forbidShare}}" gap="{{gap}}" hasShareActivity="{{hasShareActivity}}" im="{{im}}" index="{{active?index+1:0}}" item="{{item}}" lineOnlyIndependent="{{normalList.length===0}}" rmId="{{rmId}}" shareActivityIcon="{{shareActivityIcon}}" shareCornerClass="share-share-corner" typeMap="{{typeMap}}" wx:if="{{rmId==='b1-5'||rmId==='b7-25'||rmId==='b9-6'||rmId==='b0-5'||rmId==='b10-9'}}"></e>
+                            </block>
+                            <view wx:elif="{{item.navType===typeMap.CONTACT&&active}}">
+                                <c bind:_init="_tic" bind:contact="_p" bind:tap="_p" businessId="{{im.businessId}}" class="{{'item'}} {{'sub'}} {{item.independent?'independent':''}} {{normalList.length===0?'line-only-independent':''}}" contactClass="line-contact-button" data-nav-type="{{item.navType}}" data-t="{{ tap:{en:'handleNavTap'},contact:{en:'onContactBack'} }}" hoverClass="none" opacityFull="{{true}}" openType="contact" sessionFrom="{{im.sourceParam}}" style="background-image:{{'url('+item.iconUrl+')'}}; transform:{{'translateY('+-(active?index+1:0)*gap+'px)'}}" wx:if="{{rmId==='b1-5'||rmId==='b7-25'||rmId==='b9-6'||rmId==='b0-5'||rmId==='b10-9'}}"></c>
+                                <view class="message-floating-bg" style="transform:{{'translateY('+-(active?index+1:0)*gap+'px)'}}">
+                                    <d bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b1-5'||rmId==='b7-25'||rmId==='b9-6'||rmId==='b0-5'||rmId==='b10-9'}}"></d>
+                                </view>
+                            </view>
+                        </view>
+                    </block>
+                    <view wx:for="{{independentList}}" wx:key="navType">
+                        <block wx:if="{{item.navType!==typeMap.CONTACT}}">
+                            <e bind:_init="_tic" bind:handle-nav-tap="_p" data-t="{{ handleNavTap:{en:'handleNavTap'} }}" forbidShare="{{forbidShare}}" gap="{{gap}}" hasShareActivity="{{hasShareActivity}}" im="{{im}}" index="{{active&&isLine?normalList.length+index+1:index+1}}" item="{{item}}" lineOnlyIndependent="{{normalList.length===0}}" rmId="{{rmId}}" shareActivityIcon="{{shareActivityIcon}}" shareCornerClass="share-share-corner" typeMap="{{typeMap}}" wx:if="{{rmId==='b1-5'||rmId==='b7-25'||rmId==='b9-6'||rmId==='b0-5'||rmId==='b10-9'}}"></e>
+                        </block>
+                        <view wx:elif="{{item.navType===typeMap.CONTACT}}">
+                            <c bind:_init="_tic" bind:contact="_p" bind:tap="_p" businessId="{{im.businessId}}" class="{{'item'}} {{'sub'}} {{item.independent?'independent':''}} {{normalList.length===0?'line-only-independent':''}}" contactClass="line-contact-button" data-nav-type="{{item.navType}}" data-t="{{ tap:{en:'handleNavTap'},contact:{en:'onContactBack'} }}" hoverClass="none" opacityFull="{{true}}" openType="contact" sessionFrom="{{im.sourceParam}}" style="background-image:{{'url('+item.iconUrl+')'}}; transform:{{'translateY('+-(active&&isLine?normalList.length+index+1:index+1)*gap+'px)'}}" wx:if="{{rmId==='b1-5'||rmId==='b7-25'||rmId==='b9-6'||rmId==='b0-5'||rmId==='b10-9'}}"></c>
+                            <view class="message-floating-bg" style="transform:{{'translateY('+-(active&&isLine?normalList.length+index+1:index+1)*gap+'px)'}}">
+                                <d bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b1-5'||rmId==='b7-25'||rmId==='b9-6'||rmId==='b0-5'||rmId==='b10-9'}}"></d>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <block wx:if="{{!isLine}}">
+                    <view bind:touchstart="_p" class="outer-space" data-t="{{ touchstart:{en:'handleClosePanel'} }}"></view>
+                    <view class="{{'panel'}} {{normalList.length>6?'panel--three-rows':''}}">
+                        <view class="panel-item" wx:for="{{normalList}}" wx:key="navType">
+                            <button bind:contact="_p" bind:tap="_p" businessId="{{im.businessId}}" class="{{'share-item'}} {{shareBlockStyle}}" data-nav-type="{{item.navType}}" data-t="{{ tap:{en:'handleNavTap'},contact:{en:'onContactBack'} }}" hoverClass="none" openType="{{forbidShare?'':'share'}}" sessionFrom="{{im.sourceParam}}" wx:if="{{item.navType===typeMap.SHARE}}">
+                                <view class="share-share-corner" style="top: 0; right: 7px; z-index: 1" wx:if="{{hasShareActivity}}">领</view>
+                                <i bind:_init="_tic" item="{{item}}"></i>
+                            </button>
+                            <block wx:elif="{{item.navType===typeMap.CONTACT}}">
+                                <c bind:_init="_tic" bind:contact="_p" bind:tap="_p" businessId="{{im.businessId}}" class="message-contact-button-item" contactClass="panel-item panel-item-message-button" data-nav-type="{{item.navType}}" data-t="{{ tap:{en:'handleNavTap'},contact:{en:'onContactBack'} }}" hoverClass="none" openType="contact" sessionFrom="{{im.sourceParam}}" wx:if="{{rmId==='b1-5'||rmId==='b7-25'||rmId==='b9-6'||rmId==='b0-5'||rmId==='b10-9'}}">
+                                    <i bind:_init="_tic" item="{{item}}"></i>
+                                </c>
+                            </block>
+                            <view bind:tap="_p" data-nav-type="{{item.navType}}" data-t="{{ tap:{en:'handleNavTap'} }}" wx:else>
+                                <i bind:_init="_tic" item="{{item}}"></i>
+                            </view>
+                        </view>
+                        <view class="panel-item" wx:for="{{skeletonNum}}" wx:key="navType"></view>
+                    </view>
+                </block>
+            </block>
+        </view>
+    </block>
+    <a activity="{{reserveActivity}}" bind:_init="_tic" bind:finished="_p" bind:update-share-status="_p" data-t="{{ finished:{en:'hideSharePop'},updateShareStatus:{en:'updateShareStatus'} }}" featureAlias="{{alias}}" noBottom="{{true}}" pageType="{{shareCardPageType}}" showSharePop="{{showSharePop}}"></a>
+    <b bind:_init="_tic"></b>
+</view>

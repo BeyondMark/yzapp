@@ -1,0 +1,27 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/pages/usercenter/dashboard/placeholder/index",
+    "b": "/packages/async-minor/components/cps-goods-recommend/index",
+    "c": "/custom-tab-bar-v2/index",
+    "d": "/packages/async-main/components/account/inject-protocol/index",
+    "e": "../../improve-info-title-block/rt/index",
+    "f": "../../user-info-block/rt/index",
+    "g": "../../edu-service-block/rt/index",
+    "h": "../../image-ad-block/rt/index",
+    "i": "../../stats-block/rt/index",
+    "j": "../../benefit-block/rt/index",
+    "k": "../../order-block/rt/index",
+    "l": "../../widgets-block/rt/index",
+    "m": "../../introduction-block/rt/index",
+    "n": "../../flow-entrance-banner-block/rt/index",
+    "o": "../../activate-card-pop-block/rt/index",
+    "p": "../../../../../../rt/wsc-tee-dc-navigation-bar-local/rt/NavigationBar",
+    "q": "/packages/async-feature-ext/rt/wsc-tee-shop-footer-local/rt/Main",
+    "r": "/ext-tee-wsc-dc/extensions/showcase-container/rt/ShowcaseContainer",
+    "s": "/packages/goods-main/rt/wsc-tee-statcenter-recommend-goods-local/rt/Main",
+    "t": "/components/global-custom-loading/index",
+    "_": "../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_", "d": "_", "q": "_", "s": "_" }
+}

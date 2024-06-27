@@ -1,0 +1,33 @@
+<template name="shop-or-location-list">
+    <scroll-view bindscrolltolower="onToLower" bindtap="navigateBack" class="choose-shop__shop-list" scrollTop="{{scrollPosition}}" scrollY="{{true}}">
+        <block wx:if="{{isAddress}}">
+            <view data-item-index="{{index}}" wx:for="{{list}}" wx:key="*this">
+                <view class="zan-cell zan-cell--access result-item">
+                    <view class="zan-cell__bd">
+                        <view class="zan-cell__text" style="color: #333">{{item.name}}</view>
+                        <view class="zan-cell__desc" style="margin-top: 10px">{{item.address}}</view>
+                    </view>
+                    <view class="zan-cell__ft"></view>
+                </view>
+            </view>
+        </block>
+        <block wx:else>
+            <view class="result-item" data-item-index="{{index}}" wx:for="{{list}}" wx:key="*this">
+                <view class="location-result__item-base">
+                    <view class="zan-cell__text" style="color: #333">
+                        <view class="zan-icon zan-icon-shop"></view>{{item.name}}<text class="zan-tag zan-tag--disabled" wx:if="{{!item.opening}}">暂停接单</text>
+                    </view>
+                    <view class="van-font-12" wx:if="{{item.distance}}">{{item.distance}}</view>
+                </view>
+                <view class="zan-cell zan-cell--access">
+                    <view class="zan-cell__bd">
+                        <view class="zan-cell__desc" style="margin-top: 10px">{{item.address.province}} {{item.address.city}} {{item.address.area}} {{item.address.address}}</view>
+                    </view>
+                    <view class="zan-cell__ft"></view>
+                </view>
+            </view>
+        </block>
+        <van-loading size="24px" style="display: block;width: 24px;margin: 10px auto;" wx:if="{{loading}}"></van-loading>
+        <view class="van-font-14" style="text-align: center;margin: 15px 0;color: #BFBFC3" wx:if="{{!loading&&nomore}}">没有更多了</view>
+    </scroll-view>
+</template>

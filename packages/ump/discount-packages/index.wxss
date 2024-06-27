@@ -1,0 +1,107 @@
+@import "/common/css/helper/index.wxss";
+.discount-packages__goods-list {
+  background: #fff;
+  margin-top: 10px;
+}
+.discount-packages__gap {
+  height: 22px;
+  margin-left: 10px;
+  font-size: 14px;
+  color: #999;
+  line-height: 22px;
+  position: relative;
+}
+.discount-packages__icon-emoji {
+  display: inline-block;
+  height: 22px;
+  width: 22px;
+  background: url(https://b.yzcdn.cn/fix-base64/38edbadf4184414b509dc0bdcd0cece8c82340012d36232dacf95aaac4207682.png);
+  background-size: 22px;
+  background-position: 50%;
+  vertical-align: bottom;
+}
+.discount-packages__gap-line {
+  display: inline-block;
+  height: 1px;
+  border-top: 1px dashed #ccc;
+  padding-left: 100px;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  top: 10.5px;
+}
+.discount-packages__activity-end {
+  text-align: center;
+}
+.discount-packages__activity-end image {
+  width: 200px;
+  height: 200px;
+  margin: 51px auto 30px;
+}
+.activity-end-text {
+  color: #fff;
+}
+.activity-end-btn {
+  margin: 50px auto 0;
+  width: 175px;
+  height: 44px;
+  line-height: 44px;
+  background: #f44;
+}
+.package {
+  margin-bottom: 10px;
+}
+.package-tag {
+  display: inline-block;
+  position: absolute;
+  left: -53px;
+  top: 3px;
+  width: 96px;
+  height: 36px;
+  line-height: 34px;
+  font-size: 20px;
+  text-align: center;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+  border: 2px solid #1989fa;
+  color: #1989fa;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.package-title {
+  flex: auto !important;
+}
+.package-title .title {
+  position: relative;
+  font-size: 14px;
+  margin-left: 58px;
+  max-width: 160px;
+}
+.goods-list {
+  align-items: center;
+}
+.main-goods {
+  margin-bottom: 10px;
+}
+.package-value {
+  color: #f85;
+  font-size: 12px;
+  min-width: 84px;
+}
+.goods-list-checkbox__icon {
+  margin-right: 15px;
+  width: 20px;
+  height: 20px;
+}
+.package-save-price {
+  color: #f85;
+}
+.goods-checkbox {
+  margin-right: 15px;
+}
+.checkbox-icon {
+  display: block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+}

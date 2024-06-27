@@ -1,0 +1,21 @@
+<a bind:_init="_tic" closeOnClickOverlay="{{false}}" customStyle="overflow: visible;" round="{{true}}" show="{{show}}">
+    <view class="live-coupon-container">
+        <view bind:tap="_p" class="live-coupon-close-icon" data-t="{{ tap:{en:'closePopup'} }}"></view>
+        <view class="live-coupon-title"> {{detail.isNewSend?'恭喜获得':'你已领取'}} 直播间专享优惠券
+    </view>
+        <view class="live-coupon-card received">
+            <view class="{{'live-coupon-card__price'}} {{'price-length-'+detail.value.length}}"> {{detail.value}} <view class="live-coupon-card__price--unit t-text">元</view>
+            </view>
+            <view class="live-coupon-card__desc">
+                <view class="live-coupon-card__limit"> {{detail.useThresholdCopywriting}} </view>
+                <view class="live-coupon-card__time">
+                    <b bind:_init="_tic" bind:change="_p" data-t="{{ change:{en:'onCountDownChange'} }}" time="{{time}}" useSlot="{{true}}">
+                        <view class="live-coupon-card__countdown"> {{formattedTime}} </view>
+                    </b>          后失效
+        </view>
+            </view>
+        </view>
+        <view bind:tap="_p" class="live-coupon-button breath" data-t="{{ tap:{en:'showSku'} }}" title="呼吸按钮">      去使用
+    </view>
+    </view>
+</a>

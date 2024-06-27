@@ -1,0 +1,6 @@
+<view class="{{'arrival-common-tag'}} {{customClass}}" style="{{customStyle}}">
+    <view class="{{'arrival-common-tag__container'}} {{containerClass}}" style="{{containerStyle}}"></view>
+    <a bind:_init="_tic" customClass="{{['arrival-common-tag__inner',innerClass]}}" hairline="{{themeTag.plain}}" plain="{{themeTag.plain}}" style="{{innerStyle}}">
+        <slot></slot>
+    </a>
+</view>

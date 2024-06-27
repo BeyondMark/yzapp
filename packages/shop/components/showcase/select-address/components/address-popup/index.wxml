@@ -1,0 +1,13 @@
+<a bind:close="closePopup" customClass="radius-popup" overlay="{{true}}" position="bottom" show="{{show}}">
+    <view class="address-container">
+        <view class="title-container">
+            <view class="title">{{title}}</view>
+            <view bindtap="closePopup" class="close-btn">
+                <b color="#cfcfd2" name="cross" size="20px"></b>
+            </view>
+        </view>
+        <view class="panel-container">
+            <slot></slot>
+        </view>
+    </view>
+</a>

@@ -1,0 +1,10 @@
+<view bind:tap="_p" class="slpreview" data-t="{{ tap:{en:'closePop'} }}" wx:if="{{show}}">
+    <view class="slpreview-content">
+        <image class="{{'slpreview-content__img'}} tee-image" lazyLoad="true" mode="widthFix" src="{{posterImg}}"></image>
+        <view class="close-big">
+            <view class="close"></view>
+        </view>
+        <view bind:tap="_p" class="slpreview-content__btn" data-t="{{ tap:{en:'clickSaveImage'} }}">      保存图片
+    </view>
+    </view>
+</view>

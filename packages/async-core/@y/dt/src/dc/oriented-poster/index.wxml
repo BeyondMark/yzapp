@@ -1,0 +1,10 @@
+<view class="dc-oriented-poster" wx:if="{{posters.length>0}}">
+    <b autoplay="5000" bind:_init="_tic" bind:change="_p" data-t="{{ change:{en:'handleChange'} }}" height="{{swipeHeightString}}" indicatorActiveColor="#ff4444" pid="{{vanSwiperKey}}" showIndicators="{{posters.length>1}}">
+        <a bind:_init="_tic" pid="{{vanSwiperKey}}" wx:for="{{posters}}" wx:key="index">
+            <view bind:tap="_p" class="container" data-index="{{index}}" data-t="{{ tap:{en:'handleClick'} }}">
+                <image class="tee-image" lazyLoad="true" mode="aspectFit" src="{{item.imageUrl}}" style="{{swiperStyle.imageItem}}"></image>
+                <view class="image__title zan-ellipsis" wx:if="{{item.title}}"> {{item.title}} </view>
+            </view>
+        </a>
+    </b>
+</view>

@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y-open/vt/dist/tabs/index",
+    "b": "/@y-open/vt/dist/tab/index",
+    "c": "/@y-open/vt/dist/list/index",
+    "d": "/@y-open/vt/dist/cell/index",
+    "e": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "_": "../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "e": "_" }
+}

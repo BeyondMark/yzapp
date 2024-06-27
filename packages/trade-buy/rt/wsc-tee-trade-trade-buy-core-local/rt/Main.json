@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../widgets/rt/QueueMain",
+    "_": "../../../../../components/_/index"
+  }
+}

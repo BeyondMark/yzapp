@@ -1,0 +1,21 @@
+.c2063c {
+  font-size: 16px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 100px;
+  align-items: baseline;
+}
+.fd77b {
+  display: flex;
+  flex-wrap: wrap;
+}
+.bdaa3,
+.c851f5 {
+  display: inline-block;
+  font-size: 12px;
+}
+.c851f5 {
+  font-weight: 400;
+}

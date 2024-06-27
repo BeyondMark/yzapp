@@ -1,0 +1,40 @@
+{
+  "navigationStyle": "custom",
+  "disableScroll": true,
+  "usingComponents": {
+    "a": "./../../rt/wsc-tee-dc-navigation-bar-local/rt/NavigationBar",
+    "b": "./../../rt/wsc-tee-trade-paid-page-setup-local/rt/Main",
+    "c": "./../../rt/wsc-tee-trade-paid-state-local/rt/PaidState",
+    "d": "./../../rt/ext-tee-wsc-ump-paid-award-block-local/rt/Main",
+    "e": "./../../rt/ext-tee-wsc-ump-paid-award-v2-block-local/rt/Main",
+    "f": "./../../rt/wsc-tee-trade-paid-action-local/widgets/rt/PaidAction",
+    "g": "./../../rt/wsc-tee-trade-paid-ext-holder-local/rt/Main",
+    "h": "./../../rt/wsc-tee-trade-paid-cps-goods-recommend-block-local/rt/Main",
+    "i": "./../../rt/wsc-tee-trade-paid-recommend-block-local/rt/Main",
+    "j": "/packages/async-feature-ext/rt/wsc-tee-shop-footer-local/rt/Main",
+    "k": "./../../rt/ext-tee-wsc-ump-paid-success-auto-send-coupon-dialog-local/rt/PaidSuccessAutoSendCouponDialog",
+    "l": "./../../rt/wsc-tee-trade-order-paid-groupbuy-self-fetch-dialog-local/rt/GroupbuySelfFetchDialog",
+    "m": "./../../rt/retail-tee-group-groupbuy-share-dialog-local/rt/GroupbuyShareDialog",
+    "n": "./../../rt/retail-tee-solitaire-solitaire-dialog-local/rt/SolitaireDialog",
+    "o": "./../../rt/wsc-tee-trade-paid-trade-share-dialog-local/rt/TradeShareDialog",
+    "p": "./../../rt/ext-tee-wsc-ump-paid-success-fission-coupon-dialog-local/rt/PaidSuccessFissionCouponDialog",
+    "q": "/packages/async-feature-ext/rt/ext-tee-wsc-im-subscription-message-local/rt/Widget",
+    "r": "/packages/async-feature-ext/rt/wsc-tee-dc-jump-link-local/rt/Main",
+    "s": "./../../rt/wsc-tee-dc-shop-ad-local/rt/ShopAdDialog",
+    "t": "./../../rt/ext-tee-wsc-trade-paid-block-container-local/rt/Main",
+    "u": "/ext-tee-wsc-dc/extensions/page-style/rt/Main",
+    "v": "../../../async-tee/@y-open/vt/native/weapp/toast/index/index",
+    "w": "../../../async-tee/@y-open/vt/native/weapp/dialog/index/index",
+    "x": "/pages/common/page-container/index",
+    "y": "/packages/async-main/pages/common/page-container/components/copyright/index",
+    "_": "../../../../components/_/index"
+  },
+  "componentPlaceholder": {
+    "j": "_",
+    "q": "_",
+    "r": "_",
+    "v": "_",
+    "w": "_",
+    "y": "view"
+  }
+}

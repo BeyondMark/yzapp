@@ -1,0 +1,46 @@
+.c2cb60 {
+  width: 100%;
+  height: 64px;
+}
+.eb28c {
+  height: 64px;
+  background: #fff;
+}
+.c0eb6e {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10001;
+}
+.c554f1 {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.c8c343 {
+  flex: 1;
+}
+.c8c343,
+.c7e5de {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.c7e5de {
+  box-sizing: border-box;
+  font-size: 36rpx;
+  font-weight: 500;
+  padding-top: 20px;
+}
+.c7e5de text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+  width: 161px;
+  font-size: 16px;
+}

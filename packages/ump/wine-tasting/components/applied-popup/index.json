@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../desc-card/index",
+    "b": "/@vant/weapp/dist/popup/index",
+    "c": "/packages/async-main/@vant/weapp/dist/icon/index",
+    "d": "../../../components/message/subscribe-message/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "c": "_" }
+}

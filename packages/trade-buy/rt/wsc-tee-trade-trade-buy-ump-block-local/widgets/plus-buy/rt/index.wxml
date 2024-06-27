@@ -1,0 +1,8 @@
+<view class="bc903" style="{{themeCSS}}">
+    <view class="c32293">
+        <image class="c0875d bd231" hidden="{{!picture}}" lazyLoad="true" src="{{picture}}"></image>
+    </view>
+    <view class="{{true?'d0feb':''}} {{isOnlyOne?'c024a8':''}}">
+        <a bind:_init="_tic" class="c0934f" goodsData="{{item}}" isOne="{{isOnlyOne}}" rmId="{{rmId}}" useCustomTitleSlot="{{true}}" wx:if="{{rmId==='b36-27'}}" wx:for="{{plusBuyGoodsList}}" wx:key="goodsId"></a>
+    </view>
+</view>

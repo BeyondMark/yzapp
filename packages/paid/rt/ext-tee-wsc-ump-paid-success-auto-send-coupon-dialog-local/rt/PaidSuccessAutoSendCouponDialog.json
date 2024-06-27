@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./CanUseGoods",
+    "b": "/ext-tee-passport/extensions/user-authorize/widgets/rt/Main",
+    "c": "/@y-open/vt/dist/popup/index.weapp",
+    "d": "/@y-open/vt/dist/button/index.weapp",
+    "e": "./../Coupon",
+    "_": "../../../../../components/_/index"
+  }
+}

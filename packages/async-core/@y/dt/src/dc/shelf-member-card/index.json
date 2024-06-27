@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y/ppt/lib/user-authorize/index",
+    "b": "./../../captain/level-info-popup/index",
+    "c": "./../../common/components/shelf/benefits-notice/index",
+    "_": "../../../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,184 @@
+.coupon-item {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 70px;
+  background-position: right 90%;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.06);
+}
+.coupon-item .item-wrapper {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 26px;
+}
+.coupon-item .item-wrapper .item-header {
+  margin: 0 12px 16px;
+  border-bottom: 1px dashed #ebedf0;
+  padding: 10px 0;
+  display: flex;
+}
+.coupon-item .item-wrapper .item-header .shop-logo {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  margin-right: 8px;
+}
+.coupon-item .item-wrapper .item-header .shop-name {
+  width: 100%;
+  color: #323233;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 20px;
+  font-weight: 700;
+  font-size: 14px;
+}
+.coupon-item .item-wrapper .item-block {
+  vertical-align: middle;
+  display: inline-block;
+  text-align: left;
+}
+.coupon-item .item-wrapper .item-left {
+  width: 33.5%;
+  text-align: left;
+  padding-left: 16px;
+  box-sizing: border-box;
+}
+.coupon-item .item-wrapper .item-left .unit {
+  font-size: 12px;
+  margin-left: -5px;
+}
+.coupon-item .item-wrapper .item-left .price {
+  color: #f44;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+.coupon-item .item-wrapper .item-left .desc,
+.coupon-item .item-wrapper .item-left .maxdiscount {
+  font-size: 12px;
+  color: #969799;
+  line-height: 16px;
+}
+.coupon-item .item-wrapper .item-left.exchange-goods .price {
+  font-size: 18px;
+  line-height: 38px;
+}
+.coupon-item .item-wrapper .item-left.discount-max .desc,
+.coupon-item .item-wrapper .item-left.discount-max .maxdiscount {
+  font-size: 10px;
+  line-height: 12px;
+}
+.coupon-item .item-wrapper .item-center {
+  text-align: left;
+  width: 46%;
+  margin: 0 1%;
+}
+.coupon-item .item-wrapper .item-center .title {
+  display: flex;
+  align-items: baseline;
+  font-size: 14px;
+  margin: 8px 0 12px 0;
+  line-height: 20px;
+}
+.coupon-item .item-wrapper .item-center .title .item-name {
+  display: inline-block;
+  max-width: 10em;
+  color: #323233;
+}
+.coupon-item .item-wrapper .item-center .title .num {
+  display: inline-block;
+  color: #969799;
+  font-size: 12px;
+}
+.coupon-item .item-wrapper .item-center .time {
+  font-size: 12px;
+  line-height: 16px;
+  color: #969799;
+}
+.coupon-item .item-wrapper .item-center .time .coupon-count-down {
+  color: #f44;
+}
+.coupon-item
+  .item-wrapper
+  .item-center
+  .time
+  .coupon-count-down
+  .van-count-down {
+  color: #f44;
+  display: inline-block;
+  font-size: 12px;
+}
+.coupon-item .item-wrapper .item-right {
+  width: 18.5%;
+}
+.coupon-item .item-wrapper .label {
+  font-size: 12px;
+  width: 47px;
+  text-align: center;
+  padding: 2px 4px;
+  color: #f44;
+}
+.coupon-item .item-wrapper .label-invalid {
+  color: #bbb;
+  border-color: #bbb;
+}
+.coupon-item .item-wrapper .title-tag {
+  color: #f44;
+}
+.coupon-item .item-reminder {
+  border-top: 1px dashed #ebedf0;
+  padding: 11px 0 12px;
+  margin: 0 12px;
+  font-size: 12px;
+  color: #969799;
+}
+.coupon-item.invalid .item-wrapper {
+  color: #bbb;
+  border-color: #bbb;
+}
+.coupon-item.invalid .item-header .shop-name,
+.coupon-item.invalid .item-wrapper .price,
+.coupon-item.invalid .item-wrapper .title,
+.coupon-item.invalid .item-wrapper .title .item-name {
+  color: #969799;
+}
+.coupon-item.composite:before {
+  bottom: -4px;
+  z-index: 1;
+  width: 95%;
+}
+.coupon-item.composite.more-item:after,
+.coupon-item.composite:before {
+  position: absolute;
+  left: 50%;
+  content: "";
+  height: 10px;
+  background: #fff;
+  border-radius: 4px;
+  transform: translateX(-50%);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+.coupon-item.composite.more-item:after {
+  bottom: -8px;
+  z-index: 0;
+  width: 90%;
+}
+.coupon-item.composite .item-wrapper {
+  margin-bottom: 18px;
+}
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.time-section {
+  color: #f44;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 20px;
+}

@@ -1,0 +1,1 @@
+<a bind:_init="_tic" bind:select="_p" data-t="{{ select:{en:'onSelect'} }}" generalThemeColor="{{generalThemeColor}}" kdtId="{{kdtId}}" list="{{list}}" promotion="{{true}}" selectedIndex="{{selectedIndex}}" wx:if="{{list.length}}"></a>

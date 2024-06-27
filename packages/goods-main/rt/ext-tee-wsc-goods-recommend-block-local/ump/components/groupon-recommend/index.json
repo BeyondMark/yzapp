@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y/dt/src/captain/item-card/index",
+    "b": "/@y/dt/src/captain/layout/layout",
+    "c": "/@y/dt/src/captain/layout/layout-item",
+    "d": "/@y-open/vt/dist/button/index.weapp",
+    "_": "../../../../../../../components/_/index"
+  }
+}

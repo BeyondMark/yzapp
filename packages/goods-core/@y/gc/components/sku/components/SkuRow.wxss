@@ -1,0 +1,83 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.sku-row {
+  margin: 0 0 12px;
+  position: relative;
+  padding-bottom: var(--theme-goods-sku-row-padding-bottom, 0);
+}
+.sku-row.is-first {
+  margin-top: 0;
+  padding-top: var(--theme-goods-sku-normal-margin, 12px);
+}
+.sku-row.is-first:before {
+  position: absolute;
+  box-sizing: border-box;
+  content: " ";
+  pointer-events: none;
+  top: -50%;
+  right: calc(-50% + 32px);
+  bottom: -50%;
+  left: calc(-50% + 32px);
+  border: 0 solid #ebedf0;
+  transform: scale(0.5);
+  border-top-width: 1px;
+}
+.sku-row.is-last {
+  margin-bottom: 0;
+}
+.sku-row:after {
+  position: absolute;
+  box-sizing: border-box;
+  content: " ";
+  pointer-events: none;
+  top: -50%;
+  right: calc(-50% + 32px);
+  bottom: -50%;
+  left: calc(-50% + 32px);
+  border: 0 solid #ebedf0;
+  transform: scale(0.5);
+  border-bottom-width: 1px;
+}
+.c6edef {
+  padding: 0 16px;
+  padding-bottom: var(--theme-goods-sku-normal-margin, 12px);
+}
+.c516ee {
+  color: #969799;
+}
+.c2210f {
+  padding: 0 16px;
+}
+.c4ce20 {
+  padding: 0;
+}
+.c8baf2 {
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+.c8baf2::-webkit-scrollbar {
+  display: none;
+  width: 0 !important;
+  height: 0;
+  color: transparent;
+}
+.c1a62c {
+  display: flex;
+  justify-content: center;
+  margin-top: 4px;
+  padding-bottom: 16px;
+}
+.df73a {
+  width: 40px;
+  height: 4px;
+  background: #ebedf0;
+  border-radius: 2px;
+}
+.c153b0 {
+  width: 50%;
+  height: 100%;
+  background-color: var(--general, #ee0a24);
+  border-radius: 2px;
+}

@@ -1,0 +1,98 @@
+.cross-store-coupon-dialog {
+  max-width: 311px;
+}
+.cross-store-coupon-dialog__content {
+  font-size: 14px;
+  line-height: 20px;
+}
+.cross-store-coupon-dialog__message {
+  max-height: 60vh;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  text-align: center;
+  padding: 8px 24px 16px;
+  color: #323233;
+}
+.cross-store-coupon-dialog__btn-wrapper {
+  position: relative;
+  height: auto;
+  padding: 0 24px 16px;
+  color: #fff;
+}
+.cross-store-coupon-dialog__btn-confirm {
+  width: 100%;
+  border: none;
+  border-radius: 999px;
+  height: 36px;
+  font-weight: 500;
+  background: linear-gradient(90deg, #ff6034, #ee0a24);
+  text-align: center;
+  line-height: 36px;
+}
+.cross-store-coupon-dialog__link {
+  color: #646566;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.cross-store-coupon-dialog .van-dialog__footer {
+  display: none;
+}
+.dialog-pop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+}
+.dialog-pop-title {
+  padding-top: 24px;
+  height: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #323233;
+  text-align: center;
+}
+.dialog-pop-content {
+  margin-top: 260px;
+  width: 311px;
+  height: 168px;
+  background: #fff;
+  border-radius: 16px;
+}
+.mobile-dialog__content-text {
+  height: 20px;
+  font-size: 14px;
+  color: #7d7e80;
+  line-height: 20px;
+  margin-top: 8px;
+  text-align: center;
+}
+.mobile-dialog__content-button {
+  border-top: 1px solid #ebedf0;
+  box-sizing: border-box;
+  margin-top: 44px;
+  height: 48px;
+}
+.mobile-dialog__content-button-cancel,
+.mobile-dialog__content-button-confirm {
+  display: inline-block;
+  width: calc(50% - 0.5px);
+  font-size: 16px;
+  line-height: 48px;
+  vertical-align: top;
+  text-align: center;
+}
+.mobile-dialog__content-button-split {
+  display: inline-block;
+  width: 1px;
+  height: 48px;
+  background: #ebedf0;
+}
+.mobile-dialog__content-button-cancel {
+  color: #323233;
+}
+.mobile-dialog__content-button-confirm {
+  color: #ee0a24;
+}

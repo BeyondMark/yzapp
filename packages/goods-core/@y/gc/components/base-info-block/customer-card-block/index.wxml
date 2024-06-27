@@ -1,0 +1,10 @@
+<view>
+    <c authTypeList="{{['mobile']}}" bind:_init="_tic" bind:next="_p" customStyle="position: relative; height: auto; width: 100%;" data-t="{{ next:{en:'handleClick'} }}" kdtId="{{opt.kdtId}}" type="separate" wx:if="{{opt.show}}">
+        <b bind:_init="_tic" opt="{{opt}}" wx:if="{{opt.type==='timeLimitedDiscount'}}"></b>
+        <view class="c650d2 {{opt.type==='discount'?'e95ae':''}}" wx:else>
+            <view class="a21a9"> {{mainText}} </view>
+            <view class="c6f042"> {{opt.actionText}} <a bind:_init="_tic" name="arrow" style="height:13px; display:flex"></a>
+            </view>
+        </view>
+    </c>
+</view>

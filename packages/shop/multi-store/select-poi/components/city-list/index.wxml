@@ -1,0 +1,16 @@
+<view class="city-list">
+    <scroll-view class="city-container" id="city-C" scrollIntoView="{{currentLetterId}}" scrollY="{{true}}" style="height: {{height}}">
+        <view class="cruent">
+            <view>{{currentCityText}}</view>
+            <view bindtap="handleClickCurrentCity" class="current-city" wx:if="{{currentCity.name}}">{{currentCity.name}}</view>
+        </view>
+        <view class="letter top" wx:if="{{letterHeader}}">{{letterHeader}}</view>
+        <view class="group" data-letter="{{letter.title}}" id="scroll-{{letter.title}}" wx:if="{{letter.adcodes.length>0}}" wx:for="{{cityData.letterGroup}}" wx:for-item="letter" wx:key="index">
+            <view class="letter" data-letter="{{letter.title}}" id="letter{{letter.title}}">{{letter.title}}</view>
+            <view bindtap="clickCity" class="city" data-code="{{code}}" wx:for="{{letter.adcodes}}" wx:for-item="code" wx:key="indexC">{{cityData.adcodeMap[code].name}}</view>
+        </view>
+    </scroll-view>
+    <view class="city-letter">
+        <view bindtap="handleClickLetterBar" data-letter="{{letter.title}}" href="#scroll-{{letter.title}}" wx:if="letter.adcodes.length > 0" wx:for="{{cityData.letterGroup}}" wx:for-item="letter" wx:key="index">{{letter.title}}</view>
+    </view>
+</view>

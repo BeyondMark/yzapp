@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-tee/@y-open/vt/dist/action-sheet/index",
+    "b": "/@y-open/vt/dist/cell-group/index",
+    "c": "/@y-open/vt/dist/cell/index",
+    "d": "/packages/async-tee/@y-open/vt/native/weapp/checkbox/index/index",
+    "_": "../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_", "d": "_" }
+}

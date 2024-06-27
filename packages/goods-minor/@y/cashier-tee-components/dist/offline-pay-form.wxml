@@ -1,0 +1,17 @@
+<b bind:_init="_tic" bind:close="_p" closeOnClickOverlay="{{false}}" closeable="{{true}}" customClass="c1f195" data-t="{{ close:{en:'onClose'} }}" position="bottom" round="{{true}}" safeAreaInsetBottom="{{true}}" show="{{show}}">
+    <view class="c1f195_container">
+        <view class="c89020">上传凭证</view>
+        <view class="c6c726">
+            <view class="c15231 c89585">凭证上传：</view>
+            <c accept="image" bind:_init="_tic" bind:after-read="_p" bind:delete="_p" data-t="{{ afterRead:{en:'onAfterRead'},delete:{en:'deleteImg'} }}" fileList="{{fileList}}" maxCount="{{1}}" previewFullImage="{{true}}" previewImage="{{true}}" uploadIcon="plus"></c>
+        </view>
+        <view class="c38356">
+            <view class="c15231 c89585">添加备注：</view>
+            <textarea bind:input="_p" class="c406d2" data-t="{{ input:{en:'onRemarkInput'} }}" maxlength="{{50}}" placeholder="选填，请输入您的其他要求，最多50个字" placeholderClass="c6bc00" value="{{remark}}"></textarea>
+        </view>
+        <view class="c71164">
+            <a bind:_init="_tic" bind:tap="_p" block="{{true}}" color="{{themeColor}}" data-t="{{ tap:{en:'confirm'} }}" disabled="{{confirmButtonDisabled}}" round="{{true}}" type="danger">        确认
+      </a>
+        </view>
+    </view>
+</b>

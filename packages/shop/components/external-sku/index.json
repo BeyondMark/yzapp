@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../async-main/components/feature-sku/index",
+    "_": "../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

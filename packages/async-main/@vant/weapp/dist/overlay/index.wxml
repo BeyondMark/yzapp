@@ -1,0 +1,5 @@
+<import src="./overlay.wxml"></import>
+<root-portal wx:if="{{rootPortal}}">
+    <include src="./overlay.wxml"></include>
+</root-portal>
+<include src="./overlay.wxml" wx:else></include>

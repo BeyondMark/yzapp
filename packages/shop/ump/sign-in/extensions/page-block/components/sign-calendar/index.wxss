@@ -1,0 +1,60 @@
+.c-calendar__header {
+  padding: 6px 0;
+}
+.c-calendar__choose,
+.c-calendar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.c-header__arrow {
+  width: 4px;
+  height: 8px;
+  color: #999;
+}
+.c-header__arrow--left {
+  padding: 16px 26px 16px 10px;
+}
+.c-header__arrow--right {
+  padding: 16px 10px 16px 26px;
+}
+.c-header__text {
+  flex-grow: 1;
+  text-align: center;
+  font-family: PingFangSC-Semibold;
+  color: #323233 !important;
+}
+.l-general__text {
+  font-size: 16px;
+  color: #999;
+  line-height: 16px;
+}
+.l-calendar__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+.l-calendar__item {
+  width: 24px;
+  height: 24px;
+  text-align: center;
+}
+.c-calendar__date {
+  font-size: 14px;
+  line-height: 24px;
+  color: #111;
+}
+.c-calendar__date--sign {
+  border-radius: 6px;
+  color: #fff;
+}
+.c-calendar__date--sign:before {
+  display: inline-block;
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url(https://img01.yzcdn.cn/upload_files/2021/10/25/FqWNB0CpK3GhVj3b13cJZy3Gdho5.png)
+    no-repeat 50%;
+  background-size: 100%;
+}

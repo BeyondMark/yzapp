@@ -1,0 +1,9 @@
+<view class="cap-price {{opt.delLine?'del':''}} {{opt.preProcess?'cap-price-process':''}}" style="{{style}}" wx:if="{{!!opt.price}}">
+    <view wx:if="{{opt.preProcess}}">{{opt.price}}</view>
+    <block wx:else>
+        <view class="del-line" wx:if="{{opt.delLine}}"></view>
+        <view class="tag t-text" style="{{tagStyle}}">¥</view>
+        <view class="int t-text" style="{{intStyle}}"> {{useNewPriceRule?newInt:int}} </view>
+        <view class="decimal t-text" style="{{decimalStyle}}"> {{useNewPriceRule?newDecimal:decimal}} </view>
+    </block>
+</view>

@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y/gc/components/sku/index",
+    "b": "/packages/goods-core/@y/gc/components/sku/extra-components/goods-attributes/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_" }
+}

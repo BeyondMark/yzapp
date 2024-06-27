@@ -1,0 +1,43 @@
+<view class="member-center__order">
+    <g authTypeList="{{['nicknameAndAvatar']}}" bind:fail="clearTapData" bind:next="handleAuthorize" bindgetuserinfo="handleBindGetUserInfo" bindtap="handleTap" btnClass="authorize-userinfo" data-nav="all">
+        <a customClass="order-cell__custom" isLink="{{true}}" title="我的订单" titleClass="order-cell__title" value="查看全部订单" valueClass="order-cell__value"></a>
+    </g>
+    <g authTypeList="{{['nicknameAndAvatar']}}" bind:fail="clearTapData" bind:next="handleAuthorize" bindgetuserinfo="handleBindGetUserInfo">
+        <c customClass="order-tabbar {{showPromptOrderPay?'tabbar-margin-bottom':''}}" fixed="{{false}}" safeAreaInsetBottom="{{false}}">
+            <d bind:click="handleTap" customClass="order-tabbar-item" data-nav="toPay" info="{{userAgreePrivacy&&toPay>99?'99+':userAgreePrivacy&&toPay>0?toPay:''}}">
+                <b customClass="member-center__order-icon" name="pending-payment" slot="icon"></b>
+                <b customClass="member-center__order-icon" name="pending-payment" slot="icon-active"></b>
+                <text class="icon-text">待付款</text>
+            </d>
+            <d bind:click="handleTap" customClass="order-tabbar-item" data-nav="toSend" info="{{userAgreePrivacy&&paid>99?'99+':userAgreePrivacy&&paid>0?paid:''}}">
+                <b customClass="member-center__order-icon" name="tosend" slot="icon"></b>
+                <b customClass="member-center__order-icon" name="tosend" slot="icon-active"></b>
+                <text class="icon-text">待发货</text>
+            </d>
+            <d bind:click="handleTap" customClass="order-tabbar-item" data-nav="toReceive" info="{{userAgreePrivacy&&sent>99?'99+':userAgreePrivacy&&sent>0?sent:''}}">
+                <b customClass="member-center__order-icon" name="logistics" slot="icon"></b>
+                <b customClass="member-center__order-icon" name="logistics" slot="icon-active"></b>
+                <text class="icon-text">待收货</text>
+            </d>
+            <d bind:click="handleTap" customClass="order-tabbar-item" data-nav="toEvaluate" info="{{userAgreePrivacy&&evaluate>99?'99+':userAgreePrivacy&&evaluate>0?evaluate:''}}">
+                <b customClass="member-center__order-icon" name="smile-comment-o" slot="icon"></b>
+                <b customClass="member-center__order-icon" name="smile-comment-o" slot="icon-active"></b>
+                <text class="icon-text">{{evaluateTitle}}</text>
+            </d>
+            <d bind:click="handleTap" customClass="order-tabbar-item" data-nav="refund" info="{{userAgreePrivacy&&feedback>99?'99+':userAgreePrivacy&&feedback>0?feedback:''}}">
+                <b customClass="member-center__order-icon" name="refund-o" slot="icon"></b>
+                <b customClass="member-center__order-icon" name="refund-o" slot="icon-active"></b>
+                <text class="icon-text">退款/售后</text>
+            </d>
+        </c>
+    </g>
+    <h bind:close="toggleSubscribeMask" show="{{showSubscribeMask}}"></h>
+    <swiper autoplay="{{true}}" circular="{{true}}" interval="{{4000}}" style="height: 58px;" vertical="{{true}}" wx:if="{{userAgreePrivacy&&(showOrderPayPrompt||showOrderEvaluatePrompt)}}">
+        <swiper-item wx:if="{{showOrderPayPrompt}}">
+            <e orderPayPrompts="{{promptOrderPay}}"></e>
+        </swiper-item>
+        <swiper-item wx:if="{{showOrderEvaluatePrompt}}">
+            <f orderEvaluatePrompts="{{promptOrderEvaluation}}"></f>
+        </swiper-item>
+    </swiper>
+</view>

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/shop/@vant/weapp/dist/cell/index",
+    "_": "../../../../../../../../../components/_/index"
+  }
+}

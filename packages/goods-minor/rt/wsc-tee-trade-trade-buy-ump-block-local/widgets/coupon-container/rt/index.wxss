@@ -1,0 +1,106 @@
+.t-text {
+  text-decoration: inherit;
+}
+.t-text,
+.tee-image {
+  display: inline-block;
+}
+.tee-image {
+  width: 100%;
+  height: 100%;
+}
+.t-coupon-list {
+  position: relative;
+  height: 100%;
+  background-color: #f7f8fa;
+}
+.t-coupon-list__field {
+  margin: 5px 0 5px 16px;
+  background: #f7f8fa;
+  border-radius: var(--theme-radius-card, 17px);
+  flex: 1;
+}
+.t-coupon-list__field .t-field__clear {
+  margin-right: 0;
+}
+.t-coupon-list__field .t-icon-clear {
+  display: flex !important;
+}
+.t-coupon-list__input {
+  height: 34px !important;
+  line-height: 34px !important;
+}
+.t-coupon-list__exchange-bar {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+.t-coupon-list__exchange {
+  font-size: 16px !important;
+  height: 32px !important;
+  line-height: 30px !important;
+  border: 0 !important;
+}
+.t-coupon-list__list {
+  box-sizing: border-box;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  height: calc(70vh - 192px) !important;
+  padding: 12px 0 0 0;
+}
+.t-coupon-list__list--with-bottom {
+  padding-bottom: 66px;
+}
+.t-coupon-list__bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px 16px;
+  font-weight: 500;
+  background-color: #fff;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.t-coupon-list__close {
+  height: 40px;
+  line-height: 38px;
+}
+.t-coupon-list__empty {
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+}
+.t-coupon-list__empty-text {
+  margin: 16px 0;
+  color: #969799;
+  font-size: 14px;
+  line-height: 20px;
+}
+.t-coupon-list__empty-img {
+  width: 200px;
+  height: 200px;
+}
+.t-coupon-list__tab .t-tabs__line {
+  border-radius: var(--theme-radius-card, 3px) !important;
+}
+.t-coupon-list__tips {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 36px;
+  padding: 0 16px;
+  background-color: #fff;
+  border-top: 1px solid #ebedf0;
+  font-size: 12px;
+}
+.t-coupon-list__tips-text {
+  flex: 1;
+}
+.t-coupon-list__tips-text-extra {
+  color: #323233;
+}
+.customer-button.t-coupon-list__tips-button {
+  padding: 0 6px;
+}

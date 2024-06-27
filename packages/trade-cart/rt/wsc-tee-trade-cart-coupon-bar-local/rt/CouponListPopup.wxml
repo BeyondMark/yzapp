@@ -1,0 +1,39 @@
+<b bind:_init="_tic" bind:close="_p" closeable="{{true}}" customStyle="border-radius: var(--theme-radius-dialog,20px) var(--theme-radius-dialog,20px) 0 0; min-height:50%; max-height:80%;" data-t="{{ close:{ en:'changeCouponPopupShow',args:[false] } }}" position="bottom" safeAreaInsetBottom="{{true}}" show="{{couponPopupShow}}">
+    <view class="d5562">优惠券</view>
+    <view class="ce775">
+        <view class="c3d8d5" wx:for="{{avlCouponList}}" wx:for-item="coupon" wx:key="index">
+            <view class="couponbox c85e21">
+                <view class="d8044 e6345">
+                    <view class="f09cc">
+                        <view class="d93ec c89585" wx:if="{{coupon.isYuanUnit}}"> ¥ </view>
+                        <view class="c0fc3c {{!coupon.c3e34b_copywriting?'c8c949':''}} c89585">
+                            <view wx:if="{{coupon.isYuanUnit&&coupon.showDecimal}}">{{coupon.couponPriceDecimal[0]}} <view class="bdaa3 c89585">.{{coupon.couponPriceDecimal[1]}}</view>
+                            </view>
+                            <view class="c89585" wx:else>{{coupon.value_copywriting}}</view>
+                        </view>
+                        <view class="c3e34b c89585" wx:if="{{!coupon.isYuanUnit}}">{{coupon.unit_copywriting}}</view>
+                    </view>
+                    <view class="c1dee8"> {{coupon.use_threshold_copywriting}} </view>
+                </view>
+                <view class="d8044 c281e0">
+                    <view class="d5d3d">{{coupon.title}}</view>
+                    <view class="c1dee8">{{coupon.valid_time_copywriting}}</view>
+                </view>
+                <view class="d8044 c31637">
+                    <view class="c86946" wx:if="{{!coupon.isAvailable}}">
+                        <a authTypeList="{{['mobile']}}" bind:_init="_tic" bind:next="_p" data-t="{{ next:{ en:'handleAuthorizeNext',args:[coupon] } }}" kdtId="{{kdtId}}" rmId="@passport-tee/user-authorize~DDdJBmWG" wx:if="{{rmId==='b4-11'}}">
+                            <view class="d4f5c">立即领取</view>
+                        </a>
+                    </view>
+                    <view class="c21245" wx:else>
+                        <view class="ffa44">
+                            <view class="c16764">
+                                <view class="e449c"> 已领 </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</b>

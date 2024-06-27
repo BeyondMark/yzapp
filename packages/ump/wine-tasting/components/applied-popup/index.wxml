@@ -1,0 +1,29 @@
+<b closeOnClickOverlay="{{false}}" customStyle="width: 100%;" lockScroll="{{true}}" overlay="{{true}}" position="right" safeAreaInsetBottom="{{true}}" show="{{show}}" zIndex="100">
+    <view class="wrapper">
+        <view class="header">
+            <view style="height: {{statusBarHeight}}px"></view>
+            <view class="custom-nav" style="height: {{navHeight}}px">
+                <view class="custom-nav__left">
+                    <view catchtap="onClose" class="custom-nav__left--icon">
+                        <c class="icon-return" name="arrow-left" size="22px"></c>
+                    </view>
+                </view>
+                <view class="custom-nav__title">品鉴会</view>
+                <view class="custom-nav__right"></view>
+            </view>
+        </view>
+        <view class="body">
+            <view class="wine-tasking-sign-in">
+                <view class="sign-in-group">
+                    <c class="sign-in-icon" name="checked"></c>
+                    <view class="sign-in-tip">
+                        <view class="sign-in-title">报名成功</view>
+                        <view class="sign-in-desc">期待您的如约而至</view>
+                    </view>
+                    <a class="sign-in-info" info="{{info}}"></a>
+                </view>
+            </view>
+        </view>
+        <d bind:close="toggleSubscribeMask" show="{{showSubscribeMask}}" zIndex="101"></d>
+    </view>
+</b>

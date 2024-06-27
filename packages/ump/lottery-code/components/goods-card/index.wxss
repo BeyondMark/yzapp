@@ -1,0 +1,159 @@
+@import "/common/css/helper/index.wxss";
+@keyframes translate {
+  0% {
+    transform: scale(0.98);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+.goods-card {
+  position: relative;
+  margin-top: 10px;
+  background: #fff;
+  padding: 9px 9px 17px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.goods-card .title {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 20px;
+}
+.goods-card .title .name {
+  display: inline-block;
+  max-width: 188px;
+  vertical-align: sub;
+}
+.goods-card .title .number {
+  margin-left: 5px;
+  color: #999;
+  font-size: 14px;
+}
+.goods-card .title-top {
+  margin-bottom: 8px;
+}
+.goods-card .tips {
+  font-size: 14px;
+  color: #999;
+  text-align: center;
+}
+.goods-card .tips .strong {
+  margin: 0 5px;
+  color: #f44;
+  font-family: PingFangSC-Medium;
+}
+.goods-card .lottery-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 96px;
+  height: 96px;
+  background: url(https://img01.yzcdn.cn/upload_files/2020/04/16/FnoJZ4x7uYhEKZXmYjjjhEsuHwOX.png)
+    no-repeat 50%;
+  background-size: 96px 96px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+.slider-wrap {
+  position: relative;
+  margin-bottom: 13px;
+  height: 48.8vw;
+}
+.slider {
+  height: 48.8vw;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.slider .prize {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.slider .prize-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 4px;
+  width: auto;
+  height: auto;
+}
+.slider .van-swipe__indicator--active {
+  width: 10px !important;
+  height: 6px;
+  border-radius: 4px;
+}
+.prize-coupon {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto 15px;
+  color: #fff;
+}
+.prize-coupon__value {
+  color: #fff;
+  width: 113px;
+  text-align: center;
+  font-size: 30px;
+}
+.prize-coupon__content {
+  margin-left: 10px;
+}
+.prize-coupon__content .coupon-title {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-family: PingFangSC-Medium;
+}
+.prize-coupon__content .coupon-detail {
+  font-size: 12px;
+}
+.indicator-dots {
+  position: absolute;
+  bottom: 7px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.indicator-dots .dot {
+  margin: 0 2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: hsla(0, 0%, 100%, 0.3);
+}
+.indicator-dots .dot-actived {
+  width: 10px;
+  background: #fff;
+  border-radius: 4px;
+}
+.prize-money {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 24vw;
+  margin: auto;
+  color: #fff1c9;
+  text-align: center;
+}
+.prize-money__number {
+  font-family: PingFangSC-Medium;
+  font-size: 20px;
+}
+.prize-money__number .unit {
+  font-size: 10px;
+}
+.prize-money__name {
+  font-size: 12px;
+}

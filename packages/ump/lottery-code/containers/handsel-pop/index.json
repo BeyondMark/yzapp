@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../components/pop-container/index",
+    "b": "/components/account/user-authorize/index",
+    "_": "../../../../../components/_/index"
+  }
+}

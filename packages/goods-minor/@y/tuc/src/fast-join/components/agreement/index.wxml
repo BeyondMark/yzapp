@@ -1,0 +1,7 @@
+<view bind:tap="_p" class="fb14c" data-t="{{ tap:{en:'onChange'} }}" wx:if="{{showAgreement}}">
+    <a bind:_init="_tic" customClass="c7916a" iconSize="18px" value="{{checked}}">
+        <view class="c7e89">      阅读并同意
+      <view catch:tap="_p" class="c994fa" data-t="{{ tap:{en:'openProtocol',et:'stop'} }}">《{{protocol.agreementTplName||''}}》</view>
+        </view>
+    </a>
+</view>

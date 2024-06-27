@@ -1,0 +1,19 @@
+<view class="help__block {{marginTop?'margin-top':''}}">
+    <view class="help__title">
+        <view class="title">{{title}}</view>
+    </view>
+    <view class="fission-goods-container">
+        <view class="empty" wx:if="{{showList.length===0}}"></view>
+        <view bind:tap="goodsClick" class="goods-item {{list.length===1?'goods-item-single':''}}" data-index="{{index}}" wx:for="{{showList}}">
+            <view wx:if="{{item.imageUrl}}">
+                <view class="pic">
+                    <image class="img" mode="aspectFill" src="{{item.imageUrl}}"></image>
+                </view>
+                <view class="goods-context">
+                    <view>￥{{item.price}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view bind:tap="enterShop" class="vicebtn" wx:if="{{needBtn}}">进店逛逛</view>
+</view>

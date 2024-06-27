@@ -1,0 +1,4 @@
+{
+  "navigationBarTitleText": "集点卡",
+  "componentPlaceholder": { "van-toast": "_", "van-notify": "_" }
+}

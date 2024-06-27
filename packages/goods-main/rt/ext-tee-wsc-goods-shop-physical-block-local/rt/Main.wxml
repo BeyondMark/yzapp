@@ -1,0 +1,12 @@
+<view style="{{themeVars}}">
+    <a bind:_init="_tic" bind:tap="_p" border="{{false}}" customClass="c40cd1" data-t="{{ tap:{en:'goStoreList'} }}" isLink="{{true}}" title="门店" titleClass="c557c1" titleWidth="40px" wx:if="{{storeInfo}}">
+        <view class="c4210b">
+            <view class="c70f65">
+                <view class="ffa7e c89585">{{storeInfo.physicalStoreName}}</view>
+                <view class="a99d8 c89585" wx:if="{{physicalStores&&physicalStores.shopCount>1}}">共{{physicalStores.shopCount}}家门店</view>
+            </view>
+            <view class="c6df2e">
+                <view class="bd814 c89585" wx:if="{{distance}}">{{distance}}</view> {{storeInfo.physicalStoreAddress}} </view>
+        </view>
+    </a>
+</view>

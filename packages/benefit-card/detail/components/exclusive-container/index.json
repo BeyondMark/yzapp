@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../exclusive-block/index",
+    "b": "../exclusive-detail/index",
+    "_": "../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,25 @@
+function presaleCentToYuan(val) {
+  if (val > 10) {
+    val -= val % 10;
+  }
+  if (val < 1) {
+    val = 1;
+  }
+  val /= 100;
+  return val.toFixed(2);
+}
+function getGoodsPrice(selectedSkuComb, sku, isRetailApp) {
+  if (!sku) return;
+  var result = sku.price;
+  if (selectedSkuComb) {
+    result = selectedSkuComb.price;
+  }
+  if (isRetailApp && typeof result === "number") {
+    result = Number(result / 100).toFixed(2);
+  }
+  return result;
+}
+module.exports = {
+  presaleCentToYuan: presaleCentToYuan,
+  getGoodsPrice: getGoodsPrice,
+};

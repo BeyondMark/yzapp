@@ -1,0 +1,11 @@
+<view class="c7c275" wx:if="{{show}}">
+    <view class="d5d3d"> {{tableNo}} </view>
+    <view class="c5f0b6" wx:if="{{tabs.length}}">
+        <view class="f055b">取餐方式</view>
+        <view class="dd5c0" wx:if="{{tabs.length===1}}"> {{tabs[0].text}} </view>
+        <view class="c34891" wx:else>
+            <a bind:change="_p" class="a398f" customClass="c6ad6b" data-t="{{ change:{ en:'onSwitchTab',args:[item.id] } }}" labelClass="ffc58" name="{{item.text}}" useIconSlot="{{true}}" wx:for="{{tabs}}" wx:key="id"> {{item.text}} <view class="baec6 {{item.id===id?'d1a06':''}}" slot="icon"></view>
+            </a>
+        </view>
+    </view>
+</view>

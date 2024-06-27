@@ -1,0 +1,34 @@
+.c83dcc {
+  height: 70px;
+  vertical-align: middle;
+  padding: var(--theme-goods-direct-order-popup-cell-padding-top, 16px)
+    var(--theme-goods-direct-order-popup-cell-padding-right, 12px)
+    var(--theme-goods-direct-order-popup-cell-padding-bottom, 12px)
+    var(--theme-goods-direct-order-popup-cell-padding-left, 12px) !important;
+}
+.c97d14 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #323233;
+  text-align: left;
+  font-size: 16px;
+  font-weight: var(--theme-common-field-font-weight, bold);
+}
+.ae8d0 {
+  font-size: 14px;
+  color: #323233;
+  text-align: left;
+  margin-top: 2px;
+}
+.c3ef15 {
+  padding: 12px;
+}
+.c36b8b {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #323233;
+  text-align: left;
+  font-weight: var(--theme-common-field-font-weight, normal);
+}

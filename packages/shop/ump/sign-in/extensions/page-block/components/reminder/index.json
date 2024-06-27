@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-main/common/components/form-view/index",
+    "b": "/packages/shop/components/subscribe-fail-popup/index",
+    "c": "/packages/shop/@vant/weapp/dist/switch/index",
+    "_": "../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

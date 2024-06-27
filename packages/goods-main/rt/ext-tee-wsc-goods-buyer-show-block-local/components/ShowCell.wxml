@@ -1,0 +1,1 @@
+<a bind:_init="_tic" bind:tap="_p" border="{{false}}" class="buyer-show-cell" data-t="{{ tap:{en:'jumpPage'} }}" isLink="{{true}}" title="{{cellTitle}}" titleClass="b894e" value="查看全部" valueClass="c3b686"></a>

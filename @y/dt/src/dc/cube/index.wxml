@@ -1,0 +1,8 @@
+<view class="dc-cube" style="{{cubeStyle}}">
+    <view bind:tap="_p" class="item" data-t="{{ tap:{ en:'handleClick',args:[item] } }}" style="{{item.style}}" wx:for="{{cubeImgs}}" wx:key="imageId">
+        <button bind:contact="_p" businessId="{{extra.businessId||''}}" class="weapp-chat-btn" data-t="{{ contact:{en:'handleContactBack'} }}" disabled="{{!extra.sourceParam}}" openType="contact" sessionFrom="{{extra.sourceParam||''}}" style="{{customStyle}}" wx:if="{{item.linkType==='chat'}}">
+            <image class="image tee-image" lazyLoad="{{true}}" mode="aspectFill" src="{{item.imageUrl}}"></image>
+        </button>
+        <image class="image tee-image" lazyLoad="{{true}}" mode="aspectFill" src="{{item.imageUrl}}" wx:else></image>
+    </view>
+</view>

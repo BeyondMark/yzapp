@@ -1,0 +1,32 @@
+.pre-it {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.pre-it .it-l {
+  max-width: 77%;
+}
+.pre-it .it-l .title {
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.pre-it .it-l .expires {
+  color: #999;
+  padding-top: 5px;
+}
+.pre-it .pr-btn {
+  display: flex;
+  align-items: center;
+}
+.pre-it .pr-btn .arrow-icon {
+  width: 12px;
+  height: 12px;
+}
+.pre-it .h-re {
+  min-width: 72px;
+  color: #ccc;
+  font-size: 12px;
+}

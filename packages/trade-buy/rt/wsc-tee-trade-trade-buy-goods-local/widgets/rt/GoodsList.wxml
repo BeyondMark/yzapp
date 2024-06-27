@@ -1,0 +1,11 @@
+<view>
+    <view wx:if="{{!tradeTag.hasHotelGoods}}">
+        <c bind:_init="_tic" bind:changeNum="_p" count="{{formattedGoods.length}}" data-t="{{ changeNum:{en:'onChangeNum'} }}" good="{{item}}" index="{{index}}" rmId="{{rmId}}" startSaleNum="{{item.startSaleNum}}" wx:if="{{rmId==='b36-7'}}" wx:for="{{formattedGoods}}" wx:key="skuId"></c>
+        <a bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b36-7'}}"></a>
+        <d bind:_init="_tic" rmId="b36-10" wx:if="{{rmId==='b36-7'}}"></d>
+        <e activityIndex="{{index}}" activityInfo="{{item}}" allMeetReduceActivities="{{allMeetReduceActivities}}" bind:_init="_tic" bind:on-show="_p" data-t="{{ onShow:{en:'handleChangePresentPopup'} }}" wx:for="{{allMeetReduceActivities}}" wx:key="activityId"></e>
+    </view>
+    <block wx:if="{{!hasGoods}}">
+        <b bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b36-7'}}"></b>
+    </block>
+</view>

@@ -1,0 +1,5 @@
+<view wx:if="{{opt.show&&benefitData}}">
+    <b authTypeList="{{['mobile']}}" bind:_init="_tic" bind:next="_p" customStyle="width:100%;" data-t="{{ next:{en:'becomeFans'} }}" kdtId="{{opt.kdtId}}" type="separate">
+        <a actionText="{{benefitStatic.actionText}}" benefitData="{{benefitData}}" bind:_init="_tic" bind:become="_p" data-t="{{ become:{en:'becomeFans'} }}" iconText="{{benefitStatic.iconText}}" identityText="{{benefitStatic.identityText}}"></a>
+    </b>
+</view>

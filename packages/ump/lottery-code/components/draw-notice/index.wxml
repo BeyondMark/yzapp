@@ -1,0 +1,11 @@
+<view class="draw-notice">
+    <view class="draw-notice-time">距离开奖还剩<a bind:change="onChange" bind:finish="onFinish" class="time-section" time="{{remainTime}}" useSlot="{{true}}">
+            <text class="time-item__day" wx:if="{{days}}">{{days}}天</text>
+            <view class="time-section">
+                <text class="time-item">{{hours}}</text>:<text class="time-item">{{minutes}}</text>:<text class="time-item">{{seconds}}</text>
+            </view>
+        </a>
+    </view>
+    <view class="notice" wx:if="{{hasSubscribeAbility}}">{{reminderIsOpen?'关闭':'开启'}}开奖通知<b activeColor="#07c160" bind:change="onInput" checked="{{reminderIsOpen}}" customClass="notice-switch" inactiveColor="#c8c9cc" size="18px"></b>
+    </view>
+</view>

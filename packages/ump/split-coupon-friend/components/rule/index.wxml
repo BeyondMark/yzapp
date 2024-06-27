@@ -1,0 +1,10 @@
+<view class="rules-content">
+    <view bind:tap="toggleRules" class="rules-tag">规则</view>
+    <a bind:close="toggleRules" customClass="rules-popup" position="bottom" show="{{rulesVisible}}" title="活动规则">
+        <view class="popup-title">玩法规则</view>
+        <view class="rules">
+            <view class="rule" wx:for="{{rules}}" wx:key="index">{{index+1}}.{{item}}</view>
+        </view>
+        <button bind:tap="toggleRules" class="rules-btn">知道了</button>
+    </a>
+</view>

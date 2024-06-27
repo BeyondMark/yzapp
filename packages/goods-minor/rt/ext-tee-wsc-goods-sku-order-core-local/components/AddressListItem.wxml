@@ -1,0 +1,22 @@
+<view class="c77f0d">
+    <a bind:_init="_tic" bind:tap="_p" border="{{false}}" customClass="c167fa" data-t="{{ tap:{en:'onSelect'} }}" valueClass="c07a78">
+        <d bind:_init="_tic" checkedColor="var(--main-bg, #323233)" customClass="c06268" disabled="{{inactive}}" iconSize="16px" labelClass="c330c8" name="{{item.id}}" value="{{value}}" wx:if="{{switchable}}">
+            <view class="c0ceb6">{{item.address}}</view>
+            <view class="c5d2eb {{inactive?'address-item__inactive':''}}">
+                <b bind:_init="_tic" color="{{themeTag.plain?'var(--tag-bg)':'var(--main-bg, #f2f2ff)'}}" customClass="e9ab4" hairline="{{themeTag.plain}}" plain="{{themeTag.plain}}" round="{{true}}" textColor="{{themeTag.plain?'var(--tag-text)':'#fff'}}" wx:if="{{item.isDefault}}">          默认
+        </b>
+                <b bind:_init="_tic" color="{{themeTag.plain?'var(--tag-bg)':'var(--main-bg, #f2f2ff)'}}" customClass="e9ab4" hairline="{{themeTag.plain}}" plain="{{themeTag.plain}}" round="{{true}}" textColor="{{themeTag.plain?'var(--tag-text)':'#fff'}}" wx:if="{{item.label}}"> {{item.label}} </b> {{item.name}} {{item.tel}} </view>
+        </d>
+        <view wx:else>
+            <view class="c0ceb6">{{item.address}}</view>
+            <view class="c5d2eb {{inactive?'address-item__inactive':''}}"> {{item.name}} {{item.tel}} <b bind:_init="_tic" color="var(--main-bg, #f2f2ff)" customClass="e9ab4" round="{{true}}" textColor="#fff" type="danger" wx:if="{{item.isDefault}}">          默认
+        </b>
+                <b bind:_init="_tic" class="e9ab4-root" color="var(--tag-bg, #f2f2ff)" customClass="e9ab4" round="{{true}}" textColor="var(--tag-text, #323233)" wx:if="{{item.label}}"> {{item.label}} </b>
+            </view>
+        </view>
+        <c bind:_init="_tic" catch:tap="_p" customClass="d586e" data-t="{{ tap:{en:'onEdit',et:'stop'} }}" name="edit" slot="right-icon"></c>
+    </a>
+    <view catch:tap="_p" class="{{'defb4'}} {{switchable?'c4b107':''}}" data-t="{{ tap:{en:'onEdit',et:'stop'} }}" wx:if="{{showPoiPrompt}}">    为提高同城配送准确性，请进行地图定位选点
+    <c bind:_init="_tic" class="c1c77b" name="arrow"></c>
+    </view>
+</view>

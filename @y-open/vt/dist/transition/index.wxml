@@ -1,0 +1,3 @@
+<view bind:transitionend="_p" catch:tap="_p" class="t-transition {{classes}}" data-t="{{ tap:{en:'onClick',et:'stop'},transitionend:{en:'onTransitionEnd'} }}" style="{{style}}" wx:if="{{inited}}">
+    <slot></slot>
+</view>

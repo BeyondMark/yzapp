@@ -1,0 +1,14 @@
+<view>
+    <view class="c4e8e2 {{goaway?'goaway':''}}" style="bottom: {{bottom?bottom:''}}; transition: {{bottom?'all 0.2s':''}}; z-index: {{showGuide?999999:99}}" wx:if="{{showFloating}}">
+        <image bind:tap="toVideoList" class="eacd9" src="{{iconUrl}}"></image>
+    </view>
+    <a show="{{showGuide}}" zIndex="{{99999}}">
+        <view class="f072a" style=" bottom: {{bottom}};">
+            <image alt="引导图标" class="d46eb" src="{{guideImgUrl}}"></image>
+            <view class="c070b8">点这里，切换全屏模式</view>
+            <view class="e8c3f">上下滑动查看更多商品</view>
+            <view class="c26f23"></view>
+            <view bind:tap="onCloseGuide" class="c68b04">知道了</view>
+        </view>
+    </a>
+</view>

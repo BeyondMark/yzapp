@@ -1,0 +1,12 @@
+<a closeOnClickOverlay="{{false}}" customClass="order-pay-prompt-popup" show="{{open}}" zIndex="{{299}}">
+    <view class="order-pay-prompt-popup-container">
+        <view class="order-pay-prompt-popup-title">
+            <text class="order-pay-prompt-popup-title_text">{{orderInfo.title||'你有一份订单待支付'}}</text>
+        </view>
+        <c bindbtnevent="timeEndHandle" tip="{{orderInfo.descTemplate}}"></c>
+        <e evaluateList="{{orderInfo.evaluateList}}"></e>
+        <d goods="{{orderInfo.goods}}" orderPath="{{orderPath}}" payPrice="{{orderInfo.payPrice}}" wx:if="{{orderInfo.goods.length===1}}"></d>
+        <f goods="{{orderInfo.goods}}" orderPath="{{orderPath}}" payPrice="{{orderInfo.payPrice}}" wx:if="{{orderInfo.goods.length>1}}"></f>
+        <b bindbtnevent="btnEventHandle"></b>
+    </view>
+</a>

@@ -1,0 +1,8 @@
+<view bind:tap="_p" class="{{classes.root}}" data-t="{{ tap:{en:'onClick'} }}" style="{{styles.root}}">
+    <view class="t-slider__bar" style="{{styles.bar}}">
+        <view bind:touchcancel="_p" bind:touchend="_p" bind:touchstart="_p" catch:touchmove="_p" class="t-slider__button-wrapper" data-t="{{ touchstart:{en:'onTouchStart'},touchmove:{en:'onTouchMove',et:'stop'},touchend:{en:'onTouchEnd'},touchcancel:{en:'onTouchEnd'} }}">
+            <slot name="button" wx:if="{{useButtonSlot}}"></slot>
+            <view class="t-slider__button" wx:else></view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,54 @@
+<a bind:_init="_tic" customStyle="{{themeBackground5Style}}" isWxReceipt="{{isWxReceipt}}">
+    <view class="d6e16">
+        <view class="c59da8" style="{{isWxReceipt?'padding-left: 0;':''}}">
+            <view class="c75da6" wx:if="{{showCouponInfo}}">
+                <view class="c1f327">
+                    <d bind:_init="_tic" color="var(--ump-price, #323233)" curFontSize="{{30}}" isSkyline="{{isSkyline}}" item="{{curCouponText}}" maxWidth="{{100}}" minFontSize="{{12}}"></d>
+                </view>
+                <view class="a3714">{{couponInfo.thresholdCopywriting}}</view>
+            </view>
+            <view bind:tap="_p" data-t="{{ tap:{ en:'clickGoods',args:[goodsInfo] } }}" style="display: flex" wx:elif="{{showGoodsInfo}}">
+                <image class="cc5bf bd231" lazyLoad="true" src="{{goodsInfo.imageUrl}}"></image>
+                <view class="c9a036">
+                    <text bind:_init="_tic" class="c7b766 {{isSkyline?'':'c3cf16'}}" maxLines="2" overflow="ellipsis">{{goodsInfo.title}}</text>
+                    <view wx:if="{{goodsInfo.curPrice!==undefined}}">
+                        <text bind:_init="_tic" class="c6468f c7a237" overflow="visible">价格￥{{goodsInfo.price}}</text>
+                        <view class="c72a9 c6468f" style="color: var(--ump-price, #323233)">
+                            <e bind:_init="_tic" isSkyline="{{isSkyline}}" prefix="券后价" price="{{goodsInfo.curPrice+''}}"></e>
+                        </view>
+                    </view>
+                    <view class="c72a9 c6468f" style="color: var(--ump-price, #323233)" wx:else>
+                        <e bind:_init="_tic" price="{{goodsInfo.price+''}}"></e>
+                    </view>
+                </view>
+            </view>
+            <view wx:else>
+                <view class="c89585">可用于以下商品</view>
+                <view class="c192d5">
+                    <view bind:tap="_p" class="{{'c7c98b'}} {{index>0?'c6ad5b':''}}" data-t="{{ tap:{ en:'clickGoods',args:[item] } }}" wx:for="{{curGoods}}" wx:key="index">
+                        <view wx:if="{{item.imageUrl}}">
+                            <image class="b798a bd231" lazyLoad="true" src="{{item.imageUrl}}"></image>
+                            <view class="c78a5e c6468f">¥{{item.price}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="c56e03">
+            <view class="de97e d25a4"></view>
+            <view class="de97e ea130"></view>
+            <view class="c97262 c89585">
+                <d bind:_init="_tic" color="var(--ump-price, #323233)" curFontSize="{{30}}" isSkyline="{{isSkyline}}" item="{{curCouponText}}" maxWidth="{{90}}" minFontSize="{{12}}" wx:if="{{!showCouponInfo}}"></d>
+            </view>
+            <view class="aa9f7 c6468f" wx:if="{{!showCouponInfo}}">{{curCoupon.thresholdCopywriting}}</view>
+            <b bind:_init="_tic" bind:tap="_p" customClass="ce50a" data-t="{{ tap:{en:'clickBtn'} }}" loading="{{loading}}" round="{{true}}" size="small">{{!isReceived?'立即领取':'立即使用'}}</b>
+            <c bind:_init="_tic" bind:change="_p" data-t="{{ change:{en:'onChange'} }}" time="{{downTime}}" useSlot="{{true}}" wx:if="{{showDownTime}}">
+                <view class="d5f7f" style="color :var(--ump-icon, #323233)"> {{downTimeStr}} </view>
+            </c>
+            <view class="f2acd" wx:if="{{isReceived}}">
+                <view class="cee51">          已领
+        </view>
+            </view>
+        </view>
+    </view>
+</a>

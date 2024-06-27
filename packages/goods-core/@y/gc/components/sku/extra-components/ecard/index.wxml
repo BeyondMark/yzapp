@@ -1,0 +1,7 @@
+<view class="ecard-extra" wx:if="{{opt.ecard}}">
+    <view class="c763ff" wx:if="{{showInstructions}}">
+        <view class="c961d8">卡券使用说明</view>
+        <view wx:for="{{opt.ecard.instructions}}" wx:key="item">{{item}}</view>
+    </view>
+    <a activeDateId="{{selectedDate.id}}" activeMonth="{{activeMonth}}" bind:_init="_tic" bind:select-date="_p" bind:select-month="_p" calendarData="{{calendarData}}" data-t="{{ selectMonth:{en:'onMonthSelect'},selectDate:{en:'onDateSelect'} }}" itemPreOrderTimeStr="{{opt.ecard.itemPreOrderTimeStr}}" wx:if="{{opt.ecard.isPriceCalendar}}"></a>
+</view>

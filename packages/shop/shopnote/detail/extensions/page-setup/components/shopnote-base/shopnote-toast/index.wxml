@@ -1,0 +1,27 @@
+<a bind:close="closeClick" customStyle="max-height:78vh;height:auto" position="bottom" round="{{true}}" show="{{show}}">
+    <view class="note-article-product">
+        <view class="note-article-product__title">
+            <view class="note-article-product__title-main">文中商品</view>
+            <view bindtap="closeClick" class="note-article-product__title-close">
+                <view class="icon-cross"></view>
+            </view>
+        </view>
+        <b type="default">
+            <view bindtap="gotoBuy" class="note-article-product__content" data-index="{{index}}" wx:for="{{list}}" wx:key="index">
+                <view class="note-article-product__content-item">
+                    <view>
+                        <image alt="" class="note-article-product__content-item--image" src="{{item.image_url}}"></image>
+                    </view>
+                    <view class="note-article-product__content-item--right">
+                        <view class="note-article-product__content-item--right-des">{{item.title}}</view>
+                        <view class="note-article-product__content-item--right-bottom">
+                            <view class="note-article-product__content-item--right-bottom-price" style="color:{{themeColor}}">
+                                <view class="unit">¥</view>{{item.price}}</view>
+                            <view class="note-article-product__content-item--right-bottom-button" style="background-color:{{themeColor}}">购买</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </b>
+    </view>
+</a>

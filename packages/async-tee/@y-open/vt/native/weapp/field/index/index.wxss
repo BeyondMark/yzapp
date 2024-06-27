@@ -1,0 +1,135 @@
+.t-field {
+  --cell-icon-size: 16px;
+}
+.t-field__body {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.t-field__body--textarea {
+  line-height: 1.2em;
+  min-height: 24px;
+}
+.t-field__input {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  text-align: left;
+  background-color: initial;
+  border: 0;
+  resize: none;
+  color: #323233;
+  height: 24px;
+  min-height: 24px;
+  font-size: inherit;
+  outline: none;
+}
+.t-field__input--textarea {
+  height: 18px;
+  min-height: 18px;
+}
+.t-field__input--error {
+  color: #ee0a24;
+}
+.t-field__input--disabled {
+  background-color: initial;
+  opacity: 1;
+  color: #c8c9cc;
+  -webkit-text-fill-color: #c8c9cc;
+}
+.t-field__input--center {
+  text-align: center;
+}
+.t-field__input--right {
+  text-align: right;
+}
+.t-field__input::-webkit-input-placeholder {
+  pointer-events: none;
+  color: #c8c9cc;
+  -webkit-text-fill-color: #c8c9cc;
+}
+.t-field__input::placeholder,
+.t-field__placeholder {
+  pointer-events: none;
+  color: #c8c9cc;
+  -webkit-text-fill-color: #c8c9cc;
+}
+.t-field__input::-webkit-input-placeholder--error {
+  color: #ee0a24;
+}
+.t-field__input::placeholder--error,
+.t-field__placeholder--error {
+  color: #ee0a24;
+}
+.t-field__input--error::-webkit-input-placeholder {
+  color: #ee0a24;
+  -webkit-text-fill-color: #ee0a24;
+}
+.t-field__input--error::placeholder {
+  color: #ee0a24;
+  -webkit-text-fill-color: #ee0a24;
+}
+.t-field__icon-root {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  min-height: 24px;
+}
+.t-field__clear-root,
+.t-field__icon-container {
+  line-height: inherit;
+  vertical-align: middle;
+  padding: 0 8px;
+  margin-right: -8px;
+}
+.t-field__button,
+.t-field__clear-root,
+.t-field__icon-container {
+  flex-shrink: 0;
+}
+.t-field__clear-root {
+  font-size: 16px;
+  color: #c8c9cc;
+}
+.t-field__icon-container {
+  font-size: 16px;
+  color: #969799;
+}
+.t-field__icon-container:empty {
+  display: none;
+}
+.t-field__button {
+  padding-left: 8px;
+}
+.t-field__button:empty {
+  display: none;
+}
+.t-field__error-message {
+  text-align: left;
+  font-size: 12px;
+  color: #ee0a24;
+}
+.t-field__error-message--center {
+  text-align: center;
+}
+.t-field__error-message--right {
+  text-align: right;
+}
+.t-field__word-limit {
+  text-align: right;
+  margin-top: 4px;
+  color: #646566;
+  font-size: 12px;
+  line-height: 16px;
+}
+.t-field__word-num {
+  display: inline;
+}
+.t-field__word-num--full {
+  color: #ee0a24;
+}

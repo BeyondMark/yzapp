@@ -1,0 +1,83 @@
+.t-text {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.cashier-pre__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  line-height: 22px;
+}
+.cashier-pre__header-icon {
+  position: absolute !important;
+  z-index: 1;
+  color: #c8c9cc;
+  font-size: 22px;
+  cursor: pointer;
+  top: 16px;
+}
+.cashier-pre__header-icon--left {
+  left: 16px;
+}
+.cashier-pre__header-icon--right {
+  right: 16px;
+}
+.cashier-pre__title {
+  font-size: 16px;
+  font-weight: 500;
+}
+.pay-passer__root {
+  z-index: 120;
+}
+.pay-passer__root .t-popup__close-icon {
+  position: absolute !important;
+}
+.pay-passer__container {
+  min-height: 400px;
+}
+.pay-passer__header {
+  padding: 16px;
+  line-height: 22px;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+}
+.pay-passer__header-icon {
+  position: absolute !important;
+  z-index: 1;
+  color: #c8c9cc;
+  font-size: 22px;
+  cursor: pointer;
+  top: 16px;
+  left: 16px;
+}
+.pay-passer__header-content {
+  font-weight: 500;
+}
+.pay-passer__header--center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pay-passer__content {
+  padding: 38px 16px 0;
+  box-sizing: border-box;
+  position: relative;
+  padding-bottom: 282px;
+}
+.pay-passer__forget-link {
+  font-size: 12px;
+  line-height: 16px;
+  position: absolute;
+  top: 98px;
+  right: 20px;
+}
+.pay-passer__forget-link,
+.pay-passer__forget-link:active,
+.pay-passer__forget-link:hover,
+.pay-passer__forget-link:link,
+.pay-passer__forget-link:visited {
+  color: #3b69d2;
+  text-decoration: none;
+}

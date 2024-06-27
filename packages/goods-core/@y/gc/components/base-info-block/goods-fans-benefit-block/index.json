@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./ump-benefit",
+    "b": "/@y/ppt/lib/user-authorize/index",
+    "_": "../../../../../../../components/_/index"
+  }
+}

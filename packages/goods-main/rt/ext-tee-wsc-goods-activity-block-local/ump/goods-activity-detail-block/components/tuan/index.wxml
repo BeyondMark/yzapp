@@ -1,0 +1,15 @@
+<view class="c8cac8">
+    <a bind:_init="_tic" bind:tap="_p" border="{{false}}" customClass="c87f41" data-t="{{ tap:{en:'showPopUp'} }}" isLink="{{true}}" title="团购返现玩法" titleClass="c0dadb" value="{{soldCount}}"></a>
+    <view class="c7ca8e">
+        <view class="c68240 {{item.active?'c6f890':''}}" wx:for="{{showRules}}" wx:for-index="i" wx:key="i">
+            <view class="ff853">
+                <view class="c07c3d">售满{{item.min}}件</view>
+                <view class="c4cb4d">每件返{{item.value/100}}元</view>
+            </view>
+            <view class="c9131a" wx:if="{{!item.last}}"></view>
+        </view>
+    </view>
+    <b bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'hidePopUp'} }}" show="{{showActivityPop}}" title="{{tuanIntroBarTitle}}">
+        <c activity="{{activity}}" bind:_init="_tic"></c>
+    </b>
+</view>

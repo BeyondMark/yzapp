@@ -1,0 +1,14 @@
+<view class="start-date" wx:if="{{showStartTime}}">
+    <view class="start-date__time">
+        <text class="start-date__time-label">距离活动开始时间：</text>
+        <a bind:change="timeChange" time="{{countDownTime}}" useSlot="{{true}}">
+            <text class="block time-block" wx:if="{{timeData.days}}">{{timeData.days}}</text>
+            <text class="time-split" wx:if="{{timeData.days}}">天</text>
+            <text class="block time-block">{{timeData.hours}}</text>
+            <text class="colon time-split">:</text>
+            <text class="block time-block">{{timeData.minutes}}</text>
+            <text class="colon time-split">:</text>
+            <text class="block time-block">{{timeData.seconds}}</text>
+        </a>
+    </view>
+</view>

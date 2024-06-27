@@ -1,0 +1,18 @@
+<view class="radio-field">
+    <b bind:_init="_tic" bind:tap="_p" class="{{fieldValue!==''?'black-field':''}}" customStyle="{{fieldStyle}}" data-t="{{ tap:{en:'openPopup'} }}" disabled="{{true}}" isLink="{{true}}" label="{{fieldLabel}}" placeholder="{{fieldInfo.placeholder}}" value="{{fieldValue}}"></b>
+    <c bind:_init="_tic" bind:click-overlay="_p" class="radio-popup" customStyle="{{popupStyle}}" data-t="{{ clickOverlay:{en:'closePopup'} }}" position="bottom" show="{{showPopup}}" zIndex="10000">
+        <view class="options-header">      请选择
+      <a bind:_init="_tic" bind:tap="_p" class="options-header-icon" data-t="{{ tap:{en:'closePopup'} }}" name="cross"></a>
+        </view>
+        <view class="radioActionsheet__wrap" style="{{radioListStyle}}">
+            <view class="radioActionsheet__bd">
+                <view bind:tap="_p" class="{{'radioActionsheet__item'}} {{item===fieldValue?'radioActionsheet__item--active':''}}" data-t="{{ tap:{ en:'confirm',args:[item] } }}" wx:for="{{fieldInfo.itemValueList}}" wx:key="item">
+                    <view class="radioActionsheet__checkbox" style="{{'color:'+(item===fieldValue?themeColors.general:'')}}">
+                        <a bind:_init="_tic" customClass="van-icon-success" name="success" wx:if="{{item===fieldValue}}"></a>
+                    </view>
+                    <view>{{item}}</view>
+                </view>
+            </view>
+        </view>
+    </c>
+</view>

@@ -1,0 +1,6 @@
+<a bind:close="onClose" show="{{showFeature}}">
+    <view class="tips">浏览以下页面30秒</view>
+    <view class="feature-list">
+        <b bind:click="toFeature" btnText="{{feature.status?'已完成':'去看看'}}" data-alias="{{feature.pageAlias}}" disabled="{{!!feature.status}}" icon="{{feature.status?completeIcon:toViewIcon}}" nextDesc="个幸运码" num="{{feature.winTicketNums}}" preDesc="奖励" title="{{feature.title}}" wx:for="{{featureList}}" wx:for-item="feature" wx:key="{{ index }}"></b>
+    </view>
+</a>

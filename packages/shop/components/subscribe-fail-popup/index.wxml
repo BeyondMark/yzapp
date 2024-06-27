@@ -1,0 +1,15 @@
+<c bind:close="onClose" closeOnClickOverlay="{{true}}" customClass="subscribe-fail-popup" position="bottom" round="{{true}}" show="{{show}}">
+    <view class="subscribe-fail-popup__content">
+        <view class="header">
+            <view class="title">订阅失败</view>
+            <view class="sub-title">重新获取订阅方法</view>
+        </view>
+        <view class="step-line">1. 点击小程序右上角<a customClass="desc__icon" name="icon-collect-gift-share-icon"></a>
+        </view>
+        <view class="step-line">2. 点击“设置”<image class="desc__img" mode="aspectFit" src="https://img01.yzcdn.cn/public_files/2019/12/19/f046dfdc7c2f0cdd9290d29266edd838.png"></image>
+        </view>
+        <view class="step-line">3. 选择订阅消息，并打开“接受订阅消息”开关<image class="desc__img" mode="aspectFit" src="{{openImageSrc}}"></image>
+        </view>
+        <b bind:tap="onClose" customClass="confirm-button">我知道了</b>
+    </view>
+</c>

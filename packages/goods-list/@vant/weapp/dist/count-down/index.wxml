@@ -1,0 +1,4 @@
+<view class="cae4d">
+    <slot wx:if="{{useSlot}}"></slot>
+    <block wx:else>{{formattedTime}}</block>
+</view>

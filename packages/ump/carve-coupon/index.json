@@ -1,0 +1,13 @@
+{
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "a": "/pages/common/page-container/index",
+    "b": "./components/activity-card/index",
+    "c": "./components/activity-pop/index",
+    "d": "./components/goods-list/index",
+    "e": "./components/header/index",
+    "f": "./components/user-list/index",
+    "g": "./components/avatar-list/index",
+    "_": "../../../components/_/index"
+  }
+}

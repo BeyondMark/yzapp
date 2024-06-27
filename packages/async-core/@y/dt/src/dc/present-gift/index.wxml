@@ -1,0 +1,3 @@
+<view bind:tap="_p" class="dc-present-gift" data-t="{{ tap:{en:'handleClick'} }}">
+    <image class="image tee-image" lazyLoad="true" mode="widthFix" src="{{opt.imageUrl}}"></image>
+</view>

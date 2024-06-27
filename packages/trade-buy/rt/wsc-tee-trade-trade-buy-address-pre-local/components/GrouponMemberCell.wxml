@@ -1,0 +1,10 @@
+<view class="c4cf49" wx:if="{{grouponModel.showGrouponMember}}">
+    <c bind:_init="_tic" bind:tap="_p" border="{{false}}" center="{{true}}" customClass="c4ea6" data-t="{{ tap:{en:'onClickMemberTip'} }}" valueClass="e52a9">
+        <view class="c5a018"> {{textConfig.headerTitle}} <a bind:_init="_tic" catch:tap="_p" class="c4c147" customClass="c4c147" customStyle="{{isWeapp?'bottom: 1px;':''}}" data-t="{{ tap:{en:'showPop',et:'stop'} }}" name="info-o"></a>
+        </view>
+        <d bind:_init="_tic" checkedColor="{{checkedColor}}" customClass="e25f4" iconSize="14" slot="icon" value="{{grouponModel.isChecked}}" wx:if="{{grouponOptionalReceive}}"></d>
+    </c>
+    <b bind:_init="_tic" bind:close="_p" buttonText="知道了" data-t="{{ close:{en:'hidePop'} }}" show="{{popVisible}}" themeColors="{{themeColors}}" title="团长代收">
+        <view>{{textConfig.popContent}}</view>
+    </b>
+</view>

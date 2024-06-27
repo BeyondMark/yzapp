@@ -1,0 +1,18 @@
+<b bind:_init="_tic" bind:after-leave="_p" bind:close="_p" class="mo-popup" closeable="{{true}}" data-t="{{ close:{en:'onPopupClose'},afterLeave:{en:'handleAfterClose'} }}" position="bottom" round="{{true}}" safeAreaInsetBottom="{{true}}" show="{{showPopup}}">
+    <view class="mo-container" style="{{themeVars}}">
+        <view class="header-wrap">
+            <view class="mo-title">
+                <c bind:_init="_tic" class="mo-title-icon" color="#07C160" name="checked" size="18px"></c>        加入购物车成功
+      </view>
+            <view class="mo-tips">为你推荐优惠组合，省钱又省时</view>
+        </view>
+        <view class="combo-list-wrap" data-ref="comboWrap">
+            <view class="mo-combo-list">
+                <a bind:_init="_tic" bind:go-to-cart="_p" bind:popup-close="_p" combo="{{item}}" ctx="{{ctxObj}}" data-t="{{ goToCart:{en:'goToCart'},popupClose:{en:'handleClose'} }}" index="{{index}}" kdtId="{{kdtId}}" offlineId="{{offlineId}}" wx:for="{{comboList}}" wx:key="recommendType"></a>
+            </view>
+        </view>
+        <view class="button_wrap">
+            <button bind:tap="_p" class="mo-cart-btn" data-t="{{ tap:{en:'handleGoCartClick'} }}">去购物车</button>
+        </view>
+    </view>
+</b>

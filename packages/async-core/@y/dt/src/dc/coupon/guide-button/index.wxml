@@ -1,0 +1,25 @@
+<view>
+    <a authTypeList="{{authTypeList}}" bind:_init="_tic" bind:next="_p" customStyle="width: 100%; height: 100%;" data-t="{{ next:{en:'buttonClick'} }}" kdtId="{{kdtId}}" scene="{{authorizeScene}}" type="separate" wx:if="{{authorizeScene!==''||authTypeList.length>0}}">
+        <slot></slot>
+    </a>
+    <view bind:tap="_p" data-t="{{ tap:{en:'buttonClick'} }}" wx:else>
+        <slot></slot>
+    </view>
+    <c bind:_init="_tic" customClass="popup-content" customStyle="{{customStyle}}" round="{{true}}" show="{{showPop}}" wx:if="{{isAutoGuide}}">
+        <view class="popup-container" wx:if="{{!hasPopupSlot}}">
+            <view class="popup-container__title">{{popupTitle}}</view>
+            <view class="popup-container__msg">当前身份不满足条件</view>
+        </view>
+        <slot name="popup-container" wx:else></slot>
+        <view bind:tap="_p" class="popup-button" data-t="{{ tap:{en:'onCancel'} }}">
+            <b bind:_init="_tic" customClass="popup-button-cancel" type="default" wx:if="{{!hasPopupSlot}}">取消</b>
+            <slot name="popup-button-cancel" wx:else></slot>
+        </view>
+        <view class="popup-button">
+            <a authTypeList="{{['mobile']}}" bind:_init="_tic" bind:next="_p" data-t="{{ next:{en:'onConfirm'} }}" kdtId="{{kdtId}}" type="separate">
+                <b bind:_init="_tic" customClass="popup-button-main" type="default" wx:if="{{!hasPopupSlot}}">{{confirmButtonText}}</b>
+                <slot name="popup-button-main" wx:else></slot>
+            </a>
+        </view>
+    </c>
+</view>

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../components/video/video",
+    "_": "../../../../../../../../../components/_/index"
+  }
+}

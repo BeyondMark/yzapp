@@ -1,0 +1,19 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./home",
+    "b": "./all",
+    "c": "./pay-passer",
+    "d": "./pay-login",
+    "e": "./pay-method",
+    "f": "./copy-link",
+    "g": "../../../@y/cashier-tee-components/dist/offline-pay-form",
+    "h": "../../../@y/cashier-tee-components/dist/captcha-pad",
+    "i": "/@y-open/vt/dist/popup/index.weapp",
+    "j": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "k": "/packages/async-tee/@y-open/vt/native/weapp/toast/index/index",
+    "l": "/packages/async-tee/@y-open/vt/native/weapp/dialog/index/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "j": "_", "k": "_", "l": "_" }
+}

@@ -1,0 +1,10 @@
+<a bind:_init="_tic" bind:close="_p" bodyBackgroundColor="#fff" buttonText="知道了" customClass="fans-dialog" data-t="{{ close:{en:'onClose'} }}" show="{{show}}" themeColors="{{themeColors}}" title="{{title}}">
+    <c bind:_init="_tic" border="{{false}}" class="e2ba1">
+        <view class="c40aeb" slot="title">
+            <b bind:_init="_tic" class="c0f300" color="{{themeColors['ump-tag-bg']}}" round="{{true}}" slot="icon"> {{title}} </b>
+            <view class="a5c0c">{{fansBenefit.title}}</view>
+        </view>
+        <view class="fans-dialog__value" wx:if="{{fansBenefit.value}}"> {{fansBenefit.value>0?'-':'+'}} ¥
+      {{price}} </view>
+    </c>
+</a>

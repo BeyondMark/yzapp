@@ -1,0 +1,70 @@
+.registration-guide-coupon-container {
+  display: -webkit-flex;
+  display: flex;
+}
+.short .discount-box {
+  width: 100%;
+  flex-flow: column;
+}
+.discount-box {
+  position: relative;
+  text-align: center;
+  min-width: 108px;
+  padding: 6px 0 8px 0;
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 64px;
+  box-sizing: border-box;
+}
+.discount-box .discount-body {
+  height: 34px;
+  overflow: hidden;
+  font-size: 12px;
+  width: 100%;
+}
+.discount-box .discount-body-prefix,
+.discount-box .discount-body-unit,
+.discount-box .discount-body-value {
+  display: inline;
+  line-height: 34px;
+}
+.discount-box .discount-body-value {
+  font-size: 26px;
+  font-weight: 600;
+  white-space: nowrap;
+  margin-right: 2px;
+}
+.content-box {
+  position: relative;
+  flex: 1;
+  padding: 12px;
+}
+.content-box:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 18px;
+  height: 26px;
+  border-left: 1px dashed;
+  color: inherit;
+  transform: scaleY(1.7);
+  opacity: 0.2;
+}
+.content-body-content {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 6px;
+}
+.amount {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  line-height: 16px;
+  font-size: 12px;
+  padding: 0 4px;
+  border-radius: 0 4px 0 4px;
+}

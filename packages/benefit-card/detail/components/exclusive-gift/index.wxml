@@ -1,0 +1,20 @@
+<view class="pre-it" wx:if="{{gifts&&gifts.length}}">
+    <view class="it-l">
+        <view class="title">{{gifts[0].cocGoodsInfo&&gifts[0].cocGoodsInfo.title}}</view>
+        <view class="expires">{{gifts[0].expirationDate}}天内领取有效</view>
+    </view>
+    <view wx:if="{{hasCarrier}}">
+        <block wx:if="{{cardIsExpired}}">
+            <view class="h-re" wx:if="{{cardIsExpired}}">过期无法领取</view>
+        </block>
+        <block wx:else>
+            <view bindtap="takePresent" class="pr-btn" style="color: {{themeGeneral}}" wx:if="{{gifts[0].status===statusMap.unTaken}}">
+                <view>{{gifts[0].number}}份待领取</view>
+                <a class="arrow-icon" name="arrow"></a>
+            </view>
+            <view class="h-re" wx:if="{{gifts[0].status===statusMap.received}}">已领取</view>
+            <view class="h-re" wx:if="{{[statusMap.expired,statusMap.deleted].includes(gifts[0].status)===statusMap.deleted}}">过期无法领取</view>
+        </block>
+    </view>
+    <view wx:else>{{gifts[0].number}}份</view>
+</view>

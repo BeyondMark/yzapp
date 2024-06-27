@@ -1,0 +1,10 @@
+<button appParameter="{{appParameter}}" ariaLabel="{{ariaLabel}}" bind:agreeprivacyauthorization="_p" bind:chooseavatar="_p" bind:contact="_p" bind:error="_p" bind:getphonenumber="_p" bind:getuserinfo="_p" bind:launchapp="_p" bind:opensetting="_p" businessId="{{businessId}}" catch:tap="_p" class="{{'t-button'}} {{'t-button--'+type}} {{'t-button--'+size}} {{block?'t-button--block':''}} {{round?'t-button--round':''}} {{plain?'t-button--plain':''}} {{square?'t-button--square':''}} {{loading?'t-button--loading':''}} {{disabled?'t-button--disabled':''}} {{hairline?'t-button--hairline':''}} {{disabled||loading?'t-button--unclickable':''}} {{customClass}}" data-detail="{{dataset}}" data-t="{{ tap:{en:'onClick',et:'stop'},getuserinfo:{en:'bindGetUserInfo'},contact:{en:'bindContact'},getphonenumber:{en:'bindGetPhoneNumber'},error:{en:'bindError'},launchapp:{en:'bindLaunchApp'},opensetting:{en:'bindOpenSetting'},chooseavatar:{en:'bindChooseAvatar'},agreeprivacyauthorization:{en:'bindAgreePrivacyAuthorization'} }}" hoverClass="t-button--active hover-class" id="{{buttonId}}" lang="{{lang}}" openType="{{disabled?'':openType}}" phoneNumberNoQuotaToast="{{phoneNumberNoQuotaToast}}" sendMessageImg="{{sendMessageImg}}" sendMessagePath="{{sendMessagePath}}" sendMessageTitle="{{sendMessageTitle}}" sessionFrom="{{sessionFrom}}" showMessageCard="{{showMessageCard}}" style="{{baseStyle}}">
+    <view class="t-button__content">
+        <b bind:_init="_tic" color="{{loadingColor}}" customClass="loading-class" size="{{loadingSize}}" type="{{loadingType}}" wx:if="{{loading}}"></b>
+        <view class="t-button__loading-text" wx:if="{{loading&&loadingText}}">{{loadingText}}</view>
+        <a bind:_init="_tic" class="t-button__icon" customStyle="line-height: inherit;" name="{{icon}}" size="1.2em" wx:if="{{!loading&&icon}}"></a>
+        <view class="t-button__text {{textClass}}" style="{{textStyle}}" wx:if="{{!loading}}">
+            <slot></slot>
+        </view>
+    </view>
+</button>

@@ -1,0 +1,17 @@
+<view class="{{skuRowClass}}">
+    <view class="c6edef"> {{skuRow.k}} <view class="c516ee c89585" wx:if="{{skuRow.isMultiple}}">（可多选）</view>
+    </view>
+    <view class="{{'c2210f'}} {{isScroll?'c4ce20':''}}" data-ref="scroll" id="scroll">
+        <scroll-view bind:scroll="_p" class="c8baf2" data-t="{{ scroll:{en:'onScroll'} }}" scrollX="{{true}}" wx:if="{{isScroll}}">
+            <view class="c8baf2-content" style="{{'width:'+width}}">
+                <slot></slot>
+            </view>
+        </scroll-view>
+        <slot wx:else></slot>
+    </view>
+    <view class="c1a62c" wx:if="{{showIndicator}}">
+        <view class="df73a">
+            <view class="c153b0" style="{{indicatorStyle}}"></view>
+        </view>
+    </view>
+</view>

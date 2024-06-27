@@ -1,0 +1,43 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.c47e73 {
+  position: relative;
+  display: block;
+  margin: 0 auto 8px;
+  width: 100%;
+  margin-top: 12px;
+  padding: 0 16px;
+  font-size: 14px;
+  line-height: 14px;
+  color: #323233;
+  text-align: center;
+  font-weight: 500;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+.c47e73:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  border: 0 solid #e5e5e5;
+  border-top-width: 1px;
+  transform: scaleY(0.5);
+  width: auto;
+  top: 50%;
+  left: 16px;
+  right: 16px;
+}
+.c2d5ad {
+  z-index: 99;
+  position: relative;
+  padding: 0 20px;
+}

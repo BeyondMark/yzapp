@@ -1,0 +1,28 @@
+<c bindclosed="onClose" closeOnClickOverlay="{{true}}" customClass="select-shop-popup" customStyle="height: 410px;overflow: hidden;" position="bottom" show="{{show}}">
+    <view class="select-shop-popup-header">
+        <view class="title">选择店铺</view>
+        <view class="search-container">
+            <view class="search-input-container">
+                <a class="search-icon" name="search"></a>
+                <input bindconfirm="searchCardSellShop" bindfocus="handleOnFocus" bindinput="handleInputChange" class="search-input" confirmType="search" placeholder="请输入店铺名称" value="{{keyword}}"></input>
+            </view>
+            <text bindtap="handleCloseCancel" class="cancel-btn" wx:if="{{cancelVisible}}">取消</text>
+        </view>
+    </view>
+    <view class="shop-list">
+        <view bindtap="toggleSelectedShop" class="{{selectedShop.kdtId===item.kdtId?'selected-item van-hairline--bottom shop-item':'van-hairline--bottom shop-item'}}" data-shop="{{item}}" wx:for="{{shopList}}" wx:key="kdtId">
+            <view>
+                <text catchtap="toggleSelectedShop" class="shop-name" data-shop="{{item}}">{{item.shopName}}</text>
+                <span class="current-shop-tag" wx:if="{{kdtId===item.kdtId}}">当前店铺</span>
+            </view>
+            <b color="main-bg">
+                <a customStyle="display: {{selectedShop.kdtId===item.kdtId?'block':'none'}};font-size: 22px;height: 18px;width: 22px;" name="success"></a>
+            </b>
+        </view>
+    </view>
+    <view class="theme-view-wrap">
+        <b bg="main-bg" border="main-bg" color="main-text">
+            <d bind:click="handleConfirmSelected" block="{{true}}" customClass="confirm-btn theme-view-button" disabled="{{!(selectedShop&&selectedShop.kdtId)}}" round="{{true}}" type="danger">确定</d>
+        </b>
+    </view>
+</c>

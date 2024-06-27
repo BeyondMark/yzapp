@@ -1,0 +1,7 @@
+<b bind:_init="_tic" class="c19e6f">
+    <c bind:_init="_tic" bind:tap="_p" data-t="{{ tap:{en:'showEvaluationList'} }}" tags="{{tags}}"></c>
+    <a bind:_init="_tic" bind:tap="_p" class="d47c5" data-t="{{ tap:{en:'showEvaluationList'} }}" wx:for="{{list}}" wx:key="id">
+        <e bind:_init="_tic" item="{{item}}" memberLabel="{{memberLabel}}" themeTag="{{themeTag}}"></e>
+        <d bind:_init="_tic" bind:click-img-on-disabled="_p" content="{{item.content}}" data-t="{{ clickImgOnDisabled:{en:'showEvaluationList'} }}" images="{{item.picturesList}}" skuDesc="{{item.specification}}"></d>
+    </a>
+</b>

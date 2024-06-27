@@ -1,0 +1,5 @@
+<view>
+    <view class="c26969" style="{{style}}">
+        <image bind:tap="handleClick" class="c85e47" src="https://img01.yzcdn.cn/upload_files/2024/04/15/FgXGbwSRpAnweQYf56sZQPwg6KoK.png"></image>
+    </view>
+</view>

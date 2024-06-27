@@ -1,0 +1,23 @@
+.van-sku-stepper-stock {
+  padding: 12px 0;
+  margin-left: 16px;
+}
+.van-sku-stepper-container {
+  height: 30px;
+  margin-right: 16px;
+}
+.van-sku__stepper {
+  float: right;
+}
+.van-sku__stepper-title {
+  float: left;
+  line-height: 30px;
+  font-size: 14px;
+}
+.van-sku__quota {
+  color: #f44;
+  font-size: 12px;
+  float: right;
+  line-height: 30px;
+  margin-right: 8px;
+}

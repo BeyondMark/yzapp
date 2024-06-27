@@ -1,0 +1,23 @@
+<view class="c527d3">
+    <view class="c49f77 detail__bonus" wx:if="{{bonusAmountRights.bonusAmount}}">    送{{bonusAmountRights.bonusAmount_FormatePrice}}元
+    <view class="c3889f c89585" wx:if="{{bonusAmountRights.bonusValidType===1}}">      （到账{{bonusAmountRights.bonusValidPeriod}}个月后失效）
+    </view>
+        <view class="c3889f c89585" wx:if="{{bonusAmountRights.suffix}}"> {{bonusAmountRights.suffix}} </view>
+    </view>
+    <block wx:if="{{couponRights.length}}">
+        <view class="{{'c49f77 item__coupon'}} {{coupon.invalidText_FormatClass}}" wx:for="{{couponRights}}" wx:for-item="coupon" wx:key="couponId">      送{{coupon.count}} 张 {{coupon.slogan||coupon.couponName}} <view class="c02255" wx:if="{{!!coupon.invalidText}}"> {{coupon.invalidText_FormatText}} </view>
+            <view class="c3889f" wx:if="{{coupon.suffix}}"> {{coupon.suffix}} </view>
+        </view>
+    </block>
+    <view class="{{'c49f77 item__present'}} {{presentRights.invalidText_FormatClass}}" wx:if="{{presentRights.presentName}}">    送1份{{presentRights.presentName}} <view class="c02255" wx:if="{{!!presentRights.invalidText}}"> {{presentRights.invalidText_FormatText}} </view>
+    </view>
+    <view class="c49f77 rights__points" wx:if="{{pointRights.point}}">    送{{pointRights.point}} {{pointRights.customPointName||'积分'}} <view class="c3889f c89585" wx:if="{{pointRights.suffix}}"> {{pointRights.suffix}} </view>
+    </view>
+    <block wx:if="{{memberCardRights.length}}">
+        <view class="{{'c49f77 item__member'}} {{member.invalidText_FormatClass}}" wx:for="{{memberCardRights}}" wx:for-item="member" wx:key="cardId">      送1张{{member.cardName}} <view class="c02255" wx:if="{{!!member.invalidText}}"> {{member.invalidText_FormatText}} </view>
+        </view>
+    </block>
+    <view class="c49f77 detail__growth" wx:if="{{growthPointRights.growthPoint}}">    送{{growthPointRights.growthPoint}}成长值
+    <view class="c3889f c89585" wx:if="{{growthPointRights.suffix}}"> {{growthPointRights.suffix}} </view>
+    </view>
+</view>

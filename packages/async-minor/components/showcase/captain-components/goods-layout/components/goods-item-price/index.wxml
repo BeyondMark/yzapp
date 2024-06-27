@@ -1,0 +1,38 @@
+<view class="c-goods-layout__info-price custom-class {{showcaseClass}} {{containerClass}}" wx:if="{{infoData.showPrice||infoData.showOriginPrice||infoData.showBuyButton}}">
+    <view class="price-info" style="{{priceInfoStyle}}">
+        <view class="points-price" wx:if="{{isPointsGoods}}">
+            <a class="van-icon-exchange" name="exchange"></a>
+            <c class="points-price__value" color="main-bg">{{goodsInfo.pointsPrice}}</c>
+            <text class="points-price__unit">{{goodsInfo.customUnit||'积分'}}</text>
+            <block wx:if="{{goodsInfo.remainPrice}}">
+                <text class="points-price__unit">+</text>
+                <c class="points-price__value" color="main-bg">{{goodsInfo.remainPrice}}</c>
+                <text class="points-price__unit">元</text>
+            </block>
+        </view>
+        <block wx:else>
+            <view class="sale-price" style="color: var(--price, #323233)" wx:if="{{infoData.showPrice}}">
+                <block wx:if="{{!goodsInfo.skeleton}}">
+                    <text class="free" wx:if="{{isPaidContent&&goodsInfo.isFree&&mediaIconUrlAndFreeText[1]}}">{{mediaIconUrlAndFreeText[1]}}</text>
+                    <block wx:else>
+                        <text class="price-tag">¥</text>
+                        <text class="price-num" style="{{priceNumStyle}}">{{goodsPrice}}</text>
+                        <text class="price-unit" wx:if="{{hasUnit}}">万</text>
+                        <text class="sale-price__min" wx:if="{{goodsInfo.isMinPrice}}">起</text>
+                        <slot name="price-label"></slot>
+                    </block>
+                    <c bg="vice-bg" customClass="price-sign" opacity="0.5" wx:if="{{goodsInfo.priceLabel}}">{{goodsInfo.priceLabel}}</c>
+                    <text class="sold-num" wx:if="{{showSoldNum}}">{{goodsInfo.totalSoldNum}}件已售</text>
+                </block>
+                <b rectStyle="width: 30px; height: {{infoData.textAlignType=='center'||!infoData.showBuyButton?16:20}}px;" type="rect" wx:else></b>
+            </view>
+            <view class="sale-price__origin" wx:if="{{infoData.showOriginPrice&&goodsInfo.originPrice&&(showOriginPriceByGoodsInfo?goodsInfo.showOriginPrice:true)}}">
+                <block wx:if="{{!goodsInfo.skeleton}}">¥{{goodsInfo.originPrice}}<text wx:if="{{goodsInfo.isMinPrice}}">起</text>
+                </block>
+                <b rectStyle="width: 20px; height: 12px;" type="rect" wx:else></b>
+            </view>
+        </block>
+    </view>
+    <buy-button alias="{{goodsInfo.alias}}" appId="{{appId}}" bind:buy="handleGoodsBuyClick" bind:on-load="btnLoad" btnWrapClass="goods__btn-wrap" buttonSize="{{buttonSize}}" buttonText="{{goodsInfo.buttonText||infoData.buttonText}}" class="buy-button {{isPromotion?'buy-button--promotion':''}}" extraData="{{extraData}}" id="buy-button" needWxAuth="{{!infoData.isPlugin}}" redirectType="{{redirectType}}" type="{{buyButtonType}}" wx:if="{{showItemBuyButton}}"></buy-button>
+    <goods-item-extra goodsInfo="{{goodsInfo}}"></goods-item-extra>
+</view>

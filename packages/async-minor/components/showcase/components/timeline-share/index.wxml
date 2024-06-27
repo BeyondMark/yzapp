@@ -1,0 +1,26 @@
+<navigator hoverClass="none" wx:if="{{image||snapshotUrl}}">
+    <view class="timeline-block" wx:if="{{!snapshotUrl}}">
+        <view class="timeline-block__container">
+            <image class="timeline-block__img" mode="widthFix" src="{{image}}" wx:if="{{image}}"></image>
+            <view class="timeline-block__title">{{title}}</view>
+        </view>
+        <view class="timeline-block__poptip">点击“前往小程序”访问店铺</view>
+    </view>
+    <view class="timeline-snapshotUrl-block" wx:else>
+        <view class="logo">
+            <image class="logo-img" mode="aspectFill" src="{{logo}}"></image>
+        </view>
+        <view class="shop-name">{{shopName}}</view>
+        <view class="image-block-area">
+            <view class="image-block">
+                <image class="img" mode="widthFix" src="{{snapshotUrl}}"></image>
+                <view class="white-bg">
+                    <view class="tip">点击“前往小程序”使用完整服务</view>
+                </view>
+            </view>
+            <view class="triangle-warp">
+                <view class="triangle"></view>
+            </view>
+        </view>
+    </view>
+</navigator>

@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "b": "/@y-open/vt/dist/popup/index.weapp",
+    "c": "./components/PromotionCard",
+    "d": "./components/CashBackRule",
+    "e": "./components/EstimatePricePop",
+    "f": "./components/MeetReducePostage",
+    "_": "../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

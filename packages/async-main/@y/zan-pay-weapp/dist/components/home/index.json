@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../../../@vant/weapp/dist/notice-bar/index",
+    "b": "../../../../../@vant/weapp/dist/icon/index",
+    "c": "../../../../../@vant/weapp/dist/button/index",
+    "d": "../channel/index",
+    "e": "../recommend/index",
+    "f": "../selected-bar/index",
+    "g": "../protocol/index",
+    "_": "../../../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,30 @@
+.promote-goods-activity-banner {
+  position: relative;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 0;
+  height: 30px;
+  box-sizing: border-box;
+  margin-bottom: 6px;
+}
+.promote-goods-activity-banner,
+.promote-goods-activity-banner .wrap-right {
+  display: flex;
+  align-items: center;
+}
+.promote-goods-activity-banner .wrap-right .tag-title {
+  font-size: 12px;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 16px;
+}
+.promote-goods-activity-banner .countdown-wrap {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #969799;
+}
+.promote-goods-activity__tag {
+  position: relative;
+  top: -3px;
+}

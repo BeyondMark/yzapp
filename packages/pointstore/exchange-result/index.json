@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "兑换成功",
+  "navigationBarBackgroundColor": "#FFF",
+  "usingComponents": {
+    "a": "../../async-main/@vant/weapp/dist/icon/index",
+    "b": "../common/components/theme-view/index",
+    "c": "../components/message/subscribe-message/index",
+    "_": "../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

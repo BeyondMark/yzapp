@@ -1,0 +1,1 @@
+<a bind:_init="_tic" bind:tap="_p" border="{{false}}" class="a2da5" data-t="{{ tap:{en:'toEvaluationList'} }}" isLink="{{showLink}}" title="{{cellTitle||'商品评价'}}" titleClass="c43d00" value="{{cellValue||'暂无评价'}}" valueClass="eb06d"></a>

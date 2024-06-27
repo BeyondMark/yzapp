@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../../wsc-tee-salesman-salesman-share-popup-local/widgets/rt/SalesmanSharePopup",
+    "_": "../../../../../../components/_/index"
+  }
+}

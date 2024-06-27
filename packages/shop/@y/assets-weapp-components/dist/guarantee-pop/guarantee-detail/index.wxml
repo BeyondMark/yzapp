@@ -1,0 +1,10 @@
+<a bind:close="onClose" position="bottom" round="{{true}}" show="{{value}}" zIndex="{{zIndex}}">
+    <view class="guarantee-detail">
+        <view class="guarantee-detail__container">
+            <text class="guarantee-detail__title">品质保证</text>
+            <view class="guarantee-detail__content">
+                <image bind:tap="showImg" height="100" src="{{data&&data.img}}" width="100"></image>
+            </view>
+        </view>
+    </view>
+</a>

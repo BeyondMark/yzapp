@@ -1,0 +1,24 @@
+<a forbidCopyright="{{true}}" pageBgColor="#444" wx:if="{{!isFetching}}">
+    <view class="open-gift">
+        <view class="open-gift__avatar">
+            <image src="{{presenterInfo.avatar}}"></image>
+        </view>
+        <view class="open-gift__name van-font-14 van-c-black">{{presenterInfo.nickName}}<block wx:if="{{gameType===2}}">发起一次抽奖</block>
+        </view>
+        <view class="open-gift__desc van-font-14 van-c-black">
+            <block wx:if="{{gameType===1}}">送你一份礼物，点击领取</block>
+            <view class="count-down-wrapper" wx:if="{{gameType===2&&!lotteryEnd&&countdown.second}}">距离开奖仅剩<view class="time-unit">{{countdown.hour}}</view>:<view class="time-unit">{{countdown.minute}}</view>:<view class="time-unit">{{countdown.second}}</view>
+            </view>
+        </view>
+        <image class="open-gift__img" src="https://img01.yzcdn.cn/public_files/2018/07/05/cc62713dd7b302d1fa8c664db0dc0970.png"></image>
+        <b type="ump-gift">
+            <view bindtap="handleViewDetail" class="open-gift__btn van-font-18 {{isPresenter?'open-gift__btn--presenter':''}}" wx:if="{{presenterHaveTaken||lotteryEnd}}">{{lotteryEnd?'查看结果':'继续分享'}}</view>
+            <d authTypeList="{{['mobile','nicknameAndAvatar']}}" bind:next="handleTakeGiftClick" wx:else>
+                <view class="open-gift__btn van-font-18 {{isPresenter?'open-gift__btn--presenter':''}}">{{gameType===1?'领取':'抽奖'}}</view>
+            </d>
+            <view bindtap="handleViewMyPresent" class="open-gift__presenter-link van-font-14 van-c-black" wx:if="{{isPresenter}}">查看{{gameType===1?'领取':'抽奖'}}详情<text class="van-arrow"></text>
+            </view>
+        </b>
+    </view>
+</a>
+<c id="account-wx-login"></c>

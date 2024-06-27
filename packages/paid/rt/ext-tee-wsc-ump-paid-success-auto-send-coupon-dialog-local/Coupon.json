@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./FontCalculate",
+    "b": "/@y-open/vt/dist/count-down/index",
+    "_": "../../../../components/_/index"
+  }
+}

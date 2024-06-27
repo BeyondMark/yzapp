@@ -1,0 +1,22 @@
+.long-cell {
+  padding: var(--theme-page-cell-padding-top, 10px)
+    var(--theme-page-cell-padding-right, 12px)
+    var(--theme-page-cell-padding-bottom, 10px)
+    var(--theme-page-cell-padding-left, 12px) !important;
+}
+.c86312 {
+  margin-left: 16px;
+  margin-right: 16px;
+  padding-bottom: 16px;
+}
+.c00c23 {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0 16px 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #323233;
+}
+.c92b3f {
+  padding-left: 0;
+}

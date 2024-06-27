@@ -1,0 +1,43 @@
+.goods-detail__tag--plain {
+  margin-left: 7px;
+}
+.presale-wrap .van-sku__presale-label {
+  display: inline-block;
+  font-size: 12px;
+}
+.presale-wrap .van-sku__presale-price {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+.presale-wrap .van-sku__presale-price-number {
+  font-size: 16px;
+  flex: 1;
+  display: flex;
+}
+.presale-wrap .van-sku__goods-price-wrap {
+  font-size: 12px;
+  color: #999;
+  height: 12px;
+  line-height: 12px;
+}
+.presale-wrap .van-sku__price-num,
+.presale-wrap .van-sku__price-symbol {
+  display: inline-block;
+  color: #999;
+  font-size: 12px;
+  vertical-align: middle;
+}
+.presale-wrap .van-sku__goods-price {
+  display: inline-block;
+  margin-top: 0;
+}
+.presale-wrap .van-sku__goods-price-label,
+.presale-wrap .van-sku__goods-price-number {
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.presale-wrap .van-sku__goods-price-wrap {
+  display: inline-block;
+}

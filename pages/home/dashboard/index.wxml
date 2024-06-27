@@ -1,0 +1,36 @@
+<view bind:tap="_p" data-t="{{ tap:{en:'_tprc'} }}" style="{{_pageStyleStr}}">
+    <view style="{{_pageStyle}}">
+        <view>
+            <view class="r-c">
+                <view class="r-c">
+                    <a bind:_init="_tic" nr="true" rmId="b1-10" wx:if="{{RM&&RM['b1-10']}}"></a>
+                    <b bind:_init="_tic" nr="true" rmId="b1-14" sst="{{1}}" wx:if="{{RM&&RM['b1-14']}}"></b>
+                    <c bind:_init="_tic" nr="true" rmId="b1-0" useAppStyleIcon="{{true}}" wx:if="{{RM&&RM['b1-0']}}"></c>
+                    <d bind:_init="_tic" nr="true" rmId="b1-2" wx:if="{{RM&&RM['b1-2']}}"></d>
+                </view>
+            </view>
+            <view class="r-c">
+                <view class="r-c DGImPz">
+                    <e bind:_init="_tic" nr="true" rmId="b1-9" wx:if="{{_normal&&RM&&RM['b1-9']}}"></e>
+                </view>
+            </view>
+            <view class="r-c FklhkA">
+                <view class="r-c">
+                    <f bind:_init="_tic" needBindRelation="{{false}}" nr="true" rmId="b1-12" scenes="home_page" showGoodsDetail="{{false}}" sourceType="{{6}}" wx:if="{{_post&&RM&&RM['b1-12']}}"></f>
+                    <g bind:_init="_tic" nr="true" rmId="b1-5" wx:if="{{_post&&RM&&RM['b1-5']}}"></g>
+                    <h bind:_init="_tic" nr="true" rmId="b1-8" wx:if="{{_post&&RM&&RM['b1-8']}}"></h>
+                    <i bind:_init="_tic" nr="true" rmId="b1-16" wx:if="{{_normal&&RM&&RM['b1-16']}}"></i>
+                    <j bind:_init="_tic" cloudExcluded="{{true}}" nr="true" rmId="b1-17" wx:if="{{_post&&RM&&RM['b1-17']}}"></j>
+                    <k bind:_init="_tic" nr="true" rmId="b1-23" wx:if="{{_post&&RM&&RM['b1-23']}}"></k>
+                    <l bind:_init="_tic" nr="true" rmId="b1-22" wx:if="{{_post&&RM&&RM['b1-22']}}"></l>
+                    <m bind:_init="_tic" nr="true" rmId="b1-18" wx:if="{{_normal&&RM&&RM['b1-18']}}"></m>
+                </view>
+            </view>
+            <view class="r-c DVnXOW">
+                <n bind:_init="_tic" nr="true" rmId="@wsc-tee-common/app-content-append~VAtrAMhi" wx:if="{{_normal&&RM&&RM['@wsc-tee-common/app-content-append~VAtrAMhi']}}"></n>
+            </view>
+            <o bind:_init="_tic" data-ref="van-toast" isPageDefault="{{true}}"></o>
+            <p bind:_init="_tic" data-ref="van-dialog" isPageDefault="{{true}}"></p>
+        </view>
+    </view>
+</view>

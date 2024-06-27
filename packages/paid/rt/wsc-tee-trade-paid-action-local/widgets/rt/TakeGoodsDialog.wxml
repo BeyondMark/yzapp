@@ -1,0 +1,22 @@
+<view style="{{themeCSS}}">
+    <b bind:_init="_tic" bind:click-overlay="_p" closeOnClickOverlay="{{true}}" customClass="c6119c" data-t="{{ clickOverlay:{en:'onClose'} }}" position="bottom" show="{{visible}}">
+        <view class="c7c5e5" wx:if="{{hasError}}">      取货口令生成失败，
+      <view>请稍后再试或前往订单详情查看。</view>
+        </view>
+        <view class="c97ebb" wx:elif="{{takeGoodsData.loading}}">
+            <c bind:_init="_tic" class="c97ebb-icon" size="35" type="img"></c>
+            <view class="dc42a">正在生成取货口令...</view>
+        </view>
+        <block wx:else>
+            <view class="c3072c">
+                <view class="d7b27">取货口令</view>
+                <view class="c52b08">{{takeGoodsData.takeGoodsCode}}</view>
+            </view>
+            <view class="c8d77c">取货地址：{{takeGoodsData.addressDetail}}</view>
+            <view class="c4d71e">取货时间：{{takeGoodsData.userTime}}</view>
+        </block>
+        <view class="c5ed8c">
+            <a bind:_init="_tic" bind:tap="_p" block="{{true}}" color="var(--main-bg, #07c160)" customClass="c5ed8c-item" customStyle="var(--theme-radius-button,999px)" data-t="{{ tap:{en:'onClose'} }}" type="primary">我知道了</a>
+        </view>
+    </b>
+</view>

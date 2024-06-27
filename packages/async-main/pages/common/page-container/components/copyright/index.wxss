@@ -1,0 +1,59 @@
+.copyright-container {
+  padding: 18px 0 20px;
+  background-color: #f2f2f2;
+  text-align: center;
+  font-size: 0;
+}
+.copyright-image {
+  display: block;
+  margin: 0 auto;
+  height: 30px;
+  width: 110px;
+  padding-bottom: 3px;
+}
+.copyright-text {
+  position: relative;
+  line-height: 16px;
+  font-size: 12px;
+  color: #bfbfc3;
+}
+.copyright-text--customized {
+  padding-left: 14px;
+}
+.copyright-text--customized:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 12px;
+  background: url(https://img01.yzcdn.cn/weapp/wsc/tagmXw.png) no-repeat;
+  background-size: 10px 12px;
+}
+.zan-store-info {
+  color: #999;
+  font-size: 12px;
+  line-height: 17px;
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+  padding: 0 15px 17px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.zan-store-info__text {
+  margin: 0 10px;
+}
+.zan-store-info__left,
+.zan-store-info__right {
+  background: #e5e5e5;
+  height: 1px;
+  flex: 1;
+}
+.copyright-container--withtips {
+  padding-bottom: 40px;
+}
+.copyright-text-tips {
+  top: 16px;
+}

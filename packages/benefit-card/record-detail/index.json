@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "使用详情",
+  "backgroundColor": "#f7f8fa",
+  "usingComponents": {
+    "b": "../@vant/weapp/dist/cell/index",
+    "c": "../../async-main/@vant/weapp/dist/icon/index",
+    "d": "../@vant/weapp/dist/panel/index",
+    "_": "../../../components/_/index"
+  },
+  "componentPlaceholder": { "c": "_" }
+}

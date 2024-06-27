@@ -1,0 +1,29 @@
+<view class="c4481">
+    <view class="c011b9">
+        <view class="b8afc {{isCoupon?'c2d3cc':isEstimate?'d8dad':''}} {{'price-length-'+activityPrice[0].length}}">
+            <view class="c08fd0 c89585" wx:if="{{label}}">{{label}}</view>
+            <view class="c6029f c89585" wx:if="{{activityPrice[0]}}">
+                <view class="c6bb1f c89585">￥</view>
+                <view class="c41b5 {{'price-length-'+activityPrice[0].length}} c89585">{{activityPrice[0]}}</view>
+            </view>
+            <view class="c2d910 {{'price-length-'+activityPrice[0].length}} c89585" wx:if="{{activityPrice[1]}}">.{{activityPrice[1]}}</view>
+            <view class="ee1ee c89585" wx:if="{{isRange}}">起</view>
+        </view>
+        <view class="c85f1a {{isCoupon?'a90c8 ':''}} {{'price-length-'+activityPrice[0].length}}" color="general" wx:if="{{priceTag.text&&showTag}}">
+            <view class="{{priceTag.tagPreCls||''}} c89585" style="{{priceTag.preStyle}}" wx:if="{{priceTag.preText}}">{{priceTag.preText}}</view>
+            <view class="{{priceTag.tagCls||''}} c89585" style="{{priceTag.textStyle}}">{{priceTag.text}}</view>
+            <view class="{{priceTag.tagPreCls||''}} c89585" style="{{priceTag.sufStyle}}" wx:if="{{priceTag.sufText}}">{{priceTag.sufText}}</view>
+        </view>
+    </view>
+    <view class="c8cae7">
+        <view class="d00d6" wx:if="{{!!depositPriceText}}"> {{depositPriceText}} </view>
+        <view class="c7a8a6" style="{{fontSizeText}}" wx:elif="{{showOriginPrice&&originPrice}}">
+            <view>
+                <view class="c89585">{{preText}}</view>
+                <view class="c90436 c89585">￥{{originPrice}}</view>
+            </view>
+        </view>
+        <view class="c13a9c" style="{{fontSizeText}}" wx:if="{{soldNumTagText}}"> {{soldNumTagText}} </view>
+        <view class="c13a9c" style="{{fontSizeText}}" wx:if="{{stockNumTagText}}"> {{stockNumTagText}} </view>
+    </view>
+</view>

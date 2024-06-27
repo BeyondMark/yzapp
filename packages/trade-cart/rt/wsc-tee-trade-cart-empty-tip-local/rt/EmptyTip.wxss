@@ -1,0 +1,40 @@
+.c5e8b2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 32px;
+  background-color: var(--theme-page-page-bg-color, #f7f8fa);
+}
+.c495c6 {
+  width: 150px;
+  height: 150px;
+  background: url(https://img01.yzcdn.cn/public_files/da9aa300df22f24aae85fc8eb690bf1c.png)
+    50%no-repeat;
+  background-size: 100%;
+}
+.c60638 {
+  margin-top: 24px;
+  font-size: 14px;
+  color: #323233;
+  font-weight: 500;
+}
+.ae3ca {
+  margin-top: 8px;
+  color: #999;
+  font-size: 14px;
+}
+.c9de70 {
+  display: inline-block;
+  font-size: 14px;
+  height: 32px !important;
+  line-height: 30px;
+  padding: 0 35px !important;
+  margin: 16px auto;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--theme-tag-color, --icon) !important;
+  color: var(--theme-tag-color, --icon) !important;
+  border-radius: var(--theme-radius-button, 16px) !important;
+  background: none;
+  box-sizing: border-box;
+}

@@ -1,0 +1,18 @@
+<a bind:click-overlay="onClose" customClass="prize-pop" show="{{showPrizePop}}">
+    <view bind:tap="onClose" class="pop-close"></view>
+    <view class="pop-content {{status===statusMap.DRAWING?'pop-content__wait':''}}">
+        <block wx:if="{{status===statusMap.DRAWED}}">
+            <view class="success-icon" wx:if="{{isWin&&!prizePop.isFail}}"></view>
+            <view class="content-detail number" wx:if="{{prizePop.winCode}}">{{prizePop.winCode}}</view>
+            <view class="content-detail title {{!isWin||prizePop.isFail?'content-detail__fail':''}}" wx:if="{{prizePop.levelStr}}">{{prizePop.levelStr}}<text class="title-second-line" wx:if="{{prizePop.stateStr}}">{{prizePop.stateStr}}</text>
+            </view>
+            <view class="content-detail prize-detail">{{prizePop.title}}</view>
+            <view bind:tap="handleClick" class="content-detail btn {{prizePop.btnInfo.type==='DISABLE'?'btn__fail':''}}">{{prizePop.btnInfo.text}}</view>
+            <view bind:tap="handleDesc" class="content-detail desc {{prizePop.isFail?'desc-to':''}}" wx:if="{{prizePop.desc}}">{{prizePop.desc}}</view>
+        </block>
+        <block wx:else>
+            <view class="waiting-tip">大奖正在抽取…</view>
+            <view bind:tap="onClose" class="content-detail btn btn__fail">开</view>
+        </block>
+    </view>
+</a>

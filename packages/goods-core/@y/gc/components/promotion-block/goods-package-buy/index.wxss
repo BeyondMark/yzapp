@@ -1,0 +1,129 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.f9b8f {
+  position: relative;
+  display: block;
+  margin: 8px 0;
+  background: #fff;
+  font-size: 14px;
+}
+.dc06a {
+  padding-top: 0 !important;
+}
+.f9b8f__header {
+  padding-right: 10px;
+  line-height: 20px;
+  border-bottom: 1px solid #979797;
+}
+.f9b8f__header > span {
+  font-size: 12px;
+}
+.f9b8f__discount {
+  padding-left: 5px;
+  color: #f85;
+}
+.f9b8f__count {
+  float: right;
+  color: #969799;
+}
+.f9b8f__icon {
+  position: absolute;
+  top: 14px;
+  right: 10px;
+  font-size: 12px;
+  color: #969799;
+}
+.c8f0d2 {
+  display: flex;
+  position: relative;
+  overflow-x: auto;
+  white-space: nowrap;
+  font-size: 0;
+  z-index: 1;
+  -webkit-overflow-scrolling: touch;
+}
+.df2a0 {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  font-size: 12px;
+  flex-basis: 252px;
+  flex-shrink: 0;
+  margin-right: 32px;
+  line-height: 16px;
+}
+.c5aedd {
+  display: inline-block;
+  margin-right: 12px;
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  background-position: 50%;
+  background-size: 80px 80px;
+}
+.df2a0-price {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0 10px;
+  line-height: 20px;
+  background-color: hsla(0, 0%, 100%, 0.9);
+}
+.df2a0 .c3c877 {
+  float: right;
+  text-align: left;
+  width: calc(100% - 104px);
+}
+.df2a0 .c62e0 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #323233;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.df2a0 .c4a5b0 {
+  margin: 8px 0 8px;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+}
+.df2a0 .d461d {
+  color: #323233;
+  font-size: 14px;
+  line-height: 16px;
+}
+.df2a0 .c8918e {
+  color: var(--ump-price, #323233);
+  font-size: 16px;
+  line-height: 20px;
+  margin-right: 2px;
+}
+.df2a0 .c7c0e6 {
+  color: var(--ump-price, #323233);
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bolder;
+}
+.df2a0 .c2c85d {
+  font-size: 14px;
+  color: #969799;
+}
+.df2a0 .c10cd {
+  color: #969799;
+  font-size: 12px;
+}
+.dc188 {
+  margin-right: 0;
+  flex-basis: 100%;
+  display: flex;
+}
+.dac3c {
+  font-weight: 700;
+  font-size: 14px;
+}

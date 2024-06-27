@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../../../@y/wsc-tee-trade-common/components/OrderActionSheetPopup",
+    "b": "../../../../../@y/wsc-tee-trade-common/components/InfoDialog",
+    "c": "./../form/index",
+    "d": "./../goods-info/index",
+    "_": "../../../../../../../components/_/index"
+  }
+}

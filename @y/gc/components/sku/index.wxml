@@ -1,0 +1,12 @@
+<a bind:_init="_tic" bind:after-enter="_p" bind:close="_p" closeable="{{true}}" customClass="sku-popup" customStyle="{{customStyle}}" data-t="{{ close:{en:'onClose'},afterEnter:{en:'afterPopEnter'} }}" enterIsSleep="{{enterIsSleep}}" position="bottom" round="{{true}}" safeAreaInsetBottom="{{safeAreaInsetBottom}}" show="{{show}}" zIndex="{{zIndex}}">
+    <view class="sku-popup-skele" wx:if="{{loading}}"></view>
+    <b baseConfig="{{baseConfig}}" bind:_init="_tic" bind:custom="_p" bind:init="_p" bind:num-change="_p" bind:over-limit="_p" bind:preview="_p" bind:selected="_p" bind:submit="_p" bind:user-authorize-show="_p" class="fade-in" data-ref="skuContainer" data-t="{{ init:{en:'onInit'},preview:{en:'onPreview'},numChange:{en:'onNumChange'},selected:{en:'onSelected'},submit:{en:'onSubmit'},custom:{en:'onCustom'},overLimit:{en:'onOverLimit'},userAuthorizeShow:{en:'onUserAuthorizeShow'} }}" event="{{event}}" extraData="{{extraData}}" goods="{{goods}}" initialSku="{{initialSku}}" kdtId="{{kdtId}}" messageConfig="{{messageConfig}}" multiSkuDecision="{{multiSkuDecision}}" pointsConfig="{{pointsConfig}}" show="{{show}}" showRowBlock="{{showRowBlock}}" showRowSkeleton="{{showRowSkeleton}}" sku="{{sku}}" skuConfig="{{skuConfig}}" style="{{loading?'display: none;':''}}" themeTag="{{themeTag}}">
+        <slot name="sku-price-extra" slot="sku-price-extra"></slot>
+        <slot name="sku-group-header" slot="sku-group-header"></slot>
+        <slot name="sku-group-main" slot="sku-group-main"></slot>
+        <slot name="sku-group-footer" slot="sku-group-footer"></slot>
+        <slot name="sku-group-goods-detail" slot="sku-group-goods-detail"></slot>
+        <slot name="sku-footer-info" slot="sku-footer-info"></slot>
+        <slot name="sku-header" slot="sku-header"></slot>
+    </b>
+</a>

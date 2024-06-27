@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./goods-layout",
+    "_": "../../../../../components/_/index"
+  }
+}

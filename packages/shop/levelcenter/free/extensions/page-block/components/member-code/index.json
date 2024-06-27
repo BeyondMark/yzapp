@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../../../level-common/level-icon/index",
+    "b": "/@vant/weapp/dist/popup/index",
+    "c": "/packages/shop/@vant/weapp/dist/button/index",
+    "d": "/packages/async-main/@vant/weapp/dist/icon/index",
+    "_": "../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "d": "_" }
+}

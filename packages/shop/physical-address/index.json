@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "搜索地址",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "a": "./../rt/ext-tee-shop-physical-search-bar-local/rt/Main",
+    "b": "./../rt/ext-tee-shop-physical-edit-address-local/rt/Main",
+    "c": "../../async-tee/@y-open/vt/native/weapp/toast/index/index",
+    "d": "../../async-tee/@y-open/vt/native/weapp/dialog/index/index",
+    "_": "../../../components/_/index"
+  },
+  "componentPlaceholder": { "c": "_", "d": "_" }
+}

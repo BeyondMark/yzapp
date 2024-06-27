@@ -1,0 +1,9 @@
+<view class="visit-gift-container">
+    <block wx:if="{{showUserAuth}}">
+        <b authTypeList="{{authTypeList}}" bind:_init="_tic" bind:next="_p" class="cap-coupon__userauth" data-t="{{ next:{en:'handleLogin'} }}" kdtId="{{kdtId}}" rmId="@passport-tee/user-authorize~DDdJBmWG" wx:if="{{rmId==='b7-39'||rmId==='b33-5'}}">
+            <view class="e319d" style="{{bottom}}"></view>
+        </b>
+    </block>
+    <a bind:_init="_tic" bind:close="_p" bind:show-rule="_p" bind:subscribe-message="_p" data-t="{{ close:{en:'closeVisitGift'},showRule:{en:'showRule'},subscribeMessage:{en:'subscribeMessage'} }}" detail="{{detail}}" hideProtocol="{{1}}" rmId="{{i[0]}}" show="{{showGiftPop}}" source="{{source}}" wx:if="{{i[1]}}" wx:for="{{[ [rmId,rmId==='b7-39'],[rmId,rmId==='b33-5'] ]}}" wx:for-item="i" wx:key="0"></a>
+    <c bind:_init="_tic" bind:hide-rule="_p" data-t="{{ hideRule:{en:'hideRule'} }}" kdtId="{{kdtId}}" shopMetaInfo="{{shopMetaInfo}}" shopName="{{detail.shopName}}" show="{{ruleVisible}}" typeRule="{{detail.typeRule}}"></c>
+</view>

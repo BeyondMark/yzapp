@@ -1,0 +1,15 @@
+<view class="{{true?'cube-tab_container':''}} {{salesmanPopupTabs.length<=1?'cube-tab_only-one':''}}">
+    <d active="{{activeTab}}" bind:_init="_tic" bind:change="_p" color="var(--general)" data-t="{{ change:{en:'onChange'} }}" lineWidth="24" pid="{{pid}}" wrapClass="{{'cube-tab-wrap_'+salesmanPopupTabs.length}}">
+        <e bind:_init="_tic" name="{{tab.type}}" pid="{{pid}}" title="{{tab.name}}" wx:for="{{salesmanPopupTabs}}" wx:for-item="tab" wx:key="name">
+            <block wx:if="{{tab.type==='promote'}}">
+                <b bind:_init="_tic" bind:show-promote-tip="_p" data-t="{{ showPromoteTip:{en:'handlePromoteTip'} }}" goodsInfo="{{goodsInfo}}" instanceId="{{instanceId}}" kdtId="{{kdtId}}" rmId="{{rmId}}" shareData="{{shareData}}" shopRights="{{shopRights}}" shortLinkPromoteUrl="{{shortLinkPromoteUrl}}" shortPromoteUrl="{{shortPromoteUrl}}" smartTextData="{{smartTextData}}" wx:if="{{rmId==='@wsc-tee-salesman/salesman-share-popup~YPDZkFWW'}}"></b>
+            </block>
+            <block wx:elif="{{tab.type==='poster'}}">
+                <a bind:_init="_tic" bind:get-poster="_p" bind:get-poster-params="_p" bind:on-swiper-change="_p" bind:re-gen-poster="_p" bind:try-open-assistant="_p" bind:update-auth="_p" data-t="{{ getPoster:{en:'getPoster'},reGenPoster:{en:'genPoster'},getPosterParams:{en:'getPosterParams'},onSwiperChange:{en:'onSwiperChange'},updateAuth:{en:'updateAuth'},tryOpenAssistant:{en:'handleOpenAssistant'} }}" hasAuth="{{hasAuth}}" imgCount="{{imgCount}}" instanceId="{{instanceId}}" isWxShareImg="{{isWxShareImg}}" kdtId="{{kdtId}}" posterImgArr="{{posterImgArr}}" posterIndex="{{posterIndex}}" rmId="{{rmId}}" wx:if="{{rmId==='@wsc-tee-salesman/salesman-share-popup~YPDZkFWW'}}"></a>
+            </block>
+            <block wx:else>
+                <c bind:_init="_tic" cloudIndex="{{index}}" cloudTabType="{{tab.type}}" rmId="{{rmId}}" wx:if="{{rmId==='@wsc-tee-salesman/salesman-share-popup~YPDZkFWW'}}"></c>
+            </block>
+        </e>
+    </d>
+</view>

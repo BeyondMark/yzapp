@@ -1,0 +1,14 @@
+<view class="sku-group-extra" style="{{singleSku?'':'margin-top:-12px'}}" wx:if="{{formatComboDetail}}">
+    <view class="title">{{formatTitle}}已包含</view>
+    <view class="combo-list">
+        <view class="combo-list__item" key="{{item.itemId}}" wx:for="{{formatComboDetail}}">
+            <view class="combo-list__item__image">
+                <image class="image" src="{{item.picture[0].url}}"></image>
+            </view>
+            <view class="combo-list__main">
+                <view class="combo-list__main-title">{{item.title}}</view>
+            </view>
+            <view class="combo-list__item__specification" hidden="{{!item.skuInfo}}">{{item.skuInfo}};</view>
+        </view>
+    </view>
+</view>

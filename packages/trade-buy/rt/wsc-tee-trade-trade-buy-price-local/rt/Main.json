@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../widgets/presale/rt/index",
+    "_": "../../../../../components/_/index"
+  }
+}

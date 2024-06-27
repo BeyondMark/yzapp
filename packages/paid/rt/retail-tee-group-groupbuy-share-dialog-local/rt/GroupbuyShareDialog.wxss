@@ -1,0 +1,209 @@
+.bd231 {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.a471d {
+  width: 100% !important;
+  top: 0 !important;
+  transform: translate3d(-50%, 0, 0) !important;
+  background-color: transparent !important;
+}
+.a471d .c7cdef {
+  text-align: center;
+}
+.a471d .c7cdef .c26f23 {
+  width: 66px;
+  height: 117px;
+  background-image: url(https://img01.yzcdn.cn/public_files/2019/07/04/b218a1c421117bda16050df68876f3a0.png);
+  background-size: 100% 100%;
+  margin: 76px 24px 8px auto;
+}
+.a471d .c7cdef .cb97c {
+  color: #fff;
+  text-align: center;
+}
+.a471d .c7cdef .cb97c p {
+  line-height: 30px;
+}
+.a471d .c7cdef .cb97c .d14af {
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+  display: inline-block;
+}
+.a471d .c7cdef .cb97c .d14af:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -22px;
+  top: -5px;
+  width: 16px;
+  height: 16px;
+  background: url(https://img01.yzcdn.cn/public_files/2019/07/04/64221c3a6a1d3fcc984aab6cb38037e0.png);
+}
+.a471d .c7cdef .cb97c .c1fd9d {
+  font-size: 14px;
+}
+.c026ea {
+  border-radius: 20px 20px 0 0;
+  text-align: center;
+  background-position: top;
+  background-repeat: repeat-x;
+  height: 451px;
+  background-size: 375px 90px;
+  background-image: url(https://img01.yzcdn.cn/upload_files/2020/10/13/FsILDjWwugz8_q_CQCmJOisR9OgS.png);
+}
+.c05372 {
+  padding: 33px 0 12px;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #5e290f;
+}
+.e7dee {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 20px;
+  color: #323233;
+}
+.fa7f7 {
+  color: #07c160;
+  margin: 0 4px;
+}
+.c87762 {
+  color: #07c160;
+  display: inline-block;
+  min-width: 128px;
+  text-align: left;
+  margin-left: 4px;
+}
+.c515c8 {
+  background-image: url(https://img01.yzcdn.cn/upload_files/2020/10/13/FjYGXpi3Dv3paKYf-XpMGIBHhBIo.png);
+  background-size: 306px 264px;
+  background-repeat: no-repeat;
+  width: 306px;
+  height: 264px;
+  margin: 20px auto 0;
+  padding: 24px 19px 24px 24px;
+  box-sizing: border-box;
+}
+.ab246 {
+  display: flex;
+  align-items: center;
+}
+.c96a81 {
+  width: 28px;
+  height: 28px;
+  border-radius: 14px;
+  margin-right: 8px;
+}
+.e2c49 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #323233;
+}
+.c90c4f {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 8px 0 0 36px;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: left;
+}
+.c4a201 {
+  color: #07c160;
+  margin: 0 2px;
+}
+.c90c4f .c9997 {
+  display: flex;
+}
+.c215f7 {
+  display: flex;
+  margin: 16px -11px 0 36px;
+  overflow: hidden;
+  text-align: left;
+  white-space: nowrap;
+}
+.e12f3 {
+  flex-shrink: 0;
+  width: 90px;
+  height: 90px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-right: 12px;
+  position: relative;
+}
+.e12f3 .c4d499 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+.e12f3 .f65a3 {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #fff;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.48));
+}
+.c36793 {
+  margin: 0 35px 30px;
+}
+.c8245d {
+  box-sizing: border-box;
+  width: 100% !important;
+  border-radius: 22px !important;
+  border: none !important;
+  font-size: 16px !important;
+  background: #07c160 !important;
+  color: #fff !important;
+  height: 44px !important;
+  line-height: 44px !important;
+}
+.aa7f7 {
+  padding: 100px 30px 0 30px;
+  height: 377px;
+  box-sizing: border-box;
+}
+.c2b9c5 {
+  width: 160px;
+  height: 160px;
+  margin-bottom: 12px;
+}
+.cf8d1 {
+  color: #969799;
+  font-size: 14px;
+  line-height: 20px;
+}
+.ba746 {
+  padding: 165px 24px 0 24px;
+  height: 377px;
+  box-sizing: border-box;
+}
+.c44f7f {
+  display: flex;
+  align-items: center;
+}
+.c99a47 {
+  color: #969799;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 72px;
+}
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .c026ea {
+    padding-bottom: 34px;
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./components/SkuNavItem",
+    "_": "../../../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,17 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.c54f75 {
+  font-family: PingFangSC-Regular, sans-serif;
+  color: #323233;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0;
+  margin-bottom: 8px;
+  display: flex;
+}
+.b504c {
+  min-width: 6px;
+  display: inline-flex;
+}

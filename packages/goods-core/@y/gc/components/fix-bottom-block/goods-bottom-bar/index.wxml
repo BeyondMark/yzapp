@@ -1,0 +1,16 @@
+<view class="c4a30c">
+    <view class="dbbaa" wx:if="{{commonTip.text}}">
+        <view bind:tap="_p" class="c53ce5 {{!commonTip.url&&!commonTip.pageName?'c5c185':''}}" data-t="{{ tap:{en:'onNavigate'} }}"> {{commonTip.text}} </view>
+    </view>
+    <view class="dbbaa dec50" wx:elif="{{waitToSoldCountdown}}">
+        <view class="c89585" wx:if="{{moreDayText}}"> {{moreDayText}} </view>
+        <view wx:else>      距离开售还剩
+      <block wx:if="{{timeData.day!=0}}">
+                <view class="c0fc3c c89585">{{timeData.day}}</view> 天
+      </block>
+            <view class="c0fc3c c89585"> {{timeData.hour}} </view> 时
+      <view class="c0fc3c c89585"> {{timeData.minute}} </view> 分
+      <view class="c0fc3c c89585"> {{timeData.second}} </view> 秒
+    </view>
+    </view>
+</view>

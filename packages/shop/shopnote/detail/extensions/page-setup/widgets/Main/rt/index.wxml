@@ -1,0 +1,29 @@
+<view>
+    <block wx:for="{{design}}" wx:for-item="component" wx:key="type">
+        <block wx:if="{{component.type==='shopnote-subscribe'}}">
+            <h rmId="{{rmId}}" wx:if="{{rmId==='b34-0'}}"></h>
+        </block>
+        <view class="{{showNav?'note-detail-wrapper':''}}" wx:elif="{{component.type==='shopnote-content'}}">
+            <d rmId="{{rmId}}" wx:if="{{rmId==='b34-0'}}"></d>
+        </view>
+        <block wx:elif="{{component.type==='shopnote-feature'}}">
+            <e rmId="{{rmId}}" wx:if="{{rmId==='b34-0'}}"></e>
+        </block>
+        <block wx:elif="{{component.type==='shopnote-readdata'}}">
+            <f browseCount="{{noteData.browseCount}}" externalClasses="shopnote-sp-readdata" rmId="{{rmId}}" showBrowseCount="{{noteData.showBrowseCount}}" showThumbsUp="{{noteData.showThumbsUp}}" thumbsUp="{{noteData.thumbsUpCount}}" wx:if="{{rmId==='b34-0'}}"></f>
+        </block>
+        <block wx:elif="{{component.type==='shopnote-shopinfo'}}">
+            <block wx:if="{{noteData.showEnterShop}}">
+                <g rmId="{{rmId}}" wx:if="{{rmId==='b34-0'}}"></g>
+            </block>
+        </block>
+    </block>
+    <a desc="{{noteData.description}}" goodsImage="{{noteData.sharePhoto}}" id="share-goods" salesmanAlias="{{salesman.seller}}" shopName="{{CURRENT_GLOBAL_SHOP.shop_name}}" title="{{noteData.title}}" wx:if="{{noteData.noteId}}"></a>
+    <b bind:share-card="onSalesmanShareCard" needBindRelation="{{false}}" usePagePoster="{{true}}"></b>
+    <view bind:tap="handleEnterLiveRoom" class="live-entry-icon" wx:if="{{liveInfo.hasLiving}}">
+        <c>
+            <image slot="cus-img" src="{{shop.logo}}"></image>
+        </c>
+    </view>
+    <i noAutoAuth="{{true}}"></i>
+</view>

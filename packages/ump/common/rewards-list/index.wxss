@@ -1,0 +1,50 @@
+@import "/common/css/helper/index.wxss";
+.reward-area {
+  width: 182rpx;
+  height: 232rpx;
+  margin: 0 10rpx;
+  background: #ffe7ba;
+  flex-direction: column;
+  border-radius: 8rpx;
+}
+.reward-area,
+.reward-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reward-list {
+  flex-direction: row;
+  background: #fff;
+  padding: 10rpx 0;
+}
+.reward-icon {
+  width: 64rpx;
+  height: 64rpx;
+  margin-bottom: 20rpx;
+}
+.reward-desc {
+  margin-bottom: 20rpx;
+  color: #a25700;
+  line-height: 34rpx;
+  padding: 0 20rpx;
+  width: 144rpx;
+}
+.reward-action,
+.reward-desc {
+  font-size: 24rpx;
+  text-align: center;
+  font-weight: 700;
+}
+.reward-action {
+  width: 128rpx;
+  height: 48rpx;
+  border-radius: 24rpx;
+  line-height: 48rpx;
+  background: #ff9300;
+  color: #fff;
+}
+.action-btn-highlight {
+  background: #fff;
+  color: #ff9300;
+}

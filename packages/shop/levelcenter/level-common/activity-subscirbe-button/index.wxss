@@ -1,0 +1,160 @@
+.subscribe-box {
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  animation-timing-function: cubic-bezier(0.17, 0.81, 0.56, 0.97);
+}
+.subscribe-box_body {
+  height: 40px;
+  width: 160px;
+}
+.subscribe-box_body .icon {
+  width: 12px;
+  height: 15px;
+  margin-right: 4px;
+}
+.subscribe-box_body .tips {
+  font-size: 13px;
+  color: #945623;
+  font-weight: 500;
+}
+.subscribe-box_body .subscribe-box_close {
+  position: absolute;
+  top: -15px;
+  right: 9px;
+  width: 16px;
+  height: 16px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+}
+.subscribe-box_btn {
+  width: 160px;
+}
+.subscribe-box_btn,
+.subscribe-box_confirm {
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+.subscribe-box_confirm {
+  width: 136px;
+  justify-content: flex-end;
+}
+.subscribe-box_cancel {
+  width: 20px;
+  height: 20px;
+  padding-left: 4px;
+  padding-top: 1px;
+}
+.subscribe-box .box-bottom {
+  margin-bottom: 60px;
+}
+.is-not-x .has-btn .to-show {
+  animation-name: "btn-show";
+  animation-duration: 0.3s;
+  bottom: 74px;
+}
+.is-not-x .has-btn .to-hide {
+  animation-name: "btn-hide";
+  animation-duration: 0.3s;
+  bottom: -40px;
+}
+@keyframes btn-show {
+  0% {
+    bottom: 0;
+  }
+  to {
+    bottom: 74px;
+  }
+}
+@keyframes btn-hide {
+  0% {
+    bottom: 74px;
+  }
+  to {
+    bottom: -40px;
+  }
+}
+.is-not-x .no-btn .to-show {
+  animation-name: "show";
+  animation-duration: 0.24s;
+  bottom: 0;
+}
+.is-not-x .no-btn .to-hide {
+  animation-name: "hide";
+  animation-duration: 0.24s;
+  bottom: -40px;
+}
+@keyframes show {
+  0% {
+    bottom: 0;
+  }
+  to {
+    bottom: 0;
+  }
+}
+@keyframes hide {
+  0% {
+    bottom: 0;
+  }
+  to {
+    bottom: -40px;
+  }
+}
+.is-iphone-x .has-btn .to-show {
+  animation-name: "x-btn-show";
+  animation-duration: 0.36s;
+  bottom: 94px;
+}
+.is-iphone-x .has-btn .to-hide {
+  animation-name: "x-btn-hide";
+  animation-duration: 0.36s;
+  bottom: -40px;
+}
+@keyframes x-btn-show {
+  0% {
+    bottom: 0;
+  }
+  to {
+    bottom: 94px;
+  }
+}
+@keyframes x-btn-hide {
+  0% {
+    bottom: 94px;
+  }
+  to {
+    bottom: -40px;
+  }
+}
+.is-iphone-x .no-btn .to-show {
+  animation-name: "x-show";
+  animation-duration: 0.24s;
+  bottom: 34px;
+}
+.is-iphone-x .no-btn .to-hide {
+  animation-name: "x-hide";
+  animation-duration: 0.24s;
+  bottom: -40px;
+}
+@keyframes x-show {
+  0% {
+    bottom: 0;
+  }
+  to {
+    bottom: 34px;
+  }
+}
+@keyframes x-hide {
+  0% {
+    bottom: 34px;
+  }
+  to {
+    bottom: -40px;
+  }
+}

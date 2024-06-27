@@ -1,0 +1,11 @@
+<a bind:_init="_tic" bind:close="_p" bind:confirm="_p" bodyBackgroundColor="#fff" btnTextColor="var(--main-text, #fff)" buttonText="知道了" class="activity-dialog" color="var(--main-bg, #323233)" customStyle="{{customStyle}}" data-t="{{ close:{en:'onClose'},confirm:{en:'onClose'} }}" overlayStyle="{{overlayStyle}}" show="{{showActivityDialog}}" showClose="{{false}}" themeColors="{{themeColors}}" title="活动优惠">
+    <b bind:_init="_tic" border="{{false}}" class="de3d2" valueClass="c519b6" wx:for="{{formattedActs}}" wx:key="promotionTypeName">
+        <c bind:_init="_tic" customClass="c86fc2" round="{{true}}" size="small" slot="icon" wx:if="{{item.promotionTypeName}}"> {{item.promotionTypeName}} </c>
+        <view class="de3d2--title" slot="title">
+            <view class="c0c447 c89585"> {{item.promotionDesc}} </view>
+        </view>
+        <view class="c8d7d1" wx:if="{{item.decrease}}"> {{item.decrease>0?'-':'+'}} ¥ {{item.priceText}} </view>
+    </b>
+    <view class="b2c4a t-hairline--bottom"></view>
+    <view class="c6d31" wx:if="{{decreaseTotal}}">    合计：{{decreaseTotal>0?'-':'+'}} ¥ {{decreaseTotal}} </view>
+</a>

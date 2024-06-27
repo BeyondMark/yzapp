@@ -1,0 +1,74 @@
+.casino-container {
+  width: 100%;
+  min-height: 812px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-size: 0;
+}
+.casino-container__background-image {
+  width: 100%;
+  position: absolute;
+}
+.casino-container__inner {
+  padding-bottom: 8px;
+  font-size: 14px;
+  min-height: 100vh;
+}
+.casino-my-award {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  width: 24px;
+  top: 170px;
+}
+.casino-header {
+  height: 134px;
+  text-align: center;
+  position: relative;
+}
+.casino-header__shop {
+  top: 16px;
+  left: 10px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+}
+.casino-header__shop__logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+.casino-header__shop__name {
+  color: #fff;
+  font-size: 12px;
+  margin-left: 5px;
+  line-height: 24px;
+}
+.casino-header__detail {
+  right: 0;
+  top: 16px;
+  font-size: 12px;
+  color: #fff;
+  line-height: 16px;
+  position: absolute;
+  padding: 4px 4px 4px 8px;
+  border-radius: 20px 0 0 20px;
+  background-color: hsla(0, 0%, 100%, 0.2);
+}
+.casino-bottom {
+  height: 32px;
+}
+.roulette-user {
+  color: #fff;
+  display: flex;
+  font-size: 12px;
+  line-height: 20px;
+  margin: 10px 15px 0;
+  justify-content: center;
+  position: relative;
+}
+.roulette-user__record {
+  color: #fff;
+  text-decoration: underline;
+}

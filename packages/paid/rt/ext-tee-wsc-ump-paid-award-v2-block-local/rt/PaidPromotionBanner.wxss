@@ -1,0 +1,11 @@
+.de5bf {
+  display: flex;
+  height: 154px;
+  box-sizing: initial;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+  font-size: 0;
+  margin-top: 12px;
+  padding: 0 12px;
+}

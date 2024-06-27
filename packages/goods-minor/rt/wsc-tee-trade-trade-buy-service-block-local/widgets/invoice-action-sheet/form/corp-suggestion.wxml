@@ -1,0 +1,17 @@
+<view class="cb8bc" hidden="{{!visible}}">
+    <view class="c1c108">
+        <view bind:tap="_p" data-t="{{ tap:{ en:'selectEnterprise',args:[item] } }}" wx:for="{{list}}" wx:key="companyId">
+            <view class="c11730">
+                <view wx:for="{{nameFormatted[index]}}" wx:for-item="j" wx:key="char">
+                    <view class="c23960 c89585" wx:if="{{j.matched}}">{{j.char}}</view>
+                    <view wx:else> {{j.char}} </view>
+                </view>
+                <view class="c7864f" wx:if="{{index+1!==list.length}}"></view>
+            </view>
+        </view>
+    </view>
+    <view class="c7864f"></view>
+    <view bind:tap="_p" class="c76c2f t-hairline--top" data-t="{{ tap:{en:'onClose'} }}">
+        <a bind:_init="_tic" customClass="ce719" name="arrow-up"></a>
+    </view>
+</view>

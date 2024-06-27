@@ -1,0 +1,4 @@
+<b bind:_init="_tic" channel="{{channel}}">
+    <a bind:_init="_tic" bind:tap="_p" customClass="zan-pay-recommend-a__action" customStyle="{{'color: '+themeColor+'; border-color: '+themeColor}}" data-t="{{ tap:{ en:'$emit',args:['click'] } }}" plain="{{true}}" round="{{true}}" size="mini">    开通并支付
+  </a>
+</b>

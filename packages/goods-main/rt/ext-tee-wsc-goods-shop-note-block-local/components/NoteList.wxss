@@ -1,0 +1,13 @@
+.shop-note {
+  box-sizing: border-box;
+  margin-top: 8px;
+  padding-bottom: 15px;
+  background: #fff;
+}
+.c9ce13 {
+  padding: 0 16px;
+}
+.c03d8 {
+  display: flex;
+  margin-bottom: 8px;
+}

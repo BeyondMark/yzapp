@@ -1,0 +1,8 @@
+<view class="c42ca3" style="justify-content: {{textAlign==='center'?'center':'flex-start'}};">
+    <view bind:tap="onTap" class="f95ca {{showImmersion?'c3088c':''}}">
+        <view class="c48674 {{showImmersion?'ea66a':''}}" style="text-align: {{textAlign}}">
+            <image class="c6bb29" mode="aspectFill" src="{{showImmersion?whiteIcon:blackIcon}}"></image>
+            <view class="c1cb25">搜索</view>
+        </view>
+    </view>
+</view>

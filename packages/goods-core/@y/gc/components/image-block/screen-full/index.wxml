@@ -1,0 +1,13 @@
+<view>
+    <view wx:if="{{isFullscreen}}">
+        <view class="c9acab" style="top:{{navRect.top+'px'}}; height:{{navRect.height+'px'}}">
+            <view class="fa701 ffac8" wx:if="{{allPictures.length>1&&(!isVideoCurrent||isVideoStopped)}}"> {{current+1}}/{{allPictures.length}} </view>
+            <a bind:_init="_tic" catch:tap="_p" class="c07691 c11d31" data-t="{{ tap:{ en:'$emit',et:'stop',args:['close-screen'] } }}" name="cross"></a>
+        </view>
+        <slot name="normal-cover"></slot>
+    </view>
+    <view wx:else>
+        <view class="fa701" wx:if="{{allPictures.length>1&&(!isVideoCurrent||isVideoStopped)}}"> {{current+1}}/{{allPictures.length}} </view>
+        <view class="c2aba8" wx:if="{{goodsBaseInfo.isDisplaySkuPicture&&currentSkuKey}}"> {{currentSkuKey}} </view>
+    </view>
+</view>

@@ -1,0 +1,172 @@
+.t-text {
+  text-decoration: inherit;
+}
+.t-text,
+.tee-image {
+  display: inline-block;
+}
+.tee-image {
+  width: 100%;
+  height: 100%;
+}
+@font-face {
+  font-family: collect-poinit-iconfont;
+  src: url(https://file.yzcdn.cn/upload_files/yz-file/2023/09/04/FoM0Boyuiylz_3KtkWWqrwO7FyoX.woff2)
+      format("woff2"),
+    url(https://file.yzcdn.cn/upload_files/yz-file/2023/09/04/Fr1bB056N18WRZRSqNRWe_fkmc2B.woff)
+      format("woff"),
+    url(https://file.yzcdn.cn/upload_files/yz-file/2023/09/04/FsPsNY9FPqA0y71MDwJgGD-Z7qIT.ttf)
+      format("truetype");
+}
+.collect-poinit-iconfont {
+  font-family: collect-poinit-iconfont !important;
+  font-size: 48px;
+  line-height: 30px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-donut-fill:before {
+  content: "";
+}
+.icon-dessert-fill:before {
+  content: "";
+}
+.icon-bake-fill:before {
+  content: "";
+}
+.icon-cake-fill:before {
+  content: "";
+}
+.icon-tea-fill:before {
+  content: "";
+}
+.icon-meal-fill:before {
+  content: "";
+}
+.icon-coffee-fill:before {
+  content: "";
+}
+.icon-tea:before {
+  content: "";
+}
+.icon-dessert:before {
+  content: "";
+}
+.icon-meal:before {
+  content: "";
+}
+.icon-cake:before {
+  content: "";
+}
+.icon-coffee:before {
+  content: "";
+}
+.icon-bake:before {
+  content: "";
+}
+.icon-donut:before {
+  content: "";
+}
+.dc-reward-points {
+  position: relative;
+  overflow: hidden;
+}
+.dc-reward-points .card-container {
+  overflow: hidden;
+}
+.reward-card {
+  color: #323233;
+}
+.reward-card .title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.reward-card .detail,
+.reward-card .detail .points {
+  display: -webkit-flex;
+  display: flex;
+}
+.reward-card .detail .points {
+  align-items: flex-end;
+  line-height: 26px;
+}
+.reward-card .detail .points .num {
+  font-size: 24px;
+  font-weight: 500;
+}
+.reward-card .detail .points .all {
+  margin-left: 2px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.mode-one.reward-card {
+  position: relative;
+  padding: 12px 16px;
+  overflow: hidden;
+}
+.mode-one.reward-card .detail {
+  align-items: center;
+  margin-top: 24px;
+  height: 24px;
+}
+.mode-one.reward-card .detail .points {
+  margin-left: 4px;
+}
+.mode-one.reward-card .detail .img {
+  width: 30px;
+  height: 30px;
+}
+.mode-one.reward-card .description {
+  margin: 5px 0;
+  font-size: 12px;
+  line-height: 18px;
+  color: #969799;
+}
+.mode-one.reward-card .process {
+  width: 44%;
+  background-color: rgba(242, 243, 245, 0.6);
+}
+.mode-one.reward-card .card-background {
+  position: absolute;
+  right: 0;
+  bottom: -15px;
+}
+.mode-one.reward-card .card-background .img {
+  width: 150px;
+  height: 150px;
+  opacity: 0.3;
+}
+.mode-two.reward-card {
+  padding: 12px 16px 4px 16px;
+}
+.mode-two.reward-card .detail {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+}
+.mode-two.reward-card .detail .name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-right: 20px;
+}
+.mode-two.reward-card .reward-item-container {
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+.mode-two.reward-card .reward-item-container .reward-item {
+  margin: 0 calc(5vw - var(--page-margin) * 2 / 10 / 2 - 16.6px);
+  margin-bottom: 8px;
+}
+.mode-two.reward-card .reward-item-container .img {
+  width: 30px;
+  height: 30px;
+}

@@ -1,0 +1,8 @@
+<view wx:if="{{show&&product&&(isRecommend||isRechargeFree)}}">
+    <block wx:if="{{isRecommend}}">
+        <b bind:_init="_tic" bind:changeBalance="_p" data-t="{{ changeBalance:{en:'changeBalance'} }}" exclusion="{{balanceMkExclusion}}" generalThemeColor="{{themeColors.general}}" kdtId="{{kdtId}}" newRecommend="{{newRecommend}}" originPay="{{originPay}}" product="{{product}}" realPay="{{realPay}}" rmId="{{rmId}}" useStoreBalancePayInFull="{{useStoreBalancePayInFull}}" useStoredMemberCustomerDiscount="{{useStoredMemberCustomerDiscount}}" wx:if="{{rmId==='b7-66'||rmId==='b36-33'}}"></b>
+    </block>
+    <block wx:if="{{isRechargeFree}}">
+        <a bind:_init="_tic" generalThemeColor="{{themeColors.general}}" kdtId="{{kdtId}}" originPay="{{originPay}}" product="{{product}}" rmId="{{rmId}}" wx:if="{{rmId==='b7-66'||rmId==='b36-33'}}"></a>
+    </block>
+</view>

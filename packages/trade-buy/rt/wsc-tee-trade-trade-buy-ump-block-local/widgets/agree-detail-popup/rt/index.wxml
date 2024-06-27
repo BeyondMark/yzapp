@@ -1,0 +1,8 @@
+<a bind:_init="_tic" bind:close="_p" closeable="{{true}}" data-t="{{ close:{en:'handleClose'} }}" position="bottom" round="{{true}}" safeAreaInsetBottom="{{true}}" show="{{showFreeMemberDialog}}">
+    <view class="c06796">
+        <rich-text class="d486d" nodes="{{agreeDetail}}"></rich-text>
+        <view class="c57e90">
+            <view bind:tap="_p" class="eac27" data-t="{{ tap:{en:'handleClose'} }}">我知道了</view>
+        </view>
+    </view>
+</a>

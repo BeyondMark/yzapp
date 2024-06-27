@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./components/gift-card-list/index",
+    "b": "./components/recharge-rule/index",
+    "_": "../../../../../../../components/_/index"
+  }
+}

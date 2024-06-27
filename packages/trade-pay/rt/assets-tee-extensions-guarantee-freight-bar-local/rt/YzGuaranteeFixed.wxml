@@ -1,0 +1,22 @@
+<view>
+    <a bind:_init="_tic" bind:tap="_p" border="{{false}}" class="yz-guarantee-fixed long-cell" customStyle="{{padding}}" data-t="{{ tap:{en:'showDetail'} }}" isLink="{{true}}" titleClass="yz-guarantee-fixed__img-title" value="商家赠送" valueClass="yz-guarantee-fixed__value">
+        <view slot="title">
+            <view class="t-cell-text" wx:if="{{hideYzGuarantee}}">消费保障服务</view>
+            <image class="{{true?'t-cell-img':''}} {{logoAddYouzan?'youzan':''}} tee-image" lazyLoad="true" src="{{logo}}" wx:else></image>
+        </view>
+    </a>
+    <b bind:_init="_tic" bind:close="_p" bind:confirm="_p" class="action-sheet" data-t="{{ close:{en:'onClose'},confirm:{en:'onClose'} }}" show="{{showPopup}}" themeColors="{{themeColors}}">
+        <view class="yz-guarantee__logo" slot="title">
+            <image class="{{true?'logo_img':''}} {{logoAddYouzan?'youzan':''}} tee-image" lazyLoad="true" src="{{logo}}"></image>
+        </view>
+        <view class="yz-guarantee-popup__content">
+            <view class="yz-guarantee-service" wx:for="{{content}}" wx:for-index="cindex" wx:key="cindex">
+                <image class="yz-guarantee-service__icon tee-image" lazyLoad="true" src="{{item.icon}}"></image>
+                <view class="yz-guarantee-service__right">
+                    <view class="yz-guarantee-service__title">{{item.desc}}</view>
+                    <view class="yz-guarantee-service__detail">{{item.content}}</view>
+                </view>
+            </view>
+        </view>
+    </b>
+</view>

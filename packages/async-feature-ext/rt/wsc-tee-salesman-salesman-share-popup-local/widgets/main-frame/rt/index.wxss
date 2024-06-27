@@ -1,0 +1,10 @@
+.salesman-pop-frame__container {
+  display: flex;
+  flex-direction: column;
+}
+.salesman-pop-frame__height {
+  height: 80vh;
+}
+.salesman-pop-frame__body {
+  flex: 1;
+}

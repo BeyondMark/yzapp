@@ -1,0 +1,145 @@
+.t-popup {
+  position: fixed;
+  box-sizing: border-box;
+  max-height: 100%;
+  overflow-y: auto;
+  transition-timing-function: ease;
+  -webkit-overflow-scrolling: touch;
+  background-color: #fff;
+  background-color: var(--popup-background-color, #fff);
+}
+.t-popup--center {
+  top: 50vh;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+.t-popup--center.t-popup--round {
+  border-radius: 16px;
+  border-radius: var(--popup-round-border-radius, 16px);
+}
+.t-popup--top {
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.t-popup--top.t-popup--round {
+  border-radius: 0 0 16px 16px;
+  border-radius: 0 0 var(--popup-round-border-radius, 16px)
+    var(--popup-round-border-radius, 16px);
+}
+.t-popup--right {
+  top: 50%;
+  right: 0;
+  transform: translate3d(0, -50%, 0);
+}
+.t-popup--right.t-popup--round {
+  border-radius: 16px 0 0 16px;
+  border-radius: var(--popup-round-border-radius, 16px) 0 0
+    var(--popup-round-border-radius, 16px);
+}
+.t-popup--bottom {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.t-popup--bottom.t-popup--round {
+  border-radius: 16px 16px 0 0;
+  border-radius: var(--popup-round-border-radius, 16px)
+    var(--popup-round-border-radius, 16px) 0 0;
+}
+.t-popup--left {
+  top: 50%;
+  left: 0;
+  transform: translate3d(0, -50%, 0);
+}
+.t-popup--left.t-popup--round {
+  border-radius: 0 16px 16px 0;
+  border-radius: 0 var(--popup-round-border-radius, 16px)
+    var(--popup-round-border-radius, 16px) 0;
+}
+.t-popup--bottom.t-popup--safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.t-popup--safeTop {
+  padding-top: env(safe-area-inset-top);
+}
+.t-popup__close-icon {
+  position: absolute;
+  z-index: 1;
+  color: #969799;
+  font-size: 18px;
+}
+.t-popup__close-icon--top-left {
+  top: 16px;
+  left: 16px;
+}
+.t-popup__close-icon--top-right {
+  top: 16px;
+  right: 16px;
+}
+.t-popup__close-icon--bottom-left {
+  bottom: 16px;
+  left: 16px;
+}
+.t-popup__close-icon--bottom-right {
+  right: 16px;
+  bottom: 16px;
+}
+.t-popup__close-icon:active {
+  opacity: 0.6;
+}
+.vt-scale-enter-active,
+.vt-scale-leave-active {
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+}
+.vt-scale-enter,
+.vt-scale-leave-to {
+  transform: translate3d(-50%, -50%, 0) scale(0.7);
+  opacity: 0;
+}
+.vt-fade-enter-active,
+.vt-fade-leave-active {
+  transition-property: opacity;
+}
+.vt-fade-enter,
+.vt-fade-leave-to {
+  opacity: 0;
+}
+.vt-center-enter-active,
+.vt-center-leave-active {
+  transition-property: opacity;
+}
+.vt-center-enter,
+.vt-center-leave-to {
+  opacity: 0;
+}
+.vt-bottom-enter-active,
+.vt-bottom-leave-active,
+.vt-left-enter-active,
+.vt-left-leave-active,
+.vt-right-enter-active,
+.vt-right-leave-active,
+.vt-top-enter-active,
+.vt-top-leave-active {
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+.vt-bottom-enter,
+.vt-bottom-leave-to {
+  transform: translate3d(0, 100%, 0);
+}
+.vt-top-enter,
+.vt-top-leave-to {
+  transform: translate3d(0, -100%, 0);
+}
+.vt-left-enter,
+.vt-left-leave-to {
+  transform: translate3d(-100%, -50%, 0);
+}
+.vt-right-enter,
+.vt-right-leave-to {
+  transform: translate3d(100%, -50%, 0);
+}

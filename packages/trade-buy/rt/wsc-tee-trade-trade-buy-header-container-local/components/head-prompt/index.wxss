@@ -1,0 +1,19 @@
+.b8e8a {
+  color: var(--notice, #ed6a0c);
+  font-size: 14px;
+  padding: 8px 12px;
+  line-height: 1.5em;
+  background-color: var(--notice-bg, #fffbe8);
+}
+.c93440:empty {
+  display: none;
+}
+.c93440 {
+  margin: var(--theme-page-card-margin-top, 10px)
+    var(--theme-page-card-margin-right, 12px)
+    var(--theme-page-card-margin-bottom, 10px)
+    var(--theme-page-card-margin-left, 12px);
+  border-radius: var(--theme-radius-card, 8px);
+  overflow: hidden;
+  position: relative;
+}

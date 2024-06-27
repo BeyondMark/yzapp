@@ -1,0 +1,5 @@
+<view class="dc-wxvideo">
+    <a bind:_init="_tic" bind:item-click="_p" data-t="{{ itemClick:{en:'handleToLive'} }}" isLiving="{{true}}" liveInfo="{{liveInfo}}" opt="{{opt}}" wx:if="{{isLiving}}"></a>
+    <b bannerId="{{bannerId}}" bind:_init="_tic" liveNoticeInfo="{{liveNoticeInfo}}" opt="{{opt}}" themeColors="{{themeColors}}" wx:elif="{{hasNotice}}"></b>
+    <a bind:_init="_tic" bind:item-click="_p" data-t="{{ itemClick:{en:'handleToLive'} }}" isLiving="{{false}}" liveInfo="{{liveInfo}}" opt="{{opt}}" wx:elif="{{liveInfo}}"></a>
+</view>

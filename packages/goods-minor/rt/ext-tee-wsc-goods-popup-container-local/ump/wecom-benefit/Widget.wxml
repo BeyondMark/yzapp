@@ -1,0 +1,1 @@
+<a bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'handleClose'} }}" qrCodeUrl="{{wecomFriendsInfo.qrCodeUrl}}" wx:if="{{show}}"></a>

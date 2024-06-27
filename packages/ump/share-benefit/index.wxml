@@ -1,0 +1,7 @@
+<view>
+    <view class="activity-detail" wx:if="{{isWxVideo}}">
+        <a activityInfo="{{activityInfo}}" activityQuery="{{activityQuery}}" bind:set-share-tag="setShareTag"></a>
+    </view>
+    <b src="{{activityDetailUrl}}" wx:else></b>
+    <c noAutoAuth="{{true}}"></c>
+</view>

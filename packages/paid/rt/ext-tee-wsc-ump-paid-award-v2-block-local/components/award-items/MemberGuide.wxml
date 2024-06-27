@@ -1,0 +1,20 @@
+<view class="dacd7" wx:if="{{showMemberGuide}}">
+    <view class="c3e9a0">
+        <view class="c76da6">
+            <view class="cd9df">
+                <text bind:_init="_tic" class="c84f5c" overflow="visible">{{shopName}}</text>
+                <view class="c704b0 c89585">邀你入会享专属权益</view>
+            </view>
+            <view bind:tap="_p" class="c65331" data-t="{{ tap:{en:'gotoMemberPage'} }}">立即入会</view>
+        </view>
+        <view class="d6a51" wx:if="{{benefitList.length>0}}">
+            <view bind:tap="_p" class="{{benefitOver3?'c6e980':'c40391'}}" data-t="{{ tap:{en:'gotoMemberPage'} }}" wx:for="{{benefitList}}" wx:for-item="benefit" wx:key="index">
+                <view class="c2858e" wx:if="{{benefit.icon}}">
+                    <image class="c96f97 bd231" lazyLoad="true" src="{{benefit.icon}}"></image>
+                </view>
+                <view class="b3ef7" wx:if="{{benefit.benefitCount}}">{{benefit.benefitCount}}项</view>
+                <view class="{{!benefitOver3?'c0ac5b':''}} c89585">{{benefit.facadeShowName||benefit.appName}}</view>
+            </view>
+        </view>
+    </view>
+</view>

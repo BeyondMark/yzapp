@@ -1,0 +1,42 @@
+.t-text {
+  text-decoration: inherit;
+}
+.t-text,
+.tee-image {
+  display: inline-block;
+}
+.tee-image {
+  width: 100%;
+  height: 100%;
+}
+.guarantee-item {
+  display: flex;
+  margin-bottom: 32px;
+}
+.guarantee-item__icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  display: inline-block;
+}
+.guarantee-item__right {
+  flex: 1;
+  text-align: left;
+}
+.guarantee-item__title {
+  color: #323233;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+}
+.guarantee-item__title-icon {
+  float: right;
+  color: #c8c9cc;
+}
+.guarantee-item__detail {
+  margin-top: 8px;
+  color: #969799;
+  font-size: 14px;
+  line-height: 1.33;
+  display: block;
+}

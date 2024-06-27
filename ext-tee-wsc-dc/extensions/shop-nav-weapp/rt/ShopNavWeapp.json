@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../widgets/rt/BottomTabbarBg",
+    "b": "./../compontents/TabbarIcon",
+    "_": "../../../../components/_/index"
+  }
+}

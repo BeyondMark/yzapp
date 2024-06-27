@@ -1,0 +1,18 @@
+{
+  "navigationBarTitleText": "优惠套餐",
+  "usingComponents": {
+    "a": "/pages/common/page-container/index",
+    "b": "./components/submit-bar/index",
+    "c": "./components/goods-item/index",
+    "d": "./components/sku-header-price/index",
+    "e": "../../async-main/common/components/base-sku/index",
+    "f": "../../async-main/@vant/weapp/dist/toast/index",
+    "g": "../../async-main/@vant/weapp/dist/checkbox/index",
+    "h": "../../async-main/@vant/weapp/dist/checkbox-group/index",
+    "i": "../../async-main/components/showcase/components/salesman-cube/index",
+    "j": "../@vant/weapp/dist/cell/index",
+    "k": "../@vant/weapp/dist/cell-group/index",
+    "_": "../../../components/_/index"
+  },
+  "componentPlaceholder": { "e": "_", "f": "_", "g": "_", "h": "_", "i": "_" }
+}

@@ -1,0 +1,3 @@
+<view class="filter-bar">
+    <a bind:handleChangeLayoutType="handleChangeLayoutType" bindchange="handleFilterChange" class="filters" currentLayoutType="{{layoutType}}" filters="{{filters}}" isShowLayoutChange="{{isShowLayoutChange}}" themeBorderColor="theme-border-color" themeClass="{{themeClass}}" themeColor="theme-color"></a>
+</view>

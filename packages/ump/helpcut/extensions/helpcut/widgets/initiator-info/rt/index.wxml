@@ -1,0 +1,6 @@
+<view class="initiator-info">
+    <view class="avatar-wrapper">
+        <image class="user-avatar" mode="aspectFill" src="{{initiatorInfo.avatar||defaultAvatar}}"></image>
+    </view>
+    <view class="user-name">{{initiatorInfo.nickName||'神秘用户'}}</view>
+</view>

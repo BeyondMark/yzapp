@@ -1,0 +1,30 @@
+<view>
+    <d bind:_init="_tic" wx:if="{{loading}}"></d>
+    <block wx:else>
+        <view data-ref="channels" wx:for="{{hackChannels}}" wx:for-item="channel" wx:key="payChannel">
+            <b bind:_init="_tic" bind:tap="_p" customClass="{{getChannelClass(channel)}}" data-t="{{ tap:{ en:'onChannelClick',args:[channel] } }}" useLabelSlot="{{!!channel.channelNotice}}">
+                <div bind:_init="_tic" class="zan-pay__title" slot="title">
+                    <c bind:_init="_tic" channel="{{channel}}" showBalance="{{true}}"></c>
+                    <view wx:if="{{channel.ext&&channel.ext.recommendNotice&&channel.available&&channel.recommend}}">
+                        <view class="zan-pay__label--recommend t-text"> {{channel.ext&&channel.ext.recommendNotice}} </view>
+                    </view>
+                </div>
+                <view class="zan-pay__label zan-pay__label--normal" slot="label" wx:if="{{channel.channelNotice&&channel.available&&!channel.recommend}}"> {{channel.channelNotice}} </view>
+                <view class="zan-pay__label zan-pay__label--disabled" slot="label" wx:if="{{channel.channelNotice&&!channel.available}}"> {{channel.channelNotice}} </view>
+                <a bind:_init="_tic" class="zan-pay__active-sign" color="{{themeColor}}" name="success" size="16" slot="right-icon" wx:if="{{active&&active.payChannel===channel.payChannel&&(!active.ext||!active.ext.instalments)}}"></a>
+            </b>
+            <block wx:if="{{channel.ext&&channel.ext.instalments}}">
+                <b bind:_init="_tic" bind:tap="_p" customClass="zan-pay__instalment" data-t="{{ tap:{ en:'$emit',args:['change',channel,it] } }}" useLabelSlot="{{true}}" wx:for="{{channel.ext.instalments}}" wx:for-item="it" wx:key="num">
+                    <view slot="title" style="display: flex; align-items: center">
+                        <view class="t-text" style="margin-right:{{it.chargePayer===1?'6px':''}}">              ¥ {{it.amount}} x {{it.num}}期
+            </view>
+                        <e bind:_init="_tic" plain="{{true}}" type="warning" wx:if="{{it.chargePayer===1}}">              商家付息
+            </e>
+                    </view>
+                    <view class="t-text" slot="label">            手续费 ¥ {{it.charges}}/期{{it.chargePayer===1?'，商家已支付':''}} </view>
+                    <a bind:_init="_tic" class="zan-pay__active-sign" color="{{themeColor}}" name="success" size="16" slot="right-icon" wx:if="{{active&&active.payChannel===channel.payChannel&&instalment&&instalment.num===it.num}}"></a>
+                </b>
+            </block>
+        </view>
+    </block>
+</view>

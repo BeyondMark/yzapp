@@ -1,0 +1,39 @@
+.long-cell {
+  padding: var(--theme-page-cell-padding-top, 10px)
+    var(--theme-page-cell-padding-right, 12px)
+    var(--theme-page-cell-padding-bottom, 10px)
+    var(--theme-page-cell-padding-left, 12px) !important;
+}
+.b0c2e {
+  padding: 16px;
+}
+.ed13b {
+  overflow: hidden;
+  border-radius: 4px;
+}
+.ed13b .t-cell__title {
+  max-width: 65px !important;
+}
+.c4ad01 {
+  margin-top: 10px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.c4ad01 .t-cell__value {
+  flex: none;
+}
+.c4ad01 .t-switch {
+  vertical-align: top;
+}
+.ff4fc {
+  padding: 32px 0;
+}
+.b0c2e .c9c4e2 {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+.t-cell:after {
+  right: 16px !important;
+}

@@ -1,0 +1,4 @@
+<a bind:agree="handleAgree" bind:close="handlePopupAfterLeave" bind:disagree="handleDisagree" bind:show-before="handlePopupBeforeEnter" btnConfig="{{btnConfig}}" code="{{code}}" contentCustomStyle="padding-bottom: {{yunBottomExtHeight}}px" duration="{{duration}}" needSkipSigned="{{needSkipSigned}}" popupCustomStyle="{{popupCustomStyle}}" theme="{{theme}}" useNativeSlot="{{!agreeBtnDisabled?useNativeSlot:false}}" useUIComponentSlot="{{isUIComponent}}" visible="{{visible}}" zIndex="{{zIndex}}">
+    <slot name="agree-btn" slot="agree-btn"></slot>
+    <b bind:agree-disable-changed="handleAgreeDisableChanged" slot="ui-component"></b>
+</a>

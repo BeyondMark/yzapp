@@ -1,0 +1,28 @@
+.rules-content,
+.rules-tag {
+  height: 22px;
+}
+.rules-tag {
+  position: absolute;
+  right: 16px;
+  top: 17px;
+  width: 40px;
+  line-height: 22px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 800;
+  color: #fff0db;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 11px;
+}
+.rules-tag__left {
+  top: 22px;
+  right: 20px;
+}
+.rule {
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  padding: 0 15px;
+}

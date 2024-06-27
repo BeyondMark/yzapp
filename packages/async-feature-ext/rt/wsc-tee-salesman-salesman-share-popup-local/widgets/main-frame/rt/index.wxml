@@ -1,0 +1,13 @@
+<a bind:_init="_tic" bind:click-overlay="_p" customStyle="{{customStyle}}" data-t="{{ clickOverlay:{en:'handleTogglePanel'} }}" position="bottom" round="{{true}}" show="{{show}}">
+    <view class="{{'salesman-pop-frame__container'}} {{showGoodsDetail?'salesman-pop-frame__height':''}}" wx:if="{{show}}">
+        <view>
+            <slot name="cubeHeader"></slot>
+        </view>
+        <view class="salesman-pop-frame__body" wx:if="{{showGoodsDetail}}">
+            <slot name="cubeTab"></slot>
+        </view>
+        <view class="salesman-pop-frame__footer">
+            <slot name="cubeFooter"></slot>
+        </view>
+    </view>
+</a>

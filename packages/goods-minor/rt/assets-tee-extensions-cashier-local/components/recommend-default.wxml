@@ -1,0 +1,4 @@
+<a bind:_init="_tic" channel="{{channel}}">
+    <view bind:tap="_p" class="zan-pay-recommend__action t-text" data-t="{{ tap:{ en:'$emit',args:['click'] } }}" style="color:{{themeColor}}">    立即使用
+  </view>
+</a>

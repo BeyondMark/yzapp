@@ -1,0 +1,27 @@
+<view class="banner">
+    <view class="co-u-bg" style="background-image: {{imageUrl}};"></view>
+    <view class="exp-t {{action&&'no-co'}}" wx:if="{{showCardTips}}">
+        <view bindtap="executeAction" class="t-c" wx:if="{{action&&btnText}}">
+            <view>{{btnText}}</view>
+            <a name="arrow"></a>
+        </view>
+        <view class="t-c" wx:else>{{cardTips?cardTips:'已过期'}}</view>
+    </view>
+    <view class="ca-co" wx:if="{{cardCodeVisible}}">
+        <image bindtap="openCodeDialog" class="code-image" src="//img01.yzcdn.cn/public_files/2019/02/21/e0a192cee152c41f4a6efe05da1ebef7.png"></image>
+    </view>
+</view>
+<b asyncClose="{{true}}" customClass="code-dialog" customStyle="background-color: transparent;" show="{{modalVisible}}" showConfirmButton="{{false}}" useSlot="{{true}}">
+    <view class="content">
+        <view class="code-loading" wx:if="{{codeLoading}}">
+            <c type="spinner">加载中</c>
+        </view>
+        <block wx:else>
+            <view class="van-dialog__header">{{cardName}}</view>
+            <image class="barcode" mode="widthFix" src="{{cardCodeInfo.bar_code}}"></image>
+            <view class="b-num">{{cardNo}}</view>
+            <image class="qrcode" src="{{cardCodeInfo.qr_code}}"></image>
+        </block>
+    </view>
+    <a bindtap="closeCodeDialog" customClass="dialog-close" name="close"></a>
+</b>

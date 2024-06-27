@@ -1,0 +1,19 @@
+.c627fc {
+  display: flex;
+  margin-top: 8px;
+}
+.c627fc .e2c10 {
+  width: 30px;
+  background-image: url(https://img01.yzcdn.cn/public_files/d6f15ac7e1e174eb270ed5e319330029.png!small.png);
+  position: relative;
+}
+.c627fc .e2c10,
+.c627fc .c1c38a {
+  height: 16px;
+  background-size: 100% 100%;
+  margin-right: 6px;
+}
+.c627fc .c1c38a {
+  width: 56px;
+  background-image: url(https://img01.yzcdn.cn/public_files/699b52f6bcbf052e8ae0b8a39be0447f.png!small.png);
+}

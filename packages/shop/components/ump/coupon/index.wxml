@@ -1,0 +1,19 @@
+<a collapse="{{collapse}}" customActionClass="custom-coupon-box-action-class" customClass="custom-coupon-box-class" disabled="{{disabled}}" displayType="{{displayType}}" themeClass="{{themeClass}}" unavailable="{{unavailable}}">
+    <view slot="A">
+        <b autoFormatValue="{{autoFormatValue}}" description="{{coupon.threshold}}" disabled="{{disabled}}" prefix="{{discountPrefix}}" themeClass="{{themeClass}}" unavailable="{{unavailable}}" unit="{{coupon.unit}}" value="{{coupon.value}}"></b>
+        <c height="36px" position="topLeft" themeClass="{{themeClass}}" url="{{topLeftIcon}}" visible="{{!!topLeftIcon}}" width="36px"></c>
+    </view>
+    <d content="{{coupon.name}}" description="{{coupon.validTime}}" disabled="{{disabled}}" extra="{{couponNameSuffix}}" slot="C" style="max-width: 100%;" themeClass="{{themeClass}}" unavailable="{{unavailable}}" validEndTime="{{coupon.validEndTime}}" validStartTime="{{coupon.validStartTime}}"></d>
+    <view slot="B" style="width: 100%;" wx:if="{{!hideBtnWrap}}">
+        <f bind:change="handleCheckboxChange" disabled="{{disabled}}" themeClass="{{themeClass}}" unavailable="{{unavailable}}" value="{{checkboxValue}}" wx:if="{{isCheckbox}}">
+            <slot name="checkbox"></slot>
+        </f>
+        <g status="{{coupon.status}}" wx:elif="{{coupon.status}}"></g>
+        <e bind:click-btn="handleBtnClick" btnText="{{btnText}}" btnType="{{btnType}}" disabled="{{disabled}}" icon="{{btnIcon}}" themeClass="{{themeClass}}" unavailable="{{unavailable}}" wx:else>
+            <slot name="btnPrefix" slot="prefix"></slot>
+            <slot name="btnSuffix" slot="suffix"></slot>
+        </e>
+        <c themeClass="{{themeClass}}" url="{{getBRUrl}}" visible="{{showCheckIn}}"></c>
+    </view>
+    <slot name="couponExtra" slot="D"></slot>
+</a>

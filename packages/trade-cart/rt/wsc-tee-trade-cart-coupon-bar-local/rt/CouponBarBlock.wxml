@@ -1,0 +1,4 @@
+<view style="{{themeStyle}}" wx:if="{{showCouponBar&&!hasCheckedGoods&&dataLoaded}}">
+    <a bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b4-11'}}"></a>
+    <b bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b4-11'}}"></b>
+</view>

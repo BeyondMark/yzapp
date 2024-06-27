@@ -1,0 +1,4 @@
+<view class="c836a4" style="{{customStyle}}">
+    <view bind:tap="_p" class="c7d46d" data-t="{{ tap:{en:'jumpOut'} }}">查看更多优惠 <a bind:_init="_tic" name="arrow-down" style="margin-left: 4px"></a>
+    </view>
+</view>

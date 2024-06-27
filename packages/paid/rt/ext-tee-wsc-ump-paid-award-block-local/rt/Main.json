@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../wsc-tee-salesman-salesman-pay-result-block-local/rt/SalesmanPayResultInfo",
+    "b": "/@y-open/vt/dist/cell/index",
+    "_": "../../../../../components/_/index"
+  }
+}

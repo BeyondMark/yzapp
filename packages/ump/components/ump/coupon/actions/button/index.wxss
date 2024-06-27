@@ -1,0 +1,43 @@
+.coupon-button {
+  box-sizing: border-box;
+  padding-right: 12px;
+  position: relative;
+  z-index: 1;
+}
+.coupon-button__box ~ .coupon-button__placeholder,
+.coupon-button__placeholder ~ .coupon-button__box {
+  margin-top: 4px;
+}
+.coupon-button__box {
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+  height: 20px;
+  color: #fff;
+  background-color: #fa1919;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+.coupon-button__flat {
+  color: #fa1919;
+  background-color: transparent;
+  border: 1px solid #fa1919;
+}
+.coupon-button__disabled,
+.coupon-button__unavailable {
+  color: #fff;
+  background-color: #dcdee0;
+  border-color: #dcdee0;
+}
+.coupon-button__btn {
+  flex: 1;
+  padding: 0;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  background-color: inherit;
+  color: inherit;
+}
+.coupon-button__icon {
+  line-height: 16px;
+}

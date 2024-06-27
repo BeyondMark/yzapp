@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../widgets/rt/GetPhoneButton",
+    "b": "/packages/async-tee/@y-open/vt/native/weapp/dialog/index/index",
+    "c": "/packages/async-tee/@y-open/vt/native/weapp/toast/index/index",
+    "d": "/@y-open/vt/dist/cell/index",
+    "e": "/@y-open/vt/dist/button/index.weapp",
+    "f": "/packages/async-tee/@y-open/vt/native/weapp/field/index/index",
+    "g": "../../../@y-open/vt/dist/switch/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_", "c": "_", "f": "_" }
+}

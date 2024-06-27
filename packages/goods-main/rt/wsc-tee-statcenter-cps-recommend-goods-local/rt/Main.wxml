@@ -1,0 +1,14 @@
+<view bind:tap="_p" class="{{'c075ee'}} {{'c7c275-'+c7c275Type}}" data-t="{{ tap:{en:'navigateToList'} }}" wx:if="{{visible}}">
+    <view class="c1cb25">
+        <view class="b0689">周边好物</view>
+        <view class="c1dee8">      为你推荐的精选好物
+      <a bind:_init="_tic" class="c75c06" name="arrow"></a>
+        </view>
+    </view>
+    <view class="c59da8">
+        <view class="c7c98b" wx:for="{{goods}}" wx:key="id">
+            <image class="dd075 bd231" lazyLoad="true" src="{{item.imageUrl}}"></image>
+            <view class="c8cc08">¥ {{item.price}}</view>
+        </view>
+    </view>
+</view>

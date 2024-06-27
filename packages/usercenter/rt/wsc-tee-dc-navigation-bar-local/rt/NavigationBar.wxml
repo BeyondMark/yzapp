@@ -1,0 +1,1 @@
+<a bind:_init="_tic" bind:set-height="_p" bind:share="_p" data-t="{{ setHeight:{en:'getHeight'},share:{en:'handleShare'} }}" navigationbarConfigData="{{navigationBarConfigData}}" openCustomNav="{{openCustomNav}}" titleText="{{title}}"></a>

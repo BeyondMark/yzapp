@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/goods-minor/rt/retail-tee-prepaid-prepaid-local/widgets/prepaid-recommend/rt/index",
+    "b": "../../../../../@y/wsc-tee-trade-common/components/InfoDialog",
+    "_": "../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

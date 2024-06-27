@@ -1,0 +1,3 @@
+<view class="shrink-container">
+    <view class="inner" style="font-size:{{fontSize+'px'}}"> {{text}} </view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "navigationBarBackgroundColor": "#FFF",
+  "navigationBarTitleText": "团长招募",
+  "enablePullDownRefresh": true,
+  "componentPlaceholder": { "c": "_" }
+}

@@ -1,0 +1,22 @@
+<a bind:_init="_tic" bind:click-overlay="_p" customStyle="left: 0;right:0;top:0;bottom:0;background-color: transparent;transform: none;" data-t="{{ clickOverlay:{en:'handleClick'} }}" show="{{show}}">
+    <view bind:tap="_p" class="guide-container" data-t="{{ tap:{en:'handleClick'} }}" wx:if="{{show&&guideList[step]&&guideList[step].component==='downward-guide'}}">
+        <view style="display: flex; justify-content: center" wx:if="{{guideList[step]}}">
+            <view class="content-wrapper" style="bottom:{{guideList[step].bottom}}">
+                <view class="content">{{guideList[step].content}}</view>
+                <view class="guide-button">{{step===guideList.length-1?'知道了':'下一步'}}</view>
+                <image class="guide-arrow tee-image" lazyLoad="true" src="{{assertMap[guideList[step].arrowType]}}"></image>
+            </view>
+        </view>
+        <image class="guide-img tee-image" lazyLoad="true" src="{{guideList[step].imgUrl}}" style="width:{{guideList[step].imgStyle.width}}; height:{{guideList[step].imgStyle.height}}; left:{{guideList[step].imgStyle.left}}; bottom:{{'calc( '+guideList[step].imgStyle.bottom+' + env(safe-area-inset-bottom))'}}"></image>
+    </view>
+    <view bind:tap="_p" class="guide-container" data-t="{{ tap:{en:'handleClick'} }}" wx:if="{{guideList[step]&&guideList[step].component==='upward-guide'}}">
+        <image class="guide-img tee-image" lazyLoad="true" src="{{guideList[step].imgUrl}}" style="width:{{guideList[step].imgStyle.width}}; height:{{guideList[step].imgStyle.height}}; left:{{guideList[step].imgStyle.left}}; bottom:{{'calc( '+guideList[step].imgStyle.bottom+' + env(safe-area-inset-bottom))'}}"></image>
+        <view style="display: flex; justify-content: center" wx:if="{{guideList[step]}}">
+            <view class="content-wrapper" style="bottom:{{guideList[step].bottom}}">
+                <image class="guide-arrow tee-image" lazyLoad="true" src="{{assertMap[guideList[step].arrowType]}}"></image>
+                <view class="content">{{guideList[step].content}}</view>
+                <view class="guide-button">{{step===guideList.length-1?'知道了':'下一步'}}</view>
+            </view>
+        </view>
+    </view>
+</a>

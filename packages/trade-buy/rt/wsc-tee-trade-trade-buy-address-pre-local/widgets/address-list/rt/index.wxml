@@ -1,0 +1,12 @@
+<c bind:_init="_tic" bind:close="_p" bind:confirm="_p" btnTextColor="var(--main-text, #fff)" buttonText="{{addText}}" closeOnConfirm="{{false}}" color="var(--main-bg, #323233)" customStyle="{{customStyle}}" data-t="{{ close:{en:'onClose'},confirm:{en:'onEdit'} }}" disablePadding="{{true}}" overlayStyle="{{overlayStyle}}" popupClass="ffc0f-popup" show="{{show}}" showClose="{{true}}" title="{{title}}">
+    <view class="c62648">
+        <block wx:if="{{!isCityForcePoiSelect}}">
+            <b bind:_init="_tic" bind:save="_p" data-t="{{ save:{en:'onPlatformAddressSave'} }}" rmId="{{rmId}}" wx:if="{{rmId==='b36-28'}}"></b>
+        </block>
+        <a bind:_init="_tic" bind:edit="_p" bind:select="_p" data-t="{{ select:{ en:'onSelect',args:[index,item] },edit:{en:'onEdit'} }}" forcePoiSelect="{{forcePoiSelect}}" item="{{item}}" rmId="{{rmId}}" switchable="{{switchable}}" themeColors="{{themeColors}}" value="{{addressId}}" wx:if="{{rmId==='b36-28'}}" wx:for="{{formattedActiveList}}" wx:key="index"></a>
+        <view wx:if="{{formattedInactiveList.length>0}}">
+            <view class="c2fcbb">以下地址超出配送范围</view>
+            <a bind:_init="_tic" bind:edit="_p" data-t="{{ edit:{en:'onEdit'} }}" inactive="{{true}}" item="{{item}}" rmId="{{rmId}}" switchable="{{switchable}}" themeColors="{{themeColors}}" value="{{addressId}}" wx:if="{{rmId==='b36-28'}}" wx:for="{{formattedInactiveList}}" wx:key="id"></a>
+        </view>
+    </view>
+</c>

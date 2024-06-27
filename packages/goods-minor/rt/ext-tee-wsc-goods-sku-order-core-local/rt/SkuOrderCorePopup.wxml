@@ -1,0 +1,23 @@
+<view style="{{themeVars}}" wx:if="{{supportSkuDirectOrder}}">
+    <i bind:_init="_tic" bind:after-enter="_p" bind:close="_p" customClass="sku-order-core-popup" customStyle="{{customStyle}}" data-t="{{ close:{en:'onClose'},afterEnter:{en:'onOpened'} }}" position="bottom" safeAreaInsetBottom="{{true}}" show="{{show}}">
+        <view class="sku-order-container">
+            <a bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'onClose'} }}" isShowYzGuarantee="{{isRealShowYzGuarantee}}" rmId="{{rmId}}" wx:if="{{rmId==='b7-42'}}"></a>
+            <h bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b7-42'}}"></h>
+            <view class="sku-order-body" style="{{skuOrderBodyStyle}}">
+                <view class="sku-order-body-inner">
+                    <e bind:_init="_tic" bind:re-height="_p" data-t="{{ reHeight:{en:'calculateSkuHeight'} }}" rmId="{{rmId}}" wx:if="{{rmId==='b7-42'}}"></e>
+                    <view class="is-address-block-sticky"></view>
+                    <b bind:_init="_tic" bind:onDateTimeClick="_p" bind:onExtraDataChange="_p" bind:onMessageBlur="_p" bind:onMessageChange="_p" bind:onPreview="_p" bind:onSelect="_p" bind:onStepperChange="_p" data-t="{{ onPreview:{en:'onPreview'},onSelect:{en:'onSelect'},onStepperChange:{en:'onStepperChange'},onMessageChange:{en:'handleMessageChange'},onDateTimeClick:{en:'onDateTimeClick'},onExtraDataChange:{en:'onExtraDataChange'},onMessageBlur:{en:'handleMessageBlur'} }}" estimatePriceDataProps="{{estimatePriceData}}" extraData="{{extraData}}" goods="{{goods}}" goodsSkuData="{{goodsSkuData}}" headerOpt="{{headerOpt}}" messagesOpt="{{messagesOpt}}" orderStepper="{{orderStepper}}" originPrice="{{originPrice}}" rmId="{{rmId}}" rowOpt="{{rowOpt}}" selected="{{selected}}" sku="{{sku}}" skuBannerData="{{skuBannerData}}" themeType="{{themeType}}" wx:if="{{rmId==='b7-42'}}"></b>
+                    <d bind:_init="_tic" rmId="{{rmId}}" show="{{show}}" skuHeight="{{skuHeight}}" wx:if="{{rmId==='b7-42'}}"></d>
+                </view>
+            </view>
+            <view class="sku-order-footer">
+                <block wx:if="{{showSubmitBlock}}">
+                    <c bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b7-42'}}"></c>
+                </block>
+            </view>
+            <g bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b7-42'}}"></g>
+            <f bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b7-42'}}"></f>
+        </view>
+    </i>
+</view>

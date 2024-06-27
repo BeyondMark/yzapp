@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "门店列表",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "a": "./../rt/ext-tee-shop-physical-search-bar-local/rt/Main",
+    "b": "./../rt/ext-tee-shop-physical-location-bar-local/rt/Main",
+    "c": "./../rt/ext-tee-shop-physical-store-list-local/rt/Main",
+    "d": "../../async-tee/@y-open/vt/native/weapp/toast/index/index",
+    "e": "../../async-tee/@y-open/vt/native/weapp/dialog/index/index",
+    "_": "../../../components/_/index"
+  },
+  "componentPlaceholder": { "d": "_", "e": "_" }
+}

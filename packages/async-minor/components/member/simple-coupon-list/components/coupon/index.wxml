@@ -1,0 +1,17 @@
+<view bindtap="handleCouponClick" class="coupon-wrapper">
+    <view class="coupon-value-box coupon-content-box">
+        <view class="coupon-value {{isExchangeCoupon?'coupon-value-text':''}}">{{coupon.value}}<text class="coupon-unit">{{coupon.unit}}</text>
+        </view>
+        <view class="coupon-threshold">{{coupon.threshold}}</view>
+    </view>
+    <view class="coupon-info-wrapper">
+        <view class="coupon-content coupon-content-box">
+            <view class="coupon-name">{{coupon.name}}<text class="coupon-count" wx:if="{{coupon.count>1}}">(共{{coupon.count}}张)</text>
+            </view>
+            <view class="coupon-time">{{coupon.validTime}}</view>
+        </view>
+        <view class="coupon-btn-wrapper" wx:if="{{!!btnText}}">
+            <view catchtap="handleBtnClick" class="coupon-btn">{{btnText}}</view>
+        </view>
+    </view>
+</view>

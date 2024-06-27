@@ -1,0 +1,9 @@
+<a bind:close="onClose" btnText="邀请好友抽奖，得更多幸运码" show="{{showBuy}}" showBtn="{{false}}">
+    <view class="buy-tips">购买以下商品奖励<text class="strong">{{currentTask.winTicketNums}}</text>个幸运码 限1次</view>
+    <view class="goods-list">
+        <b goods="{{goods}}" wx:for="{{taskGoodsList}}" wx:for-item="goods" wx:key="{{ goods.id }}"></b>
+    </view>
+    <view class="bottom-bar">
+        <view bind:tap="toCart" class="bottom-bar__btn">去购物车</view>
+    </view>
+</a>

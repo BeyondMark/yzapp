@@ -1,0 +1,21 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../widgets/base-block/rt/index",
+    "b": "./../widgets/prepay-card-cell/rt/index",
+    "c": "./../widgets/fans-cell/rt/index",
+    "d": "./../widgets/activity-cell/rt/index",
+    "e": "./../widgets/plus-buy/rt/index",
+    "f": "./../widgets/plus-buy-swipe/rt/index",
+    "g": "./../widgets/coupon-cell/rt/index",
+    "h": "./../widgets/membership-cell/rt/index",
+    "i": "./../widgets/point-cell/rt/index",
+    "j": "./../widgets/point-deduction-cell/rt/index",
+    "k": "./../widgets/meituan-cell/rt/index",
+    "l": "./../widgets/agree-detail-popup/rt/index",
+    "m": "./../BlockContainer",
+    "n": "./../components/amount/AmountBlock",
+    "o": "./../components/reward/RewardBlock",
+    "_": "../../../../../components/_/index"
+  }
+}

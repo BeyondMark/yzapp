@@ -1,0 +1,43 @@
+<view class="c1629a" wx:if="{{showDeposit}}">
+    <view class="t-hairline--bottom c8bed3">
+        <view class="{{'c73633'}} {{item.phase===pay.phasePayment.currentPhase?'c43912':''}}" wx:for="{{phaseItems}}" wx:key="index">
+            <view class="c1f2f5"></view>
+            <view class="ec871 c89585">
+                <view class="b7657 c89585"> {{item.phase===1?'阶段一: 定金':'阶段二: 尾款'}} </view>
+                <view class="c89585">({{STATUS_MAP[item.status]}})</view>
+                <a bind:_init="_tic" bind:tap="_p" class="c8e585" data-t="{{ tap:{en:'onShowAgreement'} }}" name="question-o" size="16px" wx:if="{{item.phase===1&&order.showDepositAgreementVal}}"></a>
+            </view>
+            <view class="c00a11 c89585" style="color:{{item.phase===pay.phasePayment.currentPhase?themeColors.general:'inherit'}}">
+                <a bind:_init="_tic" bind:tap="_p" class="c85cd5" data-t="{{ tap:{ en:'onShowPayUmpDetail',args:[item] } }}" name="info-o" wx:if="{{item.payUmpDiscountMoney>0}}"></a>
+                <view class="ecf7f c89585" style="min-width:{{priceSpanWidth+'px'}}"> {{phasePaymentExpandLabel[index]}}¥
+          {{finalPhasePayment[index]}} </view>
+            </view>
+        </view>
+    </view>
+    <d bind:_init="_tic" bind:close="_p" bodyBackgroundColor="#fff" buttonText="我知道了" data-t="{{ close:{en:'onCloseAgreement'} }}" show="{{showAgreement}}" themeColors="{{themeColors}}" title="定金不退协议">
+        <view class="c89184">
+            <view class="c31175" wx:for="{{agreement}}" wx:for-item="block" wx:key="index">
+                <view class="fd001">{{block.title}}</view>
+                <view wx:for="{{block.words}}" wx:for-index="index2" wx:for-item="line" wx:key="index2"> {{line}} </view>
+            </view>
+        </view>
+    </d>
+    <c bind:_init="_tic" closeOnClickOverlay="{{true}}" show="{{showPayDetail}}" showConfirmButton="{{false}}" useSlot="{{true}}">
+        <view class="ae38a">
+            <view class="c8de07">价格说明</view>
+            <view class="c3e960">
+                <view class="f9bdf">
+                    <view class="ae38a-left c89585"> {{currentPayItem.phase===1?'定金':'尾款'}}应付
+          </view>
+                    <view class="ae38a-right c89585">￥ {{currentPayItem.currentPriceStr}}</view>
+                </view>
+                <view class="f9bdf">
+                    <view class="ae38a-left c89585">支付优惠</view>
+                    <view class="ae38a-right c89585">            -￥{{currentPayItem.payUmpDiscountMoneyStr}} </view>
+                </view>
+            </view>
+            <b bind:_init="_tic" bind:tap="_p" color="{{themeColors.general}}" customClass="bd169" data-t="{{ tap:{en:'closePayDetail'} }}" round="{{true}}" type="danger">        知道了
+      </b>
+        </view>
+    </c>
+</view>

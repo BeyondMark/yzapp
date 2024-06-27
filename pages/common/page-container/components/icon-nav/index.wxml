@@ -1,0 +1,11 @@
+<view wx:if="{{navIcon.length>0}}">
+    <view class="wsc-page-nav-icon wsc-page-nav-icon--{{item.position}}" style="{{item.style}}" wx:for="{{navIcon}}" wx:key="icon">
+        <button bindcontact="onContactBack" class="wsc-page-nav-icon__btn" openType="contact" wx:if="{{item.action==='contact'}}">
+            <image class="wsc-page-nav-icon__img" src="{{item.icon}}"></image>
+        </button>
+        <navigator appId="{{item.extraData.appid}}" hoverClass="none" target="miniProgram" wx:elif="{{item.action==='jump-miniprogram'}}">
+            <image class="wsc-page-nav-icon__img" src="{{item.icon}}"></image>
+        </navigator>
+        <image bindtap="__handleWscPageNavIconClick" class="wsc-page-nav-icon__img" data-action="{{item.action}}" src="{{item.icon}}" wx:else></image>
+    </view>
+</view>

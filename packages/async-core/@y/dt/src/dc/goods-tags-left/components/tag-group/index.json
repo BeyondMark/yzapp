@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y/dt/src/captain/item-card/index",
+    "b": "/@y/dt/src/dc/goods-tags-left/components/card-skeleton/index",
+    "c": "/packages/async-tee/@y-open/vt/native/weapp/loading/index/index",
+    "_": "../../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "c": "_" }
+}

@@ -1,0 +1,14 @@
+<import src="./loading.wxml"></import>
+<view class="component-display" style="height: {{280/bgWHScale}}px;">
+    <template is="loading" data wx:if="{{status==='loading'}}"></template>
+    <view class="component-display__loading" wx:elif="{{status==='exception'}}">
+        <van-icon customStyle="top: 50%;left: 50%;transform: translate(-50%, -40rpx);" name="info-o" size="30px"></van-icon>
+        <text>加载失败，请重试</text>
+    </view>
+    <view class="component-display__ready" wx:else>
+        <template is="loading" data wx:if="{{imgLoading}}"></template>
+        <view bindtap="handleRefresh" class="component-display__refresh" wx:if="{{!imgLoading}}"></view>
+        <image binderror="handleBGLoadError" bindload="handleBGLoad" class="component-display__bg" mode="widthFix" src="{{slideData.bigUrl}}"></image>
+        <slot></slot>
+    </view>
+</view>

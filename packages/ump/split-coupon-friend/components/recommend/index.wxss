@@ -1,0 +1,104 @@
+.recommend {
+  padding: 0 16px;
+}
+.recommend__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.recommend-title {
+  padding: 14px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #ff0a37;
+  line-height: 20px;
+  font-weight: 500;
+}
+.recommend-title:after,
+.recommend-title:before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 8px;
+  background-image: url(https://b.yzcdn.cn/public_files/58eadfb75b5b6aaa8da72f0646ff94d3.png);
+  background-size: 100% 100%;
+  margin-right: 8px;
+}
+.recommend-title:after {
+  margin-right: 0;
+  margin-left: 8px;
+  transform: rotate(180deg);
+}
+.recommend-goods {
+  width: calc(50vw - 20.5px);
+  display: inline-block;
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  background-color: #fff;
+}
+.recommend-goods__img {
+  margin-bottom: 8px;
+  width: 100%;
+  height: calc(50vw - 20.5px);
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  position: relative;
+  background: #f2f2f2;
+  background-size: cover;
+}
+.recommend-goods__img .goods-image {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.recommend-goods__title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  height: 36px;
+  line-height: 18px;
+  margin-top: 8px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+}
+.recommend-goods__info {
+  padding: 0 8px;
+}
+.recommend-goods__desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+  color: #d40000;
+}
+.recommend-goods__desc .price {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+}
+.recommend-goods__desc .tag {
+  margin-right: -20px;
+  width: 80px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 20px;
+  border-radius: 18px;
+  background: rgba(212, 0, 0, 0.1);
+  vertical-align: middle;
+  text-align: center;
+  transform: scale(0.5);
+}

@@ -1,0 +1,13 @@
+<view class="{{true?'c04c84':''}} {{isFill?'c90ee8':''}}" style="bottom:{{noSafeBottomPx}}">
+    <view class="{{true?'ffe3f':''}} {{isFill?'cf429':''}}">
+        <view class="c00580">
+            <view class="c00580-title">店铺休息中</view>
+            <view class="c2f312">
+                <image class="c2fde2 bd231" lazyLoad="true" src="//img01.yzcdn.cn/public_files/2018/11/27/6a2a73b0915bd1024d747f8d53b24b5f.png"></image>
+                <view class="c7198" wx:if="{{!isMultiStore}}"> {{businessTime}} </view>
+                <view class="c566df zan-font-12 zan-c-gray-darker" wx:else>{{businessTime}}</view>
+            </view>
+        </view>
+        <image class="c8dce0 bd231" lazyLoad="true" src="//b.yzcdn.cn/public_files/2018/11/27/015d934e75f86b1b244ace514be549c9.png"></image>
+    </view>
+</view>

@@ -1,0 +1,35 @@
+<view class="c582c">
+    <a bind:_init="_tic" bind:close="_p" bind:confirm="_p" bodyBackgroundColor="#fff" bodyStyle="{{bodyStyle}}" buttonText="{{idcardDisabled&&(!needIdCardPhoto||orderCreated)?'':'保存'}}" class="ef25c" closeOnConfirm="{{false}}" color="var(--main-bg, #323233)" data-t="{{ close:{en:'onClose'},confirm:{en:'onSave'} }}" show="{{show}}" showClose="{{true}}" themeColors="{{themeColors}}">
+        <view class="f776c" slot="title">      填写身份信息
+      <e bind:_init="_tic" bind:tap="_p" class="c2c491" data-t="{{ tap:{en:'onShowTip'} }}" name="info-o"></e>
+        </view>
+        <view class="{{'c53643'}} {{ef25cDisabled?'a987c':''}}" wx:if="{{!ignoreIdBinding&&hasHaitaoGoods}}"> {{idcardDisabled?'你已完成身份绑定，每个用户仅能绑定一个身份证号购买跨境商品，且绑定后不可换绑，如有疑问请联系商家。':'根据海关最新要求，每个用户仅能绑定一个身份证号购买跨境商品，且绑定后不可换绑，请谨慎填写。'}} </view>
+        <d bind:_init="_tic" bind:blur="_p" bind:clear="_p" bind:focus="_p" bind:input="_p" clearable="{{true}}" data-t="{{ input:{en:'onInputName'},focus:{en:'onInputFocus'},blur:{en:'onInputBlur'},clear:{en:'onClearName'} }}" disabled="{{idcardDisabled}}" errorMessage="{{errorInfo.name}}" inputClass="{{ef25cClass}}" label="真实姓名" labelClass="e8d90" maxlength="{{15}}" placeholder="请填写真实姓名" readonly="{{orderCreated}}" titleWidth="72px" value="{{idcard.name}}"></d>
+        <d bind:_init="_tic" bind:clear="_p" bind:input="_p" clearable="{{true}}" data-t="{{ input:{en:'onInputIdNumber'},clear:{en:'onClearNumber'} }}" disabled="{{idcardDisabled}}" errorMessage="{{errorInfo.number}}" inputClass="{{ef25cClass}}" label="身份证号" labelClass="e8d90" maxlength="{{18}}" placeholder="{{idcard.name?'请填写'+idcard.name+'的真实身份证号':'请填写真实身份证号'}}" readonly="{{orderCreated}}" titleWidth="72px" type="idcard" value="{{idcard.number}}"></d>
+        <view wx:if="{{order.needIdCardPhoto}}">
+            <c bind:_init="_tic" customClass="c4508d" title="身份证照" titleClass="c67a70" valueClass="f14ef">
+                <view class="c20359">
+                    <g bind:_init="_tic" bind:change="_p" bind:ocrIdCardInfo="_p" class="c9b29c" data-t="{{ change:{en:'onBackPhotoChange'},ocrIdCardInfo:{en:'handleOcrIdCardInfoChange'} }}" disabled="{{idcardDisabled&&(!needIdCardPhoto||orderCreated)}}" h5CompressUpload="{{h5CompressUpload}}" kdtId="{{kdtId}}" orcValid="{{orcValid}}" side="front" value="{{idcard.backPhoto}}">
+                        <view class="c4bba8" slot="label">人像面</view>
+                    </g>
+                    <g bind:_init="_tic" bind:change="_p" bind:ocrIdCardInfo="_p" class="c9b29c" data-t="{{ change:{en:'onFrontPhotoChange'},ocrIdCardInfo:{en:'handleOcrIdCardInfoChange'} }}" disabled="{{idcardDisabled&&(!needIdCardPhoto||orderCreated)}}" h5CompressUpload="{{h5CompressUpload}}" kdtId="{{kdtId}}" orcValid="{{orcValid}}" side="back" value="{{idcard.frontPhoto}}">
+                        <view class="c4bba8" slot="label">国徽面</view>
+                    </g>
+                </view>
+            </c>
+            <c bind:_init="_tic" border="{{false}}" label="为保障你的资金安全，请上传居民身份证照片。照片避免缺边缺角，避免拍摄模糊不清，避免照片曝光过度。" title="拍摄须知"></c>
+            <view class="c54edb">
+                <image class="e1081 bd231" lazyLoad="true" mode="widthFix" src="//img01.yzcdn.cn/public_files/2019/12/16/784a73a4dbc92e18c1704c110926c30f.png"></image>
+            </view>
+        </view>
+        <view class="c394f c841e2__tri" wx:if="{{showIdCardList}}">
+            <view class="ff5c3">历史身份信息</view>
+            <view class="c841e2" scrollY="{{true}}">
+                <view bind:tap="_p" class="c0b9a9" data-t="{{ tap:{ en:'onSelectIdCard',args:[item] } }}" wx:for="{{idCardList}}" wx:key="number"> {{item.name}}，{{item.number}} </view>
+            </view>
+        </view>
+    </a>
+    <b bind:_init="_tic" bind:close="_p" btnTextColor="var(--main-text, #fff)" data-t="{{ close:{en:'onCloseTip'} }}" show="{{showTips}}" themeColors="{{themeColors}}" title="为什么要上传身份信息" whiteSpace="normal">    请你务必正确填写身份信息，以确保你购物的商品顺利通过海关检查。（“{{shop.shopName}}”承诺所传身份身份证明只用于办理跨境商品的清关手续，不作其他用途使用，其他任何人均无法查看）
+  </b>
+    <f bind:_init="_tic" data-ref="idcardDialog"></f>
+</view>

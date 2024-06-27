@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./components/price/index",
+    "b": "../../../../components/common-tag/index",
+    "c": "./components/count-down/index",
+    "d": "../salesman-commission/index",
+    "_": "../../../../../../../../../../components/_/index"
+  }
+}

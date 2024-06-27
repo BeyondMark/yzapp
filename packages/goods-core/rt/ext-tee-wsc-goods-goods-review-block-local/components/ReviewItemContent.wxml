@@ -1,0 +1,5 @@
+<view class="c630a" wx:if="{{content||images.length}}">
+    <view class="c8e127" wx:if="{{content}}"> {{content}} </view>
+    <a bind:_init="_tic" bind:click-on-disabled="_p" class="c0fd52" data-t="{{ clickOnDisabled:{ en:'$emit',args:['click-img-on-disabled'] } }}" disablePreview="{{disablePreview}}" images="{{images}}"></a>
+    <view class="c345d6" wx:if="{{skuDesc}}">{{skuDesc}}</view>
+</view>

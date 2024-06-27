@@ -1,0 +1,12 @@
+<view>
+    <view class="{{classes.root}}" wx:if="{{loading}}">
+        <view class="{{classes.avatar}}" style="{{avatarStyle}}" wx:if="{{avatar}}"></view>
+        <view class="{{classes.content}}">
+            <view class="{{classes.title}}" style="{{titleStyle}}" wx:if="{{title}}"></view>
+            <view class="{{classes.row}}" style="width:{{isArray?rowWidth[index]:rowWidth}}" wx:for="{{rowArray}}" wx:key="index"></view>
+        </view>
+    </view>
+    <view class="{{classes.content}}" wx:else>
+        <slot></slot>
+    </view>
+</view>

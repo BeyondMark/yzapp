@@ -1,0 +1,60 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.c1f195 {
+  min-height: 355px;
+  background: #fff;
+  padding: 16px;
+}
+.c89020 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #323233;
+  margin-bottom: 35px;
+}
+.c15231 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: right;
+  color: #646566;
+  width: 75px;
+  margin-right: 4px;
+}
+.c6c726 {
+  --padding-xs: 0;
+  display: flex;
+  align-items: center;
+}
+.c38356 {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.c406d2 {
+  width: calc(100% - 79px);
+  height: 52px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 8px;
+  font-size: 12px;
+}
+.c6bc00 {
+  color: #ccc;
+  line-height: 18px;
+}
+.c406d2 .van-field__input--textarea {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: -13px;
+}
+.c71164 {
+  margin-top: 70px;
+}

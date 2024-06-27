@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../component/navigation-title/index",
+    "b": "../component/navigation-search/index",
+    "c": "../component/navigation-bar-icon/index",
+    "d": "../component/navigation-bar-image/index",
+    "e": "../component/reservation-share/index",
+    "f": "/pages/common/page-container/components/shop/components/chain-store-switch/index",
+    "_": "../../../../_/index"
+  }
+}

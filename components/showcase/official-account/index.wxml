@@ -1,0 +1,3 @@
+<view class="official-account-view" wx:if="{{canIUse}}">
+    <official-account bind:error="loadError"></official-account>
+</view>

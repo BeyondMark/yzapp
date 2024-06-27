@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./danmaku-item/index",
+    "_": "../../../../../../components/_/index"
+  }
+}

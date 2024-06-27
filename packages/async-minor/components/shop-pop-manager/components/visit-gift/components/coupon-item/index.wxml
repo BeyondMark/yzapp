@@ -1,0 +1,16 @@
+<view class="coupon-item custom-class {{disabled?'coupon-item-disabled':''}}">
+    <view class="coupon-item__value">
+        <view class="coupon-detail">
+            <view class="coupon-value">
+                <text style="font-size: {{coupon.size}}px;">{{coupon.value}}</text>
+                <text class="unit" wx:if="{{coupon.unit}}">{{coupon.unit}}</text>
+            </view>
+        </view>
+        <view class="coupon-condition">{{coupon.condition}}</view>
+    </view>
+    <view class="coupon-item__content">
+        <view class="coupon-title">{{coupon.title}}</view>
+        <view class="coupon-time">{{coupon.time}}</view>
+    </view>
+    <view bind:tap="subscribeMessage" class="coupon-item__btn" wx:if="{{!disabled}}">去使用</view>
+</view>

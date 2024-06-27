@@ -1,0 +1,7 @@
+<view catch:tap="_p" class="c4f62e" data-t="{{ tap:{en:'preview',et:'stop'} }}" wx:if="{{formatedImages.length}}">
+    <view class="d8fe5" wx:for="{{formatedImages}}" wx:for-item="image" wx:key="index">
+        <view class="e6d13" data-index="{{index}}">
+            <image class="f4d32 bd231" lazyLoad="true" mode="aspectFill" src="{{image}}"></image>
+        </view>
+    </view>
+</view>

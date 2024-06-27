@@ -1,0 +1,27 @@
+<view class="d82e5" wx:if="{{prepareIsReady}}">
+    <block wx:if="{{payRechargeInfo&&payRechargeInfo.amount}}">
+        <view class="c1b930">      充值<view class="c78a5e c89585">
+                <view class="c777f1 c89585">¥</view>{{payRechargeInfo.amount}}</view>
+        </view>
+        <view class="ee295" wx:if="{{payRechargeInfo.tips}}"> {{payRechargeInfo.tips}} </view>
+    </block>
+    <view class="c1b930" wx:elif="{{pointStr}}">      总价
+      <view class="c78a5e c89585"> {{pointStr[0]}}<view class="c777f1 c89585">{{pointStr[1]}}</view>
+        </view>      +
+      <view class="c78a5e c89585"> {{totalPrice}}<view class="c777f1 c89585">元</view>
+        </view>
+    </view>
+    <block wx:else>
+        <view class="c1b930">      总价<view class="c78a5e c89585">
+                <view class="c777f1 c89585">¥</view>{{totalPrice}}</view>
+        </view>
+        <view class="ee295" wx:if="{{discountPrice}}">      共减<view class="c78a5e c89585">
+                <view class="c777f1 c89585">¥</view>{{discountPrice}}</view>
+        </view>
+    </block>
+    <view class="c4105c">
+        <view bind:tap="_p" data-t="{{ tap:{en:'handleOpenDetail'} }}">      明细
+      <a bind:_init="_tic" class="ku-order-view-discount__icon" name="{{arrowName}}" size="16px"></a>
+        </view>
+    </view>
+</view>

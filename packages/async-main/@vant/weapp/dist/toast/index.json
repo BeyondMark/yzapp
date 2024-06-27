@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../icon/index",
+    "b": "../loading/index",
+    "c": "../overlay/index",
+    "d": "../transition/index",
+    "_": "../../../../../../components/_/index"
+  }
+}

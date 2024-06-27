@@ -1,0 +1,43 @@
+<view class="dc-hotel">
+    <c bind:_init="_tic" bind:btn-click="_p" componentTitle="{{opt.componentTitle}}" data-t="{{ btnClick:{en:'handleClickAll'} }}" wx:if="{{opt.componentTitle.showTitle}}"></c>
+    <view class="{{dataStyleVal.swipeStyle?'hotel-item-wrap':''}} {{dataStyleVal.isComboHybrid?'hotel-item-hybrid':''}}" style="{{marginStyle}}">
+        <view bind:tap="_p" class="{{hotelClass}}" data-t="{{ tap:{ en:'handleClickHotel',args:[item] } }}" style="{{dataStyleVal.swipeStyle||dataStyleVal.isComboHybrid?item.style:hotelStyle}}" wx:for="{{itemList}}" wx:key="index">
+            <view class="{{picClass}}">
+                <image class="pic-bg tee-image" lazyLoad="true" src="{{item.cover.url}}"></image>
+                <image class="pic-img tee-image" lazyLoad="true" mode="{{opt.size===0?'aspectFit':'aspectFill'}}" src="{{item.cover.url}}"></image>
+                <view class="hotel-corner-mark" style="{{hotelCornerStyle}}" wx:if="{{opt.itemType==='hotel'&&opt.showPosition==='1'}}"> {{item.position}} </view>
+            </view>
+            <view class="{{contentClass}}" style="height:{{dataStyleVal.swipeStyle?contentHeight:''}}">
+                <view class="title {{dataStyleVal.isHotelAndRoomTypeSwipe?'swipe-content-title':''}}" style="{{contentSwiperMargin}}">
+                    <view class="title-tag" wx:if="{{opt.showMark===1}}">
+                        <view class="title-tag-bg" style="background-color:{{themeColors.general}}; opacity:.1"></view>
+                        <view class="t-text" style="color:{{themeColors.general}}">{{opt.markName}}</view>
+                    </view>
+                    <view class="{{titleClass}}" style="{{nameStyle}}">{{item.name}}</view>
+                </view>
+                <view class="hotel-tag" style="{{contentSwiperMargin}}" wx:if="{{opt.itemType==='hotel'&&item.tags.length>0&&opt.size!==2}}">
+                    <b bind:_init="_tic" color="{{themeColors.general}}" customClass="hotel-tag-item" plain="{{true}}" wx:for="{{item.tags}}" wx:for-index="i" wx:for-item="tag" wx:key="i"> {{tag}} </b>
+                </view>
+                <view class="hotel-content-tag" style="display:{{opt.size===3||opt.size===2?'block':'flex'}}; {{contentSwiperMargin}}" wx:if="{{opt.itemType==='combo'}}">
+                    <b bind:_init="_tic" color="{{themeColors.general}}" customClass="hotel-tag-item" plain="{{true}}" wx:if="{{item.refundRule===1}}">            支持在线退
+          </b>
+                    <b bind:_init="_tic" color="{{themeColors.general}}" customClass="hotel-tag-item-last" plain="{{true}}" wx:if="{{item.autoRefund}}">            过期自动退
+          </b>
+                </view>
+                <view class="room-type-tag" style="{{contentSwiperMargin}}" wx:if="{{opt.itemType==='room_type'}}"> {{item.area}}m² · {{windowTypeContent[item.windowType]}} ·
+          {{opt.isSubcoreHotel?item.bed:bedTypeContent[item.bedType]}} </view>
+                <view class="desc {{opt.size!==0?'desc-ellipsis-one':''}}" style="{{contentSwiperMargin}}" wx:if="{{opt.itemType==='room_type'}}"> {{item.saleDesc}} </view>
+                <view class="desc desc-ellipsis-one" style="{{comboListStyle}}" wx:if="{{opt.itemType==='combo'}}"> {{item.description}} </view>
+                <view class="address" style="{{contentSwiperMargin}}" wx:if="{{!dataStyleVal.isHotelSwipe}}">
+                    <a bind:_init="_tic" color="#969799" name="{{opt.itemType==='hotel'?'location-o':'//b.yzcdn.cn/hotel/detail/icon/hotel-icon.png'}}" size="14"></a>
+                    <view class="address-span">{{opt.itemType==='hotel'?item.address.address:item.hotelName}}</view>
+                </view>
+                <view class="price {{dataStyleVal.swipeStyle?'swipe-content-price':''}}" wx:if="{{!dataStyleVal.isHotelSwipe}}">
+                    <span bind:_init="_tic" style="color:{{themeColors.general}}">￥</span>
+                    <span bind:_init="_tic" class="price-value" style="color:{{themeColors.general}}">{{item.price}}</span>
+                    <span bind:_init="_tic">起</span>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

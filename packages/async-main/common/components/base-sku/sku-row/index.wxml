@@ -1,0 +1,8 @@
+<view class="van-sku-row {{themeClass}} {{lastChild?'last-child':''}} van-hairline--bottom">
+    <view class="van-sku-row__title">{{skuRow.k}}<text class="van-sku-row__title-multiple" wx:if="{{skuRow.isMultiple}}">（可多选）</text>
+        <view class="van-sku-row__extra-text" wx:if="{{extraData.rowExtraContent&&extraData.rowExtraContent.index===index}}">{{extraData.rowExtraContent.text}}</view>
+    </view>
+    <view class="van-sku-row__body">
+        <slot></slot>
+    </view>
+</view>

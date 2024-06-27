@@ -1,0 +1,9 @@
+<view class="present-box" wx:if="{{present}}">
+    <view class="left-part">
+        <image class="image" src="{{present.imageUrl}}"></image>
+        <view class="info-box {{present.smallSize?'small-size':''}}">送{{present.presentName}}</view>
+    </view>
+    <view class="right-part" wx:if="{{statusStr}}">
+        <view class="status">{{statusStr}}</view>
+    </view>
+</view>

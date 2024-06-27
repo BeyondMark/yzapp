@@ -1,0 +1,4 @@
+{
+  "navigationBarTitleText": "查看留言",
+  "componentPlaceholder": { "van-toast": "_", "van-notify": "_" }
+}

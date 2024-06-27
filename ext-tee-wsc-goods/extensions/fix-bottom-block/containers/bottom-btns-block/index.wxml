@@ -1,0 +1,10 @@
+<view class="bed2f {{opt.fetchSuccess?'':'c7a2a7'}} {{safeArea?'c591fc':''}}">
+    <a bind:_init="_tic" bind:tap="_p" data-t="{{ tap:{en:'onMiniBtnClick'} }}" opt="{{opt}}">
+        <slot slot="{{opt.contactSlot}}"></slot>
+    </a>
+    <view class="ab03e">
+        <view class="{{'b1a6a'}} {{btn.index===0?'b1a6a--first':''}}" wx:for="{{opt.bigButtons}}" wx:for-item="btn" wx:key="key">
+            <b bind:_init="_tic" bind:btn-click="_p" btn="{{btn}}" data-t="{{ btnClick:{en:'handleBigBtnClick'} }}" disabled="{{!opt.hasResolveProcess}}" first="{{btn.isFirst}}" hasLogin="{{opt.hasLogin}}" hasWxUnionId="{{has_wx_unionId}}" kdtId="{{opt.kdtId}}" last="{{btn.isLast}}"></b>
+        </view>
+    </view>
+</view>

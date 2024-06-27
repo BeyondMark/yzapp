@@ -1,0 +1,4 @@
+{
+  "navigationBarTitleText": "专题视频搜索",
+  "componentPlaceholder": { "van-toast": "_", "van-notify": "_" }
+}

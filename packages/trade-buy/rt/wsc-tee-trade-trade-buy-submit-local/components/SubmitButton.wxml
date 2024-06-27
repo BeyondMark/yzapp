@@ -1,0 +1,5 @@
+<view class="c2f268">
+    <a bind:_init="_tic" bind:tap="_p" color="{{color}}" customClass="{{customCls}}" data-t="{{ tap:{en:'onClick'} }}" disabled="{{disabled}}" loading="{{loading}}" round="{{true}}" textStyle="{{textStyle}}">
+        <slot></slot>
+    </a>
+</view>

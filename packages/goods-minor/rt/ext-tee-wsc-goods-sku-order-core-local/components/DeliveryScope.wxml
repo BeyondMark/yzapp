@@ -1,0 +1,5 @@
+<view class="delivery-scope">
+    <a bind:_init="_tic" bind:tap="_p" border="{{false}}" customClass="c8299e" data-t="{{ tap:{en:'onClick'} }}" isLink="{{true}}" title="配送范围">
+        <view class="c95c55"> {{delivery.desc}} </view>
+    </a>
+</view>

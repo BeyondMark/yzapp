@@ -1,0 +1,25 @@
+<view class="cube-tab__promote">
+    <view class="cube-tab__text"> {{promoteText}} {{shortLinkPromoteUrl||shortPromoteUrl}} </view>
+    <view class="promote">
+        <scroll-view bind:scroll="_p" class="promote__scroll" data-t="{{ scroll:{en:'onScrollComputedWidth'} }}" scrollX="{{true}}">
+            <view class="promote__wrapper">
+                <view bind:tap="_p" class="promote__list" data-t="{{ tap:{ en:'handlePreview',args:[index] } }}" wx:for="{{imgList}}" wx:key="item">
+                    <image class="promote__img tee-image" lazyLoad="{{true}}" mode="aspectFill" src="{{item}}"></image>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="range" wx:if="{{imgList.length>3}}">
+        <view class="range__after" style="{{rangeStyle}}"></view>
+    </view>
+    <view class="{{showPublish&&hasPersonalSpaceAbility?'cube-bar':'cube-bar cube-bar-right'}}">
+        <a bind:_init="_tic" bind:tap="_p" color="{{publishIconColor}}" data-t="{{ tap:{en:'changePublishState'} }}" name="checked" size="14" wx:if="{{showPublish&&hasPersonalSpaceAbility}}"></a>
+        <view class="span t-text" wx:if="{{showPublish&&hasPersonalSpaceAbility}}">同步分享到空间动态</view>
+        <b bind:_init="_tic" bind:tap="_p" color="var(--general)" data-t="{{ tap:{en:'publish'} }}" round="{{true}}" size="small">
+            <view class="cube-bar-btn">
+                <a bind:_init="_tic" class="button-icon" name="//b.yzcdn.cn/salesman/cube/saveicon.png" size="14px"></a>
+                <view class="span t-text">保存图文</view>
+            </view>
+        </b>
+    </view>
+</view>

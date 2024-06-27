@@ -1,0 +1,34 @@
+<a isShowStoreInfo="{{true}}">
+    <view class="casino-container" hidden="{{!inited}}">
+        <view class="casino-container__inner" style="background-color: {{bgColor}}">
+            <image bind:tap="handleClickMyGift" class="casino-my-award" mode="widthFix" src="https://img01.yzcdn.cn/upload_files/2021/11/15/FgD-CJIeeg0jAOiv-s3psOUNRfFi.png"></image>
+            <image class="casino-container__background-image" mode="widthFix" src="{{bgImageUrl}}"></image>
+            <view class="casino-header">
+                <view class="casino-header__shop" wx:if="{{showLogo}}">
+                    <image class="casino-header__shop__logo" mode="aspectFit" src="{{shopLogo}}"></image>
+                    <view bind:tap="handleClickShopName" class="casino-header__shop__name">{{shopName}}</view>
+                </view>
+                <view bind:tap="openDetail" class="casino-header__detail">玩法规则</view>
+            </view>
+            <i bind:close="closeDetail" description="{{description}}" endDate="{{endDate}}" joinThresholdDesc="{{joinThresholdDesc}}" rmId="{{rmId}}" shopName="{{shopName}}" showDetail="{{showDetail}}" startDate="{{startDate}}" wx:if="{{rmId==='b17-0'}}"></i>
+            <view class="casino-bottom">
+                <b startDate="{{startDate}}"></b>
+            </view>
+            <h rmId="{{rmId}}" wx:if="{{rmId==='b17-0'}}"></h>
+            <view class="roulette-user" wx:if="{{costPoints}}">
+                <text class="roulette-user__credit">我的{{pointsName}}：{{credit}}（每次抽奖需要消耗 {{costPoints}} {{pointsName}})</text>
+            </view>
+            <c title="完成任务，获取更多抽奖机会" wx:if="{{failPopupTasks.length}}">
+                <l orderJumpUrl="{{orderJumpUrl}}" rmId="{{rmId}}" tasks="{{failPopupTasks}}" wx:if="{{rmId==='b17-0'}}"></l>
+            </c>
+            <k rmId="{{rmId}}" wx:if="{{rmId==='b17-0'}}"></k>
+            <f bind:close="closeFailPopup" openType="{{openType}}" orderJumpUrl="{{orderJumpUrl}}" recommendGoodsList="{{recommendGoods}}" rmId="{{rmId}}" show="{{showFailPopup}}" tasks="{{failPopupTasks}}" wx:if="{{rmId==='b17-0'}}"></f>
+            <j bind:close="closeWecomQrCodePopup" rmId="{{rmId}}" show="{{showWecomQrCodePopup}}" wecomCustomerQrCode="{{wecomCustomerQrCode}}" wx:if="{{rmId==='b17-0'}}"></j>
+        </view>
+    </view>
+    <d needBindRelation="{{false}}" scenes="lottery"></d>
+</a>
+<g alias="{{alias}}" award="{{resultAward}}" bind:close="hideLotteryResult" bind:roulette="handleClickBtn" isWinning="{{isWinning}}" rmId="{{rmId}}" showResult="{{showResult}}" wx:if="{{rmId==='b17-0'}}"></g>
+<m id="van-toast"></m>
+<n id="van-dialog"></n>
+<e bind:close="toggleFollowPopup" btnText="成为粉丝" extraData="{{followExtraData}}" show="{{showFollowPopup}}" title="成为店铺粉丝才能参与抽奖"></e>

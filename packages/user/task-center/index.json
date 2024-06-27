@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "任务中心",
+  "usingComponents": {
+    "a": "/components/znb-web-view/index",
+    "_": "../../../components/_/index"
+  }
+}

@@ -1,0 +1,30 @@
+<view wx:if="{{show&&couponList.length>0}}">
+    <a bind:close="handleClosePop" class="customer-rebuy__pop" customStyle="background: transparent" show="{{show&&couponList.length>0}}" zIndex="10000">
+        <view class="customer-rebuy__wrapper">
+            <view class="container-layer">
+                <view class="customer-rebuy__container">
+                    <view class="customer-rebuy__title">你有 {{couponList.length}} 张优惠券！</view>
+                    <view class="customer-rebuy__meta">请尽快享用哦～</view>
+                    <view class="coupon__list">
+                        <view class="coupon__item" wx:for="{{couponList}}">
+                            <view class="coupon__amount">
+                                <view class="coupon__amount-content">
+                                    <view class="coupon__amount-num" style="font-size:{{item.moneyFontSize}}rpx">{{item.amount}}</view>
+                                    <view class="coupon__amount-suffix">{{item.moneySuffix}}元</view>
+                                </view>
+                            </view>
+                            <view class="coupon__info">
+                                <view class="coupon__info-type">{{item.title}}</view>
+                                <view class="coupon__info-desc">满 {{item.condition}} 元使用</view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="confirm-action__container">
+                <view bind:tap="handleClosePop" class="confirm-action">去享用吧</view>
+            </view>
+            <view bind:tap="handleClosePop" class="close-action"></view>
+        </view>
+    </a>
+</view>

@@ -1,0 +1,20 @@
+<view catchtap="handleClick" class="guide-container" wx:if="{{guideConfig[step].component==='downward-guide'}}">
+    <view style="display: flex;justify-content: center" wx:if="{{guideConfig[step]}}">
+        <view class="content-wrapper" style="bottom: {{guideConfig[step].bottom}};">
+            <view class="content">{{guideConfig[step].content}}</view>
+            <view class="guide-button">{{step===guideConfig.length-1?'知道了':'下一步'}}</view>
+            <image class="guide-arrow" src="{{assertMap[guideConfig[step].arrowType]}}"></image>
+        </view>
+    </view>
+    <image class="guide-img" src="{{guideConfig[step].imgUrl}}" style=" width: {{guideConfig[step].imgStyle.width}}; height: {{guideConfig[step].imgStyle.height}}; left: {{guideConfig[step].imgStyle.left}}; bottom: {{guideConfig[step].imgStyle.bottom}}; "></image>
+</view>
+<view catchtap="handleClick" class="guide-container" wx:if="{{guideConfig[step].component==='upward-guide'}}">
+    <image class="guide-img" src="{{guideConfig[step].imgUrl}}" style=" width: {{guideConfig[step].imgStyle.width}}; height: {{guideConfig[step].imgStyle.height}}; left: {{guideConfig[step].imgStyle.left}}; bottom: {{guideConfig[step].imgStyle.bottom}}; "></image>
+    <view style="display: flex;justify-content: center" wx:if="{{guideConfig[step]}}">
+        <view class="content-wrapper" style="bottom: {{guideConfig[step].bottom}};">
+            <image class="guide-arrow" src="{{assertMap[guideConfig[step].arrowType]}}"></image>
+            <view class="content">{{guideConfig[step].content}}</view>
+            <view class="guide-button">{{step===guideConfig.length-1?'知道了':'下一步'}}</view>
+        </view>
+    </view>
+</view>

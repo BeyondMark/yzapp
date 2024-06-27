@@ -1,0 +1,14 @@
+<view wx:if="{{showToast}}">
+    <a bind:_init="_tic" customStyle="{{styles.overlay}}" show="{{innerShow}}" zIndex="{{innerZIndex}}" wx:if="{{innerMask||innerForbidClick}}"></a>
+    <b bind:_init="_tic" customStyle="{{styles.transition}}" show="{{innerShow}}">
+        <view catch:touchmove="_p" class="vt-toast {{classes.root}}" data-t="{{ touchmove:{en:'true',et:'stop'} }}">
+            <view wx:if="{{innerType==='text'}}">{{innerMessage}}</view>
+            <block wx:else>
+                <c bind:_init="_tic" color="white" customStyle="margin: 10px 0;" type="{{innerLoadingType}}" wx:if="{{innerType==='loading'}}"></c>
+                <d bind:_init="_tic" customStyle="font-size: 36px; width: 36px;" name="{{innerType}}" wx:else></d>
+                <view class="vt-toast__text" wx:if="{{innerMessage}}">{{innerMessage}}</view>
+            </block>
+            <slot></slot>
+        </view>
+    </b>
+</view>

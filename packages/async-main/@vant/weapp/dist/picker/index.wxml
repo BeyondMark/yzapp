@@ -1,0 +1,12 @@
+<view class="van-picker custom-class">
+    <include src="./toolbar.wxml" wx:if="{{toolbarPosition==='top'}}"></include>
+    <view class="van-picker__loading" wx:if="{{loading}}">
+        <loading color="#1989fa"></loading>
+    </view>
+    <view catch:touchmove="noop" class="van-picker__columns" style="{{computed.columnsStyle( {itemHeight:itemHeight,visibleItemCount:visibleItemCount} )}}">
+        <picker-column activeClass="active-class" bind:change="onChange" class="van-picker__column" customClass="column-class" data-index="{{index}}" defaultIndex="{{item.defaultIndex||defaultIndex}}" initialOptions="{{item.values}}" itemHeight="{{itemHeight}}" valueKey="{{valueKey}}" visibleItemCount="{{visibleItemCount}}" wx:for="{{computed.columns(columns)}}" wx:key="index"></picker-column>
+        <view class="van-picker__mask" style="{{computed.maskStyle( {itemHeight:itemHeight,visibleItemCount:visibleItemCount} )}}"></view>
+        <view class="van-picker__frame van-hairline--top-bottom" style="{{computed.frameStyle( {itemHeight:itemHeight} )}}"></view>
+    </view>
+    <include src="./toolbar.wxml" wx:if="{{toolbarPosition==='bottom'}}"></include>
+</view>

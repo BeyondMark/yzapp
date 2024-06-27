@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../assets-tee-extensions-guarantee-components-local/components/GuaranteePop",
+    "b": "./YzGuaranteeFixed",
+    "c": "./YzGuarantee",
+    "d": "./FreightInsurance",
+    "_": "../../../../../components/_/index"
+  }
+}

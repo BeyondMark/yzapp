@@ -1,0 +1,10 @@
+<view>
+    <view class="start-info" wx:if="{{!!sloganPrice}}">{{sloganPrice}}</view>
+    <view class="center-flex">
+        <view class="set-name">{{item.setName}}</view>
+        <view class="set-price">￥<view class="price" style="font-size: {{priceSize}}px">{{price}}</view>
+        </view>
+        <p class="origin-price" wx:if="{{item.handlePrice&&item.handlePrice.hasDiscount}}">
+            <i>￥</i>{{item.handlePrice&&item.handlePrice.price}}</p>
+    </view>
+</view>

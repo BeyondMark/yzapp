@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../native/weapp/loading/index/index",
+    "b": "./toolbar",
+    "c": "./../picker-column/index",
+    "_": "../../../../../../components/_/index"
+  }
+}

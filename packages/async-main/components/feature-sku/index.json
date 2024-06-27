@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "base-sku": "../../common/components/base-sku/index",
+    "presale-header-price": "../../common/components/base-sku/components/presale-sku/presale-sku-price/index",
+    "presale-actions": "../../common/components/base-sku/components/presale-sku/presale-sku-actions/index",
+    "default-header-price": "./components/header-price/index",
+    "combo-goods-sku-group-extra": "./components/combo-goods-sku-group-extra/index",
+    "placeholder-block": "./components/placeholder-block/index",
+    "_": "../../../../components/_/index"
+  }
+}

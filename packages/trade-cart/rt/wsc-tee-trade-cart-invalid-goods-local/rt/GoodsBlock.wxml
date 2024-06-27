@@ -1,0 +1,6 @@
+<view class="goods-item-block custom-class">
+    <b asyncClose="{{true}}" bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'handleItemDelete'} }}" rightWidth="{{64}}">
+        <a bind:_init="_tic" bind:to-goods-detail="_p" data-t="{{ toGoodsDetail:{en:'toGoodsDetail'} }}" goods="{{goods}}" rmId="{{rmId}}" wx:if="{{rmId==='b4-8'}}"></a>
+        <view class="delete-btn" slot="right">删除</view>
+    </b>
+</view>

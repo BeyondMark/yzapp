@@ -1,0 +1,12 @@
+<c bind:close="close" closeable="{{true}}" customClass="fail-popup" round="{{true}}" show="{{show}}" style="overflow: visible;">
+    <view class="fail-popup__container">
+        <view class="fail-popup__title">{{title}}</view>
+        <view class="recommend-goods-wrap" wx:if="{{openType==='1'}}">
+            <a list="{{recommendGoodsList}}" marginTop="20px" needBtn="{{true}}"></a>
+        </view>
+        <view wx:else>
+            <view class="fail-popup__desc">{{desc}}</view>
+            <b openType="{{openType}}" orderJumpUrl="{{orderJumpUrl}}" rmId="{{rmId}}" tasks="{{filteredTask}}" wx:if="{{rmId==='b17-0'}}"></b>
+        </view>
+    </view>
+</c>

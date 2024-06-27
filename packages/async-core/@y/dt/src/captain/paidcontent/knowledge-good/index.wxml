@@ -1,0 +1,49 @@
+<a bind:_init="_tic" bind:tap="_p" businessModule="owlMiniProgram" class="{{wrapperClass}}" data-t="{{ tap:{en:'goToDetail'} }}">
+    <view class="cap-knowledege-good">
+        <view bind:tap="_p" class="{{'goods-text-align'+opt.textAlign}} {{'goods-radius'+opt.goodsRadius}} {{'mode'+opt.listMode}} {{'goods-style-mode'+opt.goodsStyle}}" data-t="{{ tap:{en:'goToDetail'} }}" style="{{'margin: '+goodsPadding}}">
+            <view class="picture">
+                <view class="imgWrap" style="{{'border-top-left-radius: '+topLeftGoodsRadius}}; {{'border-top-right-radius: '+topRightGoodsRadius}}; {{'border-bottom-left-radius: '+bottomLeftGoodsRadius}}; {{'border-bottom-right-radius: '+bottomRightGoodsRadius}}">
+                    <block wx:if="{{opt.imgSize===1}}">
+                        <image class="imgWrap__bg tee-image" lazyLoad="true" mode="aspectFill" src="{{picUrl}}"></image>
+                        <image class="knowledge-item__img tee-image" lazyLoad="true" mode="aspectFit" src="{{picUrl}}"></image>
+                    </block>
+                    <image class="knowledge-item__img tee-image" lazyLoad="true" mode="aspectFill" src="{{picUrl}}" style="{{'border-top-left-radius: '+topLeftGoodsRadius}}; {{'border-top-right-radius: '+topRightGoodsRadius}}; {{'border-bottom-left-radius: '+bottomLeftGoodsRadius}}; {{'border-bottom-right-radius: '+bottomRightGoodsRadius}}" wx:else></image>
+                </view>
+                <view class="picture-info">
+                    <view class="knowledge-picture-left__tag" style="{{'background-color: '+(opt.itemType==='live'&&opt.liveStatus!==2?'#999':opt.themeColors.general)}}; {{opt.goodsStyle===3&&opt.goodsRadius===1?'border-bottom-left-radius: '+tagBottomRadius:''}}" wx:if="{{opt.picBottomLeftTag}}"> {{opt.picBottomLeftTag}} </view>
+                    <view class="knowledge-picture-right__tag" wx:if="{{opt.picBottomRightTag}}"> {{opt.picBottomRightTag}} </view>
+                </view>
+            </view>
+            <view class="desc">
+                <view class="desc-info">
+                    <view class="knowledge-title-wrap" wx:if="{{opt.displayContent.title}}">
+                        <view class="knowledge-isgroupon t-text" wx:if="{{opt.groupOnNum}}"> {{opt.groupOnNum}}人团
+            </view>
+                        <view class="knowledge-title" style="{{'font-size: '+opt.fontSizes.title}}"> {{opt.title}} </view>
+                    </view>
+                    <view class="knowledge-subtitle" wx:if="{{opt.displayContent.desc&&opt.subtitle}}">{{opt.subtitle}}</view>
+                    <view class="course-tags" wx:if="{{opt.displayContent.tag&&opt.tagList.length>0}}">
+                        <view class="course-tags-item" wx:for="{{opt.tagList}}" wx:for-index="tagIndex" wx:for-item="tagItem" wx:key="tagIndex">{{tagItem.tag}}</view>
+                    </view>
+                    <view class="knowledge-subtitle knowledge-timerange" wx:if="{{opt.displayContent.courseTime&&opt.courseStartAt}}">
+                        <b bind:_init="_tic" color="#999" name="clock"></b>
+                        <view class="t-text">{{opt.courseStartAt}} ~ {{opt.courseEndAt}}</view>
+                    </view>
+                    <view class="knowledge-subtitle" wx:if="{{opt.columnTitle&&opt.displayContent.columnTitle}}">专栏：{{columnSubTitle}}</view>
+                    <view class="knowledge-subtitle live-time" wx:if="{{opt.liveStartAt&&opt.displayContent.liveTime}}">
+                        <b bind:_init="_tic" color="#e5e5e5" name="clock" style="{{'margin-right: '+iconMarginLeft}}"></b>
+                        <view class="t-text" wx:if="{{!opt.listMode||opt.listMode===4&&itemIndex%3===0}}">              上课时间：
+            </view>
+                        <view class="t-text">{{opt.liveStartAt}}</view>
+                    </view>
+                </view>
+                <view class="desc-price">
+                    <view class="knowledge-price-wrap" wx:if="{{opt.displayPrice&&opt.isGoodsCanBuy}}">
+                        <view class="knowledge-price t-text" style="{{'font-size: '+opt.fontSizes.price}}; {{'line-height: '+opt.fontSizes.price}}; {{'color: '+(opt.showPrice==='已购买'||opt.showPrice==='已订阅'?'#000':opt.themeColors.general)}}" wx:if="{{opt.showPrice}}"> {{opt.showPrice}} </view>
+                        <view class="knowledge-isvip t-text" wx:if="{{opt.priceTag}}">{{opt.priceTag}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</a>

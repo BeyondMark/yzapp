@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "注册会员",
+  "usingComponents": {
+    "a": "/packages/shop/levelcenter/member-fill-auth/extensions/level-fill/widgets/fill-page/rt/index",
+    "b": "/packages/async-main/@vant/weapp/dist/toast/index",
+    "c": "/packages/async-main/@vant/weapp/dist/dialog/index",
+    "d": "../../../async-tee/@y-open/vt/native/weapp/toast/index/index",
+    "e": "../../../async-tee/@y-open/vt/native/weapp/dialog/index/index",
+    "_": "../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_", "c": "_", "d": "_", "e": "_" }
+}

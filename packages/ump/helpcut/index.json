@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "砍价购",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "light",
+  "usingComponents": {
+    "a": "/packages/ump/helpcut/extensions/helpcut/widgets/helpcut-block/rt/index",
+    "b": "/packages/async-main/@vant/weapp/dist/toast/index",
+    "c": "/packages/async-main/@vant/weapp/dist/dialog/index",
+    "d": "../../async-tee/@y-open/vt/native/weapp/toast/index/index",
+    "e": "../../async-tee/@y-open/vt/native/weapp/dialog/index/index",
+    "_": "../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_", "c": "_", "d": "_", "e": "_" }
+}

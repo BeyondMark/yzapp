@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "b": "./../../components/AddressCell",
+    "c": "./../../components/SelfFetchCell",
+    "d": "./../../components/DeliveryScope",
+    "e": "./../../components/ContactCell",
+    "f": "./../../components/LocalDeliveryTimeCell",
+    "g": "./../../components/SelfFetchTimeCell",
+    "_": "../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

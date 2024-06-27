@@ -1,0 +1,7 @@
+<view class="{{classes.wrapper}}">
+    <view class="{{classes.badge}}" style="{{badgeStyle}}">
+        <slot name="content" wx:if="{{useContentSlot}}"></slot>
+        <block wx:else>{{renderContent}}</block>
+    </view>
+    <slot wx:if="{{!standalone}}"></slot>
+</view>

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../wsc-tee-trade-trade-buy-service-block-local/rt/TradeBuyServiceBlock",
+    "_": "../../../../../components/_/index"
+  }
+}

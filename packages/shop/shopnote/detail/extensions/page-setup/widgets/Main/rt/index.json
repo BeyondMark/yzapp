@@ -1,0 +1,17 @@
+{
+  "navigationBarTitleText": "",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "a": "../../../components/share-goods/index",
+    "b": "/packages/async-main/components/showcase/components/salesman-cube/index",
+    "c": "/packages/shop/components/showcase/components/live-dynamic-effect/index",
+    "d": "../../shopnote-content/rt/index",
+    "e": "../../shopnote-feature/rt/index",
+    "f": "../../shopnote-readdata/rt/index",
+    "g": "../../shopnote-shopinfo/rt/index",
+    "h": "../../shopnote-subscribe/rt/index",
+    "i": "/packages/async-main/components/account/inject-protocol/index",
+    "_": "../../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_", "i": "_" }
+}

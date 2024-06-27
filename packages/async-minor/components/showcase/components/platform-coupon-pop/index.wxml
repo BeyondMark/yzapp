@@ -1,0 +1,24 @@
+<a bind:close="onClickDialogConfirm" class="cross-store-coupon-dialog" closeOnClickOverlay="{{true}}" show="{{crossDialogShow}}" showConfirmButton="{{false}}" title="{{crossDialogTitle}}" useSlot="{{true}}">
+    <view class="cross-store-coupon-dialog__content">
+        <view class="cross-store-coupon-dialog__message">添加的优惠券可在“个人中心 - 优惠券 / 码”中领取后使用</view>
+        <view class="cross-store-coupon-dialog__btn-wrapper">
+            <view bind:tap="onClickDialogConfirm" class="cross-store-coupon-dialog__btn-confirm">继续逛逛</view>
+        </view>
+        <view bind:tap="viewCoupon" class="cross-store-coupon-dialog__link">查看优惠券</view>
+    </view>
+</a>
+<view class="dialog-pop" wx:if="{{authDialogShow}}">
+    <view class="dialog-pop-content">
+        <view class="dialog-pop-title">授权提示</view>
+        <view class="mobile-dialog__content">
+            <view class="mobile-dialog__content-text">完成授权后，即可添加优惠券</view>
+            <view class="mobile-dialog__content-button">
+                <view bind:tap="onAuthClose" class="mobile-dialog__content-button-cancel">暂不授权</view>
+                <view class="mobile-dialog__content-button-split"></view>
+                <b authTypeList="{{['mobile']}}" bind:fail="onAuthClose" bind:next="onAuthSuccess" class="mobile-dialog__content-button-confirm">
+                    <view>去授权</view>
+                </b>
+            </view>
+        </view>
+    </view>
+</view>

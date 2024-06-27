@@ -1,0 +1,1 @@
+<a _opt="{{_opt}}" bind:_init="_tic" bind:button-click="_p" bind:item-click="_p" bind:on-item-image-loaded="_p" data-t="{{ itemClick:{en:'handleItemClick'},buttonClick:{en:'showcaseHandleGoodsBuy'},onItemImageLoaded:{en:'handleItemImageLoaded'} }}" kdtId="{{kdtId}}" uuid="{{uuid}}" wx:if="{{_opt.layoutOpt&&_opt.layoutOpt.type}}"></a>

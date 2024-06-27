@@ -1,0 +1,11 @@
+<view>
+    <a bind:_init="_tic" bind:tap="_p" data-t="{{ tap:{en:'onClick'} }}" useLabelSlot="{{!!channelNotice}}">
+        <view class="{{cx.channel}}" slot="title">
+            <c bind:_init="_tic" channel="{{channel}}" customStyle="{{channel.available?'':'opacity: 0.5'}}" style="height: 20px"></c>
+            <view style="margin-left: 8px">{{channel.payChannelName}}</view>
+            <view wx:if="{{balanceDesc}}">（{{balanceDesc}}）</view>
+        </view>
+        <view class="{{cx.label}}" slot="label" wx:if="{{channelNotice}}"> {{channelNotice}} </view>
+        <b bind:_init="_tic" class="{{cx.center}}" color="{{themeColor}}" name="success" size="16" slot="right-icon" wx:if="{{selected.payChannel===channel.payChannel&&(!selected.ext||!selected.ext.instalments)}}"></b>
+    </a>
+</view>

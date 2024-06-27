@@ -1,0 +1,26 @@
+.share-popup {
+  margin: 0 auto;
+  background-color: transparent !important;
+  text-align: center;
+}
+.share-popup__close {
+  text-align: right;
+  margin-bottom: 10px;
+}
+.share-popup__content {
+  width: 311px;
+  height: 406px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.share-popup__content_img {
+  width: 100%;
+  height: 100%;
+}
+.share-popup__tip {
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  line-height: normal;
+}

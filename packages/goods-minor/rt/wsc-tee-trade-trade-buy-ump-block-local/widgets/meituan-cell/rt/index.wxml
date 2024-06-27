@@ -1,0 +1,55 @@
+<view wx:if="{{show}}">
+    <a authTypeList="{{['mobile']}}" bind:_init="_tic" bind:next="_p" data-t="{{ next:{en:'onClick'} }}" kdtId="{{kdtId}}" rmId="@passport-tee/user-authorize~DDdJBmWG" style="width: 100%" type="separate" wx:if="{{rmId==='b7-64'}}">
+        <c bind:_init="_tic" border="{{false}}" center="{{true}}" customClass="d5a4c" isLink="{{auth}}">
+            <view class="ccfc5" slot="title">
+                <d bind:_init="_tic" class="ccfc5" color="#ffbd00" textColor="#000">美团</d>
+                <view class="d5d3d c89585">美团券</view>
+            </view>
+            <view wx:if="{{loading}}">
+                <b bind:_init="_tic" color="#1989fa" type="spinner"></b>
+            </view>
+            <view class="c5f7d0" wx:else>{{couponTxt}}</view>
+        </c>
+    </a>
+    <e bind:_init="_tic" class="action-sheet" position="bottom" round="{{true}}" safeAreaInsetBottom="{{true}}" show="{{showPop}}" wx:if="{{auth}}">
+        <view class="c521bb">
+            <view class="c89585">请选择美团券</view>
+            <f bind:_init="_tic" bind:tap="_p" class="a2f92" data-t="{{ tap:{en:'onClose'} }}" name="cross"></f>
+        </view>
+        <view class="c00584">
+            <view bind:tap="_p" class="c390f2 {{!item.available?'c075ae':''}}" data-t="{{ tap:{ en:'onChoose',args:[item] } }}" wx:for="{{coupons}}" wx:key="id">
+                <view class="d6e16">
+                    <view class="d304b">美团</view>
+                    <view class="e9f40">
+                        <view class="d93ec c89585"> ¥ </view>
+                        <view class="num c89585">
+                            <view>{{item.price}}<view class="bdaa3 c89585" wx:if="{{item.showDecimal}}">.{{item.decimal}}</view>
+                            </view>
+                        </view>
+                        <view class="c3e34b">元</view>
+                    </view>
+                    <view class="c75da6">
+                        <view class="c77093">{{item.name}}</view>
+                        <view class="c6459f">
+                            <view>{{item.period}}</view>
+                        </view>
+                    </view>
+                    <view class="c9fced">
+                        <h bind:_init="_tic" checkedColor="{{color}}" class="t-d6e16__corner" size="{{18}}" value="{{chosen[item.id]}}" wx:if="{{item.available}}"></h>
+                    </view>
+                </view>
+                <view class="c40bea" wx:if="{{!item.available&&item.reason}}">{{item.reason}}</view>
+            </view>
+            <view class="a2e48" wx:if="{{!coupons.length}}">
+                <image class="c835ac bd231" lazyLoad="true" mode="aspectFit" src="{{emptyImage}}"></image>
+                <view class="a6e8f">暂无优惠券</view>
+            </view>
+        </view>
+        <view class="c1805c">
+            <g bind:_init="_tic" bind:tap="_p" class="c036e0" customClass="c049a0 a334d" data-t="{{ tap:{en:'onCancel'} }}" size="large" type="warning">        不使用优惠券
+      </g>
+            <g bind:_init="_tic" bind:tap="_p" class="c036e0" customClass="c049a0 c709e6" data-t="{{ tap:{en:'onConfirm'} }}" size="large" type="danger">        确定
+      </g>
+        </view>
+    </e>
+</view>

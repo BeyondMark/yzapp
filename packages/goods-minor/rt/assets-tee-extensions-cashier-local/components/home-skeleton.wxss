@@ -1,0 +1,33 @@
+.zan-pay-skeleton-info .t-skeleton__title {
+  border-radius: 4px;
+}
+.zan-pay-skeleton-info__notice-bar {
+  margin-top: 24px;
+}
+.zan-pay-skeleton-info__pay-info {
+  margin-top: 16px;
+}
+.zan-pay-skeleton-info__pay-info .t-skeleton__title {
+  height: 48px;
+}
+.zan-pay-skeleton-info__pay-channel {
+  margin-top: 44px;
+  display: flex;
+  justify-content: space-between;
+}
+.zan-pay-skeleton-info__pay-channel-key {
+  width: 56px;
+}
+.zan-pay-skeleton-info__pay-channel-value {
+  width: 104px;
+}
+.zan-pay-skeleton-info__submit {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 16px;
+}
+.zan-pay-skeleton-info__submit .t-skeleton__title {
+  height: 40px;
+  border-radius: 999px;
+}

@@ -1,0 +1,25 @@
+.flex {
+  display: flex;
+}
+.ac {
+  align-items: center;
+}
+.sb {
+  justify-content: space-between;
+}
+.root {
+  font-size: 12px;
+  padding: 8px;
+  background-color: #f7f8fa;
+  border-radius: 2px;
+}
+.icon {
+  margin-right: 6px;
+}
+.text {
+  color: #323233;
+}
+.subtext {
+  font-size: 11px;
+  color: #969799;
+}

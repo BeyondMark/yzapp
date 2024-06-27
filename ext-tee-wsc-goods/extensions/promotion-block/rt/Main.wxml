@@ -1,0 +1,9 @@
+<view>
+    <block wx:if="{{goodsStockOpt.showBlock}}">
+        <b bind:_init="_tic" opt="{{goodsStockOpt}}" rmId="{{rmId}}" wx:if="{{rmId==='b7-55'}}"></b>
+    </block>
+    <block wx:if="{{showPackageBuy&&goodsPackageBuyOpt.show}}">
+        <c bind:_init="_tic" opt="{{goodsPackageBuyOpt}}" rmId="{{rmId}}" wx:if="{{rmId==='b7-55'}}"></c>
+    </block>
+    <a bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b7-55'}}"></a>
+</view>

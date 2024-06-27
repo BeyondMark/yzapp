@@ -1,0 +1,8 @@
+<scroll-view scrollX="{{true}}" wx:if="{{opt.type==='swipe'&&opt.canUseScrollView}}">
+    <view class="{{'cap-layout'}} {{'cap-layout-'+opt.type}}" style="{{layoutStyle}}">
+        <slot></slot>
+    </view>
+</scroll-view>
+<view class="{{'cap-layout'}} {{'cap-layout-'+opt.type}} {{customClass}}" style="{{layoutStyle}}" wx:else>
+    <slot></slot>
+</view>

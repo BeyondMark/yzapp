@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./components/MinimalistSearch",
+    "b": "./components/CombinationSearch",
+    "_": "../../../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../common/ShrinkText",
+    "_": "../../../../../../../../../components/_/index"
+  }
+}

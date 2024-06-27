@@ -1,0 +1,61 @@
+.t-text {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.order-pool {
+  position: relative;
+  padding: 6px 16px;
+}
+.wrapper {
+  display: -webkit-flex;
+  display: flex;
+  padding: 16px;
+  align-items: center;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.image,
+.wrapper {
+  border-radius: 8px;
+}
+.image {
+  margin-right: 8px;
+  width: 48px;
+  height: 48px;
+  background-image: url(https://b.yzcdn.cn/public_files/2022/7/23/icon_pin.png);
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+.content {
+  flex-grow: 1;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #323233;
+}
+.desc {
+  line-height: 18px;
+  color: #969799;
+}
+.btn,
+.desc {
+  font-size: 12px;
+  font-weight: 400;
+}
+.btn {
+  display: -webkit-flex;
+  display: flex;
+  width: 88px;
+  height: 32px;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+}

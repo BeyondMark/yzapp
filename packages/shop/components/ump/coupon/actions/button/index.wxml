@@ -1,0 +1,12 @@
+<view class="coupon-button">
+    <view class="coupon-button__placeholder">
+        <slot name="prefix"></slot>
+    </view>
+    <view class="{{btnBoxCls}}" style="{{btnType?'':themeMainBgStyle}}" wx:if="{{btnText}}">
+        <view catch:tap="handleClickBtn" class="coupon-button__btn">{{btnText}}</view>
+        <a customClass="coupon-button__icon" name="{{icon}}" wx:if="{{hasIcon}}"></a>
+    </view>
+    <view class="coupon-button__placeholder">
+        <slot name="suffix"></slot>
+    </view>
+</view>

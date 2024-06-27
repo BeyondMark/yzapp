@@ -1,0 +1,16 @@
+<b bind:_init="_tic" bind:close="_p" btnTextColor="var(--general, #323233)" buttonPlain="{{true}}" buttonText="我知道了" color="var(--general, #323233)" data-t="{{ close:{en:'onClose'} }}" disablePadding="{{true}}" popupClass="c170d4" show="{{value}}" showClose="{{true}}" title="{{title}}">
+    <a bind:_init="_tic" wx:if="{{loading}}"></a>
+    <view class="c72766" wx:if="{{!loading&&content}}">
+        <view wx:for="{{content.content}}" wx:for-item="c" wx:key="index">
+            <view class="c6472e" wx:if="{{c.subTitle}}"> {{c.subTitle}} </view>
+            <view class="fa752 {{c.c129bf?'c129bf':''}}">
+                <block wx:for="{{c.text}}" wx:for-index="rowIndex" wx:for-item="row">
+                    <view class="c35d0a {{row.isBold?'c69dca':''}}" style="display: inline" wx:if="{{row.isSpanTag}}">{{row.content}}</view>
+                    <image class="bd231" lazyLoad="true" src="{{row.content}}" style="{{row.style}}" wx:elif="{{row.isImageTag}}"></image>
+                    <view class="f8947" wx:elif="{{row.isCategory}}">{{row.content}}</view>
+                    <view class="{{row.isBold?'c69dca':''}}" wx:else>{{row.content}}</view>
+                </block>
+            </view>
+        </view>
+    </view>
+</b>

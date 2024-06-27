@@ -1,0 +1,14 @@
+<view class="coupon-discountbox">
+    <view class="coupon-discountbox__section">
+        <view class="coupon-discountbox__slot">
+            <slot name="A1"></slot>
+        </view>
+        <a autoFormatValue="{{autoFormatValue}}" autoWidth="{{autoWidth}}" class="coupon-discountbox__slot-default" disabled="{{disabled}}" maxWidth="{{maxWidth}}" prefix="{{prefix}}" themeClass="{{themeClass}}" unavailable="{{unavailable}}" unit="{{unit}}" value="{{value}}"></a>
+    </view>
+    <view class="coupon-discountbox__section">
+        <view class="coupon-discountbox__slot">
+            <slot name="A2"></slot>
+        </view>
+        <b class="coupon-discountbox__slot-default" description="{{description}}" disabled="{{disabled}}" isAuthFontSize="{{true}}" unavailable="{{unavailable}}"></b>
+    </view>
+</view>

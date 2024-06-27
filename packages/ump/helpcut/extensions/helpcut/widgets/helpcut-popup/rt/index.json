@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/ump/components/goods-recommend/index",
+    "b": "/packages/ump/components/account/simple-popup/index",
+    "c": "/components/account/user-authorize/index",
+    "d": "/@vant/weapp/dist/popup/index",
+    "e": "/packages/async-main/@vant/weapp/dist/icon/index",
+    "_": "../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "e": "_" }
+}

@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "签到",
+  "navigationBarBackgroundColor": "#FFF",
+  "backgroundColor": "#FFF",
+  "usingComponents": {
+    "a": "../../../async-main/@vant/weapp/dist/icon/index",
+    "b": "../../../async-main/pages/common/page-container/components/copyright/index",
+    "_": "../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_", "b": "_" }
+}

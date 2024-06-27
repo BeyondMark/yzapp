@@ -1,0 +1,32 @@
+<view class="flex cl sb ctn">
+    <block wx:if="{{info&&a}}">
+        <view class="flex cl">
+            <a text="{{info.cashierNotice}}" wx:if="{{info.cashierNotice}}"></a>
+            <view class="info">
+                <view class="mn">{{info.mchName}}</view>
+                <view class="amt">{{info.payAmountString}}</view>
+                <view class="flex sb a">
+                    <text>支付方式</text>
+                    <view bind:tap="emit" class="flex as" data-en="show-all">
+                        <view class="flex cl ae">
+                            <d channel="{{a}}" i="{{i}}"></d>
+                            <view class="atp" wx:if="{{!a.hideMoreChannelTip}}">点击切换更多支付方式</view>
+                        </view>
+                        <b customClass="mi" name="arrow" size="16"></b>
+                    </view>
+                </view>
+                <e bind:click="emit" channel="{{r}}" data-en="r-click" tc="{{tc}}" wx:if="{{sr}}"></e>
+                <f cfg="{{a.selectedBar}}" channel="{{a}}" tc="{{tc}}" wx:if="{{a.selectedBar}}"></f>
+            </view>
+        </view>
+        <view class="bottom">
+            <g bind:navigate="emit" data-en="navigate" protocol="{{a.protocol}}"></g>
+            <c bind:click="emit" block="{{true}}" color="{{tc}}" data-en="pay" disabled="{{!a.available}}" loading="{{pi}}" round="{{true}}" type="danger">{{a.submitButtonText||'确认支付'}}</c>
+            <view class="flex ct g" wx:if="{{a.showGuarantee&&sg}}">
+                <image alt="有赞担保 x 中国人寿" class="gi" src="https://b.yzcdn.cn/guarantee/copyright1bind:3x.png"></image>
+                <text>全程保障</text>
+            </view>
+        </view>
+    </block>
+    <home-skeleton wx:else></home-skeleton>
+</view>

@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../components/goods-video/index",
+    "b": "./../widgets/danmaku/rt/index",
+    "c": "/packages/goods-main/rt/ext-tee-wsc-goods-preview-image-block-local/rt/NormalCover",
+    "d": "/packages/goods-core/@y/gc/components/image-block/screen-full/index",
+    "_": "../../../../components/_/index"
+  },
+  "componentPlaceholder": { "c": "_", "d": "_" }
+}

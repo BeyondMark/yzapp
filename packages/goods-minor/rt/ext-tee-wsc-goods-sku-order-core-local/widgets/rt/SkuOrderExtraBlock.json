@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../components/GiveawayCard",
+    "_": "../../../../../../components/_/index"
+  }
+}

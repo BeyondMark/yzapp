@@ -1,0 +1,12 @@
+<view class="btn-wrapper {{hasCard?'':'untake'}}" wx:if="{{btnVisible}}">
+    <view>
+        <a authTypeList="{{['mobile']}}" bind:next="handleCallAuth" wx:if="{{action==='activate'&&activationCondition.requireMobile&&!activated}}">
+            <b border="general" color="general">
+                <button class="action-btn theme-view-button action-btn__small">{{btnText}}</button>
+            </b>
+        </a>
+        <b border="general" color="general" wx:else>
+            <button bindtap="bindClick" class="action-btn theme-view-button action-btn__small">{{btnText}}</button>
+        </b>
+    </view>
+</view>

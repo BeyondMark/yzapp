@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./components/Countdown",
+    "b": "./components/InSourcingFissionCoupon",
+    "c": "./components/Groupon",
+    "d": "./components/NewCustomerCouponPop",
+    "e": "./components/ShareEncourage",
+    "f": "./components/GroupBargin",
+    "g": "./components/LimitedSeckillPop",
+    "_": "../../../../../../../components/_/index"
+  }
+}

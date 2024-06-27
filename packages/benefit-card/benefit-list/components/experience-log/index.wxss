@@ -1,0 +1,43 @@
+.experience-log {
+  margin-top: 12px;
+}
+.experience-log .log-list {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  text-align: center;
+}
+.experience-log .log-list .log-item {
+  margin-right: 8px;
+}
+.experience-log .avatar {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+}
+.experience-log .avatar .taked {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.experience-log .avatar .untake {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px dashed #ccc;
+  color: #ccc;
+  font-size: 20px;
+}
+.experience-log .reward-tips {
+  min-width: 32px;
+  margin-top: -5px;
+  background: #f44;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 8px;
+  line-height: 12px;
+  position: absolute;
+}

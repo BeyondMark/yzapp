@@ -1,0 +1,6 @@
+<view class="sn-more-button">
+    <view class="wrap">
+        <view class="t-text">查看更多</view>
+        <a bind:_init="_tic" color="#969799" name="arrow" size="12px"></a>
+    </view>
+</view>

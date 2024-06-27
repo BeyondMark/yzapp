@@ -1,0 +1,92 @@
+.co-po {
+  color: #333;
+  text-align: center;
+  background-color: transparent;
+}
+.co-po .cont {
+  background: #fff;
+  border-radius: 8px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.co-po .cont .code-loading {
+  height: 160px;
+  text-align: center;
+}
+.co-po .cont .code-loading .van-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -45px 0 0-15px;
+}
+.co-po .van-dialog__header {
+  padding-top: 17%;
+  margin-bottom: 5%;
+  font-size: 18px;
+  font-weight: 700;
+  color: #323233;
+}
+.co-po .qrcode {
+  width: 192px;
+  height: 192px;
+  margin: 10%0 10%;
+}
+.co-po .barcode {
+  width: 275px;
+  height: 84px;
+  text-align: center;
+}
+.co-po .bar-number {
+  margin: 12px 0;
+  height: 17px;
+  line-height: 17px;
+  font-size: 12px;
+}
+.co-po .bar-number_text {
+  margin: 12px 0;
+  color: #999;
+  font-size: 12px;
+}
+.co-btn-wra .code-btn {
+  font-size: 12px;
+  display: flex;
+}
+.co-btn-wra .code-btn .arr-ic {
+  width: 12px;
+  height: 12px;
+}
+.co-po-wra {
+  text-align: center;
+  height: calc(100vh - 109px);
+  border-radius: 15px 15px 0 0;
+}
+.co-po-wra .close-pop-icon {
+  width: 14px;
+  position: absolute;
+  top: 16px;
+  height: 14px;
+  right: 20px;
+}
+.co-po-wra .use-rest-info {
+  font-size: 14px;
+  color: #7d7e80;
+  margin-bottom: 8px;
+}
+.co-po-wra .use-rest-info .info {
+  font-size: 16px;
+  color: #323233;
+}
+.co-po-wra .use-rest-info .stock-num {
+  color: #f44;
+  font-size: 20px;
+  margin: 0 5px;
+}
+@media screen and (max-width: 374px) {
+  .card-warpper .card-info {
+    width: 282px;
+    height: 132px;
+  }
+}

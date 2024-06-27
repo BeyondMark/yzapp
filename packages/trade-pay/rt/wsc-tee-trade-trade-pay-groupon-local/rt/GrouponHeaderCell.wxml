@@ -1,0 +1,11 @@
+<view wx:if="{{grouponModel.showGrouponHeader}}">
+    <a bind:_init="_tic" bind:tap="_p" class="groupon-header" data-t="{{ tap:{en:'onShowPopup'} }}" icon="gift-o" isLink="{{true}}" title="{{textConfig.headerTitle}}" titleClass="c09f7a"></a>
+    <b bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'onHidePopup'} }}" position="bottom" show="{{showPopup}}">
+        <view class="c66a91">
+            <view>团长代收</view>
+            <view class="c0aa85">{{textConfig.popupContent}}</view>
+        </view>
+        <c bind:_init="_tic" bind:tap="_p" block="{{true}}" color="{{themeColors.general}}" data-t="{{ tap:{en:'onHidePopup'} }}" size="large" square="{{true}}" type="danger">      完成
+    </c>
+    </b>
+</view>

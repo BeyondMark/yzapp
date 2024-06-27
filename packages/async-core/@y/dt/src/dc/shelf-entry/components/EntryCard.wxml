@@ -1,0 +1,14 @@
+<view bind:tap="_p" class="entry-card {{customClass}} {{'template-'+templateType}} {{'entry-card__'+cardLayout}} {{templateType===4?'entry-card__small':''}} {{'entry-card__type-'+cardType}} {{'entry-card__border-type-'+borderRadiusType}} {{isFiveTop?'is-five-top':''}}" data-t="{{ tap:{en:'handleNavigation'} }}" style="{{customerStyle}}" wx:if="{{templateMode===0&&showCard}}">
+    <view class="entry-icon {{'entry-card__image-'+imageAlignType}}">
+        <image class="{{'entry-icon__content '+iconSize}} tee-image" lazyLoad="true" mode="aspectFill" src="{{cardData.useDefault?cardData.defaultIcon:cardData.icon}}"></image>
+    </view>
+    <view class="entry-text {{templateType===3?'entry-text-center':'entry-text-'+textAlignType}}" wx:if="{{templateType!==4}}">
+        <view class="entry-text__title">{{cardData.title}}</view>
+        <view class="entry-text__desc">{{cardData.desc}}</view>
+    </view>
+    <view class="entry-text__small" wx:if="{{templateType===4}}"> {{cardData.title}} </view>
+    <button bind:contact="_p" class="entry-btn" data-t="{{ contact:{en:'handleContactBack'} }}" openType="contact" wx:if="{{cardData.linkData.link_type==='chat'}}"></button>
+</view>
+<view bind:tap="_p" class="entry-image {{'entry-image--layout-'+templateType}} {{'entry-card__border-type-'+borderRadiusType}} {{'entry-card__type-'+cardType}}" data-t="{{ tap:{en:'handleNavigation'} }}" style="background-image:{{backgroundImage}}; {{customerStyle}}" wx:elif="{{templateMode===1&&showCard}}">
+    <button bind:contact="_p" class="entry-btn" data-t="{{ contact:{en:'handleContactBack'} }}" openType="contact" wx:if="{{cardData.linkData.link_type==='chat'}}"></button>
+</view>

@@ -1,0 +1,9 @@
+<view class="showcase-ump-reward" wx:if="{{activityList&&activityList.length>0}}">
+    <a _opt="{{opt.moduleTitleOpt}}" bind:_init="_tic" wx:if="{{moduleTitleVisible}}"></a>
+    <b active="{{active}}" bind:_init="_tic" bind:change="_p" border="{{false}}" data-t="{{ change:{en:'handleTabChange'} }}" ellipsis="{{false}}" lineClass="ump-reward__tab-line" lineHeight="{{0}}" lineWidth="{{0}}" pid="ump-reward" scrollClass="ump-reward__tab-nav" swipeThreshold="{{3}}" tabClass="ump-reward__tab" wx:if="{{activityList.length>1}}">
+        <c bind:_init="_tic" pid="ump-reward" title="{{item.tag}}" titleStyle="{{active===index?activeTitleStyle:inActivetitleStyle}}" wx:for="{{activityList}}" wx:key="activityid">
+            <d _index="{{_index}}" _opt="{{...opt,activityAlias:item.alias,activityId:item.activityId}}" bind:_init="_tic" bind:item-click="_p" createdWithViewEvent="{{false}}" data-t="{{ itemClick:{en:'handleItemClick'} }}" index="{{index}}" uuid="{{uuid}}"></d>
+        </c>
+    </b>
+    <d _index="{{_index}}" _opt="{{...opt,activityAlias:activityList[0].alias,activityId:activityList[0].activityId}}" bind:_init="_tic" bind:item-click="_p" createdWithViewEvent="{{false}}" data-t="{{ itemClick:{en:'handleItemClick'} }}" index="{{0}}" uuid="{{uuid}}" wx:else></d>
+</view>

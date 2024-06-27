@@ -1,0 +1,18 @@
+.member-code {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2px 0 0 16px;
+}
+.member-code .icon {
+  font-size: 24px;
+  color: var(--realTextColor);
+}
+.member-code .text {
+  color: var(--realTextColor);
+  opacity: 0.5;
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 2px;
+}

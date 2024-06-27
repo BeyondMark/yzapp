@@ -1,0 +1,6 @@
+<view class="c58811">
+    <view class="c61ba5" wx:if="{{shopAddress}}">
+        <a bind:_init="_tic" class="c61ba5-icon" color="#999" name="location-o" size="13px"></a>
+        <view class="c73f6e c89585">{{shopAddress}}</view>
+    </view>
+</view>

@@ -1,0 +1,27 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../widgets/title-bar/rt/index",
+    "b": "/ext-tee-assets/extensions/guarantee-detail-bar/rt/GuaranteeDetailBar",
+    "c": "./../widgets/price-bar/rt/index",
+    "d": "./../widgets/activity-banner/rt/index",
+    "e": "./../../promotion-block/widgets/goods-promotion/rt/index",
+    "f": "/packages/goods-core/@y/gc/components/base-info-block/presale-bar/index",
+    "g": "/packages/goods-core/@y/gc/components/base-info-block/sku-nav-block/index",
+    "h": "/packages/goods-core/@y/gc/components/base-info-block/customer-card-block/index",
+    "i": "/packages/goods-core/@y/gc/components/base-info-block/goods-fans-benefit-block/index",
+    "j": "/packages/goods-core/@y/gc/components/base-info-block/goods-new-customer-coupon-block/index",
+    "k": "/packages/goods-core/@y/gc/components/base-info-block/guide-promote/index",
+    "l": "/packages/async-main/components/account/inject-protocol/index",
+    "_": "../../../../components/_/index"
+  },
+  "componentPlaceholder": {
+    "f": "_",
+    "g": "_",
+    "h": "_",
+    "i": "_",
+    "j": "_",
+    "k": "_",
+    "l": "view"
+  }
+}

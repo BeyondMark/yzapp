@@ -1,0 +1,14 @@
+<view class="submit-bar van-hairline--top {{themeClass}} submit-bar-class">
+    <view class="price-section">
+        <block wx:if="{{showSave}}">
+            <a color="general" customClass="package-price">
+                <text class="package-price__label">套餐价:</text>￥{{totalPrice}}</a>
+            <view class="save-price">为你节省￥{{savePrice}}</view>
+        </block>
+        <a color="general" customClass="package-price" wx:else>
+            <text class="package-price__label">商品合计:</text>￥{{originPrice}}</a>
+    </view>
+    <b bind:next="goPay" class="btn-class" scene="click_buy_now">
+        <a bg="general" class="{{!isStart?'submit-bar-view--disable':''}}" customClass="submit-bar__btn">立即购买</a>
+    </b>
+</view>

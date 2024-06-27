@@ -1,0 +1,64 @@
+.start-date {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.start-date__date {
+  width: 110px;
+  padding: 4px 0;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  line-height: 16px;
+  margin-top: 8px;
+}
+.start-date__time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  background-image: linear-gradient(
+    270deg,
+    transparent,
+    rgba(0, 0, 0, 0.15) 51%,
+    transparent
+  );
+  border-radius: 12px;
+  padding: 5px;
+}
+.start-date__time .time-block {
+  background: #fff;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  text-align: center;
+  margin: 0 2px;
+}
+.start-date__time-label,
+.start-date__time .time-split {
+  color: #fff;
+}
+.start-date__time-item {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  display: flex;
+  width: 40px;
+  height: 20px;
+  box-sizing: border-box;
+  padding: 0 3px;
+  justify-content: space-between;
+  align-items: flex-end;
+  line-height: normal;
+}
+.start-date__time-item:not(:last-child) {
+  margin-right: 3px;
+}
+.start-date__time-value {
+  font-size: 20px;
+  flex: 1;
+  text-align: center;
+}
+.start-date__time-unit {
+  font-size: 8px;
+  padding-bottom: 2px;
+}

@@ -1,0 +1,9 @@
+<view class="c3bd61">
+    <view class="daf12">
+        <view class="c1646">
+            <a bind:_init="_tic" bind:re-height="_p" data-t="{{ reHeight:{en:'onReHeight'} }}" rmId="{{rmId}}" skuHeight="{{skuHeight}}" wx:if="{{rmId==='b7-42'}}"></a>
+            <c bind:_init="_tic" customInvoiceCellStyle="font-weight: normal" initShow="{{initShow}}" rmId="b7-68" wx:if="{{rmId==='b7-42'}}"></c>
+        </view>
+        <b bind:_init="_tic" bind:openPopup="_p" data-t="{{ openPopup:{en:'onOpenPopup'} }}" isGoodsDetailPage="{{true}}" isOpenPrivacyWaybill="{{display.isOpenPrivacyWaybill}}" isSkuOrder="{{true}}" rmId="b7-62" wx:if="{{rmId==='b7-42'}}"></b>
+    </view>
+</view>

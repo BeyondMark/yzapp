@@ -1,0 +1,7 @@
+<view class="behavior-display" id="behavior-display" style="width:{{displayWidth}}; height:{{displayHeight}}">
+    <a bind:_init="_tic" status="{{status}}" wx:if="{{behaviorLoading}}"></a>
+    <view class="behavior-display__bg" wx:else>
+        <view bind:tap="_p" class="behavior-display__bg--refresh" data-t="{{ tap:{en:'refreshBehaviorData'} }}"></view>
+        <image bind:error="_p" bind:load="_p" class="behavior-display__bg--img tee-image" data-t="{{ load:{en:'onLoad'},error:{en:'onError'} }}" lazyLoad="true" src="{{behaviorData.bigUrl}}" style="width:{{bigWidth}}; height:{{bigHeight}}; transform:{{'scale('+scale+')'}}" wx:if="{{behaviorData.bigUrl}}"></image>
+    </view>
+</view>

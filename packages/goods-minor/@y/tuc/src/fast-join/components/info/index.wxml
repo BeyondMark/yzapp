@@ -1,0 +1,15 @@
+<view class="f69ae">
+    <scroll-view scrollX="{{false}}" scrollY="{{!scrollLock}}" style="max-height: 40vh">
+        <view wx:for="{{customerAttributesView}}" wx:key="index">
+            <b bind:_init="_tic" item="{{item}}" wx:if="{{item.dataType===DATA_ATTRIBUTE_DATA_TYEP.STRING&&item.attributeId===DATA_ATTRIBUTE_ID_TYEP.MOBILE}}"></b>
+            <c bind:_init="_tic" bind:onChange="_p" data-t="{{ onChange:{en:'handleChangeCustomerAttribute'} }}" inputType="text" item="{{item}}" wx:if="{{item.dataType===DATA_ATTRIBUTE_DATA_TYEP.STRING&&item.attributeId!==DATA_ATTRIBUTE_ID_TYEP.MOBILE}}"></c>
+            <c bind:_init="_tic" bind:onChange="_p" data-t="{{ onChange:{en:'handleChangeCustomerAttribute'} }}" inputType="number" item="{{item}}" wx:if="{{item.dataType===DATA_ATTRIBUTE_DATA_TYEP.NUMBER}}"></c>
+            <d bind:_init="_tic" bind:onChange="_p" bind:withSwitchOtherPopup="_p" data-t="{{ onChange:{en:'handleChangeCustomerAttribute'},withSwitchOtherPopup:{en:'withSwitchOtherPopup'} }}" item="{{item}}" wx:if="{{item.dataType===DATA_ATTRIBUTE_DATA_TYEP.DATE}}"></d>
+            <e bind:_init="_tic" bind:onChange="_p" bind:withSwitchOtherPopup="_p" data-t="{{ onChange:{en:'handleChangeCustomerAttribute'},withSwitchOtherPopup:{en:'withSwitchOtherPopup'} }}" item="{{item}}" wx:if="{{item.dataType===DATA_ATTRIBUTE_DATA_TYEP.REGION}}"></e>
+            <f bind:_init="_tic" bind:onChange="_p" bind:withSwitchOtherPopup="_p" data-t="{{ onChange:{en:'handleChangeCustomerAttribute'},withSwitchOtherPopup:{en:'withSwitchOtherPopup'} }}" item="{{item}}" wx:if="{{item.dataType===DATA_ATTRIBUTE_DATA_TYEP.GENDER}}"></f>
+            <a bind:_init="_tic" bind:onChange="_p" data-t="{{ onChange:{en:'handleChangeCustomerAttribute'} }}" item="{{item}}" wx:if="{{item.dataType===DATA_ATTRIBUTE_DATA_TYEP.AVATAR}}"></a>
+            <g bind:_init="_tic" bind:onChange="_p" bind:withSwitchOtherPopup="_p" data-t="{{ onChange:{en:'handleChangeCustomerAttribute'},withSwitchOtherPopup:{en:'withSwitchOtherPopup'} }}" item="{{item}}" wx:if="{{item.dataType===DATA_ATTRIBUTE_DATA_TYEP.SINGLE_SELECT}}"></g>
+            <h bind:_init="_tic" bind:onChange="_p" bind:withSwitchOtherPopup="_p" data-t="{{ onChange:{en:'handleChangeCustomerAttribute'},withSwitchOtherPopup:{en:'withSwitchOtherPopup'} }}" item="{{item}}" wx:if="{{item.dataType===DATA_ATTRIBUTE_DATA_TYEP.MULTIPLE_SELECT}}"></h>
+        </view>
+    </scroll-view>
+</view>

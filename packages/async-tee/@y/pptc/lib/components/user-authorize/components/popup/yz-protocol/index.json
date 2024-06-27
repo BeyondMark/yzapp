@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../trigger-button/native-mobile/index",
+    "b": "./../../trigger-button/native-user-info/index",
+    "c": "/packages/async-main/@y/ppp/lib/view/tee/protocol",
+    "_": "../../../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "c": "_" }
+}

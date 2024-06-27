@@ -1,0 +1,11 @@
+.coupon-stamp {
+  position: absolute;
+}
+.coupon-stamp__pos-bottomRight {
+  right: 0;
+  bottom: -3px;
+}
+.coupon-stamp__pos-topLeft {
+  top: 0;
+  left: 0;
+}

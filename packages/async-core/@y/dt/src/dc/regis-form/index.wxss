@@ -1,0 +1,15 @@
+.dc-regis-form {
+  padding: 15px;
+}
+.dc-regis-form .field-list {
+  border-radius: 8px;
+  overflow: hidden;
+}
+.dc-regis-form .footer-operate {
+  margin-top: 20px;
+}
+.dc-regis-form .submit-btn {
+  background-color: #f44;
+  border-color: #f44;
+  border-radius: 25px;
+}

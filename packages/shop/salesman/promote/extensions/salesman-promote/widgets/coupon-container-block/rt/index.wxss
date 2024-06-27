@@ -1,0 +1,12 @@
+.coupon-block-wrap {
+  margin-top: 8px;
+}
+.u-base-padding-row {
+  position: relative;
+  width: 100%;
+  padding: 13px 16px;
+  font-size: 14px;
+  line-height: 18px;
+  box-sizing: border-box;
+  background-color: #fff;
+}

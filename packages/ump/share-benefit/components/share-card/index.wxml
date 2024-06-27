@@ -1,0 +1,67 @@
+<view class="share-card">
+    <view class="share-card__img">
+        <image class="image" src="{{imgShowTop}}"></image>
+        <view class="share-card__activity-detail">
+            <view>好友登录浏览后即可获得如下奖励</view>
+            <view class="span-bold">{{startAt}} 至 {{endAt}}</view>
+        </view>
+    </view>
+    <view class="block-card">
+        <view class="share-card__tip">每分享<span class="share-card__tip-num">{{shareNum}}</span>个好友可得</view>
+        <view class="share-card__reward">
+            <view class="share-card__logo">
+                <image alt="" class="shop-logo" src="{{shopInfo.logo}}"></image>
+            </view>
+            <view class="share-card__detail">
+                <view>
+                    <view class="title">
+                        <view wx:if="{{preferentialType===PreferentialType.DENOMINATIONS}}">￥<text class="span-bold denominations">{{denominations}}</text>{{couponTitle}}</view>
+                        <view wx:if="{{preferentialType===PreferentialType.DISCOUNT}}">
+                            <text class="span-bold">{{discount}}</text>折，
+              {{couponTitle}}</view>
+                        <view wx:if="{{preferentialType===PreferentialType.CONVERSION}}">商品兑换券</view>
+                        <view wx:if="{{rewardType===RewardType.POINTS}}">
+                            <text class="span-bold">{{reward.pointNum}}</text>积分</view>
+                    </view>
+                    <view class="shop">{{shopInfo.shop_name}}</view>
+                </view>
+                <view class="time" wx:if="{{validTime}}">有效期：{{validTime}}</view>
+            </view>
+        </view>
+        <view>
+            <view wx:if="{{hasLogin}}">
+                <button bind:tap="onShareCallback" class="share-button van-hairline--bottom" data-activity-alias="{{activityAlias}}" data-share-tag="{{shareTag}}" openType="share">分享给朋友</button>
+            </view>
+            <view class="share-button van-hairline--bottom" wx:else>
+                <a authTypeList="{{['mobile']}}" bind:next="onLoginClick">
+                    <text class="share-activity__action-login">立即登录</text>
+                </a>
+            </view>
+        </view>
+    </view>
+    <view class="block-card">
+        <view class="reward-list-title">我获得的奖励<view class="total" wx:if="{{rewardTimes}}">共<text>{{rewardTimes}}</text>次</view>
+        </view>
+        <view wx:if="{{hasLogin}}">
+            <view class="share-list" wx:if="{{rewardList.length}}">
+                <view class="item" wx:for="{{rewardList}}" wx:for-item="reward">
+                    <view class="item-detail">
+                        <view class="user">
+                            <image alt="头像" class="user-head" src="{{user.avatar}}" wx:for="{{reward.sharedUserList}}" wx:for-item="user"></image>
+                        </view>
+                    </view>
+                    <view class="item-status">
+                        <view class="status-button">
+                            <text class="status-wait" wx:if="{{!(reward.sharedUserList&&reward.sharedUserList.length>=reward.shareNum)}}">还差{{reward.shareNum-reward.sharedUserList.length}}人</text>
+                            <text class="status-over" wx:elif="{{reward.senderStatus===1}}">已发放</text>
+                            <text class="status-wait" wx:else>待发放</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="tip" wx:else>暂无奖励，快去分享好友吧！</view>
+        </view>
+        <view class="tip" wx:else>登录查看奖励</view>
+    </view>
+    <view bind:tap="toMyReward" class="all-reward-list" wx:if="{{hasLogin}}">查看全部奖励记录 ></view>
+</view>

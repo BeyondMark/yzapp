@@ -1,0 +1,34 @@
+.plan-detail {
+  justify-content: space-between;
+  padding: 0 12px;
+  height: 100%;
+}
+.plan-detail,
+.plan-detail .icon-text-group {
+  display: flex;
+  align-items: center;
+}
+.plan-detail .icon-text-group .plan-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+.plan-detail .icon-text-group .plan-info {
+  font-size: 14px;
+  color: #323232;
+}
+.plan-detail .icon-text-group .plan-info .birthday-text {
+  flex: 1;
+  display: flex;
+}
+.plan-detail .icon-text-group .plan-info .birthday-text .nick-name {
+  max-width: 60px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-right: 5px;
+}
+.plan-detail .view-wrap {
+  font-size: 14px;
+  color: #969799;
+}

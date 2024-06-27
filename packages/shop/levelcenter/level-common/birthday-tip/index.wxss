@@ -1,0 +1,48 @@
+.birthday-tip-box {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px 0 8px;
+  font-size: 14px;
+}
+.birthday-tip-box .icon {
+  background-image: url(https://img01.yzcdn.cn/upload_files/2021/09/22/FvPbAZjjIv6MDCxLUjm7PjSTxeqS.png);
+  background-size: 100%;
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+}
+.birthday-tip-box .desc {
+  white-space: nowrap;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+.birthday-tip-box .name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100vw - 282px);
+}
+.birthday-tip-box .left-part {
+  color: #323233;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.birthday-tip-box .right-part {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #969799;
+}
+.birthday-tip-box .arrow {
+  margin-left: 8px;
+}
+.bottom-border {
+  width: 100%;
+  height: 10px;
+  background-color: #f7f8fa;
+}

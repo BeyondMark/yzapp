@@ -1,0 +1,11 @@
+<view class="gift-header {{fromShare?'gift-share-header':''}}">
+    <slot></slot>
+    <view class="gift-header__img-area">
+        <image class="img-1" src="https://img01.yzcdn.cn/weapp/image/gift-header-1.png"></image>
+        <image class="img-2" src="https://img01.yzcdn.cn/weapp/image/gift-header-2.png"></image>
+        <image class="img-3" src="https://img01.yzcdn.cn/weapp/image/gift-header-6.png"></image>
+    </view>
+    <view class="gift-header__bottom-box">
+        <view class="gift-header__bottom-border"></view>
+    </view>
+</view>

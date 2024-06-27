@@ -1,0 +1,15 @@
+<view>
+    <a bind:_init="_tic" class="goods-list-price t-hairline--top">
+        <view class="d98d1">
+            <view class="c89585">小计</view>
+            <view class="c22098 c89585" style="{{'color:'+themeColors.general}}">{{totalPrice}}</view>
+        </view>
+        <view bind:tap="_p" class="c487e" data-t="{{ tap:{en:'onPriceDetailClick'} }}" wx:if="{{showPriceDetail&&!isPreSale}}">
+            <view class="ccc42 c89585">明细</view>
+            <c bind:_init="_tic" class="c61f0f" color="#969799" name="arrow" size="16"></c>
+        </view>
+    </a>
+    <b bind:_init="_tic" bind:close="_p" class="be18d" data-t="{{ close:{en:'handleClose'} }}" disablePadding="{{true}}" show="{{showDetailPopup}}" title="费用明细" wx:if="{{showPriceDetail}}">
+        <d bind:_init="_tic" itemList="{{formattedGoods}}" price="{{totalPrice}}"></d>
+    </b>
+</view>

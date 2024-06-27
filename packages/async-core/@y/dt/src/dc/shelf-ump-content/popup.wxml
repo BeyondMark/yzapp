@@ -1,0 +1,49 @@
+<b bind:_init="_tic" bind:close="_p" catch:touchmove="_p" customStyle="max-height: 80%;" data-t="{{ close:{en:'onClose'},touchmove:{en:'true',et:'stop'} }}" position="bottom" round="{{true}}" safeAreaInsetBottom="{{false}}" show="{{showPop}}" zIndex="{{isTabPage?10000:999}}">
+    <view class="popup-title">
+        <view class="shop-name t-text">{{shopName}}</view>
+        <a bind:_init="_tic" bind:tap="_p" data-t="{{ tap:{en:'onClose'} }}" name="cross" size="24px"></a>
+    </view>
+    <scroll-view class="popup-content" scrollX="{{false}}" scrollY="{{true}}">
+        <view class="ump-block" wx:if="{{vouchers.length>0}}">
+            <view class="title t-text">优惠券</view>
+            <view>
+                <c bind:_init="_tic" bind:takeCoupon="_p" data-t="{{ takeCoupon:{en:'handleTakeCoupon'} }}" item="{{voucher}}" wx:for="{{firstTwoVouchers}}" wx:for-item="voucher" wx:key="activityId"></c>
+                <view wx:if="{{showMoreVouchers}}">
+                    <c bind:_init="_tic" bind:takeCoupon="_p" data-t="{{ takeCoupon:{en:'handleTakeCoupon'} }}" item="{{voucher}}" wx:for="{{moreVouchers}}" wx:for-item="voucher" wx:key="activityId"></c>
+                </view>
+                <view bind:tap="_p" class="more" data-t="{{ tap:{en:'toggleMoreVoucher'} }}" wx:if="{{moreVouchers.length&&!showMoreVouchers}}">
+                    <view class="more-text t-text">展开剩余{{moreVouchers.length}}张优惠券</view>
+                    <a bind:_init="_tic" name="arrow-down"></a>
+                </view>
+            </view>
+        </view>
+        <view class="ump-block" wx:if="{{groups.length}}">
+            <view class="title t-text">优惠活动</view>
+            <view class="body">
+                <d activity="{{activity}}" bind:_init="_tic" bind:goToActivityDetail="_p" class="activity" data-t="{{ goToActivityDetail:{en:'handleGoToActivityDetail'} }}" showDetailButton="{{showDetailButton}}" wx:for="{{firstFiveActivities}}" wx:for-item="activity" wx:key="activityId"></d>
+                <view wx:if="{{showMoreActivities}}">
+                    <d activity="{{activity}}" bind:_init="_tic" bind:goToActivityDetail="_p" class="activity" data-t="{{ goToActivityDetail:{en:'handleGoToActivityDetail'} }}" showDetailButton="{{showDetailButton}}" wx:for="{{moreActivities}}" wx:for-item="activity" wx:key="activityId"></d>
+                </view>
+            </view>
+            <view bind:tap="_p" class="more" data-t="{{ tap:{en:'toggleMoreActivities'} }}" wx:if="{{moreActivities.length&&!showMoreActivities}}">
+                <view class="more-text t-text">展开剩余{{moreActivities.length}}个活动</view>
+                <a bind:_init="_tic" name="arrow-down"></a>
+            </view>
+        </view>
+        <view class="ump-block" wx:if="{{shopAnnouncementText}}">
+            <view class="title t-text">公告</view>
+            <view class="body t-text">{{shopAnnouncementText}}</view>
+        </view>
+        <view class="ump-block" wx:if="{{fullAddress}}">
+            <view class="title t-text">门店信息</view>
+            <view bind:tap="_p" class="body info t-text" data-t="{{ tap:{en:'toAddress'} }}">        地址：{{fullAddress}} <image class="logo tee-image" lazyLoad="true" src="https://img01.yzcdn.cn/upload_files/2023/11/08/FqKsYgVPbwwbMjYyH796_2_QaBgK.png"></image>
+            </view>
+            <view bind:tap="_p" class="body info t-text" data-t="{{ tap:{en:'toPhone'} }}">        电话：{{shopInfo.contactMobile}} <image class="logo tee-image" lazyLoad="true" src="https://img01.yzcdn.cn/upload_files/2023/11/08/FumjGtiGL-WvmM3DkvLh2bzNQ00D.png"></image>
+            </view>
+            <view bind:tap="_p" class="body shop-certification t-text" data-t="{{ tap:{en:'handleGoToShopCertification'} }}" wx:if="{{showShopCertification}}">
+                <view class="t-text">查看店铺资质</view>
+                <a bind:_init="_tic" name="arrow" size="10px"></a>
+            </view>
+        </view>
+    </scroll-view>
+</b>

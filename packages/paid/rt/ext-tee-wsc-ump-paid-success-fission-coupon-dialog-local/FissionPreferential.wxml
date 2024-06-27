@@ -1,0 +1,9 @@
+<view class="c041bf">
+    <view class="d5d3d">恭喜你获得{{quantity}}张优惠券</view>
+    <view style="font-size: 32px" wx:if="{{isShowOnlyText}}">兑换指定商品</view>
+    <view class="e38b2" wx:else>
+        <view>{{prefix}}</view>
+        <view class="e9f40">{{curAmount}}</view>
+        <view>{{unit}}</view>
+    </view>
+</view>

@@ -1,0 +1,11 @@
+.agreement {
+  display: inline-block;
+  color: #38f;
+}
+.title {
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  font-weight: 400;
+  margin: 0 auto 20px;
+}

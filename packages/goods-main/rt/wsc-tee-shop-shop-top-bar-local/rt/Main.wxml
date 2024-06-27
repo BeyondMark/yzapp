@@ -1,0 +1,16 @@
+<view class="{{shopTopBarClass}}" wx:if="{{showTopBar&&!needHideTopBar}}">
+    <view bind:tap="_p" class="f83fb" data-t="{{ tap:{en:'handleAddressClick'} }}" wx:if="{{isHideStore}}">
+        <view class="c768da">
+            <image class="ee29b bd231" lazyLoad="true" src="https://b.yzcdn.cn/public_files/2018/08/27/ba1d3e50fdf5364ba827ccc39eb65f9c.png"></image>
+            <view class="b351b">{{address}}</view>
+            <image class="{{'c31eac'}} {{isWeb?'c84152':''}} bd231" lazyLoad="true" src="https://b.yzcdn.cn/public_files/2018/08/27/f13059e35152241c8e9dedf6ff16ff86.png"></image>
+        </view>
+    </view>
+    <view class="{{topBarClass}}" style="{{topBarStyle}}" wx:else>
+        <a bind:_init="_tic" bind:tap="_p" class="c44cff" data-t="{{ tap:{en:'handleBack'} }}" name="arrow-left" wx:if="{{isWeb&&showBack}}"></a>
+        <image class="c2e661 bd231" lazyLoad="true" src="{{logo}}" wx:if="{{logo}}"></image>
+        <view class="c1cd9f">{{customName}}</view>
+        <view bind:tap="_p" class="d12a7" data-t="{{ tap:{en:'onChange'} }}" wx:if="{{showSwitchBtn}}">      [切换]
+    </view>
+    </view>
+</view>

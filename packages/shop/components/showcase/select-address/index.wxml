@@ -1,0 +1,21 @@
+<view class="address-container">
+    <block wx:if="{{!isSelectedAddressId}}">
+        <view class="select-address">请选择收货地址</view>
+        <view bind:tap="showAddressPop" class="change-address" style="color: {{themeColor}}">选择地址</view>
+    </block>
+    <block wx:else>
+        <view class="user-address">
+            <view class="user-address__info">
+                <text style="margin-right: 6px">{{currentAddress.userName+' '}}</text>
+                <text>{{currentAddress.tel}}</text>
+                <c class="user-address__tag-root" customClass="user-address__tag" round="{{true}}" type="danger" wx:if="{{currentAddress.isDefault}}">默认</c>
+                <c class="user-address__tag-root" color="rgba(238, 10, 36, .1)" customClass="user-address__tag" round="{{true}}" textColor="#ee0a24" wx:if="{{currentAddress.label}}">{{currentAddress.label}}</c>
+            </view>
+            <view class="user-address__detail">{{currentAddress.addressDetail+currentAddress.houseNumber}}</view>
+        </view>
+        <view bind:tap="showAddressPop" class="change-address" style="color: {{themeColor}}">更换地址</view>
+    </block>
+</view>
+<a bind:closePopup="closeAddressPop" show="{{showAddress}}">
+    <b addresses="{{addresses}}" bind:clickNewAddress="handleNewAddress" bind:handleEditAddress="handleEditAddress" bind:handleSelectAddress="handleSelectAddress" isSelectedId="{{isSelectedAddressId}}" style="--theme-main-color: {{themeMainColor}}" themeMainColor="{{themeMainColor}}"></b>
+</a>

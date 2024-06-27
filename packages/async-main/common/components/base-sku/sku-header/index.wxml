@@ -1,0 +1,15 @@
+<view class="van-sku-header van-hairline--bottom">
+    <view class="van-sku-header__img-wrap">
+        <image bind:tap="onImgClick" mode="aspectFit" src="{{imgUrl}}"></image>
+    </view>
+    <view class="van-sku-header__goods-info">
+        <slot wx:if="{{extraData.useCustomHeaderPrice}}"></slot>
+        <b class="van-sku__goods-price" color="general" wx:else>
+            <text class="van-sku__price-symbol">￥</text>
+            <text class="van-sku__price-num">{{utils.getGoodsPrice(selectedSkuComb,sku)}}</text>
+        </b>
+        <view class="van-sku-header__item" wx:if="{{!hideStock}}">剩余<b class="van-sku-header__item-num" color="{{stockNum<50?'general':''}}">{{stockNum}}</b>件</view>
+        <view class="van-sku-header__item" wx:if="{{hasSku&&selectText}}">{{selectText}}</view>
+        <a bind:tap="onSkuCloseClicked" class="van-sku__close-icon" name="cross"></a>
+    </view>
+</view>

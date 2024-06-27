@@ -1,0 +1,30 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../widgets/sku-header/rt/index",
+    "b": "/packages/goods-main/rt/assets-tee-extensions-sku-pay-ways-local/rt/Main",
+    "c": "/packages/goods-main/rt/assets-tee-extensions-sku-pay-ways-local/rt/SubmitNotice",
+    "d": "/packages/goods-main/rt/ext-tee-wsc-goods-goods-extra-block-local/widgets/coupon-intro/rt/index",
+    "e": "/@y/gc/components/sku/index",
+    "f": "/packages/goods-core/@y/gc/components/sku/extra-components/goods-attributes/index",
+    "g": "/packages/goods-core/@y/gc/components/sku/extra-components/period-buy/index",
+    "h": "/packages/goods-core/@y/gc/components/sku/extra-components/period-buy/Tips",
+    "i": "/packages/goods-core/@y/gc/components/sku/extra-components/ecard/index",
+    "j": "/packages/goods-core/@y/gc/components/sku/extra-components/ladder-groupon/index",
+    "k": "/packages/goods-core/@y/gc/components/sku/extra-components/coupon-tips/index",
+    "l": "/packages/goods-core/@y/gc/components/sku/extra-components/selling-point/index",
+    "_": "../../../../components/_/index"
+  },
+  "componentPlaceholder": {
+    "b": "_",
+    "c": "_",
+    "d": "_",
+    "f": "_",
+    "g": "_",
+    "h": "_",
+    "i": "_",
+    "j": "_",
+    "k": "_",
+    "l": "_"
+  }
+}

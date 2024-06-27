@@ -1,0 +1,228 @@
+.t-text {
+  text-decoration: inherit;
+}
+.t-text,
+.tee-image {
+  display: inline-block;
+}
+.tee-image {
+  width: 100%;
+  height: 100%;
+}
+.member {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 12px 16px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+}
+.member-con {
+  padding: 6px 16px;
+}
+.member.no-radius {
+  border-radius: 0;
+}
+.member-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: cover;
+  background-image: url(//b.yzcdn.cn/public_files/member-card-mark.png);
+}
+.member .qrcode {
+  position: absolute;
+  text-align: right;
+  right: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+}
+.member .qrcode-icon {
+  width: 24px;
+  height: 24px;
+}
+.member-paid-level {
+  position: relative;
+  justify-content: space-between;
+  height: 136px;
+  width: 100%;
+}
+.member-paid-level,
+.paid-header {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+.paid-name {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+}
+.paid-date {
+  font-size: 12px;
+  color: #fff;
+  margin-top: 8px;
+}
+.benefit-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  border-radius: 16px;
+  color: #fff;
+  padding: 6px 13px;
+  font-size: 13px;
+  border: 1px solid #fff;
+}
+.benefit-num {
+  color: #fff;
+  font-size: 14px;
+}
+.member-card {
+  flex: 1;
+  justify-content: space-between;
+  border-radius: 4px;
+  color: #fff;
+}
+.member-card,
+.text-container {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+}
+.prefix-icon {
+  width: 36px;
+  height: 36px;
+  margin-right: 8px;
+}
+.title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.desc {
+  line-height: 18px;
+  opacity: 0.6;
+}
+.action,
+.desc {
+  font-size: 12px;
+}
+.action {
+  width: 88px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: #fff;
+  color: #333;
+  text-align: center;
+  line-height: 32px;
+}
+.member-content {
+  position: relative;
+  color: #fff;
+  width: 100%;
+}
+.content-header {
+  position: relative;
+  justify-content: space-between;
+}
+.content-header,
+.content-level {
+  display: -webkit-flex;
+  display: flex;
+}
+.content-level {
+  height: 23px;
+}
+.level-name {
+  font-size: 17px;
+  font-weight: 700;
+}
+.level-icon,
+.level-name {
+  display: -webkit-flex;
+  display: flex;
+}
+.level-icon {
+  align-items: center;
+}
+.prefix {
+  width: 14px;
+  height: 14px;
+  background: url(//b.yzcdn.cn/public_files/74c8dd5df409556a7d481f212b36cc38.png)
+    50% / cover no-repeat;
+  border-radius: 50%;
+  margin-left: 0.5em;
+  overflow: hidden;
+}
+.icon-content {
+  position: relative;
+  left: -4px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  padding: 0 6px;
+  background-color: #fff;
+  color: #d09a45;
+  border-radius: 0 6px 6px 0;
+  transform: scale(0.833);
+  transform-origin: left center;
+}
+.content-growth {
+  position: relative;
+  font-weight: 700;
+  margin-top: 15px;
+}
+.content-growth .growth-value {
+  font-size: 34px;
+}
+.content-growth .growth-text {
+  font-size: 12px;
+  margin-left: 8px;
+}
+.content-progress {
+  margin-top: 4px;
+  height: 2px;
+  width: 100%;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  overflow: hidden;
+  border-radius: 1px;
+}
+.content-progress .progress {
+  height: 100%;
+  background-color: #fff;
+}
+.content-desc {
+  font-size: 12px;
+  margin-top: 20px;
+}
+.content-upgrade {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: 1px solid #fff;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 14px;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  line-height: 24px;
+  height: 24px;
+  padding: 0 10px;
+  font-weight: 400;
+}
+.content-upgrade,
+.content-upgrade .van-icon {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+}

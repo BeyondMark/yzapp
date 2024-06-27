@@ -1,0 +1,1 @@
+<a bind:_init="_tic" wx:if="{{rmId==='b21-0'}}"></a>

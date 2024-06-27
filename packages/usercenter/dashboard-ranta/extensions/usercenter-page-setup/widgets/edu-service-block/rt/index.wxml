@@ -1,0 +1,3 @@
+<view class="edu-service">
+    <a badges="{{badges}}" bind:eduServicesWidgetClicked="handleWidgetClicked" iconMode="{{iconMode}}" links="{{links}}" mode="{{mode}}" services="{{util.updateMomentsName(services,momentsName)}}"></a>
+</view>

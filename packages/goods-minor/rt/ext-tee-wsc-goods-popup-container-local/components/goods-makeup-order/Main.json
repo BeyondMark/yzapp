@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./components/ComboItem",
+    "b": "/@y-open/vt/dist/popup/index.weapp",
+    "c": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "_": "../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "c": "_" }
+}

@@ -1,0 +1,15 @@
+<view class="live-dynamic-effect">
+    <view class="border ouside"></view>
+    <view class="live-dynamic-effect__img">
+        <slot name="cus-img"></slot>
+    </view>
+    <view class="border"></view>
+    <view class="live-dynamic-effect__text">
+        <view class="live-dynamic-effect__text-effect">
+            <span class="effect low"></span>
+            <span class="effect top"></span>
+            <span class="effect mid"></span>
+        </view>
+        <image src="https://img01.yzcdn.cn/upload_files/2020/09/22/FnG9nujxdBpYwaqirMf8QKRoHsCD.png"></image>
+    </view>
+</view>

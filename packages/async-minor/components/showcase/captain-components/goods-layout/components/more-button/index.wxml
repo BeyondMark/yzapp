@@ -1,0 +1,21 @@
+<view class="c-goods-layout__more {{buttonTypeClass}} custom-class" style="{{buttonMarginStyle}}">
+    <a border="{{false}}" wx:if="{{buttonType===2||buttonType===3}}">
+        <b isLink="{{true}}" title="{{buttonType===3?moreText:''}}" url="{{moreUrl}}" value="{{buttonType===2?moreText:''}}"></b>
+    </a>
+    <view class="more-link--5" wx:elif="{{buttonType===5}}">
+        <view class="more-text">
+            <d wx:if="{{loading}}"></d>
+            <block wx:else>
+                <view class="arrow-left-icon"></view>
+                <text>查看更多</text>
+            </block>
+        </view>
+    </view>
+    <navigator class="more-link--6" style="margin-right: {{goodsMargin}}px;" url="{{moreUrl}}" wx:elif="{{buttonType===6}}">
+        <view class="more-text">{{moreText}}<view class="arrow-right-icon"></view>
+        </view>
+    </navigator>
+    <navigator url="{{moreUrl}}" wx:else>
+        <c block="{{true}}" customClass="van-button" size="normal" type="default">{{moreText}}</c>
+    </navigator>
+</view>

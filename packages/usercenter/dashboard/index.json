@@ -1,0 +1,25 @@
+{
+  "navigationBarTitleText": "个人中心",
+  "navigationBarBackgroundColor": "#FFF",
+  "enablePullDownRefresh": true,
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "a": "/packages/usercenter/dashboard-ranta/extensions/usercenter-page-setup/widgets/page-setup-block/rt/index",
+    "b": "/packages/async-main/@vant/weapp/dist/toast/index",
+    "c": "/packages/async-main/@vant/weapp/dist/dialog/index",
+    "d": "/ext-tee-wsc-dc/extensions/page-style/rt/Main",
+    "e": "./../../async-feature-ext/rt/ext-tee-wsc-goods-biz-sku-manage-local/rt/Main",
+    "f": "./../../async-feature-ext/rt/wsc-tee-dc-feature-user-authorize-popup-local/rt/Main",
+    "g": "../../async-tee/@y-open/vt/native/weapp/toast/index/index",
+    "h": "../../async-tee/@y-open/vt/native/weapp/dialog/index/index",
+    "_": "../../../components/_/index"
+  },
+  "componentPlaceholder": {
+    "b": "_",
+    "c": "_",
+    "e": "_",
+    "f": "_",
+    "g": "_",
+    "h": "_"
+  }
+}

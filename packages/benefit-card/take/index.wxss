@@ -1,0 +1,138 @@
+.take-card {
+  padding: 16px;
+  box-sizing: border-box;
+  background-color: #ebedf0;
+}
+.take-card .card-wrapper {
+  width: 100%;
+  padding: 24px 16px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+.take-card .card-wrapper .userinfo {
+  text-align: center;
+}
+.take-card .card-wrapper .userinfo .avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.take-card .card-wrapper .card-title {
+  width: 100%;
+  line-height: 20px;
+  margin-top: 16px;
+  font-size: 16px;
+  text-align: center;
+  color: #333;
+}
+.take-card .card-wrapper .card {
+  position: relative;
+  margin: 24px auto;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.take-card .card-wrapper .card .card-box {
+  height: 320rpx;
+  padding: 23px 0 0 20px;
+  box-sizing: border-box;
+  background-image: url(//img01.yzcdn.cn/public_files/2019/03/09/8c6d1b5856071ee6af1f2c76348e61d5.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: #fbfcff;
+  font-size: 12px;
+  font-family: PingFangSC-Regular;
+  border-radius: 7px;
+}
+.take-card .card-wrapper .card .card-box .mask {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+}
+.take-card .card-wrapper .card .card-box .mask-top {
+  top: 4px;
+  right: 1px;
+}
+.take-card .card-wrapper .card .card-box .mask-bottom {
+  left: 0;
+  bottom: 4px;
+  transform: rotate(180deg);
+}
+.take-card .card-wrapper .card .card-box .card-name {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+}
+.take-card .card-wrapper .card .card-box .card-name .card-name-text {
+  font-size: 18px;
+  line-height: 20px;
+}
+.take-card .card-wrapper .card .card-box .card-name .badge-icon {
+  width: 32px;
+  height: 16px;
+  margin-left: 4px;
+}
+.take-card .card-wrapper .card .card-box .card-expire {
+  margin-top: 6px;
+}
+.take-card .card-wrapper .card-benefits {
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+}
+.take-card .card-wrapper .card-benefits .benefit-title {
+  margin-bottom: 16px;
+  font-size: 12px;
+  color: #323233;
+}
+.take-card .card-wrapper .card-benefits .benefit-list {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.take-card .card-wrapper .card-benefits .align-center-list {
+  justify-content: center;
+}
+.take-card .card-wrapper .card-benefits .benefit-item {
+  width: 25%;
+  margin-bottom: 20px;
+}
+.take-card .card-wrapper .card-benefits .benefit-item .icon-name {
+  margin-top: 4px;
+  line-height: 17px;
+  font-size: 12px;
+  color: #323233;
+}
+.take-card .card-wrapper .card-benefits .benefit-item .icon-img {
+  width: 40px;
+  height: 40px;
+}
+.take-card .card-wrapper .btn-wrapper {
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 30px;
+  margin-top: 20px;
+  background: #fff;
+  box-sizing: border-box;
+}
+.take-card .card-wrapper .btn-wrapper .btn {
+  height: 40px;
+  line-height: 38px;
+  background: linear-gradient(90deg, #e2bb7c, #e8c388);
+  border-color: transparent;
+  color: #724804;
+  font-size: 16px;
+  font-weight: 500;
+}
+.take-card .card-wrapper .btn-wrapper .disabled-btn {
+  color: #c8c9cc;
+  background: #f7f8fa;
+  opacity: 1;
+}
+@import "/packages/benefit-card/style/theme-view.wxss";

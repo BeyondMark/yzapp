@@ -1,0 +1,4 @@
+<view bind:tap="_p" data-t="{{ tap:{en:'onClick'} }}">
+    <a bind:_init="_tic" border="{{false}}" customClass="c6bf1b" isLink="{{true}}" title="{{title}}" titleClass="d248b"></a>
+    <view class="c68f8c">{{intro}}</view>
+</view>

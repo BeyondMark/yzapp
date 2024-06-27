@@ -1,0 +1,11 @@
+<view class="c74cce">
+    <view class="c32b55" wx:if="{{isShowYzGuarantee}}">
+        <a bind:_init="_tic" rmId="b7-22" wx:if="{{rmId==='b7-42'}}"></a>
+    </view>
+    <view class="{{carouselWrapClass}}">
+        <b bind:_init="_tic" navBarText="{{titleText}}" recordList="{{recordListSorted}}" rmId="b7-56" wx:if="{{rmId==='b7-42'}}"></b>
+    </view>
+    <view bind:tap="_p" class="d9d63" data-t="{{ tap:{en:'onClose'} }}">
+        <c bind:_init="_tic" name="cross" size="22px"></c>
+    </view>
+</view>

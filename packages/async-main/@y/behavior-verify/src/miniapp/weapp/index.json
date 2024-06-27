@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./slide/components/slide-captcha/index",
+    "b": "./number/components/number-captcha/index",
+    "_": "../../../../../../../components/_/index"
+  }
+}

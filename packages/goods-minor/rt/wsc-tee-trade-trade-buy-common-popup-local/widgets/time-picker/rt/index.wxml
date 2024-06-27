@@ -1,0 +1,20 @@
+<a bind:_init="_tic" bind:close="_p" bind:confirm="_p" bodyBackgroundColor="#fff" btnTextColor="var(--main-text, #fff)" buttonText="完成" color="var(--main-bg, #323233)" data-t="{{ confirm:{en:'onConfirm'},close:{en:'onClose'} }}" disablePadding="{{true}}" popupClass="c6039e" scroll="{{false}}" show="{{show}}" showClose="{{true}}" style="{{themeCSS}}" wx:if="{{initialShow}}">
+    <view slot="title">
+        <view bind:tap="_p" class="db831" data-t="{{ tap:{en:'onBack'} }}" wx:if="{{activeTab>0}}">
+            <b bind:_init="_tic" name="arrow-left" size="22px"></b>      返回
+    </view>
+        <view class="c5c2bb"> {{titles[activeTab]}} </view>
+    </view>
+    <view class="c9a13f">
+        <view class="a497a" style="transform:{{swiperTransform}}; height:{{contentHeight}}">
+            <view class="ac0cd">
+                <slot></slot>
+                <e activeId="{{activeId}}" bind:_init="_tic" bind:click-item="_p" bind:click-nav="_p" class="e3901 e3901--v2" contentActiveClass="a7b07" contentItemClass="c654c2" data-t="{{ clickNav:{en:'onNavClick'},clickItem:{en:'onTreeSelectClickItem'} }}" height="100%" items="{{items}}" mainActiveClass="c12dbc" mainActiveIndex="{{mainActiveIndex}}" wx:if="{{showTime}}"></e>
+            </view>
+            <view class="ac0cd">
+                <c activeClass="dfaa2" bind:_init="_tic" bind:change="_p" columns="{{columns}}" data-ref="picker" data-t="{{ change:{en:'onPickerChange'} }}" id="picker" visibleItemCount="{{maxRow}}"></c>
+            </view>
+        </view>
+        <d bind:_init="_tic" text="{{tips}}" wx:if="{{tips}}"></d>
+    </view>
+</a>

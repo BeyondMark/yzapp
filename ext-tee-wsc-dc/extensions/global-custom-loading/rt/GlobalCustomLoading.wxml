@@ -1,0 +1,3 @@
+<view class="aa09e" wx:if="{{show}}">
+    <image class="a4a9a bd231" lazyLoad="true" mode="aspectFit" src="{{imgUrl}}" wx:if="{{imgUrl}}"></image>
+</view>

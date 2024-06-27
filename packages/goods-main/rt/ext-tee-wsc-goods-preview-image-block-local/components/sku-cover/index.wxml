@@ -1,0 +1,16 @@
+<view class="c66803 {{isCurrentSoldOut?'d1719':''}}">
+    <view class="fb622">
+        <view class="c7a493 {{showBorder?'de550':''}}">
+            <a bind:_init="_tic" class="c718d5" name="success" wx:if="{{showBorder&&!isCurrentSoldOut}}"></a>
+            <view class="c320c7">{{curSku.name}}</view>
+        </view>
+    </view>
+    <view class="b3d59">
+        <view class="c38d33 c89585">¥</view> {{curSku.price}} </view>
+    <view bind:tap="_p" class="c619bf" data-t="{{ tap:{en:'toPre'} }}" wx:if="{{preSku}}">
+        <view class="c320c7">{{preSku}}</view>
+    </view>
+    <view bind:tap="_p" class="c87c54" data-t="{{ tap:{en:'toNext'} }}" wx:if="{{nextSku}}">
+        <view class="c320c7">{{nextSku}}</view>
+    </view>
+</view>

@@ -1,0 +1,15 @@
+<view bind:tap="_p" class="goods-buttom-groupon-container" data-t="{{ tap:{en:'goJoin'} }}">
+    <a bind:_init="_tic" center="{{true}}" customClass="e3ff7" isLink="{{true}}" value="快速凑团" valueClass="d7671" wx:if="{{showGrouponTip}}">
+        <view class="c34c1a" slot="title">
+            <view class="ae4ee">
+                <image class="c5d14c bd231" lazyLoad="true" src="{{firstGrouponGoing.fansPicture}}"></image>
+                <image class="bb711 bd231" lazyLoad="true" src="{{avatarPlaceHolder}}"></image>
+            </view>
+            <view class="e9a98">
+                <view class="c89585">{{firstGrouponGoing.fansNickname}}的团只差</view>
+                <view class="c8a2c4 c89585">{{' '+firstGrouponGoing.remainJoinNum+' '}}</view>
+                <view class="c89585">人</view>
+            </view>
+        </view>
+    </a>
+</view>

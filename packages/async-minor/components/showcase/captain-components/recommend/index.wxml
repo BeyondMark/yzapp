@@ -1,0 +1,7 @@
+<view class="c-goods-recommend">
+    <a appId="{{appId}}" bind:buy="handleGoodsBuyClick" bind:item-click="handleGoodsItemClick" bind:load-more="handleLoadMore" borderRadiusType="{{borderRadiusType}}" cornerMarkImage="{{cornerMarkImage}}" cornerMarkType="{{cornerMarkType}}" extraData="{{extraData}}" goodsMargin="{{goodsMargin}}" heightStyle="{{heightStyle}}" id="cap-goods-layout" imageFillStyle="{{imageFillStyle}}" imageRatio="{{imageRatio}}" infoData="{{infoData}}" isShowMore="{{isShowMore}}" layout="{{layout}}" list="{{curList}}" moreButtonType="{{moreButtonType}}" moreUrl="{{moreUrl}}" openSwipePagination="{{openSwipePagination}}" pageMargin="{{pageMargin}}" redirectType="{{redirectType}}" showCornerMark="{{showCornerMark}}" showLastSelfDefineItem="{{showLastSelfDefineItem}}" showUmpTags="{{showUmpTags}}" sizeType="{{sizeType}}" umpTagsMaxCount="{{umpTagsMaxCount}}">
+        <view slot="last-item-in-list">
+            <slot name="last-item-in-list"></slot>
+        </view>
+    </a>
+</view>

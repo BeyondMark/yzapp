@@ -1,0 +1,12 @@
+<view class="goods-activity" wx:if="{{opt.show}}">
+    <view class="c65ef0">
+        <view class="c48a8">
+            <image class="f85ff bd231" lazyLoad="true" src="{{bgImg}}" wx:if="{{showBannerBg}}"></image>
+        </view>
+        <a activityPrice="{{opt.activityPrice.showPrice}}" bind:_init="_tic" depositPriceText="{{opt.depositPriceText}}" fontSizeText="{{fontSizeText}}" goodsStockOpt="{{goodsStockOpt}}" isCoupon="{{opt.isCoupon}}" isEstimate="{{opt.isEstimatePrice}}" isRange="{{opt.activityPrice.isRange}}" label="{{opt.currentActivity.priceLabel}}" originPrice="{{opt.activityPrice.originPrice}}" preText="{{opt.activityPrice.preText}}" priceTag="{{opt.activityPrice.priceTag}}" showOriginPrice="{{opt.showOriginPrice}}"></a>
+        <view class="c7c4f2">
+            <c activity="{{opt.currentActivity}}" bind:_init="_tic" goodsActivity="{{opt.goodsActivity}}"></c>
+            <b activity="{{opt.currentActivity}}" alias="{{opt.alias}}" bind:_init="_tic" bind:auctioin-price-update="_p" data-t="{{ auctioinPriceUpdate:{en:'handleAuctionPriceUpdate'} }}" goodsActivity="{{opt.goodsActivity}}" showBannerBg="{{showBannerBg}}" showCountDownTime="{{opt.showCountDownTime}}" showStockCountDown="{{opt.showStockCountDown}}" sku="{{opt.skuData}}" umpPriceInfo="{{umpPriceInfo}}" wx:if="{{opt.currentActivity}}"></b>
+        </view>
+    </view>
+</view>

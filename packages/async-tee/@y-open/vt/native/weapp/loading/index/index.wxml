@@ -1,0 +1,10 @@
+<view class="{{classes.root}}" style="{{customStyle}}">
+    <view class="{{classes.spinner}}" style="color:{{color}}; width:{{width}}; height:{{height}}">
+        <view wx:if="{{type==='spinner'}}">
+            <view class="t-loading__dot" wx:for="{{12}}" wx:key="item"></view>
+        </view>
+    </view>
+    <view class="t-loading__text" style="font-size:{{fontSize}}">
+        <slot></slot>
+    </view>
+</view>

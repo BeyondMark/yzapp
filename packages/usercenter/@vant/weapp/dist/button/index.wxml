@@ -1,0 +1,12 @@
+<button appParameter="{{appParameter}}" ariaLabel="{{ariaLabel}}" bindagreeprivacyauthorization="onAgreePrivacyAuthorization" bindchooseavatar="onChooseAvatar" bindcontact="onContact" binderror="onError" bindgetphonenumber="onGetPhoneNumber" bindgetrealtimephonenumber="onGetRealTimePhoneNumber" bindgetuserinfo="onGetUserInfo" bindlaunchapp="onLaunchApp" bindopensetting="onOpenSetting" bindtap="{{disabled||loading?'':'onClick'}}" businessId="{{businessId}}" class="custom-class {{utils.bem( 'button',[ type,size,{block:block,round:round,plain:plain,square:square,loading:loading,disabled:disabled,hairline:hairline,unclickable:disabled||loading} ] )}} {{hairline?'van-hairline--surround':''}}" data-detail="{{dataset}}" formType="{{formType}}" hoverClass="{{disabled||loading?'':'van-button--active hover-class'}}" id="{{id||buttonId}}" lang="{{lang}}" openType="{{disabled||loading||canIUseGetUserProfile&&openType==='getUserInfo'?'':openType}}" sendMessageImg="{{sendMessageImg}}" sendMessagePath="{{sendMessagePath}}" sendMessageTitle="{{sendMessageTitle}}" sessionFrom="{{sessionFrom}}" showMessageCard="{{showMessageCard}}" style="{{computed.rootStyle( {plain:plain,color:color,customStyle:customStyle} )}}">
+    <block wx:if="{{loading}}">
+        <b color="{{computed.loadingColor( {type:type,color:color,plain:plain} )}}" customClass="loading-class" size="{{loadingSize}}" type="{{loadingType}}"></b>
+        <view class="van-button__loading-text" wx:if="{{loadingText}}">{{loadingText}}</view>
+    </block>
+    <block wx:else>
+        <a class="van-button__icon" classPrefix="{{classPrefix}}" customStyle="line-height: inherit;" name="{{icon}}" size="1.2em" wx:if="{{icon}}"></a>
+        <view class="van-button__text">
+            <slot></slot>
+        </view>
+    </block>
+</button>

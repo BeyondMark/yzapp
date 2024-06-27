@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./components/text",
+    "b": "./components/view",
+    "_": "../../../../../../../components/_/index"
+  }
+}

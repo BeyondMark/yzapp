@@ -1,0 +1,31 @@
+<view class="component-container">
+    <view class="customer-asset-container">
+        <view class="container-column" style="{{innerCardStyle}}; {{leftCardStyle}}" wx:if="{{authMobile&&!loadingData}}">
+            <view class="user-avatar">
+                <a authTypeList="{{['nicknameAndAvatar']}}" bind:_init="_tic" bind:next="_p" class="auth-block" data-t="{{ next:{en:'handleAuthUserInfo'} }}" kdtId="{{kdtId}}" type="separate" wx:if="{{!authUser}}"></a>
+                <view class="avatar-content">
+                    <view catch:tap="_p" class="avatar" data-t="{{ tap:{en:'handleAvatarClick',et:'stop'} }}">
+                        <image class="tee-image" lazyLoad="true" mode="aspectFit" src="{{userAvatar}}"></image>
+                    </view>
+                    <view catch:tap="_p" class="info-container" data-t="{{ tap:{en:'handleUserClick',et:'stop'} }}">
+                        <view class="name">
+                            <view class="t-text">{{userName}}</view>
+                            <e bind:_init="_tic" class="level-icon" currentFreeLevel="{{memberInfo.vipLevel}}" wx:if="{{memberInfo.isMember}}"></e>
+                        </view>
+                        <b bind:_init="_tic" class="growth-value" fontSize="{{10}}" growthValue="{{assetInfoValue.growthValue}}" haveValue="{{authMobile}}" memberInfo="{{memberInfo}}" strokeWidth="{{2}}" themeColor="{{themeColor}}" wx:if="{{showGrowth}}"></b>
+                    </view>
+                </view>
+            </view>
+            <view class="asset-info">
+                <a authTypeList="{{['mobile']}}" bind:_init="_tic" bind:next="_p" class="auth-block" customStyle="height: 100%" data-t="{{ next:{en:'handleLogin'} }}" kdtId="{{kdtId}}" type="separate" wx:if="{{!authMobile}}"></a>
+                <c bind:_init="_tic" bind:jumpToLink="_p" data-t="{{ jumpToLink:{en:'handleNavigate'} }}" infoSetting="{{assetInfoSetting}}" infoValue="{{assetInfoValue}}" mode="{{styleSetting.textAlign}}" numberColor="{{styleSetting.textColor}}" pointName="{{extraData.pointName}}"></c>
+            </view>
+        </view>
+        <view class="unAuth" style="{{innerCardStyle}}; {{leftCardStyle}}" wx:else>
+            <slot name="unAuth"></slot>
+        </view>
+        <view class="container-column">
+            <d bind:_init="_tic" bind:jumpToLink="_p" cardMargin="{{styleSetting.cardMargin}}" cardStyle="{{innerCardStyle}}" data-t="{{ jumpToLink:{en:'handleNavigate'} }}" entries="{{entries}}"></d>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y-open/vt/dist/overlay/index",
+    "b": "./components/stock-reminder-popup",
+    "c": "./components/sale-reminder-popup",
+    "_": "../../../../../../components/_/index"
+  }
+}

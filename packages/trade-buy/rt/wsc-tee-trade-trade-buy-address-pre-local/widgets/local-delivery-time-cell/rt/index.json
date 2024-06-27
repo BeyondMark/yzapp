@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/goods-minor/rt/wsc-tee-trade-trade-buy-common-popup-local/widgets/time-picker/rt/index",
+    "b": "/@y-open/vt/dist/cell/index",
+    "_": "../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

@@ -1,0 +1,5 @@
+<view class="shopnote-single-product-character">
+    <view wx:for="{{highList}}" wx:key="{{index}}">
+        <view class="shopnote-single-product-character__item" data-id="{{index}}" style="color:{{themeColor}};background-color:{{themeBgColor}}">{{item.title}}{{themeGgbColor.join()}}</view>
+    </view>
+</view>

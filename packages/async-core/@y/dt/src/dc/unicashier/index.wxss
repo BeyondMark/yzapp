@@ -1,0 +1,18 @@
+.dc-unicashier {
+  display: -webkit-flex;
+  display: flex;
+  background: #fff;
+  padding: 20px 16px;
+  align-items: center;
+}
+.dc-unicashier .desc {
+  flex: 1;
+  line-height: 1.5;
+  padding-right: 10px;
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 500;
+}
+.dc-unicashier .activity {
+  color: #f44;
+}

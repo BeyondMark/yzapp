@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./components/expansion/index",
+    "b": "./components/putaway/index",
+    "c": "/packages/async-main/@vant/weapp/dist/toast/index",
+    "_": "../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "c": "_" }
+}

@@ -1,0 +1,43 @@
+.dc510 {
+  box-sizing: border-box;
+  padding-right: 12px;
+  position: relative;
+  z-index: 1;
+}
+.dc510__box ~ .c5a316,
+.c5a316 ~ .dc510__box {
+  margin-top: 4px;
+}
+.dc510__box {
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+  height: 20px;
+  color: #fff;
+  background-color: #fa1919;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+.dc510__flat {
+  color: #fa1919;
+  background-color: transparent;
+  border: 1px solid #fa1919;
+}
+.dc510__disabled,
+.dc510__unavailable {
+  color: #fff;
+  background-color: #dcdee0;
+  border-color: #dcdee0;
+}
+.c274d2 {
+  flex: 1;
+  padding: 0;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  background-color: inherit;
+  color: inherit;
+}
+.a9c06 {
+  line-height: 16px;
+}

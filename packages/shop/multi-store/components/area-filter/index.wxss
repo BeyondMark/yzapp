@@ -1,0 +1,75 @@
+.tab {
+  display: inline-block;
+  color: #999;
+  text-align: center;
+  padding-bottom: 20px;
+  margin-right: 15px;
+  width: 53px;
+  font-size: 14px;
+  line-height: 14px;
+}
+.selected-tab {
+  border-bottom: 2px solid #f44;
+}
+.tabs {
+  text-align: left;
+  padding: 25px 15px 0 9px;
+  background-color: #fff;
+}
+.tabs .close-btn {
+  float: right;
+  margin-top: -7px;
+  text-align: center;
+  padding: 5px;
+}
+.tabs .close-btn image {
+  margin-top: 5px;
+  width: 14px;
+  height: 14px;
+}
+.selected-cell {
+  color: #f44;
+}
+.list-container {
+  height: 300px;
+  -webkit-overflow-scrolling: touch;
+}
+.list-block {
+  position: relative;
+}
+.choosed-tab {
+  color: #f44;
+}
+.city-block-header,
+.current-city-block-header {
+  background-color: #f8f8f8;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 26px;
+}
+.current-city-block-header {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+.loading-layer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.loading-layer__hidden {
+  visibility: hidden;
+}
+.loading-layer__loading {
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+}
+.area-filter__icon-rotate {
+  rotate: 90deg;
+}

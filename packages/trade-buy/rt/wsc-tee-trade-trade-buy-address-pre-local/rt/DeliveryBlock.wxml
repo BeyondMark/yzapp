@@ -1,0 +1,27 @@
+<view class="e9175" wx:if="{{visible}}">
+    <view>
+        <block wx:if="{{showAddressTab}}">
+            <f bind:_init="_tic" bind:onSwitchTab="_p" bind:setNav="_p" data-t="{{ onSwitchTab:{en:'onSwitchTab'},setNav:{en:'setNav'} }}" rmId="{{rmId}}" wx:if="{{rmId==='b36-28'}}"></f>
+        </block>
+    </view>
+    <view class="ae437">
+        <block wx:if="{{showContact||moduleLoadMaps.contact}}">
+            <c bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b36-28'}}"></c>
+        </block>
+        <block wx:if="{{expressType==='express'}}">
+            <a bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b36-28'}}"></a>
+        </block>
+        <block wx:if="{{moduleLoadMaps.selffetch||showSelfFetch}}">
+            <b bind:_init="_tic" rmId="{{rmId}}" showAddressTab="{{showAddressTab}}" wx:if="{{rmId==='b36-28'}}"></b>
+        </block>
+        <block wx:if="{{showIdcard||moduleLoadMaps.idcard}}">
+            <d bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b36-28'}}"></d>
+        </block>
+    </view>
+    <view class="after-address">
+        <block wx:if="{{showPeriodBuy||moduleLoadMaps.periodBuy}}">
+            <e bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b36-28'}}"></e>
+        </block>
+    </view>
+    <g bind:_init="_tic" data-ref="addressBlockDialog"></g>
+</view>

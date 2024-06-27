@@ -1,0 +1,71 @@
+var BUY_STATUS = {
+  PAID: 0,
+  FREE_TRY: 1,
+  NORMAL: 2,
+  COLUMN_ONLY: 3,
+  VIP_FREE: 4,
+  VIP_DISCOUNT: 5,
+  GROUPON: 6,
+  FREE: 7,
+};
+module.exports = {
+  subtitle: function subtitle(content, inColumn) {
+    var summary = content.summary || "";
+    var columnTitle = content.columnTitle || "";
+    return inColumn ? columnTitle : summary;
+  },
+  statusList: function statusList(content, isPaid, typeSuffix) {
+    var list = [content.publishAt];
+    var subscriptionsCount = content.subscriptionsCount + "人已" + typeSuffix;
+    if (!isPaid && content.subscriptionsCount) list.push(subscriptionsCount);
+    return list;
+  },
+  priceText: function priceText(content, buyStatus, typeSuffix) {
+    var price = content.price / 100;
+    var priceText = "￥" + price.toFixed(2);
+    return [
+      "已购买",
+      "免费试" + typeSuffix,
+      priceText,
+      "",
+      "会员免费",
+      priceText,
+      priceText,
+      "免费",
+      "",
+    ][
+      ((nt_0 = buyStatus),
+      null == nt_0 ? undefined : "number" === typeof nt_0 ? nt_0 : "" + nt_0)
+    ];
+  },
+  priceTextClass: function priceTextClass(isPaid) {
+    if (isPaid) return "";
+    return "text-red";
+  },
+  priceTagText: function priceTagText(content, buyStatus) {
+    if (buyStatus === BUY_STATUS.VIP_DISCOUNT) return "会员价";
+    if (buyStatus === BUY_STATUS.GROUPON)
+      return content.groupOnNum + "人团购价";
+    return "";
+  },
+  contentUrl: function contentUrl(content) {
+    return "/packages/paidcontent/content/index?alias\x3d" + content.alias;
+  },
+  thumbnailUrl: function thumbnailUrl(content) {
+    var picture = content.picture || {};
+    var cover = picture.cover || "";
+    return cover;
+  },
+  icon: function icon(content) {
+    var mt = content.mediaType || 0;
+    return [
+      "",
+      "https://img01.yzcdn.cn/weapp/paidcontent/doc.png",
+      "https://img01.yzcdn.cn/weapp/paidcontent/music.png",
+      "https://img01.yzcdn.cn/weapp/paidcontent/video.png",
+    ][
+      ((nt_1 = mt),
+      null == nt_1 ? undefined : "number" === typeof nt_1 ? nt_1 : "" + nt_1)
+    ];
+  },
+};

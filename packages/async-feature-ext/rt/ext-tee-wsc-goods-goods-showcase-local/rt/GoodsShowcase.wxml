@@ -1,0 +1,3 @@
+<view class="popup-container {{explainVideoFullScreen?'explain-video-opened':''}}">
+    <a bind:_init="_tic" bind:dmc-jump="_p" bind:log="_p" bind:open-float-goods="_p" buyerId="{{buyerId}}" data-t="{{ log:{en:'doLog'},dmcJump:{en:'dmcJump'},openFloatGoods:{en:'openFloatGoods'} }}" goodsShocase="{{goodsShocase}}" hasGoodsShowcase="{{hasGoodsShowcase}}" kdtId="{{kdtId}}" loggerObj="{{loggerObj}}" offlineId="{{offlineId}}" route="{{routeData.route}}" routeKey="{{routeKey}}" shopMetaInfo="{{shopMetaInfo}}" themeVars="{{themeVars}}" wx:if="{{showGoodsShowcase}}"></a>
+</view>

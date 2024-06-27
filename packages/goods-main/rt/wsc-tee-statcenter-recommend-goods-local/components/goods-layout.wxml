@@ -1,0 +1,41 @@
+<view class="ded2e" data-ref="layout">
+    <view class="ded2e__container c911b1 c32ec5" style="{{pageMarginStyle}}" wx:if="{{isWaterfall}}">
+        <view class="c534bb" wx:for="{{waterfallListParts}}" wx:for-item="part" wx:key="index">
+            <view class="{{'c59b06'}}" wx:for="{{part}}" wx:for-index="itemIndex" wx:key="id">
+                <view bind:tap="_p" class="c56c9f {{layoutClass}} {{sizeTypeClass}} {{radiusTypeClass}}" data-t="{{ tap:{ en:'handleClickNavigate',args:[item] } }}" data-zt_view_data="{{item.loggerParams}}" style="{{goodsMarginStyle}}">
+                    <a _opt="{{item.capCardOpts}}" bind:_init="_tic" mode="auto">
+                        <goods-corner-mark bind:_init="_tic" imageUrl="{{cornerMarkImage}}" index="{{index}}" layout="{{layout}}" slot="corner-mark" type="{{cornerMarkType}}" wx:if="{{showCornerMark}}"></goods-corner-mark>
+                        <view class="b861b" slot="card-custom-tags" wx:if="{{layoutConfig.showRecommendTags&&item.show_tags&&item.show_tags[0]&&!item.extended_data}}">
+                            <view class="c09bf2 c89585">{{item.show_tags[0]}}</view>
+                        </view>
+                    </a>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view bind:touchend="_p" bind:touchmove="_p" bind:touchstart="_p" class="ded2e__container {{containerClass}}" data-t="{{ touchstart:{en:'onTouchStart'},touchmove:{en:'onTouchMove'},touchend:{en:'onTouchEnd'} }}" lowerThreshold="{{10}}" scrollX="{{true}}" style="{{pageMarginStyle}}" wx:else>
+        <view class="{{'c59b06'}}" wx:for="{{list}}" wx:key="index">
+            <view bind:tap="_p" class="c56c9f {{layoutClass}} {{sizeTypeClass}} {{radiusTypeClass}}" data-t="{{ tap:{ en:'handleClickNavigate',args:[item] } }}" data-zt_view_data="{{item.loggerParams}}" href="{{item.url}}" style="{{goodsMarginStyle}}" wx:if="{{item.item_type==='coupon'}}">
+                <c bind:_init="_tic" customStyle="{{couponStyle}}" info="{{item}}"></c>
+            </view>
+            <view bind:tap="_p" class="c56c9f {{layoutClass}} {{sizeTypeClass}} {{radiusTypeClass}}" data-t="{{ tap:{ en:'handleClickNavigate',args:[item] } }}" data-zt_view_data="{{item.loggerParams}}" href="{{item.url}}" style="{{goodsMarginStyle}}" wx:elif="{{item.item_type==='note'}}">
+                <b bind:_init="_tic" info="{{item}}" layoutConfig="{{layoutConfig}}" themeColors="{{themeColors}}"></b>
+            </view>
+            <view bind:tap="_p" class="c56c9f {{layoutClass}} {{sizeTypeClass}} {{radiusTypeClass}}" data-t="{{ tap:{ en:'handleClickNavigate',args:[item] } }}" data-zt_view_data="{{item.loggerParams}}" href="{{item.url}}" style="{{goodsMarginStyle}}" wx:else>
+                <a _opt="{{item.capCardOpts}}" bind:_init="_tic" isSkyline="{{isSkyline}}" mode="auto">
+                    <goods-corner-mark bind:_init="_tic" imageUrl="{{cornerMarkImage}}" index="{{index}}" layout="{{layout}}" slot="corner-mark" type="{{cornerMarkType}}" wx:if="{{showCornerMark}}"></goods-corner-mark>
+                    <view class="b861b" slot="card-custom-tags" wx:if="{{layoutConfig.showRecommendTags&&item.show_tags&&item.show_tags[0]&&!item.extended_data}}">
+                        <view class="c09bf2 c89585">{{item.show_tags[0]}}</view>
+                    </view>
+                </a>
+            </view>
+        </view>
+        <view wx:if="{{isSwipeLayout&&openSwipePagination&&isSwipeLoadFinished}}">
+            <more-button bind:_init="_tic" buttonType="{{6}}" class="{{radiusTypeClass}}" goodsMargin="{{goodsMargin}}" moreText="查看全部" moreUrl="{{moreUrl}}"></more-button>
+        </view>
+        <view wx:if="{{isSwipeLayout&&openSwipePagination&&!isSwipeLoadFinished}}">
+            <more-button bind:_init="_tic" buttonType="{{5}}" class="{{radiusTypeClass}}" goodsMargin="{{goodsMargin}}" loading="{{isSwipeLoading}}"></more-button>
+        </view>
+    </view>
+    <more-button bind:_init="_tic" buttonType="{{moreButtonType}}" class="{{radiusTypeClass}}" goodsMargin="{{goodsMargin}}" moreUrl="{{moreUrl}}" pageMargin="{{pageMargin}}" wx:if="{{showMoreButton}}"></more-button>
+</view>

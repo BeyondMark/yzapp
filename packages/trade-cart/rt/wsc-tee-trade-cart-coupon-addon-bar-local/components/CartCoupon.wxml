@@ -1,0 +1,57 @@
+<view class="c3d8d5" style="{{wrapperStyle}}">
+    <view class="couponbox c85e21">
+        <view class="d8044 e6345" style="{{exchangeGoodsStyle}}">
+            <view class="f09cc {{coupon.ableUse?'c9d1d1':''}}">
+                <view class="d93ec c89585" wx:if="{{isYuanUnit}}"> ¥ </view>
+                <view class="c0fc3c c89585" style="{{dynamicValFontSize}}">
+                    <view wx:if="{{isYuanUnit&&showDecimal}}">{{couponPriceDecimal[0]}}<view class="bdaa3 c89585">.{{couponPriceDecimal[1]}}</view>
+                    </view>
+                    <view class="c89585" wx:else>{{coupon.valueCopywriting}}</view>
+                </view>
+                <view class="c3e34b c89585" wx:if="{{!isYuanUnit}}">{{coupon.unitCopywriting}}</view>
+            </view>
+            <view class="c1dee8"> {{coupon.thresholdCopywriting}} </view>
+        </view>
+        <view class="d8044 c281e0">
+            <view class="d5d3d">{{coupon.title}}</view>
+            <view class="c1dee8">{{coupon.validTimeCopywriting}}</view>
+            <view class="c1dee8" wx:if="{{exchangeGoodsCoupon}}">{{exchangeCouponText}}</view>
+        </view>
+        <view class="d8044 c31637">
+            <view class="c86946" wx:if="{{!coupon.couponId}}">
+                <user-authorize authTypeList="{{['mobile']}}" bind:_init="_tic" bind:fail="_p" bind:next="_p" data-t="{{ next:{ en:'sendCoupon',args:[coupon] },fail:{en:'handleAuthorizeFail'} }}" kdtId="{{kdtId}}">
+                    <view bind:tap="_p" class="d4f5c" data-t="{{ tap:{ en:'sendCoupon',args:[coupon] } }}" style="{{coupon.ableUse?themeStyle.btnStyle:'background-color:'+'#C8C9CC'}}">            立即领取
+          </view>
+                </user-authorize>
+            </view>
+            <view class="c21245" wx:else>
+                <view class="ffa44">
+                    <view class="c16764">
+                        <view class="e449c"> 已领 </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="c3e939">
+        <view class="c60abc">
+            <view style="padding-bottom: 8px; color: #323233">
+                <view wx:if="{{!coupon.ableUse}}">{{coupon.unableUseDesc}}</view>
+                <view wx:else>
+                    <view class="c89585" style="{{item.highlight?'color:'+themeColors.general:''}}" wx:for="{{addOnCopywritingFormats}}" wx:key="item"> {{item.text}} </view>
+                </view>
+            </view>
+            <view class="c6a943" wx:if="{{coupon.ableUse}}">
+                <view bind:tap="_p" class="c2f69b" data-t="{{ tap:{ en:'clickItem',args:[item] } }}" wx:for="{{coupon.allAbleCartGoods}}" wx:key="skuId">
+                    <view class="c7f6fb" style="background-image:{{'url('+item.attachmentUrl+')'}}"></view>
+                    <view class="c473ed">￥{{item.price}}</view>
+                    <view class="cbf67">x{{item.num}}</view>
+                    <b bind:_init="_tic" checkedColor="{{themeColors.general}}" customClass="c68edf" iconSize="16px" value="{{item.selectState}}"></b>
+                </view>
+            </view>
+        </view>
+        <view bind:tap="_p" class="{{'c10b3f'}} {{coupon.allAbleCartGoods.length>4?'c3bf11':''}}" data-t="{{ tap:{ en:'goToAddOnPage',args:[coupon] } }}" wx:if="{{!coupon.satisfy&&coupon.couponId&&coupon.ableUse&&!exchangeGoodsCoupon}}">      去凑单
+      <a bind:_init="_tic" name="arrow" size="16px"></a>
+        </view>
+    </view>
+</view>

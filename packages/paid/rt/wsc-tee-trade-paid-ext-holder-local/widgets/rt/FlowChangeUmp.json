@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../components/FlowChangeUmpCoupon",
+    "b": "./../components/FlowChangeUmpSeckill",
+    "c": "./../components/FlowChangeUmpChoose",
+    "d": "./../components/FlowChangeUmpLottery",
+    "_": "../../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,4 @@
+<view class="list-container">
+    <view class="list-title">{{title}}</view>
+    <slot></slot>
+</view>

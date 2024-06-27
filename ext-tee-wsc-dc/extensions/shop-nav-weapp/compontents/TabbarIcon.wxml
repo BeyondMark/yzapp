@@ -1,0 +1,13 @@
+<view class="ec955 c1273f" style="{{rudderStyle}}; background-color: {{activeColor}}" wx:if="{{isMainIcon}}">
+    <view class="{{'yz-tabbar-icon'}} {{iconStyleName}}" style="font-size: 32px; color: #fff" wx:if="{{!isShowSrc}}"></view>
+    <image class="c24af0 bd231" lazyLoad="true" src="{{iconName}}" style="{{mainImgStyle}}" wx:else></image>
+</view>
+<button class="c5c682" openType="{{isShowContact?'contact':''}}" wx:else>
+    <view class="f79b4 c1273f">
+        <block wx:if="{{coexist}}">
+            <i bind:_init="_tic" class="{{'yt'}} {{iconStyleName}}" style="{{iconStyle}}" wx:if="{{!isShowSrc}}"></i>
+            <image class="c95813 bd231" lazyLoad="true" src="{{iconName}}" wx:else></image>
+        </block>
+        <view style="{{textStyle}}" wx:if="{{showText}}"> {{text}}</view>
+    </view>
+</button>

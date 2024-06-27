@@ -1,0 +1,23 @@
+<view class="nb" style="height: {{useImmersion&&cd.navigationbar_type!=='standard'||originImmersion?0:height}}px;" wx:if="{{canUseNav&&openCustomNav}}">
+    <view class="nb-top-line"></view>
+    <a bind:scroll="handleScroll" offsetTop="{{0}}" stickyHeight="{{height}}" stickyWrapClass="{{needPointClickNav&&!isReservation?'nb__sticky-wrap-point':'nb__sticky-wrap'}} fixed" zIndex="{{10001}}">
+        <view wx:if="{{useImmersion}}">
+            <b bind:immersionTap="onImmersionTap" bind:share="handleShare" height="{{height}}" immersionUpShow="{{immersionUpShow}}" isReservation="{{isReservation}}" navigationbarConfigType="{{cd.navigationbar_config_type}}" navigationbarType="{{cd.navigationbar_type}}" paddingTop="{{paddingTop}}" searchPosition="{{cd.search_position}}" searchSwitch="{{cd.search_switch}}" shortcutList="{{cd.shortcut_list}}" shortcutSwitch="{{cd.shortcut_switch}}" showMenuMain="{{showImmersionMenuMain}}" styleColorCustomBackgroundColor="{{cd.style_color_custom_background_color}}" styleColorCustomFontColor="{{cd.style_color_custom_font_color}}" styleColorCustomType="{{cd.style_color_custom_type}}" styleColorType="{{cd.style_color_type}}" switchPageOptions="{{switchPageOptions}}" title="{{titleText}}" titleContentType="{{cd.title_content_type}}" titleImageUrl="{{cd.title_image_url}}" titlePosition="{{cd.title_position}}" titleSwitch="{{cd.title_switch}}"></b>
+        </view>
+        <view class="nb__main" style="height: {{originImmersion&&opacityVal===0?0:height}}px;" wx:if="{{!useImmersion}}">
+            <view class="nb__bg" style="height: {{originImmersion&&opacityVal===0?0:height}}px;background: {{(currentSupport||specialSupport)&&configData.navColor}};opacity: {{originImmersion?opacityVal:1}}"></view>
+            <view class="nb__icon {{showMenuBack&&!isChannels&&'nb__icon__split'}}" style="{{customIconStyle}}" wx:if="{{showMenuBack||showMenuMain&&!isChannels}}">
+                <view bind:tap="onBackTap" class="nb__icon-button" wx:if="{{showMenuBack}}">
+                    <view class="nb__iconfont nb__i-back"></view>
+                </view>
+                <view bind:tap="onMenuTap" class="nb__icon-button" wx:if="{{showMenuMain&&!isChannels}}">
+                    <view class="nb__iconfont nb__i-{{configData.customPath.length+configData.sysPath.length>1&&currentSupport?'menu':'home'}}"></view>
+                </view>
+            </view>
+            <view class="nb__title-text" style="color: {{(currentSupport||specialSupport)&&configData.textColor}}; opacity: {{originImmersion?opacityVal:1}} ;padding-top: {{paddingTop}}px; {{textStyle}}">
+                <text style="width: {{textWidth}}px; font-size: {{fontSizeSetting}}px;">{{titleText}}</text>
+            </view>
+        </view>
+    </a>
+    <c bind:onMenuCustomPathTap="onMenuCustomPathTap" bind:onMenuSysPathTap="onMenuSysPathTap" bind:onMenuTap="onMenuTap" configData="{{configData}}" contactExtra="{{contactExtra}}" currentSupport="{{currentSupport}}" isMenuOpen="{{isMenuOpen}}" openMenuAfterStyle="{{openMenuAfterStyle}}" openMenuStyle="{{openMenuStyle}}"></c>
+</view>

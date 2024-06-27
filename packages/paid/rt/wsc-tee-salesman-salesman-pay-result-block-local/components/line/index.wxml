@@ -1,0 +1,16 @@
+<view class="line">
+    <a bind:_init="_tic" bind:tap="_p" border="{{false}}" class="c691dc" clickable="{{false}}" data-t="{{ tap:{en:'click'} }}" isLink="{{true}}" titleClass="c36c88">
+        <view class="d2632" slot="title">
+            <view class="c5dd18 c89585">
+                <i bind:_init="_tic" class="c95486 c79d5b" style="{{themeBackgroundStyle}}"></i>
+                <i bind:_init="_tic" class="c95486 theme-color" style="{{themeColorStyle}}">佣</i>
+            </view>
+            <view class="c7973e">
+                <view class="c89585" wx:for="{{normalTextList}}" wx:for-item="normalText" wx:key="normalText">
+                    <view class="c89585">{{normalText}}</view>
+                    <view class="e7640 c89585" wx:if="{{boldTextList[index]}}">{{boldTextList[index]}}</view>
+                </view>
+            </view>
+        </view>
+    </a>
+</view>

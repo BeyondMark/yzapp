@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/goods-main/rt/assets-tee-extensions-guarantee-components-local/components/GuaranteePop",
+    "b": "/@y-open/vt/dist/cell/index",
+    "_": "../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

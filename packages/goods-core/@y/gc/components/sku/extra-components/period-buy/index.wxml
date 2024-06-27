@@ -1,0 +1,8 @@
+<view class="c5c2f1" wx:if="{{!!opt.periodBuy}}">
+    <view class="c6f42f">
+        <view class="c28910"> 配送方式： </view>
+        <view bind:tap="_p" class="{{'c615ba'}} {{deliverTimeId===item.id?'a4b35':''}}" data-t="{{ tap:{ en:'onSelect',args:[item.id] } }}" wx:for="{{skuExtraList}}" wx:key="id">
+            <view class="c3f832">{{item.name}}</view>
+        </view>
+    </view>
+</view>

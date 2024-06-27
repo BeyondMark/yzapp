@@ -1,0 +1,16 @@
+<view class="container">
+    <b bind:_init="_tic" class="eaaad" customStyle="{{popupStyle}}" overlay="{{false}}" position="top" show="{{popupVisble}}">
+        <view catch:touchcnacel="_p" catch:touchend="_p" catch:touchmove="_p" catch:touchstart="_p" class="c86b3d" data-t="{{ touchstart:{en:'onTouchStart',et:'stop'},touchmove:{en:'onTouchMove',et:'stop'},touchend:{en:'onTouchEnd',et:'stop'},touchcnacel:{en:'onTouchEnd',et:'stop'} }}" wx:if="{{showComp}}">
+            <view class="caf9b">
+                <view class="fb54f">
+                    <view class="c8c82" style="{{shopAvtarStyle}}"></view>
+                    <view class="c0574a">{{shopName}}</view>
+                </view>
+                <view class="c97bc5">现在</view>
+            </view>
+            <view class="c815e4">{{lastMsgContent}}</view>
+            <view class="ae077"> 回复 TA </view>
+        </view>
+        <a bind:_init="_tic" contactStyle="position:absolute;left:0;bottom:16px;height:28px;width:100%;" opacityFull="{{true}}" openType="contact" wx:if="{{rmId==='b7-35'}}"></a>
+    </b>
+</view>

@@ -1,0 +1,16 @@
+<view class="c2c96a">
+    <view class="c5483" wx:if="{{goods.noCode.length}}">
+        <view class="c69254">      以下{{goods.noCode.length}}商品无法开票
+    </view>
+        <view>
+            <view class="c4c692" wx:for="{{goods.noCode}}" wx:key="index"> {{index+1}}. {{item.title}} </view>
+        </view>
+    </view>
+    <view class="c5483" wx:if="{{goods.hasCode.length}}">
+        <view class="c69254">      以下{{goods.hasCode.length}}种商品支持开票
+    </view>
+        <view>
+            <view class="c4c692" wx:for="{{goods.hasCode}}" wx:key="index"> {{index+1}}. {{item.title}} </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,3 @@
+<a bind:_init="_tic" bind:agreeprivacyauthorization="_p" bind:getphonenumber="_p" bind:tap="_p" block="{{true}}" buttonId="{{btnId}}" customClass="{{'user-authorize__btn-empty '+customClass}}" customStyle="{{customStyle}}" data-t="{{ tap:{en:'handleClick'},getphonenumber:{en:'handleGetMobile'},agreeprivacyauthorization:{en:'handleAgreePrivacyAuth'} }}" disabled="{{loading}}" isvAppId="{{config.isvAppId}}" openType="{{openType}}" phoneNumberNoQuotaToast="{{false}}" textStyle="{{customStyle}}">
+    <slot></slot>
+</a>

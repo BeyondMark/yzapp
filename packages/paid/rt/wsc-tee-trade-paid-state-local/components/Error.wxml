@@ -1,0 +1,10 @@
+<view class="c7110c">
+    <view class="b3cc3"></view>
+    <view class="c87c78">    系统支付结果确认中，请稍等
+    <view>点击刷新再试一次吧</view>
+    </view>
+    <view class="c1473c">
+        <a bind:_init="_tic" bind:tap="_p" block="{{true}}" data-t="{{ tap:{en:'clickHandler'} }}" loading="{{loading}}" plain="{{true}}" type="danger">      刷新
+    </a>
+    </view>
+</view>

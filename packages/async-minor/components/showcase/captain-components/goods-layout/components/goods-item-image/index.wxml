@@ -1,0 +1,21 @@
+<view class="photo {{photoClass}} {{skeletonShow?'photo-skeleton-bg':''}} photo-class" style="{{photoStyle}}">
+    <image class="photo__image image-class" lazyLoad="true" mode="{{imageFillMode}}" src="{{curImageUrl}}"></image>
+    <view class="coupon-container" id="points-coupon-box" wx:if="{{goodsInfo.isCoupon}}">
+        <view class="coupon-bg" style="{{containerStyle}}">
+            <view class="coupon-title">{{couponData.title}}</view>
+            <view class="price-box {{couponData.bigNum?'small-font':''}} {{couponData.biggerNum?'smaller-font':''}}" wx:if="{{!couponData.isExchange}}">
+                <view>{{couponData.value}}</view>
+                <view class="unit">{{couponData.unit}}</view>
+            </view>
+            <view class="desc-box" wx:else>
+                <text class="desc-text">商品</text>
+                <text class="desc-text">兑换</text>
+            </view>
+            <view class="coupon-desc">{{couponData.conditionText}}</view>
+        </view>
+    </view>
+    <image class="photo__media-icon" mode="aspectFill" src="{{mediaIconUrlAndFreeText[0]}}" wx:elif="{{isPaidContent&&mediaIconUrlAndFreeText[0]}}"></image>
+    <slot name="tag-info"></slot>
+    <slot name="corner-mark"></slot>
+    <slot name="label"></slot>
+</view>

@@ -1,0 +1,44 @@
+@import "/common/css/helper/index.wxss";
+.receiver-list-wrap--receiver {
+  margin-top: 17px;
+}
+.receive-info {
+  padding: 10px 0;
+  padding-left: 12px;
+  text-align: left;
+}
+.receiver-list {
+  padding-left: 12px;
+}
+.receiver-list-wrap {
+  background: #f8f8f8;
+  box-sizing: border-box;
+  margin-top: 27px;
+  border-radius: 2px;
+  padding-bottom: 7px;
+}
+.receiver {
+  line-height: 35px;
+  margin-top: 15px;
+}
+.receiver:first-child {
+  margin-top: 7px;
+}
+.receiver-name {
+  float: left;
+  margin-left: 10px;
+  max-width: 146rpx;
+}
+.receiver-goods {
+  display: inline-block;
+  padding-right: 12px;
+  max-width: 344rpx;
+}
+.receiver-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 35px;
+}
+.receiver-avatar-lottery {
+  margin-right: 16px;
+}

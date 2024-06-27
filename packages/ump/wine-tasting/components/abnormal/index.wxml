@@ -1,0 +1,6 @@
+<view class="content-empty">
+    <view class="content-empty-bg">
+        <image class="content-empty-img" src="https://b.yzcdn.cn/public_files/2022/7/23/kong.png"></image>
+        <text class="content-empty-text">{{tips}}</text>
+    </view>
+</view>

@@ -1,0 +1,35 @@
+.t-dc994 {
+  height: 400px !important;
+  padding-top: 12px;
+}
+.t-tabs__line {
+  width: 40px !important;
+}
+.t-c297c8__bottom {
+  display: none;
+}
+.t-coupon {
+  margin: 0 12px 12px;
+  box-shadow: none;
+}
+.t-tab--active {
+  color: #323233 !important;
+}
+.t-tabs__wrap {
+  box-shadow: 0 2px 12px -12px #969799;
+}
+.c297c8 {
+  padding-bottom: 60px;
+}
+.dc994 {
+  height: calc(70vh - 192px) !important;
+  padding: 12px 0 0 0;
+}
+.c297c8__button-group {
+  height: 50px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.t-action-sheet__header:after {
+  border-bottom-width: 0 !important;
+}

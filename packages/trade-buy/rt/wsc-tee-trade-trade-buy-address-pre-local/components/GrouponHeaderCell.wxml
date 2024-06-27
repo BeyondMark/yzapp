@@ -1,0 +1,9 @@
+<view wx:if="{{showGrouponHeader}}">
+    <view class="c4ea1d">
+        <view bind:tap="_p" class="c4d19b" data-t="{{ tap:{en:'onClick'} }}"> {{grouponTextConfig.headerTitle}} <b bind:_init="_tic" customClass="c6ddd0" name="info-o"></b>
+        </view>
+    </view>
+    <a bind:_init="_tic" bind:close="_p" buttonText="知道了" data-t="{{ close:{en:'onClose'} }}" show="{{showPopup}}" themeColors="{{themeColors}}" title="团长代收">
+        <view>{{grouponTextConfig.popContent}}</view>
+    </a>
+</view>

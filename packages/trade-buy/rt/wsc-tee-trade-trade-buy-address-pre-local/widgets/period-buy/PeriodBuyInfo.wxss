@@ -1,0 +1,10 @@
+.c810c6 {
+  padding: var(--theme-page-cell-padding-top, 10px)
+    var(--theme-page-cell-padding-right, 12px)
+    var(--theme-page-cell-padding-bottom, 10px)
+    var(--theme-page-cell-padding-left, 12px) !important;
+}
+.e16b4 {
+  font-weight: var(--theme-common-field-font-weight, 500) !important;
+  color: #323233 !important;
+}

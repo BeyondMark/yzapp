@@ -1,0 +1,14 @@
+<view class="order-cell {{isFirstCell?'first-cell':''}}">
+    <view bindtap="doCellClick">
+        <a num="{{mode==='donate'&&item.num||''}}" price="{{item.price}}" thumb="{{item.thumb}}" thumbClass="thumb-class" title="{{item.title}}" wx:for="{{displayedItems}}" wx:key="{{ index }}">
+            <view class="van-card__detail-row" slot="desc" wx:if="{{action&&item.status}}">
+                <view class="van-card__detail-status">{{item.status}}</view>
+            </view>
+        </a>
+    </view>
+    <view class="order-cell__status" wx:if="{{status}}">
+        <view class="order-cell__status-text">{{status}}</view>
+        <view catchtap="doCellAction" class="order-cell__status-action">{{action}}</view>
+    </view>
+    <view catchtap="checkMoreItems" class="order-cell__more" wx:if="{{items.length>1&&!showAllItems}}">查看全部{{items.length}}件商品</view>
+</view>

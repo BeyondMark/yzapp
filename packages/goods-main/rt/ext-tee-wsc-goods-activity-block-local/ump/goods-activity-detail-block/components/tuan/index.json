@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y-open/vt/dist/cell/index",
+    "b": "./../DetailPop",
+    "c": "./TuanPop",
+    "_": "../../../../../../../../components/_/index"
+  }
+}

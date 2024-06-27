@@ -1,0 +1,5 @@
+<view class="cap-price c89585">
+    <view class="c03040 c89585">¥</view>
+    <view class="c303a c89585">{{formatPrice[0]}}</view>
+    <view class="c0b318 c89585">.{{formatPrice[1]}}</view>
+</view>

@@ -1,0 +1,8 @@
+<view bind:tap="_p" class="{{true?'live-coupon-flat':''}} {{!!liveIconData.goaway?'goaway':''}} {{show?'show':''}}" data-t="{{ tap:{en:'showPopup'} }}" style="bottom:{{bottom}}">
+    <view class="live-coupon-icon">
+        <view class="{{'price'}} {{'price-top-'+detail.miniValue.length}}">      ¥
+      <view class="{{'price--text'}} {{'price-length-'+detail.miniValue.length}} t-text"> {{detail.miniValue}} </view>
+        </view>
+        <view class="time">{{formattedTime}}</view>
+    </view>
+</view>

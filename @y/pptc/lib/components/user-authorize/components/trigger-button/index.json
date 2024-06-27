@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-tee/@y/pptc/lib/components/user-authorize/components/trigger-button/native-mobile/index",
+    "b": "/packages/async-tee/@y/pptc/lib/components/user-authorize/components/trigger-button/native-user-info/index",
+    "_": "../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_", "b": "_" }
+}

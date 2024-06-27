@@ -1,0 +1,12 @@
+<view class="feature-container" wx:if="{{!isFromTimeline&&!isWebviewFeature}}">
+    <view style="background-color:{{featurePageBgColor}}; min-height:100vh">
+        <b bind:_init="_tic" bind:share="_p" data-t="{{ share:{en:'share'} }}" rmId="{{i[0]}}" wx:if="{{i[1]}}" wx:for="{{[ ['b1-4',rmId==='b1-9'],['b0-4',rmId==='b0-9'] ]}}" wx:for-item="i" wx:key="0"></b>
+        <f bind:_init="_tic" rmId="{{i[0]}}" wx:if="{{i[1]}}" wx:for="{{[ ['b1-19',rmId==='b1-9'],['b0-19',rmId==='b0-9'] ]}}" wx:for-item="i" wx:key="0"></f>
+        <d bind:_init="_tic" rmId="{{i[0]}}" wx:if="{{i[1]}}" wx:for="{{[ ['b1-11',rmId==='b1-9'],['b0-11',rmId==='b0-9'] ]}}" wx:for-item="i" wx:key="0"></d>
+        <c bind:_init="_tic" rmId="{{i[0]}}" wx:if="{{i[1]}}" wx:for="{{[ ['b1-3',rmId==='b1-9'],['b0-3',rmId==='b0-9'] ]}}" wx:for-item="i" wx:key="0"></c>
+    </view>
+    <view class="copyright-container" style="background-color:{{copyrightBgColor}}">
+        <e bind:_init="_tic" rmId="{{i[0]}}" wx:if="{{i[1]}}" wx:for="{{[ ['b1-15',rmId==='b1-9'],['b0-15',rmId==='b0-9'] ]}}" wx:for-item="i" wx:key="0"></e>
+    </view>
+    <a bind:_init="_tic" wx:if="{{showCustomTabBar}}"></a>
+</view>

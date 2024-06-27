@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../../../../rt/wsc-tee-dc-dc-goods-tee-local/components/GoodsTee",
+    "_": "../../../../../../../../components/_/index"
+  }
+}

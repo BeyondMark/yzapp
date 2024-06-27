@@ -1,0 +1,9 @@
+<view class="c4647f" wx:if="{{showRules&&hasRules}}">
+    <a bind:_init="_tic" bind:tap="_p" border="{{false}}" data-t="{{ tap:{en:'showPopUp'} }}" isLink="{{true}}" wx:if="{{activityRules.label}}">
+        <view class="ba9ce c61926" slot="title">
+            <view class="c2b570 c89585">玩法</view> {{activityRules.label}} </view>
+    </a>
+    <b bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'hidePopUp'} }}" show="{{showActivityPop}}" title="{{ruleTitle}}">
+        <view class="c86026" wx:for="{{activityRules.rules}}" wx:for-item="rule" wx:key="rule"> {{rule}} </view>
+    </b>
+</view>

@@ -1,0 +1,82 @@
+.t-text {
+  text-decoration: inherit;
+}
+.t-text,
+.tee-image {
+  display: inline-block;
+}
+.tee-image {
+  width: 100%;
+  height: 100%;
+}
+.customer-asset-container {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+.container-row-one {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 16px 8px;
+}
+.container-row-one .user-avatar {
+  min-width: 0;
+  flex: 1;
+}
+.container-row-one .asset-info {
+  margin-left: 5px;
+}
+.container-row-one .asset-info,
+.container-row-one .user-avatar {
+  position: relative;
+}
+.container-row-one .auth-block {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.avatar-content {
+  display: -webkit-flex;
+  display: flex;
+}
+.avatar-content .avatar {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 2px solid #fff;
+  overflow: hidden;
+  background: #fff;
+}
+.avatar-content .info-container {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+.avatar-content .info-container .name {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+}
+.avatar-content .info-container .member,
+.avatar-content .info-container .name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--realTextColor);
+}
+.avatar-content .info-container .member {
+  font-size: 12px;
+  line-height: 18px;
+  opacity: 0.5;
+}
+.container-row {
+  padding: 0 16px 16px;
+}

@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@vant/weapp/dist/popup/index",
+    "b": "/packages/async-main/@vant/weapp/dist/icon/index",
+    "c": "../../../@vant/weapp/dist/button/index",
+    "d": "../../../components/ump/coupon/index",
+    "e": "/components/account/user-authorize/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_" }
+}

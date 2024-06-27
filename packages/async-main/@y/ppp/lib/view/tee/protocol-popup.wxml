@@ -1,0 +1,28 @@
+<root-portal bind:_init="_tic">
+    <a bind:_init="_tic" bind:after-enter="_p" bind:after-leave="_p" bind:before-enter="_p" bind:before-leave="_p" bind:click-overlay="_p" closeOnClickOverlay="{{false}}" customClass="passport-protocol-popup" customStyle="{{popupCustomStyle}}" data-t="{{ beforeEnter:{en:'onPopupBeforeEnter'},afterEnter:{en:'onPopupEnter'},beforeLeave:{en:'onPopupBeforeLeave'},afterLeave:{en:'onPopupAfterLeave'},clickOverlay:{en:'onClickOverlay'} }}" duration="{{duration}}" position="bottom" rootPortal="{{true}}" round="{{true}}" show="{{show}}" zIndex="{{zIndex}}">
+        <view style="{{contentCustomStyle}}">
+            <view catch:tap="_p" class="passport-protocol" data-t="{{ tap:{en:'true',et:'stop'} }}">
+                <view wx:if="{{useUIComponentSlot}}">
+                    <slot name="ui-component"></slot>
+                </view>
+                <view wx:else>
+                    <view class="title">
+                        <slot name="title"></slot>
+                    </view>
+                    <view class="content">
+                        <slot name="content"></slot>
+                    </view>
+                </view>
+                <view class="{{actionClass}}">
+                    <view class="agree__area">
+                        <view bind:tap="_p" class="native {{loading?'native--disabled':''}}" data-t="{{ tap:{en:'onAgree'} }}" wx:if="{{useNativeSlot}}">
+                            <slot name="agree-btn"></slot>
+                        </view>
+                        <b bind:_init="_tic" bind:agreeprivacyauthorization="_p" bind:tap="_p" block="{{btnConfig.hideDisagree}}" buttonId="{{agreeBtnId}}" color="{{color}}" customClass="{{agreeBtnCls}}" customStyle="{{btnConfig.customStyle}}" data-t="{{ tap:{en:'onAgree'},agreeprivacyauthorization:{en:'onPrivacyAgree'} }}" disabled="{{!ready}}" loading="{{loading}}" openType="{{needPlatformPrivacyAuth?'agreePrivacyAuthorization':''}}" type="primary"> {{btnConfig.agreeBtn||'允许'}} </b>
+                    </view>
+                    <b bind:_init="_tic" bind:tap="_p" buttonId="{{disagreeBtnId}}" color="{{color}}" customClass="{{disagreeBtnCls}}" customStyle="{{btnConfig.customStyle}}" data-t="{{ tap:{en:'onDisagree'} }}" disabled="{{!ready||loading}}" plain="{{true}}" wx:if="{{!btnConfig.hideDisagree}}"> {{btnConfig.disagreeBtn||'拒绝'}} </b>
+                </view>
+            </view>
+        </view>
+    </a>
+</root-portal>

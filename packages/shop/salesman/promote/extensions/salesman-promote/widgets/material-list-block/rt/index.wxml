@@ -1,0 +1,38 @@
+<view class="material-list">
+    <view class="material-list-empty" wx:if="{{!materials.list.length}}">商家暂时没有上传素材</view>
+    <view class="material-list-content" wx:else>
+        <b bind:get-src="handleGetSrc" customClass="feed-item" goodsTitleClass="goods-title" imageList="{{material.imageList}}" item="{{material.item}}" itemCustomClass="item-class" linkMaterial="{{material.linkMaterial}}" loggerType="salesMtrl" materialId="{{material.id}}" materialType="{{material.materialType}}" text="{{material.text}}" video="{{material.videoData}}" wx:for="{{materials.list}}" wx:for-item="material" wx:key="index">
+            <view class="action-area van-hairline--bottom" slot="bottom">
+                <view class="action-area--text">
+                    <c bind:change="handleChangeCheck" checkedColor="{{themeMainBgColor}}" data-material="{{material}}" iconSize="10px" labelClass="material-checkbox-label" value="{{material.syncShareToZone}}" wx:if="{{hasPersonalSpaceAbility}}">同步分享到空间动态</c>
+                </view>
+                <view catchtap="handleSave" class="action-area--right" data-index="{{index}}" data-material="{{material}}">
+                    <view class="bar-btn" style="background-color: {{themeMainBgColor}}">
+                        <d name="//img01.yzcdn.cn/upload_files/2020/08/05/Ft8yemSuSuKNAeoh7WbgdoWVfgUH.png" size="14px"></d>
+                        <text class="span">保存素材</text>
+                    </view>
+                </view>
+            </view>
+        </b>
+        <view bind:tap="handleGetMore" class="more-material" data-query="{{itemId:itemId,kdtId:kdtId}}" wx:if="{{showMoreMaterial}}">
+            <view class="more-material-content">
+                <text class="more-material-desc">查看更多素材</text>
+                <d color="#c8c9cc" name="arrow" size="16px"></d>
+            </view>
+        </view>
+        <view class="material-list-content--loading" wx:if="{{loading&&!finished}}">
+            <e type="spinner"></e>
+        </view>
+    </view>
+    <a bind:close="onClose" confirmButtonText="我知道了" show="{{showSaveTip}}" useSlot="{{true}}" width="240px">
+        <view class="tips-wrap">
+            <view class="tips-content">
+                <view class="tip-item {{tip.status?'comm-text':'error-text'}}" wx:for="{{tipsData}}" wx:for-item="tip">
+                    <d name="passed" wx:if="{{tip.status}}"></d>
+                    <d name="close" wx:else></d>
+                    <text class="tip-text">{{tip.text}}</text>
+                </view>
+            </view>
+        </view>
+    </a>
+</view>

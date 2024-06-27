@@ -1,0 +1,15 @@
+<view wx:if="{{isOpen}}">
+    <view class="live-code">
+        <view class="code-img">
+            <image src="{{sedimentationChannel?personalWechat:groupWechat}}"></image>
+        </view>
+        <view class="code-name-remark">
+            <view class="name">{{liveCodeConfigs.name}}</view>
+            <view class="remark">{{liveCodeConfigs.remark}}</view>
+        </view>
+        <view bind:tap="handleButtonClick" class="code-join-group">
+            <view>{{sedimentationChannel===1?'加好友':'加群'}}</view>
+        </view>
+    </view>
+    <view class="split-border"></view>
+</view>

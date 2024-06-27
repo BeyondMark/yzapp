@@ -1,0 +1,36 @@
+<view class="activity-status-success" wx:if="{{isActionSuccess}}">
+    <view class="success-container">
+        <view class="tentacle-left"></view>
+        <view class="tentacle-right"></view>
+        <rich-text class="{{activityStatus===2?'action-tip':'action-tip-nosuccess'}}" nodes="{{actionTip}}"></rich-text>
+        <view class="total-wrapper">
+            <view class="total-bar">
+                <view class="solid-bar" style="width: {{bargainProgress*100}}%"></view>
+                <view class="end-point {{bargainProgress>0?'patch-negate-1px':''}}"></view>
+            </view>
+        </view>
+        <view class="remain-time">砍价还剩<text class="time-wrapper">
+                <text class="time-block">{{remainTime.hour}}</text>
+                <text>:</text>
+                <text class="time-block">{{remainTime.minute}}</text>
+                <text>:</text>
+                <text class="time-block fat">{{remainTime.second}}</text>
+            </text>结束</view>
+        <view class="buttons-group">
+            <a class="{{button.class}} {{index===1?'margin-patch':''}}" type="help_cut" wx:for="{{actionBtnGroup}}" wx:for-item="button" wx:key="{{ button.content }}">
+                <b authTypeList="{{['nicknameAndAvatar']}}" bind:next="onHelpCut" btnClass="bargain-userinfo" wx:if="{{button.isAuthorizeRequired}}">
+                    <button class="{{button.class}}">{{button.content}}</button>
+                </b>
+                <button bindtap="handleSuccessEvent" class="{{button.class}}" data-event="{{button.event}}" wx:else>
+                    <view class="price-button" wx:if="{{activityStatus===3}}">
+                        <view class="{{index===0&&idx===1?'price-now':''}} {{index===0&&idx===0?'price-button-content':''}}" data-event="{{button.event}}" wx:for="{{button.content}}" wx:for-index="idx">{{item}}</view>
+                    </view>
+                    <view data-event="{{button.event}}" wx:else>{{button.content}}</view>
+                </button>
+            </a>
+        </view>
+    </view>
+</view>
+<view class="activity-status-fail" wx:else>
+    <button bindtap="handleFailEvent" class="button {{index===1?'second-button':''}}" data-navigateto="{{button.navigateTo}}" data-opentype="{{button.openType||'navigate'}}" hoverClass="none" wx:for="{{actionBtnGroup}}" wx:for-item="button" wx:key="{{ button.content }}">{{button.content}}</button>
+</view>

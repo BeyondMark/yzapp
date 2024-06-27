@@ -1,0 +1,9 @@
+<view class="c86c3f t-sku-group-container" wx:if="{{isLadderGroupon}}">
+    <view class="c156b7 t-sku-row__title">拼团类型</view>
+    <view class="c965be">
+        <view bind:tap="_p" class="a334d {{index===curLadder?'bc73b':''}}" data-t="{{ tap:{ en:'onSelect',args:[index] } }}" wx:for="{{ladderList}}" wx:key="index">
+            <view class="a334d-text">￥{{item.skuPriceString}}/{{item.scale}}人团</view>
+            <view class="c69799"></view>
+        </view>
+    </view>
+</view>

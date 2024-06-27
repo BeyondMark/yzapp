@@ -1,0 +1,6 @@
+<view class="cb5e1">
+    <view>
+        <image class="c985cc bd231" lazyLoad="true" src="https://b.yzcdn.cn/cdn/exchange-error-1.png"></image>
+        <view class="c033cf">暂无可换购商品，请稍后再试</view>
+    </view>
+</view>

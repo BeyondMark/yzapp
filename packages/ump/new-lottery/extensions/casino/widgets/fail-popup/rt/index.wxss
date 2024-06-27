@@ -1,0 +1,43 @@
+.fail-popup {
+  background: #fff;
+  border-radius: 16px;
+  box-sizing: border-box;
+  overflow: visible;
+  padding: 12px;
+}
+.fail-popup__container {
+  margin-top: 32px;
+  width: 310px;
+  padding: 0 16px 16px 16px;
+  box-sizing: border-box;
+}
+.fail-popup__container .recommend-goods-wrap {
+  text-align: center;
+}
+.fail-popup__title {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+.fail-popup__desc {
+  margin-top: 32px;
+  font-size: 12px;
+  position: relative;
+  color: #969799;
+  text-align: center;
+}
+.fail-popup__desc:after,
+.fail-popup__desc:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  background: #ebedf0;
+  height: 1px;
+  width: 24%;
+}
+.fail-popup__desc:after {
+  left: 0;
+}
+.fail-popup__desc:before {
+  right: 0;
+}

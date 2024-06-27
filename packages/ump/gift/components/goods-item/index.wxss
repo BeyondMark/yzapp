@@ -1,0 +1,53 @@
+@import "/common/css/helper/index.wxss";
+.goods-item {
+  padding-top: 9px;
+  padding-bottom: 11px;
+  position: relative;
+}
+.goods-item .img-wrap {
+  width: 65px;
+  height: 65px;
+  position: absolute;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 4px;
+  background: #f8f8f8;
+  top: 50%;
+  margin-top: -32.5px;
+}
+.goods-item .img-wrap image {
+  position: absolute;
+  margin: auto;
+  max-height: 100%;
+  max-width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.goods-item .err-msg {
+  color: #e0493f;
+  display: inline-block;
+}
+.goods-item .goods-detail {
+  margin-left: 75px;
+}
+.goods-item .goods-detail .sku-str {
+  margin-top: 3px;
+  height: 20px;
+}
+.goods-item .goods-detail .price {
+  margin-top: 4px;
+}
+.goods-item .price {
+  color: #e0493f;
+  line-height: 20px;
+}
+.goods-item .stepper {
+  position: absolute;
+  bottom: 11px;
+  right: 0;
+}
+.van-hairline--bottom:after {
+  border-color: #f1f1f1;
+}

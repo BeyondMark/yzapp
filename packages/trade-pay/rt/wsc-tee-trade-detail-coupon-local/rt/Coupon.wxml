@@ -1,0 +1,11 @@
+<view class="d6e16" style="{{rootStyle}}" wx:if="{{couponInfo.show}}">
+    <a bind:_init="_tic" border="{{false}}">
+        <b bind:_init="_tic" border="{{false}}" title="优惠" titleClass="c657cd" titleWidth="80px">
+            <view wx:for="{{couponInfo.list}}" wx:for-item="couponItem" wx:key="name">
+                <view class="c44492">
+                    <view>{{couponItem.condition}}</view>
+                </view>
+            </view>
+        </b>
+    </a>
+</view>

@@ -1,0 +1,20 @@
+<view class="{{!onlyShowExchange?'c4921c':''}}">
+    <view class="c0b1b3" wx:if="{{!onlyShowExchange}}">
+        <d bind:_init="_tic" catch:tap="_p" color="{{iconColor}}" customClass="c3a99c" data-t="{{ tap:{en:'chooseAllActivityGoods',et:'stop'} }}" name="{{iconName}}" size="20px"></d>
+        <view bind:tap="_p" class="c6f2f1" data-t="{{ tap:{en:'clickActivityText'} }}">
+            <c bind:_init="_tic" customClass="e37f5" hairline="{{themeTag.plain}}" plain="{{themeTag.plain}}" wx:for="{{activityInfo.activityTags}}" wx:for-item="tag" wx:key="index"> {{tag}} </c>
+            <view class="c0f8e1" data-ref="ai__desc"> {{activityInfo.activityDesc}} </view>
+            <d bind:_init="_tic" bind:tap="_p" color="#969799" data-t="{{ tap:{en:'clickActivityText'} }}" name="info-o" size="14px" wx:if="{{canShowPopup}}"></d>
+        </view>
+        <view bind:tap="_p" class="c06b96 theme-color" data-t="{{ tap:{en:'toActivityUrl'} }}" wx:if="{{activityBtnTxt}}">
+            <view class="c2c4b4">{{activityBtnTxt}}</view>
+            <d bind:_init="_tic" customClass="baa8d" name="arrow"></d>
+        </view>
+    </view>
+    <block wx:if="{{canShowPopup}}">
+        <b activityInfo="{{activityInfo}}" bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'closeUmpPopup'} }}" rmId="{{rmId}}" showPopup="{{showPopup}}" themeColors="{{themeColors}}" themeCss="{{themeCss}}" themeGeneralAlpha10Color="{{themeGeneralAlpha10Color}}" themeGeneralColor="{{themeGeneralColor}}" themeTag="{{themeTag}}" wx:if="{{rmId==='b4-2'}}"></b>
+    </block>
+    <block wx:if="{{activityId}}">
+        <a activityDesc="{{exchangeModalDesc}}" activityId="{{activityId}}" activityType="{{24}}" bind:_init="_tic" bind:add-cart="_p" bind:close="_p" data-t="{{ close:{en:'handleCloseExchangeModal'},addCart:{en:'handleExchangeSucceed'} }}" isShow="{{showExchangeModal}}" kdtId="{{kdtId}}" offlineId="{{offlineId}}" plusBuyGoods="{{plusBuyGoods}}" rmId="{{rmId}}" themeCss="{{themeCss}}" themeGeneralColor="{{themeGeneralColor}}" wx:if="{{rmId==='b4-2'}}"></a>
+    </block>
+</view>

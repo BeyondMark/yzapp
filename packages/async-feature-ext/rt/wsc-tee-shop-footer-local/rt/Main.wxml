@@ -1,0 +1,13 @@
+<view bind:longtap="_p" class="footer" data-t="{{ longtap:{en:'onLongTap'} }}" style="background-color:{{footerBgColor}}" wx:if="{{footerData&&!footerData.hideFooter}}">
+    <view bind:tap="_p" class="store-info" data-t="{{ tap:{en:'linkToStoreInfo'} }}" wx:if="{{isShowStoreInfo&&!footerData.hideQuickEntry}}">
+        <view class="store-info__left"></view>
+        <view class="store-info__text">店铺信息</view>
+        <view class="store-info__right"></view>
+    </view>
+    <view class="footer-copyright" style="{{footerData.customLogoStyle}}" wx:if="{{footerData.hidePoweredBy&&footerData.hideCopyright}}"></view>
+    <view bind:tap="_p" class="footer-copyright" data-t="{{ tap:{en:'onClick'} }}" style="{{footerData.customLogoStyle}}" wx:else>
+        <view class="{{footerData.poweredByClass}}" data-isTips="{{true}}" wx:if="{{!footerData.hidePoweredBy}}"> {{footerData.text}} </view>
+        <view class="{{footerData.poweredByClass?'customer-tips-a':'customer-tips'}}" wx:if="{{footerData.showCustomerTips}}">      消费提醒：货款直接给商家，由商家承担全部售后服务
+    </view>
+    </view>
+</view>

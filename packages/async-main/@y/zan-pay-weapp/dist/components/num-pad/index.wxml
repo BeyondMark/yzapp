@@ -1,0 +1,5 @@
+<view class="root">
+    <view class="container">
+        <view class="pad {{idx+1<=length?'occupied':''}} {{idx===length?'blink':''}}" wx:for="{{pads}}" wx:for-index="idx" wx:for-item="pad" wx:key="*this"></view>
+    </view>
+</view>

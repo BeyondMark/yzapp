@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./filter",
+    "b": "/@y-open/vt/dist/empty/index",
+    "_": "../../../../../../../components/_/index"
+  }
+}

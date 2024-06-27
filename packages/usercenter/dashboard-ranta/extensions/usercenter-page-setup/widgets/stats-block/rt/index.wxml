@@ -1,0 +1,45 @@
+<view class="member-center__stats" wx:if="{{statsList.length>1}}">
+    <b authTypeList="{{['nicknameAndAvatar']}}" bind:next="goto" bindgetuserinfo="handleBindGetUserInfo" data-nav="balance" style="flex: 1;" wx:if="{{statsShowInfo.showBalance}}">
+        <view class="member-center__stats-item">
+            <view class="member-center__stats-item__value">{{userAgreePrivacy?balance:'-'}}</view>
+            <view class="member-center__stats-item__name">{{statsNames.balance}}</view>
+        </view>
+    </b>
+    <b authTypeList="{{['nicknameAndAvatar']}}" bind:next="goto" bindgetuserinfo="handleBindGetUserInfo" data-nav="points" style="flex: 1;" wx:if="{{statsShowInfo.showPoints}}">
+        <view class="member-center__stats-item">
+            <view class="member-center__stats-item__value">{{userAgreePrivacy?points:'-'}}</view>
+            <view class="member-center__stats-item__name">{{statsNames.points}}</view>
+        </view>
+    </b>
+    <b authTypeList="{{['nicknameAndAvatar']}}" bind:next="goto" bindgetuserinfo="handleBindGetUserInfo" data-nav="cards" style="flex: 1;" wx:if="{{statsShowInfo.showBenefitcard}}">
+        <view class="member-center__stats-item">
+            <view class="member-center__stats-item__value">{{userAgreePrivacy?cards:'-'}}<view class="member-center__stats-item__dot" wx:if="{{showCardDot}}"></view>
+            </view>
+            <view class="member-center__stats-item__name">{{statsNames.cards}}</view>
+        </view>
+    </b>
+    <b authTypeList="{{['nicknameAndAvatar']}}" bind:next="goto" bindgetuserinfo="handleBindGetUserInfo" data-nav="coupons" style="flex: 1;" wx:if="{{statsShowInfo.showCoupon}}">
+        <view class="member-center__stats-item">
+            <view class="member-center__stats-item__value">{{userAgreePrivacy?coupons:'-'}}<view class="member-center__stats-item__dot" wx:if="{{showCouponDot}}"></view>
+            </view>
+            <view class="member-center__stats-item__name">{{statsNames.coupons}}</view>
+        </view>
+    </b>
+    <b authTypeList="{{['nicknameAndAvatar']}}" bind:next="goto" bindgetuserinfo="handleBindGetUserInfo" data-nav="change" style="flex: 1;" wx:if="{{statsShowInfo.showChange}}">
+        <view class="member-center__stats-item">
+            <view class="member-center__stats-item__value">
+                <a customClass="member-center__stats-icon__gold" name="gold-coin-o"></a>
+            </view>
+            <view class="member-center__stats-item__name">零钱</view>
+        </view>
+    </b>
+    <c bind:close="toggleSubscribeMask" show="{{showSubscribeMask}}"></c>
+</view>
+<view class="member-center__single" wx:if="{{statsList.length===1}}">
+    <b authTypeList="{{['nicknameAndAvatar']}}" bind:next="goto" bindgetuserinfo="handleBindGetUserInfo" data-nav="{{showOneKey}}">
+        <d border="{{false}}" customClass="member-center__custom-van-cell" isLink="{{true}}" title="{{statsNames[showOneKey]}}" titleClass="member-center__cell--title">
+            <image class="icon" mode="aspectFit" slot="icon" src="{{STATS_ICON_MAP[showOneKey]}}"></image>
+            <text>{{showOneValue}}</text>
+        </d>
+    </b>
+</view>

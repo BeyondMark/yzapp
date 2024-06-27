@@ -1,0 +1,5 @@
+<view class="t-picker__toolbar {{toolbarClass}}">
+    <view bind:tap="_p" class="t-picker__cancel" data-t="{{ tap:{ en:'emit',args:['cancel'] } }}" hoverClass="t-picker__cancel--hover" hoverStayTime="70"> {{cancelButtonText}} </view>
+    <view class="t-picker__title t-ellipsis" wx:if="{{title}}">{{title}}</view>
+    <view bind:tap="_p" class="t-picker__confirm" data-t="{{ tap:{ en:'emit',args:['confirm'] } }}" hoverClass="t-picker__confirm--hover" hoverStayTime="70" style="{{confirmButtonStyle}}"> {{confirmButtonText}} </view>
+</view>

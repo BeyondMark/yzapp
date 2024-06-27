@@ -1,0 +1,89 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.c6e2ba {
+  position: relative;
+  padding: 40px 0 36px;
+  background: #fff;
+  text-align: center;
+  color: #323233;
+}
+.c46068 {
+  background: transparent;
+}
+.f9a35 {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  color: #969799;
+  line-height: 16px;
+}
+.b9c37 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.c78a5e .c0fc3c {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 32px;
+  line-height: 36px;
+}
+.c78a5e .c0fc3c,
+.c78a5e .c0fc3c:before {
+  font-weight: var(--theme-common-price-font-weight, 800);
+  font-family: Avenir, sans-serif;
+}
+.c78a5e .c0fc3c:before {
+  content: "¥";
+  display: block;
+  margin: 0 8px 7px 0;
+  font-size: 16px;
+  line-height: 17px;
+}
+.tips {
+  margin-top: 5px;
+  color: #666;
+}
+.c951da,
+.tips {
+  font-size: 12px;
+}
+.c951da {
+  padding: 10px 0;
+  color: #323233;
+  display: flex;
+  justify-content: center;
+}
+.c5b185 {
+  color: #323233;
+  margin-left: 2px;
+}
+.e6d24 {
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 6px;
+  color: #666;
+}
+.e6d24 .a8a9e {
+  margin-right: 4px;
+}
+.e6d24 .baec6 {
+  display: inline-block;
+  vertical-align: text-top;
+  margin-right: 4px;
+  width: 16px;
+  background-size: cover;
+  height: 16px;
+  background-image: url(https://b.yzcdn.cn/assets-cashier/icon/prior-use-wechat2.png);
+  position: relative;
+  top: 1px;
+}
+.e6d24 .e6dec {
+  margin: 0 2px;
+  position: relative;
+  bottom: 1px;
+  font-size: 12px;
+}

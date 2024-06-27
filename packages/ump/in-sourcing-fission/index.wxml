@@ -1,0 +1,1 @@
+<a bind:load="onWebviewLoad" src="{{src}}"></a>

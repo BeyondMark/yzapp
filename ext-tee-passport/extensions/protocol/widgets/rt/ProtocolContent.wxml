@@ -1,0 +1,4 @@
+<block wx:if="{{protocolIsCloudSlot}}">
+    <b bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='@passport-tee/protocol~Duv5tmrK'}}"></b>
+</block>
+<a bind:_init="_tic" wx:else></a>

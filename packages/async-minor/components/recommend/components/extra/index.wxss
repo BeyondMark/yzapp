@@ -1,0 +1,18 @@
+.extra-item {
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
+}
+.extra-item.card-shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+.extra-item.card2 {
+  border: 1px solid rgba(50, 50, 51, 0.1);
+}
+.extra-item.simple {
+  background-color: inherit;
+}
+.extra-item.circle {
+  border-radius: 8px;
+  z-index: 1;
+}

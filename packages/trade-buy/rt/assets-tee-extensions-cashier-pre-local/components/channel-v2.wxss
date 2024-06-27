@@ -1,0 +1,75 @@
+.t-text {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.cashier-pre__flex {
+  display: flex;
+}
+.cashier-pre__flex--inline {
+  display: inline-flex;
+}
+.cashier-pre__flex--column {
+  flex-direction: column;
+}
+.cashier-pre__flex--justify-center {
+  justify-content: center;
+}
+.cashier-pre__flex--align-center {
+  align-items: center;
+}
+.cashier-pre__flex--align-end {
+  align-items: flex-end;
+}
+.cashier-pre__flex--center {
+  justify-content: center;
+  align-items: center;
+}
+.cashier-pre__flex--justify-end {
+  justify-content: flex-end;
+}
+.cashier-pre__flex--sb {
+  justify-content: space-between;
+}
+.cashier-pre__flex--wrap {
+  flex-wrap: wrap;
+}
+.cashier-pre__custom-channel {
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: #323233;
+}
+.cashier-pre__custom-channel--disabled {
+  color: #c8c9cc;
+}
+.cashier-pre__icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cashier-pre__instalment-card {
+  border-radius: 2px;
+  background-color: #f7f8fa;
+  width: calc(50% - 6px);
+  padding: 10px 8px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+.cashier-pre__instalment-card:nth-child(2n) {
+  margin-left: 12px;
+}
+.cashier-pre__right-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.cashier-pre__tag {
+  margin-left: 6px;
+}
+.cashier-pre__custom-channel .zan-pay__icon--prior_use {
+  position: relative;
+  bottom: 12px;
+}
+.flex-block {
+  display: flex;
+}

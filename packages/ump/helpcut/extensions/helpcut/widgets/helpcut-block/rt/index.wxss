@@ -1,0 +1,29 @@
+.bargain-purchase {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f72a3e;
+}
+.helpcut {
+  min-height: 100vh;
+}
+.activity-img {
+  position: absolute;
+  top: -80px;
+  height: 59px;
+  width: 282px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.goodsBg {
+  background: url(https://b.yzcdn.cn/public_files/d3675aa9be2945b2ed0a2cff8ecaf1af.png)
+    no-repeat;
+  width: 100%;
+  background-size: 100%;
+  background-color: #ee9056;
+}
+.demote-goodsBg {
+  min-height: 100vh;
+  background-color: #ee9056;
+}

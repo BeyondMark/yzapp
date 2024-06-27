@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-core/@y/dt/src/dc/fans/components/new-show-qrcode/index",
+    "b": "/packages/async-core/@y/dt/src/dc/fans/components/new-hidden-qrcode/index",
+    "c": "./components/old-hidden-qrcode/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_", "b": "_" }
+}

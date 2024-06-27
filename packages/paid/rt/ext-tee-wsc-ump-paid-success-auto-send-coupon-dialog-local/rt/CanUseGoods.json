@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../Price",
+    "b": "/packages/async-tee/@y-open/vt/dist/swipe/index",
+    "c": "/packages/async-tee/@y-open/vt/dist/swipe-item/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_", "c": "_" }
+}

@@ -1,0 +1,4 @@
+<view>
+    <a bind:_init="_tic" bind:closePopup="_p" bind:countDownChange="_p" bind:showSku="_p" data-t="{{ closePopup:{en:'closePopup'},countDownChange:{en:'onCountDownChange'},showSku:{en:'showSku'} }}" detail="{{detail}}" formattedTime="{{formattedTime}}" show="{{isWechatLive&&show}}" time="{{time}}" wx:if="{{isWechatLive}}"></a>
+    <b bind:_init="_tic" bind:showPopup="_p" data-t="{{ showPopup:{en:'showPopup'} }}" detail="{{detail}}" formattedTime="{{formattedTime}}" liveIconData="{{liveIconData}}" show="{{isWechatLive&&!show}}" wx:if="{{isWechatLive}}"></b>
+</view>

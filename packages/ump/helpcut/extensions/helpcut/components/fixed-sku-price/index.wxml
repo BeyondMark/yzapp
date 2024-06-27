@@ -1,0 +1,1 @@
+<text class="van-font-14 van-c-red">¥ {{extraData.currentPrice}}</text>

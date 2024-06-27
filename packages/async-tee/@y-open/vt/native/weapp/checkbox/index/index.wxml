@@ -1,0 +1,9 @@
+<view class="t-checkbox {{customClass}}">
+    <view bind:tap="_p" class="t-checkbox__icon-wrap" data-t="{{ tap:{en:'toggle'} }}" style="{{wrapStyle}}">
+        <slot name="icon" wx:if="{{useIconSlot}}"></slot>
+        <a bind:_init="_tic" class="{{iconShadowClass}}" customClass="{{classes.icon}}" customStyle="{{iconStyle}}" lazy="{{true}}" name="success" size="0.8em" style="display: flex; align-items: center; width: 100%; height: 100%" wx:else></a>
+    </view>
+    <view bind:tap="_p" class="{{classes.label}}" data-t="{{ tap:{en:'onClickLabel'} }}">
+        <slot></slot>
+    </view>
+</view>

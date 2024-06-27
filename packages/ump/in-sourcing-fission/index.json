@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "活动首页",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "a": "/components/znb-web-view/index",
+    "_": "../../../components/_/index"
+  }
+}

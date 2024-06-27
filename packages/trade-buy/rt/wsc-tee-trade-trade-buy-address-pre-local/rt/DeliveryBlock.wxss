@@ -1,0 +1,22 @@
+.long-cell {
+  padding: var(--theme-page-cell-padding-top, 10px)
+    var(--theme-page-cell-padding-right, 12px)
+    var(--theme-page-cell-padding-bottom, 10px)
+    var(--theme-page-cell-padding-left, 12px) !important;
+}
+.e9175 {
+  overflow: hidden;
+  margin: var(--theme-page-card-margin-top, 0)
+    var(--theme-page-card-margin-right, 12px)
+    var(--theme-page-card-margin-bottom, 0)
+    var(--theme-page-card-margin-left, 12px);
+}
+.ae437 {
+  margin: var(--theme-page-card-margin-top, 8px)
+    var(--theme-page-card-margin-right, 0)
+    var(--theme-page-card-margin-bottom, 8px)
+    var(--theme-page-card-margin-left, 0);
+  border-radius: var(--theme-radius-card, 8px);
+  overflow: hidden;
+  position: relative;
+}

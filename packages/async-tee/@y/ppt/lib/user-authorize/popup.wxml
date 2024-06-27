@@ -1,0 +1,3 @@
+<a bind:_init="_tic" protocolIsCloudSlot="{{protocolIsCloudSlot}}" protocolSource="{{protocolSource}}">
+    <slot name="ui-component" slot="ui-component"></slot>
+</a>

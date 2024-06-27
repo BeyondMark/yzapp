@@ -1,0 +1,94 @@
+.cashier-pre__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  line-height: 22px;
+}
+.cashier-pre__header-icon {
+  position: absolute !important;
+  z-index: 1;
+  color: #c8c9cc;
+  font-size: 22px;
+  cursor: pointer;
+  top: 16px;
+}
+.cashier-pre__header-icon--left {
+  left: 16px;
+}
+.cashier-pre__header-icon--right {
+  right: 16px;
+}
+.cashier-pre__title {
+  font-size: 16px;
+  font-weight: 500;
+}
+.pay-login--root {
+  width: 270px;
+  position: relative;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+.pay-login--root .t-hairline--surround:after {
+  content: " ";
+  position: absolute;
+  pointer-events: none;
+  box-sizing: border-box;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  transform: scale(0.5);
+  border: 0 solid #969799;
+}
+.pay-login__content {
+  padding: 0 15px 15px;
+}
+.pay-login__main {
+  margin: 15px 0;
+}
+.pay-login__hint {
+  font-size: 12px;
+  color: #969799;
+}
+.pay-login__input-wrapper {
+  margin-top: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  color: #323233;
+  font-size: 14px;
+  line-height: 24px;
+  background-color: #fff;
+  padding: 10px 15px;
+}
+.pay-login__input-wrapper:after {
+  border-width: 1px;
+  border-radius: 4px;
+}
+.pay-login__input {
+  color: #323233;
+  text-align: left;
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+  flex: 1;
+}
+.pay-login__btn {
+  line-height: 42px;
+}
+.pay-login__footer {
+  margin-top: 10px;
+  line-height: 20px;
+}
+.pay-login__forget {
+  font-size: 12px;
+  color: #1989fa;
+  display: inline-block;
+}
+.pay-login__wrapper {
+  z-index: 120;
+}

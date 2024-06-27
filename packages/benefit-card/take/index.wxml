@@ -1,0 +1,44 @@
+<a class="page-container" fixedBottom="{{true}}" pageBgColor="#ebedf0" wx:if="{{!loading}}">
+    <view class="take-card">
+        <view class="card-wrapper">
+            <view class="userinfo">
+                <image alt="头像" class="avatar" src="{{share.avatar||'https://img01.yzcdn.cn/public_files/01912119437160ddf12c554e8281b402.png'}}"></image>
+            </view>
+            <view class="card-title">{{share.nickName}}送你一张{{shopName}}的体验卡</view>
+            <view class="card">
+                <view class="card-box" style="background-image: {{coverUrl}}">
+                    <view class="card-name">
+                        <text class="card-name-text">{{cardInfo.cardTemplateDTO&&cardInfo.cardTemplateDTO.name}}</text>
+                        <image class="badge-icon" src="https://img01.yzcdn.cn/public_files/e3c23fe51288f4e1d1128d63b4be0df1.png"></image>
+                    </view>
+                    <view class="card-expire">有效期:{{cardExpire}}</view>
+                </view>
+            </view>
+            <view class="card-benefits">
+                <view class="benefit-title" wx:if="{{benefits.length}}">{{benefits.length}}项专享权益</view>
+                <view class="{{'benefit-list '+customClass}}">
+                    <view class="benefit-item" wx:for="{{benefits}}" wx:key="key">
+                        <image class="icon-img" src="{{item.icon}}"></image>
+                        <view class="icon-name">{{item.appName}}</view>
+                    </view>
+                </view>
+            </view>
+            <view class="btn-wrapper">
+                <view wx:if="{{isCurrentShopAvailable}}">
+                    <c authTypeList="{{['mobile']}}" bind:next="takeCardAfterLogin" wx:if="{{!unQualified}}">
+                        <b border="general" color="general">
+                            <view block="{{true}}" class="btn theme-view-button" disabled="{{unQualified}}" type="danger">立即领取</view>
+                        </b>
+                    </c>
+                    <b border="general" color="general" wx:else>
+                        <view bindtap="handleTakeCard" block="{{true}}" class="btn theme-view-button {{unQualified?'disabled-btn':''}}" type="danger">立即领取</view>
+                    </b>
+                </view>
+                <view wx:else>
+                    <button class="btn disabled-btn">该卡不适用于本店，不支持领取/购买</button>
+                </view>
+            </view>
+        </view>
+    </view>
+</a>
+<d id="van-dialog"></d>

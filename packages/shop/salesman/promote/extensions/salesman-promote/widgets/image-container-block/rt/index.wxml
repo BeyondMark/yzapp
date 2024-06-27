@@ -1,0 +1,15 @@
+<view class="image-block" id="js-nav-goods" style="height: {{goodsPictureHeight}}px">
+    <swiper autoplay="{{showGoodsVideo?0:3000}}" bind:change="changeSwiperPage" circular="{{true}}" class="swp" indicatorColor="white" loop="{{loop}}" showIndicators="{{showIndicator&&goodsPictures.length>0}}">
+        <swiper-item bind:tap="previewImage" class="swp__item" data-index="{{index}}" wx:for="{{goodsPictures}}" wx:key="index">
+            <block wx:if="{{index===0&&showGoodsVideo}}">
+                <block wx:if="{{hideVideo}}">
+                    <image class="swp__img" mode="aspectFit" src="{{item}}"></image>
+                    <view catch:tap="handleVideoPlayClicked" class="goods-video-play"></view>
+                </block>
+                <a bind:hide-video="hideVideo" bind:video-ready="onVideoReady" class="goods-video {{hideVideo?'hidden':''}}" video="{{video}}" wx:if="{{showGoodsVideo}}"></a>
+            </block>
+            <image class="swp__img" mode="aspectFit" src="{{item}}" wx:else></image>
+        </swiper-item>
+    </swiper>
+    <view class="swp__indicator" hidden="{{!hideVideo&&currentSwpPage===0}}" slot="indicator">{{currentSwpPage+1}}/{{goodsPictures.length}}</view>
+</view>

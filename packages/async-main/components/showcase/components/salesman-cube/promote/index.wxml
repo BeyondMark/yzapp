@@ -1,0 +1,23 @@
+<view class="box">
+    <view class="promote__text">{{promoteText}}{{shortLinkPromoteUrl||shortPromoteUrl}}</view>
+    <view class="promote">
+        <scroll-view bindscroll="onScrollComputedWidth" class="promote__scroll" id="list" scrollX="{{true}}">
+            <view class="promote__wrapper">
+                <view bindtap="preview" class="promote__list" data-index="{{index}}" wx:for="{{showImgList}}" wx:key="index">
+                    <image class="promote__list-img" data-index="{{index}}" src="{{item}}"></image>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="range" wx:if="{{imgList.length>3}}">
+        <view class="range__after" style="{{rangeStyle}}"></view>
+    </view>
+    <view class="{{barClass}}">
+        <a bindtap="changePublishState" color="{{publishIconColor}}" name="checked" size="14px" wx:if="{{showPublish&&showPersonalSpace}}"></a>
+        <text class="span" wx:if="{{showPublish&&showPersonalSpace}}">同步分享到空间动态</text>
+        <view bindtap="publish" class="bar-btn" style="background-color: {{color}}">
+            <a name="//b.yzcdn.cn/salesman/cube/saveicon.png" size="14px"></a>
+            <text class="span">保存图文</text>
+        </view>
+    </view>
+</view>

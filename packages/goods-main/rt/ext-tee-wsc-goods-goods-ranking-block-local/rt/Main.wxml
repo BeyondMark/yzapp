@@ -1,0 +1,11 @@
+<view class="c41c7c" wx:if="{{showGoodsRanking}}">
+    <b bind:_init="_tic" bind:tap="_p" border="{{false}}" customClass="dddec" data-t="{{ tap:{en:'jumpPage'} }}" isLink="{{true}}">
+        <view slot="title">
+            <view class="c0df4f">
+                <view class="bb831 c89585">排行</view>
+                <a bind:_init="_tic" class="c6a126" name="{{cloudConfig.rankingIconUrl?cloudConfig.rankingIconUrl:rankingIconUrl}}"></a>        店铺商品热榜第
+        <view class="c9fbbc c89585">{{ranking}}</view>        名
+      </view>
+        </view>
+    </b>
+</view>

@@ -1,0 +1,7 @@
+<view class="c8cac8" wx:if="{{groupOnActivityTitle}}">
+    <a activityInfo="{{activityInfo}}" bind:_init="_tic" grouponActivity="{{grouponActivity}}" kdtId="{{kdtId}}" wx:if="{{showGoingList}}"></a>
+    <b activityInfo="{{activityInfo}}" bind:_init="_tic" bind:tap="_p" data-t="{{ tap:{en:'showPopUp'} }}" grouponActivity="{{grouponActivity}}" intro="{{grouponActivityIntro}}" kdtId="{{kdtId}}" title="{{groupOnActivityTitle}}"></b>
+    <d bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'hidePopUp'} }}" show="{{showActivityPop}}" title="{{ruleTitle}}">
+        <c bind:_init="_tic" grouponActivity="{{grouponActivity}}"></c>
+    </d>
+</view>

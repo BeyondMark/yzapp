@@ -1,0 +1,30 @@
+.simple-record-list {
+  margin-top: 16px;
+}
+.record-list {
+  margin-bottom: 12px;
+}
+.record-list .van-cell {
+  padding: 12px 0;
+}
+.record-list .van-cell span {
+  font-size: 14px;
+  color: #7d7e80;
+}
+.record-list .van-cell .van-cell__label {
+  font-size: 12px;
+}
+.use-info {
+  height: 47px;
+  display: flex;
+  justify-content: flex-end;
+}
+.use-info .use-info-background {
+  width: 62px;
+  height: 47px;
+  position: absolute;
+}
+.use-info span {
+  margin: auto 0;
+  display: inline-block;
+}

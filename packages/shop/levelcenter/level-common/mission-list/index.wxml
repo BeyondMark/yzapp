@@ -1,0 +1,3 @@
+<view class="mission-list">
+    <a bind:missionClick="handleClickAction" bind:missionStateChange="handleStateChange" bizDataMap="{{bizDataMap}}" disabledDefaultAction="{{disabledDefaultAction}}" hasBindPhone="{{hasMobile}}" index="{{index}}" key="{{index}}" mission="{{item}}" wx:for="{{missions}}" wx:key="index"></a>
+</view>

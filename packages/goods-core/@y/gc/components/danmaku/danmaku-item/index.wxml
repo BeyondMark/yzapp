@@ -1,0 +1,4 @@
+<view>
+    <b bind:_init="_tic" bind:update="_p" bulletKey="{{bulletKey}}" customClass="{{themeClass}}" data-t="{{ update:{en:'updateBullet'} }}" isPlaying="{{isPlaying}}" left="{{left}}" maxTextLength="{{maxTextLength}}" sourceData="{{sourceData}}" top="{{top}}" wx:if="{{type===ViewAction}}"></b>
+    <a bind:_init="_tic" bind:update="_p" bulletKey="{{bulletKey}}" customClass="{{themeClass}}" data-t="{{ update:{en:'updateBullet'} }}" isPlaying="{{isPlaying}}" left="{{left}}" maxTextLength="{{maxTextLength}}" sourceData="{{sourceData}}" top="{{top}}" wx:else></a>
+</view>

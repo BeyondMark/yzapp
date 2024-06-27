@@ -1,0 +1,5 @@
+{
+  "navigationBarTitleText": "动态",
+  "enablePullDownRefresh": true,
+  "componentPlaceholder": { "h": "_", "j": "_", "k": "_", "l": "_", "m": "_" }
+}

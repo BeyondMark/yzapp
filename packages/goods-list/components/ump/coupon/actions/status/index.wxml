@@ -1,0 +1,1 @@
+<view class="e57bc custom-class" style="{{style}}" wx:if="{{statusData.text}}">{{statusData.text}}</view>

@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../video/index",
+    "b": "./components/goods-item/index",
+    "c": "./components/comment-item/index",
+    "d": "./components/comment-bar/index",
+    "_": "../../../../../../components/_/index"
+  }
+}

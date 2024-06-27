@@ -1,0 +1,15 @@
+<a bind:_init="_tic" bind:close="_p" customClass="c4921c" customStyle="{{customPopupStyle}}" data-t="{{ close:{en:'handlePopupClose'} }}" getContainer="body" position="bottom" safeAreaInsetBottom="{{true}}" show="{{showPopup}}" style="{{themeCss}}">
+    <view class="c1aa70">活动详细规则</view>
+    <view class="ccedc">
+        <view class="c09e4c">活动说明</view>
+        <view class="c77c6d">{{showExplain}}</view>
+        <view class="c09e4c">活动时间</view>
+        <view class="e0270"> {{activityInfo.activityDuration}} </view>
+        <view class="c09e4c">活动内容</view>
+        <view class="c0f8e1">
+            <b bind:_init="_tic" customClass="e37f5" hairline="{{themeTag.plain}}" plain="{{themeTag.plain}}" wx:for="{{activityInfo.activityTags}}" wx:for-item="tag" wx:key="index"> {{tag}} </b>
+            <view class="c67412">{{activityInfo.activityDesc}}</view>
+        </view>
+    </view>
+    <view bind:tap="_p" class="c83343" data-t="{{ tap:{en:'handlePopupClose'} }}">知道了</view>
+</a>

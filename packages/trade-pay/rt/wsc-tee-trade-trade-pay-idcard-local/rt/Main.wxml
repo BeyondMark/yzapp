@@ -1,0 +1,5 @@
+<view wx:if="{{tradeTag.hasOverseaGoods&&hasGoods}}">
+    <b bind:_init="_tic" bind:tap="_p" border="{{false}}" class="c92ae0" customClass="d5a4c" customStyle="padding: 10px 16px" data-t="{{ tap:{en:'onShow'} }}" inputAlign="right" isLink="{{true}}" label="身份信息" labelClass="c3250f" readonly="{{true}}" value="{{idNumber}}"></b>
+    <a bind:_init="_tic" bind:close="_p" bind:idVerifyFailed="_p" data-t="{{ idVerifyFailed:{en:'onShow'},close:{en:'onClose'} }}" idcardClass="{{trade-pay-idcard}}" rmId="{{rmId}}" show="{{showPopup}}" wx:if="{{rmId==='b38-23'}}"></a>
+    <c bind:_init="_tic" data-ref="idcardTipDialog"></c>
+</view>

@@ -1,0 +1,4 @@
+<view bindtap="onTap" class="hot-words-tags {{extraCls}}" style="{{themeStyle}}">
+    <text>{{item.text}}</text>
+    <image class="hot-words-tags-hot" src="https://img01.yzcdn.cn/upload_files/2022/01/06/FmoeLhFurmOAUT97urR-pmoMRl9k.png" wx:if="{{showHot}}"></image>
+</view>

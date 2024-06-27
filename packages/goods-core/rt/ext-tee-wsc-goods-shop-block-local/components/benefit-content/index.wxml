@@ -1,0 +1,14 @@
+<view bind:tap="_p" class="d02f1" data-t="{{ tap:{en:'togglePop'} }}">
+    <a bind:_init="_tic" bind:close="_p" customClass="c8fcd0" data-t="{{ close:{en:'togglePop'} }}" lockScroll="{{true}}" position="bottom" round="{{true}}" safeAreaInsetBottom="{{true}}" show="{{showPop}}">
+        <view class="c765cd">
+            <view class="c11672">
+                <view class="f30b2">
+                    <view class="f30b2__p1"> {{benefitDesc.p1}} </view>
+                    <view class="bf071"> {{benefitDesc.p2}} </view>
+                </view>
+                <view class="c49238"></view>
+            </view>
+        </view>
+        <view catch:tap="_p" class="c1521e" data-t="{{ tap:{en:'togglePop',et:'stop'} }}"> {{benefitDesc.p3}} </view>
+    </a>
+</view>

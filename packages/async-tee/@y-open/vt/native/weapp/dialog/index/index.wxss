@@ -1,0 +1,121 @@
+.t-text {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.t-hairline,
+.t-hairline--bottom,
+.t-hairline--left,
+.t-hairline--right,
+.t-hairline--surround,
+.t-hairline--top,
+.t-hairline--top-bottom {
+  position: relative;
+}
+.t-hairline--bottom:after,
+.t-hairline--left:after,
+.t-hairline--right:after,
+.t-hairline--surround:after,
+.t-hairline--top-bottom:after,
+.t-hairline--top:after,
+.t-hairline:after {
+  position: absolute;
+  box-sizing: border-box;
+  content: " ";
+  pointer-events: none;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  border: 0 solid #ebedf0;
+  transform: scale(0.5);
+}
+.t-hairline--top:after {
+  border-top-width: 1px;
+}
+.t-hairline--left:after {
+  border-left-width: 1px;
+}
+.t-hairline--right:after {
+  border-right-width: 1px;
+}
+.t-hairline--bottom:after {
+  border-bottom-width: 1px;
+}
+.t-hairline--top-bottom:after {
+  border-width: 1px 0;
+}
+.t-hairline--surround:after {
+  border-width: 1px;
+}
+.t-dialog {
+  top: 45% !important;
+  overflow: hidden;
+  width: 320px;
+  font-size: 16px;
+  border-radius: 16px;
+  background-color: #fff;
+}
+@media (max-width: 321px) {
+  .t-dialog {
+    width: 90%;
+  }
+}
+.t-dialog__header {
+  text-align: center;
+  padding-top: 24px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.t-dialog__header--isolated {
+  padding: 24px 0;
+}
+.t-dialog__message {
+  overflow-y: auto;
+  text-align: center;
+  -webkit-overflow-scrolling: touch;
+  font-size: 14px;
+  line-height: 20px;
+  max-height: 60vh;
+  padding: 24px;
+}
+.t-dialog__message-text {
+  word-wrap: break-word;
+}
+.t-dialog__message--hasTitle {
+  padding-top: 8px;
+  color: #646566;
+}
+.t-dialog__message--round-button {
+  padding-bottom: 16px;
+  color: #323233;
+}
+.t-dialog__message--left {
+  text-align: left;
+}
+.t-dialog__message--right {
+  text-align: right;
+}
+.t-dialog__footer {
+  display: -webkit-flex;
+  display: flex;
+}
+.t-dialog__footer--round-button {
+  position: relative !important;
+  padding: 8px 24px 16px !important;
+}
+.t-dialog__button {
+  flex: 1;
+}
+.t-dialog__button-border,
+.t-dialog__cancel,
+.t-dialog__confirm {
+  border: 0 !important;
+}
+.t-dialog-bounce-enter {
+  transform: translate3d(-50%, -50%, 0) scale(0.7);
+  opacity: 0;
+}
+.t-dialog-bounce-leave-active {
+  transform: translate3d(-50%, -50%, 0) scale(0.9);
+  opacity: 0;
+}

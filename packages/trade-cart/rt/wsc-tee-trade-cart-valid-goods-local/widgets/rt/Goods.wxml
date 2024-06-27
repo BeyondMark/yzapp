@@ -1,0 +1,67 @@
+<view catch:tap="_p" class="c3bdf0" data-t="{{ tap:{en:'handleGoodsImgTap',et:'stop'} }}" style="{{themeStyle}}">
+    <view class="c64844">
+        <image bind:load="_p" class="bf4c6 bd231" data-t="{{ load:{ en:'$emit',args:['goods-img-load'] } }}" lazyLoad="true" mode="{{goods.imgMode}}" src="{{goods.imgUrl}}"></image>
+    </view>
+    <view class="c32664">
+        <view class="{{goods.title?'c9dcaa':'c99b4b'}} {{isSub?'t-multi-ellipsis--l1':'t-multi-ellipsis--l2'}}" wx:if="{{!editMode}}">
+            <image class="{{'c675d7'}} {{goodsSettlementMark}} bd231" lazyLoad="true" src="{{goodsTitleTag}}" wx:if="{{goods.settlementRule&&goodsTitleTag}}"></image>
+            <view class="c84889 c89585">{{goods.title}}</view>
+        </view>
+        <view class="{{'c9dcaa'}} {{isSub?'handleStepOverLimitmulti-ellipsis--l1':'t-multi-ellipsis--l2'}}" wx:else>
+            <view class="c84889 c89585">{{goods.title}}</view>
+        </view>
+        <block wx:if="{{!goods.revive}}">
+            <view class="{{'c1779d'}} {{!!goods.tariffPriceText?c05766:''}}" wx:if="{{goods.sku}}">
+                <view catch:tap="_p" class="{{'c83c4c'}} {{!isCanChangeSku?'b17de':''}}" data-t="{{ tap:{en:'handleChangeGoodsSku',et:'stop'} }}">
+                    <view class="c7d687 c89585">{{goods.sku}}</view>
+                    <b bind:_init="_tic" customClass="c37f5d" name="arrow-down" wx:if="{{isCanChangeSku}}"></b>
+                </view>
+            </view>
+            <view class="goods-into-bottom">
+                <view class="d1110">
+                    <image class="c7e62d bd231" lazyLoad="true" src="{{GOODS_IMG_TAG_MAP.SECURED}}" wx:if="{{goods.yzGuarantee&&goods.hideGuarantee===false}}"></image>
+                    <view class="c620a0" wx:if="{{goods.yzGuarantee&&goods.hideGuarantee===false&&goods.isSevenDayUnconditionalReturn}}">·</view>
+                    <view class="c1f988" wx:if="{{goods.isSevenDayUnconditionalReturn}}">7天无理由退货</view>
+                </view>
+                <view class="c95430" wx:if="{{goodsTagList.length&&!isEduIosOnlineGoods}}">
+                    <c bind:_init="_tic" customClass="e6e0c" hairline="{{themeTag.plain}}" plain="{{themeTag.plain}}" wx:for="{{goodsTagList}}" wx:key="index">{{item}}</c>
+                </view>
+                <view class="c8469f" wx:if="{{!isEduIosOnlineGoods&&(stockLimitText||startSaleNumAndLimitDesc||cutPriceDesc)}}">
+                    <view class="c69a4f" wx:if="{{!!stockLimitText}}">{{stockLimitText}}</view>
+                    <view class="c69a4f" wx:if="{{startSaleNumAndLimitDesc}}">
+                        <view class="c26245" wx:if="{{!!stockLimitText}}"></view>
+                        <view class="c89585">{{startSaleNumAndLimitDesc}}</view>
+                    </view>
+                    <view class="c69a4f" wx:if="{{!!cutPriceDesc}}">
+                        <view class="c26245" wx:if="{{(stockLimitText||startSaleNumAndLimitDesc)&&isShowCutPriceDescDivider}}"></view>
+                        <view class="c89585">{{cutPriceDesc}}</view>
+                    </view>
+                </view>
+                <view class="b7ea4">
+                    <f bind:_init="_tic" bind:hide-countdown="_p" data-t="{{ hideCountdown:{ en:'$emit',args:['hide-count-down'] } }}" startSoldTime="{{goods.startSoldTime}}" wx:if="{{isNotStartSold}}"></f>
+                    <view class="e2788" wx:if="{{presaleDate}}"> {{presaleDate}} </view>
+                    <view class="c75c42" wx:if="{{!!goods.tariffPriceText&&!isEduIosOnlineGoods}}">
+                        <view class="c89585">进口税：{{goods.tariffPriceText}}</view>
+                    </view>
+                </view>
+                <view class="{{'c8b5b7'}} {{isCanStepper?'c08133':''}}" wx:if="{{goods.price!==null&&goods.price>=0&&!isEduIosOnlineGoods}}">
+                    <view class="{{'f65a3'}} {{isCanStepperFormater?'f78eb':''}}">
+                        <a bind:_init="_tic" estimatedPrice="{{showEstimatedPrice?goods.estimatedPrice:''}}" needFlex="{{false}}" originPrice="{{goods.originPrice}}" originStyle="{{isCanStepper?'display: block;margin-left: 0;margin-top: 4px;':''}}" price="{{goods.price}}" rmId="b4-13" wx:if="{{rmId==='b4-7'}}"></a>
+                    </view>
+                    <view class="c25d2a">
+                        <e bind:_init="_tic" bind:change="_p" bind:minus="_p" bind:overlimit="_p" bind:plus="_p" catch:tap="_p" customClass="stepper" data-t="{{ tap:{en:'noopFn',et:'stop'},plus:{en:'handleStepPlus'},minus:{en:'handleStepMinus'},change:{en:'handleStepChange'},overlimit:{en:'handleStepOverLimit'},tap:{en:'true',et:'stop'} }}" disableMinus="{{stepperDisableMinus}}" disablePlus="{{stepperDisablePlus}}" integer="{{true}}" longPress="{{false}}" max="{{goodsLimitNum}}" min="1" step="1" value="{{goodsNum}}" wx:if="{{isCanStepperFormater}}"></e>
+                        <view wx:else>x{{goods.num}}</view>
+                    </view>
+                </view>
+                <view class="e7d2b" wx:if="{{isEduIosOnlineGoods}}">iOS端小程序不支持在线课</view>
+                <view class="c24c55" wx:elif="{{goods.errorMsg}}">{{goods.errorMsg}}</view>
+            </view>
+        </block>
+        <view class="a100b" style="{{priceStyle}}" wx:else>
+            <view class="c89585">请重新选择商品规格</view>
+            <view catch:tap="_p" class="da018" data-t="{{ tap:{en:'handleChangeGoodsSku',et:'stop'} }}"> 重选 </view>
+        </view>
+    </view>
+    <g bind:_init="_tic" bind:change-swipe-status="_p" bind:open-combo-popup="_p" comboDetail="{{comboDetail}}" data-t="{{ openComboPopup:{ en:'$emit',args:['open-combo-popup'] },changeSwipeStatus:{en:'changeSwipeStatus'} }}" wx:if="{{comboDetail&&comboDetail.length}}"></g>
+    <d bind:_init="_tic" data-ref="van-toast"></d>
+</view>

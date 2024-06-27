@@ -1,0 +1,10 @@
+<a componentData="{{curTitleConfig}}" wx:if="{{showTitle}}"></a>
+<slot name="title"></slot>
+<e bind:load="handleLoadMore" finished="{{!hasMore}}" loading="{{isLoading}}">
+    <b bind:buy="handleGoodsBuy" bind:item-click="handleGoodsItemClick" borderRadiusType="{{curLayoutConfig.borderRadiusType}}" buttonText="{{curLayoutConfig.buttonText}}" buyBtnExpress="{{curLayoutConfig.buyBtnExpress}}" buyButtonType="{{curLayoutConfig.buyButtonType}}" class="recommend-list" cornerMarkImage="{{curLayoutConfig.cornerMarkImage}}" cornerMarkType="{{curLayoutConfig.cornerMarkType}}" goodsMargin="{{curLayoutConfig.goodsMargin}}" heightStyle="{{heightStyle}}" id="cap-recommend" imageFillStyle="{{curLayoutConfig.imageFillStyle}}" imageRatio="{{curLayoutConfig.imageRatio}}" layout="{{curLayoutConfig.layout}}" list="{{recommendList}}" pageMargin="{{curLayoutConfig.pageMargin}}" showBuyButton="{{curLayoutConfig.showBuyButton}}" showCornerMark="{{curLayoutConfig.showCornerMark}}" showLastSelfDefineItem="{{showLastSelfDefineItem}}" showOriginPrice="{{curLayoutConfig.showOriginPrice}}" showPrice="{{curLayoutConfig.showPrice}}" showSoldNum="{{curLayoutConfig.showSoldNum}}" showSubTitle="{{curLayoutConfig.showSubTitle}}" showTitle="{{curLayoutConfig.showTitle}}" showUmpTags="{{curLayoutConfig.showUmpTags}}" sizeType="{{curLayoutConfig.sizeType}}" skeletonNumber="{{2}}" textAlignType="{{curLayoutConfig.textAlignType}}" textStyleType="{{curLayoutConfig.textStyleType}}" umpTagsMaxCount="{{curLayoutConfig.umpTagsMaxCount}}">
+        <view slot="last-item-in-list">
+            <slot name="last-item-in-list"></slot>
+        </view>
+    </b>
+</e>
+<c bind:close="handleSkuClose" featureSkuData="{{skuData}}" themeClass="{{themeClass}}" wx:if="{{skuData}}"></c>

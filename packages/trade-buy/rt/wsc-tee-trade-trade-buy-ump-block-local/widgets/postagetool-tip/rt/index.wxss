@@ -1,0 +1,23 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.c18379 {
+  display: flex;
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ed6a0c;
+  background-color: #fffbe8;
+  box-sizing: border-box;
+}
+.fd424 {
+  font-size: 12px;
+  color: #ee0a24;
+  letter-spacing: 0;
+  text-align: center;
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+}

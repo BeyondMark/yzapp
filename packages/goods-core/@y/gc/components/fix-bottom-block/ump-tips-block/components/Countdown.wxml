@@ -1,0 +1,19 @@
+<view class="c623ad" wx:if="{{show&&showBottomCountdown}}">
+    <view bind:tap="_p" class="c4d817" data-t="{{ tap:{en:'handleClick'} }}">
+        <view class="c53cc6 {{isCoupon?'ec3cd':''}} {{countDownIcon?'c616fa':''}}" style="{{countDownIcon?'background-image: url('+countDownIcon+')':''}}"></view>
+        <view class="c1fd7b">
+            <view class="a498f">
+                <view class="c89585">{{activityName}}</view>
+                <view class="c8b793 c89585">          仅剩
+          <b bind:_init="_tic" bind:change="_p" data-t="{{ change:{en:'onChange'} }}" time="{{countDown}}" useSlot="{{true}}">
+                        <view class="b9e95">{{countDownText}}</view>
+                    </b>          结束
+        </view>
+            </view>
+            <view class="feb8d">查看优惠</view>
+        </view>
+        <view catch:tap="_p" class="bbb55" data-t="{{ tap:{en:'close',et:'stop'} }}">
+            <a bind:_init="_tic" color="#999" customStyle="display: block;font-size: 16px" name="cross"></a>
+        </view>
+    </view>
+</view>

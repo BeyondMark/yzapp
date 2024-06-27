@@ -1,0 +1,84 @@
+.container {
+  padding-bottom: 50px;
+  min-height: 100vh;
+  background: #fff;
+  box-sizing: border-box;
+}
+.showcase-container {
+  height: auto !important;
+}
+.swiper-wrapper {
+  margin-left: 15px;
+}
+.levels-wrapper {
+  overflow: hidden;
+  margin-top: -2px;
+  padding-top: 12px;
+  position: relative;
+  min-height: 150px;
+}
+.levels-wrapper .level-bottom-radius {
+  position: absolute;
+  top: 75px;
+  height: 30px;
+  width: 100%;
+  border-radius: 0 0 50% 50%;
+  background-color: #1d1c1c;
+}
+.levels-wrapper .task-list {
+  margin: 0 16px;
+}
+.levels-wrapper .task-list .task-label {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+.card-bg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 80px;
+}
+.card-bg .bg-img {
+  height: 80px;
+  background: #252525;
+}
+.swipe-wrapper {
+  min-height: 180px;
+  margin-left: 16px;
+  position: relative;
+  z-index: 1;
+}
+.level-wrapper {
+  background-color: #fff;
+  margin-top: 10px;
+  padding: 20px;
+  position: relative;
+}
+.level-wrapper td {
+  border: 1px solid #fff;
+}
+.showcase-components {
+  margin-top: 26px;
+}
+.center-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.simple-benefit-list {
+  margin-top: 24px;
+}
+.benefit-slogan + .simple-benefit-list {
+  margin-top: 0;
+}
+.footer .copyright {
+  padding-bottom: 55px;
+}
+.split-border {
+  width: 100%;
+  height: 10px;
+  background-color: #f7f8fa;
+}

@@ -1,0 +1,43 @@
+@import "/common/css/helper/index.wxss";
+.extra {
+  margin: 0 16px;
+}
+.extra-title {
+  display: flex;
+  font-size: 14px;
+  padding: 12px 0;
+}
+.extra-title__tip {
+  color: #969799;
+  padding-left: 4px;
+}
+.extra-body {
+  display: flex;
+  flex-flow: wrap;
+}
+.extra-body__item {
+  padding: 0 8px;
+  margin: 0 12px 12px 0;
+  min-width: 52px;
+  font-size: 12px;
+  line-height: 12px;
+  border-radius: 3px;
+  height: 32px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #323233;
+  background-color: #f7f8fa;
+}
+.van-hairline--bottom:after,
+.van-hairline--top:after {
+  transform: translateX(4px) scale(0.5);
+}
+.blessing {
+  padding: 12px 0;
+}
+.blessing-label {
+  font-size: 14px;
+  color: #333;
+}

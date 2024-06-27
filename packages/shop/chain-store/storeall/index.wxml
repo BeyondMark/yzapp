@@ -1,0 +1,5 @@
+<view class="page-container">
+    <view class="shop-list-container">
+        <a bind:choose="handleChooseItem" blankContent="{{blankContent}}" hidden="{{false}}" hiddenTitle="{{true}}" isOffline="{{isOffline}}" isOnline="{{isOnline}}" shopLists="{{shopLists}}" title="{{title}}"></a>
+    </view>
+</view>

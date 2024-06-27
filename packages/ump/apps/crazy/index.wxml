@@ -1,0 +1,2 @@
+<a bind:message="onPostMessage" src="{{src}}"></a>
+<b noAutoAuth="{{true}}"></b>

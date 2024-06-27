@@ -1,0 +1,29 @@
+.coupon-discountbody__disabled .coupon-discountbody__prefix,
+.coupon-discountbody__disabled .coupon-discountbody__unit,
+.coupon-discountbody__disabled .coupon-discountbody__value {
+  color: #969799;
+}
+.coupon-discountbody__unavailable .coupon-discountbody__prefix,
+.coupon-discountbody__unavailable .coupon-discountbody__unit,
+.coupon-discountbody__unavailable .coupon-discountbody__value {
+  color: #c8c9cc;
+}
+.coupon-discountbody {
+  max-width: inherit;
+  height: 30px;
+  overflow: hidden;
+  font-size: 12px;
+}
+.coupon-discountbody__prefix,
+.coupon-discountbody__unit,
+.coupon-discountbody__value {
+  display: inline;
+  color: #fa1919;
+  line-height: 30px;
+}
+.coupon-discountbody__value {
+  display: inline;
+  font-weight: 600;
+  font-size: 29px;
+  white-space: nowrap;
+}

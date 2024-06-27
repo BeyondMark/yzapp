@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../native/weapp/icon/index/index",
+    "b": "../../native/weapp/loading/index/index",
+    "c": "/@y-open/vt/dist/popup/index.weapp",
+    "_": "../../../../../../components/_/index"
+  }
+}

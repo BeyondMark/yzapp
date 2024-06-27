@@ -1,0 +1,58 @@
+.present-box {
+  justify-content: space-between;
+  height: 68px;
+  border-radius: 4px;
+  background: #fcfaf7;
+  border: 0.5px solid #ece3d0;
+  margin-bottom: 8px;
+  padding: 0 22px 0 4px;
+  position: relative;
+}
+.present-box,
+.present-box .left-part {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.present-box .left-part {
+  justify-content: flex-start;
+  font-size: 12px;
+  max-width: 85%;
+}
+.present-box .left-part .image {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+.present-box .left-part .info-box {
+  font-size: 14px;
+  color: #323233;
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.present-box .left-part .small-size {
+  max-width: 142px;
+}
+.present-box .right-part {
+  height: 55px;
+  width: 36px;
+  justify-content: center;
+  background: url(//img01.yzcdn.cn/upload_files/2023/09/21/FmeMjVLdnaLnexgnnTRTXYvJJ991.png)
+    no-repeat;
+  background-size: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.present-box .right-part .status {
+  color: #fff;
+  transform: rotate(15deg);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  margin-left: 4px;
+}

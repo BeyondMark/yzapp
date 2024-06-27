@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y-open/vt/dist/cell/index",
+    "b": "/@y-open/vt/dist/cell-group/index",
+    "c": "./ReviewTags",
+    "d": "./ReviewItemContent",
+    "e": "./ReviewItemHeader",
+    "_": "../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,8 @@
+<view class="c21ae3" wx:if="{{showList}}">
+    <view class="c8092b">{{title}}</view>
+    <view catch:tap="_p" data-t="{{ tap:{ en:'onCheck',et:'stop',args:[item] } }}" wx:for="{{cardList}}" wx:key="id">
+        <a bind:_init="_tic" card="{{item}}" cardType="{{cardType}}" checked="{{item.__isChecked}}" disabled="{{disabled}}" themeColors="{{themeColors}}"></a>
+    </view>
+    <view class="f8c1a" wx:if="{{showLimit}}">    最多展示50张礼品卡
+  </view>
+</view>

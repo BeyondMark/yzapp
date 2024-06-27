@@ -1,0 +1,3 @@
+<view class="c23389" style="justify-content: {{textAlign==='center'?'center':'flex-start'}};">
+    <view class="c50e51" style="height: {{realHeight}}px;background-position: {{textAlign==='center'?'center':'left'}};background-image: url({{titleImageUrl}})"></view>
+</view>

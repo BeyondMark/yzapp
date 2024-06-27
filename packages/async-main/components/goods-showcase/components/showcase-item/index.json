@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../recommend/index",
+    "b": "../corner-mark/index",
+    "c": "../../../../@vant/weapp/dist/icon/index",
+    "_": "../../../../../../components/_/index"
+  }
+}

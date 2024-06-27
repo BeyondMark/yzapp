@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "优惠详情",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "a": "/components/znb-web-view/index",
+    "_": "../../../../components/_/index"
+  }
+}

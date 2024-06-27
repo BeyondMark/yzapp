@@ -1,0 +1,18 @@
+<view>
+    <view class="extra-benefits" wx:if="{{renderBenefits.length>0}}">
+        <view class="benefit-item-wrap" key="{{item.key}}" wx:for="{{renderBenefits}}">
+            <view class="benefit-item benefit-item__{{item.key}} van-hariline--surround" wx:if="{{item.key==='present'}}">
+                <view class="benefit-name">
+                    <view class="benefit-desc">赠品</view>
+                </view>
+                <view class="benefit-tip">{{presentInfo.title}}</view>
+            </view>
+            <view class="benefit-item benefit-item__{{item.key}} van-hariline--surround" wx:if="{{item.key==='points'}}">
+                <view class="benefit-name">
+                    <view class="benefit-desc">{{item.points}}</view>
+                </view>
+                <view class="benefit-tip">赠送 {{pointsName}}</view>
+            </view>
+        </view>
+    </view>
+</view>

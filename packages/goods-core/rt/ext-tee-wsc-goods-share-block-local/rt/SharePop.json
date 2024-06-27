@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./ActionItem",
+    "b": "/ext-tee-passport/extensions/user-authorize/widgets/rt/Main",
+    "c": "/packages/async-tee/@y-open/vt/dist/action-sheet/index",
+    "d": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "c": "_", "d": "_" }
+}

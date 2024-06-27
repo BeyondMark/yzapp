@@ -1,0 +1,32 @@
+.benefit-wrapper {
+  height: 40px;
+  margin: 0 8px 8px;
+  padding: 12px 8px;
+  border-radius: var(--theme-radius-card, 0);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.benefit-wrapper:before {
+  display: block;
+  content: "";
+  width: 24px;
+  height: 18px;
+  margin-right: 8px;
+  background: url(https://img01.yzcdn.cn/upload_files/2021/10/25/FpzJRsmIrq65UPLZ4RQyW8pap-V9.png)
+    no-repeat;
+  background-size: cover;
+}
+.benefit-content {
+  font-size: 13px;
+  color: #323233;
+  flex: 1;
+  text-align: left;
+}
+.benefit-action {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 18px;
+}

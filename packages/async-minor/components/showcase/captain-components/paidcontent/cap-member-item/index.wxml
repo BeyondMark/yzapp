@@ -1,0 +1,1 @@
+<a bottomCornerClass="{{isPaid?'':'theme-color'}}" bottomCornerText="{{computed.priceText}}" class="cap-member-item" statusList="{{computed.statusList}}" subtitle="{{summary||''}}" thumbnail="{{cover}}" title="{{title}}" url="/packages/paidcontent/rights/index?alias={{alias}}"></a>

@@ -1,0 +1,191 @@
+.bd231 {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.retail-solitaire-share-popup {
+  width: 100% !important;
+  top: 0 !important;
+  transform: translate3d(-50%, 0, 0) !important;
+  background-color: transparent !important;
+}
+.retail-solitaire-share-popup .share-guide-container {
+  text-align: center;
+}
+.retail-solitaire-share-popup .share-guide-container .share-guide-arrow {
+  width: 66px;
+  height: 117px;
+  background-image: url(https://img01.yzcdn.cn/public_files/2019/07/04/b218a1c421117bda16050df68876f3a0.png);
+  background-size: 100% 100%;
+  margin: 76px 24px 8px auto;
+}
+.retail-solitaire-share-popup .share-guide-container .share-guide-inner {
+  color: #fff;
+  text-align: center;
+}
+.retail-solitaire-share-popup .share-guide-container .share-guide-inner p {
+  line-height: 30px;
+}
+.retail-solitaire-share-popup
+  .share-guide-container
+  .share-guide-inner
+  .guide-tip {
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+  display: inline-block;
+}
+.retail-solitaire-share-popup
+  .share-guide-container
+  .share-guide-inner
+  .guide-tip:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -22px;
+  top: -5px;
+  width: 16px;
+  height: 16px;
+  background: url(https://img01.yzcdn.cn/public_files/2019/07/04/64221c3a6a1d3fcc984aab6cb38037e0.png);
+}
+.retail-solitaire-share-popup
+  .share-guide-container
+  .share-guide-inner
+  .sub-tip {
+  font-size: 14px;
+}
+.solitaire-dialog {
+  border-radius: 20px 20px 0 0;
+  text-align: center;
+}
+.c2e39c {
+  background-size: 375px 205px;
+  background-repeat: no-repeat;
+  background-image: url(https://b.yzcdn.cn/public_files/b30b2ac50fe84d5cc05decdbe282884a.png);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+}
+.d9130 {
+  margin-top: 6px;
+  margin-bottom: 16px;
+  border-radius: 22px;
+  width: 306px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-image: linear-gradient(90deg, #07c160, #66bd43);
+  height: 44px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  align-items: center;
+  border: none;
+}
+.c29375 {
+  margin-top: 30px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 119px;
+  height: 99px;
+  background-size: 119px 99px;
+  background-image: url(https://b.yzcdn.cn/public_files/b5e9c043df474b7f002e0a913da5f643.png);
+}
+.c9309a {
+  margin-top: 16px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height: 28px;
+  font-size: 20px;
+  color: #5e290f;
+}
+.c25fe7 {
+  align-items: center;
+  margin-top: 24px;
+  width: 306px;
+  background-image: linear-gradient(180deg, #e8fef6, #effcea);
+}
+.c25fe7,
+.c56bcb {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.c56bcb {
+  margin-top: 8px;
+  border-style: solid;
+  border-width: 1px;
+  width: 290px;
+  height: 166px;
+  border-color: #c8f3cb;
+  border-bottom-width: 0;
+}
+.be5be {
+  height: 24px;
+  width: 24px;
+  border-radius: 12px;
+}
+.a016d {
+  margin-left: 50px;
+  margin-top: 2px;
+  flex-direction: column;
+  display: flex;
+}
+.c42d5e {
+  height: 24px;
+  margin-left: 20px;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: row;
+}
+.c2a8a5 {
+  display: flex;
+  justify-content: left;
+  align-content: center;
+  height: 20px;
+  font-size: 14px;
+  margin-left: 6px;
+  align-items: center;
+}
+.c3b59 {
+  display: flex;
+  flex-direction: row;
+  width: 220px;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.c4e421 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.c4e421,
+.e6810 {
+  color: #323233;
+  font-size: 12px;
+  line-height: 18px;
+}
+.c65c5b {
+  margin-left: 5px;
+  margin-top: 73px;
+  justify-content: center;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 700;
+}
+.c03f52 {
+  justify-content: left;
+  color: #969799;
+  font-size: 12px;
+  line-height: 17px;
+  margin-left: 50px;
+  margin-top: 9px;
+  font-weight: 400;
+  display: flex;
+}

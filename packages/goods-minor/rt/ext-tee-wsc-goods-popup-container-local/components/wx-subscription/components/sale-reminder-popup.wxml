@@ -1,0 +1,14 @@
+<b bind:_init="_tic" bind:close="_p" closeable="{{false}}" customClass="c00d9d" data-t="{{ close:{en:'closeSaleReminderPopup'} }}" position="bottom" round="{{true}}" safeAreaInsetBottom="{{true}}" show="{{isShow}}">
+    <view wx:if="{{isShow}}">
+        <view class="d5d3d">{{saleReminder.title}}</view>
+        <scroll-view class="d5aa7" scrollY="{{true}}">
+            <view class="c9a036"> {{saleReminder.p1}} <view class="fe01d">{{startTime}}</view> {{saleReminder.p2}} </view>
+            <view class="c78805">
+                <image class="d8fe5 bd231" lazyLoad="true" mode="aspectFit" src="{{saleReminder.img}}"></image>
+            </view>
+        </scroll-view>
+        <view catch:tap="_p" class="c71f26" data-t="{{ tap:{en:'true',et:'stop'} }}">
+            <a bind:_init="_tic" bind:tap="_p" customClass="c69d1e" data-t="{{ tap:{en:'closeSaleReminderPopup'} }}" round="{{true}}" type="primary"> {{saleReminder.btn}} </a>
+        </view>
+    </view>
+</b>

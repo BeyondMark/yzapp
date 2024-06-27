@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../../ext-tee-wsc-im-im-message-contact-local/components/MessageContactButton",
+    "b": "./FloatingNavBg",
+    "_": "../../../../../../components/_/index"
+  }
+}

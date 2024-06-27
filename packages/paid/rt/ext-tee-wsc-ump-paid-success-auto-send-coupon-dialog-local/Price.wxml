@@ -1,0 +1,3 @@
+<view class="{{'c78a5e'}} {{'t-ellipsis'}} {{isBigText?'c065c9':''}}" style="{{themeColorStyle}}">  ￥<view class="d8618 c89585">{{integer}}</view>
+    <view class="bdaa3 c89585" wx:if="{{decimal.length}}">.{{decimal}}</view>
+</view>

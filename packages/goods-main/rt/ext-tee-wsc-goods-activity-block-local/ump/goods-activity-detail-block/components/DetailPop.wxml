@@ -1,0 +1,10 @@
+<a bind:_init="_tic" bind:click-overlay="_p" bind:close="_p" closeable="{{true}}" customClass="c341e4" customStyle="{{customStyle}}" data-t="{{ close:{en:'hidePopUp'},clickOverlay:{en:'hidePopUp'} }}" position="bottom" round="{{true}}" safeAreaInsetBottom="{{true}}" show="{{show}}">
+    <view class="bb259">{{title}}</view>
+    <scroll-view class="a485f" scrollY="{{true}}">
+        <slot></slot>
+    </scroll-view>
+    <view catch:tap="_p" class="c1f5cb" data-t="{{ tap:{en:'true',et:'stop'} }}">
+        <b bind:_init="_tic" bind:tap="_p" customClass="c96ff0" data-t="{{ tap:{en:'hidePopUp'} }}" round="{{true}}" type="primary">      知道了
+    </b>
+    </view>
+</a>

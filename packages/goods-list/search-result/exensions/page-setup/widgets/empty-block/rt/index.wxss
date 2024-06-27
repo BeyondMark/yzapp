@@ -1,0 +1,18 @@
+@import "/common/css/helper/index.wxss";
+.c5bfc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+.c23c7 {
+  display: block;
+  width: 160px;
+  height: 160px;
+}
+.c56a5a {
+  font-size: 14px;
+  color: #a3a3a3;
+  text-align: center;
+}

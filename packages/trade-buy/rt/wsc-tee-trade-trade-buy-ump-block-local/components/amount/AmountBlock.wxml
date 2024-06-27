@@ -1,0 +1,5 @@
+<view class="c3282c">
+    <view class="c86041 ce25d">    合计：
+    <view class="eaf40 c89585">￥{{priceContent}}</view>
+    </view>
+</view>

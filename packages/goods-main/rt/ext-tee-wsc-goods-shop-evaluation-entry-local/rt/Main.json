@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/goods-core/rt/ext-tee-wsc-goods-goods-review-block-local/components/ReviewTags",
+    "b": "/@y-open/vt/dist/cell/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

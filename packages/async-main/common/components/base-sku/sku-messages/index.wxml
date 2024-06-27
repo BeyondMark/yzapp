@@ -1,0 +1,14 @@
+<view class="van-sku-messages">
+    <block wx:for="{{messagesInfo}}" wx:for-item="message" wx:key="name">
+        <b required="{{message.required}}" title="{{message.name}}" titleClass="image-cell-title" titleStyle="margin-right: 16px;" titleWidth="6.2em" valueClass="image-cell-value" wx:if="{{message.type==='image'}}">
+            <c bind:after-read="onUploadAfterRead" bind:delete="onUploadDelete" bind:oversize="onUploadOversize" data-index="{{index}}" fileList="{{messageValues[index].fileList}}" maxCount="1" maxSize="{{message.maxSize}}" previewSize="80" sizeType="{{['compressed']}}"></c>
+            <view class="image-cell-label">仅限一张</view>
+        </b>
+        <a bind:tap="showDatePicker" center="{{true}}" data-index="{{index}}" isLink="{{true}}" label="{{message.name}}" placeholder="{{message.placeholder}}" readonly="{{true}}" required="{{message.required}}" value="{{messageValues[index].value}}" wx:elif="{{message.type==='time'}}"></a>
+        <view class="sku-messages_id-card-container" wx:elif="{{message.type==='idcard'}}">
+            <a autosize="{{message.autoSize}}" bind:change="onMessageValueChange" border="{{false}}" center="{{message.center}}" data-index="{{index}}" fixed="{{message.fixed}}" label="{{message.name}}" maxlength="200" placeholder="{{message.placeholder}}" required="{{message.required}}" type="{{message.type}}" value="{{messageValues[index].value}}"></a>
+            <view class="sku-messages_id-card-msg">身份证号码为敏感信息，系统将会对其进行安全处理，请放心。如对收集原因有疑问，请联系商家。</view>
+        </view>
+        <a autosize="{{message.autoSize}}" bind:change="onMessageValueChange" center="{{message.center}}" data-index="{{index}}" fixed="{{message.fixed}}" label="{{message.name}}" maxlength="200" placeholder="{{message.placeholder}}" required="{{message.required}}" type="{{message.type}}" value="{{messageValues[index].value}}" wx:else></a>
+    </block>
+</view>

@@ -1,0 +1,7 @@
+<view class="mobile-field">
+    <b bind:_init="_tic" bind:input="_p" class="{{fieldValue?'black-field':''}}" customStyle="{{fieldStyle}}" data-t="{{ input:{en:'onInput'} }}" label="{{fieldLabel}}" placeholder="{{fieldInfo.placeholder}}" type="number" value="{{fieldValue}}"></b>
+    <b bind:_init="_tic" bind:input="_p" customStyle="{{fieldStyle}}" data-t="{{ input:{en:'onInputSmsCaptcha'} }}" label="验证码" placeholder="{{fieldInfo.placeholder}}" useButtonSlot="{{true}}" value="{{smsCaptcha}}" wx:if="{{fieldInfo.feNeedCaptcha&&smsStock>0}}">
+        <a bind:_init="_tic" bind:tap="_p" customClass="captcha-btn" data-t="{{ tap:{en:'sendCaptcha'} }}" loading="{{isGetCaptcha}}" loadingText="发送中" plain="{{true}}" slot="button" type="danger"> {{captchaTimeout===0?'获取验证码':captchaTimeout+'s'}} </a>
+    </b>
+    <c bind:_init="_tic" data-ref="van-toast"></c>
+</view>

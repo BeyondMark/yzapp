@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./UnavailableGoods",
+    "b": "./ExtraFees",
+    "c": "./StoreGiftsList",
+    "d": "./../widgets/rt/GoodsList",
+    "e": "./../components/GiveawayCard",
+    "_": "../../../../../components/_/index"
+  }
+}

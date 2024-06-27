@@ -1,0 +1,29 @@
+<view bind:tap="_p" data-t="{{ tap:{en:'_tprc'} }}" style="{{_pageStyleStr}}">
+    <view style="{{_pageStyle}}">
+        <view>
+            <view class="c964a4">
+                <view class="c964a4">
+                    <a bind:_init="_tic" nr="true" rmId="b32-1" wx:if="{{_normal&&RM&&RM['b32-1']}}"></a>
+                </view>
+                <view class="c964a4">
+                    <b bind:_init="_tic" nr="true" rmId="b32-1" wx:if="{{_normal&&RM&&RM['b32-1']}}"></b>
+                </view>
+                <view class="c964a4">
+                    <c bind:_init="_tic" nr="true" rmId="b32-1" wx:if="{{_normal&&RM&&RM['b32-1']}}"></c>
+                    <g bind:_init="_tic" needBindRelation="{{false}}" nr="true" rmId="b32-6" showGoodsDetail="{{false}}" wx:if="{{_normal&&RM&&RM['b32-6']}}"></g>
+                    <h bind:_init="_tic" nr="true" rmId="b32-7" wx:if="{{_normal&&RM&&RM['b32-7']}}"></h>
+                    <i bind:_init="_tic" nr="true" rmId="b32-0" wx:if="{{RM&&RM['b32-0']}}"></i>
+                    <j bind:_init="_tic" nr="true" rmId="b32-9" wx:if="{{_normal&&RM&&RM['b32-9']}}"></j>
+                    <k bind:_init="_tic" nr="true" rmId="b32-10" wx:if="{{_normal&&RM&&RM['b32-10']}}"></k>
+                </view>
+                <view class="c964a4">
+                    <d bind:_init="_tic" nr="true" rmId="b32-11" wx:if="{{_normal&&RM&&RM['b32-11']}}"></d>
+                </view>
+            </view>
+            <l bind:_init="_tic" data-ref="van-toast" isPageDefault="{{true}}"></l>
+            <m bind:_init="_tic" data-ref="van-dialog" isPageDefault="{{true}}"></m>
+            <e bind:_init="_tic" id="van-toast"></e>
+            <f bind:_init="_tic" id="van-dialog"></f>
+        </view>
+    </view>
+</view>

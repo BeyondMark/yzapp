@@ -1,0 +1,9 @@
+<view>
+    <a bind:_init="_tic" customClass="c70c8" hairline="{{plain}}" plain="{{plain}}" round="{{round}}" style="{{customTagStyle}}" wx:for="{{tags}}" wx:for-item="tag" wx:key="index">
+        <view class="e5a59" style="{{tag.containerStyle}}">
+            <view class="c89585" style="{{tag.preStyle}}" wx:if="{{tag.preText}}"> {{tag.preText}} </view>
+            <view class="c772a4 c89585" style="{{tag.textStyle}}" wx:if="{{tag.text}}"> {{tag.text}} </view>
+            <view class="c89585" style="{{tag.sufStyle}}" wx:if="{{tag.sufText}}"> {{tag.sufText}} </view>
+        </view>
+    </a>
+</view>

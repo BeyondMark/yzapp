@@ -1,0 +1,67 @@
+.goods-price {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  text-align: left;
+  margin: 2px 0 8px;
+}
+.goods-price__tag {
+  margin: 6px 0;
+}
+.goods-price__tag-content {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 12px;
+  height: 20px;
+  padding: 2px 6px;
+  box-sizing: border-box;
+  font-size: 12px;
+  margin-right: 8px;
+}
+.goods-price__tag-font--l {
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 2px;
+  position: relative;
+  height: 20px;
+}
+.goods-price__current {
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+  font-size: 16px;
+  color: #ee0a24;
+}
+.goods-price__current-label {
+  display: inline-block;
+  font-size: 13px;
+  line-height: 24px;
+  margin-right: 2px;
+  font-weight: 500;
+  vertical-align: bottom;
+}
+.goods-price .two-space {
+  margin-right: 0.5em;
+}
+.goods-price__current-price {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: bolder;
+}
+.goods-price__origin {
+  display: block;
+  font-size: 13px;
+  color: #969799;
+  line-height: 24px;
+  margin-right: 12px;
+}
+.goods-price__origin-label {
+  margin-right: 4px;
+}
+.goods-price__origin-price {
+  text-decoration: line-through;
+}

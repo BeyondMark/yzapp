@@ -1,0 +1,31 @@
+.c5dae4 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2000;
+  padding-top: 140px;
+  box-sizing: border-box;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+}
+.b1486 {
+  position: absolute;
+  top: 12px;
+  right: 33px;
+  background: url(https://img01.yzcdn.cn/public_files/f20f3d8cb19d107f3260871052cc8db3.png!small.png)
+    no-repeat;
+  width: 66px;
+  height: 117px;
+  background-size: contain;
+}
+.c7bf45 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.c1938a {
+  font-size: 14px;
+}

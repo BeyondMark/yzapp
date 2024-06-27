@@ -1,0 +1,17 @@
+<view class="a9fd7" style="{{customStyle}}" wx:if="{{shopInfo.logo}}">
+    <view class="c71353" style="{{themeVars}}">
+        <view bind:tap="_p" class="c5010b" data-t="{{ tap:{en:'clickShopLogo'} }}">
+            <image class="e38a8 bd231" lazyLoad="true" src="{{goodShopLogo}}"></image>
+        </view>
+        <view class="a6896">
+            <view class="c86c9e">
+                <view class="c80df6">
+                    <view class="c0574a"> {{shopName}} </view>
+                </view>
+                <slot name="right"></slot>
+            </view>
+            <slot name="shop-tags"></slot>
+        </view>
+    </view>
+    <slot name="bottom"></slot>
+</view>

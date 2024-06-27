@@ -1,0 +1,15 @@
+.c7a288 {
+  overflow: hidden;
+  position: relative;
+  padding: 10px 12px;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #323233;
+  line-height: 20px;
+  background: #e8effa;
+}
+.c7a288 .c1d5f3 {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+}

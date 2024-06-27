@@ -1,0 +1,3 @@
+<view class="{{customClass}}" style="{{customStyle}}">
+    <view bind:tap="_p" class="cashier-pre-rich-text__segment t-text" data-t="{{ tap:{ en:'onClick',args:[it] } }}" style="color:{{it.color}}; text-decoration-line:{{it.textDecorationLine}}; font-size:{{it.fontSize}}; font-style:{{it.fontStyle}}; font-weight:{{it.fontWeight}}" wx:for="{{segmentsWithContext}}" wx:for-item="it" wx:key="type"> {{it.value}} </view>
+</view>

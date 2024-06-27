@@ -1,0 +1,7 @@
+<view style="{{themeVars}}">
+    <a bind:_init="_tic" cubeIconData="{{cubeIconData}}" customIcon="{{customIcon}}" customOptionListConfig="{{customOptionListConfig}}" getShareOpportunity="{{getShareOpportunity}}" goodsInfo="{{goodsInfo}}" guideBindSourceType="{{guideBindSourceType}}" iconStyle="{{iconStyle}}" isGuideNeedPkgShareUrl="{{isGuideNeedPkgShareUrl}}" isShareStyle="{{isShareStyle}}" kdtId="{{shopBaseInfo.kdtId}}" needBindRelation="{{needBindRelation}}" needSetShare="{{needSetShare}}" offlineId="{{offlineId}}" popCustomStyle="{{popCustomStyle}}" rmId="@wsc-tee-salesman/salesman-share-popup~YPDZkFWW" scenes="{{scenes}}" shareInfo="{{shareInfo}}" showGoodsDetail="{{showGoodsDetail}}" sourceType="{{sourceType}}" wx:if="{{rmId==='b1-12'||rmId==='b6-5'||rmId==='b7-6'||rmId==='b9-7'||rmId==='b0-12'||rmId==='b32-6'||rmId==='b33-4'||rmId==='b10-10'||rmId==='b29-5'}}">
+        <view slot="icon">
+            <slot name="custom-icon"></slot>
+        </view>
+    </a>
+</view>

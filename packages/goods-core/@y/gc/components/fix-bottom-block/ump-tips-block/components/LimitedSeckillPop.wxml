@@ -1,0 +1,12 @@
+<view class="c012e9" wx:if="{{show}}">
+    <view class="c72f35">
+        <view class="c0d164">限时</view>
+        <view class="c0d164 c6c53b">秒杀</view>
+    </view>
+    <view class="c7c4f2">
+        <view class="c264c1 c89585">仅剩</view>
+        <view class="c85756"> {{stockNum}} </view>
+        <view class="c8bd65 c89585">件，抢完即止</view>
+    </view>
+    <view class="c96e64"></view>
+</view>

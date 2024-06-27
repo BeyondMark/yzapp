@@ -1,0 +1,58 @@
+.t-notice-bar {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 16px;
+  font-size: 14px;
+  color: #ed6a0c;
+  line-height: 24px;
+  background-color: #fffbe8;
+}
+.t-notice-bar--wrapable {
+  height: auto;
+  padding: 8px 16px;
+}
+.t-notice-bar--wrapable .t-notice-bar__wrap {
+  height: auto;
+}
+.t-notice-bar--wrapable .t-notice-bar__content {
+  position: relative;
+  white-space: normal;
+}
+.t-notice-bar--withicon {
+  position: relative;
+  padding-right: 40px;
+}
+.t-notice-bar__left-icon {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  margin-right: 4px;
+  vertical-align: middle;
+  font-size: 16px;
+  min-width: 22px;
+}
+.t-notice-bar__right-icon {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  font-size: 16px;
+  min-width: 22px;
+  text-align: center;
+}
+.t-notice-bar__wrap {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  height: 24px;
+}
+.t-notice-bar__content {
+  position: absolute;
+  white-space: nowrap;
+  transition-timing-function: linear;
+}
+.t-notice-bar__content.t-ellipsis {
+  max-width: 100%;
+}

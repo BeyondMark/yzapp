@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y-open/vt/dist/transition/index",
+    "b": "./header",
+    "_": "../../../../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,8 @@
+<view class="placeholder" id="placeholder">
+    <view class="card-recommend" wx:if="{{goodsComponentData.goods&&goodsComponentData.goods.length>0}}">
+        <view class="card-recommend__header">更多精选商品</view>
+        <view class="card-recommend__list">
+            <a componentData="{{goodsComponentData}}" customClass="scrm-goods-recommend" openSwipePagination="{{false}}"></a>
+        </view>
+    </view>
+</view>

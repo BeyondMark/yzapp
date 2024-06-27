@@ -1,0 +1,6 @@
+<view>
+    <view class="c96a62" id="js-nav-review" wx:if="{{showCustomerReviews}}">
+        <a alias="{{alias}}" bind:_init="_tic" count="{{review.count}}" kdtId="{{kdtId}}" listParams="{{listParams}}" rate="{{rate}}"></a>
+        <b alias="{{alias}}" bind:_init="_tic" goodsId="{{goodsId}}" kdtId="{{kdtId}}" list="{{review.reviews}}" listParams="{{listParams}}" memberLabel="{{shopConfig.evaluationMemberLabel}}" tags="{{review.tags}}" themeTag="{{themeTag}}" wx:if="{{review.reviews.length>0}}"></b>
+    </view>
+</view>

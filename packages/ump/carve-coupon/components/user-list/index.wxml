@@ -1,0 +1,16 @@
+<view wx:if="{{activity.isOpened}}">
+    <view class="title-bar">好友手气</view>
+    <view class="user-list">
+        <view class="list" wx:for="{{currentJoinedList}}" wx:key="{{ index }}">
+            <view class="list-left">
+                <image class="list-left__img" src="{{item.avatar}}"></image>
+                <text>{{item.nickName}}</text>
+            </view>
+            <view class="list-right">
+                <text class="money">
+                    <text>{{item.money}}</text>元</text>
+                <view class="has-max-money" wx:if="{{item.hasMaxMoney}}">手气最佳</view>
+            </view>
+        </view>
+    </view>
+</view>

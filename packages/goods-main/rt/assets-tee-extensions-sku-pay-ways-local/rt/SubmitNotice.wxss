@@ -1,0 +1,27 @@
+.bd231 {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.dd4e7 {
+  display: flex;
+  align-items: center;
+  color: #969799;
+  font-size: 13px;
+  justify-content: center;
+}
+.dd4e7 .b798a {
+  width: 6px;
+  height: 10px;
+  position: relative;
+  top: 1px;
+}
+.dd4e7 .baec6 {
+  display: inline-block;
+  vertical-align: text-top;
+  margin-right: 4px;
+  width: 16px;
+  background-size: cover;
+  height: 16px;
+  background-image: url(https://b.yzcdn.cn/assets-cashier/icon/prior-use-wechat2.png);
+}

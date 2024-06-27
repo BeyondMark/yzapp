@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../note/index",
+    "b": "../coupon/index",
+    "_": "../../../../../../components/_/index"
+  }
+}

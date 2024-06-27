@@ -1,0 +1,28 @@
+<view>
+    <a bind:_init="_tic" bind:click-overlay="_p" closeOnClickOverlay="{{true}}" customStyle="border-radius: 20px 20px 0 0; text-align: center;overflow: hidden;" data-t="{{ clickOverlay:{en:'close'} }}" position="bottom" reInit="{{true}}" show="{{visible}}" zIndex="{{9999}}">
+        <view class="c2e39c">
+            <view class="c29375">
+                <view class="c65c5b">NO.{{solitaireData.sortNo}}</view>
+            </view>
+            <view class="c9309a">恭喜你，接龙成功</view>
+            <view class="c25fe7">
+                <view class="c56bcb">
+                    <view class="c42d5e">
+                        <image class="be5be bd231" lazyLoad="true" src="{{solitaireData.buyerAvatar}}"></image>
+                        <view class="c2a8a5">{{solitaireData.buyerName}}</view>
+                    </view>
+                    <view class="a016d">
+                        <view class="c3b59" wx:for="{{showBuyItems}}" wx:key="index">
+                            <text bind:_init="_tic" class="c4e421" overflow="visible">{{item.itemName}}</text>
+                            <view class="e6810">+{{item.buyNum}}</view>
+                        </view>
+                    </view>
+                    <view class="c03f52" wx:if="{{showTotalItems}}">            共{{solitaireData.buyItems.length}}件商品
+          </view>
+                </view>
+            </view>
+            <button bind:tap="_p" class="d9130" data-t="{{ tap:{en:'handleShare'} }}" openType="share" wx:if="{{!isWeb}}">        通知大家接龙成功
+      </button>
+        </view>
+    </a>
+</view>

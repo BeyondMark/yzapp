@@ -1,0 +1,28 @@
+<view wx:if="{{visible}}">
+    <a bind:close="next" class="pop" customStyle="background: transparent" show="{{visible}}" zIndex="9996">
+        <view class="member-guide_content {{registryState}}">
+            <block wx:if="{{registryState==='success'||registryState==='threshold'}}">
+                <c benefits="{{benefitData}}" wx:if="{{registryState==='success'}}">
+                    <view bindtap="next" class="close" slot="head"></view>
+                </c>
+                <d thresholdType="{{memThresholdType}}" thresholdValue="{{memThresholdValue}}" wx:elif="{{registryState==='threshold'}}">
+                    <view bindtap="next" class="close" slot="head"></view>
+                </d>
+            </block>
+            <block wx:elif="{{!showDefault}}">
+                <view class="action">
+                    <view bindtap="next" class="close"></view>
+                </view>
+                <view bindtap="handleGetReward" class="box">
+                    <image class="image" mode="widthFix" src="{{url}}"></image>
+                </view>
+            </block>
+            <b benefits="{{benefitData}}" wx:else>
+                <view bindtap="next" class="close" slot="head"></view>
+                <view bindtap="handleGetReward" class="benefits__confirm" slot="actions">
+                    <text class="action">立即领取</text>
+                </view>
+            </b>
+        </view>
+    </a>
+</view>

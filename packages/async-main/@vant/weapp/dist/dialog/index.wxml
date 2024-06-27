@@ -1,0 +1,24 @@
+<a bind:close="onClickOverlay" closeOnClickOverlay="{{closeOnClickOverlay}}" customClass="van-dialog van-dialog--{{theme}}{{className}} custom-class" customStyle="width: {{utils.addUnit(width)}};{{customStyle}}" overlay="{{overlay}}" overlayStyle="{{overlayStyle}}" rootPortal="{{rootPortal}}" show="{{show}}" transition="{{transition}}" zIndex="{{zIndex}}">
+    <view class="{{utils.bem( 'dialog__header',{ isolated:!(message||useSlot) } )}}" wx:if="{{title||useTitleSlot}}">
+        <slot name="title" wx:if="{{useTitleSlot}}"></slot>
+        <block wx:elif="{{title}}">{{title}}</block>
+    </view>
+    <slot wx:if="{{useSlot}}"></slot>
+    <view class="{{utils.bem( 'dialog__message',[ theme,messageAlign,{hasTitle:title} ] )}}" wx:elif="{{message}}">
+        <text class="van-dialog__message-text">{{message}}</text>
+    </view>
+    <c customClass="van-dialog__footer--round-button" wx:if="{{theme==='round-button'}}">
+        <d bind:click="onCancel" class="van-dialog__button van-hairline--right" customClass="van-dialog__cancel cancle-button-class" customStyle="color: {{cancelButtonColor}}" loading="{{loading.cancel}}" size="large" wx:if="{{showCancelButton}}">{{cancelButtonText}}</d>
+        <d appParameter="{{appParameter}}" bind:click="onConfirm" bindagreeprivacyauthorization="onAgreePrivacyAuthorization" bindcontact="onContact" binderror="onError" bindgetRealTimePhoneNumber="onGetRealTimePhoneNumber" bindgetphonenumber="onGetPhoneNumber" bindgetuserinfo="onGetUserInfo" bindlaunchapp="onLaunchApp" bindopensetting="onOpenSetting" businessId="{{businessId}}" buttonId="{{confirmButtonId}}" class="van-dialog__button" customClass="van-dialog__confirm confirm-button-class" customStyle="color: {{confirmButtonColor}}" lang="{{lang}}" loading="{{loading.confirm}}" openType="{{confirmButtonOpenType}}" sendMessageImg="{{sendMessageImg}}" sendMessagePath="{{sendMessagePath}}" sendMessageTitle="{{sendMessageTitle}}" sessionFrom="{{sessionFrom}}" showMessageCard="{{showMessageCard}}" size="large" wx:if="{{showConfirmButton}}">{{confirmButtonText}}</d>
+    </c>
+    <view class="van-hairline--top van-dialog__footer" wx:elif="{{showCancelButton||showConfirmButton}}">
+        <block wx:if="{{showCancelButton}}">
+            <slot name="cancel-button" wx:if="{{useCancelButtonSlot}}"></slot>
+            <b bind:click="onCancel" class="van-dialog__button van-hairline--right" customClass="van-dialog__cancel cancle-button-class" customStyle="color: {{cancelButtonColor}}" loading="{{loading.cancel}}" size="large" wx:else>{{cancelButtonText}}</b>
+        </block>
+        <block wx:if="{{showConfirmButton}}">
+            <slot name="confirm-button" wx:if="{{useConfirmButtonSlot}}"></slot>
+            <b appParameter="{{appParameter}}" bind:click="onConfirm" bindagreeprivacyauthorization="onAgreePrivacyAuthorization" bindcontact="onContact" binderror="onError" bindgetRealTimePhoneNumber="onGetRealTimePhoneNumber" bindgetphonenumber="onGetPhoneNumber" bindgetuserinfo="onGetUserInfo" bindlaunchapp="onLaunchApp" bindopensetting="onOpenSetting" businessId="{{businessId}}" buttonId="{{confirmButtonId}}" class="van-dialog__button" customClass="van-dialog__confirm confirm-button-class" customStyle="color: {{confirmButtonColor}}" lang="{{lang}}" loading="{{loading.confirm}}" openType="{{confirmButtonOpenType}}" sendMessageImg="{{sendMessageImg}}" sendMessagePath="{{sendMessagePath}}" sendMessageTitle="{{sendMessageTitle}}" sessionFrom="{{sessionFrom}}" showMessageCard="{{showMessageCard}}" size="large" wx:else>{{confirmButtonText}}</b>
+        </block>
+    </view>
+</a>

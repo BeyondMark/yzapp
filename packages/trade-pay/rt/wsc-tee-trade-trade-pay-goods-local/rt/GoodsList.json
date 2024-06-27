@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./GoodsMessage",
+    "b": "./Good",
+    "c": "./VirtualGood",
+    "d": "./Hotel",
+    "e": "./GoodsPrice",
+    "f": "/@y-open/vt/dist/cell/index",
+    "_": "../../../../../components/_/index"
+  }
+}

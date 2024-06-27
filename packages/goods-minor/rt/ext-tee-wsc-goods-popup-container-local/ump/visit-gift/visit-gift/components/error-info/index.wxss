@@ -1,0 +1,30 @@
+.c93d4c {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 140px;
+  color: #fff;
+}
+.c8f35f {
+  font: 24px PingFangSC-Semibold, sans-serif;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(214, 75, 0, 0.5);
+  line-height: 33px;
+}
+.c3a622 {
+  margin-top: 6px;
+  font-size: 12px;
+}
+.a73c9 {
+  width: 180px;
+  height: 40px;
+  background: #fff;
+  border-radius: 22px;
+  margin: auto;
+  font: 16px PingFangSC-Medium, sans-serif;
+  line-height: 40px;
+  color: #fa1919;
+  margin-top: 16px;
+  margin-bottom: 0;
+}

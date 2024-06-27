@@ -1,0 +1,4 @@
+{
+  "navigationBarTitleText": "订单分享",
+  "componentPlaceholder": { "van-toast": "_", "van-notify": "_" }
+}

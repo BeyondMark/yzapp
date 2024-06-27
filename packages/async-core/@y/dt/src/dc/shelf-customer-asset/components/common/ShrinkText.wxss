@@ -1,0 +1,6 @@
+.shrink-container {
+  height: 100%;
+}
+.shrink-container .inner {
+  display: inline;
+}

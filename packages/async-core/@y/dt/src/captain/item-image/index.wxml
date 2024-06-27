@@ -1,0 +1,15 @@
+<view class="cap-item-image {{itemImageClass}} {{skeletonShow}}" style="{{style}}">
+    <image bind:load="_p" class="{{'image'}} {{opt.fill}} tee-image" data-t="{{ load:{en:'loadSuccess'} }}" lazyLoad="{{true}}" mode="{{mode}}" src="{{imageUrl}}"></image>
+    <image class="{{'image'}} {{opt.fill}} {{'preImage'}} tee-image" lazyLoad="{{true}}" mode="{{mode}}" src="{{opt.preImg}}" wx:if="{{showPreImg}}"></image>
+    <view class="{{true?'image-mask':''}} {{opt.mask==='soldout'?'soldout':''}} {{opt.mask==='end'?'end':''}}" style="{{maskStyle}}" wx:if="{{opt.mask==='soldout'||opt.mask==='end'}}"></view>
+    <view class="corner-mark {{'mark-'+opt.cornerMark}}" wx:if="{{cornerMarkIsIcon}}">
+        <view class="corner-mark-bg"></view>
+        <a bind:_init="_tic" class="corner-mark-icon" name="{{opt.cornerMark}}" size="{{opt.cornerMarkSize}}"></a>
+    </view>
+    <view class="corner-key-label" wx:if="{{opt.showKeyLabel&&opt.keyLabel}}"> {{opt.keyLabel}} </view>
+    <view class="corner-mark-img" style="{{cornerMarkStyle}}" wx:elif="{{opt.cornerMark!==false}}"></view>
+    <slot name="corner-mark"></slot>
+    <view class="girdle">
+        <slot name="girdle"></slot>
+    </view>
+</view>

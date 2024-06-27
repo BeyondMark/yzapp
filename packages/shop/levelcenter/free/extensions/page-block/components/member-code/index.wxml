@@ -1,0 +1,26 @@
+<b class="code-dialog" customStyle="background-color: transparent;" show="{{isShow}}" showConfirmButton="{{false}}">
+    <view class="content">
+        <view class="gc-title-wrap">
+            <view class="gc-card-title ">
+                <view>
+                    <image class="avatar" src="{{userInfo.avatar||'https://img01.yzcdn.cn/public_files/aa912255b9328b35a53d548b0979086d.png'}}"></image>
+                </view>
+                <view class="gc-detail">
+                    <view class="gc-nickname">{{userInfo.nickname}}</view>
+                    <a class="gc-level" currentFreeLevel="{{level}}"></a>
+                </view>
+            </view>
+        </view>
+        <view class="gc-content-wrap">
+            <view class="qrcode-img-bot" style="{{barCode}}"></view>
+            <view class="qrcode-card">{{identityNo}}</view>
+            <view class="qrcode-img" style="{{qrCode}}"></view>
+            <view class="member-code__tips" wx:if="memberCodeRefreshInterval > 0">二维码每隔 {{memberCodeRefreshInterval/1000}} 秒自动更新</view>
+            <view class="member-code-expired" wx:if="{{qrCodeExpired&&qrCode}}">
+                <view>会员码已过期</view>
+                <c bindtap="handleClickRecall" customClass="recall-btn" plain="{{true}}" size="small" type="danger">点击刷新</c>
+            </view>
+        </view>
+    </view>
+    <d bindtap="handleCloseClick" customClass="dialog-close" name="close"></d>
+</b>

@@ -1,0 +1,6 @@
+<view>
+    <a amount="{{realPay}}" bind:_init="_tic" bind:onClose="_p" bind:onConfirm="_p" bind:onRefreshData="_p" data-t="{{ onConfirm:{en:'onPrepayCardConfirm'},onClose:{en:'onRecommendClose'},onRefreshData:{en:'onRefreshData'} }}" disabledBalance="{{isSelectRc}}" hasExclusionCard="{{hasExclusionCard}}" kdtId="{{kdtId}}" newRecommend="{{newRecommend}}" payAssetActivityTagDesc="{{tagDesc}}" prepayCardTotalAmount="{{prepayCardTotalAmount}}" recommendDetaid="{{recommendDetaid}}" rmId="b7-66" show="{{showRecommend}}" themeColors="{{themeColors}}" toRecharge="{{toRecharge}}" useCustomerDiscount="{{rechargeDiscountInfo}}" useStoreBalancePayInFull="{{useStoreBalancePayInFull}}" useStoredMemberCustomerDiscount="{{useStoredMemberCustomerDiscount}}" valueCard="{{valueCard}}" wx:if="{{rmId==='b7-64'}}"></a>
+    <b bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'onCloseTip'} }}" show="{{showStoredDiscountTips}}" title="储值专享折扣说明">使用条件：使用“余额/卡”全额支付时，可享此优惠
+    额外说明：如可用金额不足，可前往“个人中心-余额-充值中心”进行充值
+  </b>
+</view>

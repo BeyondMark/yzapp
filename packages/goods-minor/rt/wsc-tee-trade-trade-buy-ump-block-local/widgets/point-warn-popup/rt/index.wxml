@@ -1,0 +1,6 @@
+<a bind:_init="_tic" closeOnClickOverlay="{{false}}" customClass="c59d8d" show="{{!points.available}}" wx:if="{{points.usePoints}}">
+    <view>{{pointsName}}不足，请重新选择规格或下单方式</view>
+    <view class="c1cb25">当前余额：{{point}}</view>
+    <view bind:tap="_p" class="a6f5c ce25d" data-t="{{ tap:{en:'onBack'} }}" style="color:{{themeColors.general}}">    我知道了
+  </view>
+</a>

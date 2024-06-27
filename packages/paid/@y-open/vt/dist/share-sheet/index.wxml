@@ -1,0 +1,17 @@
+<a bind:_init="_tic" bind:click-overlay="_p" bind:close="_p" class="{{classes.root}}" closeOnClickOverlay="{{closeOnClickOverlay}}" customClass="{{popupClass}}" data-t="{{ close:{en:'onClose'},clickOverlay:{en:'onClickOverlay'} }}" duration="{{duration}}" overlay="{{overlay}}" position="bottom" round="{{true}}" safeAreaInsetBottom="{{safeAreaInsetBottom}}" show="{{show}}" zIndex="{{zIndex}}">
+    <view class="{{classes.header}}">
+        <view class="{{classes.title}}">
+            <slot name="title"></slot>
+        </view>
+        <view class="{{classes.title}}" wx:if="{{title}}">{{title}}</view>
+        <view class="{{classes.description}}">
+            <slot name="description"></slot>
+        </view>
+        <view class="{{classes.description}}" wx:if="{{description}}">{{description}}</view>
+    </view>
+    <block wx:if="{{isMulti}}">
+        <b bind:_init="_tic" bind:select="_p" data-t="{{ select:{en:'onSelect'} }}" options="{{item}}" optionsAlign="{{optionsAlign}}" optionsClass="options-class" showBorder="{{index!==0}}" wx:for="{{options}}" wx:key="index"></b>
+    </block>
+    <b bind:_init="_tic" bind:select="_p" data-t="{{ select:{en:'onSelect'} }}" options="{{options}}" optionsAlign="{{optionsAlign}}" optionsClass="options-class" wx:else></b>
+    <button bind:tap="_p" class="bf595" data-t="{{ tap:{en:'onCancel'} }}" type="button" wx:if="{{cancelText}}"> {{cancelText}} </button>
+</a>

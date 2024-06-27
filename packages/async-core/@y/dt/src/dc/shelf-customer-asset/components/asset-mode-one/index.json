@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y/ppt/lib/user-authorize/index",
+    "b": "./../common/MemberCode",
+    "c": "./AssetInfoNavBar",
+    "_": "../../../../../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,13 @@
+<view>
+    <a bind:close="closeCutPop" customClass="cut-success-pop" show="{{showCutSuccess}}">
+        <view class="cut-success-wrapper">
+            <view class="coupon-wrapper">
+                <image class="gift-image"></image>
+                <view class="coupon-tip">老铁稳，一刀帮我砍了<text class="coupon-price">{{userCutPrice}}</text>元</view>
+                <view class="gift-tip">好货不容错过，喜欢就去发起砍价吧</view>
+                <button bindtap="onCreateNewBargain" class="crete-cut-btn">我也要{{bargainDetail.minPrice}}元拿</button>
+            </view>
+            <b bindclick="closeCutPop" class="cut-close" name="close"></b>
+        </view>
+    </a>
+</view>

@@ -1,0 +1,43 @@
+<view class="coupon-box {{endCount?'disable-coupon':''}}">
+    <view class="left-part">
+        <image class="img" src="//img01.yzcdn.cn/upload_files/2023/09/25/FovbJTSV7STAm-xqpPv80129T_FJ.png"></image>
+    </view>
+    <view class="right-part">
+        <view class="coupon-content-wrap">
+            <view class="content-desc">
+                <text class="name" wx:if="{{couponData.couponName}}">{{couponData.couponName}}</text>
+                <text wx:else>
+                    <text class="pre-unit">{{couponData.preUnit}}</text>
+                    <text class="num" style="{{valueStyle}}" wx:if="{{!couponData.hasDecimal}}">{{couponData.value}}</text>
+                    <text class="decimal-num" wx:else>
+                        <text class="integer">{{couponData.integerPart}}</text>
+                        <text class="decimal">.{{couponData.decimalPart}}</text>
+                    </text>
+                    <text class="unit">{{couponData.unit}}</text>
+                </text>
+            </view>
+            <view class="desc" wx:if="{{couponData.useCondition}}">{{couponData.useCondition}}</view>
+        </view>
+        <view>
+            <a bind:change="handleChange" millisecond="{{true}}" time="{{time}}" useSlot="{{true}}" wx:if="{{shouldCount}}">
+                <view class="time-count">
+                    <text class="time-item">{{timeData.hours}}</text>
+                    <text class="time-point">:</text>
+                    <text class="time-item">{{timeData.minutes}}</text>
+                    <text class="time-point">:</text>
+                    <text class="time-item">{{timeData.seconds}}</text>
+                    <text class="time-point">.</text>
+                    <text class="time-item">{{timeData.milliseconds}}</text>
+                    <text class="last-desc">后到期</text>
+                </view>
+            </a>
+            <view class="coupon-title" wx:else>{{couponData.title}}</view>
+        </view>
+    </view>
+    <view class="coupon-num" wx:if="{{coupon.number>1}}">x{{couponData.number}}</view>
+    <view class="endCount" wx:if="{{endCount}}">已过期</view>
+    <view class="coupon-status" wx:elif="{{couponStatus}}">
+        <view class="status">{{couponStatus}}</view>
+    </view>
+    <b bind:tap="linkToCoupon" block="{{true}}" class="coupon-link" color="#E7C5A5" customClass="coupon-link" round="{{true}}" size="mini" wx:if="{{originalStatus===1}}">去使用</b>
+</view>

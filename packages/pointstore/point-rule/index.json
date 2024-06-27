@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "积分规则",
+  "navigationBarBackgroundColor": "#FFF",
+  "usingComponents": {
+    "a": "/components/znb-web-view/index",
+    "_": "../../../components/_/index"
+  }
+}

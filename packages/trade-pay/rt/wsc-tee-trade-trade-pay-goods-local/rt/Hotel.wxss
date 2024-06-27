@@ -1,0 +1,46 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.a100f {
+  color: #666;
+  text-align: left;
+}
+.hotel__label {
+  max-width: 75px;
+}
+.d861e,
+.c94452,
+.c3ecd8 {
+  background-color: #fafafa;
+}
+.c3ecd8 {
+  line-height: 28px;
+}
+.c3ecd8 .t-cell__label {
+  font-size: inherit;
+}
+.a100f {
+  color: #666;
+  text-align: left;
+}
+.c149c7 {
+  margin-right: 19px;
+}
+.d861e {
+  color: #666;
+}
+.c94452 {
+  padding: 0 0 20px 16px;
+  font-size: 14px;
+  color: #9b9b9b;
+  display: flex;
+  align-items: center;
+}
+.d7d5b {
+  margin-right: 19px;
+}
+.hotel__stock {
+  text-align: right;
+  color: #9b9b9b;
+}

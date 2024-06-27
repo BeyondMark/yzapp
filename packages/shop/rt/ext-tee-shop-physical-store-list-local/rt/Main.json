@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../components/store-list-com",
+    "_": "../../../../../components/_/index"
+  }
+}

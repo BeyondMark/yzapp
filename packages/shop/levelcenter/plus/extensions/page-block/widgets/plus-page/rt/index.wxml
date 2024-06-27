@@ -1,0 +1,35 @@
+<block wx:if="{{isFeatureMemberCenter}}">
+    <view class="feature-page__top-hook"></view>
+    <o rmId="b15-2" wx:if="{{rmId==='b15-0'}}"></o>
+</block>
+<view class="container {{showcaseClass}}" wx:else>
+    <g bindhasAuth="handleAllTriggerEvent" bizDataMap="{{bizDataMap}}" descIcon="{{true}}" descLink="{{freeCenterLink}}" link="{{renewLink}}" linkQuery="{{kdt_id:kdtId,alias:nowLevelAlias}}" linkText="{{hasAgreement?'自动续费管理':''}}" userLevel="{{userLevel}}"></g>
+    <view class="levels-wrapper">
+        <view class="card-bg">
+            <view class="bg-img"></view>
+        </view>
+        <view class="swiper-wrapper">
+            <swiper bindchange="handleSwipeChange" bindtap="handleSwipeChange" current="{{current}}" nextMargin="{{10}}" style="height: {{height+'px'}}">
+                <swiper-item wx:for="{{cards}}" wx:key="unique">
+                    <a benefitsList="{{nowBenefitList}}" bestPirce="{{bestPrice}}" bestType="{{bestType}}" btnShow="{{!isContinous}}" card="{{item.card}}" disabled="{{!item.isEnabled}}" hasAuthorized="{{true}}" height="{{height}}" memberCenterLogoUrl="{{memberCenterLogoUrl}}" redirect="{{url}}" userLevel="{{userLevel}}"></a>
+                </swiper-item>
+            </swiper>
+        </view>
+        <f benefitsList="{{nowBenefitList}}" kdtId="{{kdtId}}" maxRow="{{1}}" nowLevelAlias="{{nowLevelAlias}}"></f>
+        <view class="split-border"></view>
+        <k birthdayPosIndex="{{birthdayPosIndex}}" userLevel="{{userLevel}}" wx:if="{{userLevel.level}}"></k>
+        <n bind:onSkuChange="handleSkuChange" nowLevelAlias="{{nowLevelAlias}}" userLevel="{{userLevel}}"></n>
+        <view class="split-border"></view>
+        <l isMember="{{hasLevel}}" levelAlias="{{nowAlias}}" levelType="pay"></l>
+    </view>
+    <o rmId="b15-2" wx:if="{{rmId==='b15-0'}}"></o>
+    <i bizName="levelcenter~rec" customRecommendName="更多商品推荐" goodsNumber="{{6}}" titleConfig="{{goodsRecommendTitleConfig}}" wx:if="{{isSupportGoodsRecommend}}"></i>
+    <c bind:copy="handleAllTriggerEvent" bind:experience="handleAllTriggerEvent" bind:pay="handleAllTriggerEvent" bind:renew="handleAllTriggerEvent" bindbindMobile="handleAllTriggerEvent" bizDataMap="{{bizDataMap}}" btnText="{{btnText}}" confiromFunciton="{{beforePay}}" currentCycleSku="{{currentCycleSku}}" experienceRenew="{{experienceRenew}}" hasAlias="{{hasAlias}}" hasMobile="{{hasMobile}}" linkTo="{{url}}" nowLevelAlias="{{nowLevelAlias}}" skuInfo="{{nowExperienceSku}}" userLevel="{{userLevel}}" wx:if="{{!isContinous}}"></c>
+    <b cycleSkuInfo="{{currentCycleSku}}" experienceSkuInfo="{{nowExperienceSku}}" id="payViewRef"></b>
+    <d bindbindMobile="handleAllTriggerEvent" bindexperience="handleAllTriggerEvent" bizDataMap="{{bizDataMap}}" hasMobile="{{hasMobile}}" linkTo="{{url}}" skuInfo="{{nowExperienceSku}}" value="{{bindDialogShow}}"></d>
+    <e hasButton="{{!isContinous}}" showPayPlusExtraCls="{{true}}"></e>
+    <j bindnext="finish" wx:if="{{hasLevel}}"></j>
+</view>
+<p id="van-dialog"></p>
+<h id="account-wx-login"></h>
+<m id="van-toast"></m>

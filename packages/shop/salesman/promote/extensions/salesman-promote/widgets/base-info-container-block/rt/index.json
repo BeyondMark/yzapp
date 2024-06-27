@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../components/title/index",
+    "b": "../components/price/index",
+    "c": "/packages/shop/@y/assets-weapp-components/dist/guarantee-detail-bar/index",
+    "d": "../components/activity/index",
+    "e": "../components/salesman-activity/index",
+    "f": "../../level-info-block/rt/index",
+    "_": "../../../../../../../../../components/_/index"
+  }
+}

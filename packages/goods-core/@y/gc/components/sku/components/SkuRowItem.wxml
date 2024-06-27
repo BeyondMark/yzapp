@@ -1,0 +1,21 @@
+<view bind:tap="_p" class="c9b579 {{choosed?'e4d82':''}} {{!choosable?'c15074':''}} {{largeImageMode?'c93382':''}} {{itemPrice?'c9b579--show-price':''}} {{multiSkuDecision.skuDifferentialPrice?'fff31':''}} {{skuValue.isHot||skuValue.isStockHot?'c443b4':''}} {{multiSkuDecision.skuDifferentialPrice&&showImage?'c9ff7e':''}}" data-t="{{ tap:{en:'onSelect'} }}" style="{{lastStyle}}">
+    <image class="c2936b bd231" lazyLoad="true" mode="aspectFill" src="{{skuImage}}" wx:if="{{showImage}}"></image>
+    <view class="c99b3f">
+        <view class="d4bcf">
+            <view class="c5220">{{skuValue.name}}</view>
+        </view>
+        <view class="c86bd6" wx:if="{{itemPrice}}">￥{{itemPrice}}</view>
+    </view>
+    <view catch:tap="_p" data-t="{{ tap:{en:'onPreview',et:'stop'} }}" wx:if="{{largeImageMode}}">
+        <image class="c7e42c bd231" lazyLoad="true" src="https://img01.yzcdn.cn/public_files/bfbefb3052eb92fbdface84f4c2b41e4.png!small.png"></image>
+    </view>
+    <view class="c7021d" wx:if="{{hotLabel}}">
+        <view class="c5e07a">热销</view>
+    </view>
+    <view class="c7021d" wx:if="{{stockLabel}}">
+        <view class="c5e07a">库存紧张</view>
+    </view>
+    <view class="c7021d a6684" wx:if="{{showSoldOutTag}}">
+        <view class="c5e07a">缺货</view>
+    </view>
+</view>

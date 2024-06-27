@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./components/share-activity-sheet-item/index",
+    "b": "/@vant/weapp/dist/popup/index",
+    "c": "/packages/async-main/@vant/weapp/dist/icon/index",
+    "d": "../../../../@vant/weapp/dist/button/index",
+    "e": "../../../../@vant/weapp/dist/action-sheet/index",
+    "_": "../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "c": "_" }
+}

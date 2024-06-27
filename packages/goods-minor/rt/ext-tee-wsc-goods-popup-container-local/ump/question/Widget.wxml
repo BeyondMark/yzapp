@@ -1,0 +1,12 @@
+<a bind:_init="_tic" bind:close="_p" customStyle="border-radius: 6px;" data-t="{{ close:{en:'onClose'} }}" show="{{show}}">
+    <view class="c4da65">
+        <view class="c1adb1">答对问题，完成预约！</view>
+        <view class="da8ac" wx:if="{{questionData}}">
+            <view class="e0e2b">{{questionData.title}}</view>
+            <view bind:tap="_p" class="f3497" data-t="{{ tap:{ en:'onChange',args:[item.key] } }}" wx:for="{{questionData.optionList}}" wx:key="index">
+                <b bind:_init="_tic" checkedColor="#07c160" name="{{item.key}}" value="{{radio}}">{{item.content}}</b>
+            </view>
+        </view>
+        <view bind:tap="_p" class="c02ce8" data-t="{{ tap:{en:'submitAnswer'} }}">答完提交</view>
+    </view>
+</a>

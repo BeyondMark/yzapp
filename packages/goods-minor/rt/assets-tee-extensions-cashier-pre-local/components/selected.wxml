@@ -1,0 +1,8 @@
+<view bind:tap="_p" data-t="{{ tap:{ en:'$emit',args:['show-list'] } }}">
+    <view class="{{classnames.selected}}">
+        <view class="t-text">使用</view>
+        <a bind:_init="_tic" channel="{{channel}}" customStyle="margin: 0 3px" scale="0.9" style="height: 20px"></a>
+        <view class="t-text"> {{displayName}}，{{instalment&&instalment.chargePayer?'本单0手续费':'点击更换支付方式'}} </view>
+        <b bind:_init="_tic" color="#bebfbe" customStyle="margin-left: 4px" name="arrow" size="12"></b>
+    </view>
+</view>

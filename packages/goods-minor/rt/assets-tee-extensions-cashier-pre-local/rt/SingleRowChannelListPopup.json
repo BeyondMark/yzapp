@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../components/list",
+    "_": "../../../../../components/_/index"
+  }
+}

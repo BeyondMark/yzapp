@@ -1,0 +1,63 @@
+.mgr15 {
+  margin-right: 15rpx;
+}
+.top3 {
+  position: relative;
+  top: 3rpx;
+}
+.content-desc {
+  font-family: PingFang SC;
+  display: flex;
+  border-radius: 16rpx;
+  background-image: url(https://b.yzcdn.cn/public_files/2022/7/23/mapbg.png);
+  background-size: 100% 100%;
+  padding: 20rpx 0 0 0;
+}
+.content-desc-left {
+  width: 100%;
+  flex: 1;
+}
+.content-desc-left-li {
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 10rpx;
+  align-items: baseline;
+  display: flex;
+  justify-content: flex-start;
+}
+.content-desc-left-li .desc-icon {
+  margin-right: 15rpx;
+  position: relative;
+  top: 4rpx;
+  font-size: 29rpx;
+  width: 32rpx;
+  height: 32rpx;
+  display: block !important;
+  flex: none;
+}
+.content-desc-right {
+  flex: none;
+  margin-left: 10rpx;
+  width: 120rpx;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.content-desc-right .desc-icon-2 {
+  font-size: 20rpx;
+  width: 22rpx;
+  height: 22rpx;
+  display: block !important;
+  flex: none;
+}
+.content-desc-right-location {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #46555c;
+}
+.content-desc-right-location-name {
+  font-size: 20rpx;
+  margin-top: 8rpx;
+}

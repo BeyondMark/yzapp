@@ -1,0 +1,27 @@
+.behavior-layout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 10001;
+}
+.behavior-layout.hide {
+  display: none;
+}
+.behavior-layout .behavior-layout--main {
+  padding: 20px 18px 24px;
+  width: 280px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  border-radius: 4px;
+  background: #fff;
+  user-select: none;
+}

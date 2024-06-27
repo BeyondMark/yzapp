@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "a": "/packages/shop/shopnote/detail/extensions/page-setup/widgets/Main/rt/index",
+    "b": "/packages/async-main/@vant/weapp/dist/toast/index",
+    "c": "/packages/async-main/@vant/weapp/dist/dialog/index",
+    "d": "/ext-tee-wsc-dc/extensions/page-style/rt/Main",
+    "e": "../../../async-tee/@y-open/vt/native/weapp/toast/index/index",
+    "f": "../../../async-tee/@y-open/vt/native/weapp/dialog/index/index",
+    "_": "../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_", "c": "_", "e": "_", "f": "_" }
+}

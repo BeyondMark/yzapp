@@ -1,0 +1,7 @@
+<view class="end-card-wrap">
+    <view class="end-card">
+        <view class="end-card-icon"></view>
+        <view class="end-card-text">活动已结束</view>
+        <button bind:tap="toHomepage" class="end-card-btn">进店逛逛</button>
+    </view>
+</view>

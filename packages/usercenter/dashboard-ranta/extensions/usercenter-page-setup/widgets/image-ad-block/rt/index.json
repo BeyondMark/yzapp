@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../../../../components/showcase/captain-components/image/index",
+    "_": "../../../../../../../../components/_/index"
+  }
+}

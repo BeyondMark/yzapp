@@ -1,0 +1,6 @@
+<view class="shopnote-keeper-talk">
+    <a title="{{noteData.title}}"></a>
+    <c externalClasses="shopnote-sp-time" time="{{noteData.publishTime}}" wx:if="{{noteData.showBottomTime}}"></c>
+    <b bind:shareclick="shareClick" bind:showtoast="showToast" bind:thumbclick="thumbClick" goodsNum="{{goodsInfo.contentGoods.length}}" showGoodsBtn="{{!!goodsInfo.goods.length}}" thumbsStatus="{{thumbsStatus}}"></b>
+    <d bind:closeClick="closeClick" goodsList="{{goodsInfo.contentGoods}}" show="{{toastShow}}"></d>
+</view>

@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@vant/weapp/dist/popup/index",
+    "b": "/components/account/user-authorize/index",
+    "c": "../../../../../../common/components/theme-view/index",
+    "_": "../../../../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,4 @@
+<view wx:if="{{jumpConfig.isActive}}">
+    <view catchtap="handleBack" class="wscpage-jump {{jumpConfig.inNavPage?'wscpage-jump--nav-page':''}}" wx:if="{{jumpConfig.showReturnBtn}}">
+        <view class="van-arrow"></view>返回</view>
+</view>

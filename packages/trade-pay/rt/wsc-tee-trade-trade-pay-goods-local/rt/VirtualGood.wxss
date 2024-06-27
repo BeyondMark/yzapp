@@ -1,0 +1,42 @@
+.c7ec0c {
+  background-color: #fff !important;
+}
+.c23b13 {
+  height: 24px;
+  padding: 0 10px;
+  line-height: 22px;
+}
+.c5ebcc {
+  margin-bottom: 10px;
+  font-size: 14px !important;
+}
+.c64fc1 {
+  font-size: 10px;
+  color: #666;
+}
+.c7ec0c__quota,
+.c7ec0c__stock {
+  padding-right: 2px;
+  font-size: 10px;
+  line-height: 26px;
+  color: #999;
+}
+.c7ec0c__quota,
+.c7ec0c__stepper,
+.c7ec0c__stock {
+  display: inline-block;
+  vertical-align: middle;
+}
+.c7ec0c__input,
+.c7ec0c__minus,
+.c7ec0c__plus {
+  width: 36px !important;
+  height: 26px !important;
+  color: #333;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.c7ec0c__input {
+  font-size: 12px !important;
+  line-height: 24px !important;
+}

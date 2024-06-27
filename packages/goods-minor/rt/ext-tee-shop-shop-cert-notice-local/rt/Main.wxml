@@ -1,0 +1,6 @@
+<view class="cert-notice" wx:if="{{isShow}}">
+    <view bind:tap="_p" class="c7a288" data-t="{{ tap:{en:'triggerPopup'} }}">
+        <a bind:_init="_tic" color="#155BD4" name="info-o" size="14"></a> {{content}} <a bind:_init="_tic" color="#323233" customClass="c1d5f3" name="arrow" size="14"></a>
+    </view>
+    <b bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'triggerPopup'} }}" isWsc="{{isWsc}}" show="{{showPopup}}"></b>
+</view>

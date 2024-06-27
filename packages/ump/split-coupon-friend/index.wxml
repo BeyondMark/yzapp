@@ -1,0 +1,14 @@
+<a>
+    <view class="split-coupon-friend">
+        <view class="split-coupon-friend__container">
+            <view class="split-coupon-friend-header">
+                <image class="split-coupon-friend-header__img" mode="aspectFit" src="https://b.yzcdn.cn/public_files/bef99741b2b0a0c3fd064049b8f1e171.png"></image>
+                <f></f>
+            </view>
+            <c wx:if="{{hasResult}}"></c>
+        </view>
+        <b wx:if="{{hasResult}}"></b>
+        <d></d>
+        <e></e>
+    </view>
+</a>

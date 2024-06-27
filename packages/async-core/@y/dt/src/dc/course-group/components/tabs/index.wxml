@@ -1,0 +1,6 @@
+<view class="{{classWrap}}" wx:if="{{opt.groupList.length}}">
+    <view class="tab-wrapper" style="{{opt.groupList.length===4&&opt.templateType===0?'justify-content: space-between':''}}" wx:if="{{opt.templateType!==0?opt.groupList.length>=1:opt.groupList.length>1}}">
+        <view bind:tap="_p" class="{{'tab-item'}} {{opt.groupList.length>=4?' tab-item-more':''}}" data-t="{{ tap:{ en:'setActiveTab',args:[index] } }}" style="{{'background-color: '+(index===currentGroup?opt.templateType===1?'#fff':opt.menuType!==0?themeColors.general:'':'')}}; {{'border-width: '+(index===currentGroup&&opt.menuType!==0?0:'')}}; {{'color: '+(opt.templateType!==1&&index===currentGroup?opt.menuType!==0?'#fff':themeColors.general:'')}}" wx:for="{{opt.groupList}}" wx:key="alias"> {{item.displayTitle}} <view class="tab-item-active" style="{{'background-color: '+themeColors.general}}" wx:if="{{index===currentGroup&&(opt.menuType===0||opt.templateType===1)}}"></view>
+        </view>
+    </view>
+</view>

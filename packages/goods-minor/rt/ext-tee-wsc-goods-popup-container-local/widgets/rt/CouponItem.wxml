@@ -1,0 +1,16 @@
+<view class="coupon-item {{customClass}} {{couponItemDisabled}}">
+    <view class="coupon-item__value">
+        <view class="coupon-detail">
+            <view class="coupon-value">
+                <view class="t-text" style="{{itemFontSize}}">{{coupon.value}}</view>
+                <view class="unit t-text" wx:if="{{coupon.unit}}">{{coupon.unit}}</view>
+            </view>
+        </view>
+        <view class="coupon-condition">{{coupon.condition}}</view>
+    </view>
+    <view class="coupon-item__content">
+        <view class="coupon-title">{{coupon.title}}</view>
+        <view class="coupon-time">{{coupon.time}}</view>
+    </view>
+    <view bind:tap="_p" class="coupon-item__btn" data-t="{{ tap:{en:'subscribeMessage'} }}"> 去使用 </view>
+</view>

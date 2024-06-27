@@ -1,0 +1,6 @@
+<view capture-bind:tap="onTap" class="user-authorize-native wrapper-class">
+    <a allowDeny="{{allowDeny}}" authTypeList="{{authTypeList}}" bind:auth-popup-show="onPopupShow" bind:fail="onFail" bind:next="onSuccess" bizDataMap="{{bizDataMap}}" buttonClass="btn-class" customStyle="{{customStyle}}" kdtId="{{kdtId}}" popupCustomStyle="{{popupCustomStyle}}" protocolIsCloudSlot="{{protocolIsCloud}}" protocolSource="{{protocolSource}}" scene="{{scene}}" trigger="{{trigger}}" type="{{type}}" zIndex="{{zIndex}}">
+        <slot></slot>
+        <b slot="ui-component" wx:if="{{protocolIsCloud}}"></b>
+    </a>
+</view>

@@ -1,0 +1,6 @@
+<view class="{{'c2f1d4'}} {{customClass}}" plain="{{themeTag.plain}}" style="{{customStyle}}">
+    <view class="{{'c718ba'}} {{containerClass}}" style="{{containerStyle}}"></view>
+    <a bind:_init="_tic" customClass="{{['c98fd6',innerClass]}}" hairline="{{themeTag.plain}}" plain="{{themeTag.plain}}" style="{{innerStyle}}">
+        <slot></slot>
+    </a>
+</view>

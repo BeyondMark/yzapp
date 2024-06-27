@@ -1,0 +1,9 @@
+<a bind:close="close" closeIcon="arrow-left" closeIconPosition="top-left" closeable="{{nested}}" customClass="common-popup" customStyle="z-index: 2003; {{customStyle}};max-height: {{navHeight}}px;" position="bottom" round="{{true}}" show="{{show}}" wx:if="{{inited}}">
+    <view class="common-popup__title" wx:if="{{title}}">{{title}}</view>
+    <scroll-view class="common-popup__content" scrollY="{{true}}" style="max-height: {{maxScrollHeight}}px; min-height: {{minScrollHeight}}px; {{contentStyle}}">
+        <slot></slot>
+    </scroll-view>
+    <view class="common-popup__button-wrapper" wx:if="{{!nested}}">
+        <b bg="main-bg" bind:tap="clickBtn" block="{{true}}" color="main-text" customClass="common-popup__button">{{button||'我知道了'}}</b>
+    </view>
+</a>

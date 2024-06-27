@@ -1,0 +1,18 @@
+<view class="feat-video__comment">
+    <view class="feat-video__comment__header">
+        <view class="feat-video__comment__name">{{comment.nickname}}</view>
+        <view class="feat-video__comment__likes">
+            <view class="feat-video__comment__likes-count">{{comment.favoriteCount}}</view>
+            <image bindtap="handleClickCommentHeart" data-comment="{{comment}}" data-comment_index="{{comment}}" src="{{comment.favorited?'https://b.yzcdn.cn/public_files/2018/08/26/addc72d4ab0d68cbb47bede769861460.png':'https://b.yzcdn.cn/public_files/2018/08/26/41d6a65a7c6702a9c683f7bf0a7990fa.png'}}"></image>
+        </view>
+    </view>
+    <view class="feat-video__comment__content">{{comment.comment}}</view>
+    <view class="feat-video__comment__date">{{comment.createdAtStr}}</view>
+    <view class="feat-video__comment__reply" wx:if="{{comment.commentList&&comment.commentList.length}}">
+        <view class="feat-video__comment__header">
+            <view class="feat-video__comment__name">{{comment.commentList[0].nickname}}</view>
+        </view>
+        <view class="feat-video__comment__content">{{comment.commentList[0].comment}}</view>
+        <view class="feat-video__comment__date">{{comment.commentList[0].createdAtStr}}</view>
+    </view>
+</view>

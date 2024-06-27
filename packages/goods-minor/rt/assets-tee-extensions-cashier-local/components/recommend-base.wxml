@@ -1,0 +1,10 @@
+<view class="zan-pay-recommend__base">
+    <view class="zan-pay-recommend__left">
+        <a bind:_init="_tic" channel="{{lowercase}}" scale="0.8"></a>
+        <view>
+            <view class="zan-pay-recommend__text zan-pay-recommend__text--primary"> {{channel.channelNotice}} </view>
+            <view class="zan-pay-recommend__text zan-pay-recommend__text--tip" wx:if="{{tip}}"> {{tip}} </view>
+        </view>
+    </view>
+    <slot></slot>
+</view>

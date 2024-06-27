@@ -1,0 +1,3 @@
+<view class="dc-title-text" style="{{wrapStyle}}">
+    <a _opt="{{opt}}" bind:_init="_tic" bind:btn-click="_p" data-t="{{ btnClick:{en:'handleClick'} }}"></a>
+</view>

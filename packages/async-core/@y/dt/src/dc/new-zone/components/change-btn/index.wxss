@@ -1,0 +1,25 @@
+.t-text {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.change-btn {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4px;
+  padding: 6px 0;
+  text-align: center;
+  color: #969799;
+  font-size: 12px;
+}
+.change-icon {
+  width: 11px;
+  height: 11px;
+  background-image: url(https://img01.yzcdn.cn/upload_files/2021/08/16/FgekwVaQHv1ZS6O6_vQVj2Dyh2vi.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.change-txt {
+  margin-left: 2px;
+}

@@ -1,0 +1,8 @@
+<view class="d4c29">
+    <image class="c25055 bd231" lazyLoad="true" src="https://img01.yzcdn.cn/public_files/010eb51fc228a1ccc3cef30d5c5b843d.png"></image>
+    <view class="c1e2c0">没有可以购买的商品</view>
+    <view class="a2456">
+        <a bind:_init="_tic" bind:tap="_p" color="var(--icon, #323233)" customClass="c3de0a" data-t="{{ tap:{en:'reselectGoods'} }}" plain="{{true}}" round="{{true}}" type="danger">      去逛逛
+    </a>
+    </view>
+</view>

@@ -1,0 +1,82 @@
+.tee-image {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.show-qr-code {
+  position: relative;
+}
+.show-qr-code .card-img {
+  border-radius: 8px;
+  border: 1px solid #f4f4f4;
+  width: 79px;
+  height: 79px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.show-qr-code .card-desc {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+.show-qr-code .type-one {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 155px;
+}
+.show-qr-code .type-one .card-desc {
+  margin-top: 8px;
+  text-align: center;
+}
+.show-qr-code .type-two {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 108px;
+  padding: 0 16px;
+}
+.show-qr-code .type-two .card-title {
+  color: #a8865d;
+  font-weight: 500;
+  line-height: 24px;
+  font-size: 14px;
+}
+.show-qr-code .type-two .card-desc {
+  color: #999 !important;
+}
+.show-qr-code .type-three {
+  justify-content: center;
+  align-items: center;
+  height: 155px;
+}
+.show-qr-code .type-three,
+.show-qr-code .type-three .card-each {
+  display: -webkit-flex;
+  display: flex;
+}
+.show-qr-code .type-three .card-line {
+  width: 1px;
+  height: 75px;
+  position: relative;
+  top: 2px;
+  background: #eee;
+}
+.show-qr-code .type-three .card-item {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 130px;
+}
+.show-qr-code .type-three .card-desc {
+  margin-top: 10px;
+  text-align: center;
+}

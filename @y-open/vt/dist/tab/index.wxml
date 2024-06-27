@@ -1,0 +1,3 @@
+<view class="{{paneClass}}" hidden="{{!shouldShow}}">
+    <slot wx:if="{{shouldRender}}"></slot>
+</view>

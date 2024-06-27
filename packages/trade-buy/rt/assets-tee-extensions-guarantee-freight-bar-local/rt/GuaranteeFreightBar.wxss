@@ -1,0 +1,7 @@
+.fixed-screen-wrap {
+  position: fixed;
+  top: -1000px;
+  left: -1000px;
+  height: 16px;
+  width: 59px;
+}

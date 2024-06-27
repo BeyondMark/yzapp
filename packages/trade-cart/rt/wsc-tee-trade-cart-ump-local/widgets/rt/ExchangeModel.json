@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../exchange-list/rt/index",
+    "b": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "c": "/@y-open/vt/dist/popup/index.weapp",
+    "d": "/@y-open/vt/dist/button/index.weapp",
+    "e": "/packages/async-tee/@y-open/vt/native/weapp/toast/index/index",
+    "f": "/packages/async-tee/@y-open/vt/native/weapp/loading/index/index",
+    "g": "./../exchange-list/ExchangeError",
+    "_": "../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_", "e": "_", "f": "_" }
+}

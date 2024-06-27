@@ -1,0 +1,39 @@
+.point-deduction__value {
+  text-align: right;
+  font-weight: var(--theme-common-price-font-weight, 800);
+  font-family: Avenir;
+  justify-content: flex-end;
+  color: #323233;
+}
+.point-deduction__title,
+.point-deduction__value {
+  display: flex;
+  align-items: center;
+}
+.point-deduction__title .t-icon {
+  margin-left: 4px;
+}
+.point-deduction__title .icon-unchecked {
+  color: #969799;
+}
+.point-deduction__question {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  color: #969799;
+  margin-left: 4px;
+  line-height: normal;
+}
+.point-deduction__disable--value {
+  color: #969799 !important;
+  font-weight: 400 !important;
+}
+.long-cell {
+  padding: var(--theme-page-cell-padding-top, 10px)
+    var(--theme-page-cell-padding-right, 12px)
+    var(--theme-page-cell-padding-bottom, 10px)
+    var(--theme-page-cell-padding-left, 12px) !important;
+}
+.long-cell > .t-cell__title {
+  flex: none;
+}

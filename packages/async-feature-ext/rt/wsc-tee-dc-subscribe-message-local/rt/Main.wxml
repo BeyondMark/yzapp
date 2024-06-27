@@ -1,0 +1,5 @@
+<view>
+    <block wx:if="{{showTips}}">
+        <a bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'closeTips'} }}" imgTop="{{imgTop}}" show="{{showTips}}" wx:if="{{rmId==='b1-22'||rmId==='b7-45'||rmId==='b0-22'||rmId==='b33-17'}}"></a>
+    </block>
+</view>

@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y-open/vt/dist/popup/index.weapp",
+    "b": "/packages/async-tee/@y-open/vt/dist/action-sheet/index",
+    "c": "/packages/async-tee/@y-open/vt/dist/calendar/index",
+    "d": "/packages/async-tee/@y-open/vt/dist/picker/index",
+    "_": "../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_", "c": "_", "d": "_" }
+}

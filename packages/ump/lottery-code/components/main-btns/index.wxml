@@ -1,0 +1,4 @@
+<view class="btn-content">
+    <a authTypeList="{{btn.authList||[]}}" bind:next="handleBtnClick" btnClass="card-btn {{index===1?'card-btn__bottom':''}} {{btn.type==='DISABLE'&&'card-btn__disable'}} {{btn.subText?'card-btn__sub':''}} {{btn.type==='SHARE'&&'none-animation'}}" data-type="{{btn.type}}" wx:for="{{actionBtns}}" wx:for-item="btn" wx:key="{{ btn.type }}">{{btn.text}}<text class="card-btn-text" wx:if="{{btn.subText}}">{{btn.subText}}</text>
+    </a>
+</view>

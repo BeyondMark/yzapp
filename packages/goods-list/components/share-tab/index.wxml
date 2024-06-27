@@ -1,0 +1,16 @@
+<view class="c6182f" style="height: {{navBarHeight}};">
+    <view class="a1a05" style="padding-top: {{navPaddingTop}}">
+        <view class="{{hasLastRoute?'c616aa':'c753c'}}" wx:if="{{navPaddingTop}}">
+            <a bind:tap="toBack" class="c616aa-back" name="https://img01.yzcdn.cn/upload_files/2024/05/22/Fu7bkgyGmlEwCPYRD7Kbs0hhGBr8.png" size="21" wx:if="{{hasLastRoute}}"></a>
+            <a bind:tap="toHome" class="c616aa-home" name="https://b.yzcdn.cn/goods_share/home_black.png" size="25"></a>
+        </view>
+        <view wx:if="{{hasLoadAll}}">
+            <view wx:if="{{showTab}}">
+                <view class="c22b17 c649e4">列表<view class="c3c1bb"></view>
+                </view>
+                <view bind:tap="onGotoVideoList" class="c22b17" style="margin-left: 20px">推荐</view>
+            </view>
+            <view class="c1e474" wx:else>{{navBarTitle}}</view>
+        </view>
+    </view>
+</view>

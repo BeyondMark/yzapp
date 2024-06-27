@@ -1,0 +1,23 @@
+<view bindtap="handleRootTap" style="{{goodsOpt.layoutOpt.type==='list'?'; background: #fff':'; background: linear-gradient(180deg, #FFF 20vh, #F5F5F5 50vh)'}}">
+    <b>
+        <view bindtap="handleSearchClick">
+            <e :positionShowMethod="0" :positionType="1" bind:change="searchChange" bind:focus="searchFocus" bind:search="searchDone" focus="{{focused}}" inputStyle="height: 80rpx; border-radius: 4rpx; border-radius: var(--theme-radius-card, 999px) !important" keyword="{{inputValue}}" placeholder="{{hotSearchKeys&&hotSearchKeys.length>0?hotSearchKeys[0]:'搜索商品'}}" readonly="{{true}}" searchStyle="height: 100rpx; padding: 0 30rpx; background: {{searchbg||'#F2F2F2'}};" shape="round" value="{{inputValue}}"></e>
+        </view>
+        <view bind:tap="onCloseTap" class="d42ff" wx:if="{{!isShowProducts}}">
+            <a bind:click="onSearchKeyTap" showKeys="{{hotSearchKeys}}" title="热门搜索" wx:if="{{hotSearchKeys&&hotSearchKeys.length>0}}"></a>
+            <a bind:click="onSearchKeyTap" showKeys="{{searchHistory}}" title="搜索历史" wx:if="{{searchHistory&&searchHistory.length>0}}">
+                <view catch:tap="searchHandleClearHistory" class="c3d941" slot="km__right-icon">
+                    <f color="#C8C9CC" customStyle="display:block" name="delete" size="14px"></f>
+                    <text>清空</text>
+                </view>
+            </a>
+        </view>
+        <block wx:if="{{isShowProducts}}">
+            <c isShowLayoutChange="{{true}}" rmId="b32-4" wx:if="{{rmId==='b32-1'}}"></c>
+        </block>
+    </b>
+    <shop-block></shop-block>
+    <view style="overflow: hidden">
+        <d pageType="SERACH_RANTA_CONFIG" rmId="b32-5" wx:if="{{rmId==='b32-1'}}"></d>
+    </view>
+</view>

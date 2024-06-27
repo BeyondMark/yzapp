@@ -1,0 +1,37 @@
+<view class="cube-tab-poster">
+    <block wx:if="{{!hasAuth}}">
+        <a authTypeList="{{['nicknameAndAvatar']}}" bind:_init="_tic" bind:next="_p" data-t="{{ next:{en:'handleAuthorize'} }}" kdtId="{{kdtId}}" rmId="@passport-tee/user-authorize~DDdJBmWG" type="separate" wx:if="{{rmId==='@wsc-tee-salesman/salesman-share-popup~YPDZkFWW'}}">
+            <view class="poster-authorize">
+                <view>生成海报需要使用微信头像昵称</view>
+                <view>授权后可保存海报</view>
+                <c bind:_init="_tic" customClass="poster-authorize__btn" plain="{{true}}" round="{{true}}" size="small">点击授权</c>
+            </view>
+        </a>
+    </block>
+    <view class="poster-box" wx:else>
+        <view class="poster-banner">
+            <d bind:_init="_tic" bind:change="_p" class="{{posterSwipeClass}}" customOffset="{{swiperOffset}}" data-t="{{ change:{en:'onSwipeChange'} }}" indicatorColor="#999999" loop="{{false}}" pid="{{pid}}" showIndicators="{{posterImgArr.length>1}}" width="288" wx:if="{{posterImgArr.length}}">
+                <e bind:_init="_tic" pid="{{pid}}" wx:for="{{posterImgArr}}" wx:key="image">
+                    <view class="{{'poster-banner__img-container '+imgMode+(posterIndex===index?' active':'')}}">
+                        <image class="poster-img tee-image" lazyLoad="true" mode="{{imgMode}}" src="{{item.image}}"></image>
+                        <b bind:_init="_tic" color="#fff" customStyle="{{loadingStyle}}" size="24px" vertical="{{true}}" wx:if="{{item.loading}}">              海报生成中
+            </b>
+                        <view bind:tap="_p" class="poster-img__error" data-index="{{index}}" data-t="{{ tap:{en:'reGenPoster'} }}" style="{{loadingStyle}}" wx:elif="{{item.error}}">              海报生成失败，点击重试
+            </view>
+                    </view>
+                </e>
+            </d>
+        </view>
+        <view class="{{isWxShareImg?'poster-banner__bottom':'poster-banner__bottom single-btn'}}">
+            <view bind:tap="_p" class="poster-banner__bottom-item" data-t="{{ tap:{en:'shareWechatFriends'} }}" wx:if="{{isWxShareImg}}">
+                <image class="poster-banner__bottom-image tee-image" lazyLoad="true" src="//b.yzcdn.cn/salesman/cube/share.png"></image>
+                <view class="poster-banner__bottom-text t-text">微信好友</view>
+            </view>
+            <view bind:tap="_p" class="poster-banner__bottom-item" data-t="{{ tap:{en:'savePoster'} }}" wx:if="{{isWxShareImg}}">
+                <image class="poster-banner__bottom-image tee-image" lazyLoad="true" src="//b.yzcdn.cn/salesman/cube/NdzsNJ.png"></image>
+                <view class="poster-banner__bottom-text t-text">保存海报</view>
+            </view>
+            <c bind:_init="_tic" bind:tap="_p" block="{{true}}" class="poster-banner__btn" color="var(--main-bg, --color-main-bg, #f44)" data-t="{{ tap:{en:'savePoster'} }}" round="{{true}}" wx:else>保存海报</c>
+        </view>
+    </view>
+</view>

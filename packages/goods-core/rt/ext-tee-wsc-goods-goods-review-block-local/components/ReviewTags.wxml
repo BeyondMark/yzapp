@@ -1,0 +1,6 @@
+<view class="{{'review-tags'}} {{customTagsClass}}" wx:if="{{tags.length>0}}">
+    <view catch:tap="_p" class="review-detail-tag" data-t="{{ tap:{ en:'handleClick',et:'stop',args:[tag] } }}" data-viewlog="{{tag.viewLog}}" wx:for="{{tags}}" wx:for-item="tag" wx:key="tagCode">
+        <view class="{{'tag-bg'}} {{tag.bgClass}}"></view>
+        <view class="{{'tag-text'}} {{tag.innerClass}} t-text">{{tag.tagName}}{{showCount?'('+tag.count+')':''}}</view>
+    </view>
+</view>

@@ -1,0 +1,17 @@
+<view style="{{wrapperStyle}}" wx:if="{{!isCellMode||isCellMode&&selected}}">
+    <h bind:_init="_tic" loading="{{!filteredChannels}}" row="1" wx:if="{{amount>0}}">
+        <view class="{{'cashier-pre__container'+' '+customClass}}">
+            <block wx:if="{{selected}}">
+                <f bind:_init="_tic" bind:show-list="_p" channel="{{selected}}" data-t="{{ showList:{en:'doShowList'} }}" instalment="{{instalment}}" wx:if="{{isCellMode}}"></f>
+                <e bind:_init="_tic" bind:show-list="_p" channel="{{selected}}" data-t="{{ showList:{en:'doShowList'} }}" instalment="{{instalment}}" wx:else></e>
+                <a bind:_init="_tic" bind:cancel="_p" bind:close="_p" bind:confirm="_p" cancelButtonText="{{dialogOptions.cancelButtonText}}" confirmButtonText="{{dialogOptions.confirmButtonText}}" data-t="{{ close:{en:'closeDialog'},confirm:{en:'onDialogConfirm'},cancel:{en:'onDialogCancel'} }}" message="{{dialogOptions.message}}" show="{{showDialog}}" showCancelButton="{{dialogOptions.showCancelButton}}"></a>
+                <b bind:_init="_tic" data-ref="van-toast"></b>
+                <g bind:_init="_tic" bind:change="_p" bind:close="_p" bind:forget="_p" bind:submit="_p" data-t="{{ close:{en:'onPayLoginClose'},change:{en:'onPayLoginChange'},submit:{en:'onPayLoginSubmit'},forget:{en:'onPayLoginForget'} }}" login="{{loginPass}}" mobile="{{mobile}}" show="{{showPayLogin}}"></g>
+                <d bind:_init="_tic" bind:close="_p" bind:forget-pass="_p" bind:full="_p" bind:update="_p" data-t="{{ forgetPass:{en:'onPayPassForget'},update:{en:'onPayPassUpdate'},full:{en:'onPayPassCheck'},close:{en:'onPayPassClose'} }}" height="{{computedHeight}}" overlayStyle="background: transparent" password="{{payPass}}" show="{{showPayPasser}}" wx:if="{{!externalChannelList}}"></d>
+                <c bind:_init="_tic" bind:change="_p" bind:close="_p" channels="{{filteredChannels}}" data-t="{{ change:{en:'onChannelChange'},close:{en:'closeList'} }}" height="{{computedHeight}}" instalment="{{instalment}}" selected="{{selected}}" show="{{showList}}" themeColor="{{themeColor}}" wx:if="{{!externalChannelList}}"></c>
+            </block>
+            <view style="text-align: center; color: #c8c9cc" wx:else>        当前暂无可用支付方式
+      </view>
+        </view>
+    </h>
+</view>

@@ -1,0 +1,25 @@
+.flex {
+  display: flex;
+}
+.ac {
+  align-items: center;
+}
+.sb {
+  justify-content: space-between;
+}
+.r {
+  font-size: 12px;
+  line-height: 16px;
+  padding: 9px;
+  background-color: #f7f8fa;
+  border-radius: 2px;
+  margin-top: 2px;
+  position: relative;
+}
+.action {
+  color: #ef2138;
+}
+.text {
+  padding-left: 6px;
+  color: #323233;
+}

@@ -1,0 +1,1 @@
+<a background="#fbe6e9" bind:_init="_tic" color="#666" mode="{{true}}" text="{{risk.note}}" wx:if="{{risk.match}}"></a>

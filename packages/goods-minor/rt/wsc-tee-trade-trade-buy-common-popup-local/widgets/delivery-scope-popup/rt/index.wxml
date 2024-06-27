@@ -1,0 +1,4 @@
+<a bind:_init="_tic" bind:close="_p" bodyBackgroundColor="#fff" data-t="{{ close:{en:'onClose'} }}" disablePadding="{{true}}" popupClass="c4d76c" show="{{showPopup}}" showClose="{{true}}" title="配送范围" wx:if="{{initialShow}}">
+    <view class="c4c95a"> {{delivery.desc}} </view>
+    <image class="c188d bd231" lazyLoad="true" src="{{pic}}" wx:if="{{pic}}"></image>
+</a>

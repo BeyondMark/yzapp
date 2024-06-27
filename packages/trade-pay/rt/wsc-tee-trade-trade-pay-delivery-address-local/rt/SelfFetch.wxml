@@ -1,0 +1,9 @@
+<view wx:if="{{showSelfFetch}}">
+    <a bind:_init="_tic" title="提货人" titleWidth="80px" value="{{selfFetchContact}}" valueClass="t-c-black"></a>
+    <a bind:_init="_tic" title="提货地址" titleWidth="80px" value="{{selfFetchAddressDetail}}" valueClass="t-c-black"></a>
+    <a bind:_init="_tic" title="提货时间" titleWidth="80px" value="{{selfFetchTime}}" valueClass="t-c-black"></a>
+    <a bind:_init="_tic" bind:tap="_p" data-t="{{ tap:{en:'handleContactSelfFetchService'} }}" valueClass="c274dd" wx:if="{{userTel}}">
+        <image class="c1ae2 bd231" lazyLoad="true" src="https://img01.yzcdn.cn/public_files/2016/12/02/8812ea19818110de677ac215286b3005.png"></image>
+        <view class="c89585">联系提货点</view>
+    </a>
+</view>

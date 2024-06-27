@@ -1,0 +1,14 @@
+.van-coupon-list__empty {
+  margin: 18px auto 100px auto;
+  text-align: center;
+}
+.van-coupon-list__empty__text {
+  margin: 18px auto 20px auto;
+  font-size: 14px;
+  color: #969799;
+  line-height: 20px;
+}
+.van-coupon-list__empty__icon {
+  width: 160px;
+  height: 160px;
+}

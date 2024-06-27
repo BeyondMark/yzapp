@@ -1,0 +1,3 @@
+.protocol-native-container {
+  height: 100%;
+}

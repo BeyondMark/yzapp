@@ -1,0 +1,6 @@
+<a bind:_init="_tic" bind:close="_p" closeIconClass="close-icon" closeable="{{true}}" customClass="coupon-popup" customStyle="{{customStyle}}" data-t="{{ close:{en:'handleClose'} }}" position="bottom" safeAreaInsetBottom="{{true}}" show="{{show}}">
+    <h3 bind:_init="_tic" catchtouchmove="{{true}}" class="coupon-popup__title">优惠券</h3>
+    <view class="coupon-popup__content">
+        <b bind:_init="_tic" bind:clickItem="_p" bind:goToAddOnPage="_p" bind:sendCoupon="_p" bind:to-navigate="_p" bottomRightIcon="{{coupon.couponId}}" btnIcon="false" btnText="{{!coupon.couponId?'立即领取':''}}" class="coupon-card" coupon="{{coupon}}" data-activity-id="{{coupon.activityId}}" data-coupon="{{coupon}}" data-t="{{ sendCoupon:{ en:'handleSendCoupon',args:[coupon] },clickItem:{en:'clickItem'},goToAddOnPage:{en:'goToAddOnPage'},toNavigate:{en:'toNavigate'} }}" displayType="{{displayType}}" kdtId="{{kdtId}}" themeColors="{{themeColors}}" themeStyle="{{themeStyle}}" wx:for="{{couponList}}" wx:for-item="coupon" wx:key="couponId"></b>
+    </view>
+</a>

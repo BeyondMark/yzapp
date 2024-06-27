@@ -1,0 +1,10 @@
+<view class="shopnote-shopinfo">
+    <view class="shopnote-shopinfo__banner">
+        <image alt="店铺logo" class="shopnote-shopinfo__banner--img" src="{{shopInfo.shopLogo}}"></image>
+    </view>
+    <view class="shopnote-shopinfo__name">{{shopInfo.shopName}}</view>
+    <view class="shopnote-shopinfo__btn">
+        <a bind:tap="linkMore" borderAfter="general" class="shopnote-shopinfo__btn--more van-hairline--top" color="general" customAfterClass="after">查看更多</a>
+        <a bind:tap="directToHome" borderAfter="general" class="shopnote-shopinfo__btn--intro" color="general" customAfterClass="after">进店</a>
+    </view>
+</view>

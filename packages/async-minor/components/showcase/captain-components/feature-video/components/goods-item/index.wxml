@@ -1,0 +1,8 @@
+<navigator class="feat-video__good" url="/pages/goods/detail/index?alias={{good.alias}}">
+    <image class="feat-video__good__pic" mode="aspectFit" src="{{good.imageUrl}}"></image>
+    <view class="feat-video__good__info">
+        <view class="feat-video__good__name">{{good.name}}</view>
+        <view class="feat-video__good__decp">{{good.description}}</view>
+        <view class="feat-video__good__price">￥{{good.salePrice}}</view>
+    </view>
+</navigator>

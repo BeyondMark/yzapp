@@ -1,0 +1,73 @@
+.act-bt-warpper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 20px;
+  background-color: #fff;
+  z-index: 100;
+}
+.act-bt-warpper:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 1px;
+  background-color: #e0e0e0;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+}
+.act-bt-warpper .ag-wrap {
+  font-size: 12px;
+  display: flex;
+  justify-content: left;
+  margin-bottom: 12px;
+}
+.act-bt-warpper .ag-wrap .ag-label {
+  color: #969799;
+}
+.act-bt-warpper .ag-wrap .van-checkbox {
+  align-items: center;
+}
+.act-bt-warpper .ag-wrap .agreement {
+  display: inline-block;
+  color: #323233;
+}
+.act-bt-warpper .act-bt {
+  color: #fff;
+  height: 48px;
+  line-height: 48px;
+  box-sizing: border-box;
+  border-color: transparent;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10em;
+}
+.act-bt-warpper .disabled-btn {
+  color: #c8c9cc;
+  background-color: #f7f8fa;
+  opacity: 1;
+  border-radius: 999px;
+  font-weight: 400;
+}
+.act-bt-warpper .act-bt:after {
+  border: none;
+}
+.act-bt-warpper .renewal-btn {
+  height: 48px;
+  line-height: 48px;
+  font-size: 14px;
+  border: none;
+}
+.untake {
+  width: 686rpx;
+}
+.is-n-ph {
+  padding-bottom: 10px;
+  padding-bottom: calc(10px + constant(safe-area-inset-bottom));
+  padding-bottom: calc(10px + env(safe-area-inset-bottom));
+}

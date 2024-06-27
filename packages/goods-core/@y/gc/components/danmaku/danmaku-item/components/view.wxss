@@ -1,0 +1,35 @@
+.c89585 {
+  text-decoration: inherit;
+}
+.c89585,
+.bd231 {
+  display: inline-block;
+}
+.bd231 {
+  width: 100%;
+  height: 100%;
+}
+.c4de8a {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  margin-right: -6px;
+}
+.c1204d {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #d8d8d8;
+  line-height: 26px;
+  text-align: center;
+  overflow: hidden;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  margin-right: -8px;
+}
+.c1204d:last-child {
+  margin-right: 0;
+}
+.c3e5a {
+  margin-left: 12px;
+}

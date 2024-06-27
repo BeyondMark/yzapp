@@ -1,0 +1,3 @@
+<a addCreate="{{true}}" bind:change="handleInputChange" bind:focus="handleFocus" bind:select="handleSelect" blankContent="囧，没有找到你要的地址 请尝试只输入小区、写字楼或学校名称试试" focusTitle="搜索地址" normalTitle="搜索地址" placeholder="请输入你要收货的小区，大楼等" shopLists="{{shopLists}}" title="附近的地址">
+    <b bind:select="handleSelect"></b>
+</a>

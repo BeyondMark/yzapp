@@ -1,0 +1,8 @@
+<view class="c03ead" wx:if="{{showGoingList}}">
+    <view bind:tap="_p" data-t="{{ tap:{en:'goGrouponGoingPath'} }}">
+        <a bind:_init="_tic" customClass="c31683" title="以下小伙伴正在发起拼团，你可以直接参加" titleClass="a4d34"></a>
+    </view>
+    <view class="groupon-going-list__content">
+        <b activityInfo="{{activityInfo}}" alias="{{item.groupAlias}}" bind:_init="_tic" countDown="{{item.formatRemainTime}}" gapNum="{{item.remainJoinNum}}" kdtId="{{kdtId}}" thumbUrl="{{item.fansPicture}}" title="{{item.fansNickname}}" wx:for="{{grouponGoingList}}" wx:key="index"></b>
+    </view>
+</view>

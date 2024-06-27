@@ -1,0 +1,133 @@
+.customer-rebuy__wrapper {
+  width: 650rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bg-layer {
+  position: absolute;
+  width: 560rpx;
+  height: 500rpx;
+  z-index: -1;
+}
+.bg-layer,
+.container-layer {
+  background-color: #7a4a19;
+  border-radius: 50% 50%0 0;
+}
+.container-layer {
+  padding: 0 24rpx;
+}
+.customer-rebuy__container {
+  width: 512rpx;
+  border-radius: 16rpx;
+  background-image: url(https://img01.yzcdn.cn/upload_files/2022/07/20/Fo3OgeVfxmv-j6vviDpTiK9sOxiE.png);
+  background-size: 100%;
+  margin-top: 40rpx;
+  display: inline-block;
+  overflow: hidden;
+}
+.customer-rebuy__title {
+  font-weight: 500;
+  font-size: 42rpx;
+  line-height: 48rpx;
+  text-align: center;
+  color: #724804;
+  margin-top: 48rpx;
+}
+.customer-rebuy__meta {
+  font-weight: 400;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  text-align: center;
+  color: #724804;
+}
+.coupon__list {
+  margin-top: 24rpx;
+  min-height: 180rpx;
+}
+.coupon__item {
+  background-image: url(https://img01.yzcdn.cn/upload_files/2022/06/27/FnmwRmpJwBh72s-pxOv1sXodaytI.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 128rpx;
+  display: flex;
+  background-position: 50%;
+  margin-top: 8rpx;
+  margin-left: 22rpx;
+  margin-right: 22rpx;
+}
+.coupon__item:first-child {
+  margin-top: 0;
+}
+.coupon__amount {
+  width: 210rpx;
+  font-weight: 400;
+  font-size: 24rpx;
+  color: #b66f0f;
+  display: flex;
+  align-items: center;
+}
+.coupon__amount-num {
+  font-weight: 600;
+  font-size: 60rpx;
+  display: inline-block;
+}
+.coupon__amount-suffix {
+  margin-left: 4rpx;
+  display: inline-block;
+}
+.coupon__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 280rpx;
+  color: #b66f0f;
+  margin-left: 28rpx;
+}
+.coupon__info-type {
+  font-size: 28rpx;
+  line-height: 36rpx;
+  font-weight: 500;
+}
+.coupon__info-desc {
+  font-weight: 400;
+  font-size: 24rpx;
+  line-height: 32rpx;
+}
+.confirm-action__container {
+  justify-content: center;
+  width: 612rpx;
+  height: 262rpx;
+  background-image: url(https://img01.yzcdn.cn/upload_files/2022/06/27/FnVUrNdqtcRzPMK7dypPTRteEVvf.png);
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  transform: translateY(-70rpx);
+  background-size: 100%;
+}
+.confirm-action {
+  text-align: center;
+  background-image: linear-gradient(288.16deg, #f4d5a1 26.04%, #fdeed6 80.46%);
+  height: 80rpx;
+  width: 400rpx;
+  border-radius: 22px;
+  color: #7a4a19;
+  line-height: 80rpx;
+  font-weight: 500;
+}
+.close-action {
+  position: absolute;
+  right: 0;
+  bottom: 25rpx;
+  left: 0;
+  width: 48rpx;
+  height: 48rpx;
+  margin: auto;
+  background-image: url(https://img01.yzcdn.cn/weapp/wsc/B2MVjv.png);
+  background-repeat: no-repeat;
+  background-size: 48rpx;
+}
+.coupon__amount-content {
+  padding-left: 40rpx;
+}

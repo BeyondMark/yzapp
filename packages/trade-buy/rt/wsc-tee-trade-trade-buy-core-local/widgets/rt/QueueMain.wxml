@@ -1,0 +1,6 @@
+<view>
+    <d bind:_init="_tic" customClass="c54e2b" size="20px" wx:if="{{retailLoading}}"></d>
+    <a bind:_init="_tic" data-ref="bill-core-toast" id="van-toast"></a>
+    <b bind:_init="_tic" data-ref="bill-core-dialog"></b>
+    <c asyncOrder="{{asyncOrder}}" bind:_init="_tic" bind:cancel="_p" data-t="{{ cancel:{en:'onCancelLimit'} }}" status="{{limitOrder.limitCreateStatus}}" value="{{limitOrder.limitCreate}}"></c>
+</view>

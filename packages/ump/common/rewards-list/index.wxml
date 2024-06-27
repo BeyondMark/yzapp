@@ -1,0 +1,9 @@
+<view class="reward-list custom-class">
+    <view class="reward-area" wx:for="{{rewardList}}" wx:key="{{ item.type }}">
+        <view class="reward-icon">
+            <image class="reward-icon" src="{{item.icon}}"></image>
+        </view>
+        <view class="reward-desc van-ellipsis">{{item.desc}}</view>
+        <view bindtap="handleRewardActionClick" class="reward-action {{item.customClass}}" data-action-type="{{item.type}}" data-coupon-id="{{item.couponId}}">{{item.actionDesc}}</view>
+    </view>
+</view>

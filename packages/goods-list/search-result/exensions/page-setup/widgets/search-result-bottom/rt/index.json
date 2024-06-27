@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "商品搜索",
+  "usingComponents": {
+    "a": "../../../../../../components/recommend/index",
+    "b": "/packages/async-main/components/account/inject-protocol/index",
+    "c": "/pages/common/page-container/components/icon-nav/index",
+    "d": "/packages/async-minor/components/bi-list-icon/index",
+    "e": "../../../components/search-coupons/index",
+    "f": "/packages/async-feature-ext/rt/ext-tee-wsc-goods-biz-sku-manage-local/rt/Main",
+    "g": "/packages/async-main/@vant/weapp/dist/toast/index",
+    "h": "/packages/async-main/@vant/weapp/dist/notify/index",
+    "_": "../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_", "d": "_", "f": "_", "g": "_", "h": "_" }
+}

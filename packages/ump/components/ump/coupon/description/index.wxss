@@ -1,0 +1,60 @@
+.coupon-description {
+  width: inherit;
+  overflow: hidden;
+  color: #969799;
+  font-size: 12px;
+  line-height: 16px;
+}
+.coupon-description__disabled .coupon-description__content {
+  color: #969799;
+}
+.coupon-description__unavailable .coupon-description__content {
+  color: #c8c9cc;
+}
+.coupon-description__content {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.coupon-description__content view {
+  display: inline-block;
+  white-space: nowrap;
+}
+.coupon-description__countdown-wrap {
+  color: #fa1919;
+  font-size: 0;
+}
+.coupon-description__countdown-text {
+  margin-right: 3px;
+  font-size: 12px;
+  vertical-align: middle;
+  display: inline;
+}
+.coupon-description__countdown-days {
+  display: inline-block;
+  margin-right: 3px;
+  font-size: 12px;
+  vertical-align: middle;
+}
+.coupon-description__countdown-time {
+  display: inline-block;
+  min-width: 54px;
+  font-size: 12px;
+  line-height: 16px;
+  vertical-align: middle;
+}
+.coupon-description__countdown-time view {
+  display: inline;
+}
+.coupon-description-copy {
+  font-size: 12px;
+  position: fixed;
+  left: -100%;
+  bottom: -100%;
+  z-index: -1;
+}
+.coupon-description-copy__content {
+  white-space: nowrap;
+}

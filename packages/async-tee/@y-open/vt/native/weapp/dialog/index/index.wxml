@@ -1,0 +1,14 @@
+<a bind:_init="_tic" bind:close="_p" closeOnClickOverlay="{{innerCloseOnClickOverlay}}" customStyle="{{styles.root}}" data-t="{{ close:{en:'onClickOverlay'} }}" overlay="{{innerOverlay}}" overlayStyle="{{innerOverlayStyle}}" show="{{innerShow}}" transition="{{innerTransition}}" zIndex="{{innerZIndex}}">
+    <view class="{{classes.header}}" wx:if="{{innerTitle||innerUseTitleSlot}}">
+        <slot name="title" wx:if="{{innerUseTitleSlot}}"></slot>
+        <block wx:elif="{{innerTitle}}">{{innerTitle}}</block>
+    </view>
+    <slot wx:if="{{innerUseSlot}}"></slot>
+    <view class="{{classes.message}}" wx:elif="{{innerMessage}}">
+        <view class="t-dialog__message-text t-text">{{innerMessage}}</view>
+    </view>
+    <view class="t-hairline--top t-dialog__footer">
+        <b bind:_init="_tic" bind:tap="_p" class="t-dialog__button t-hairline--right" customClass="t-dialog__button-border" customStyle="{{styles.cancelButton}}" data-t="{{ tap:{en:'onCancel'} }}" loading="{{loading.cancel}}" size="large" wx:if="{{innerShowCancelButton}}">{{innerCancelButtonText}}</b>
+        <b bind:_init="_tic" bind:tap="_p" class="t-dialog__button" customClass="t-dialog__button-border" customStyle="{{styles.confirmButton}}" data-t="{{ tap:{en:'onConfirm'} }}" loading="{{loading.confirm}}" openType="{{innerConfirmButtonOpenType}}" size="large" wx:if="{{innerShowConfirmButton}}">{{innerConfirmButtonText}}</b>
+    </view>
+</a>

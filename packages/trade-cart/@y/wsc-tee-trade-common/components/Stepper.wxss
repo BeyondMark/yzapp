@@ -1,0 +1,115 @@
+.c87d2c {
+  font-size: 0;
+}
+.c61bcc,
+.b2602 {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0 var(--stepper-input-margin-right, 1px) 0
+    var(--stepper-input-margin-left, 1px);
+  vertical-align: middle;
+  border: var(--stepper-border-width, 0) var(--stepper-border-style, initial)
+    var(--stepper-border-color, transparent);
+  background-color: var(--stepper-background-color, #f2f3f5);
+  color: #323233;
+  width: 28px;
+  height: 28px;
+  padding: 4px;
+}
+.c61bcc:before,
+.b2602:before {
+  width: 9px;
+  height: 1px;
+}
+.c61bcc:after,
+.b2602:after {
+  width: 1px;
+  height: 9px;
+}
+.c61bcc:after,
+.c61bcc:before,
+.b2602:after,
+.b2602:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-color: currentColor;
+  content: "";
+}
+.c4d1e2,
+.c2c2c3 {
+  background-color: #e8e8e8;
+}
+.aba0f,
+.c7980b {
+  color: var(--stepper-color-disabled, #c8c9cc);
+}
+.aba0f,
+.aba0f.c4d1e2,
+.aba0f.c2c2c3,
+.c7980b,
+.c7980b.c4d1e2,
+.c7980b.c2c2c3 {
+  background-color: var(--stepper-background-color-disabled, #f7f8fa);
+}
+.c61bcc {
+  border-radius: var(--stepper-border-top-left-radius, 4px) 0 0
+    var(--stepper-border-bottom-left-radius, 4px);
+}
+.c61bcc:after {
+  display: none;
+}
+.b2602 {
+  border-radius: 0 var(--stepper-border-top-right-radius, 4px)
+    var(--stepper-border-bottom-right-radius, 4px) 0;
+}
+.c87d2c--round .ec2a9 {
+  background-color: transparent !important;
+}
+.c87d2c--round .c61bcc,
+.c87d2c--round .b2602 {
+  border-radius: 100%;
+}
+.c87d2c--round .c61bcc:active,
+.c87d2c--round .b2602:active {
+  opacity: 0.7;
+}
+.c87d2c--round .aba0f,
+.c87d2c--round .aba0f:active,
+.c87d2c--round .c7980b,
+.c87d2c--round .c7980b:active {
+  opacity: 0.3;
+}
+.c87d2c--round .b2602 {
+  color: #fff;
+  background-color: #ee0a24;
+}
+.c87d2c--round .c61bcc {
+  color: #ee0a24;
+  background-color: #fff;
+  border: 1px solid #ee0a24;
+}
+.c87d2c .ec2a9 {
+  display: inline-block;
+  box-sizing: border-box;
+  min-height: 0;
+  margin: 0 var(--stepper-input-margin-right, 1px) 0
+    var(--stepper-input-margin-left, 1px);
+  padding: 0 1px;
+  text-align: center;
+  vertical-align: middle;
+  border: var(--stepper-border-width, 0) var(--stepper-border-style, initial)
+    var(--stepper-border-color, transparent);
+  border-width: 1px 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  font-size: 14px;
+  color: #323233;
+  background-color: var(--stepper-background-color, #f2f3f5);
+  width: 32px;
+  height: 28px;
+}

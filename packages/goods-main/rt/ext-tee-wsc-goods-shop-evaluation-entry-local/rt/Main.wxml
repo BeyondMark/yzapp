@@ -1,0 +1,4 @@
+<view class="evaluation-entry" data-viewlog="{{componentLogger}}" wx:if="{{showShopEvaluation}}">
+    <b bind:_init="_tic" bind:tap="_p" border="{{false}}" customClass="shop" data-t="{{ tap:{ en:'goShopEvaluation',args:[null] } }}" isLink="{{true}}" title="该商品所属店铺评价" titleClass="evaluation-entry__header-left" value="查看全部" valueClass="evaluation-entry__header-right"></b>
+    <a bind:_init="_tic" bind:tap="_p" customTagsClass="evaluation-entry__tags" data-ref="tags" data-t="{{ tap:{en:'goShopEvaluation'} }}" showCount="{{true}}" tags="{{tags}}" wx:if="{{rmId==='b7-47'}}"></a>
+</view>

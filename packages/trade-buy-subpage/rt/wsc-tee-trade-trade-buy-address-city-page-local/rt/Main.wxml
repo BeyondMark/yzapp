@@ -1,0 +1,29 @@
+<view>
+    <d bind:_init="_tic" bind:cancel="_p" bind:focus="_p" bind:search="_p" data-t="{{ focus:{en:'onFocus'},search:{en:'onSearch'},cancel:{en:'onCancel'} }}" placeholder="搜索城市" shape="round" showAction="{{isSearching}}"></d>
+    <scroll-view class="c7254f" scrollY="{{true}}" wx:if="{{isSearching}}">
+        <view class="a8776" wx:if="{{isEmpty}}">暂无相关城市</view>
+        <b bind:_init="_tic" bind:tap="_p" data-t="{{ tap:{ en:'onSelectCity',args:[item.name] } }}" title="{{item.name}}" wx:for="{{searchList}}" wx:key="item"></b>
+    </scroll-view>
+    <scroll-view scrollIntoView="{{toView}}" scrollY="{{true}}" style="height:{{windowHeight-54+'px'}}">
+        <view bind:tap="_p" class="d5189" data-t="{{ tap:{ en:'onSelectCity',args:[city] } }}">
+            <view class="c89e63" wx:if="{{locateStatus<0}}">当前城市定位失败</view>
+            <block wx:else>
+                <a bind:_init="_tic" class="c80bed" name="location"></a>
+                <view class="c45ce8" wx:if="{{locateStatus>0}}"> {{city}} <view class="b3c42 c89585">(当前定位城市)</view>
+                </view>
+                <view class="c45ce8" wx:else>定位中...</view>
+            </block>
+        </view>
+        <view class="c417e4" id="remen">国内热门城市</view>
+        <view class="c5fa38">
+            <view class="c29fc9" wx:for="{{popularCityRows}}" wx:for-index="row" wx:for-item="_" wx:key="row">
+                <view bind:tap="_p" class="c169a5" data-t="{{ tap:{ en:'onSelectCity',args:[ popularCity[row*3+col] ] } }}" wx:for="{{3}}" wx:for-index="col" wx:for-item="_no_use" wx:key="col"> {{popularCity[row*3+col]}} </view>
+            </view>
+        </view>
+        <view class="c417e4">所有城市</view>
+        <view bind:tap="_p" data-t="{{ tap:{ en:'onSelectCity',args:[item.name] } }}" data-value="{{item.name}}" wx:for="{{cityList}}" wx:key="item">
+            <b bind:_init="_tic" title="{{item.name}}"></b>
+        </view>
+    </scroll-view>
+    <c bind:_init="_tic" id="van-toast"></c>
+</view>

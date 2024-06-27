@@ -1,0 +1,31 @@
+<view>
+    <a customClass="benefit-popup" customStyle="background-color: rgba(255, 255, 255, 0);" show="{{visible}}">
+        <view class="pop-wrap" wx:if="{{visible}}">
+            <image class="image" src="{{popBackgroundSrc}}" style="transform: translateY({{popBackgroundTranslate}}); height: {{popBackgroundHeight}}" wx:if="{{!!popBackgroundSrc}}"></image>
+            <view class="pop-content">
+                <view class="vip-mask" style="top: {{popVipMaskTop}}"></view>
+                <d planEffectiveTime="{{planEffectiveTime}}" planType="{{planType}}" userMatchBenefitLevel="{{userMatchBenefitLevel}}"></d>
+                <e benefitList="{{benefitList}}" limit="{{4}}" wx:if="{{benefitList.length}}"></e>
+                <view class="benefit-list-box">
+                    <f coupon="{{coupon}}" wx:for="{{coupons}}" wx:for-item="coupon" wx:key="couponId"></f>
+                </view>
+                <view class="gift-tip" wx:if="{{planState!==PlanStateEnum.InProgress}}">活动已结束，记得下次再来</view>
+                <view class="gift-tip" wx:elif="{{!isHasLevel}}"></view>
+                <view class="gift-tip" wx:elif="{{!isLevelMatchingBenefit}}">你所在等级暂无可享受的会员权益</view>
+                <view class="gift-tip" wx:else>奖励已发送至你的账户</view>
+            </view>
+            <view class="pop-actions">
+                <h authTypeList="{{['mobile']}}" bind:next="handleButtonConfirm" bizDataMap="{{bizDataMap}}" wx:if="{{!isHasLevel}}">
+                    <b block="{{true}}" customClass="action-btn" plain="{{true}}">
+                        <view>立即入会</view>
+                    </b>
+                </h>
+                <b bind:tap="handleClick" block="{{true}}" customClass="action-btn" plain="{{true}}" wx:else>
+                    <view>我知道了</view>
+                </b>
+                <c bindtap="handleClose" class="close-btn" name="close" wx:if="{{showCloseBtn||!isHasLevel}}"></c>
+            </view>
+        </view>
+    </a>
+    <g bind:close="closeSubscribeFailPopup" openImageSrc="https://img01.yzcdn.cn/public_files/2019/12/23/7b987495fc6bbd066262153577881592.png" show="{{showSubscirbeFail}}"></g>
+</view>

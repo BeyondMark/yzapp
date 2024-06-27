@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../components/StoreGifts",
+    "_": "../../../../../components/_/index"
+  }
+}

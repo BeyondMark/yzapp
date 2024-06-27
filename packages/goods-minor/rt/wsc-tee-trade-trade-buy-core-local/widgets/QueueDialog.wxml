@@ -1,0 +1,8 @@
+<view>
+    <b bind:_init="_tic" closeOnClickOverlay="{{false}}" customClass="c72ab5" show="{{value}}" wx:if="{{status==='fail'}}">
+        <image class="c8908d bd231" lazyLoad="true" src="https://img01.yzcdn.cn/public_files/2019/09/23/a3d773d6d0275cff828a7bb3745eae23.png"></image>
+        <view class="e0629"> {{asyncOrder?'提交订单中，请稍候':'店铺太火爆啦，请稍后重试'}} </view>
+        <c bind:_init="_tic" bind:tap="_p" customClass="c05e5e" data-t="{{ tap:{en:'onClose'} }}" round="{{true}}">知道了</c>
+    </b>
+    <a bind:_init="_tic" data-ref="queue-toast"></a>
+</view>

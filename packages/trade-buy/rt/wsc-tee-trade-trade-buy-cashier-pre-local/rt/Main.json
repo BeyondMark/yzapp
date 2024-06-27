@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../widgets/cashier-pre/rt/index",
+    "_": "../../../../../components/_/index"
+  }
+}

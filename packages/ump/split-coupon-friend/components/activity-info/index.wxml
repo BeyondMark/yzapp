@@ -1,0 +1,30 @@
+<view class="split-coupon-friend-activity-info">
+    <view class="split-coupon-friend-activity-info__container {{activityStatus.button?'':'split-coupon-friend-activity-info__container_no-button'}}">
+        <block wx:if="{{!isFinishedBeforeJoin}}">
+            <view class="split-coupon-friend-activity-info__tip">{{activityStatus.tipText}}</view>
+            <view class="split-coupon-friend-activity-info__coupon">
+                <a autoFormatValue="{{true}}" bottomRightIcon="{{activityStatus.couponShowBottomRightIcon}}" coupon="{{couponInfo}}" customCouponBoxActionClass="split-coupon-friend-activity-info__coupon_action" disabled="{{activityStatus.couponInvalid}}" displayType="flat" hideBtnWrap="{{!activityStatus.couponInvalid&&!activityStatus.couponShowBottomRightIcon}}" wx:if="{{hasResult}}"></a>
+            </view>
+            <b bindtap="handleClickBtn" customClass="split-coupon-friend-activity-info__btn split-coupon-friend-activity-info__btn_use" data-button="{{activityStatus.couponButton}}" round="{{true}}" size="large" type="danger" wx:if="{{activityStatus.couponButton.text}}">{{activityStatus.couponButton.text}}</b>
+            <view class="split-coupon-friend-activity-info__friend-tip">
+                <view class="split-coupon-friend-activity-info__friend-get">{{activityStatus.helpGetTip}}</view>
+                <view class="split-coupon-friend-activity-info__coupon-tag" wx:if="{{activityStatus.helpGetTip}}">
+                    <text class="coupon-tag-text">券</text>
+                    <text class="coupon-tag-text">{{helpGroupCouponInfo}}</text>
+                </view>
+            </view>
+            <c bind:clickAvatar="handleClickAvatar" disabled="{{activityStatus.isShowFailTip}}" wx:if="{{activityStatus.isShowAvatar}}"></c>
+            <d time="{{startDistanceTime}}" wx:if="{{activityStatus.isShowStartCountDown}}"></d>
+            <d friend="{{true}}" time="{{helpDistanceTime}}" wx:if="{{activityStatus.isShowHelpEndCountDown}}"></d>
+            <view class="split-coupon-friend-activity-info__fail" wx:if="{{activityStatus.failTip}}">{{activityStatus.failTip}}</view>
+        </block>
+        <view class="finished-before-join" wx:else>
+            <image alt="" class="finished-before-join__img" src="https://b.yzcdn.cn/public_files/cee60aacb7f1215b07511fd6cc81b8ef.png"></image>
+            <view class="finished-before-join__text">来晚了，活动已结束</view>
+        </view>
+        <e bind:next="join" scene="get_coupon" wx:if="{{activityStatus.button.type==='JOIN'||activityStatus.button.type==='START_NEW'}}">
+            <b customClass="split-coupon-friend-activity-info__btn {{activityStatus.button.isPlain?'split-coupon-friend-activity-info__isPlain':''}}" plain="{{activityStatus.button.isPlain}}" round="{{true}}" size="large" type="danger" wx:if="{{activityStatus.button.text}}">{{activityStatus.button.text}}</b>
+        </e>
+        <b bind:tap="handleClickBtn" customClass="split-coupon-friend-activity-info__btn {{activityStatus.button.isPlain?'split-coupon-friend-activity-info__isPlain':''}}" data-button="{{activityStatus.button}}" plain="{{activityStatus.button.isPlain}}" round="{{true}}" size="large" type="danger" wx:elif="{{activityStatus.button.text}}">{{activityStatus.button.text}}</b>
+    </view>
+</view>

@@ -1,0 +1,20 @@
+<view class="e1688">
+    <a bind:_init="_tic" customClass="c7435d">
+        <view class="ed1c2">
+            <view class="ffff4">
+                <image class="bd231" lazyLoad="true" src="{{item.imgUrl}}" style="width: 80px; height: 80px; border-radius: var(--theme-radius-card, 8px)"></image>
+                <view class="c54a0d c89585" wx:if="{{item.present}}"></view>
+            </view>
+            <view class="c26b59">
+                <view class="c81295">
+                    <view class="c0310"> {{item.title}} </view>
+                </view>
+                <view class="c81295">
+                    <view class="c6a3ac"> {{item.sku}} </view>
+                    <view class="be1ef c89585">x{{item.num}}</view>
+                </view>
+            </view>
+        </view>
+    </a>
+    <view class="c9fea5"> {{item.unavailableDesc}} </view>
+</view>

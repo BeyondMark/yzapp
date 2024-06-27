@@ -1,0 +1,39 @@
+.c89585 {
+  text-decoration: inherit;
+}
+.c89585,
+.bd231 {
+  display: inline-block;
+}
+.bd231 {
+  width: 100%;
+  height: 100%;
+}
+.c763bd {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+.c763bd .fad58 {
+  display: flex;
+  align-items: center;
+  height: 24px;
+  border-radius: 12px;
+  background: #ff7d34;
+  color: #fff;
+  font-weight: 600;
+  line-height: 24px;
+}
+.c763bd .fad58 .baec6 {
+  width: 24px;
+}
+.c763bd .fad58 .c0ecee {
+  display: inline-block;
+  margin: 6px;
+  font-size: 12px;
+}
+.c763bd .fad58 .c0fc3c {
+  display: inline-block;
+  margin-right: 12px;
+  font-size: 14px;
+}

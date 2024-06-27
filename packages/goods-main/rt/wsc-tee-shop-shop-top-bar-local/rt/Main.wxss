@@ -1,0 +1,139 @@
+.t-text {
+  text-decoration: inherit;
+}
+.t-text,
+.bd231 {
+  display: inline-block;
+}
+.bd231 {
+  width: 100%;
+  height: 100%;
+}
+.shop-top-bar {
+  position: relative;
+  background: #fff;
+}
+.shop-top-bar--web {
+  padding-right: 160px;
+}
+.f83fb {
+  padding: 0 15px;
+  background: #fff;
+}
+.f83fb .c768da {
+  display: flex;
+  height: 36px;
+  align-items: center;
+  background: #fff;
+  color: #666;
+  font-size: 14px;
+}
+.f83fb .c768da .ee29b {
+  width: 12px;
+  height: 14px;
+}
+.f83fb .c768da .b351b {
+  margin: 0 8px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 125px;
+  vertical-align: bottom;
+}
+.f83fb .c768da .c31eac {
+  width: 6px;
+  height: 3px;
+  margin-top: -22px;
+}
+.f83fb .c768da .c84152 {
+  margin-top: 0;
+}
+.top-bar {
+  height: 36px;
+  background: #fff;
+  color: #666;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 0 15px;
+}
+.c2e661 {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.c1cd9f {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.d12a7 {
+  margin-left: 15px;
+  flex-shrink: 0;
+}
+.c44cff {
+  margin-right: 12px;
+}
+.top-bar.immersive {
+  position: absolute;
+  left: 0;
+  border-radius: 0 18px 18px 0;
+  background: rgba(0, 0, 0, 0.2);
+  border: 0.5px solid hsla(0, 0%, 100%, 0.2);
+  color: #fff;
+  border-left: none;
+  width: -webkit-fit-content;
+  width: fit-content;
+  pointer-events: auto;
+  z-index: 90;
+}
+.top-bar-links {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  line-height: 36px;
+}
+.top-bar-links__search {
+  width: 22px;
+  height: 36px;
+  line-height: 36px !important;
+  padding: 0 4px 0 10px;
+  font-size: 16px;
+  text-align: center;
+  color: #646566;
+}
+.top-bar-links__follow,
+.top-bar-links__records {
+  color: #646566;
+  font-size: 14px;
+}
+.top-bar-links__follow {
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+  padding-right: 10px;
+}
+.top-bar-links__follow:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  border: 0 solid #e5e5e5;
+  border-right-width: 1px;
+  top: 10px;
+  height: 32px;
+}

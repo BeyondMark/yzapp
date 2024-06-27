@@ -1,0 +1,7 @@
+<view class="a0c39" wx:if="{{type}}">
+    <view class="c3c526"></view>
+    <view class="c7680" wx:for="{{steps}}" wx:for-item="step" wx:key="index">
+        <image class="c462d2 bd231" lazyLoad="true" src="{{step.path}}"></image>
+        <view class="{{type==='hotel'?'c8100':''}}">{{step.title}}</view>
+    </view>
+</view>

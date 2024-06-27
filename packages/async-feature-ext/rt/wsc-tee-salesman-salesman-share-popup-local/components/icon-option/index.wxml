@@ -1,0 +1,4 @@
+<button bind:tap="_p" class="option" data-t="{{ tap:{en:'handleOptionClick'} }}" hoverClass="none" id="salesman" openType="{{option.type==='share'?'share':''}}">
+    <image class="option__icon tee-image" lazyLoad="{{true}}" src="{{option.iconUrl}}"></image>
+    <view class="option__name t-text">{{option.title}}</view>
+</button>

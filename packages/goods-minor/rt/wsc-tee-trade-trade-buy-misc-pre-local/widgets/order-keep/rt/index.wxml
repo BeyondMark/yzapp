@@ -1,0 +1,1 @@
+<a bind:_init="_tic" bind:close="_p" bind:confirm="_p" data-t="{{ close:{en:'onClose'},confirm:{en:'onConfirm'} }}" displayData="{{displayData}}" show="{{showOrderkeep}}" themeColors="{{themeColors}}"></a>

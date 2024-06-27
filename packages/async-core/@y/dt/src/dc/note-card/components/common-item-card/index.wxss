@@ -1,0 +1,197 @@
+.tee-image {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.card-0 {
+  box-shadow: 0 2px 8px rgba(93, 113, 127, 0.08);
+}
+.card-1,
+.card-2 {
+  position: relative;
+}
+.card-2:after {
+  content: "";
+  transform: scale(0.5);
+  position: absolute;
+  border: 1px solid #e5e5e5;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+}
+.border-0,
+.border-0.card-3 .sn-img,
+.corner-0 {
+  border-radius: 8px;
+}
+.font-1 {
+  font-weight: 700;
+}
+.sn-common-card .common-layout {
+  overflow: hidden;
+  background: #fff;
+  margin-bottom: 10px;
+}
+.sn-common-card .common-layout-container .img-wrapper {
+  position: relative;
+  margin-top: 0;
+}
+.sn-common-card .common-layout-container .img-wrapper .cover {
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.05),
+    rgba(0, 0, 0, 0.5)
+  );
+}
+.sn-common-card .common-layout-container .img-wrapper .cover-top {
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+.sn-common-card .common-layout-container .img-wrapper .cover-top .label {
+  position: static;
+  float: left;
+}
+.sn-common-card
+  .common-layout-container
+  .img-wrapper
+  .cover-top
+  .sn-thumb-view {
+  float: right;
+}
+.sn-common-card .common-layout-container .img-wrapper .cover-top-text {
+  color: #d60000;
+}
+.sn-common-card .common-layout-container .img-wrapper .cover-top-span {
+  float: left;
+  color: #d60000;
+}
+.sn-common-card .common-layout-container .img-wrapper .cover-bottom {
+  line-height: 24px;
+}
+.sn-common-card .common-layout-container .img-wrapper .cover-bottom-title {
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.sn-common-card .common-layout-container .img-wrapper .label {
+  display: -webkit-flex;
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 10px;
+  color: #141415;
+  line-height: 18px;
+  background: #fff;
+  opacity: 0.85;
+  border-radius: 2px;
+  padding: 0 5px;
+}
+.sn-common-card .common-layout-container .img-wrapper .label-span {
+  color: #d60000;
+  display: inline-block;
+  margin-right: 2px;
+}
+.sn-common-card .common-layout-container .sn-img {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.sn-common-card .common-layout-container .common-layout-summary {
+  padding: 10px;
+}
+.sn-common-card .common-layout-container .common-layout-summary-title {
+  height: 44px;
+  line-height: 22px;
+  color: #323233;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.sn-common-card .wrapper-0 .sn-img {
+  height: 193px;
+}
+.sn-common-card .wrapper-0 .common-layout-summary-title {
+  max-height: 44px;
+  height: unset;
+}
+.sn-common-card .wrapper-1 .sn-img {
+  height: 177px;
+}
+.sn-common-card .wrapper-1 .label {
+  left: 10px;
+  bottom: 10px;
+}
+.sn-common-card .wrapper-1 .common-layout-wrapper .common-layout-summary {
+  padding: 10px;
+}
+.sn-common-card .wrapper-1 .sn-thumb-view {
+  margin-top: 12px;
+}
+.sn-common-card .wrapper-2 .sn-img {
+  height: 150px;
+}
+.sn-common-card .wrapper-2 .common-layout-wrapper {
+  max-width: 150px;
+  min-width: 150px;
+}
+.sn-common-card .wrapper-2 .common-layout-wrapper .common-layout-summary {
+  padding: 10px;
+}
+.sn-common-card .wrapper-2 .common-layout-wrapper .common-layout-summary-title {
+  height: 44px;
+}
+.sn-common-card .wrapper-2 .common-layout-wrapper:last-child {
+  margin-right: 15px;
+}
+.sn-common-card .wrapper-3 .sn-img {
+  height: 150px;
+}
+.sn-common-card .wrapper-5.common-layout-wrapper {
+  margin-bottom: 10px;
+}
+.sn-common-card .wrapper-5 .label {
+  position: flex;
+  margin-bottom: 4px;
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 12px;
+}
+.sn-common-card .wrapper-5 .label-span {
+  color: #d60000;
+  display: inline-block;
+  margin-right: 2px;
+}
+.sn-common-card .wrapper-5 .cover-top-span {
+  margin-right: 2px;
+}
+.sn-common-card .wrapper-5 .common-layout-summary-title {
+  font-size: 13px;
+  line-height: 17px;
+  height: auto;
+}
+.sn-common-card .wrapper-5 .card-3 .common-layout-summary {
+  background: transparent;
+  padding: 0;
+}
+.sn-common-card .wrapper-5 .card-3 .label,
+.sn-common-card .wrapper-5 .card-3.common-layout {
+  background: transparent;
+}
+.sn-common-card .wrapper-5 .common-layout-summary {
+  padding: 8px 12px 12px 12px;
+}

@@ -1,0 +1,9 @@
+<view class="status-engage" wx:if="{{lotteryInfo.userStatus==='ENGAGE'}}">
+    <view>参与成功</view>
+    <view class="status-engage-time">距离开奖时间仅剩<view class="status-engage-unit">{{lotteryInfo.countdown.hour}}</view>:<view class="status-engage-unit">{{lotteryInfo.countdown.minute}}</view>:<view class="status-engage-unit">{{lotteryInfo.countdown.second}}</view>
+    </view>
+</view>
+<view class="status-get" wx:if="{{lotteryInfo.userStatus==='GET'}}">恭喜你，中奖啦</view>
+<view class="status-fail" wx:if="{{lotteryInfo.userStatus==='FAIL'}}">很遗憾，没有中奖</view>
+<view class="status-missed" wx:if="{{lotteryInfo.userStatus==='MISSED'}}">来晚啦，抽奖已结束</view>
+<view class="status-get" wx:if="{{lotteryInfo.userStatus==='OPENING'}}">正在开奖中，请稍等</view>

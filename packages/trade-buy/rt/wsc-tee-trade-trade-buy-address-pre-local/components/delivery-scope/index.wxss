@@ -1,0 +1,24 @@
+.d5a4c {
+  padding: var(--theme-page-cell-padding-top, 10px)
+    var(--theme-page-cell-padding-right, 12px)
+    var(--theme-page-cell-padding-bottom, 10px)
+    var(--theme-page-cell-padding-left, 12px) !important;
+}
+.c971a6 {
+  color: #323233;
+  font-weight: var(--theme-common-field-font-weight, 500);
+}
+.delivery-scope__desc {
+  color: #969799;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0 24px;
+  word-break: break-all;
+}
+.delivery-scope__img {
+  line-height: 0;
+  padding: 0 24px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 40vh;
+}

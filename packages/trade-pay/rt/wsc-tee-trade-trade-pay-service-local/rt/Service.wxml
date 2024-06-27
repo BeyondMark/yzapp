@@ -1,0 +1,34 @@
+<view class="service">
+    <a bind:_init="_tic" border="{{false}}">
+        <b bind:_init="_tic" wx:if="{{showDeliveryType}}">
+            <view class="c4ca65">
+                <view class="c5b6a7">
+                    <view class="c6762b">配送方式</view>
+                    <view bind:tap="_p" class="c1dac3" data-t="{{ tap:{en:'toggleExpressPopup'} }}" wx:if="{{showCheckDeliveryScope}}">            同城配送－配送范围说明
+          </view>
+                </view>
+                <view class="c53916">
+                    <view class="c7dcfc">
+                        <view class="c89585">{{service.postage}}</view>
+                        <view class="c89585">{{service.expressType}}</view>
+                    </view>
+                    <view wx:if="{{showDeliveryTime}}">{{service.deliveryTime}}</view>
+                </view>
+            </view>
+        </b>
+        <b bind:_init="_tic" border="{{true}}" title="买家留言" titleClass="c68963" titleWidth="80px" value="{{service.buyerMemo}}" valueClass="c79846" wx:if="{{display.showBuyerMemoBlock}}"></b>
+    </a>
+    <d bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'toggleExpressPopup'} }}" position="bottom" round="{{true}}" show="{{showExpressPopup}}">
+        <view class="f6a72">
+            <view class="c4cb56 c88b0e">
+                <view class="c89585">同城配送－配送范围说明</view>
+                <c bind:_init="_tic" bind:tap="_p" class="c6eda1" data-t="{{ tap:{en:'toggleExpressPopup'} }}" name="close" size="18px"></c>
+            </view>
+            <view class="ee42a">
+                <view class="c95a77">配送范围：</view>
+                <view class="c5cad6"> {{service.localDeliveryDesc}} </view>
+                <image class="c5ae57 bd231" lazyLoad="true" mode="widthFix" src="{{service.localDeliveryImg}}" wx:if="{{service.localDeliveryImg}}"></image>
+            </view>
+        </view>
+    </d>
+</view>

@@ -1,0 +1,27 @@
+.tag-group-text-info-no-margin-top {
+  margin-top: 0 !important;
+}
+.group-title {
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  color: #999;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.group-empty {
+  height: 54px;
+  line-height: 54px;
+  font-size: 14px;
+  color: #999;
+  text-align: center;
+  background: #fff;
+}
+.load-anchor {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  touch-action: none;
+  pointer-events: none;
+}

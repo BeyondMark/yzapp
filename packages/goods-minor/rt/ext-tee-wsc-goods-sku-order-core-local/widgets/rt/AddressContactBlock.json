@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../components/ContactCell",
+    "_": "../../../../../../components/_/index"
+  }
+}

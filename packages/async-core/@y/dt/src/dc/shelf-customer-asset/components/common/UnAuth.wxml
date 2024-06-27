@@ -1,0 +1,39 @@
+<view class="{{'unauthorized__wrapper'}} {{styleMode}}">
+    <block wx:if="{{styleMode==='horizontal'}}">
+        <view class="member-text horizontal">
+            <view class="title horizontal">{{fullTitle}}</view>
+            <view class="subtitle">{{subTitle}}</view>
+        </view>
+        <view>
+            <a authTypeList="{{['mobile']}}" bind:_init="_tic" bind:fail="_p" bind:next="_p" data-t="{{ next:{en:'handleLogin'},fail:{en:'handleAuthFail'} }}" kdtId="{{kdtId}}" type="separate">
+                <view class="action" style="background-color:{{themeColor}}">注册/登录</view>
+            </a>
+        </view>
+    </block>
+    <block wx:if="{{styleMode==='vertical'}}">
+        <view class="avatar">
+            <image class="tee-image" lazyLoad="true" mode="aspectFit" src="{{defaultAvatar}}"></image>
+        </view>
+        <view class="member-text vertical">
+            <view class="title">{{titleInfo.prefix}}</view>
+            <view class="title vertical">{{titleInfo.text}}</view>
+            <view class="subtitle vertical">{{subTitle}}</view>
+        </view>
+        <view class="action__wrapper">
+            <a authTypeList="{{['mobile']}}" bind:_init="_tic" bind:fail="_p" bind:next="_p" data-t="{{ next:{en:'handleLogin'},fail:{en:'handleAuthFail'} }}" kdtId="{{kdtId}}" type="separate">
+                <view class="action vertical" style="background-color:{{themeColor}}">注册/登录</view>
+            </a>
+        </view>
+    </block>
+    <block wx:if="{{styleMode==='hello'}}">
+        <view class="member-text hello">
+            <view class="title hello">Hello</view>
+            <view class="subtitle hello">{{subTitleProp}}</view>
+        </view>
+        <view>
+            <a authTypeList="{{['mobile']}}" bind:_init="_tic" bind:fail="_p" bind:next="_p" data-t="{{ next:{en:'handleLogin'},fail:{en:'handleAuthFail'} }}" kdtId="{{kdtId}}" type="separate">
+                <view class="action" style="background-color:{{themeColor}}">注册/登录</view>
+            </a>
+        </view>
+    </block>
+</view>

@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y/ppt/lib/user-authorize/index",
+    "b": "./../common/MemberCode",
+    "c": "./UserAvatarModeOne",
+    "d": "./UserAvatarModeTwo",
+    "e": "./AssetInfoBlockModeTwo",
+    "f": "./../common/GrowthValue",
+    "g": "./../asset-mode-four/AssetEntryCardModeFour",
+    "_": "../../../../../../../../../components/_/index"
+  }
+}

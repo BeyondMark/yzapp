@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-tee/@y-open/vt/native/weapp/checkbox/index/index",
+    "b": "/@y-open/vt/dist/transition/index",
+    "_": "../../../../../../../../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./weapp/WeappFollow",
+    "_": "../../../../../../components/_/index"
+  }
+}

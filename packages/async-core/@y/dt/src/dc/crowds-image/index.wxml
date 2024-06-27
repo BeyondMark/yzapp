@@ -1,0 +1,3 @@
+<view class="dc-crowds-image">
+    <a _opt="{{imagesOpt}}" bind:_init="_tic" bind:indexChange="_p" bind:jumpToLink="_p" data-t="{{ jumpToLink:{en:'onImageClick'},indexChange:{en:'onImageIndexChange'} }}" extra="{{extra}}" kdtId="{{kdtId}}"></a>
+</view>

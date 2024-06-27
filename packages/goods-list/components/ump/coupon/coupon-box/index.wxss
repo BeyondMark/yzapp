@@ -1,0 +1,102 @@
+.e081c {
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica,
+    Segoe UI, Arial, Roboto, PingFang SC, Hiragino Sans GB, Microsoft Yahei,
+    sans-serif;
+  position: relative;
+}
+.e081c__disabled {
+  color: #969799;
+}
+.e081c__unavailable {
+  color: #c8c9cc;
+}
+.e081c__box {
+  border-radius: 4px;
+  width: inherit;
+  margin-bottom: 12px;
+  overflow: hidden;
+  font-size: 12px;
+  transition: height 0.2s linear;
+}
+.e081c__flat {
+  box-sizing: initial;
+  background-color: #fff6f6;
+  border: 1px solid #fec9c9;
+}
+.e081c__card {
+  background-color: #fff;
+  box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.06);
+}
+.c442cd {
+  display: flex;
+  width: 100%;
+}
+.f251f {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.f251f:empty {
+  display: none;
+}
+.da8b9 {
+  flex: none;
+  box-sizing: border-box;
+  width: 112px;
+  height: inherit;
+  padding: 16px 12px;
+  overflow: hidden;
+}
+.d0499 {
+  flex: 1;
+  width: 0;
+  max-width: 100%;
+  padding: 22px 8px 16px;
+  padding-left: 0;
+  color: #323233;
+}
+.c18c2b {
+  flex: none;
+  min-width: 76px;
+  height: inherit;
+  box-sizing: border-box;
+}
+.c2d738 {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 12px;
+  padding: 8px 0;
+  border-top: 1px dashed #ebedf0;
+}
+.e081c__collapse {
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+  width: 100%;
+}
+.c830ad {
+  background-color: #fff;
+  box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  position: relative;
+  bottom: -8px;
+  z-index: 2;
+  height: 10px;
+  margin: 0 7px;
+}
+.c830ad + .c830ad {
+  z-index: 1;
+  margin: -6px 14px 0;
+  box-shadow: unset;
+}
+.e081c__no-boxshadow {
+  box-shadow: unset;
+}
+.e081c__show-collapse {
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 4;
+}
+.e081c__collapse-2 .c830ad {
+  bottom: -4px;
+}

@@ -1,0 +1,42 @@
+.draw-notice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 11px;
+  height: 22px;
+}
+.draw-notice-time {
+  font-size: 12px;
+  line-height: 22px;
+  color: #f44;
+}
+.draw-notice .time-section {
+  display: inline-block;
+  font-family: PingFangSC-Medium;
+  font-size: 12px;
+  color: #f44;
+}
+.draw-notice .time-item__day {
+  font-size: 12px;
+  color: #f44;
+}
+.draw-notice .time-item {
+  margin: 0 4px;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  border: 1px solid #f44;
+  color: #f44;
+  display: inline-block;
+  text-align: center;
+}
+.draw-notice .notice {
+  color: #323233;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+.draw-notice .notice-switch {
+  margin-left: 5px;
+  width: 33px;
+}

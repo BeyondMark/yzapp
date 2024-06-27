@@ -1,0 +1,7 @@
+<view class="cashier-wrap" wx:if="{{showWrap}}">
+    <a bind:_init="_tic" id="pre-cashier-block" rmId="b38-31" wx:if="{{rmId==='b38-32'}}"></a>
+    <b bind:_init="_tic" bind:tap="_p" block="{{true}}" class="ad1e0" color="white" customClass="ef0b2" data-t="{{ tap:{en:'onBtnClick'} }}" round="{{true}}" wx:if="{{showFloatingBtn}}">
+        <view class="c33a74 c89585">下方选择支付方式</view>
+        <view class="c1bb11"></view>
+    </b>
+</view>

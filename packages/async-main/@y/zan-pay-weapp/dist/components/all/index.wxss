@@ -1,0 +1,18 @@
+.as {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.label {
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 6px;
+  padding-left: 28px;
+  color: #646566;
+}
+.d {
+  color: #c8c9cc;
+}
+.i {
+  padding-left: 44px !important;
+}

@@ -1,0 +1,30 @@
+<b bg="var(--ump-coupon-bg)" customClass="c5fe26" opacity="0.06">
+    <view class="a7378">
+        <view class="d4192">
+            <b color="var(--ump-icon)">{{couponData.value}}{{couponData.unit}}</b>
+            <view>券</view>
+        </view>
+        <view class="caf9b">
+            <view class="c9cd63" wx:if="{{couponStatus==='unaccalimed'}}">{{couponData.name}}</view>
+            <view class="d5f7f" wx:else>
+                <a bind:change="onChange" bind:finish="onFinished" time="{{couponData.validEndTime-curTime}}" useSlot="{{true}}">
+                    <text class="{{remindClass}}" wx:if="{{timeData.days>0}}">{{timeData.days}}</text>
+                    <text class="b2ac1 {{remindClass}}" wx:if="{{timeData.days>0}}">天</text>
+                    <text class="{{remindClass}}">{{timeData.hours}}:</text>
+                    <text class="{{remindClass}}">{{timeData.minutes}}:</text>
+                    <text class="{{remindClass}}">{{timeData.seconds}}</text>
+                </a>
+                <view class="c7e5ac {{remindClass}}">后失效</view>
+            </view>
+        </view>
+    </view>
+    <view class="c2ee68">
+        <c bind:next="receivedHandle" scene="get_coupon" wx:if="{{couponStatus==='unaccalimed'}}">
+            <b bg="var(--ump-main-bg)" color="var(--ump-main-text)" customClass="b3fd5">立即领取</b>
+        </c>
+        <b bg="var(--ump-main-bg)" bindtap="useHandle" color="var(--ump-main-text)" customClass="b3fd5" wx:else>立即使用</b>
+        <view bindtap="closeHandle" class="c491cc">
+            <d color="#969799" name="cross"></d>
+        </view>
+    </view>
+</b>

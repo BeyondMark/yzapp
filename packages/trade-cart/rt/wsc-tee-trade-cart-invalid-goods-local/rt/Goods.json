@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../widgets/rt/InvalidMask",
+    "b": "./../RecommendGoods",
+    "_": "../../../../../components/_/index"
+  }
+}

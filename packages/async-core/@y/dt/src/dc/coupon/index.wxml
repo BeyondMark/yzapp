@@ -1,0 +1,12 @@
+<view>
+    <d _opt="{{opt.moduleTitleOpt}}" bind:_init="_tic" wx:if="{{curCoupons.length}}"></d>
+    <a _opt="{{layoutOptWithWidthAndScrollView}}" bind:_init="_tic">
+        <b _opt="{{layoutOptWithWidthAndScrollView}}" bind:_init="_tic" wx:for="{{curCoupons}}" wx:key="alias">
+            <f authorizeScene="get_coupon" beforGuide="{{beforGuide}}" beforGuideParam="{{index}}" bind:_init="_tic" bind:afterGetGuide="_p" class="authorize" data-ref="{{'guide-button'+index}}" data-t="{{ afterGetGuide:{en:'openGuideDialog'} }}" guideType="coupon" isAutoGuide="{{false}}" kdtId="{{kdtId}}" redirectUrl="{{redirectUrl}}" requestParam="{{voucherActivityId:voucherActivityId}}">
+                <g bind:_init="_tic" item="{{item}}" opt="{{...opt,layoutOpt:layoutOptWithWidthAndScrollView}}"></g>
+            </f>
+        </b>
+    </a>
+    <e beforGuide="{{beforGuide}}" bind:_init="_tic" bind:closeGuide="_p" data-t="{{ closeGuide:{en:'closeGuide'} }}" guideInfo="{{guideInfo}}" guideType="coupon" kdtId="{{kdtId}}" mobile="{{mobile}}" redirectUrl="{{redirectUrl}}" showPop="{{showGuide}}"></e>
+    <c bind:_init="_tic" bind:load-more="_p" data-t="{{ loadMore:{en:'loadMoreCoupons'} }}" wx:if="{{showLoadMore}}"></c>
+</view>

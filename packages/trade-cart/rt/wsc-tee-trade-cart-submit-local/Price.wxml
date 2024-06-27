@@ -1,0 +1,7 @@
+<view class="e1fdb" style="{{themeVars}}">
+    <view class="c78a5e custom-class">
+        <view class="c3a4d0">¥</view>
+        <view class="c8b830">{{formatPriceArr[0]}}</view>
+        <view class="c3f0b3" wx:if="{{formatPriceArr[1]}}">.{{formatPriceArr[1]}}</view>
+    </view>
+</view>

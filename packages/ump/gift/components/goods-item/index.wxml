@@ -1,0 +1,17 @@
+<view class="goods-item {{noHairLine?'':'van-hairline--bottom'}}">
+    <view bindtap="handleGoodsImgClick" class="img-wrap" data-alias="{{goodsItem.alias}}">
+        <image mode="aspectFit" src="{{goodsItem.imgUrl}}"></image>
+    </view>
+    <view class="goods-detail">
+        <view class="title van-multi-ellipsis--l2 van-font-14">{{goodsItem.title}}</view>
+        <view class="sku-str van-font-14 van-c-gray-dark van-ellipsis">{{goodsItem.skuStr}}</view>
+        <view class="err-msg van-font-12" wx:if="{{goodsItem.errorMsg}}">{{goodsItem.errorMsg}}</view>
+        <view class="price active-text" wx:else>
+            <text class="van-font-10">￥</text>
+            <text class="van-font-14">{{goodsItem.price}}</text>
+        </view>
+        <view class="stepper">
+            <a bind:change="handleStepperChange" max="{{goodsItem.maxNum}}" min="0" value="{{goodsItem.num}}" wx:if="{{!goodsItem.invalid}}"></a>
+        </view>
+    </view>
+</view>

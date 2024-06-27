@@ -1,0 +1,7 @@
+<view class="area-field">
+    <a bind:_init="_tic" bind:tap="_p" class="{{'city-address'}} {{convertedVal!==''?'black-field':''}}" customStyle="{{fieldStyle}}" data-t="{{ tap:{en:'openAreaActionsheet'} }}" disabled="{{true}}" isLink="{{true}}" label="{{fieldLabel}}" placeholder="{{fieldInfo.feRequired?'省/市/区':'(选填)省/市/区'}}" value="{{convertedVal}}"></a>
+    <a autosize="{{true}}" bind:_init="_tic" bind:input="_p" customStyle="{{fieldStyle}}" data-t="{{ input:{en:'onAddrInput'} }}" label=" " placeholder="{{fieldInfo.feRequired?'门牌号、楼栋号、单元室等':'(选填)门牌号、楼栋号、单元室等'}}" rows="2" value="{{address}}" wx:if="{{detailAddress}}"></a>
+    <b bind:_init="_tic" bind:close="_p" class="area-action-sheet" closeOnClickOverlay="{{true}}" data-t="{{ close:{en:'cancelSelectArea'} }}" show="{{showSelectArea}}" zIndex="10000">
+        <c areaList="{{areaList}}" bind:_init="_tic" bind:cancel="_p" bind:confirm="_p" data-t="{{ confirm:{en:'confirmArea'},cancel:{en:'cancelSelectArea'} }}" loading="{{loadingArea}}" value="{{areaCode}}"></c>
+    </b>
+</view>

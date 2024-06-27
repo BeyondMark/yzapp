@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./Logistics",
+    "_": "../../../../../components/_/index"
+  }
+}

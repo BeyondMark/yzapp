@@ -1,0 +1,3 @@
+<view bindtap="handelClick" class="flow-entrance-banner custom-class" style="{{bannerStyle}}" wx:if="{{info}}">
+    <image mode="widthFix" src="{{info.banner}}"></image>
+</view>

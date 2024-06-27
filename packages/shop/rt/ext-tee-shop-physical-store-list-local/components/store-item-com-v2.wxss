@@ -1,0 +1,113 @@
+.t-text {
+  text-decoration: inherit;
+}
+.t-text,
+.tee-image {
+  display: inline-block;
+}
+.tee-image {
+  width: 100%;
+  height: 100%;
+}
+.shop-list-item {
+  margin: 0 12px 12px;
+  background-color: #fff;
+  padding: 16px 12px;
+  border-radius: 8px;
+}
+.shop-list-item .shop-pic {
+  height: 160px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+.shop-list-item .shop-info {
+  display: flex;
+}
+.shop-list-item .shop-info .info-left {
+  flex-grow: 1;
+  padding-right: 12px;
+  overflow: hidden;
+}
+.shop-list-item .shop-info .info-left .name-wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #323233;
+}
+.shop-list-item .shop-info .info-left .name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.shop-list-item .shop-info .info-left .location,
+.shop-list-item .shop-info .info-left .time {
+  color: #969799;
+  font-size: 12px;
+  line-height: 18px;
+  display: flex;
+}
+.shop-list-item .shop-info .info-left .location .label-icon,
+.shop-list-item .shop-info .info-left .time .label-icon {
+  flex-shrink: 0;
+  padding-top: 3px;
+  width: 12px;
+  height: 12px;
+}
+.shop-list-item .shop-info .info-left .location .info,
+.shop-list-item .shop-info .info-left .time .info {
+  margin-left: 4px;
+}
+.shop-list-item .shop-info .info-left .location .time-label,
+.shop-list-item .shop-info .info-left .time .time-label {
+  margin-right: 8px;
+}
+.shop-list-item .shop-info .info-left .location {
+  margin-bottom: 8px;
+}
+.shop-list-item .shop-info .info-right {
+  flex-basis: 88px;
+  flex-shrink: 0;
+  padding-left: 12px;
+  border-left: 0.5px solid #ebedf0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.shop-list-item .shop-info .info-right .distance {
+  text-align: center;
+  font-size: 14px;
+  line-height: 18px;
+  color: #323233;
+}
+.shop-list-item .shop-info .info-right .action {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding: 0 5px;
+}
+.shop-list-item .shop-info .info-right .action .action-container {
+  position: relative;
+  overflow: hidden;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shop-list-item
+  .shop-info
+  .info-right
+  .action
+  .action-container
+  .container-color {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0.1;
+}

@@ -1,0 +1,28 @@
+.tee-image {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.filters {
+  height: 40px;
+  background: #fff;
+  font-family: PingFang SC;
+}
+.filter,
+.filters {
+  display: -webkit-flex;
+  display: flex;
+}
+.filter {
+  flex-basis: 33.3%;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 20px;
+}
+.filter .arrow {
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin-left: 4px;
+}

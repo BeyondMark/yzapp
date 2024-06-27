@@ -1,0 +1,23 @@
+<view bind:tap="jump" class="recommend-note {{isWaterFall?'isWaterFall':''}}">
+    <view class="recommend-note-banner">
+        <view class="recommend-note-banner__img" style="{{paddingTopStyle}}">
+            <image class="recommend-note-banner__img-waterfall" mode="{{imageFillMode}}" src="{{componentData.headImageUrl}}" wx:if="{{isWaterFall}}"></image>
+            <view class="{{imageFillStyleClass}} recommend-note-banner__img-bg" key="{{componentData.headImageUrl}}" style="background-image: url({{componentData.headImageUrl}})" wx:else></view>
+        </view>
+        <view class="recommend-note-wrapper recommend-note-{{layoutConfig.textAlignType}}">
+            <view class="recommend-note-wrapper__title" wx:if="{{layoutConfig.showTitle||layoutConfig.showSubTitle}}">
+                <view class="title {{textStyleClass}}" wx:if="{{layoutConfig.showTitle}}">{{componentData.title||description}}</view>
+                <view class="subtitle" wx:if="{{layoutConfig.showSubTitle}}">{{componentData.description}}</view>
+            </view>
+            <view class="recommend-note-wrapper__info" wx:if="{{layoutConfig.showPrice||layoutConfig.showBuyButton}}">
+                <view class="recommend-note-wrapper__info-label" wx:if="{{layoutConfig.showPrice}}">
+                    <b bg="main-bg" class="textStyleClass {{textStyleClass}}" color="main-bg" customClass="note-label" opacity="0.1">#{{componentData.label}}</b>
+                </view>
+                <view class="recommend-note-wrapper__info-view" wx:if="{{layoutConfig.showBuyButton}}">
+                    <a class="icon-wrapper" name="eye-o" size="18px"></a>
+                    <view class="view-num">{{componentData.pv}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

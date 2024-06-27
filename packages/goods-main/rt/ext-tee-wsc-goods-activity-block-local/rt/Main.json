@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../widgets/presale-progress/rt/index",
+    "b": "./../ump/goods-activity-detail-block/index",
+    "c": "/packages/goods-core/@y/gc/components/activity-block/goods-new-product-launch/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "c": "_" }
+}

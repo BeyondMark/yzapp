@@ -1,0 +1,23 @@
+.e1ac0 {
+  padding: 13px 0 9px 0;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.e1ac0:after,
+.e1ac0:before {
+  content: "";
+  display: block;
+  height: 0.5px;
+  background: #dcdee0;
+  flex: 1;
+}
+.e1ac0:before {
+  margin: 0 12px 0 16px;
+}
+.e1ac0:after {
+  margin: 0 16px 0 12px;
+}

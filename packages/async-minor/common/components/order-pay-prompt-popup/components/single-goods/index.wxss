@@ -1,0 +1,59 @@
+.order-pay-prompt-popup-goods {
+  display: flex;
+  width: 263px;
+  height: 72px;
+  background-color: #f7f8fa;
+  margin: 0 auto 24px;
+  padding: 0 8px;
+  border-radius: var(--theme-radius-card, 4px);
+  align-items: center;
+}
+.goods-img {
+  margin-right: 8px;
+}
+.goods-image,
+.goods-img {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--theme-radius-card, 4px);
+}
+.goods-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 56px;
+}
+.goods-title {
+  font-size: 12px;
+  line-height: 16px;
+  color: #323233;
+  width: 199px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+.goods-desc {
+  line-height: 18px;
+  text-align: left;
+}
+.normal-text,
+.unit-text {
+  font-size: 12px;
+}
+.unit-text {
+  margin-left: 4px;
+}
+.price-text-yuan {
+  font-size: 18px;
+  font-weight: 700;
+}
+.price-text-fen {
+  font-size: 12px;
+  font-weight: 700;
+}
+.rights-text {
+  font-size: 12px;
+  color: #faab0c;
+  margin-left: 10px;
+}

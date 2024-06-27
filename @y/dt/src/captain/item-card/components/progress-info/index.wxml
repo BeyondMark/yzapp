@@ -1,0 +1,12 @@
+<view class="goods-progress">
+    <view class="bar" wx:if="{{opt.showProgress}}">
+        <view class="bar-inner" style="{{'width:'+opt.percent+'%'}}"></view>
+    </view>
+    <view class="{{'info'}} {{opt.infoAlign}}">
+        <view class="item" wx:for="{{infoList}}" wx:key="index">
+            <view style="{{item.style}}">
+                <view class="{{text.type==='theme'?'text-theme':''}} t-text" wx:for="{{item.text}}" wx:for-index="i" wx:for-item="text" wx:key="i">{{text.value}}</view>
+            </view>
+        </view>
+    </view>
+</view>

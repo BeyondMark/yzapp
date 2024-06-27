@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../widgets/ecard-intro/rt/index",
+    "b": "./../widgets/coupon-intro/rt/index",
+    "_": "../../../../../components/_/index"
+  }
+}

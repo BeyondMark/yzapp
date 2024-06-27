@@ -1,0 +1,27 @@
+<view class="address-search">
+    <a bind:_init="_tic" bind:cancel="_p" bind:change="_p" bind:focus="_p" bind:search="_p" class="c45f72" customClass="a1ff3" data-t="{{ focus:{en:'onFocus'},change:{en:'onChange'},search:{en:'onSearch'},cancel:{en:'onCancel'} }}" placeholder="请输入您的收货地址" shape="round" showAction="{{isSearching}}" value="{{keyword}}">
+        <view bind:tap="_p" class="ccda3" data-t="{{ tap:{en:'onClickCity'} }}" slot="label"> {{city}} <c bind:_init="_tic" class="c669d" name="arrow-down"></c>
+        </view>
+    </a>
+    <view class="c8e0d8" wx:if="{{isSearching}}">
+        <view class="e6d86" wx:if="{{isEmpty}}">
+            <image class="abdce bd231" lazyLoad="true" mode="aspectFit" src="https://img01.yzcdn.cn/public_files/2020/02/12/bc6b35812bc41ee0a100415c438989e1.png"></image>
+            <view class="c21fc8">暂无搜索结果</view>
+            <view wx:if="{{!forcePoiSelect}}">
+                <view class="c21fc8">没有搜到你的地址？</view>
+                <view bind:tap="_p" class="c31e0e" data-t="{{ tap:{en:'onDownGrade'} }}">使用当前搜索的地址</view>
+            </view>
+            <view class="c21fc8" wx:else>
+                <view>请尝试只输入小区，写字楼或学校名；</view>
+                <view>详细地址（如门牌号）可稍后输入</view>
+            </view>
+        </view>
+        <d bind:_init="_tic" bind:tap="_p" data-t="{{ tap:{ en:'onSelectAddress',args:[item] } }}" label="{{item.address}}" wx:for="{{searchList}}" wx:key="id">
+            <view slot="title" style="display: flex">
+                <view class="c89585" wx:for="{{item.titleArray}}" wx:for-item="word" wx:key="index">
+                    <view class="c89585" style="color: #38f" wx:if="{{index!==0}}">{{item.searchKeyword}}</view> {{word}} </view>
+            </view>
+        </d>
+        <b bind:_init="_tic" data-ref="van-toast"></b>
+    </view>
+</view>

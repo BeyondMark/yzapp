@@ -1,0 +1,15 @@
+<view class="deco-words-list">
+    <view class="deco-words-list__title" wx:if="{{title}}">{{title}}</view>
+    <view bind:tap="handleClickClear" class="deco-words-list__clear" wx:if="{{showClear&&list.length>0}}">
+        <a name="delete"></a>
+        <view class="text">清空</view>
+    </view>
+    <view class="deco-words-list__list" style="{{isHidden?hiddenStyle:''}}">
+        <view class="deco-words-list__inner">
+            <b bind:click="handleClickWordItem" wordItem="{{wordItem}}" wx:for="{{list}}" wx:for-item="wordItem" wx:key="index"></b>
+        </view>
+    </view>
+    <view bind:tap="toggleHidden" class="deco-words-list__arrow {{!isHidden?'is-up':''}}" wx:if="{{showToggle}}">
+        <a name="arrow-down"></a>
+    </view>
+</view>

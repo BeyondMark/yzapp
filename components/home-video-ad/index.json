@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-main/components/showcase/components/video-ad-link/index",
+    "_": "../_/index"
+  },
+  "componentPlaceholder": { "a": "_" }
+}

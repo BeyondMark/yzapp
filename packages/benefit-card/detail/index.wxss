@@ -1,0 +1,200 @@
+.detail {
+  min-height: 100vh;
+  background-color: #fff;
+}
+.detail .page-container {
+  background: #fff;
+}
+.detail .page-container.page-iphone .page-container--tab-bottom {
+  padding-bottom: 84px;
+}
+.detail .c-i-c {
+  margin: 0 24px;
+  position: relative;
+  padding-bottom: 21px;
+}
+.detail .c-i-c:after {
+  content: "";
+  width: calc(200% - 32px);
+  height: 1px;
+  background-color: #e0e0e0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scale(0.5);
+  transform-origin: 16px 0;
+}
+.detail .c-i-c .c-name {
+  color: #111;
+  font-size: 22px;
+  font-weight: 500;
+  text-align: center;
+}
+.detail .c-i-c .e-icon {
+  text-align: center;
+  padding-top: 8px;
+}
+.detail .c-i-c .e-icon .icon-inner {
+  display: inline-block;
+  font-size: 12px;
+  color: #fff;
+  border-radius: 12%;
+  padding: 1px 5px;
+}
+.detail .c-i-c .c-p-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4px;
+}
+.detail .c-i-c .c-p-info.block-comm {
+  padding-top: 10px;
+}
+.detail .c-i-c .c-p-info .info-price {
+  color: #111;
+  font-size: 18px;
+  line-height: 17px;
+}
+.detail .c-i-c .c-p-info .in-expi {
+  color: #666;
+  display: flex;
+  font-size: 12px;
+  align-items: center;
+}
+.detail .c-i-c .c-p-info .in-expi .in-t {
+  font-size: 12px;
+  padding-top: 2px;
+}
+.detail .banner-wrapper {
+  max-width: 686px;
+  max-height: 360px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: #fff;
+  position: relative;
+}
+.detail .banner-wrapper .card-container {
+  padding: 24px 24px 16px;
+  margin-top: 80rpx;
+}
+.detail .banner-wrapper .card-code {
+  width: 48rpx;
+  height: 48rpx;
+}
+.detail .banner-wrapper .card-bg {
+  width: 1048rpx;
+  height: 500rpx;
+  position: absolute;
+  top: 0;
+  left: -149rpx;
+  border-bottom-left-radius: 48%;
+  border-bottom-right-radius: 48%;
+  overflow: hidden;
+}
+.detail .banner-wrapper .card-bg:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.detail .banner-wrapper .card-bg .in {
+  width: 200%;
+  height: 1000rpx;
+  filter: blur(40px);
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-position: 50%;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+}
+.detail .van-cell {
+  padding: 13px 15px;
+}
+.info-content {
+  margin: 10px 0;
+}
+.loading-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.remove-btn {
+  width: calc(100% - 48px);
+  margin: 31px auto;
+  height: 36px;
+  line-height: 36px;
+  box-sizing: border-box;
+  border: none !important;
+  font-size: 14px;
+  text-align: center;
+  background-color: #f7f7f7;
+}
+.detail-loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.present-dialog {
+  text-align: center;
+  background-color: transparent;
+}
+.present-dialog .content {
+  padding: 40px 0 56px;
+  font-size: 18px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.present-dialog .content .present-pic {
+  height: 155px;
+  width: 222px;
+  display: inline-block;
+}
+.present-dialog .content .present-descp {
+  height: 40px;
+  line-height: 40px;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 700;
+}
+.present-dialog .dialog-button {
+  width: 100%;
+  margin: 24px auto;
+}
+.present-dialog .benefit-btn {
+  color: #fff;
+  box-sizing: border-box;
+  border-color: transparent;
+  text-align: center;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10em;
+  height: 40px;
+  line-height: 38px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.operator-bar {
+  width: 100%;
+  text-align: center;
+}
+.cell-value-available-shop {
+  flex: 2 !important;
+}
+.guide-footer__guide-notice__consumers {
+  padding: 20px 15px;
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+}
+@import "/packages/benefit-card/style/theme-view.wxss";

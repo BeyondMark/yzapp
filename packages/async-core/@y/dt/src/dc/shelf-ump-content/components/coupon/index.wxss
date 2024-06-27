@@ -1,0 +1,136 @@
+.t-text {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.ump-coupon {
+  display: -webkit-flex;
+  display: flex;
+  background-color: #f7f7f7;
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 8px;
+  overflow: hidden;
+  position: relative;
+  padding-left: 0;
+  height: 84px;
+  box-sizing: border-box;
+}
+.ump-coupon__left,
+.ump-coupon__mid,
+.ump-coupon__right {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+.ump-coupon__left {
+  width: 30%;
+  align-items: center;
+  padding: 0 12px;
+  justify-content: flex-end;
+}
+.ump-coupon__left .condition-price,
+.ump-coupon__left .condition-unit {
+  color: var(--theme-color, #794919);
+}
+.ump-coupon__left .condition-price {
+  font-family: Avenir, sans-serif;
+  font-weight: bolder;
+  font-size: 30px;
+  line-height: 30px;
+}
+.ump-coupon__left .condition-price.medium {
+  font-size: 24px;
+}
+.ump-coupon__left .condition-price.small {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+.ump-coupon__left .condition-unit {
+  margin-left: 2px;
+  font-size: 12px;
+}
+.ump-coupon__left .condition-text {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #999;
+}
+.ump-coupon__mid {
+  width: 45%;
+  justify-content: flex-end;
+}
+.ump-coupon__mid .coupon-name {
+  transform: translateY(-5tpx);
+  font-size: 14px;
+  color: #313133;
+  font-weight: 700;
+  flex-shrink: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.ump-coupon__mid .coupon-date {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #999;
+}
+.ump-coupon__right {
+  position: relative;
+  width: 25%;
+  align-items: flex-end;
+  justify-content: center;
+}
+.ump-coupon__newer {
+  position: absolute;
+  width: 73px;
+  height: 16px;
+  left: -22px;
+  top: 5px;
+  background: #98735b;
+  transform: rotate(-40deg);
+  font-size: 10px;
+  line-height: 16px;
+  color: #fff;
+  text-align: center;
+}
+.ump-coupon .coupon-btn {
+  padding: 7px 6px;
+  font-size: 12px;
+  line-height: 12px;
+  border-radius: 16px;
+  text-align: center;
+  background-color: var(--theme-color, #b99173);
+  color: #fff;
+}
+.ump-coupon .coupon-mark {
+  position: absolute;
+  bottom: -16px;
+  right: -15px;
+  height: 54px;
+  width: 54px;
+  border: 1px solid var(--theme-rgb-color-2);
+  border-radius: 50%;
+  transform: rotate(-30deg);
+}
+.ump-coupon .coupon-mark,
+.ump-coupon .coupon-mark__inner {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ump-coupon .coupon-mark__inner {
+  width: 44px;
+  height: 44px;
+  background-color: var(--theme-rgb-color-3);
+  border: 1px dotted var(--theme-rgb-color-2);
+  text-align: center;
+  border-radius: 50%;
+}
+.ump-coupon .coupon-mark__text {
+  color: var(--theme-rgb-color-2, #b99173);
+  font-size: 12px;
+}

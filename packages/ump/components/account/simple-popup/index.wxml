@@ -1,0 +1,6 @@
+<view class="simple-popup {{containerClass}}" style="{{customPopupStyle}}">
+    <view bind:tap="handleClose" bind:transitionend="handleOverlayTransionEnd" class="simple-popup-overlay {{contentClass}}" style="{{customOverlayStyle}}"></view>
+    <view class="simple-popup-container {{contentClass}}" style="{{customContainerStyle}}">
+        <slot></slot>
+    </view>
+</view>

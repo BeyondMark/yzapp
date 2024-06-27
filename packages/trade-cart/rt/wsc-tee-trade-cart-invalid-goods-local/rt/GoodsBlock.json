@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./Goods",
+    "b": "../../../@y-open/vt/dist/swipe-cell/index",
+    "_": "../../../../../components/_/index"
+  }
+}

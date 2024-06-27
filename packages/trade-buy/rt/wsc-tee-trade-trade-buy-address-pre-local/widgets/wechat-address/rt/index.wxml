@@ -1,0 +1,3 @@
+<a bind:_init="_tic" bind:tap="_p" border="{{false}}" center="{{true}}" customClass="c1bc32" data-t="{{ tap:{en:'onClick'} }}" isLink="{{true}}" title="获取微信收货地址" wx:if="{{cloudData.displayConfig.isShowWechatAddress}}">
+    <image class="c737d9 bd231" lazyLoad="true" mode="aspectFit" slot="icon" src="https://img01.yzcdn.cn/public_files/2020/05/24/c76f5e98253c7ea13db16112bbfcf953.png"></image>
+</a>

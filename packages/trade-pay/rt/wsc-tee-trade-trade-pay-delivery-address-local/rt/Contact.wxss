@@ -1,0 +1,21 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.be064 {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  line-height: 24px;
+  text-align: left;
+}
+.order-customer__border {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: #fff url(https://b.yzcdn.cn/v2/image/wap/address/border2@2x.png)
+    repeat-x;
+  background-size: 36px 2px;
+}

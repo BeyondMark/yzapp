@@ -1,0 +1,27 @@
+.r-c {
+  flex-direction: column;
+}
+.r-c,
+.r-r {
+  display: flex;
+}
+.r-r {
+  flex-direction: row;
+}
+page {
+  background-color: #fff;
+}
+.hrTkFo {
+  z-index: 1;
+}
+.hrTkFo,
+.tqqOzI {
+  position: relative;
+}
+.tqqOzI {
+  z-index: 10000;
+}
+.HjYTkD {
+  position: relative;
+  z-index: 999999;
+}

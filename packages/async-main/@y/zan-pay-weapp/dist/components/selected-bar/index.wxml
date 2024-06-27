@@ -1,0 +1,12 @@
+<view class="root flex sb ac">
+    <view class="left flex">
+        <view class="icon" wx:if="{{cfg.showIcon}}">
+            <a channel="{{channel}}" scale="0.8"></a>
+        </view>
+        <view>
+            <view class="text">{{cfg.text}}</view>
+            <view class="subtext" wx:if="{{cfg.subtext}}">{{cfg.subtext}}</view>
+        </view>
+    </view>
+    <view bind:tap="emit" class="right flex ac" data-en="action" style="color: {{tc}}">{{cfg.buttonText||''}}</view>
+</view>

@@ -1,0 +1,21 @@
+.t-calendar {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  height: var(--calendar-height, 100%);
+  background-color: #fff;
+  background-color: var(--calendar-background-color, #fff);
+}
+.t-calendar__close-icon {
+  top: 11px;
+}
+.t-calendar__popup--bottom,
+.t-calendar__popup--top {
+  height: 80%;
+  height: var(--calendar-popup-height, 80%);
+}
+.t-calendar__popup--left,
+.t-calendar__popup--right {
+  height: 100%;
+}

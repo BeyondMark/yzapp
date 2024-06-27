@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../widgets/goods-promotion/rt/index",
+    "b": "./../widgets/goods-stock/rt/index",
+    "c": "./../widgets/goods-package-buy/rt/index",
+    "_": "../../../../components/_/index"
+  }
+}

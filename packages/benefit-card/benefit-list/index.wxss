@@ -1,0 +1,25 @@
+.benefits-list {
+  min-height: 100vh;
+  padding: 24rpx 24rpx 94rpx;
+  box-sizing: border-box;
+  background-color: #f7f8fa;
+}
+.benefits-list .benefit-btn-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 14rpx 32rpx;
+  background: #fff;
+}
+.benefits-list .theme-view-wrapper {
+  border-radius: 10em;
+  overflow: hidden;
+}
+.benefits-list .empty {
+  text-align: center;
+  height: 120rpx;
+  line-height: 120rpx;
+}
+@import "/packages/benefit-card/style/theme-view.wxss";

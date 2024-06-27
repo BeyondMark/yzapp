@@ -1,0 +1,6 @@
+<view>
+    <b bind:clickcart="showcaseHandleGoodsBuy" bind:shareclick="shareClick" bind:thumbclick="thumbClick" noteData="{{noteData}}" noteGoodIds="{{noteGoodIds}}" salesman="{{salesman}}" thumbsStatus="{{thumbsStatus}}" wx:if="{{noteData.templateId===noteType.NEW_ARRIVAL}}"></b>
+    <a bind:shareclick="shareClick" bind:thumbclick="thumbClick" featureComponents="{{featureComponents}}" noteData="{{noteData}}" salesman="{{salesman}}" thumbsStatus="{{thumbsStatus}}" wx:if="{{noteData.templateId===noteType.KEEPER_TALK}}"></a>
+    <c bind:clickcart="showcaseHandleGoodsBuy" bind:shareclick="shareClick" bind:thumbclick="thumbClick" noteData="{{noteData}}" noteGoodIds="{{noteGoodIds}}" salesman="{{salesman}}" thumbsStatus="{{thumbsStatus}}" wx:if="{{noteData.templateId===noteType.SHOP_CIRCLE}}"></c>
+    <d bind:shareclick="shareClick" bind:thumbclick="thumbClick" noteData="{{noteData}}" noteGoodIds="{{noteGoodIds}}" salesman="{{salesman}}" thumbsStatus="{{thumbsStatus}}" wx:if="{{noteData.templateId===noteType.SINGLE_PRODUCTION}}"></d>
+</view>

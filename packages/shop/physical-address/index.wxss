@@ -1,0 +1,14 @@
+.r-c {
+  flex-direction: column;
+}
+.r-c,
+.r-r {
+  display: flex;
+}
+.r-r {
+  flex-direction: row;
+}
+.UeMojQ {
+  min-height: 100vh;
+  background-color: #f7f8fa;
+}

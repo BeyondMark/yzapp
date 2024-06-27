@@ -1,0 +1,5 @@
+<view class="van-progress custom-class" style="{{computed.rootStyle( {strokeWidth:strokeWidth,trackColor:trackColor} )}}">
+    <view class="van-progress__portion" style="{{computed.portionStyle( {percentage:percentage,inactive:inactive,color:color} )}}">
+        <view class="van-progress__pivot" style="{{computed.pivotStyle( {textColor:textColor,pivotColor:pivotColor,inactive:inactive,color:color,right:right} )}}" wx:if="{{showPivot&&computed.pivotText(pivotText,percentage)}}">{{computed.pivotText(pivotText,percentage)}}</view>
+    </view>
+</view>

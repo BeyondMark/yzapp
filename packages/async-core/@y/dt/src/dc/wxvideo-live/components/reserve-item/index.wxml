@@ -1,0 +1,12 @@
+<view class="wxvideo-reserve-item-wrap" style="{{wrapStyle}}">
+    <view class="wxvideo-reserve-item" style="{{itemStyle}}">
+        <view class="item-left">
+            <view class="item-title-wrap">
+                <view class="reserve-icon" style="{{reserveIconStyle}}">预告</view>
+                <view class="item-title">{{description}}</view>
+            </view>
+            <view class="item-time">{{startTime}}</view>
+        </view>
+        <view bind:tap="_p" class="item-right" data-t="{{ tap:{en:'handleReserve'} }}" style="{{reserveBtnStyle}}">{{isReserved?'取消预约':'预约直播'}}</view>
+    </view>
+</view>

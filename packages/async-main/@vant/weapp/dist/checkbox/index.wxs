@@ -1,0 +1,11 @@
+var style = require("p_./@vant/weapp/dist/wxs/style.wxs");
+var addUnit = require("p_./@vant/weapp/dist/wxs/add-unit.wxs");
+function iconStyle(checkedColor, value, disabled, parentDisabled, iconSize) {
+  var styles = { "font-size": addUnit(iconSize) };
+  if (checkedColor && value && !disabled && !parentDisabled) {
+    styles["" + "border-color"] = checkedColor;
+    styles["" + "background-color"] = checkedColor;
+  }
+  return style(styles);
+}
+module.exports = { iconStyle: iconStyle };

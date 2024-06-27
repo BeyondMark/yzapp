@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../feature-sku/index",
+    "_": "../../../../components/_/index"
+  }
+}

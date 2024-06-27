@@ -1,0 +1,68 @@
+<view style="height:{{blockHeight}}">
+    <a bind:_init="_tic" bind:next="_p" customStyle="height: 100%" data-t="{{ next:{en:'handleAuthNext'} }}" kdtId="{{kdtId}}" scene="get_coupon" style="position: absolute; width: 100%; height: 100%;" type="separate">
+        <view class="promotion {{promotionClass}}">
+            <view bind:tap="_p" class="promotion__inner" data-t="{{ tap:{en:'handlePromotion'} }}">
+                <view class="promotion__head">
+                    <view class="{{true?'promotion__head-top':''}} {{isSuper?'promotion__head-top_vip':''}}">
+                        <view class="promotion__head-value-unit-yuan" wx:if="{{isYuanUnit}}">              ¥
+            </view>
+                        <view class="promotion__head-value {{!!coupon.unit?'price-length-'+coupon.headValue.length:''}} {{!coupon.unit?'chinese_desc':''}}">
+                            <view wx:if="{{isYuanUnit&&showDecimal}}">{{couponPriceDecimal[0]}}<view class="promotion__head-value-unit-yuan t-text">.{{couponPriceDecimal[1]}}</view>
+                            </view>
+                            <view class="t-text" wx:else>{{coupon.headValue}}</view>
+                        </view>
+                        <view class="promotion__head-value-unit" wx:if="{{coupon.unit&&!isYuanUnit}}"> {{coupon.unit}} </view>
+                    </view>
+                    <view class="promotion__condition" wx:if="{{coupon.condition}}"> {{coupon.condition}} </view>
+                    <view class="promotion__condition promotion__condition-1" wx:if="{{coupon.extraCondition}}"> {{coupon.extraCondition}} </view>
+                </view>
+                <view bind:tap="_p" class="{{true?'promotion__tag':''}} {{isSuper?'promotion__tag-vip':''}}" data-t="{{ tap:{en:'handleAuthNext'} }}" wx:if="{{coupon.tag}}">
+                    <view class="promotion__tag-value"> {{coupon.tag}} </view>
+                </view>
+                <view class="promotion__content">
+                    <block wx:if="{{coupon.goodsList&&coupon.goodsList.length>0}}">
+                        <view class="{{true?'promotion__content-title2':''}} {{isSuper?'promotion__title_vip':''}}">
+                            <view class="vip-tag-block" wx:if="{{tagName}}">
+                                <view class="vip-tag">{{tagName}}</view>
+                            </view> {{coupon.title}} </view>
+                        <view class="promotion__content-showcase">
+                            <view class="promotion__content-image-wrapper" wx:for="{{coupon.goodsList}}" wx:for-item="goods" wx:key="index">
+                                <image class="promotion__content-image tee-image" lazyLoad="true" src="{{goods.imageUrl}}"></image>
+                                <view class="promotion__content-image-desc">￥{{goods.price}}</view>
+                            </view>
+                        </view>
+                    </block>
+                    <block wx:else>
+                        <view class="{{true?'promotion__title':''}} {{isSuper?'promotion__title_vip':''}}">
+                            <view class="vip-tag-block" wx:if="{{tagName}}">
+                                <view class="vip-tag">{{tagName}}</view>
+                            </view> {{coupon.title}} </view>
+                        <view class="{{true?'promotion__sub-title':''}} {{isSuper?'promotion__sub-title_vip':''}}" wx:if="{{coupon.valid}}"> {{coupon.valid}} </view>
+                    </block>
+                </view>
+                <view class="promotion__action {{coupon.actionText?'promotion__action--has-btn':''}}">
+                    <view class="promotion__btn" wx:if="{{coupon.actionText&&!coupon.got}}"> {{coupon.actionText}} </view>
+                    <view class="promotion__arrow" wx:elif="{{hasArrow}}">
+                        <b bind:_init="_tic" color="#733500" name="arrow" size="18px" wx:if="{{isSuper}}"></b>
+                        <b bind:_init="_tic" color="var(--ump-icon, #323233)" name="arrow" size="16px" wx:else></b>
+                    </view>
+                </view>
+                <view class="promotion__got" wx:if="{{coupon.got}}">
+                    <view class="promotion__got-inner">
+                        <view class="promotion__got-cnt">
+                            <view class="promotion__got-cnt-inner">                已领
+              </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="promotion__overlay" wx:if="{{hasRule&&showRule}}">{{coupon.overlayCopywriting}}</view>
+            <view bind:tap="_p" class="guide-block" data-t="{{ tap:{en:'handleOpen'} }}" wx:if="{{guideInfo.needGuide}}">
+                <view class="guide-block__content">
+                    <view>{{guideInfo.guideTip}}</view>
+                    <view class="guide-block__btn">立即开通</view>
+                </view>
+            </view>
+        </view>
+    </a>
+</view>

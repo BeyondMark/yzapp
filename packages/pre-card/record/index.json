@@ -1,0 +1,4 @@
+{
+  "navigationBarTitleText": "交易记录",
+  "componentPlaceholder": { "van-toast": "_", "van-notify": "_" }
+}

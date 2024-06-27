@@ -1,0 +1,5 @@
+<view class="coupon-discountbody {{disabledClass}} {{unavailableClass}}">
+    <view class="coupon-discountbody__prefix">{{prefix}}</view>
+    <view class="coupon-discountbody__value" style="{{valueStyle}} {{themeMainStyle}}">{{money.value}}</view>
+    <view class="coupon-discountbody__unit" style="{{themeMainStyle}}">{{money.unit}}</view>
+</view>

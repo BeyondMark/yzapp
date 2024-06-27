@@ -1,0 +1,12 @@
+<view class="present">
+    <view class="present__img-wrapper">
+        <image class="present__img {{!present.isAvailable?'present__img__invalid':''}} tee-image" lazyLoad="true" mode="aspectFit" src="{{present.imgUrl}}"></image>
+    </view>
+    <view class="present__content">
+        <view class="present__content__title {{!present.isAvailable?'present__content__title__invalid':''}}"> {{present.title}} </view>
+        <view>
+            <view class="present__content__sku {{!present.isAvailable?'present__content__sku_invalid':''}} t-text"> {{getSkuStr}} </view>
+            <view class="present__content__stock t-text">{{getStock}}</view>
+        </view>
+    </view>
+</view>

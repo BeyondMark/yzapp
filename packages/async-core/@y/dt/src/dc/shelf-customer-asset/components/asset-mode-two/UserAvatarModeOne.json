@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y/ppt/lib/user-authorize/index",
+    "b": "./../common/LevelIcon",
+    "_": "../../../../../../../../../components/_/index"
+  }
+}

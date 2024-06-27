@@ -1,0 +1,5 @@
+<view class="goods-bottom content {{deviceType}}">
+    <a rmId="{{rmId}}" wx:if="{{rmId==='b29-0'}}"></a>
+    <b rmId="{{rmId}}" wx:if="{{rmId==='b29-0'}}"></b>
+    <slot></slot>
+</view>

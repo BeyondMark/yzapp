@@ -1,0 +1,23 @@
+<view class="fe5b0" wx:if="{{opt.show}}">
+    <view wx:for="{{messageList}}" wx:for-item="message" wx:key="name">
+        <a bind:_init="_tic" class="fe5b0__image-cell" required="{{message.required===1}}" title="{{message.name}}" titleWidth="6.2em" wx:if="{{message.type==='image'}}">
+            <view class="c5fddd">
+                <view bind:tap="_p" class="c9a4d0 {{messageValues[index].value?'c59fee':''}}" data-t="{{ tap:{ en:'onChoose',args:[index] } }}">
+                    <b bind:_init="_tic" name="photograph" size="18px"></b>
+                    <image class="c35a1c bd231" lazyLoad="true" mode="aspectFit" src="{{messageValues[index].value}}"></image>
+                    <view class="a3bb2">
+                        <b bind:_init="_tic" color="#fff" name="cross"></b>
+                    </view>
+                </view>
+                <view class="c657e4 c89585">(仅限一张)</view>
+            </view>
+        </a>
+        <d bind:_init="_tic" bind:confirm="_p" bind:date-click="_p" data-t="{{ dateClick:{en:'onDateTimeClick'},confirm:{ en:'onDateTimerPicker',args:[index] } }}" index="{{index}}" message="{{message}}" value="{{messageValues[index].value}}" wx:elif="{{message.type==='date'||message.type==='time'||message.type==='datetime'}}"></d>
+        <view wx:elif="{{message.type==='idcard'}}">
+            <c alwaysEmbed="{{true}}" bind:_init="_tic" bind:blur="_p" bind:input="_p" border="{{false}}" center="{{!message.multiple}}" class="c4b615" data-t="{{ blur:{en:'onInputBlur'},input:{ en:'onInput',args:[index] } }}" label="{{message.name}}" maxlength="200" placeholder="{{message.placeholder}}" required="{{message.required===1}}" type="{{message.type}}" value="{{messageValues[index].value}}"></c>
+            <view class="e340c">        身份证号码为敏感信息，系统将会对其进行安全处理，请放心。如对收集原因有疑问，请联系商家。
+      </view>
+        </view>
+        <c alwaysEmbed="{{true}}" bind:_init="_tic" bind:blur="_p" bind:input="_p" center="{{!message.multiple}}" data-t="{{ blur:{en:'onInputBlur'},input:{ en:'onInput',args:[index] } }}" label="{{message.name}}" maxlength="200" placeholder="{{message.placeholder}}" required="{{message.required===1}}" type="{{message.type}}" value="{{messageValues[index].value}}" wx:else></c>
+    </view>
+</view>

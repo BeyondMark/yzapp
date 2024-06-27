@@ -1,0 +1,17 @@
+<a bind:_init="_tic" customClass="adbe3" position="right" safeAreaInsetTop="{{true}}" show="{{show}}" zIndex="999">
+    <view class="fc44a">
+        <image class="a836c bd231" lazyLoad="true" src="https://img01.yzcdn.cn/upload_files/2022/01/11/Fh7xp0wfuEEwuQijl6imc5OXH_Jz.png"></image>
+        <view class="c5299">
+            <view class="c447b7">商家经营资质审核中</view>
+            <view class="c447b7">你仍可继续购买喜欢的商品</view>
+        </view>
+        <view class="c273e9">
+            <view class="c447b7">依据《中华人民共和国电子商务法》，店铺对外经营需完成主体认证。</view>
+            <view class="c447b7">店铺经营资质审核中，当前为商城预览版。</view>
+            <view class="c447b7">如你为店铺员工，可查看
+        <view bind:tap="_p" class="c1d978 c89585" data-t="{{ tap:{en:'onNavigate'} }}">认证教程</view>        完成认证。</view>
+        </view>
+        <b bind:_init="_tic" bind:tap="_p" customClass="c79b1b" data-t="{{ tap:{en:'onClose'} }}">      我知道了
+    </b>
+    </view>
+</a>

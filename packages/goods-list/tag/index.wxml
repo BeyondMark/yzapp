@@ -1,0 +1,22 @@
+<view bind:tap="_p" data-t="{{ tap:{en:'_tprc'} }}" style="{{_pageStyleStr}}">
+    <view style="{{_pageStyle}}">
+        <view>
+            <view class="c964a4">
+                <view class="c964a4">
+                    <a bind:_init="_tic" nr="true" rmId="b10-2" wx:if="{{_normal&&RM&&RM['b10-2']}}"></a>
+                    <d bind:_init="_tic" nr="true" rmId="b10-11" wx:if="{{_normal&&RM&&RM['b10-11']}}"></d>
+                    <e bind:_init="_tic" nr="true" rmId="b10-9" wx:if="{{_normal&&RM&&RM['b10-9']}}"></e>
+                    <f bind:_init="_tic" needBindRelation="{{false}}" nr="true" rmId="b10-10" showGoodsDetail="{{false}}" wx:if="{{_normal&&RM&&RM['b10-10']}}"></f>
+                    <g bind:_init="_tic" nr="true" rmId="b10-12" wx:if="{{_normal&&RM&&RM['b10-12']}}"></g>
+                    <h bind:_init="_tic" nr="true" rmId="b10-0" wx:if="{{RM&&RM['b10-0']}}"></h>
+                    <i bind:_init="_tic" nr="true" rmId="b10-15" wx:if="{{_normal&&RM&&RM['b10-15']}}"></i>
+                    <j bind:_init="_tic" nr="true" rmId="b10-16" wx:if="{{_normal&&RM&&RM['b10-16']}}"></j>
+                </view>
+            </view>
+            <k bind:_init="_tic" data-ref="van-toast" isPageDefault="{{true}}"></k>
+            <l bind:_init="_tic" data-ref="van-dialog" isPageDefault="{{true}}"></l>
+            <b bind:_init="_tic" id="van-toast"></b>
+            <c bind:_init="_tic" id="van-dialog"></c>
+        </view>
+    </view>
+</view>

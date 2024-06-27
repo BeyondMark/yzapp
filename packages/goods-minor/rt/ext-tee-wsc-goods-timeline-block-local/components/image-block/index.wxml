@@ -1,0 +1,7 @@
+<view class="c7c6ec" style="height:{{height+'px'}}">
+    <swiper autoplay="{{4000>0}}" bind:_init="_tic" circular="true" class="c77ba5" current="0" displayMultipleItems="1" duration="500" indicatorActiveColor="#000000" indicatorColor="white" indicatorDots="true" interval="{{4000}}">
+        <swiper-item bind:_init="_tic" itemId="{{pid}}" wx:for="{{imageList}}" wx:for-item="img" wx:key="index">
+            <image class="c57d93 bd231" id="tb__img" lazyLoad="true" mode="aspectFit" src="{{img.url}}"></image>
+        </swiper-item>
+    </swiper>
+</view>

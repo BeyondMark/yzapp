@@ -1,0 +1,4 @@
+<view class="cap-load-more">
+    <view bind:tap="_p" class="text" data-t="{{ tap:{en:'handleClick'} }}">{{opt.text}} <a bind:_init="_tic" class="icon" name="{{opt.iconType}}"></a>
+    </view>
+</view>

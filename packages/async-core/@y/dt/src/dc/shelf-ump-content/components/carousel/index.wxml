@@ -1,0 +1,18 @@
+<view catch:tap="_p" class="carousel-con" data-t="{{ tap:{en:'more',et:'stop'} }}" wx:if="{{carouselLength}}">
+    <view class="{{'carousel '+animateClass}}">
+        <view class="list">
+            <view class="item" wx:if="{{announcement}}">
+                <image class="notice tee-image" lazyLoad="true" mode="widthFix" src="https://img01.yzcdn.cn/upload_files/2024/01/16/FoLecF1WZT1QoOTeHY6STiJsHfC2.png"></image>
+                <view class="item-text t-text">{{announcement}}</view>
+            </view>
+            <view class="item" wx:for="{{umpList}}" wx:key="index">
+                <view class="item-tag t-text"> {{item.groupTagName}} </view>
+                <view class="item-text t-text" wx:for="{{item.richBriefs}}" wx:for-index="innerIndex" wx:for-item="activityItem" wx:key="innerIndex"> {{activityItem.brief}} </view>
+            </view>
+            <view class="fix-height">
+                <slot name="fix"></slot>
+            </view>
+        </view>
+    </view>
+    <slot name="more"></slot>
+</view>

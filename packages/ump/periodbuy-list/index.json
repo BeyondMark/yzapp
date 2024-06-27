@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "周期购商品列表",
+  "usingComponents": {
+    "a": "/pages/common/page-container/index",
+    "b": "../../async-usecenter/components/showcase/period-buy/index",
+    "c": "../../async-main/@vant/weapp/dist/toast/index",
+    "d": "../../async-main/@vant/weapp/dist/notify/index",
+    "_": "../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_", "c": "_", "d": "_" }
+}

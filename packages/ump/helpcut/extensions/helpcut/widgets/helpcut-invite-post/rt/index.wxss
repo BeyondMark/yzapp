@@ -1,0 +1,49 @@
+.invite-pop {
+  position: fixed;
+  margin: 0 auto;
+  padding: 30px 0;
+  background-color: transparent !important;
+  box-sizing: border-box;
+}
+.invite-pop-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 0 8px 8px;
+  background-image: none;
+  width: 22px;
+  height: 22px;
+  color: #fff;
+  font-size: 22px;
+}
+.invite-pop-content {
+  width: 315px;
+  height: 398px;
+}
+.invite-pop-content__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+.invite-pop-btn--bottom {
+  margin: 24px auto 0;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  font-family: PingFangSC-Regular;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  width: 160px;
+  height: 36px;
+  line-height: 36px;
+  box-sizing: border-box;
+}
+.activity-step-img {
+  height: 54px;
+  width: 270px;
+  margin: 14px 0 24px;
+}
+.van-share-sheet__options {
+  justify-content: space-evenly;
+}

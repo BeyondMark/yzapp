@@ -1,0 +1,62 @@
+<view>
+    <view wx:for="{{activityList}}" wx:for-item="activity" wx:key="id">
+        <view class="pay-gift-container">
+            <view class="title-box">
+                <view class="title">消费送好礼</view>
+                <view class="time">{{activity.activityTime}}</view>
+                <view bindtap="jumpActivityDetail" class="detail-btn" data-activityId="{{activity.id}}">活动详情<a name="arrow"></a>
+                </view>
+            </view>
+            <view class="single-gift-container" wx:if="{{activity.giftList.length===1}}">
+                <block wx:for="{{activity.giftList}}" wx:for-item="gift" wx:key="id">
+                    <view class="gift-box {{gift.leftStock<=0?'gray-bg':''}}">
+                        <image class="gift-image" src="{{gift.image}}"></image>
+                        <view>{{gift.price}}</view>
+                        <view class="gift-num">{{gift.stockStr}}</view>
+                    </view>
+                    <view class="gift-info-box">
+                        <view>
+                            <view class="line1">{{gift.condition}}</view>
+                            <view class="line2">{{gift.giftName}}</view>
+                            <view class="progress-box">
+                                <view class="progress">
+                                    <view class="progress-line" style="{{gift.progressStyle}}"></view>
+                                </view>
+                                <view class="desc">已累计{{activity.completedProgress}}/{{activity.taskValue}}</view>
+                            </view>
+                        </view>
+                        <view bindtap="jumpFillMember" class="bottom-btn" wx:if="{{!isMember}}">{{activity.joinMemberBtnText}}</view>
+                        <view bindtap="receiveGift" class="bottom-btn" data-activityId="{{activity.id}}" data-gift="{{gift}}" wx:elif="{{gift.canReceiveGift}}">领取奖品</view>
+                        <view bindtap="viewGift" class="bottom-btn" wx:elif="{{gift.received}}">查看奖品</view>
+                    </view>
+                </block>
+            </view>
+            <view class="multiple-gift-container" wx:else>
+                <view class="multiple-gift-context">
+                    <view class="multiple-gift-box {{activity.giftList.length===2?'big-margin':''}}" wx:for="{{activity.giftList}}" wx:for-item="gift" wx:key="id">
+                        <view class="gift-box {{gift.leftStock<=0||gift.hasReceivedGift&&!gift.received?'gray-bg':''}}">
+                            <image class="gift-image" src="{{gift.image}}"></image>
+                            <view>{{gift.price}}</view>
+                            <view bindtap="receiveGift" class="gift-btn" data-activityId="{{activity.id}}" data-gift="{{gift}}" wx:if="{{gift.canReceiveGift}}">领取奖品</view>
+                            <view bindtap="viewGift" class="gift-btn" wx:elif="{{gift.received}}">查看奖品</view>
+                            <view class="gift-stock" wx:else>{{gift.stockStr}}</view>
+                        </view>
+                        <view class="{{gift.hasFinishCurLevel?'check':'point'}}"></view>
+                        <view class="gift-desc">
+                            <view class="line1">{{gift.condition}}</view>
+                            <view>{{gift.giftName}}</view>
+                        </view>
+                    </view>
+                    <view class="progress-box">
+                        <view class="{{activity.progressContainerStyle}}">
+                            <view class="progress-line {{activity.progresslineStyle}}"></view>
+                            <view class="progress-num {{activity.progressNumStyle}}" wx:if="{{activity.curLevelNum<activity.giftList.length}}">{{activity.completedProgress}}</view>
+                        </view>
+                    </view>
+                </view>
+                <view bindtap="jumpFillMember" class="join-member-btn" wx:if="{{!isMember}}">{{activity.joinMemberBtnText}}</view>
+            </view>
+        </view>
+        <view class="bottom-border"></view>
+    </view>
+</view>

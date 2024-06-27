@@ -1,0 +1,4 @@
+<view class="extra-item {{layoutClass}}" style="{{itemStyle}}">
+    <a componentData="{{itemInfo}}" layoutConfig="{{layoutConfig}}" wx:if="{{itemInfo.type==='note'}}"></a>
+    <b componentData="{{itemInfo}}" layoutConfig="{{layoutConfig}}" wx:elif="{{itemInfo.type==='coupon'}}"></b>
+</view>

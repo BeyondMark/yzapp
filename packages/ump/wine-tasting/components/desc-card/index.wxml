@@ -1,0 +1,22 @@
+<view class="content-desc">
+    <view class="content-desc-left">
+        <view class="content-desc-left-li">
+            <a class="desc-icon" name="https://su.yzcdn.cn/public_files/2022/10/03/dizhi@2x.png"></a>
+            <text>{{info.addressStr}}</text>
+        </view>
+        <view class="content-desc-left-li">
+            <a class="desc-icon" name="https://b.yzcdn.cn/public_files/2022/10/03/shijian@2x.png"></a>
+            <text>{{info.activeTimeStr}}</text>
+        </view>
+        <view class="content-desc-left-li" wx:if="{{info.organizer}}">
+            <a class="desc-icon" name="https://su.yzcdn.cn/public_files/2022/10/03/zhubanfang@2x.png"></a>
+            <text>{{info.organizer}}</text>
+        </view>
+    </view>
+    <view bind:tap="handleLocation" class="content-desc-right">
+        <view class="content-desc-right-location">
+            <a class="desc-icon-2" name="https://b.yzcdn.cn/public_files/2022/10/03/dingwei@3x.png"></a>
+            <view class="content-desc-right-location-name">地图</view>
+        </view>
+    </view>
+</view>

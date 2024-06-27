@@ -1,0 +1,130 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.long-cell {
+  padding: var(--theme-page-cell-padding-top, 10px)
+    var(--theme-page-cell-padding-right, 12px)
+    var(--theme-page-cell-padding-bottom, 10px)
+    var(--theme-page-cell-padding-left, 12px) !important;
+}
+.c86312 {
+  margin-left: 16px;
+  margin-right: 16px;
+  padding-bottom: 16px;
+}
+.c00c23 {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0 16px 0;
+}
+.c92518 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #323233;
+}
+.c86693 {
+  font-size: 14px;
+  color: #969799;
+  display: inline-flex;
+  align-items: center;
+  font-weight: var(--theme-common-field-font-weight, inherit);
+}
+.bb012 {
+  margin-left: 4px;
+}
+.c18563 {
+  padding-bottom: 8px;
+}
+.c92b3f {
+  padding-left: 0;
+}
+.a9088 {
+  margin-bottom: 16px;
+}
+.c51c14 {
+  display: inline-block;
+  margin-right: 11px;
+  height: 28px;
+  padding: 0 12px;
+  border: 1px solid;
+  text-align: center;
+  background-color: var(
+    --theme-goods-direct-order-popup-tab-background-color,
+    #f2f3f5
+  );
+  border-color: var(
+    --theme-goods-direct-order-popup-tab-border-color,
+    transparent
+  );
+  border-radius: var(--theme-goods-direct-order-popup-tab-border-radius, 16px);
+  color: var(--theme-goods-direct-order-popup-tab-color, #323233);
+  font-size: 16px;
+  background-size: 100% 100%;
+  line-height: 28px;
+}
+.c3da06 {
+  transform: scale(0.875);
+  display: inline-block;
+}
+.c49621 {
+  background-color: var(
+    --theme-goods-direct-order-popup-tab-background-color-active,
+    var(--tag-bg, #f2f3f5)
+  );
+  color: var(
+    --theme-goods-direct-order-popup-tab-border-color-active,
+    var(--tag-text, #323233)
+  );
+  border-color: var(
+    --theme-goods-direct-order-popup-tab-color-active,
+    transparent
+  );
+}
+.invoice__content__btn--more {
+  font-size: 12px;
+  color: #969799;
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  justify-content: center;
+}
+.invoice__content__btn--more .t-icon {
+  padding-left: 4px;
+}
+.c00c23__tip {
+  color: #969799;
+  font-size: 12px;
+  padding-bottom: 16px;
+}
+.c99838 .t-cell-group,
+.c0abf {
+  position: relative;
+}
+.c0abf:after {
+  position: absolute;
+  box-sizing: border-box;
+  content: " ";
+  pointer-events: none;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #ebedf0;
+  transform: scaleY(0.5);
+}
+.c121ce,
+.e6289 {
+  display: flex;
+}
+.e37b6 {
+  margin-bottom: 0 !important;
+  margin-right: 16px;
+}
+.e37b6 .t-icon-success:before {
+  font-size: 14px;
+  line-height: 14px;
+}
+.c62da1 {
+  display: flex;
+  align-items: center;
+}

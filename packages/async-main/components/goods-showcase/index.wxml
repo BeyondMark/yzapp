@@ -1,0 +1,11 @@
+<a bind:close="closePop" customClass="showcase-popup" position="bottom" round="{{true}}" safeAreaInsetBottom="{{true}}" show="{{show}}" zIndex="{{299}}" wx:if="{{inited}}">
+    <view class="showcase-popup__header">商品橱窗<b bind:click="closePop" class="showcase-popup__close" color="#c8c9cc" name="cross" size="22px"></b>
+    </view>
+    <view class="showcase-popup__container">
+        <c bind:render-success="handleSuccessFn" bizName="{{item.bizName}}" className="{{item.type}}-showcase-item {{item.className}}" data-index="{{index}}" iconUrl="{{item.iconUrl}}" showCornerMark="{{item.showCornerMark}}" title="{{item.title}}" type="{{item.type}}" wx:for="{{showcaseItemList}}" wx:key="bizName"></c>
+        <view wx:if="{{showDefault}}">
+            <image alt="暂无商品" class="showcase-popup__empty-img" src="https://b.yzcdn.cn/public_files/f10a2f03fbcc0353b0c66fdc7be7b1e2.png"></image>
+            <view class="showcase-popup__empty-text">暂无商品</view>
+        </view>
+    </view>
+</a>

@@ -1,0 +1,12 @@
+<view class="{{'sn-thumb-'+opt.theme}} {{opt.customClass}}" wx:if="{{opt.infoData.showBrowseCount||opt.infoData.showThumbsUpCount}}">
+    <view class="{{'sn-thumb-view'}} {{'sn-thumb-wrapper'}} {{'sn-thumb-'+layout}}">
+        <view class="browse">
+            <view class="browse-count" wx:if="{{opt.infoData.showBrowseCount}}">        阅读 {{opt.itemData.browseCount}} </view>
+        </view>
+        <view class="praise" wx:if="{{opt.infoData.showThumbsUpCount}}">
+            <image class="tee-image" lazyLoad="true" src="https://b.yzcdn.cn/public_files/2019/10/09/baf01f6a8966ab479e1e3c0cdac734e5.png" wx:if="{{opt.theme==='white'}}"></image>
+            <image class="tee-image" lazyLoad="true" src="https://b.yzcdn.cn/public_files/f848ee85f27151cc73716eb3cc910e32.svg" wx:else></image>
+            <view class="praise-count"> {{opt.itemData.thumbsUpCount}} </view>
+        </view>
+    </view>
+</view>

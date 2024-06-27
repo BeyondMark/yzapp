@@ -1,0 +1,33 @@
+.t-text {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.title {
+  background-color: transparent;
+  text-align: left;
+  padding: 0 16px;
+  margin: 0;
+}
+.title-wrap {
+  padding: 10px 0;
+  position: relative;
+  word-break: break-all;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title-wrap-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  font-weight: 500;
+  -webkit-line-clamp: 2;
+}
+.title-wrap-link {
+  text-align: right;
+  font-size: 12px;
+  line-height: 19.25px;
+  color: #969799;
+}

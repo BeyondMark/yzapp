@@ -1,0 +1,6 @@
+.popup-container {
+  position: relative;
+}
+.explain-video-opened {
+  z-index: 10007 !important;
+}

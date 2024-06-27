@@ -1,0 +1,5 @@
+<view bind:tap="_p" class="c5dae4" data-t="{{ tap:{en:'onClose'} }}" wx:if="{{show}}">
+    <view class="b1486"></view>
+    <view class="c7bf45">立即分享给好友吧</view>
+    <view class="c1938a">点击屏幕右上角将本页面分享给好友</view>
+</view>

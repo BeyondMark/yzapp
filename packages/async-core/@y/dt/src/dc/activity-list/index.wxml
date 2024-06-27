@@ -1,0 +1,32 @@
+<view class="dc-activiti-list" style="{{themeColor}}">
+    <a bind:_init="_tic" bind:change="_p" color="{{color}}" data-t="{{ change:{en:'handleListChange'} }}" filter="{{filter}}" list="{{all}}" wx:if="{{opt.isShowFilter}}"></a>
+    <view class="{{'list'}} {{opt.textStyle?'list-blod':''}}">
+        <view bind:tap="_p" class="{{'item'}} {{opt.cardRadius?'radius':''}}" data-t="{{ tap:{ en:'handleClick',args:[item] } }}" wx:for="{{list}}" wx:key="alias">
+            <view class="item-left">
+                <image class="item-left__img tee-image" lazyLoad="true" src="{{item.pic}}"></image>
+                <view class="item-left__status" style="{{item.status.style}}"> {{item.status.text}} </view>
+            </view>
+            <view class="item-right">
+                <view class="item-right__title">{{item.title}}</view>
+                <view class="item-right__info" wx:if="{{item.date}}">
+                    <image class="icon tee-image" lazyLoad="true" src="{{icon.d}}"></image>
+                    <view>{{item.date}}</view>
+                </view>
+                <view class="item-right__info" wx:if="{{item.address}}">
+                    <image class="icon tee-image" lazyLoad="true" src="{{icon.a}}"></image>
+                    <view class="text">{{item.address}}</view>
+                </view>
+                <view class="item-right__price">
+                    <view class="unit" wx:if="{{item.price.unit}}">{{item.price.unit}}</view>{{item.price.value}}</view>
+            </view>
+            <view class="item-bottom" wx:if="{{opt.isShowCount}}">
+                <view class="item-bottom__avatars">
+                    <image class="avatar tee-image" lazyLoad="true" src="{{a.src}}" style="{{a.style}}" wx:for="{{item.applyInfo.avatars}}" wx:for-item="a" wx:key="src"></image>
+                </view>
+                <view class="item-bottom__text">{{item.applyInfo.text}}</view>
+            </view>
+            <view class="{{'btn'}} {{opt.btnStyle===1?'radius':''}}" wx:if="{{opt.btnStyle}}">{{opt.btnText}}</view>
+        </view>
+    </view>
+    <b bind:_init="_tic" description="暂无可报名活动" wx:if="{{list.length===0}}"></b>
+</view>

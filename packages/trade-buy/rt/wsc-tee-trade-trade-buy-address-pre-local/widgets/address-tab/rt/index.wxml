@@ -1,0 +1,25 @@
+<view class="{{isRetailWeappScene?'re-tab__container':'tab__container'}}">
+    <view wx:if="{{!isRetailWeappScene}}">
+        <view class="tab__background" style="{{styleStr}}" wx:if="{{showAddressBackground}}"></view>
+        <view class="tab">
+            <view class="tab__bar">
+                <view class="tab__slide tab__pane" style="transform:{{slideStyle}}; border:none" wx:if="{{!disableSlide}}"></view>
+                <view bind:tap="_p" class="{{'tab__pane'}} {{item.value===expressType?'tab__pane-active':''}}" data-t="{{ tap:{ en:'onSwitchTab',args:[item.id] } }}" wx:for="{{tabs}}" wx:key="id">
+                    <view class="tab__text t-text"> {{item.text}} </view>
+                </view>
+                <view class="badge" wx:if="{{isBadge}}">有礼</view>
+            </view>
+        </view>
+    </view>
+    <view class="re-tab" wx:else>
+        <view class="re-tab__bar">
+            <view bind:tap="_p" class="re-tab__pane {{item.value===expressType?'re-tab__pane--group'+i:''}}" data-t="{{ tap:{ en:'onSwitchTab',args:[item.id] } }}" wx:for="{{tabs}}" wx:for-index="i" wx:key="id">
+                <view class="re-tab__text t-text"> {{item.text}} </view>
+                <view class="re-tab__text--active" wx:if="{{item.value===expressType}}">
+                    <a bind:_init="_tic" class="re-tab__text--active__icon" name="{{item.value==='self-fetch'?iconPath+'/Fln7spAoKVP2nWZdxEUqD0Gp013x.png':iconPath+'/Fv1kd_iQh4Wo_GOdDkaSxjwy6y2l.png'}}" size="22px"></a>
+                    <view class="t-text">{{item.text}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

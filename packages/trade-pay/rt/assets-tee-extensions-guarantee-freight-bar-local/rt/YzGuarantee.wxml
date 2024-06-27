@@ -1,0 +1,10 @@
+<view wx:if="{{!isWxvideoOrder}}">
+    <view class="yz-guarantee long-cell">
+        <a bind:_init="_tic" bind:tap="_p" customStyle="{{padding}}" data-t="{{ tap:{en:'openPopup'} }}" isLink="{{true}}" value="{{lifeCycle.label}}" valueClass="yz-guarantee__value">
+            <view class="yz-guarantee__title" slot="title">
+                <image class="{{true?'yz-guarantee__icon':''}} {{logoAddYouzan?'youzan':''}} tee-image" lazyLoad="true" src="{{logo}}"></image>
+                <view class="yz-guarantee__text">商家赠送</view>
+            </view>
+        </a>
+    </view>
+</view>

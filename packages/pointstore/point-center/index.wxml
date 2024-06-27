@@ -1,0 +1,2 @@
+<a src="{{src}}"></a>
+<b noAutoAuth="{{true}}"></b>

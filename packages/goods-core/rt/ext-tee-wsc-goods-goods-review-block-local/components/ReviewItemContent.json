@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./ReviewImgList",
+    "_": "../../../../../components/_/index"
+  }
+}

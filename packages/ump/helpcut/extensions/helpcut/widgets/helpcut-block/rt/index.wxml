@@ -1,0 +1,49 @@
+<a>
+    <d bind:behaviorComponentReady="behaviorComponentReady" id="behavior-verify">
+        <view class="{{isNewHelpCut?'helpcut':'bargain-purchase'}}" wx:if="{{sponsorFetched}}">
+            <view wx:if="{{isNewHelpCut}}">
+                <view wx:if="{{hasLogin&&!needFollow&&hasAuthorized}}">
+                    <view wx:if="{{isCreator}}">
+                        <view class="goodsBg {{recommendGoods.length>0?'':'demote-goodsBg'}}">
+                            <l rmId="{{rmId}}" wx:if="{{rmId==='b13-0'}}"></l>
+                            <p rmId="{{rmId}}" wx:if="{{rmId==='b13-0'}}"></p>
+                            <o rmId="{{rmId}}" wx:if="{{rmId==='b13-0'}}"></o>
+                        </view>
+                        <e goodsList="{{recommendGoods}}"></e>
+                        <block wx:if="{{bargainDetail.showFirstCut}}">
+                            <k rmId="{{rmId}}" wx:if="{{rmId==='b13-0'}}"></k>
+                        </block>
+                        <block wx:if="{{newActionExtra.needPopup}}">
+                            <n rmId="{{rmId}}" wx:if="{{rmId==='b13-0'}}"></n>
+                        </block>
+                        <m rmId="{{rmId}}" wx:if="{{rmId==='b13-0'}}"></m>
+                    </view>
+                    <view wx:else>
+                        <n rmId="{{rmId}}" wx:if="{{rmId==='b13-0'}}"></n>
+                    </view>
+                </view>
+                <view wx:else>
+                    <n rmId="{{rmId}}" wx:if="{{rmId==='b13-0'}}"></n>
+                </view>
+            </view>
+            <view wx:else>
+                <h rmId="{{rmId}}" wx:if="{{rmId==='b13-0'}}"></h>
+                <j rmId="{{rmId}}" wx:if="{{rmId==='b13-0'}}"></j>
+                <i rmId="{{rmId}}" wx:if="{{rmId==='b13-0'}}"></i>
+                <e goodsList="{{recommendGoods}}"></e>
+                <r rmId="{{rmId}}" wx:if="{{rmId==='b13-0'}}"></r>
+            </view>
+            <block wx:if="{{!isNewHelpCut}}">
+                <g rmId="{{rmId}}" wx:if="{{rmId==='b13-0'}}"></g>
+            </block>
+            <block wx:if="{{!isNewHelpCut}}">
+                <q rmId="{{rmId}}" wx:if="{{rmId==='b13-0'}}"></q>
+            </block>
+            <b bind:close="togglePopupShow" btnText="成为粉丝" extraData="{{followExtraData}}" show="{{showFollowPopup}}" title="成为店铺粉丝才能为我助力"></b>
+            <c bind:buy="handleBuy" bind:sku-close="handleSkuClose" buyText="立即下单" extraData="{{skuInfo.extraData}}" goods="{{skuInfo.goodsDetail}}" hideStock="{{true}}" resetStepperOnHide="{{false}}" show="{{showSkuModal}}" showAddCartBtn="{{false}}" sku="{{skuInfo.sku}}" themeClass="{{themeClass}}">
+                <image class="activity-img" slot="sku-actions-top" src="https://img01.yzcdn.cn/upload_files/2021/10/08/FmkPofZymEWunWSELiQXbXIFPibQ.png" wx:if="{{isNewHelpCut}}"></image>
+            </c>
+            <s id="van-toast"></s>
+        </view>
+    </d>
+</a>

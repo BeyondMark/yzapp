@@ -1,0 +1,5 @@
+<view class="channel {{channel.available?'':'disabled'}}">
+    <a channel="{{channel}}" customStyle="{{iconStyle}}"></a>
+    <text>{{displayName}}</text>
+    <text wx:if="{{sb&&channel.balanceDesc}}">（{{channel.balanceDesc}}）</text>
+</view>

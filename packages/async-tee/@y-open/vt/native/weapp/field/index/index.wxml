@@ -1,0 +1,20 @@
+<a arrowDirection="{{arrowDirection}}" bind:_init="_tic" border="{{border}}" center="{{center}}" clickable="{{clickable}}" customStyle="{{customStyle}}" icon="{{leftIcon}}" isLink="{{isLink}}" required="{{required}}" size="{{size}}" title="{{label}}" titleClass="{{labelClass}}" titleWidth="{{titleWidth}}">
+    <slot name="left-icon" slot="icon"></slot>
+    <slot name="label" slot="title"></slot>
+    <view class="{{classes.body}}">
+        <textarea adjustPosition="{{adjustPosition}}" autoFocus="{{autoFocus}}" autoHeight="{{!!autosize}}" bind:blur="_p" bind:change="_p" bind:compositionend="_p" bind:compositionstart="_p" bind:confirm="_p" bind:focus="_p" bind:input="_p" bind:keyboardheightchange="_p" bind:linechange="_p" bind:tap="_p" class="{{classes.input}}" cursor="{{cursor}}" cursorSpacing="{{cursorSpacing}}" data-ref="textareaRef" data-t="{{ input:{en:'onTextareaInput'},blur:{en:'onBlur'},focus:{en:'onFocus'},confirm:{en:'onConfirm'},compositionstart:{en:'startComposing'},compositionend:{en:'endComposing'},change:{en:'endComposing'},linechange:{en:'onLineChange'},tap:{en:'onClickInput'},keyboardheightchange:{en:'onKeyboardHeightChange'} }}" disableDefaultPadding="{{disableDefaultPadding}}" disabled="{{disabled||readonly}}" enableNative="{{enableNative}}" fixed="{{fixed}}" focus="{{focus}}" holdKeyboard="{{holdKeyboard}}" maxlength="{{maxlength}}" placeholder="{{placeholder}}" placeholderClass="{{classes.placeholder}}" placeholderStyle="{{realPlaceholderStyle}}" selectionEnd="{{selectionEnd}}" selectionStart="{{selectionStart}}" showConfirmBar="{{showConfirmBar}}" showCount="{{false}}" style="{{inputStyle}}" value="{{innerValue}}" wx:if="{{type==='textarea'}}"></textarea>
+        <c adjustPosition="{{adjustPosition}}" alwaysEmbed="{{alwaysEmbed}}" autoFocus="{{autoFocus}}" bind:_init="_tic" bind:blur="_p" bind:confirm="_p" bind:focus="_p" bind:input="_p" bind:keyboardheightchange="_p" bind:tap="_p" class="{{classes.input}}" confirmHold="{{confirmHold}}" confirmType="{{confirmType}}" cursor="{{cursor}}" cursorSpacing="{{cursorSpacing}}" data-t="{{ input:{en:'onInput'},blur:{en:'onBlur'},focus:{en:'onFocus'},confirm:{en:'onConfirm'},tap:{en:'onClickInput'},keyboardheightchange:{en:'onKeyboardHeightChange'} }}" disabled="{{disabled||readonly}}" enableNative="{{enableNative}}" focus="{{focus}}" holdKeyboard="{{holdKeyboard}}" maxlength="{{maxlength}}" password="{{password||type==='password'}}" placeholder="{{placeholder}}" placeholderClass="{{classes.placeholder}}" placeholderStyle="{{realPlaceholderStyle}}" selectionEnd="{{selectionEnd}}" selectionStart="{{selectionStart}}" type="{{type}}" value="{{innerValue}}" wx:else></c>
+        <b bind:_init="_tic" bind:tap="_p" class="t-field__clear-root t-field__icon-root" data-t="{{ tap:{en:'onClear'} }}" name="clear" wx:if="{{showClear}}"></b>
+        <view bind:tap="_p" class="t-field__icon-container" data-t="{{ tap:{en:'onClickIcon'} }}">
+            <b bind:_init="_tic" class="{{iconClass}} {{'t-field__icon-root'}}" customClass="{{rightIconClass}}" name="{{rightIcon||icon}}" wx:if="{{rightIcon||icon}}"></b>
+            <slot name="right-icon"></slot>
+            <slot name="icon"></slot>
+        </view>
+        <view class="t-field__button">
+            <slot name="button"></slot>
+        </view>
+    </view>
+    <view class="t-field__word-limit" wx:if="{{showWordLimit&&maxlength}}">
+        <view class="{{classes.wordNum}}">{{value.length}}</view>/{{maxlength}}</view>
+    <view class="{{classes.errorMessage}}" wx:if="{{errorMessage}}">{{errorMessage}}</view>
+</a>

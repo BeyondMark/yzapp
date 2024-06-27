@@ -1,0 +1,30 @@
+<view class="feae0" wx:if="{{!supportSkuDirectOrder&&(priorUse||showInstallment)}}">
+    <view class="c5b2f7">
+        <view>购买方式
+      <view class="eac82 c89585">（可选）</view>
+        </view>
+    </view>
+    <view class="c0aa61">
+        <view bind:tap="_p" class="{{true?'c6e2ba':''}} {{payWaysData.payWay==='PRIOR_USE'?'ed2b5':''}} {{true?'c609e6':''}} {{!canPriorUse?'c3262d':''}} c89585" data-t="{{ tap:{ en:'selectType',args:['PRIOR_USE'] } }}" wx:if="{{priorUse}}">
+            <i bind:_init="_tic" class="baec6"></i>先用后付
+      <view class="fa06b c89585">{{priorUse.badgeText}}</view>
+        </view>
+        <view bind:tap="_p" class="{{true?'c6e2ba':''}} {{payWaysData.payWay==='installment'?'ed2b5':''}} c89585" data-t="{{ tap:{ en:'selectType',args:['installment'] } }}" wx:if="{{showInstallment}}">有赞分期
+      <i bind:_init="_tic" wx:if="{{installment.badge}}">{{installment.badge}}</i>
+        </view>
+    </view>
+    <view wx:if="{{payWaysData.payWay==='installment'}}">
+        <view class="c110de">
+            <view class="c6a213">        3/6/12分期金额含手续费，费用以收银台展示为准，小于10元只支持分1期。
+      </view>
+        </view>
+        <view class="installment-list">
+            <view bind:tap="_p" class="c87b72 {{isGrey&&item.period!==1||skuUnselected?'c075ae':''}}" data-t="{{ tap:{ en:'onSelected',args:[item] } }}" wx:for="{{installmentList}}" wx:key="period">
+                <view class="c33d42 {{item.period===curPeriod?'c81d98':''}}">
+                    <view>{{item.periodStr}}</view>
+                    <view>{{item.priceStr}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

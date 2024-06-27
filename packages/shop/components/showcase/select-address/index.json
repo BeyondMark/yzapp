@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./components/address-popup/index",
+    "b": "./components/address-panel/index",
+    "c": "../../../@vant/weapp/dist/tag/index",
+    "_": "../../../../../components/_/index"
+  }
+}

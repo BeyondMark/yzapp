@@ -1,0 +1,36 @@
+.bi-list-icon {
+  background: rgba(0, 0, 0, 0.5);
+  height: 32px;
+  width: 48px;
+  position: fixed;
+  left: 0;
+  z-index: 10;
+  border-radius: 0 100px 100px 0;
+  text-align: center;
+}
+.bi-list-icon__image {
+  height: 24px;
+  width: 24px;
+  margin: 5px 5px 0 0;
+}
+.bi-list-icon__card {
+  height: 16px;
+  width: 20px;
+  vertical-align: middle;
+}
+.bi-list-icon__text {
+  font-size: 12px;
+  line-height: 32px;
+  color: #fff;
+  display: inline-block;
+  margin-left: 5px;
+}
+.bi-list-icon__return {
+  width: 68px;
+}
+.bi-list-icon__area {
+  height: calc(100% - 50px);
+  position: fixed;
+  left: 0;
+  top: 0;
+}

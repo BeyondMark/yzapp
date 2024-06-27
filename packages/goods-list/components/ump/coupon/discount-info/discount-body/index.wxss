@@ -1,0 +1,29 @@
+.c8e207__disabled .c79092,
+.c8e207__disabled .b7cd5,
+.c8e207__disabled .c002b8 {
+  color: #969799;
+}
+.c8e207__unavailable .c79092,
+.c8e207__unavailable .b7cd5,
+.c8e207__unavailable .c002b8 {
+  color: #c8c9cc;
+}
+.c8e207 {
+  max-width: inherit;
+  height: 30px;
+  overflow: hidden;
+  font-size: 12px;
+}
+.c79092,
+.b7cd5,
+.c002b8 {
+  display: inline;
+  color: #fa1919;
+  line-height: 30px;
+}
+.c002b8 {
+  display: inline;
+  font-weight: 600;
+  font-size: 29px;
+  white-space: nowrap;
+}

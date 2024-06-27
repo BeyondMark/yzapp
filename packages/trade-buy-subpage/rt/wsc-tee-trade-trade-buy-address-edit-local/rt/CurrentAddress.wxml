@@ -1,0 +1,8 @@
+<view class="current-address-wrapper" wx:if="{{location}}">
+    <b bind:_init="_tic" bind:tap="_p" border="{{false}}" center="{{true}}" customClass="c7524c" data-t="{{ tap:{en:'onClick'} }}" label="{{area}}" labelClass="c9aa39" title="{{location}}" titleClass="ddbec">
+        <view class="c4c3e5">
+            <a bind:_init="_tic" class="c3f09e" name="location"></a>
+            <view class="c89585">使用定位</view>
+        </view>
+    </b>
+</view>

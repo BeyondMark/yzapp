@@ -1,0 +1,7 @@
+<view class="cf582">
+    <view class="c4104a"> {{goodsMsg.hotelName}} </view>
+    <view class="c7a4b6">
+        <view class="c914ee"> {{goodsMsg.roomTypeName}} </view>
+        <view class="cf582__sale"> {{goodsMsg.saleProjectName}} </view>
+    </view>
+</view>

@@ -1,0 +1,18 @@
+.tee-image {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.subscribe-guide-wrapper {
+  position: fixed;
+  width: 200px;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.subscribe-guide-wrapper .subscribe-guide-wrapper-image {
+  width: 200px;
+  height: 146px;
+  border-radius: 4px;
+}

@@ -1,0 +1,114 @@
+.dc-hotel-search {
+  width: 750rpx;
+}
+.dc-hotel-search .fixed {
+  position: fixed;
+  left: 0;
+  z-index: 110;
+}
+.dc-search-con {
+  background: #fff;
+  width: 100%;
+  padding: 5px 15px;
+  box-sizing: border-box;
+  transition: top 0.3s linear;
+}
+.dc-search-con .search-wrap {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+}
+.dc-search-con .search-wrap-center .dc-search-icon {
+  margin-right: 100px;
+}
+.dc-search-con .search-wrap-center .dc-search-input {
+  width: -webkit-fit-content;
+  width: fit-content;
+}
+.dc-search-con .search-wrap-center .dc-search-input .dc-search-icon {
+  margin-right: 0;
+}
+.dc-search-input {
+  width: 100%;
+  height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.dc-search-icon {
+  margin: 0-2px 0 12px;
+  line-height: 16px;
+  height: 16px;
+}
+.dc-search-cell {
+  padding: 0 10px;
+  font-size: 14px;
+  line-height: 24px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.search-swipe {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 40px;
+  z-index: 2;
+  pointer-events: none;
+  overflow: hidden;
+}
+.search-swipe .search-swipe__item {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #9b9b9b;
+  width: 100%;
+  height: 36px;
+  padding-left: 35px;
+}
+.search-swipe .search-swipe__item .search-swipe__item_left {
+  margin-top: 2px;
+}
+.search-swipe .van-swipe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  cursor: auto;
+}
+.search-swipe .van-swipe .van-swipe-item {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.search-swipe-center .search-swipe__item {
+  width: 100%;
+  padding: 0;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+}
+.search-swipe-center .search-swipe__item .search-swipe__item_center {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  margin-top: 2px;
+}
+.search-swipe-center
+  .search-swipe__item
+  .search-swipe__item_center
+  .dc-search-icon {
+  margin-right: 15px;
+  margin-top: 2px;
+}
+.dc-scan-icon {
+  position: absolute;
+  right: 15px;
+  padding: 5px;
+  z-index: 3;
+}

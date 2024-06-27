@@ -1,0 +1,12 @@
+<view class="{{utils.bem( 'checkbox',[ {horizontal:direction==='horizontal'} ] )}} custom-class">
+    <view bindtap="onClickLabel" class="label-class {{utils.bem( 'checkbox__label',[ labelPosition,{disabled:disabled||parentDisabled} ] )}}" wx:if="{{labelPosition==='left'}}">
+        <slot></slot>
+    </view>
+    <view bindtap="toggle" class="van-checkbox__icon-wrap">
+        <slot name="icon" wx:if="{{useIconSlot}}"></slot>
+        <a class="{{utils.bem( 'checkbox__icon',[ shape,{disabled:disabled||parentDisabled,checked:value} ] )}}" customClass="icon-class" customStyle="line-height: 1.25em;" name="success" size="0.8em" style="{{computed.iconStyle(checkedColor,value,disabled,parentDisabled,iconSize)}}" wx:else></a>
+    </view>
+    <view bindtap="onClickLabel" class="label-class {{utils.bem( 'checkbox__label',[ labelPosition,{disabled:disabled||parentDisabled} ] )}}" wx:if="{{labelPosition==='right'}}">
+        <slot></slot>
+    </view>
+</view>

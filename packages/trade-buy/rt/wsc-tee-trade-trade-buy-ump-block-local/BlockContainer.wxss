@@ -1,0 +1,12 @@
+.c77ecc:empty {
+  display: none;
+}
+.c77ecc {
+  margin: var(--theme-page-card-margin-top, 0)
+    var(--theme-page-card-margin-right, 12px)
+    var(--theme-page-card-margin-bottom, 10px)
+    var(--theme-page-card-margin-left, 12px);
+  border-radius: var(--theme-radius-card, 8px);
+  overflow: hidden;
+  position: relative;
+}

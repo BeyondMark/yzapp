@@ -1,0 +1,34 @@
+<view bind:tap="_p" class="c9b70f" data-t="{{ tap:{en:'handleClick'} }}" style="{{couponStyle}}">
+    <view class="c789f4">
+        <text bind:_init="_tic" class="a50ba" overflow="visible">[<text bind:_init="_tic" class="c1cb25" overflow="visible">{{originData.cooperateKdtName}}</text>]的商品，快来抢购！</text>
+        <view wx:if="{{availableGoods.length>1}}">
+            <view class="c10ae9">
+                <view class="c447b7" wx:for="{{availableGoods}}" wx:key="alias">
+                    <image class="c78805 bd231" lazyLoad="true" src="{{item.logo}}"></image>
+                    <view class="c78a5e">¥{{item.price}}</view>
+                </view>
+            </view>
+        </view>
+        <view wx:elif="{{availableGoods.length===1}}">
+            <view class="c9b76f">
+                <image class="c78805 bd231" lazyLoad="true" src="{{availableGoods[0].logo}}"></image>
+                <view class="caf9b">
+                    <text bind:_init="_tic" class="d5d3d" overflow="visible">{{availableGoods[0].title}}</text>
+                    <view class="c78a5e">¥<view class="e5642 c89585">
+                            <view class="c6fedc c89585">{{availableGoods[0].bigPrice}}</view>.{{availableGoods[0].centPrice}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="c65eb7">
+        <view class="c5f0b6">
+            <view class="c4758e" style="{{originData.couponValueFontSize}}">
+                <view class="c3e34b c89585" wx:if="{{originData.isShowMax}}">最高</view>{{originData.couponQuota}}<view class="c3e34b c89585" wx:if="{{originData.isShowUnit}}">元</view>
+                <view class="c3e34b c89585" wx:if="{{originData.isShowDiscount}}">折</view>
+            </view>
+        </view>
+        <text bind:_init="_tic" class="c78e73" overflow="visible">{{originData.preferentialCopyWriting}}</text>
+        <a bind:_init="_tic" customClass="ce50a" round="{{true}}" size="mini" type="danger">立即领取</a>
+    </view>
+</view>

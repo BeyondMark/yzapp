@@ -1,0 +1,39 @@
+.t-text {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.cap-price {
+  color: var(--price, #323233);
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  align-items: baseline;
+  position: relative;
+  white-space: nowrap;
+  word-break: keep-all;
+}
+.cap-price.del {
+  display: inline-block;
+}
+.cap-price .decimal,
+.cap-price .int,
+.cap-price .tag {
+  display: inline;
+}
+.cap-price .del-line {
+  height: 1px;
+  width: 100%;
+  background: #c8c9cc;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+.cap-price-del .decimal,
+.cap-price-del .int,
+.cap-price-del .tag {
+  color: #c8c9cc;
+}
+.cap-price-process {
+  font-size: 12px;
+  white-space: pre-wrap;
+  line-height: 1.2;
+}

@@ -1,0 +1,15 @@
+<view class="growth-number {{styleDirection}}">
+    <a bind:_init="_tic" color="{{themeColor}}" customClass="growth-progress" percentage="{{!haveValue?0:growthPercentage}}" showPivot="{{false}}" strokeWidth="{{strokeWidth}}" style="{{'width: 100%; max-width: '+progressMaxWidth+';'}}" trackColor="#F2F3F5"></a>
+    <view class="growth-text" style="font-size:{{fontSize+'px'}}">
+        <block wx:if="{{!haveValue}}">***</block>
+        <block wx:elif="{{showGap}}">
+            <block wx:if="{{memberInfo.freeConsumeNextText}}"> {{memberInfo.freeConsumeNextText}} </block>
+            <view class="t-text" wx:elif="{{growthNextText}}">{{growthNextText}}</view>
+        </block>
+        <view class="t-text" wx:elif="{{memberInfo.consumeProgressText}}"> {{memberInfo.consumeProgressText}} </view>
+        <block wx:else>
+            <view class="t-text">{{growthValue||0}}</view>
+            <view class="t-text"> /{{memberInfo.nextGrowthValue||0}} </view>
+        </block>
+    </view>
+</view>

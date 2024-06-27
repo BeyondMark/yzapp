@@ -1,0 +1,3 @@
+<view>
+    <a bind:_init="_tic" bind:dmc-jump="_p" data-t="{{ dmcJump:{en:'dmcJump'} }}" goodsBaseInfo="{{goodsBaseInfo}}" route="{{routeData}}" shopBaseInfo="{{shopBaseInfo}}" shopMpInfo="{{shopMpInfo}}" themeVars="{{themeVars}}"></a>
+</view>

@@ -1,0 +1,22 @@
+<view class="activity-records" wx:if="{{!fetchRecordFail}}">
+    <a class="loading" size="24px" wx:if="{{fetchRecordIng}}"></a>
+    <block wx:else>
+        <view class="tab"></view>
+        <view class="content">
+            <view class="title">| 砍价记录 |</view>
+            <view class="records-container {{isCollapse?'collapse':''}}">
+                <view class="empty-records" wx:if="{{bargainRecords.length===0}}">暂无砍价记录</view>
+                <block wx:else>
+                    <view class="record" wx:for="{{bargainRecords}}" wx:for-item="record" wx:key="{{ record.nickName }}">
+                        <image class="profile-image" mode="aspect" src="{{record.avatar||defaultProfileSrc}}"></image>
+                        <text class="sponsor-name">{{record.nickName||defaultUserName}}</text>
+                        <text class="bargain-count">帮砍<text class="cut-price">¥{{record.cutPrice}}</text>
+                        </text>
+                    </view>
+                </block>
+            </view>
+            <view bindtap="toggleCollapse" class="show-all-button" wx:if="{{bargainRecords.length>3}}">{{isCollapse?'查看全部':'收起'}}<text class="icon-arrow {{isCollapse?'':'icon-arrow-up'}}"></text>
+            </view>
+        </view>
+    </block>
+</view>

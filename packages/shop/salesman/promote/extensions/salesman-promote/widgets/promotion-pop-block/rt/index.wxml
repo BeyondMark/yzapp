@@ -1,0 +1,18 @@
+<a bind:btn-click="hidePopUp" bind:close="hidePopUp" button="完成" class="goods-promotion__popup" contentStyle="margin-top: 0;" show="{{show}}" title="发券">
+    <view>
+        <view class="goods-promotion__popup-cnt-title" wx:if="{{optimalCouponData.hasOptimalCoupon&&optimalCouponData.optimismCoupon}}">
+            <text>为你推荐最优券</text>
+        </view>
+        <block wx:if="{{optimalCouponData.hasOptimalCoupon&&optimalCouponData.optimismCoupon}}">
+            <c alias="{{optimalCouponData.optimismCoupon.alias}}" availableNum="{{optimalCouponData.optimismCoupon.availableNum}}" condition="{{optimalCouponData.optimismCoupon.condition}}" discountInfo="{{optimalCouponData.optimismCoupon.discountInfo}}" extraCondition="{{coupon.extraCondition}}" rmId="{{rmId}}" timeLimit="{{optimalCouponData.optimismCoupon.timeLimit}}" title="{{optimalCouponData.optimismCoupon.title}}" unit="{{optimalCouponData.optimismCoupon.discountUnit}}" valid="{{optimalCouponData.optimismCoupon.valid}}" wx:if="{{rmId==='b29-0'}}"></c>
+        </block>
+        <view class="goods-promotion__popup-cnt-title" wx:if="{{couponsList.length}}">{{optimalCouponData.hasOptimalCoupon?'更多专属优惠券':'全部专属优惠券'}}</view>
+        <c alias="{{coupon.alias}}" availableNum="{{coupon.availableNum}}" condition="{{coupon.condition}}" data-index="{{index}}" discountInfo="{{coupon.discountInfo}}" rmId="{{rmId}}" timeLimit="{{coupon.timeLimit}}" title="{{coupon.title}}" unit="{{coupon.discountUnit}}" valid="{{coupon.valid}}" wx:if="{{rmId==='b29-0'}}" wx:for="{{couponsList}}" wx:for-item="coupon" wx:key="alias"></c>
+        <view bind:tap="handleGetMore" class="goods-promotion__more-coupon" wx:if="{{showMoreCoupon}}">
+            <view class="goods-promotion__more-coupon-content">
+                <view class="goods-promotion__more-coupon-desc">更多优惠券</view>
+                <b class="goods-promotion__more-coupon-icon" color="#dcdee0" name="arrow"></b>
+            </view>
+        </view>
+    </view>
+</a>

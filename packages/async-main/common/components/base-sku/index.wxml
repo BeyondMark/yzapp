@@ -1,0 +1,44 @@
+<template name="sku">
+    <view class="van-sku-container van-sku-container-class">
+        <sku-header bind:sku:close="onClose" extraData="{{extraData}}" goods="{{goods}}" hideStock="{{hideStock}}" properties="{{properties}}" quota="{{quota}}" quotaCycle="{{quotaCycle}}" quotaText="{{quotaText}}" quotaUsed="{{quotaUsed}}" selectedSku="{{selectedSku}}" selectedSkuComb="{{selectedSkuComb}}" selectedProp="{{selectedProp}}" sku="{{sku}}" themeClass="{{themeClass}}">
+            <sku-header-price extraData="{{extraData}}" goods="{{goods}}" selectedSku="{{selectedSku}}" selectedSkuComb="{{selectedSkuComb}}" sku="{{sku}}" themeClass="{{themeClass}}"></sku-header-price>
+        </sku-header>
+        <view class="van-sku-body van-sku-body-class" style="{{showDatePicker?'overflow-y: visible;':''}}">
+            <slot name="sku-group" wx:if="{{extraData.useCustomSkuGroup}}"></slot>
+            <block wx:else>
+                <view class="van-sku-group-container" wx:if="{{!sku.noneSku||properties.length>0}}">
+                    <sku-row extraData="{{extraData}}" index="{{index}}" lastChild="{{index===sku.tree.length-1&&properties.length===0}}" selectedSku="{{selectedSku}}" selectedSkuComb="{{selectedSkuComb}}" skuRow="{{skuTreeItem}}" themeClass="{{themeClass}}" wx:for="{{sku.tree}}" wx:for-item="skuTreeItem" wx:key="index">
+                        <sku-row-item bind:sku:select="onSelect" disableSoldoutSku="{{disableSoldoutSku}}" selectedSku="{{selectedSku}}" selectedSkuComb="{{selectedSkuComb}}" skuKeyStr="{{skuTreeItem.kS}}" skuList="{{simpleSkuList}}" skuValue="{{skuValue}}" themeClass="{{themeClass}}" wx:for="{{skuTreeItem.v}}" wx:for-item="skuValue" wx:key="index"></sku-row-item>
+                    </sku-row>
+                    <sku-row index="{{index}}" selectedSku="{{selectedProp}}" skuRow="{{propItem}}" themeClass="{{themeClass}}" wx:for="{{properties}}" wx:for-item="propItem" wx:key="index">
+                        <sku-row-prop-item bind:sku:propSelect="onPropSelect" disabled="{{propValue.textStatus===0}}" multiple="{{propItem.isMultiple}}" selectedProp="{{selectedProp}}" skuKeyStr="{{propItem.kId}}" skuValue="{{propValue}}" themeClass="{{themeClass}}" wx:for="{{propItem.v}}" wx:for-item="propValue" wx:key="index"></sku-row-prop-item>
+                    </sku-row>
+                </view>
+            </block>
+            <sku-group-extra extraData="{{extraData}}" selectedSku="{{selectedSku}}" selectedSkuComb="{{selectedSkuComb}}" sku="{{sku}}" themeClass="{{themeClass}}"></sku-group-extra>
+            <slot name="extra-sku-group"></slot>
+            <view class="calendar-container" wx:if="{{isVirtualTicket&&virtualTicket.validityType===3||isPriceCalendar}}">
+                <view class="calendar-container-box">
+                    <view class="calendar-header-tip">
+                        <text class="tip-text">选择日期</text>
+                        <text wx:if="{{virtualTicket.itemPreOrderTime}}">{{virtualTicket.itemPreOrderTimeStr}}</text>
+                    </view>
+                    <b activeClass="calendar-active-class" bind:dateItemClick="onDateItemClick" bind:dateItemReset="onDateItemReset" ecardPriceCalendarModelMap="{{priceCalendarData.ecardPriceCalendarModelMap}}" id="price-calendar-component" nearlyFourDayMarketableMap="{{priceCalendarData.nearlyFourDayMarketableMap}}" nearlyFourMonthMinPriceMap="{{priceCalendarData.nearlyFourMonthMinPriceMap}}" nearlyFourMonthsPriceRange="{{priceCalendarData.nearlyFourMonthsPriceRange}}"></b>
+                </view>
+            </view>
+            <sku-stepper bind:sku:initstate="onInitState" bind:sku:numChange="onNumChange" bind:sku:overlimit="onOverLimit" calendarStock="{{calendarStock}}" extraData="{{extraData}}" hideStock="{{hideStock}}" quota="{{quota}}" quotaCycle="{{quotaCycle}}" quotaText="{{quotaText}}" quotaUsed="{{quotaUsed}}" selectedNum="{{selectedNum}}" selectedSku="{{selectedSku}}" selectedSkuComb="{{selectedSkuComb}}" sku="{{sku}}" skuStockNum="{{sku.stockNum}}" startSaleNum="{{startSaleNum}}" stepperTitle="{{stepperTitle}}" themeClass="{{themeClass}}" wx:if="{{!extraData.hideSkuStepper}}"></sku-stepper>
+            <sku-stepper-bottom-block extraData="{{extraData}}" selectedSku="{{selectedSku}}" selectedSkuComb="{{selectedSkuComb}}" sku="{{sku}}"></sku-stepper-bottom-block>
+            <slot name="sku-stepper-bottom-block"></slot>
+            <sku-extra bind:onChooseRelation="onChooseRelation" extra="{{sku.birthdayInfo}}" wx:if="{{sku.birthdayInfo}}"></sku-extra>
+            <sku-messages bind:sku:addRef="addSkuMsgRef" bind:sku:showDatePicker="showDateTimePicker" extraData="{{extraData}}" messageConfig="{{messageConfig}}" messages="{{sku.messages}}" selectedSku="{{selectedSku}}" selectedSkuComb="{{selectedSkuComb}}" sku="{{sku}}" themeClass="{{themeClass}}"></sku-messages>
+        </view>
+        <slot name="sku-actions-top"></slot>
+        <slot name="sku-actions" wx:if="{{extraData.useCustomSkuActions}}"></slot>
+        <sku-actions allowDeny="{{!goods.isHaitao}}" bind:sku:addCart="onAddCart" bind:sku:buy="onBuy" buyBtnText="{{buyText}}" cartBtnText="{{cartText}}" cartCount="{{cartCount}}" extraData="{{extraData}}" popupCustomStyle="{{authorizePopupCustomStyle}}" selectedSku="{{selectedSku}}" selectedSkuComb="{{selectedSkuComb}}" showAddCartBtn="{{showAddCartBtn}}" showBuyBtn="{{showBuyBtn}}" sku="{{sku}}" themeClass="{{themeClass}}" wx:else></sku-actions>
+    </view>
+</template>
+<a bind:close="onClose" customStyle="overflow-y:visible;bottom: {{popupBottom}}px;" position="bottom" round="{{true}}" show="{{show}}" zIndex="{{zIndex}}" wx:if="{{usePopup}}">
+    <template is="sku" data="{{simpleSkuList:simpleSkuList,themeClass:themeClass,sku:sku,calendarStock:calendarStock,goods:goods,extraData:extraData,stepperTitle:stepperTitle,quota:quota,quotaText:quotaText,quotaUsed:quotaUsed,quotaCycle:quotaCycle,hideStock:hideStock,buyText:buyText,cartText:cartText,resetStepperOnHide:resetStepperOnHide,showAddCartBtn:showAddCartBtn,showBuyBtn:showBuyBtn,bodyOffsetTop:bodyOffsetTop,show:show,selectedSku:selectedSku,selectedNum:selectedNum,selectedSkuComb:selectedSkuComb,refs:refs,cartCount:cartCount,isVirtualTicket:isVirtualTicket,virtualTicket:virtualTicket,isPriceCalendar:isPriceCalendar,priceCalendarData:priceCalendarData,showDatePicker:showDatePicker,startSaleNum:startSaleNum,messageConfig:messageConfig,properties:properties,selectedProp:selectedProp,disableSoldoutSku:disableSoldoutSku,authorizePopupCustomStyle:authorizePopupCustomStyle}}"></template>
+</a>
+<template is="sku" data="{{simpleSkuList:simpleSkuList,themeClass:themeClass,sku:sku,calendarStock:calendarStock,goods:goods,extraData:extraData,stepperTitle:stepperTitle,quota:quota,quotaText:quotaText,quotaUsed:quotaUsed,quotaCycle:quotaCycle,hideStock:hideStock,buyText:buyText,cartText:cartText,resetStepperOnHide:resetStepperOnHide,showAddCartBtn:showAddCartBtn,showBuyBtn:showBuyBtn,bodyOffsetTop:bodyOffsetTop,show:show,selectedSku:selectedSku,selectedNum:selectedNum,selectedSkuComb:selectedSkuComb,refs:refs,cartCount:cartCount,isVirtualTicket:isVirtualTicket,virtualTicket:virtualTicket,isPriceCalendar:isPriceCalendar,priceCalendarData:priceCalendarData,startSaleNum:startSaleNum,messageConfig:messageConfig,properties:properties,selectedProp:selectedProp,disableSoldoutSku:disableSoldoutSku,authorizePopupCustomStyle:authorizePopupCustomStyle}}" wx:else></template>
+<c bind:close="closeDateTimePicker" bind:confirm="confirmDateTimePicker" info="{{datePickerData}}" show="{{showDatePicker}}" zIndex="{{zIndex+1}}"></c>

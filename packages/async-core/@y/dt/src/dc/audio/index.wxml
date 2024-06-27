@@ -1,0 +1,30 @@
+<view class="dc-audio">
+    <view bind:tap="_p" class="{{'wx'}} {{opt.bubble}}" data-t="{{ tap:{ en:'trigger',args:[opt,index] } }}" wx:if="{{opt.style===0}}">
+        <image class="logo tee-image" lazyLoad="true" src="{{logo}}"></image>
+        <view class="bar">
+            <image class="animation tee-image" lazyLoad="true" src="{{playerImg}}" wx:if="{{opt.status===1}}"></image>
+            <view class="animation-static t-text"></view>
+        </view>
+        <view class="time t-text" wx:if="{{isLoaded}}">{{formatedDuration}}</view>
+    </view>
+    <view class="music" wx:elif="{{opt.style===1}}">
+        <a bind:_init="_tic" bind:tap="_p" class="mc-btn" data-t="{{ tap:{ en:'trigger',args:[opt,index] } }}" name="{{statusIcon}}"></a>
+        <view class="info">
+            <view class="mc-title">{{opt.title}}</view>
+            <b activeColor="#4b0" bind:_init="_tic" bind:change="_p" customClass="slider" data-t="{{ change:{en:'updateProgress'} }}" inactiveColor="#f2f2f2" useButtonSlot="{{true}}" value="{{percentage}}">
+                <view class="van-slider__button" slot="button"></view>
+            </b>
+            <view class="mc-time t-text" wx:if="{{isLoaded}}">{{formatedCurrentTime}}</view>
+            <view class="mc-duration t-text" wx:if="{{isLoaded}}">{{formatedDuration}}</view>
+        </view>
+    </view>
+    <view class="sp" wx:elif="{{opt.style===2}}">
+        <view bind:tap="_p" class="sp-box" data-t="{{ tap:{ en:'trigger',args:[opt,index] } }}">
+            <canvas bind:_init="_tic" class="sp-o" id="{{'capAudioCanvasArcCir-'+index}}" type="2d"></canvas>
+            <view class="sp-btn t-text" style="{{spBtnStyle}}"></view>
+        </view>
+        <view class="sp-title-wrapper">
+            <view class="sp-title">{{opt.title}}</view>
+        </view>
+    </view>
+</view>

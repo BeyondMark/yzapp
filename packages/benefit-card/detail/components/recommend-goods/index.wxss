@@ -1,0 +1,14 @@
+.card-recommend {
+  background-color: #fff;
+  padding: 16px;
+}
+.card-recommend .card-recommend__header {
+  margin-bottom: 24px;
+  font-size: 16px;
+  color: #333;
+  font-weight: 700;
+}
+.card-recommend__list {
+  margin-left: -9px;
+  margin-top: -8px;
+}

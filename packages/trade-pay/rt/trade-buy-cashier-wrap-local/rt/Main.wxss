@@ -1,0 +1,28 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.ad1e0 {
+  position: fixed;
+  bottom: calc(126px + env(safe-area-inset-bottom, 34px));
+  left: 0;
+  right: 0;
+  width: 226px;
+  height: 44px;
+  margin: 0 auto;
+  z-index: 52;
+}
+.ef0b2 {
+  box-shadow: 0 2px 12px 0 rgba(100, 101, 102, 0.12);
+}
+.c33a74 {
+  color: #323233;
+}
+.c1bb11 {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-left: 6px;
+  background: 50%/100%no-repeat
+    url(//img01.yzcdn.cn/upload_files/2022/02/23/Fl3pRn1a0nAfQW3-vBvCONvJYM8x.png);
+}

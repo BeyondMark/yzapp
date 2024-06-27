@@ -1,0 +1,19 @@
+.shopnote-single-product-character {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.shopnote-single-product-character__item {
+  padding: 0 10px;
+  width: auto;
+  height: 24px;
+  background: rgba(255, 68, 68, 0.1);
+  border-radius: 15px;
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #f44;
+  text-align: center;
+  line-height: 24px;
+  margin-right: 10px;
+  margin-top: 10px;
+}

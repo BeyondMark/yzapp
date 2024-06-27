@@ -1,0 +1,39 @@
+.guide-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+}
+.content-wrapper {
+  position: absolute;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content-wrapper .content {
+  margin: 16px 46px;
+  line-height: 24px;
+  font-size: 16px;
+  text-align: center;
+}
+.content-wrapper .guide-arrow {
+  width: 40px;
+  height: 74px;
+  margin-top: 16px;
+  margin-bottom: 12px;
+}
+.content-wrapper .guide-button {
+  width: 138px;
+  height: 53px;
+  line-height: 53px;
+  font-size: 16px;
+  text-align: center;
+  background: url(https://img01.yzcdn.cn/upload_files/2020/12/17/FizKPDD0KVrK9CBzRofDO1vBQURh.png)
+    0 0/100%no-repeat;
+}
+.guide-img {
+  position: fixed;
+}

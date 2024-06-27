@@ -1,0 +1,17 @@
+<view class="container">
+    <view class="head">
+        <slot name="head"></slot>
+    </view>
+    <view class="title">入会仅剩一步</view>
+    <view class="subtitle">
+        <view class="t-text" wx:if="{{thresholdType===ThresholdType.Consume}}"> 达到消费门槛 </view>
+        <view class="t-text" wx:elif="{{thresholdType===ThresholdType.Prepaid}}">      充值 <view class="highlight t-text"> {{formattedThresholdValue}}元</view>
+        </view>
+        <view class="t-text" wx:else>完成任务</view>    ，解锁会员权益
+  </view>
+    <view bind:tap="_p" class="action" data-t="{{ tap:{en:'handleAction'} }}">
+        <view class="t-text" wx:if="{{thresholdType===ThresholdType.Consume}}">查看门槛</view>
+        <view class="t-text" wx:elif="{{thresholdType===ThresholdType.Prepaid}}">去充值</view>
+        <view class="t-text" wx:else>查看任务</view>
+    </view>
+</view>

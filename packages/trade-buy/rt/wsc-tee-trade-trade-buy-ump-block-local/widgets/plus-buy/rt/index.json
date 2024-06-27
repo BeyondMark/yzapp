@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../plus-buy-card/rt/index",
+    "_": "../../../../../../../components/_/index"
+  }
+}

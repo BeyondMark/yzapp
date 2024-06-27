@@ -1,0 +1,16 @@
+<view class="showcase-item" style="{{showcaseStyle}}" wx:if="{{showItem}}">
+    <view class="showcase-item__header">
+        <view class="showcase-item__header-main">
+            <image class="showcase-item__header-icon tee-image" lazyLoad="true" src="{{item.iconUrl}}"></image>
+            <view class="t-text">{{item.title}}</view>
+        </view>
+        <view bind:tap="_p" class="showcase-item__more" data-t="{{ tap:{ en:'jumpPage',args:[item] } }}">
+            <view class="t-text">查看更多</view>
+            <a bind:_init="_tic" class="showcase-item__more-icon" name="arrow"></a>
+        </view>
+    </view>
+    <c bind:_init="_tic" bind:item-click="_p" bind:jump-page="_p" bind:load-failed="_p" bind:render-success="_p" bizName="{{item.bizName}}" buyerId="{{buyerId}}" customRecommendName="{{recommendName}}" data-t="{{ renderSuccess:{en:'handleLoadedFn'},loadFailed:{en:'handleLoadedFn'},itemClick:{en:'handleItemClick'},jumpPage:{en:'jumpPage'} }}" goodsNumber="{{goodsNumber}}" kdtId="{{kdtId}}" layoutConfig="{{layoutConfig}}" loggerParams="{{loggerParams}}" loggerSpm="{{loggerSpm}}" maxGoodsNumber="{{maxGoodsNumber}}" offlineId="{{offlineId}}" show="{{loaded}}" showCornerMark="{{item.showCornerMark}}"></c>
+    <view class="showcase-item__loading" hidden="{{!!loaded}}">
+        <b bind:_init="_tic" size="20px"></b>
+    </view>
+</view>

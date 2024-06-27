@@ -1,0 +1,17 @@
+<view class="helpcut-block" wx:if="{{newBargainRecords.records&&newBargainRecords.records.length>0}}">
+    <view class="activity-records">
+        <view class="title">砍价记录</view>
+        <view class="detail {{isCollapse?'collapse':''}}">
+            <view class="item van-hairline--bottom" wx:for="{{newBargainRecords.records}}">
+                <image class="avator" mode="aspectFill" src="{{item.avatar||defaultAvatar}}"></image>
+                <view class="info">
+                    <view class="nickname">{{item.nickName||'神秘用户'}}</view>
+                    <view class="extra">{{item.extra}}</view>
+                </view>
+                <view class="price">砍掉{{item.cutPrice}}元</view>
+            </view>
+        </view>
+        <view bindtap="toggleCollapse" class="show-all-button" wx:if="{{newBargainRecords.records.length>3}}">{{isCollapse?'查看全部记录':'收起'}}<a name="{{isCollapse?'arrow-down':'arrow-up'}}"></a>
+        </view>
+    </view>
+</view>

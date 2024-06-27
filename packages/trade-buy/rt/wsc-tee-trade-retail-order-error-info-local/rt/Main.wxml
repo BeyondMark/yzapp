@@ -1,0 +1,42 @@
+<view>
+    <a bind:_init="_tic" round="{{true}}" show="{{showOutOfDeliveryPop}}">
+        <view class="c22fb7">
+            <view class="c6b661">当前收货地址超出配送范围</view>
+            <view bind:tap="_p" class="caf9b" data-t="{{ tap:{en:'onSelectShop'} }}" style="{{generalStyle}}" wx:if="{{showSwitchBtn}}">切换可配送店铺</view>
+            <view bind:tap="_p" class="caf9b" data-t="{{ tap:{en:'switchExpressWay'} }}" style="{{generalStyle}}" wx:elif="{{supportSwitchExpressWay}}">        切换配送方式
+      </view>
+            <view bind:tap="_p" class="caf9b" data-t="{{ tap:{en:'onAddressTap'} }}">修改收货地址</view>
+            <view bind:tap="_p" class="caf9b" data-t="{{ tap:{en:'onClose'} }}">取消</view>
+        </view>
+    </a>
+    <a bind:_init="_tic" round="{{true}}" show="{{showNotEnoughPricePop}}">
+        <view class="c22fb7">
+            <view class="c6b661">        当前店铺<view class="c89585" style="{{generalStyle}}">{{retailOrderErrorInfo.localDeliveryStartFeeStr}}</view>起送，还差<view class="c89585" style="{{generalStyle}}">{{retailOrderErrorInfo.localDeliveryLackFeeStr}}</view>
+            </view>
+            <view bind:tap="_p" class="caf9b" data-t="{{ tap:{en:'navigateBack'} }}" style="{{generalStyle}}">返回凑单</view>
+            <view bind:tap="_p" class="caf9b" data-t="{{ tap:{en:'switchExpressWay'} }}" wx:if="{{supportSwitchExpressWay}}">切换配送方式</view>
+            <view bind:tap="_p" class="caf9b" data-t="{{ tap:{en:'onClose'} }}">取消</view>
+        </view>
+    </a>
+    <a bind:_init="_tic" round="{{true}}" show="{{showSwitchShopConfirmPop}}">
+        <view class="c22fb7">
+            <view class="d627f">
+                <view class="c052b2">店铺切换成功</view>
+                <view class="c757f9">请重新确认订单信息</view>
+            </view>
+            <view class="f583e">
+                <view bind:tap="_p" class="d4f5c" data-t="{{ tap:{en:'closeConfirmPop'} }}" style="{{generalStyle}}">知道了</view>
+            </view>
+        </view>
+    </a>
+    <a bind:_init="_tic" round="{{true}}" show="{{showNeedRequiredPop&&currentExpressType!==0}}">
+        <view class="c22fb7">
+            <view class="c6b661"> {{currentExpressType===1?'自提':'商家配送'}}时需要选择必选品
+      </view>
+            <view class="c251d1">
+                <view bind:tap="_p" class="c7537a caf9b e1d25" data-t="{{ tap:{en:'onClose'} }}">取消</view>
+                <view bind:tap="_p" class="c7537a c0fbd6 caf9b" data-t="{{ tap:{en:'handleBackAddRequired'} }}">返回加购</view>
+            </view>
+        </view>
+    </a>
+</view>

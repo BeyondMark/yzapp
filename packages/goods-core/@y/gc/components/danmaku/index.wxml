@@ -1,0 +1,3 @@
+<view class="a002d c09941 {{customClass}} {{!isPlaying&&'d13c3'}}" data-ref="danmaku" hidden="{{!(bullets.length>0)}}" style="{{innerStyle}}">
+    <a bind:_init="_tic" bind:update="_p" bulletKey="{{bullet.key}}" data-t="{{ update:{en:'updateBullet'} }}" isPlaying="{{isPlaying}}" left="{{bullet.left}}" maxTextLength="{{maxTextLength}}" sourceData="{{bullet.data}}" top="{{bullet.top}}" wx:for="{{bullets}}" wx:for-item="bullet" wx:key="key"></a>
+</view>

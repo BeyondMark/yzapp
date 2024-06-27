@@ -1,0 +1,12 @@
+<view class="title">
+    <view class="title-wrap">
+        <view style="{{titleAlignStyle}}" wx:if="{{componentTitle.align==='1'}}"></view>
+        <view class="title-wrap-text" style="{{titleStyle}}"> {{componentTitle.title}} </view>
+        <view style="{{titleAlignStyle}}">
+            <view bind:tap="_p" class="title-wrap-link" data-t="{{ tap:{en:'handleTitleClick'} }}" wx:if="{{componentTitle.showLink}}">
+                <view class="t-text">{{componentTitle.linkText}}</view>
+                <a bind:_init="_tic" class="arrow" name="arrow" size="12"></a>
+            </view>
+        </view>
+    </view>
+</view>

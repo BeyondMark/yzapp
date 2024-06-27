@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./CouponBar",
+    "b": "./CouponListPopup",
+    "_": "../../../../../components/_/index"
+  }
+}

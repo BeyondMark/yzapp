@@ -1,0 +1,12 @@
+.cashier-pre__selected-cell {
+  padding: var(--theme-page-cell-padding-top, 10px)
+    var(--theme-page-cell-padding-right, 12px)
+    var(--theme-page-cell-padding-bottom, 10px)
+    var(--theme-page-cell-padding-left, 12px) !important;
+}
+.cashier-pre__selected-cell-selected {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #323233;
+}

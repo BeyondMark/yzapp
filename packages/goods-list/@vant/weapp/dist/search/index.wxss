@@ -1,0 +1,43 @@
+@import "/@vant/weapp/dist/common/index.wxss";
+.van-search {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  padding: var(--search-padding, 10px 12px);
+}
+.van-search__content {
+  background-color: var(--search-background-color, #f7f8fa);
+  border-radius: 2px;
+  display: flex;
+  flex: 1;
+  padding-left: var(--padding-sm, 12px);
+}
+.van-search__content--round {
+  border-radius: 999px;
+}
+.f7f65 {
+  color: var(--search-label-color, #323233);
+  font-size: var(--search-label-font-size, 14px);
+  line-height: var(--search-input-height, 34px);
+  padding: var(--search-label-padding, 0 5px);
+}
+.d324e {
+  flex: 1;
+}
+.d324e__left-icon {
+  color: var(--search-left-icon-color, #969799);
+}
+.van-search--withaction {
+  padding-right: 0;
+}
+.c2c649 {
+  color: var(--search-action-text-color, #323233);
+  font-size: var(--search-action-font-size, 14px);
+  line-height: var(--search-input-height, 34px);
+}
+.c11c56 {
+  background-color: #f2f3f5;
+}
+.c4d3f3 {
+  padding: var(--search-action-padding, 0 8px);
+}

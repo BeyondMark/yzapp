@@ -1,0 +1,74 @@
+.trade-carousel {
+  position: fixed;
+  top: 15px;
+  left: 10px;
+  min-width: 210px;
+  height: 32px;
+  z-index: 22;
+  overflow: hidden;
+  color: #fff;
+}
+.trade-carousel__swipe {
+  height: 32px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+}
+.trade-carousel__swipe-item {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding-right: 8px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 12px;
+}
+.trade-carousel__swipe-avatar {
+  margin-right: 9px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.trade-carousel__swipe-avatar image {
+  width: 100%;
+  height: 100%;
+}
+.trade-carousel__swipe-text {
+  flex: 1;
+  margin-right: 1px;
+  line-height: normal;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.trade-carousel__swipe .money {
+  color: #ffcb00;
+}
+.move-enter-active {
+  animation: move-in 0.5s;
+}
+.move-leave-active {
+  animation: move-out 0.3s;
+  animation-fill-mode: forwards;
+}
+@keyframes move-in {
+  0% {
+    transform: translateY(32px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes move-out {
+  0% {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-32px);
+  }
+}

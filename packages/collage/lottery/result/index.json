@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "抽奖结果",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#ff5644",
+  "componentPlaceholder": { "e": "_" }
+}

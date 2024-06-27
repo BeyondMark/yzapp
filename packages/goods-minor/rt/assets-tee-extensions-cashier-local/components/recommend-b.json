@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../@y-open/vt/dist/switch/index",
+    "b": "./recommend-base",
+    "_": "../../../../../components/_/index"
+  }
+}

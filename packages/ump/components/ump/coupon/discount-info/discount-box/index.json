@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../discount-body/index",
+    "b": "../../description/index",
+    "_": "../../../../../../../components/_/index"
+  }
+}

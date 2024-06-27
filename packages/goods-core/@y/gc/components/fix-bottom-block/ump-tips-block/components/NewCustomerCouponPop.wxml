@@ -1,0 +1,10 @@
+<view class="c6a213" wx:if="{{time}}">
+    <b bind:_init="_tic" class="baec6" name="{{popIcon}}"></b>
+  新人专享券
+  <view class="c89585" wx:if="{{time<=86400000}}">
+    到期仅剩
+    <a bind:_init="_tic" class="d5f7f" time="{{time}}"></a>
+    </view>
+    <view class="c89585" wx:else>已领取</view>
+  ，下单立减
+  <view class="c2063c c89585">{{buyButtonPop.valueCopywriting}}</view> {{buyButtonPop.unitCopywriting}}</view>

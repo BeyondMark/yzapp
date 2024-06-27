@@ -1,0 +1,23 @@
+<view class="a5896" style="{{themeVars}}" wx:if="{{showCategoryBar}}">
+    <a bind:_init="_tic" bind:tap="_p" border="{{false}}" data-t="{{ tap:{en:'handleShowPopupCategory'} }}" isLink="{{true}}" wx:if="{{showCategoryBar}}">
+        <view class="c5b46e c30faf" slot="title">
+            <view class="c0c0ea c89585">参数</view>{{categoryBarTitle}} </view>
+    </a>
+    <c bind:_init="_tic" bind:close="_p" class="c4ef3" closeable="{{false}}" customClass="c341e4" data-t="{{ close:{en:'handleHidePopupCategory'} }}" position="bottom" round="{{true}}" safeAreaInsetBottom="{{true}}" show="{{showPopupCategory}}" wx:if="{{showCategoryBar}}">
+        <scroll-view class="a485f" scrollY="{{true}}">
+            <view class="c4fded">产品参数</view>
+            <view class="c35ea5" wx:for="{{categoryBarValue}}" wx:key="key">
+                <view class="c196c0">
+                    <view class="b57f6">{{item.proName}}</view>
+                </view>
+                <view class="c68ebd">
+                    <view class="c05378">{{item.valNamesStr}}</view>
+                </view>
+            </view>
+        </scroll-view>
+        <view catch:tap="_p" class="ca138" data-t="{{ tap:{en:'true',et:'stop'} }}">
+            <b bind:_init="_tic" bind:tap="_p" customClass="b402e" data-t="{{ tap:{en:'handleHidePopupCategory'} }}" round="{{true}}" type="primary">        我知道了
+      </b>
+        </view>
+    </c>
+</view>

@@ -1,0 +1,55 @@
+.c0e6cf {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  background: #f7f8fa;
+  border-radius: 20px 20px 0 0;
+}
+.c37fe9 {
+  overflow: hidden;
+  height: 100%;
+}
+.e3fed {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  transition: transform 0.3s cubic-bezier(0.84, 0.84, 0.32, 0.32);
+}
+.c62b9d {
+  transform: translateX(0);
+}
+.content-translateX100 {
+  transform: translateX(-100%);
+}
+.prepay-card {
+  background: #f2f2f2;
+  padding: 0 0 60px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.d8d67 {
+  font-size: 16px;
+  line-height: 44px;
+  text-align: center;
+  background-color: #fff;
+  position: relative;
+  font-weight: 500;
+}
+.prepay-card__pop-left {
+  left: 0;
+}
+.c4430b,
+.prepay-card__pop-left {
+  position: absolute !important;
+  top: 12px;
+  padding: 0 12px;
+  color: #969799;
+  font-size: 22px !important;
+  line-height: 28px;
+  text-align: center;
+}
+.c4430b {
+  right: 0;
+}

@@ -1,0 +1,9 @@
+.theme-hot {
+  box-shadow: inset 0 0 8px 0 rgba(238, 10, 36, 0.3);
+}
+.theme-warm {
+  box-shadow: inset 0 0 8px 0 rgba(255, 170, 0, 0.3);
+}
+.theme-cold {
+  box-shadow: inset 0 0 8px 0 rgba(27, 171, 255, 0.3);
+}

@@ -1,0 +1,19 @@
+<view>
+    <a _opt="{{searchDta}}" bind:_init="_tic" kdtId="{{kdtId}}" wx:if="{{searchDta&&searchDta.showSearchComponent}}"></a>
+    <view class="top-nav" id="{{topNavId}}">
+        <view class="{{isStartFixed?'top-nav__view--fixed':''}}" style="top:{{stickyTop+'px'}}">
+            <scroll-view class="scroll_view" scrollLeft="{{scrollLeft}}" scrollWithAnimation="{{true}}" scrollX="true" wx:if="{{useCard}}">
+                <view class="tabs_warp">
+                    <view bind:tap="_p" class="{{'top-nav-tab'}} {{index===active?'top-nav-tab-active':''}}" data-index="{{index}}" data-t="{{ tap:{en:'handleTabClick'} }}" style="{{item.bgStyle}}" wx:for="{{showTabs}}" wx:key="index">
+                        <view class="tab_title" style="{{item.titleStyle}}">
+                            <view class="text">{{item.title}}</view>
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+            <c active="{{active}}" bind:_init="_tic" bind:nav-scroll="_p" bind:tap="_p" border="{{false}}" class="cap-tabs" color="{{themeColors.general}}" data-t="{{ tap:{en:'handleVanTabClick'},navScroll:{en:'scrollViewScroll'} }}" lineClass="{{lineClass}}" lineHeight="{{lineHeight}}" pid="{{'top-nav'+pid}}" swipeThreshold="{{swipeThreshold}}" tabStyle="{{tabStyle}}" wx:if="{{!useCard}}">
+                <b bind:_init="_tic" pid="{{'top-nav'+pid}}" title="{{tab.title}}" titleStyle="{{tab.titleStyle}}" wx:for="{{showTabs}}" wx:for-item="tab" wx:key="index"></b>
+            </c>
+        </view>
+    </view>
+</view>

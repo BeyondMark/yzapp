@@ -1,0 +1,4 @@
+<view class="{{'t-tag'}} {{'t-tag--'+type}} {{size?'t-tag--'+size:''}} {{mark?'t-tag--mark':''}} {{plain?'t-tag--plain':''}} {{round?'t-tag--round':''}} {{hairline?'t-hairline--surround':''}} {{customClass}}" style="{{tagStyle}}">
+    <slot></slot>
+    <a bind:_init="_tic" bind:tap="_p" customClass="t-tag__close" data-t="{{ tap:{en:'onClose'} }}" name="cross" wx:if="{{closeable}}"></a>
+</view>

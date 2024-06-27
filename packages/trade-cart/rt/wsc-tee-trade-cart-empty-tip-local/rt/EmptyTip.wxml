@@ -1,0 +1,9 @@
+<view class="c5e8b2">
+    <view class="c495c6" style="{{emptyImgStyle}}"></view>
+    <block wx:if="{{isAuthProtocol}}">
+        <view class="c60638">购物车暂时没有商品</view>
+        <view class="ae3ca" wx:if="{{showDesc}}">您可以选择喜欢的商品加入购物车</view>
+        <a bind:_init="_tic" bind:tap="_p" customClass="c9de70" data-t="{{ tap:{en:'goNative'} }}"> {{goBuyText}} </a>
+    </block>
+    <a bind:_init="_tic" bind:tap="_p" customClass="c9de70" data-t="{{ tap:{en:'getCartGoodsList'} }}" wx:else> 查看购物车 </a>
+</view>

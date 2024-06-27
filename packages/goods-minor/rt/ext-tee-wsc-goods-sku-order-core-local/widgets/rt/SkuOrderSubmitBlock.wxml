@@ -1,0 +1,15 @@
+<view class="c32206">
+    <view class="c72be" wx:if="{{orderWarning&&prepareIsReady}}"> {{orderWarning}} </view>
+    <block wx:else>
+        <a bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b7-42'}}"></a>
+    </block>
+    <view class="c1a631">
+        <view bind:tap="_p" class="c42856 {{!isCanPay?'c902b7':''}}" data-t="{{ tap:{en:'onPay'} }}" style="{{btnStyle}}">
+            <view class="c6a3a0">
+                <view>{{payText}}</view>
+                <view class="ce8b6" wx:if="{{!payBtnDisabled}}">¥<view class="c3139b c89585">{{payPriceFormat}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

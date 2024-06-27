@@ -1,0 +1,71 @@
+.header-wrap {
+  position: relative;
+  height: 40px;
+  font-size: 12px;
+}
+.header-wrap .rules-tag {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 100px 0 0 100px;
+  font-size: 12px;
+  font-weight: 800;
+  color: #f44;
+  background-color: hsla(0, 0%, 100%, 0.64);
+}
+.rules-popup {
+  border-radius: 12px 12px 0 0;
+  padding: 0 16px;
+  box-sizing: border-box;
+  max-height: 95vh !important;
+}
+.rules-popup .popup-title {
+  position: relative;
+  height: 44px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 44px;
+  font-family: PingFangSC-Medium;
+}
+.rules-popup .popup-title .close-icon {
+  position: absolute;
+  top: 11px;
+  right: 0;
+  content: "";
+  width: 22px;
+  height: 22px;
+  background: url(https://b.yzcdn.cn/public_files/d542190bf6bb53eb8c71b9e6b953967c.png)
+    no-repeat 50%;
+  background-size: 100% 100%;
+}
+.rules-popup .rules {
+  padding-top: 12px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  border-bottom: 1px dashed #c8c9cc;
+}
+.rules-popup .rules-detail {
+  margin-bottom: 15px;
+}
+.rules-popup .rules-btn {
+  height: 36px;
+  line-height: 36px;
+  font-size: 14px;
+  background-image: linear-gradient(90deg, #ff6034, #ee0a24);
+  border-radius: 100px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 7px;
+}
+.rules-popup .contact {
+  margin: 20px 0 40px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 14px;
+  white-space: pre-wrap;
+}

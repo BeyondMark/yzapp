@@ -1,0 +1,5 @@
+<view class="c627fc">
+    <view bind:tap="_p" class="e2c10" data-t="{{ tap:{en:'gotoShopInfo'} }}" wx:if="{{showShopBrandTag}}"></view>
+    <view bind:tap="_p" class="c1c38a" data-t="{{ tap:{en:'gotoShopInfo'} }}" wx:if="{{showShopOfficialTag}}"></view>
+    <slot name="tags"></slot>
+</view>

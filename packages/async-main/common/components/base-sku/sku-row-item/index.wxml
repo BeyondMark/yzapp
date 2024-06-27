@@ -1,0 +1,2 @@
+<a bg="{{isActive?'main-bg':''}}" bindtap="onSkuSelect" color="{{isActive?'general':''}}" customClass="{{rowItemClass}}" opacity="0.1">
+    <image class="van-sku-row__item-img" mode="aspectFit" src="{{value.imgUrl}}" wx:if="{{value.imgUrl}}"></image>{{value.name}}</a>

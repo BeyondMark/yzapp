@@ -1,0 +1,31 @@
+<view bind:tap="_p" class="{{'c33a40'}} {{disabled?'c39531':''}} {{noClick?'c0f599':''}}" data-t="{{ tap:{en:'onClick'} }}">
+    <view class="fb958" style="{{vts}}" wx:if="{{coupon.id<0}}"> {{coupon.extraInfo.CARRIER_TPL_NAME}} </view>
+    <view class="f9d02">
+        <view class="c5c599">
+            <view class="c1bc77 {{!coupon.unitDesc?'c78194':''}}">
+                <view class="d93ec c89585" wx:if="{{isYuanUnit}}"> ¥ </view>
+                <view class="num c89585">
+                    <view wx:if="{{isYuanUnit&&showDecimal}}">{{couponPriceDecimal[0]}}<view class="bdaa3 c89585">.{{couponPriceDecimal[1]}}</view>
+                    </view>
+                    <view class="c89585" wx:else>{{coupon.valueDesc}}</view>
+                </view>
+                <view class="c1ca33" wx:if="{{!isYuanUnit}}">{{coupon.unitDesc||''}}</view>
+            </view>
+            <view class="f53e5"> {{coupon.condition}} </view>
+        </view>
+        <view class="c64c38">
+            <view class="c9909b">{{coupon.name}}</view>
+            <view class="c458a0">
+                <view>{{validPeriod}}</view>
+            </view>
+            <a bind:_init="_tic" checkedColor="{{color}}" class="b9456" size="{{18}}" value="{{chosen}}" wx:if="{{!disabled&&canCheck}}"></a>
+            <view class="d249a" style="{{overlayingTagStyle}}" wx:if="{{cornerTag}}">{{cornerTag}}</view>
+        </view>
+        <view class="c9ab3b" wx:if="{{needNum}}">x{{coupon.num}}</view>
+        <view class="c72d72" style="{{couponLabelStyle}}" wx:if="{{couponLabel.hasLabel}}">{{couponLabel.label}}</view>
+    </view>
+    <view class="d3326" wx:if="{{disabled&&coupon.reason||!disabled&&(coupon.description||extraDescription)}}"></view>
+    <view class="c8587a" wx:if="{{disabled&&coupon.reason}}">{{coupon.reason}}</view>
+    <view class="c8587a" wx:if="{{!disabled&&coupon.description}}">{{coupon.description}}</view>
+    <view class="c8587a" wx:if="{{!disabled&&extraDescription}}">{{extraDescription}}</view>
+</view>

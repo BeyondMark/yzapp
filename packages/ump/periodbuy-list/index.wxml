@@ -1,0 +1,9 @@
+<a class="{{themeClass}} page-{{deviceType}} {{filterBarFixed?'showcase-all-goods--fixed':''}}">
+    <b componentData="{{componentData}}" list="{{list}}" wx:if="{{!isEmpty}}"></b>
+    <view class="all-goods__empty" wx:else>
+        <image class="all-goods__empty-image" src="https://img01.yzcdn.cn/v2/image/wap/trade/new_order/empty@2x.png"></image>
+        <text class="all-goods__empty-text">没有发现商品，去首页逛逛吧</text>
+    </view>
+    <c id="van-toast"></c>
+    <d id="van-notify"></d>
+</a>

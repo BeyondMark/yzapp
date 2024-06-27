@@ -1,0 +1,1 @@
+<view class="shopnote-desc">{{desc}}</view>

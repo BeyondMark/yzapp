@@ -1,0 +1,40 @@
+.t-text {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.cashier-pre__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  line-height: 22px;
+}
+.cashier-pre__header-icon {
+  position: absolute !important;
+  z-index: 1;
+  color: #c8c9cc;
+  font-size: 22px;
+  cursor: pointer;
+  top: 16px;
+}
+.cashier-pre__header-icon--left {
+  left: 16px;
+}
+.cashier-pre__header-icon--right {
+  right: 16px;
+}
+.cashier-pre__title {
+  font-size: 16px;
+  font-weight: 500;
+}
+.cashier-pre__list-popup {
+  border-radius: var(--theme-radius-dialog, 16px)
+    var(--theme-radius-dialog, 16px) 0 0 !important;
+}
+.cashier-pre__list-container {
+  height: 80vh;
+}
+.cashier-pre__list-content {
+  overflow-y: auto;
+  height: calc(100% - 54px);
+}

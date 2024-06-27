@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../../@vant/weapp/dist/stepper/index",
+    "b": "../../theme-view/index",
+    "_": "../../../../../../components/_/index"
+  }
+}

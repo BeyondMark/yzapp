@@ -1,0 +1,3 @@
+<view class="d41c6">
+    <a bind:_init="_tic" bind:cell-click="_p" data-t="{{ cellClick:{en:'onCellClick'} }}" item="{{selectContact}}"></a>
+</view>

@@ -1,0 +1,18 @@
+.c7110c {
+  padding: 10px 0;
+  text-align: center;
+}
+.b3cc3 {
+  height: 245px;
+  background: url(https://img01.yzcdn.cn/v2/image/wap/ump/group_tuan/empty_box@2x.png);
+  background-size: auto 200px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.c87c78 {
+  color: #999;
+  font-size: 14px;
+}
+.c1473c {
+  padding: 20px 10px;
+}

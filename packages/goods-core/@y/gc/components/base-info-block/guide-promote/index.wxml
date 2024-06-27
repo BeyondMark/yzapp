@@ -1,0 +1,7 @@
+<view class="c763bd" wx:if="{{profit}}">
+    <view class="fad58">
+        <image class="baec6 bd231" lazyLoad="true" src="https://b.yzcdn.cn/public_files/38810bf494da00d182e73ef3fea38f60.png"></image>
+        <view class="c0ecee c89585"> 推广预计赚</view>
+        <view class="c0fc3c c89585">￥ {{profit}}</view>
+    </view>
+</view>

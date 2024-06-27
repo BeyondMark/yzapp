@@ -1,0 +1,12 @@
+var style = require("p_./@vant/weapp/dist/wxs/style.wxs");
+function rootStyle(data) {
+  return style([
+    {
+      "-webkit-transition-duration": data.currentDuration + "ms",
+      "transition-duration": data.currentDuration + "ms",
+    },
+    data.display ? null : "display: none",
+    data.customStyle,
+  ]);
+}
+module.exports = { rootStyle: rootStyle };

@@ -1,0 +1,4 @@
+<view class="panel-item-warp">
+    <view class="{{'item'}} {{'sub'}} {{item.hasBadge?'has-badge':''}}" style="{{iconBg}}"></view>
+    <view class="text">{{iconTextMap[item.navType]||itemTitle}}</view>
+</view>

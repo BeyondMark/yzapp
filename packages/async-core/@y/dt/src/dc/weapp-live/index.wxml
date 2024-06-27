@@ -1,0 +1,10 @@
+<div bind:_init="_tic" class="dc-weapp-live">
+    <view catch:tap="_p" class="room" data-t="{{ tap:{ en:'handleNavigate',et:'stop',args:[room.roomId] } }}" wx:for="{{rooms}}" wx:for-item="room" wx:key="roomId">
+        <image class="room-cover tee-image" lazyLoad="true" mode="aspectFill" src="{{room.shareImg}}"></image>
+        <view class="room-content">
+            <view class="room-name">{{room.name}}</view>
+            <view class="room-time">{{room.interval}}</view>
+            <view class="{{room.statusClass}}"> {{room.statusText}} </view>
+        </view>
+    </view>
+</div>

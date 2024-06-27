@@ -1,0 +1,9 @@
+<view class="promote-salesman-activity">
+    <b border="{{false}}" customClass="promote-salesman-activity__cell" value="{{soldNumText}}">
+        <view slot="title">
+            <view>
+                <a class="promote-salesman-activity__tag" info="{{true}}" wx:for="{{salesmanActivityTags}}" wx:key="{{ item.text }}">{{item.text}}</a>
+            </view>
+        </view>
+    </b>
+</view>

@@ -1,0 +1,8 @@
+<a bind:report="navigateTo" type="{{formIdBusinessModule}}" wx:if="{{collectFormId}}">
+    <view>
+        <slot></slot>
+    </view>
+</a>
+<view bindtap="navigateTo" wx:else>
+    <slot></slot>
+</view>

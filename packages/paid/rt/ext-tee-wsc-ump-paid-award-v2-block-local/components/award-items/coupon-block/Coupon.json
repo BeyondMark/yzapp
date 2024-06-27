@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../Container",
+    "b": "/@y-open/vt/dist/button/index.weapp",
+    "c": "/@y-open/vt/dist/count-down/index",
+    "d": "./../../widgets/FontCalculate",
+    "e": "./../../widgets/Price",
+    "_": "../../../../../../../components/_/index"
+  }
+}

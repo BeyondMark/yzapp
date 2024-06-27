@@ -1,0 +1,126 @@
+@keyframes insideScale {
+  0% {
+    transform: scale(1) translate(-50%, -50%);
+  }
+  to {
+    transform: scale(0.9) translate(-50%, -50%);
+  }
+}
+@keyframes outsideScale {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.16);
+    opacity: 0;
+  }
+}
+@keyframes rectHeight {
+  0% {
+    transform: scale(1);
+  }
+  to {
+    transform: scaleY(2);
+  }
+}
+@keyframes rectHeight1 {
+  0% {
+    transform: scaleY(0.9);
+  }
+  to {
+    transform: scaleY(1.2);
+  }
+}
+@keyframes rectHeight2 {
+  0% {
+    transform: scale(1);
+  }
+  to {
+    transform: scaleY(1.5);
+  }
+}
+.border {
+  width: 44px;
+  height: 44px;
+  box-sizing: border-box;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  background: linear-gradient(#fe4240, #ff3aad);
+  mask-image: radial-gradient(closest-side, transparent 90.5%, #000 93%);
+  position: absolute;
+  z-index: 1;
+}
+.ouside {
+  animation: outsideScale 0.8s linear infinite;
+  z-index: 0;
+}
+.live-dynamic-effect {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  z-index: 140;
+}
+.live-dynamic-effect__img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-image: linear-gradient(#fe4240, #ff3aad);
+  padding: 1px;
+  overflow: hidden;
+  transform-origin: top left;
+  animation: insideScale 0.4s linear infinite alternate;
+}
+.live-dynamic-effect__img image {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+.live-dynamic-effect__text {
+  position: absolute;
+  display: flex;
+  box-sizing: border-box;
+  z-index: 3;
+  width: 48px;
+  line-height: 15px;
+  padding: 0 5px;
+  bottom: 0;
+  border-radius: 7.5px;
+  background-image: linear-gradient(135deg, #fe4240, #ff3aad);
+}
+.live-dynamic-effect__text-effect {
+  width: 12px;
+}
+.live-dynamic-effect__text-effect .effect {
+  display: inline-block;
+  width: 1.5px;
+  background-color: #fff;
+  border-radius: 1px;
+  margin-right: 1.5px;
+  transform-origin: bottom;
+}
+.live-dynamic-effect__text-effect .low {
+  height: 4px;
+  animation: rectHeight 0.4s linear infinite alternate;
+}
+.live-dynamic-effect__text-effect .top {
+  height: 9px;
+  animation: rectHeight1 0.4s linear infinite alternate;
+  animation-delay: 0.4s;
+}
+.live-dynamic-effect__text-effect .mid {
+  height: 6px;
+  animation: rectHeight2 0.4s linear infinite alternate;
+}
+.live-dynamic-effect__text image {
+  display: inline-block;
+  margin-top: 2px;
+  width: 29.03px !important;
+  height: 11px !important;
+}

@@ -1,0 +1,20 @@
+<view>
+    <f customClass="benefit-popup" customStyle="background-color: rgba(255, 255, 255, 0);" show="{{visible}}">
+        <view class="level-welcome-popup" wx:if="{{visible}}">
+            <view class="pop-content">
+                <d benefitCount="{{benefitCount}}" couponCount="{{couponCount}}" currentLevelName="{{currentLevelName}}" growthLeft="{{growthLeft}}" hasLevel="{{hasLevel}}" isBeMember="{{isBeMember}}" isConsume="{{isConsume}}" isLevelChange="{{isLevelChange}}" joinGapInfo="{{joinGapInfo}}" mode="{{mode}}" showMissionList="{{showMissionList}}"></d>
+                <e benefits="{{displayBenefits}}" class="benefits" limit="{{4}}" planBenefits="{{displayPlanBenefits}}"></e>
+                <view class="benefit-list-box" wx:if="{{presentList.length>0||coupons.length>0||showPoint}}">
+                    <a present="{{present}}" wx:for="{{presentList}}" wx:for-item="present" wx:key="presentName"></a>
+                    <b coupon="{{coupon}}" wx:for="{{coupons}}" wx:for-item="coupon" wx:key="couponId"></b>
+                    <c point="{{pointsData}}" wx:if="{{showPoint}}"></c>
+                </view>
+            </view>
+            <view class="pop-actions">
+                <view class="gift-tip" wx:if="{{hasGift}}">{{giftTip}}</view>
+                <g bindtap="beforeHandleAction" block="{{true}}" class="action-btn" customClass="action-btn" plain="{{true}}">{{actionText}}</g>
+            </view>
+        </view>
+        <h bindtap="handleClose" class="close-btn" name="cross" size="20"></h>
+    </f>
+</view>

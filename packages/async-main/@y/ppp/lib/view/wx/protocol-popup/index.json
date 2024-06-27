@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../../../../@vant/weapp/dist/button/index",
+    "b": "/@vant/weapp/dist/popup/index",
+    "_": "../../../../../../../../components/_/index"
+  }
+}

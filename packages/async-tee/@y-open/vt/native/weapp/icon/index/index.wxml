@@ -1,0 +1,4 @@
+<view catch:tap="_p" class="{{'vant-tee'}} {{lazy?prefix:classPrefix}} {{isImage?'t-icon--image':lazy?prefix+'-'+name:classPrefix+'-'+name}} {{customClass}}" data-t="{{ tap:{en:'onClick',et:'stop'} }}" style="{{style}}">
+    <a bind:_init="_tic" customClass="t-icon__info" dot="{{dot}}" info="{{info}}" wx:if="{{info!=null||dot}}"></a>
+    <image class="t-icon__image tee-image" lazyLoad="true" src="{{name}}" wx:if="{{isImage}}"></image>
+</view>

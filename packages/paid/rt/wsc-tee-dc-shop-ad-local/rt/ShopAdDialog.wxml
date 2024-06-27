@@ -1,0 +1,18 @@
+<view wx:if="{{adImage||isSwipe||isSlide}}">
+    <b bind:_init="_tic" bind:click-overlay="_p" class="c6a39a" closeOnClickOverlay="{{true}}" customStyle="background: transparent;overflow-y: unset;" data-t="{{ clickOverlay:{en:'closeAdPop'} }}" zIndex="170" wx:if="{{showAdPop}}">
+        <view class="c5add9" style="{{swipeWarpStyle}}">
+            <view catch:tap="_p" class="{{'c9a6c0'}} {{isSlide?'c0ff83':''}}" data-t="{{ tap:{en:'closeAdPop',et:'stop'} }}"></view>
+            <block wx:if="{{!(isSwipe||isSlide)}}">
+                <a adImage="{{adImage}}" bind:_init="_tic" bind:handleClickAdPop="_p" data-t="{{ handleClickAdPop:{en:'handleClickAdPop'} }}" hotAreas="{{singleImageHotAreas}}" im="{{im}}" imageStyle="{{imageStyle}}" isImLink="{{isImLink}}" rmId="{{rmId}}" wx:if="{{rmId==='b21-18'}}"></a>
+            </block>
+            <swiper autoplay="{{autoPlay}}" bind:change="_p" circular="{{true}}" class="swipe-box" data-t="{{ change:{en:'handleSwiperChange'} }}" displayMultipleItems="{{isSkyline&&isSlide?1.346:1}}" indicatorDots="{{isSwipe}}" interval="{{swipeTime}}" nextMargin="{{showNextMargin}}" pid="{{vanSwiperKey}}" previousMargin="{{showPreviousMargin}}" style="{{swipeWarpStyle}}" wx:else>
+                <swiper-item pid="{{vanSwiperKey+index}}" wx:for="{{swipeResource}}" wx:key="index">
+                    <a adImage="{{item.image_url}}" bind:_init="_tic" bind:handleClickAdPop="_p" data-t="{{ handleClickAdPop:{en:'handleClickAdPop'} }}" hotAreas="{{item.hotAreas}}" im="{{im}}" imageStyle="{{imageStyle}}" isImLink="{{item.link_type==='chat'}}" isSkyline="{{isSkyline}}" isSlide="{{isSlide}}" linkInfo="{{item}}" rmId="{{rmId}}" wx:if="{{rmId==='b21-18'}}"></a>
+                </swiper-item>
+            </swiper>
+            <view class="{{'e9c6c'}} {{isSkyline?'f5ddf':''}}" wx:if="{{isSlide}}">
+                <view class="{{swipeIndex===index?'c6476':'c69eb7'}}" wx:for="{{swipeResource}}" wx:key="index"></view>
+            </view>
+        </view>
+    </b>
+</view>

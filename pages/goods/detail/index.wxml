@@ -1,0 +1,125 @@
+<view bind:tap="_p" data-t="{{ tap:{en:'_tprc'} }}" style="{{_pageStyleStr}}">
+    <view style="{{_pageStyle}}">
+        <bz bind:_init="_tic" rmId="@ext-tee-wsc-goods/timeline-block~ff66b632" wx:if="{{showTimeline&&RM&&RM['@ext-tee-wsc-goods/timeline-block~ff66b632']}}"></bz>
+        <view wx:else>
+            <view class="r-c">
+                <view class="r-c">
+                    <c bind:_init="_tic" nr="true" rmId="b7-36" wx:if="{{RM&&RM['b7-36']}}"></c>
+                    <d bind:_init="_tic" nr="true" rmId="b7-50" wx:if="{{_normal&&RM&&RM['b7-50']}}"></d>
+                    <e bind:_init="_tic" nr="true" rmId="b7-2" wx:if="{{RM&&RM['b7-2']}}"></e>
+                </view>
+            </view>
+            <view class="r-c XDizrO">
+                <view class="r-c">
+                    <f bind:_init="_tic" nr="true" rmId="b7-19" wx:if="{{_normal&&RM&&RM['b7-19']}}"></f>
+                </view>
+                <view class="r-c">
+                    <g bind:_init="_tic" nr="true" rmId="b7-18" wx:if="{{_normal&&RM&&RM['b7-18']}}"></g>
+                </view>
+                <view class="r-c">
+                    <h bind:_init="_tic" nr="true" rmId="b7-4" wx:if="{{RM&&RM['b7-4']}}"></h>
+                </view>
+                <view class="r-c">
+                    <i bind:_init="_tic" nr="true" rmId="b7-51" wx:if="{{RM&&RM['b7-51']}}"></i>
+                </view>
+                <view class="r-c">
+                    <j bind:_init="_tic" nr="true" rmId="b7-26" wx:if="{{_normal&&RM&&RM['b7-26']}}"></j>
+                </view>
+                <view class="r-c">
+                    <k bind:_init="_tic" nr="true" rmId="b7-54" wx:if="{{_normal&&RM&&RM['b7-54']}}"></k>
+                </view>
+                <view class="r-c">
+                    <l bind:_init="_tic" nr="true" rmId="b7-40" wx:if="{{_normal&&RM&&RM['b7-40']}}"></l>
+                </view>
+                <view class="r-c">
+                    <m bind:_init="_tic" nr="true" rmId="b7-55" wx:if="{{RM&&RM['b7-55']}}"></m>
+                </view>
+                <view class="r-c">
+                    <n bind:_init="_tic" nr="true" rmId="b7-15" wx:if="{{_normal&&RM&&RM['b7-15']}}"></n>
+                </view>
+                <view class="r-c">
+                    <o bind:_init="_tic" nr="true" rmId="b7-52" wx:if="{{RM&&RM['b7-52']}}"></o>
+                </view>
+                <view class="r-c">
+                    <p bind:_init="_tic" nr="true" rmId="b7-53" wx:if="{{_normal&&RM&&RM['b7-53']}}"></p>
+                </view>
+                <view class="r-c">
+                    <q bind:_init="_tic" nr="true" rmId="b7-48" wx:if="{{_normal&&RM&&RM['b7-48']}}"></q>
+                </view>
+                <view class="r-c">
+                    <r bind:_init="_tic" nr="true" rmId="b7-16" wx:if="{{_normal&&RM&&RM['b7-16']}}"></r>
+                </view>
+                <view class="r-c">
+                    <s bind:_init="_tic" nr="true" rmId="b7-17" wx:if="{{_normal&&RM&&RM['b7-17']}}"></s>
+                </view>
+                <view class="r-c">
+                    <t bind:_init="_tic" nr="true" rmId="b7-47" wx:if="{{_normal&&RM&&RM['b7-47']}}"></t>
+                </view>
+                <view class="r-c">
+                    <u bind:_init="_tic" nr="true" rmId="b7-21" wx:if="{{_normal&&RM&&RM['b7-21']}}"></u>
+                </view>
+                <view class="r-c">
+                    <v bind:_init="_tic" nr="true" rmId="b7-7" wx:if="{{_normal&&RM&&RM['b7-7']}}"></v>
+                </view>
+                <view class="r-c"></view>
+                <view class="r-c">
+                    <w bind:_init="_tic" nr="true" rmId="b7-38" wx:if="{{_normal&&RM&&RM['b7-38']}}"></w>
+                </view>
+                <view class="r-c">
+                    <x bind:_init="_tic" nr="true" rmId="b7-8" wx:if="{{_normal&&RM&&RM['b7-8']}}"></x>
+                </view>
+                <view class="r-c">
+                    <y bind:_init="_tic" nr="true" rmId="b7-9" wx:if="{{_normal&&RM&&RM['b7-9']}}"></y>
+                </view>
+                <view class="r-c">
+                    <z bind:_init="_tic" nr="true" rmId="b7-32" style="margin-top: var(--theme-page-ext-margin-top, 8px);display: block;" wrapperType="{{true}}" wx:if="{{_normal&&RM&&RM['b7-32']}}"></z>
+                </view>
+                <view class="r-c">
+                    <ba bind:_init="_tic" nr="true" rmId="b7-14" wx:if="{{_normal&&RM&&RM['b7-14']}}"></ba>
+                </view>
+                <view class="r-c">
+                    <bb bind:_init="_tic" nr="true" rmId="b7-10" wx:if="{{RM&&RM['b7-10']}}"></bb>
+                </view>
+                <view class="r-c">
+                    <bc bind:_init="_tic" nr="true" rmId="b7-12" wx:if="{{_normal&&RM&&RM['b7-12']}}"></bc>
+                </view>
+                <view class="r-c">
+                    <bd bind:_init="_tic" nr="true" rmId="b7-60" wx:if="{{_normal&&RM&&RM['b7-60']}}"></bd>
+                </view>
+            </view>
+            <view class="r-c">
+                <view class="r-c">
+                    <be bind:_init="_tic" nr="true" rmId="b7-43" wx:if="{{_normal&&RM&&RM['b7-43']}}"></be>
+                    <bf bind:_init="_tic" nr="true" rmId="b7-13" wx:if="{{_normal&&RM&&RM['b7-13']}}"></bf>
+                    <bg bind:_init="_tic" nr="true" rmId="b7-23" wx:if="{{_normal&&RM&&RM['b7-23']}}"></bg>
+                    <bh bind:_init="_tic" nr="true" rmId="b7-46" wx:if="{{RM&&RM['b7-46']}}"></bh>
+                    <bi bind:_init="_tic" nr="true" rmId="b7-5" wx:if="{{RM&&RM['b7-5']}}"></bi>
+                    <bj bind:_init="_tic" nr="true" rmId="b7-49" sst="{{2}}" wx:if="{{RM&&RM['b7-49']}}"></bj>
+                    <bk bind:_init="_tic" nr="true" rmId="b7-45" wx:if="{{_normal&&RM&&RM['b7-45']}}"></bk>
+                    <bl bind:_init="_tic" getShareOpportunity="goodsData" guideBindSourceType="{{21}}" needBindRelation="{{false}}" nr="true" rmId="b7-6" scenes="goods" wx:if="{{_normal&&RM&&RM['b7-6']}}"></bl>
+                    <bm bind:_init="_tic" nr="true" rmId="b7-25" wx:if="{{_normal&&RM&&RM['b7-25']}}"></bm>
+                    <bn bind:_init="_tic" hideProtocol="{{1}}" nr="true" rmId="b7-39" wx:if="{{_normal&&RM&&RM['b7-39']}}"></bn>
+                    <bo bind:_init="_tic" nr="true" rmId="b7-57" wx:if="{{_post&&RM&&RM['b7-57']}}"></bo>
+                    <bp bind:_init="_tic" nr="true" rmId="b7-61" wx:if="{{_normal&&RM&&RM['b7-61']}}"></bp>
+                    <bq bind:_init="_tic" nr="true" rmId="b7-0" wx:if="{{RM&&RM['b7-0']}}"></bq>
+                    <br bind:_init="_tic" nr="true" rmId="b7-63" wx:if="{{_normal&&RM&&RM['b7-63']}}"></br>
+                    <bs bind:_init="_tic" nr="true" rmId="b7-67" wx:if="{{_normal&&RM&&RM['b7-67']}}"></bs>
+                    <bt bind:_init="_tic" nr="true" rmId="b7-42" wx:if="{{_normal&&RM&&RM['b7-42']}}"></bt>
+                    <bu bind:_init="_tic" nr="true" rmId="b7-66" wx:if="{{_normal&&RM&&RM['b7-66']}}"></bu>
+                    <bv bind:_init="_tic" nr="true" rmId="b7-65" wx:if="{{_normal&&RM&&RM['b7-65']}}"></bv>
+                    <bw bind:_init="_tic" nr="true" rmId="b7-68" wx:if="{{_normal&&RM&&RM['b7-68']}}"></bw>
+                    <bx bind:_init="_tic" nr="true" rmId="b7-64" wx:if="{{_normal&&RM&&RM['b7-64']}}"></bx>
+                </view>
+            </view>
+            <view class="r-c jnmKko">
+                <by bind:_init="_tic" nr="true" rmId="@wsc-tee-common/app-content-append~VAtrAMhi" wx:if="{{_normal&&RM&&RM['@wsc-tee-common/app-content-append~VAtrAMhi']}}"></by>
+            </view>
+            <ca bind:_init="_tic" data-ref="van-toast" isPageDefault="{{true}}"></ca>
+            <cb bind:_init="_tic" data-ref="van-dialog" isPageDefault="{{true}}"></cb>
+            <ca bind:_init="_tic" data-ref="van-toast" isPageDefault="{{true}}"></ca>
+            <cb bind:_init="_tic" data-ref="van-dialog" isPageDefault="{{true}}"></cb>
+            <a bind:_init="_tic" id="van-toast"></a>
+            <b bind:_init="_tic" id="van-dialog"></b>
+        </view>
+    </view>
+</view>

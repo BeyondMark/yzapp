@@ -1,0 +1,33 @@
+.tee-image {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.showcase-popup__header {
+  line-height: 24px;
+  font-size: 16px;
+  margin: 12px;
+  font-weight: 500;
+  text-align: center;
+}
+.showcase-popup__close {
+  position: absolute;
+  top: 13px;
+  right: 12px;
+}
+.showcase-popup__empty-img {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 16px auto;
+}
+.showcase-popup__empty-text {
+  margin: 0 auto 62px;
+  text-align: center;
+  font-size: 14px;
+  color: #969799;
+}
+.showcase-popup__scroll--view {
+  max-height: calc(100vh - 148px - env(safe-area-inset-bottom, 34px));
+  overflow-y: auto;
+}

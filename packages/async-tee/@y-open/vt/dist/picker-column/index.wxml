@@ -1,0 +1,5 @@
+<view bind:touchcancel="_p" bind:touchend="_p" bind:touchmove="_p" bind:touchstart="_p" class="t-picker-column {{customClass}}" data-t="{{ touchstart:{en:'onTouchStart'},touchmove:{en:'onTouchMove'},touchend:{en:'onTouchEnd'},touchcancel:{en:'onTouchEnd'} }}">
+    <view style="{{styles.root}}">
+        <view bind:tap="_p" class="t-ellipsis t-picker-column__item {{option.class}}" data-t="{{ tap:{ en:'onClickItem',args:[index] } }}" style="height:{{itemHeight+'px'}}" wx:for="{{renderOptions}}" wx:for-item="option" wx:key="index">{{option.text}}</view>
+    </view>
+</view>

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "分享有礼",
+  "usingComponents": {
+    "a": "./components/share-card/index",
+    "b": "/components/znb-web-view/index",
+    "c": "../../async-main/components/account/inject-protocol/index",
+    "_": "../../../components/_/index"
+  },
+  "componentPlaceholder": { "c": "_" }
+}

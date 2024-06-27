@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./ProtocolContent",
+    "b": "/packages/async-main/@y/ppp/lib/view/tee/protocol",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_" }
+}

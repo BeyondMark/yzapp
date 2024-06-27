@@ -1,0 +1,30 @@
+.bd231 {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.c22c99 {
+  position: relative;
+  flex: 0 0 96px;
+  width: 96px;
+  height: 96px;
+  margin: var(--theme-goods-sku-normal-margin, 12px) 8px
+    var(--theme-goods-sku-normal-margin, 12px) 0;
+  overflow: hidden;
+  border-radius: var(--theme-radius-card, 4px);
+}
+.d29e0 {
+  width: 100%;
+  height: 100%;
+}
+.c89933 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url(https://img01.yzcdn.cn/upload_files/2023/08/30/FhKRjPPKA8J47nalgaaAzgkpXPy6.png!small.png)
+    no-repeat 50%;
+  background-size: 18px 18px;
+  width: 18px;
+  height: 18px;
+  z-index: 3;
+}

@@ -1,0 +1,102 @@
+.coupon-box {
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica,
+    Segoe UI, Arial, Roboto, PingFang SC, Hiragino Sans GB, Microsoft Yahei,
+    sans-serif;
+  position: relative;
+}
+.coupon-box__disabled {
+  color: #969799;
+}
+.coupon-box__unavailable {
+  color: #c8c9cc;
+}
+.coupon-box__box {
+  border-radius: 4px;
+  width: inherit;
+  margin-bottom: 12px;
+  overflow: hidden;
+  font-size: 12px;
+  transition: height 0.2s linear;
+}
+.coupon-box__flat {
+  box-sizing: initial;
+  background-color: #fff6f6;
+  border: 1px solid #fec9c9;
+}
+.coupon-box__card {
+  background-color: #fff;
+  box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.06);
+}
+.coupon-box__section {
+  display: flex;
+  width: 100%;
+}
+.coupon-box__block {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.coupon-box__block:empty {
+  display: none;
+}
+.coupon-box__block-discount {
+  flex: none;
+  box-sizing: border-box;
+  width: 112px;
+  height: inherit;
+  padding: 16px 12px;
+  overflow: hidden;
+}
+.coupon-box__block-content {
+  flex: 1;
+  width: 0;
+  max-width: 100%;
+  padding: 22px 8px 16px;
+  padding-left: 0;
+  color: #323233;
+}
+.coupon-box__block-action {
+  flex: none;
+  min-width: 76px;
+  height: inherit;
+  box-sizing: border-box;
+}
+.coupon-box__block-des {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 12px;
+  padding: 8px 0;
+  border-top: 1px dashed #ebedf0;
+}
+.coupon-box__collapse {
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+  width: 100%;
+}
+.coupon-box__collapse-card {
+  background-color: #fff;
+  box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  position: relative;
+  bottom: -8px;
+  z-index: 2;
+  height: 10px;
+  margin: 0 7px;
+}
+.coupon-box__collapse-card + .coupon-box__collapse-card {
+  z-index: 1;
+  margin: -6px 14px 0;
+  box-shadow: unset;
+}
+.coupon-box__no-boxshadow {
+  box-shadow: unset;
+}
+.coupon-box__show-collapse {
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 4;
+}
+.coupon-box__collapse-2 .coupon-box__collapse-card {
+  bottom: -4px;
+}

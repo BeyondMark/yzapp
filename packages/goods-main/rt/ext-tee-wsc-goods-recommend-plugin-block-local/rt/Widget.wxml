@@ -1,0 +1,21 @@
+<view class="c1e04d" style="{{themeVars}}" wx:if="{{swipeDataList.length&&shopConfig.openRecommendForYou}}">
+    <a bind:_init="_tic" bind:tap="_p" border="{{false}}" class="c24e96" data-t="{{ tap:{en:'jumpLink'} }}" isLink="{{true}}" title="为你推荐" titleClass="dac61" value="查看全部" valueClass="c81c7c"></a>
+    <swiper autoplay="{{false}}" bind:_init="_tic" bind:change="_p" circular="{{false}}" current="0" data-t="{{ change:{en:'handleSwipeChange'} }}" displayMultipleItems="1" duration="500" indicatorActiveColor="#000000" indicatorColor="rgba(0, 0, 0, .3)" indicatorDots="{{false}}" interval="0" style="height:{{swipeHeight}}">
+        <swiper-item bind:_init="_tic" itemId="recommend-swipe" wx:for="{{swipeDataList}}" wx:for-item="pageList" wx:key="index">
+            <d _opt="{{layoutConfig}}" bind:_init="_tic">
+                <e _opt="{{layoutConfig}}" bind:_init="_tic" wx:for="{{pageList}}" wx:key="alias">
+                    <c _opt="{{item}}" bind:_init="_tic" bind:item-click="_p" data-t="{{ itemClick:{ en:'handleItemClick',args:[item] } }}" textClass="c43c56"></c>
+                </e>
+            </d>
+        </swiper-item>
+    </swiper>
+    <view class="c062b2" wx:if="{{swipeDataList.length>1}}">
+        <view class="ed229 {{current==index?'c76a5':''}}" wx:for="{{swipeDataList.length}}" wx:for-item="i" wx:key="index"></view>
+    </view>
+    <view bind:tap="_p" class="c3e301" data-t="{{ tap:{ en:'recommendClick',args:[top] } }}" hidden="{{!!!flag}}" style="{{toastDistance}}">
+        <view class="c3ea79">
+            <p bind:_init="_tic" class="c9b56c">更多超值商品</p>
+            <b bind:_init="_tic" customStyle="width: 9px; height: 10px; position: absolute; top: 8px; right: -8px" name="https://img01.yzcdn.cn/public_files/0a6ff5af092a8a711b6a6eb9845f8dc7.png!small.png"></b>
+        </view>
+    </view>
+</view>

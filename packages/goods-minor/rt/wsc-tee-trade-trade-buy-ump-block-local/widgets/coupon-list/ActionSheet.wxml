@@ -1,0 +1,14 @@
+<b bind:_init="_tic" bind:close="_p" class="c8fd74" customClass="c8fd74" customStyle="{{customStyle}}" data-t="{{ close:{en:'onClose'} }}" overlayStyle="{{overlayStyle}}" position="bottom" safeAreaInsetBottom="{{true}}" show="{{show}}" wx:if="{{initialShow}}">
+    <view class="c521bb">
+        <view class="c89585" wx:if="{{title}}">{{title}}</view>
+        <slot name="title" wx:else></slot>
+        <c bind:_init="_tic" bind:tap="_p" class="a2f92" data-t="{{ tap:{en:'onClose'} }}" name="cross" wx:if="{{showClose}}"></c>
+    </view>
+    <view class="{{'c8fd74__body'}} {{scroll?'c433f6':''}}">
+        <slot></slot>
+    </view>
+    <view class="ada19" wx:if="{{buttonText||useBottomSlot}}">
+        <slot name="bottom" wx:if="{{useBottomSlot}}"></slot>
+        <a bind:_init="_tic" bind:tap="_p" color="{{themeColors.general}}" customClass="c0f69c" data-t="{{ tap:{en:'onConfirm'} }}" round="{{true}}" size="large" type="danger" wx:else> {{buttonText}} </a>
+    </view>
+</b>

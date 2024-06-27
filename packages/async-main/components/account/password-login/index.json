@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../protocol-field/index",
+    "b": "../../../@vant/weapp/dist/field/index",
+    "c": "../../../@vant/weapp/dist/button/index",
+    "d": "../../../@vant/weapp/dist/dialog/index",
+    "_": "../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,12 @@
+.c90db6 {
+  margin-left: 9px;
+}
+.c9a601 {
+  flex: 0 0 auto;
+  position: relative;
+  width: 45px;
+  height: 45px;
+  margin-left: -12px;
+  margin-right: -6px;
+  background: 50% / contain no-repeat;
+}

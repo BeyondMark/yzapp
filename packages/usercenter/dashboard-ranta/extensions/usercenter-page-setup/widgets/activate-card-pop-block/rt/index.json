@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@vant/weapp/dist/popup/index",
+    "b": "../../../../../../@vant/weapp/dist/button/index",
+    "c": "../../../../../../@vant/weapp/dist/image/index",
+    "d": "/components/account/user-authorize/index",
+    "_": "../../../../../../../../components/_/index"
+  }
+}

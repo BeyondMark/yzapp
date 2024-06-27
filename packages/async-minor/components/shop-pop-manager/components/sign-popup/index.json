@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../account/simple-popup/index",
+    "b": "/packages/async-main/common/components/form-view/index",
+    "c": "/packages/async-main/components/account/wx-login/index",
+    "_": "../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_", "c": "_" }
+}

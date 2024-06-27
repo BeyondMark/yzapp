@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../rt/Presale",
+    "b": "./Empty",
+    "c": "./Good",
+    "d": "./../../../assets-tee-extensions-guarantee-freight-bar-local/rt/GuaranteeFreightBar",
+    "e": "./../../components/PresentList",
+    "_": "../../../../../../components/_/index"
+  }
+}

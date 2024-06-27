@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/custom-tab-bar-v2/index",
+    "b": "./../../navigation-bar/rt/NavigationBar",
+    "c": "./../../showcase-container/rt/ShowcaseContainer",
+    "d": "./../../top-nav/rt/TopNav",
+    "e": "/packages/async-feature-ext/rt/wsc-tee-shop-footer-local/rt/Main",
+    "f": "./../../native-shop/rt/Main",
+    "_": "../../../../components/_/index"
+  },
+  "componentPlaceholder": { "e": "_" }
+}

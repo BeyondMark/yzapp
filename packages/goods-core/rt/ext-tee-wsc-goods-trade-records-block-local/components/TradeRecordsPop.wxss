@@ -1,0 +1,41 @@
+.scroll-locked {
+  overflow: hidden !important;
+}
+.c5fb55 .t-popup__close-icon {
+  position: absolute;
+  line-height: 20px;
+  font-size: 20px;
+}
+.c5fb55 .t-popup__close-icon--top-right {
+  top: 11px !important;
+}
+.e421c {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.c4fdff,
+.ac0b7 {
+  box-sizing: border-box;
+  width: 100%;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+.ac0b7 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  padding: 0 42px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #323233;
+  letter-spacing: 0;
+  text-align: center;
+}
+.ab5a1 {
+  overflow-y: scroll;
+  box-sizing: border-box;
+  width: 100%;
+  flex: 1;
+}

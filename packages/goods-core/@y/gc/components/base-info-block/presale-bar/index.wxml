@@ -1,0 +1,9 @@
+<a bind:_init="_tic" customClass="ba13f" wx:if="{{timeStr}}">
+    <view class="c28d8e" slot="title">
+        <view class="c28c30">
+            <view class="fab5a"></view>
+            <b bind:_init="_tic" customClass="c9c374" hairline="{{themeTag.plain}}" plain="{{themeTag.plain}}">预售</b>
+        </view>
+        <view class="c08b03 c89585"> {{timeStr}} </view>
+    </view>
+</a>

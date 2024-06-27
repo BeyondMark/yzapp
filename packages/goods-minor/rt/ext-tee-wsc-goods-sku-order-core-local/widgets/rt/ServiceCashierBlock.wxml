@@ -1,0 +1,3 @@
+<view class="c7c346">
+    <a amount="{{amount}}" bind:_init="_tic" bind:change="_p" bind:error="_p" bind:navigate="_p" bind:pay-success="_p" biz="sku_goods_buy" data-t="{{ change:{en:'onPayChange'},paySuccess:{en:'onPaySuccess'},error:{en:'onPayError'},navigate:{en:'onPayNavigate'} }}" excludePayChannels="{{skuExcludePayTools}}" externalChannelList="{{true}}" height="{{skuHeight}}" isCellMode="{{true}}" rmId="b7-44" themeColor="{{themeColors.general}}" traceId="{{goodsAlias}}" wx:if="{{rmId==='b7-42'}}"></a>
+</view>

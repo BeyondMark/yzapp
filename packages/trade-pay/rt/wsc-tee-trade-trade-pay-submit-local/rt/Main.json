@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../QueueUpTips",
+    "b": "/@y-open/vt/dist/button/index.weapp",
+    "c": "/packages/async-tee/@y-open/vt/dist/notice-bar/index",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "c": "_" }
+}

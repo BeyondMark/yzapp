@@ -1,0 +1,5 @@
+{
+  "navigationBarTitleText": "完善基本信息",
+  "navigationBarBackgroundColor": "#FFF",
+  "usingComponents": { "_": "../../../components/_/index" }
+}

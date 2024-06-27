@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "福利团购",
+  "navigationBarBackgroundColor": "#FFF",
+  "enablePullDownRefresh": true,
+  "componentPlaceholder": { "f": "_", "g": "_", "h": "_" }
+}

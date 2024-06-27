@@ -1,0 +1,30 @@
+.c8ecdc {
+  width: 100%;
+  height: inherit;
+}
+.e7f33 {
+  color: #323233;
+  text-align: inherit;
+}
+.c63dd2,
+.d359e {
+  width: inherit;
+  overflow: hidden;
+}
+.c63dd2 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.d359e {
+  margin-top: 12px;
+  word-break: break-all;
+}
+.ff688 {
+  display: none;
+}
+.c3edcf:empty + .ff688 {
+  display: block;
+}
+.e537f {
+  color: #323233 !important;
+}

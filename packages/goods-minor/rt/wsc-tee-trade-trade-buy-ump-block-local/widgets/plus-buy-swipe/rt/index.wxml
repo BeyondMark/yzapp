@@ -1,0 +1,12 @@
+<b bind:_init="_tic" bind:close="_p" catch:touchmove="_p" class="c08afa" customStyle="background-color: transparent" data-t="{{ close:{en:'close'},touchmove:{en:'true',et:'stop'} }}" show="{{show}}">
+    <view class="f4f02">
+        <c bind:_init="_tic" class="{{plusBuyGoodsList.length===1?'c52b53':''}}" customOffset="{{customOffset}}" customStyle="{{plusStyle}}" data-ref="swipe" height="{{boxHeight}}" indicatorClass="c161c" indicatorColor="#fff !important" indicatorsClass="c43e0a" loop="{{false}}" pid="plus-buy-swipe" width="{{276}}">
+            <a bind:_init="_tic" bind:close="_p" bind:update="_p" data-t="{{ update:{en:'changeSelected'},close:{en:'close'} }}" goodsData="{{item}}" rmId="{{rmId}}" selectSize="{{selectSize}}" wx:if="{{rmId==='b7-64'}}" wx:for="{{plusBuyGoodsList}}" wx:key="goodsId"></a>
+        </c>
+        <view bind:tap="_p" class="c67aca" data-t="{{ tap:{en:'handleSubmit'} }}">
+            <view class="c26fc9">
+                <view class="{{true?'be082':''}} {{buttonEnable?'a1031':''}}">{{buttonName}}</view>
+            </view>
+        </view>
+    </view>
+</b>

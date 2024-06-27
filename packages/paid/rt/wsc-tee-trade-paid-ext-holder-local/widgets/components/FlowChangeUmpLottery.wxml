@@ -1,0 +1,53 @@
+<view class="c45b1d">
+    <image bind:tap="_p" class="c32465 bd231" data-t="{{ tap:{en:'handleOpen'} }}" lazyLoad="true" src="{{lotteryImg}}" wx:if="{{lotteryImg}}"></image>
+    <b bind:_init="_tic" closeOnClickOverlay="{{true}}" customClass="c01c22" show="{{visible}}">
+        <view bind:tap="_p" class="c36b32" data-t="{{ tap:{en:'handleClose'} }}"></view>
+        <view class="c41683" wx:if="{{secKillAdContent}}">
+            <view class="c0e506">获得 [<view class="c1cb25 c89585">{{secKillAdContent.cooperateKdtName}}</view>] 的低价商品</view>
+            <view bind:tap="_p" class="c192d5" data-t="{{ tap:{en:'handleClick'} }}">
+                <image class="c78805 bd231" lazyLoad="true" src="{{secKillAdContent.picture}}"></image>
+                <view class="caf9b">
+                    <view class="d5d3d">{{secKillAdContent.goodsTitle}}</view>
+                    <view class="c78a5e c4c13">秒杀价 ¥
+            
+            <text bind:_init="_tic" class="e5642 c4c13" overflow="visible">
+                            <text bind:_init="_tic" class="c6fedc" overflow="visible">{{secKillAdContent.bigPrice}}</text>.{{secKillAdContent.centPrice}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="c0fc42" wx:elif="{{couponAdContent}}">
+            <view class="c0e506">获得 [<view class="c1cb25 c89585">{{couponAdContent.cooperateKdtName}}</view>] 的优惠券</view>
+            <view class="c0e005">
+                <view bind:tap="_p" class="d6e16" data-t="{{ tap:{en:'handleClick'} }}">
+                    <text bind:_init="_tic" class="c4758e c4c13" overflow="visible" style="{{couponFontSize}}">
+                        <text bind:_init="_tic" class="c3e34b" overflow="visible" wx:if="{{couponAdContent.isShowMax}}">最高</text>{{couponAdContent.couponQuota}}<text bind:_init="_tic" class="c3e34b" overflow="visible" wx:if="{{couponAdContent.isShowUnit}}">元</text>
+                        <text bind:_init="_tic" class="c3e34b" overflow="visible" wx:if="{{couponAdContent.isShowDiscount}}">折</text>
+                    </text>
+                    <view class="ba2aa">
+                        <view class="c2d783 c89585">{{couponAdContent.preferentialCopyWriting}}</view>
+                        <view class="e78f8 c89585">距到期仅剩 3 天</view>
+                    </view>
+                </view>
+                <view class="c8d249">
+                    <view class="cff53"></view>
+                    <view class="f7e3f c89585">购买以下商品可用</view>
+                    <view class="cff53"></view>
+                </view>
+                <view bind:tap="_p" class="d0ebd" data-t="{{ tap:{en:'handleClick'} }}">
+                    <view class="c59da8" wx:for="{{availableGoods}}" wx:key="alias">
+                        <image class="f0126 bd231" lazyLoad="true" src="{{item.logo}}"></image>
+                        <view class="f65a3">
+                            <view class="c5f0b6 c4c13">¥
+                
+                <text bind:_init="_tic" class="e5642 c4c13" overflow="visible">
+                                    <text bind:_init="_tic" class="c6fedc" overflow="visible">{{item.bigPrice}}</text>.{{item.centPrice}}</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <a bind:_init="_tic" bind:tap="_p" customClass="c74308" data-t="{{ tap:{en:'handleClick'} }}" round="{{true}}" size="small"></a>
+    </b>
+</view>

@@ -1,0 +1,1 @@
+<a bind:close="handleSkuClose" featureSkuData="{{skuData}}" themeClass="{{themeClass}}" wx:if="{{skuData}}"></a>

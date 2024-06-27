@@ -1,0 +1,12 @@
+.d5a4c {
+  padding: var(--theme-page-cell-padding-top, 10px)
+    var(--theme-page-cell-padding-right, 12px)
+    var(--theme-page-cell-padding-bottom, 10px)
+    var(--theme-page-cell-padding-left, 12px) !important;
+}
+.delivery-time__theme {
+  color: var(--error, #ee0a24) !important;
+}
+.delivery-time__theme--general {
+  color: var(--general, #ee0a24) !important;
+}

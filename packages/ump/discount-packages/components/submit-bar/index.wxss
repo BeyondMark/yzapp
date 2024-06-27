@@ -1,0 +1,69 @@
+@import "/common/css/helper/index.wxss";
+.submit-bar {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background: #fff;
+  z-index: 10;
+}
+.btn-class {
+  flex: 1;
+}
+.submit-bar-view--disable {
+  opacity: 0.5;
+}
+.submit-bar__btn {
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  font-size: 14px;
+  color: #fff;
+  background: #f60;
+}
+.submit-bar__desc {
+  display: inline-block;
+  position: absolute;
+  right: 200rpx;
+  text-align: right;
+}
+.submit-bar__package-price {
+  display: block;
+  height: 14px;
+  line-height: 14px;
+  color: #f60;
+  margin-top: 7px;
+}
+.submit-bar__save {
+  display: block;
+  height: 14px;
+  line-height: 14px;
+  margin-top: -5px;
+  color: #999;
+}
+.price-section {
+  padding: 0 7px;
+  width: 165px;
+  background: #fff;
+  text-align: right;
+  line-height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.package-price {
+  font-size: 14px;
+  color: #323233;
+}
+.package-price .price {
+  color: #f44;
+}
+.save-price {
+  font-size: 12px;
+  color: #969799;
+}
+.package-price__label {
+  color: #323233;
+}

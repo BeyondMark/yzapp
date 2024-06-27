@@ -1,0 +1,29 @@
+<view bind:tap="_p" class="c17ff3" data-t="{{ tap:{en:'handleClick'} }}">
+    <view class="c4ee55">
+        <b bind:_init="_tic" bind:change="_p" data-ref="countDown" data-t="{{ change:{en:'handleTimeChange'} }}" format="mm:ss:SSS" millisecond="{{true}}" time="{{baseTimestamp}}" useSlot="{{true}}">
+            <view class="c08df6">
+                <view class="c447b7 c89585">{{countdownMinute}}</view>
+                <view class="e7dfa c89585">:</view>
+                <view class="c447b7 c89585">{{countdownSecond}}</view>
+                <view class="e7dfa c89585">.</view>
+                <view class="c447b7 c89585">{{countdownMillisecond}}</view>
+            </view>
+        </b>
+        <view class="c89585">后结束</view>
+    </view>
+    <view class="bf823">
+        <image class="f0126 bd231" lazyLoad="true" src="{{originData.picture}}"></image>
+        <view class="c92a43">
+            <text bind:_init="_tic" class="c9dcaa" overflow="visible">{{originData.goodsTitle}}</text>
+            <view class="ee535">来自 [{{originData.cooperateKdtName}}] 的商品</view>
+            <view class="c40367">
+                <text bind:_init="_tic" class="c78a5e" overflow="visible">
+                    <text bind:_init="_tic" overflow="visible">秒杀价 ¥</text>
+                    <text bind:_init="_tic" class="c6fedc e5642" overflow="visible">{{originData.bigPrice}}</text>
+                    <text bind:_init="_tic" class="e5642" overflow="visible">.{{originData.centPrice}}</text>
+                </text>
+                <a bind:_init="_tic" customClass="ce50a" round="{{true}}" size="mini" type="danger">立即参与</a>
+            </view>
+        </view>
+    </view>
+</view>

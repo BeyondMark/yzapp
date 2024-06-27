@@ -1,0 +1,4 @@
+<view bind:tap="_p" class="de5bf" data-t="{{ tap:{en:'onClick'} }}" wx:if="{{show}}">
+    <b bind:_init="_tic" navigateTo="{{navigateTo}}" paidPromotion="{{paidPromotion}}" wx:if="{{isActivityQrCode}}"></b>
+    <a bind:_init="_tic" isWxReceipt="{{isWxReceipt}}" navigateTo="{{navigateTo}}" orderNo="{{orderNo}}" paidPromotion="{{paidPromotion}}" wx:else></a>
+</view>

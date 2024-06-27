@@ -1,0 +1,7 @@
+<view class="c8b3fb">
+    <view> {{countDownText}} </view>
+    <view class="b2d6d">
+        <a bind:_init="_tic" class="d8cd8" color="#fff" percentage="{{percentage}}" showPivot="{{false}}" trackColor="rgba(0,0,0, 0.15)"></a>
+        <view class="c89585">仅剩{{remainNum}}件</view>
+    </view>
+</view>

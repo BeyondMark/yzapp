@@ -1,0 +1,34 @@
+<import src="../common/list.wxml"></import>
+<page-container class="{{themeClass}} page-{{deviceType}}" forbidCopyright="{{true}}">
+    <view class="multi-store__choose-shop {{activeTab==='location'?'location-type':''}}">
+        <view class="choose-shop__header">
+            <view>
+                <image src="{{shop.logo}}"></image>
+            </view>
+            <view class="van-font-12 van-c-gray-darker">{{shop.shop_name}}</view>
+        </view>
+        <view class="choose-shop__action-bar zan-panel">
+            <view class="van-c-gray">请选择要进入的店：</view>
+            <view class="choose-shop__tabs">
+                <view bindtap="chooseDefaultShop" class="choose-shop__tab {{activeTab==='default'?'active':''}}" wx:if="{{tabOrder==='default'}}">默认</view>
+                <view bindtap="chooseCloseShop" class="choose-shop__tab {{activeTab==='location'?'active':''}}">我附近的店</view>
+                <view bindtap="chooseDefaultShop" class="choose-shop__tab {{activeTab==='default'?'active':''}}" wx:if="{{tabOrder==='location'}}">默认</view>
+                <navigator class="choose-shop__tab" url="/packages/shop/multi-store/search/index?title=按名称、地址搜索门店">
+                    <icon color="#999" size="14" type="search"></icon>
+                </navigator>
+            </view>
+        </view>
+        <area-filter alphaStoresData="{{alphaStoresData}}" bindareafiltered="handleAreaFiltered" cityList="{{alphaGroupCityStores}}" filterLevel="{{areaFilterLevel}}" wx:if="{{areaFilterLevel&&activeTab!=='location'}}"></area-filter>
+        <view class="zan-cell choose-shop__send-address" wx:if="{{activeTab==='location'&&queryAddress}}">
+            <view class="zan-cell__bd">
+                <view class="zan-cell__text text-nowrap-clip" style="width: 54px">配送至：</view>
+                <view bindtap="navToSearchPage" class="zan-cell__text" style="flex: 1">{{queryAddress}}</view>
+            </view>
+            <view class="zan-cell__ft"></view>
+        </view>
+        <template is="shop-or-location-list" data="{{list:list,isAddress:false,loading:loading,nomore:nomore,onToLower:onToLower,scrollPosition:scrollPosition,navigateBack:navigateBack,copyright:copyright,is_big_shop:is_big_shop}}"></template>
+    </view>
+</page-container>
+<van-toast id="van-toast"></van-toast>
+<import src="../../pages/common/wsc-page/index.wxml"></import>
+<template is="wsc-page" data="{{wscpage:wscpage}}"></template>

@@ -1,0 +1,30 @@
+.err-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 140px;
+  color: #fff;
+}
+.err-info__title {
+  font-family: PingFangSC-Semibold;
+  font-size: 24px;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(214, 75, 0, 0.5);
+  line-height: 33px;
+}
+.err-info__desc {
+  margin-top: 6px;
+  font-size: 12px;
+}
+.err-info__btn {
+  margin: 16px 0 auto;
+  width: 180px;
+  height: 40px;
+  line-height: 40px;
+  background: #fff;
+  border-radius: 22px;
+  font-family: PingFangSC-Medium;
+  font-size: 16px;
+  color: #fa1919;
+}

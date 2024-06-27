@@ -1,0 +1,3 @@
+<view class="collect-tip {{isRetailShop?'collect-tip--retail':''}} {{isShowTip?'':'collect-tip--hide'}}" style="top: {{top}}px">
+    <view class="collect-tip__line">点击“<a customClass="share-icon" name="icon-collect-gift-share-icon"></a>”添加到我的小程序{{isRetailShop?'':'，微信首页下拉即可快速访问店铺'}}</view>
+</view>

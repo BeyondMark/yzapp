@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/ext-tee-passport/extensions/user-authorize/widgets/rt/Main",
+    "b": "./../../wsc-tee-trade-trade-buy-ump-block-local/widgets/postagetool-tip/rt/index",
+    "c": "/@y-open/vt/dist/button/index.weapp",
+    "d": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "e": "/packages/async-tee/@y-open/vt/dist/notice-bar/index",
+    "f": "./../components/SubmitButton",
+    "g": "./../components/SubmitContent",
+    "_": "../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "d": "_", "e": "_" }
+}

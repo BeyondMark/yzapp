@@ -1,0 +1,15 @@
+<navigator class="custom-class" hoverClass="none" shortLink="{{shortLink}}" style="{{customStyle}}" target="miniProgram" wx:if="{{linkType==='otherWeapp'&&useShortLink===1}}">
+    <slot></slot>
+</navigator>
+<navigator appId="{{appId}}" class="custom-class" hoverClass="none" path="{{path}}" style="{{customStyle}}" target="miniProgram" wx:elif="{{linkType==='otherWeapp'&&!useShortLink}}">
+    <slot></slot>
+</navigator>
+<button bind:contact="handleContactBack" businessId="{{im.businessId||''}}" class="btn custom-class" openType="contact" sessionFrom="{{im.sourceParam||''}}" style="{{customStyle}}" wx:elif="{{linkType==='chat'}}">
+    <slot></slot>
+</button>
+<button bind:contact="handleContactBack" class="btn custom-class" openType="share" style="{{customStyle}}" wx:elif="{{linkType==='share'}}">
+    <slot></slot>
+</button>
+<view bind:tap="handleTap" class="custom-class" style="{{customStyle}}" wx:else>
+    <slot></slot>
+</view>

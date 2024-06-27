@@ -1,0 +1,10 @@
+<view class="e2dec" wx:if="{{isAddressFixed}}">
+    <block wx:if="{{isPhysical}}">
+        <b bind:_init="_tic" bind:cell-click="_p" data-t="{{ cellClick:{en:'onAddressCellClick'} }}" isAddressFixed="{{isAddressFixed}}" item="{{selectAddress}}" wx:if="{{isShowAddressCell}}"></b>
+        <c bind:_init="_tic" bind:cell-click="_p" data-t="{{ cellClick:{en:'onAddressCellClick'} }}" isAddressFixed="{{isAddressFixed}}" selfFetchShop="{{selfFetchShop}}" themeTag="{{themeTag}}" wx:if="{{isShowSelfFetch}}"></c>
+    </block>
+    <block wx:elif="{{isVirtualTicket}}">
+        <a bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b7-42'}}"></a>
+    </block>
+</view>
+<view wx:else></view>

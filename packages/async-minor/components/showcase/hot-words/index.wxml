@@ -1,0 +1,3 @@
+<view wx:if="{{show&&typeReady}}">
+    <a bind:search="handleSearch" config="{{componentData}}" hot="{{hot}}" hotStyle="{{hotStyle}}" isSingle="{{isSingle}}" needOpacity="{{needOpacity}}" normal="{{normal}}"></a>
+</view>

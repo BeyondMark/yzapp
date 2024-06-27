@@ -1,0 +1,25 @@
+<a class="gift-goods" wx:if="{{!isFetching}}">
+    <block wx:if="{{goodsList.length}}">
+        <view class="gift-goods__banner-wrapper">
+            <image class="gift-goods__banner" mode="widthFix" src="{{bannerImg}}"></image>
+        </view>
+        <view class="gift-goods__list van-clearfix">
+            <view class="goods-item {{!item.stock?'goods-item--soldout':''}} {{!item.available?'goods-item--end':''}}" wx:for="{{goodsList}}" wx:key="{{ key }}">
+                <view bindtap="handleGoodsClick" class="goods-item__wrapper" data-alias="{{item.alias}}" data-available="{{item.available}}">
+                    <view class="goods-item__image-wrap">
+                        <image class="goods-item__image" mode="aspectFit" src="{{item.imgUrl}}"></image>
+                        <view class="goods-item__image-mask"></view>
+                    </view>
+                    <view class="goods-item__title van-multi-ellipsis--l2 van-font-12 van-c-black">{{item.title}}</view>
+                    <view class="goods-item__price van-font-12">￥<text class="van-font-16">{{item.price}}</text>
+                    </view>
+                    <view bindtap="handleGoodsClick" class="goods-item__buy-icon icon-gift" data-alias="{{item.alias}}" data-available="{{item.available}}"></view>
+                </view>
+            </view>
+        </view>
+    </block>
+    <view class="gift-goods--empty" wx:else>
+        <view class="gift-goods--empty__icon"></view>
+        <view class="gift-goods--empty__desc van-c-black van-font-14">暂无商品</view>
+    </view>
+</a>

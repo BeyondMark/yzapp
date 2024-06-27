@@ -1,0 +1,3 @@
+<a bind:attached="onTabPageAttached" id="usercenter"></a>
+<c id="van-toast"></c>
+<d id="van-notify"></d>

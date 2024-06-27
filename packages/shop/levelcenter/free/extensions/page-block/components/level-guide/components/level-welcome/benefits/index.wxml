@@ -1,0 +1,8 @@
+<view class="popup-benefit-list" wx:if="{{renderBenefits.length>0}}">
+    <view class="benefit-item" wx:for="{{renderBenefits}}" wx:key="appName">
+        <view class="benefit-item__icon" style="background: url({{item.icon}}) no-repeat center/contain" wx:if="{{item.icon}}"></view>
+        <view class="benefit-item__num" wx:if="{{item.benefitCount}}">{{item.benefitCount}}<text class="unit">项</text>
+        </view>
+        <view class="benefit-item__name">{{item.facadeShowName||item.appName||item.pluginName}}</view>
+    </view>
+</view>

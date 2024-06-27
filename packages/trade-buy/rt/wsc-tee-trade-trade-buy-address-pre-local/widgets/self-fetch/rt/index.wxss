@@ -1,0 +1,65 @@
+.d5a4c {
+  padding: var(--theme-page-cell-padding-top, 10px)
+    var(--theme-page-cell-padding-right, 12px)
+    var(--theme-page-cell-padding-bottom, 10px)
+    var(--theme-page-cell-padding-left, 12px) !important;
+}
+.c13e75 {
+  display: flex;
+}
+.c51c1d {
+  flex: 1;
+  overflow: hidden;
+}
+.c1311e {
+  flex: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.c13e75 .afeb9 {
+  color: #999;
+}
+.afeb9 {
+  font-size: 13px;
+  color: #323233;
+}
+.c80b3f {
+  margin-right: 8px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.c80b3f:after {
+  border-radius: var(--theme-radius-tag, 8px) !important;
+}
+.c840aa {
+  font-size: 18px;
+  color: #323233;
+  font-weight: var(--theme-common-field-font-weight, bold);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+.c66512 {
+  margin-left: 8px;
+}
+.b50f0 {
+  font-weight: var(--theme-common-field-font-weight, bold) !important;
+  color: #323233 !important;
+}
+.self-fetch__fetch-time {
+  font-weight: var(--theme-common-field-font-weight, 500);
+  color: #333 !important;
+}
+.self-fetch__fetch-time--general {
+  font-weight: var(--theme-common-field-font-weight, 500);
+  color: var(--general, #ee0a24) !important;
+}
+.bde46 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.t-tree-select__nitem--active:after {
+  background-color: var(--icon, #323233) !important;
+}

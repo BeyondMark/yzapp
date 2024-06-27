@@ -1,0 +1,37 @@
+<view class="{{classnames.container}}">
+    <block wx:if="{{info&&active}}">
+        <view class="{{classnames.main}}">
+            <i bind:_init="_tic" text="{{info.cashierNotice}}" wx:if="{{info.cashierNotice}}"></i>
+            <view class="{{classnames.info}}">
+                <view class="{{classnames.mchName}}">{{info.mchName}}</view>
+                <view class="{{classnames.amount}}">{{info.payAmountString}}</view>
+                <view class="{{classnames.active}}">
+                    <view class="t-text">支付方式</view>
+                    <view bind:tap="_p" class="{{classnames.showAll}}" data-t="{{ tap:{ en:'$emit',args:['show-all'] } }}">
+                        <view class="{{classnames.activeText}}">
+                            <c bind:_init="_tic" channel="{{active}}" instalment="{{instalment}}"></c>
+                            <view class="{{classnames.activeTip}}" wx:if="{{!active.hideMoreChannelTip}}">                点击切换更多支付方式
+              </view>
+                        </view>
+                        <a bind:_init="_tic" customClass="{{classnames.moreIcon}}" name="arrow" size="16"></a>
+                    </view>
+                </view>
+                <block wx:if="{{showRecommend}}">
+                    <f bind:_init="_tic" bind:tap="_p" channel="{{recommend}}" data-t="{{ tap:{en:'onRecommendClick'} }}" kdtId="{{kdtId}}" themeColor="{{themeColor}}" userAuthorize="{{UserAuthorize}}" wx:if="{{recommendType==='A'&&active.payChannel!==recommend.payChannel}}"></f>
+                    <g active="{{active}}" bind:_init="_tic" bind:disable="_p" bind:enable="_p" channel="{{recommend}}" data-t="{{ enable:{en:'onRecommendClick'},disable:{en:'onRecommendDisable'} }}" themeColor="{{themeColor}}" wx:elif="{{recommendType==='B'}}"></g>
+                    <e bind:_init="_tic" bind:tap="_p" channel="{{recommend}}" data-t="{{ tap:{en:'onRecommendClick'} }}" themeColor="{{themeColor}}" wx:elif="{{active.payChannel!==recommend.payChannel}}"></e>
+                </block>
+                <h bind:_init="_tic" bind:action="_p" buttonText="{{active.selectedBar.buttonText}}" channel="{{active.payChannel}}" data-t="{{ action:{ en:'$emit',args:['click-selected-bar'] } }}" instalment="{{instalment}}" showIcon="{{active.selectedBar.showIcon}}" subtext="{{active.selectedBar.subtext}}" text="{{active.selectedBar.text}}" themeColor="{{themeColor}}" wx:if="{{active&&active.selectedBar}}"></h>
+            </view>
+        </view>
+        <view class="{{classnames.bottom}}">
+            <d bind:_init="_tic" bind:navigate="_p" data-t="{{ navigate:{en:'navigate'} }}" protocol="{{active&&active.protocol}}"></d>
+            <b bind:_init="_tic" bind:tap="_p" block="{{true}}" class="{{classnames.submitButton}}" color="{{themeColor}}" data-t="{{ tap:{ en:'$emit',args:['pay'] } }}" disabled="{{disabled}}" loading="{{paying}}" round="{{true}}" type="danger"> {{active.submitButtonText||'确认支付'}} </b>
+            <view class="{{classnames.guarantee}}" wx:if="{{active&&active.showGuarantee&&showGuarantee}}">
+                <image class="{{classnames.guaranteeImage}} tee-image" lazyLoad="true" src="//b.yzcdn.cn/security/fangxin-green.svg"></image>
+                <view class="t-text">提供保障</view>
+            </view>
+        </view>
+    </block>
+    <j bind:_init="_tic" wx:else></j>
+</view>

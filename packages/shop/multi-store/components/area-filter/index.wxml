@@ -1,0 +1,35 @@
+<a class="area-filter-container" vIf="filterLevel > 0">
+    <b bindtap="startSelect" isLink="{{true}}" rightIconClass="area-filter__icon-rotate" title="{{currentFilter}}"></b>
+</a>
+<c overlay="{{true}}" position="bottom" show="{{show}}">
+    <view class="loading-layer {{loading?'':'loading-layer__hidden'}} ">
+        <d color="white" customClass="loading-layer__loading" type="spinner"></d>
+    </view>
+    <view class="container">
+        <view class="header">
+            <view class="tabs">
+                <view bindtap="selectTab" class="tab {{currentCity?'choosed-tab':''}} {{currentTabIndex===0?'selected-tab':''}}" data-tab-index="{{0}}">城市</view>
+                <view bindtap="selectTab" class="tab {{currentTabIndex===1?'selected-tab':''}} {{currentRegionId?'choosed-tab':''}}" data-tab-index="{{1}}" wx:if="{{filterLevel>1&&currentCity&&currentCity!=='全部城市'}}">区县</view>
+                <view bindtap="handleCloseClick" class="close-btn">
+                    <image src="https://b.yzcdn.cn/public_files/2018/09/06/b56b5719b03c9f2cc81bfde8f1205b40.png"></image>
+                </view>
+            </view>
+        </view>
+        <view class="list-block">
+            <b border="{{false}}" customClass="current-city-block-header" title="{{currentWord}}" wx:if="{{currentWord&&!currentTabIndex}}"></b>
+            <scroll-view bindscroll="handleCityListScroll" class="city-list-container list-container" scrollY="{{true}}" wx:if="{{!currentTabIndex}}">
+                <b bindtap="handleCitySelected" border="{{false}}" customClass="{{currentCity==='全部城市'?'selected-cell city-cell':'city-cell'}}" title="全部城市"></b>
+                <a border="{{false}}" wx:for="{{cityList}}" wx:for-index="word" wx:for-item="cities" wx:key="word">
+                    <b customClass="city-block-header" title="{{word}}"></b>
+                    <b bindtap="handleCitySelected" border="{{false}}" customClass="{{currentCity===city.city?'selected-cell city-cell':'city-cell'}}" data-city="{{city}}" data-cityIndex="{{cityIndex}}" data-cityName="{{city.city}}" data-storeNum="{{city.num}}" title="{{city.city}}" titleWidth="100%" wx:for="{{cities}}" wx:for-index="cityIndex" wx:for-item="city" wx:key="city"></b>
+                </a>
+            </scroll-view>
+            <scroll-view class="list-container" scrollY="{{true}}" wx:else>
+                <a border="{{false}}">
+                    <b bindtap="handleAreaSelected" border="{{false}}" customClass="{{currentRegionId===-1?'selected-cell area-cell':'area-cell'}}" title="全部区县"></b>
+                    <b bindtap="handleAreaSelected" border="{{false}}" customClass="{{currentRegionId===area.regionId?'selected-cell area-cell':'area-cell'}}" data-area="{{area}}" data-areaIndex="{{areaIndex}}" title="{{area.district}}" titleWidth="100%" wx:for="{{areaList}}" wx:for-index="areaIndex" wx:for-item="area" wx:key="regionId"></b>
+                </a>
+            </scroll-view>
+        </view>
+    </view>
+</c>

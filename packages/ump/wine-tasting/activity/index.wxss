@@ -1,0 +1,98 @@
+.mgr15 {
+  margin-right: 15rpx;
+}
+.top3 {
+  position: relative;
+  top: 3rpx;
+}
+.wine-tasting-activity {
+  background-color: var(--main-bg-color);
+}
+.wine-tasting-activity .nav-bar {
+  background-color: transparent;
+  transition: all 0.2s linear;
+  color: hsla(0, 0%, 100%, 0.6784313725);
+}
+.wine-tasting-activity .nav-bar.show {
+  background-color: #f7f8fa;
+  color: #333;
+  opacity: 1;
+}
+.wine-tasting-activity .nav-bar-home {
+  font-size: 40rpx;
+}
+.wine-tasting-activity .wine-tasting-image-view {
+  height: 1000rpx;
+}
+.wine-tasting-activity .wine-tasting-image-view .wine-tasting-img {
+  position: var(--cs-bg-img-position);
+  top: 0;
+  left: 0;
+  background-size: 100% 100%;
+}
+.wine-tasting-activity .wine-tasting-image-view .wine-tasting-img-bg {
+  display: block;
+  backdrop-filter: blur(10px);
+}
+.wine-tasting-activity-content {
+  position: relative;
+  top: -50rpx;
+  width: 100vw;
+  min-height: 500rpx;
+  padding: 40rpx;
+  padding-bottom: calc(132rpx + constant(safe-area-inset-bottom));
+  padding-bottom: calc(132rpx + env(safe-area-inset-bottom));
+  box-sizing: border-box;
+  z-index: 1;
+  background: #fff;
+}
+.wine-tasting-activity-content.radius {
+  border-radius: 15px 15px 0 0;
+}
+.wine-tasting-activity-content .content-top {
+  padding-bottom: 30rpx;
+  margin-bottom: 30rpx;
+}
+.wine-tasting-activity-content .content-top.border {
+  border-bottom: 0.5px solid #e0e0e0;
+}
+.wine-tasting-activity-content .content-title {
+  font-size: 40rpx;
+  font-weight: 700;
+  margin-bottom: 10rpx;
+}
+.wine-tasting-activity-content .content-info-title {
+  font-size: 30rpx;
+  margin-bottom: 30rpx;
+  font-weight: 700;
+}
+.wine-tasting-activity-content .content-info img {
+  width: 90% !important;
+}
+.wine-tasting-activity-footer {
+  position: fixed;
+  width: 100vw;
+  height: 132rpx;
+  bottom: 0;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+  background: #fff;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  z-index: 9;
+}
+.wine-tasting-activity-footer .button-submit {
+  width: 670rpx;
+  height: 92rpx;
+  border-radius: 100px;
+  border: none;
+  font-size: 33rpx;
+  color: #fff;
+}
+.wine-tasting-activity-footer .button-submit.apply {
+  background-color: var(--theme-main-color);
+}
+.wine-tasting-activity-footer .button-submit.disabled {
+  background: #999;
+}

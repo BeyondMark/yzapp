@@ -1,0 +1,3 @@
+<a bind:_init="_tic" bind:tap="_p" border="{{false}}" customClass="d5a4c" data-t="{{ tap:{en:'onCellClick'} }}" isLink="{{!hasHaitaoGoods}}" title="发票">
+    <view class="{{'e820a'}} {{disableValueClass}}" style="{{customStyle}}"> {{invoiceInfo}} </view>
+</a>

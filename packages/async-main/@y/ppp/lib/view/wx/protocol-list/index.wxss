@@ -1,0 +1,8 @@
+.link,
+.protocol-container .protocol-item {
+  display: inline;
+}
+.link,
+.link:active {
+  color: #576b95;
+}

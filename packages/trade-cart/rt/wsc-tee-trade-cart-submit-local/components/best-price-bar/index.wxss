@@ -1,0 +1,24 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.f2f47 {
+  position: relative;
+  display: flex;
+  height: 36px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  box-sizing: border-box;
+  background-color: var(--theme-tag-ump-bg-color, #f2f2ff);
+  color: #332333;
+  font-weight: 400;
+  font-size: 12px;
+}
+.f2f47 .c78a5e {
+  color: var(--ump-price, #fff);
+  font-weight: 500;
+}
+.f2f47 .d4f5c {
+  color: var(--ump-icon, #fff);
+}

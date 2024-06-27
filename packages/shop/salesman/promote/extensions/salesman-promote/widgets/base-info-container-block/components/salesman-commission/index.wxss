@@ -1,0 +1,46 @@
+.salesman-commission {
+  display: flex;
+  border-radius: 4px;
+  height: 100%;
+}
+.banner-theme-custom {
+  display: flex;
+  flex-direction: row;
+  border-radius: 12px;
+}
+.salesman-commission-banner {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+}
+.salesman-commission-banner .banner-image {
+  width: 25px;
+  height: 20px;
+}
+.salesman-commission__label {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #fff;
+}
+.salesman-commission__label-desc {
+  opacity: 0.89;
+  font-size: 12px;
+  line-height: 16px;
+  color: #fff;
+  margin-right: 1px;
+}
+.salesman-commission__label-commission,
+.salesman-commission__label-un {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+}
+.salesman-commission__label-commission {
+  padding-right: 8px;
+}

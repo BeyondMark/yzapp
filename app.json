@@ -1,0 +1,848 @@
+{
+  "debug": true,
+  "permission": {
+    "scope.userLocation": { "desc": "我们将基于你的位置信息提供准确的购物服务" }
+  },
+  "networkTimeout": { "request": 10000 },
+  "preloadRule": {
+    "pages/common/blank-page/index": {
+      "network": "all",
+      "packages": [
+        "packages/goods-core",
+        "packages/goods-main",
+        "packages/goods"
+      ]
+    },
+    "pages/goods/cart/index": {
+      "network": "all",
+      "packages": ["packages/trade"]
+    },
+    "pages/goods/seckill/index": {
+      "network": "all",
+      "packages": ["packages/trade-buy"]
+    },
+    "packages/order/index": { "network": "all", "packages": ["packages/paid"] },
+    "packages/paid/pay-result/success/index": {
+      "network": "all",
+      "packages": ["packages/trade"]
+    },
+    "packages/trade-buy/order/buy/index": {
+      "network": "all",
+      "packages": [
+        "packages/trade-pay",
+        "packages/trade-buy-subpage",
+        "packages/order",
+        "packages/paid"
+      ]
+    },
+    "packages/usercenter/dashboard/index": {
+      "network": "all",
+      "packages": ["packages/trade"]
+    },
+    "packages/shop-select/chain-store/shopselect/index": {
+      "network": "all",
+      "packages": ["packages/shop"]
+    },
+    "packages/shop/chain-store/editaddress/index": {
+      "network": "all",
+      "packages": ["packages/shop-select"]
+    },
+    "pages/home/dashboard/index": {
+      "network": "all",
+      "packages": [
+        "packages/goods-core",
+        "packages/goods-main",
+        "packages/goods-list",
+        "packages/usercenter"
+      ]
+    },
+    "pages/goods/detail/index": {
+      "network": "all",
+      "packages": [
+        "packages/goods-core",
+        "packages/goods-main",
+        "packages/trade-buy"
+      ]
+    }
+  },
+  "requiredBackgroundModes": ["audio"],
+  "navigateToMiniProgramAppIdList": [
+    "wx3c444eb794a08ccc",
+    "wx0822fae80de3b620",
+    "wx398375a29154b16c",
+    "wxa2e624400134d690",
+    "wx4a67e337b43f5a02",
+    "wx7948bae4aabe6e1a",
+    "wx16888dab38196e8e",
+    "wxf11c5910cb729a82"
+  ],
+  "resolveAlias": { "~/*": "/*" },
+  "requiredPrivateInfos": [],
+  "tabBar": {
+    "custom": true,
+    "color": "#606060",
+    "selectedColor": "#FF4444",
+    "backgroundColor": "#FCFCFC",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/dashboard/index",
+        "text": "首页",
+        "iconPath": "icons/home.png",
+        "selectedIconPath": "icons/home-selected.png"
+      },
+      {
+        "pagePath": "pages/tab/one/index",
+        "text": "Tab1",
+        "iconPath": "icons/cart.png",
+        "selectedIconPath": "icons/cart-selected.png"
+      },
+      {
+        "pagePath": "pages/tab/two/index",
+        "text": "Tab2",
+        "iconPath": "icons/cart.png",
+        "selectedIconPath": "icons/cart-selected.png"
+      },
+      {
+        "pagePath": "pages/tab/three/index",
+        "text": "Tab3",
+        "iconPath": "icons/cart.png",
+        "selectedIconPath": "icons/cart-selected.png"
+      },
+      {
+        "pagePath": "pages/usercenter/dashboard/index",
+        "text": "我的",
+        "iconPath": "icons/usercenter.png",
+        "selectedIconPath": "icons/usercenter-selected.png"
+      }
+    ]
+  },
+  "subPackages": [
+    {
+      "name": "首页分包",
+      "independent": false,
+      "root": "packages/home",
+      "pages": [
+        "/bear/index",
+        "/feature/index",
+        "/tab/one",
+        "/tab/two",
+        "/tab/three",
+        "/dashboard/index"
+      ]
+    },
+    {
+      "name": "个人中心分包",
+      "independent": false,
+      "root": "packages/usercenter",
+      "pages": ["/dashboard/index"]
+    },
+    {
+      "name": "扫码购首页分包",
+      "independent": false,
+      "root": "packages/scan-code-buy",
+      "pages": ["/bear/index", "/scan-cart/index", "/scan-dashboard/index"]
+    },
+    {
+      "name": "下单",
+      "independent": false,
+      "root": "packages/order",
+      "pages": [
+        "/index",
+        "/paid/index",
+        "/share-page/index",
+        "-native/address-list/index",
+        "-native/share-page/index",
+        "-native/fastbuy/index"
+      ]
+    },
+    {
+      "name": "原生下单",
+      "independent": false,
+      "root": "packages/order-native",
+      "pages": []
+    },
+    {
+      "name": "支付",
+      "independent": false,
+      "root": "packages/pay",
+      "pages": [
+        "/cashier-middle-page/index",
+        "/unicashier/index",
+        "/wx-request/index",
+        "/yzp/index",
+        "/wxh5-downgrade/index",
+        "/wxh5-downgrade-result/index"
+      ]
+    },
+    {
+      "name": "先用后付",
+      "independent": false,
+      "root": "packages/assets",
+      "pages": ["/prior-use/index"]
+    },
+    {
+      "name": "通用",
+      "independent": false,
+      "root": "packages/common",
+      "pages": [
+        "/error/index",
+        "/limit-page/index",
+        "/stop-service/index",
+        "/shopping-list/entry/index",
+        "/lock/index",
+        "/out-of-service/index"
+      ]
+    },
+    {
+      "name": "数据",
+      "independent": false,
+      "root": "packages/statcenter",
+      "pages": ["/cps-goods-list/index"]
+    },
+    {
+      "name": "微页面模板",
+      "independent": false,
+      "root": "packages/showcase-template",
+      "pages": ["/index"]
+    },
+    {
+      "name": "营销插件",
+      "independent": false,
+      "root": "packages/ump",
+      "pages": [
+        "/fission/index",
+        "/carve-coupon/index",
+        "/integral-store/index",
+        "/integral-store/coupon/index",
+        "/pintuan/detail/index",
+        "/pintuan/playing-instruction/index",
+        "/bargain-purchase/home/index",
+        "/helpcut/index",
+        "/collect-gift/home/index",
+        "/gift/cart/index",
+        "/gift/goods-list/index",
+        "/gift/using-tips/instructions/index",
+        "/gift/using-tips/rules/index",
+        "/gift/share/index",
+        "/gift/open-gift/index",
+        "/gift/gift-list/index",
+        "/bundle-purchase/goods-list/index",
+        "/discount-packages/index",
+        "/sign-in/index",
+        "/membercard-groupon/index",
+        "/coupon-pack/fetch/index",
+        "/split-coupon-friend/index",
+        "/plusbuy/index",
+        "/new-lottery/casino/index",
+        "/new-lottery/list/index",
+        "/presents/index",
+        "/handsel-expand/index",
+        "/meet-reduce-goods/index",
+        "/second-half-discount/index",
+        "/periodbuy-list/index",
+        "/lottery-code/index",
+        "/in-sourcing-fission/index",
+        "/share-benefit/index",
+        "/blind-box/auth/index",
+        "/apps/cards/index",
+        "/apps/crazy/index",
+        "/apps/crazy/help/index",
+        "/apps/shake/index",
+        "/apps/zodiac/index",
+        "/welike/index",
+        "/wine-tasting/activity/index",
+        "/wine-tasting/sign-in/index",
+        "/booking/index"
+      ]
+    },
+    {
+      "name": "会员卡",
+      "independent": false,
+      "root": "packages/card",
+      "pages": [
+        "/all/index",
+        "/list/index",
+        "/detail/index",
+        "/active/index",
+        "/setting/index",
+        "/level/index",
+        "/result/index"
+      ]
+    },
+    {
+      "name": "储值好礼卡",
+      "independent": false,
+      "root": "packages/pre-card",
+      "pages": [
+        "/home/index",
+        "/buy-center/index",
+        "/order-buy/index",
+        "/recharge/index",
+        "/exchange/index",
+        "/success-buy/index",
+        "/success-recharge/index",
+        "/wechat-pay/index",
+        "/disable/index",
+        "/receive/index",
+        "/record/index",
+        "/agreement/index"
+      ]
+    },
+    {
+      "name": "集点卡",
+      "independent": false,
+      "root": "packages/point",
+      "pages": [
+        "/home/index",
+        "store/exchange-result/index",
+        "store/goods-details/index",
+        "store/index/index",
+        "store/point-center/index",
+        "store/point-details/index",
+        "store/point-rule/index",
+        "store/trade-details/index",
+        "store/sync-wxcard/index"
+      ]
+    },
+    {
+      "name": "群打卡",
+      "independent": false,
+      "root": "packages/new-punch",
+      "pages": [
+        "/introduction/index",
+        "/task/index",
+        "/task/diary/index",
+        "/rank/index"
+      ]
+    },
+    {
+      "name": "店铺",
+      "independent": false,
+      "root": "packages/shop",
+      "pages": [
+        "/goods/all/index",
+        "/goods/group/index",
+        "/goods/search/index",
+        "/goods/tag-list/index",
+        "/shopnote/detail/index",
+        "/shopnote/mparticle/detail/index",
+        "/shopnote/mparticle/share/index",
+        "/shopnote/list/index",
+        "/chain-store/editaddress/index",
+        "/chain-store/shopselect/index",
+        "/chain-store/storeall/index",
+        "/multi-store/index/index",
+        "/multi-store/search/index",
+        "/multi-store/select-poi/index/index",
+        "/multi-store/select-poi/address-edit/index",
+        "/info/index",
+        "/buyers-show/list/index",
+        "/search-page/index",
+        "/ump/sign-in/index",
+        "/salesman/promote/index",
+        "/levelcenter/plus/index",
+        "/levelcenter/free/index",
+        "/levelcenter/member-fill-auth/index",
+        "/again-enter-loaing/index",
+        "/physical-address/index",
+        "/physical-store/index",
+        "-select/chain-store/shopselect/index",
+        "-select/chain-store/retail-order-shop-select/index"
+      ]
+    },
+    {
+      "name": "店铺选择列表分包",
+      "independent": false,
+      "root": "packages/shop-select",
+      "pages": []
+    },
+    {
+      "name": "知识付费",
+      "independent": false,
+      "root": "packages/paidcontent",
+      "pages": [
+        "/column/index",
+        "/content/index",
+        "/list/index",
+        "/pay/index",
+        "/gift/index",
+        "/live-room/index",
+        "/live/index",
+        "/groupon/index",
+        "/rights/index",
+        "/support/index",
+        "/invite-card/index",
+        "/exam/exam-result/index",
+        "/exam/exam-detail/index",
+        "/exam/exam-question/index"
+      ]
+    },
+    {
+      "name": "教育",
+      "independent": false,
+      "root": "packages/edu",
+      "pages": ["/webview/index", "/audio-playbg/index"]
+    },
+    {
+      "name": "支付结果",
+      "independent": false,
+      "root": "packages/paid",
+      "pages": ["/pay-result/success/index"]
+    },
+    {
+      "name": "待支付",
+      "independent": false,
+      "root": "packages/trade-pay",
+      "pages": ["/pay/index"]
+    },
+    {
+      "name": "下单页",
+      "independent": false,
+      "root": "packages/trade-buy",
+      "pages": [
+        "/order/address-city/index",
+        "/order/address-edit/index",
+        "/order/address-map/index",
+        "/order/contact/index",
+        "/order/self-fetch-address/index",
+        "/order/self-fetch-address-city/index",
+        "/order/buy/index",
+        "-subpage/order/address-city/index",
+        "-subpage/order/address-edit/index",
+        "-subpage/order/address-map/index",
+        "-subpage/order/contact/index",
+        "-subpage/order/self-fetch-address-city/index",
+        "-subpage/order/self-fetch-address/index"
+      ]
+    },
+    {
+      "name": "交易",
+      "independent": false,
+      "root": "packages/trade",
+      "pages": [
+        "/cart/index",
+        "/order/buy-h5/index",
+        "/order/express/index",
+        "/order/subscription/index",
+        "/order/list/index",
+        "/order/result/index",
+        "/order/invoice/index",
+        "/order/safe/index",
+        "/order/safe/apply/index",
+        "/order/safe/express/index",
+        "/order/safe/info/index",
+        "/order/share/index",
+        "/order/unicashier-result/index",
+        "/order/selffetch-list/index",
+        "/cert/verify-ticket/index",
+        "/goods-message/index",
+        "/refund/list/index",
+        "/order/batch-refund/index",
+        "/temp-page/index",
+        "/crm-order-detail/index",
+        "/order-detail/index",
+        "/order-list/index",
+        "/order-search/index",
+        "-cart/cart/index"
+      ]
+    },
+    {
+      "name": "用户",
+      "independent": false,
+      "root": "packages/user",
+      "pages": [
+        "/coupon/fetch/index",
+        "/coupon/detail/index",
+        "/coupon/list/index",
+        "/coupon/shop/index",
+        "/coupon/qrcode/index",
+        "/coupon/goods-list/index",
+        "/integral/index",
+        "/cashback/list/index",
+        "/cashback/detail/index",
+        "/task-center/index",
+        "/membercenter/setting/index",
+        "/mediator-coupon/list/index",
+        "/mediator-coupon/invalid-list/index"
+      ]
+    },
+    {
+      "name": "分销员",
+      "independent": false,
+      "root": "packages/salesman",
+      "pages": [
+        "/promote/index",
+        "/salesman-center/index",
+        "/tutorial/index",
+        "/invite/index",
+        "/rank/index",
+        "/report/index",
+        "/task-award/index",
+        "/task-detail/index",
+        "/business-card/index",
+        "/external-card/index",
+        "/zone/editor/index",
+        "/zone/home/index",
+        "/zone/material/index"
+      ]
+    },
+    {
+      "name": "渠道版",
+      "independent": false,
+      "root": "packages/channel",
+      "pages": ["/agent/index", "/indentor/index"]
+    },
+    {
+      "name": "导购",
+      "independent": false,
+      "root": "packages/guide",
+      "pages": [
+        "/promote/goods/index",
+        "/zone/material/index",
+        "/task/moments/index",
+        "/task/process/index"
+      ]
+    },
+    {
+      "name": "群团购",
+      "independent": false,
+      "root": "packages/groupbuying",
+      "pages": [
+        "/buyer-trade/buying/index",
+        "/buyer-trade/detail/index",
+        "/buyer-trade/pay/index",
+        "/buyer-trade/coupon/index",
+        "/my-profit/home/index",
+        "/my-profit/verify/index",
+        "/my-profit/verify-list/index",
+        "/my-profit/withdraw/account-choose/index",
+        "/my-profit/withdraw/account-set/index",
+        "/my-profit/withdraw/income-detail/index",
+        "/my-profit/withdraw/withdraw-assets/index",
+        "/my-profit/withdraw/withdraw-center/index",
+        "/my-profit/withdraw/withdraw-record/index",
+        "/header-recruit/home/index",
+        "/header-recruit/message/index",
+        "/header-recruit/join-fee/index",
+        "/header-recruit/result/index",
+        "/header-recruit/chain/index",
+        "/activity/list/index",
+        "/activity/detail/index",
+        "/header-order/index",
+        "/buyer-order/index",
+        "/location/index"
+      ]
+    },
+    {
+      "name": "拼团",
+      "independent": false,
+      "root": "packages/collage",
+      "pages": [
+        "/lottery/detail/index",
+        "/lottery/result/index",
+        "/groupon/detail/index",
+        "/groupon/join-groups/index"
+      ]
+    },
+    {
+      "name": "专题视频",
+      "independent": false,
+      "root": "packages/feature-video",
+      "pages": ["/search/index"]
+    },
+    {
+      "name": "团长中心",
+      "independent": false,
+      "root": "packages/group-center",
+      "pages": ["/index"]
+    },
+    {
+      "name": "会员权益",
+      "independent": false,
+      "root": "packages/member-benefit",
+      "pages": ["/benefit/index"]
+    },
+    {
+      "name": "商品评价",
+      "independent": false,
+      "root": "packages/evaluation",
+      "pages": [
+        "/goods/detail/index",
+        "/goods/list/index",
+        "/order/create/index",
+        "/order/detail/index",
+        "/order/review/index"
+      ]
+    },
+    {
+      "name": "消息",
+      "independent": false,
+      "root": "packages/message",
+      "pages": [
+        "/satisfaction/index",
+        "/contact/index",
+        "/subscribe/index",
+        "/wxkf/index"
+      ]
+    },
+    {
+      "name": "账号",
+      "independent": false,
+      "root": "packages/account",
+      "pages": [
+        "/settings/index",
+        "/bind-new/index",
+        "/to-bind/index",
+        "/bind-update/index",
+        "/login/index",
+        "/login-dialog/index",
+        "/login-page"
+      ]
+    },
+    {
+      "name": "外卖搜索",
+      "independent": false,
+      "root": "packages/takeaway-search",
+      "pages": ["/index"]
+    },
+    {
+      "name": "权益卡",
+      "independent": false,
+      "root": "packages/benefit-card",
+      "pages": [
+        "/detail/index",
+        "/intro/index",
+        "/benefit-list/index",
+        "/record-list/index",
+        "/record-detail/index",
+        "/take/index",
+        "/list/index",
+        "/active/index",
+        "/level/index",
+        "/result/index",
+        "/setting/index"
+      ]
+    },
+    {
+      "name": "极速下单",
+      "independent": false,
+      "root": "packages/independent/goods",
+      "pages": ["/fastbuy/index"]
+    },
+    {
+      "name": "扫码落地页面",
+      "independent": true,
+      "root": "pages/common/blank-page",
+      "pages": ["/index"]
+    },
+    {
+      "name": "积分商城",
+      "independent": false,
+      "root": "packages/pointstore",
+      "pages": []
+    },
+    {
+      "name": "视频插件分包",
+      "independent": false,
+      "root": "packages/async-video",
+      "pages": ["/index"]
+    },
+    {
+      "name": "销售员名片",
+      "independent": false,
+      "root": "packages/business-card",
+      "pages": ["/detail/index", "/auth/index"]
+    },
+    {
+      "name": "会员等级",
+      "independent": false,
+      "root": "packages/levelcenter",
+      "pages": [
+        "/free/index",
+        "/plus/index",
+        "/pay/index",
+        "/benefit/index",
+        "/offline-recruit/index"
+      ]
+    },
+    {
+      "name": "会员码",
+      "independent": false,
+      "root": "packages/member-code",
+      "pages": ["/index"]
+    },
+    {
+      "name": "有赞云 webview",
+      "independent": false,
+      "root": "packages/zan-web-view",
+      "pages": ["/index"]
+    },
+    {
+      "name": "短视频",
+      "independent": false,
+      "root": "packages/short-video",
+      "pages": ["/index"]
+    },
+    {
+      "name": "小程序直播",
+      "independent": false,
+      "root": "packages/weapp-live",
+      "pages": ["/room/index"]
+    },
+    {
+      "name": "技术支持",
+      "independent": false,
+      "root": "packages/tech-support",
+      "pages": ["/index"]
+    },
+    {
+      "name": "企助",
+      "independent": false,
+      "root": "packages/weass",
+      "pages": ["/qrcode-process/index", "/redirect/index"]
+    },
+    {
+      "name": "视频号中转页分包",
+      "independent": false,
+      "root": "packages/wxvideo",
+      "pages": [
+        "/fastbuy/index",
+        "/cps/click/index",
+        "/cps/coupon/index",
+        "/validate/index"
+      ]
+    },
+    {
+      "name": "购物车",
+      "independent": false,
+      "root": "packages/trade-cart",
+      "pages": []
+    },
+    {
+      "name": "packages/tangshi/coupon/index",
+      "independent": false,
+      "root": "packages/tangshi",
+      "pages": [
+        "/coupon/index",
+        "/order/index",
+        "/order-detail/index",
+        "/order-info/index",
+        "/pay/index",
+        "/select-number/index",
+        "/shopping-cart/index",
+        "/start/index",
+        "/success/index"
+      ]
+    },
+    {
+      "name": "packages/goods-list/all/index",
+      "independent": false,
+      "root": "packages/goods-list",
+      "pages": ["/all/index", "/tag/index", "/search-result/index"]
+    },
+    {
+      "name": "packages/ext-marketing-page",
+      "root": "packages/ext-marketing-page",
+      "pages": ["/index"]
+    },
+    {
+      "name": "packages/hotel",
+      "root": "packages/hotel",
+      "pages": [
+        "/hotel-search/location",
+        "/hotel-search/search",
+        "/hotel-search/search-result"
+      ]
+    },
+    {
+      "name": "packages/goods",
+      "root": "packages/goods",
+      "pages": [
+        "/detail/index",
+        "/cart/index",
+        "/groupon/index",
+        "/help-cut/index",
+        "/lucky-draw-group/index",
+        "/points/index",
+        "/present/index",
+        "/tuan/index",
+        "/seckill/index",
+        "/seckill/end",
+        "/share/index",
+        "-core/index",
+        "-minor/index",
+        "-main/index"
+      ]
+    },
+    {
+      "name": "packages/trade-buy-subpage",
+      "root": "packages/trade-buy-subpage",
+      "pages": []
+    },
+    { "root": "packages/async-minor", "pages": ["/index"] },
+    { "root": "packages/async-main", "pages": ["/index"] },
+    { "root": "packages/async-feature-ext", "pages": ["/index"] },
+    { "root": "packages/async-usecenter", "pages": ["/index"] },
+    { "root": "packages/async-core", "pages": ["/index"] },
+    { "root": "packages/async-tee", "pages": ["/index"] },
+    { "root": "packages/goods-core", "pages": [] },
+    { "root": "packages/async-retail", "pages": ["/index"] },
+    { "root": "packages/goods-minor", "pages": [] },
+    { "root": "packages/goods-main", "pages": [] }
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": " ",
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#f9f9f9",
+    "onReachBottomDistance": 400,
+    "handleWebviewPreload": "auto"
+  },
+  "pages": [
+    "pages/home/dashboard/index",
+    "pages/tab/one/index",
+    "pages/tab/two/index",
+    "pages/tab/three/index",
+    "pages/common/webview-page/index",
+    "pages/common/webview-expires/index",
+    "pages/common/dmc-blank-page/index",
+    "pages/home/feature/index",
+    "pages/home/tab/one",
+    "pages/home/tab/two",
+    "pages/home/tab/three",
+    "pages/goods/cart/index",
+    "pages/usercenter/dashboard/index",
+    "pages/pay/unicashier/index",
+    "pages/goods/detail/index",
+    "pages/goods/seckill/index",
+    "pages/goods/search/index",
+    "pages/goods/group/index",
+    "pages/goods/all/index",
+    "pages/trade/buy/index",
+    "pages/membercard/list/index",
+    "pages/membercard/detail/index",
+    "pages/membercard/active/index",
+    "pages/membercard/setting/index",
+    "pages/membercard/level/index",
+    "pages/membercard/result/index",
+    "pages/paidcontent/live/index",
+    "pages/paidcontent/column/index",
+    "pages/paidcontent/content/index",
+    "pages/paidcontent/list/index",
+    "pages/paidcontent/pay/index",
+    "pages/salesman/tutorial/index",
+    "pages/salesman/salesman-center/index",
+    "pages/ump/fission/index",
+    "pages/ump/integral-store/index",
+    "pages/ump/integral-store/coupon/index",
+    "pages/ump/pintuan/detail/index",
+    "pages/order/share/index",
+    "pages/usercenter/promotion/promotion_detail",
+    "pages/ump/pintuan/playingInstruction/playingInstruction",
+    "pages/shop/shopnote/list/index",
+    "pages/account/login/index",
+    "pages/bear/index"
+  ]
+}

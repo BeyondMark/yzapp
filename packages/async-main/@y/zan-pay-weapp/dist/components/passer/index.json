@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@vant/weapp/dist/popup/index",
+    "b": "../../../../../@vant/weapp/dist/icon/index",
+    "c": "../num-pad/index",
+    "d": "../vant-number-keyboard/index",
+    "_": "../../../../../../../components/_/index"
+  }
+}

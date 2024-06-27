@@ -1,0 +1,39 @@
+{
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationStyle": "custom",
+  "backgroundColor": "#FFFFFF",
+  "singlePage": { "navigationBarFit": "squeezed" },
+  "usingComponents": {
+    "a": "/ext-tee-wsc-dc/extensions/home-loading/rt/Main",
+    "b": "/ext-tee-salesman/extensions/salesman-share-block/rt/Main",
+    "c": "/ext-tee-wsc-dc/extensions/page-style/rt/Main",
+    "d": "/ext-tee-wsc-dc/extensions/feature-specific-scene/rt/Main",
+    "e": "/ext-tee-wsc-dc/extensions/feature-page-container/rt/Main",
+    "f": "/packages/async-feature-ext/rt/wsc-tee-salesman-salesman-cube-block-local/widgets/rt/Widget",
+    "g": "/packages/async-feature-ext/rt/wsc-tee-dc-floating-nav-local/rt/Main",
+    "h": "/packages/async-feature-ext/rt/ext-tee-wsc-goods-goods-showcase-local/rt/GoodsShowcase",
+    "i": "/packages/async-feature-ext/rt/wsc-tee-dc-feature-popup-container-local/rt/Main",
+    "j": "/packages/async-feature-ext/rt/ext-tee-wsc-goods-biz-sku-manage-local/rt/Main",
+    "k": "/packages/async-feature-ext/rt/ext-tee-wsc-im-subscription-message-local/rt/Widget",
+    "l": "/packages/async-feature-ext/rt/wsc-tee-dc-subscribe-message-local/rt/Main",
+    "m": "/packages/async-feature-ext/rt/wsc-tee-dc-feature-user-authorize-popup-local/rt/Main",
+    "n": "/ext-tee-common/extensions/app-content-append/rt/Main",
+    "o": "/packages/async-tee/@y-open/vt/native/weapp/toast/index/index",
+    "p": "/packages/async-tee/@y-open/vt/native/weapp/dialog/index/index",
+    "_": "../../../components/_/index"
+  },
+  "componentPlaceholder": {
+    "f": "_",
+    "g": "_",
+    "h": "_",
+    "i": "_",
+    "j": "_",
+    "k": "_",
+    "l": "_",
+    "m": "_",
+    "o": "_",
+    "p": "_"
+  }
+}

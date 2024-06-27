@@ -1,0 +1,14 @@
+.package-sku-price {
+  font-family: PingFangSC-Semibold;
+  font-size: 16px;
+  color: #f44;
+  height: 16px;
+}
+.package-sku-origin-price {
+  margin-top: 7px;
+  font-size: 12px;
+  color: #666;
+}
+.origin-price--del {
+  text-decoration: line-through;
+}

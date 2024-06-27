@@ -1,0 +1,29 @@
+page {
+  background-color: #f8f8f8;
+}
+.address-edit {
+  margin-top: 0;
+}
+.address-edit__item {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.address-edit__pickers {
+  height: 28px;
+}
+.address-edit__picker {
+  display: inline-block;
+  width: 33%;
+  height: 28px;
+  overflow: hidden;
+}
+.address-edit__input {
+  height: 28px;
+  line-height: 28px;
+  padding-right: 10px;
+}
+.address-edit .picker {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

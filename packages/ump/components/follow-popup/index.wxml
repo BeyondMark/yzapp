@@ -1,0 +1,11 @@
+<a closeOnClickOverlay="{{true}}" customClass="follow-popup" show="{{showPop}}" zIndex="{{zIndex}}">
+    <view class="follow-popup__content">
+        <view class="title">{{title}}</view>
+        <view class="sub-title">{{subTitle}}</view>
+        <button bind:tap="onClick" class="follow-button" wx:if="{{newRiseFollower}}">{{btnText}}</button>
+        <button bind:contact="onContactBack" bind:tap="onClick" class="follow-button" openType="contact" sendMessageImg="{{messageImg}}" sendMessagePath="{{messagePath}}" sendMessageTitle=" " showMessageCard="{{true}}" wx:else>{{btnText}}</button>
+    </view>
+    <view bindtap="togglePopup" class="follow-popup__close">
+        <image src="https://img01.yzcdn.cn/public_files/2019/07/09/0fdc360127f973b6eef88ea3d005d52f.png"></image>
+    </view>
+</a>

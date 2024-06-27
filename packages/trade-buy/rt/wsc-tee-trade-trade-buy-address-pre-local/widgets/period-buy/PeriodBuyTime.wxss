@@ -1,0 +1,10 @@
+.c39039 {
+  font-weight: var(--theme-common-field-font-weight, bold);
+  line-height: 21px;
+}
+.d5a4c {
+  padding: var(--theme-page-cell-padding-top, 10px)
+    var(--theme-page-cell-padding-right, 12px)
+    var(--theme-page-cell-padding-bottom, 10px)
+    var(--theme-page-cell-padding-left, 12px) !important;
+}

@@ -1,0 +1,16 @@
+<view class="member-center__widget-cube">
+    <view class="widget-item {{dotClasses[index]}}" wx:for="{{widgets}}" wx:for-item="widget" wx:key="{{ widget.key }}">
+        <view class="message__contact-container" wx:if="{{widget.key==='customerServiceChat'}}">
+            <b bindcontact="onContactBack" businessId="{{extra.businessId}}" contactClass="message__contact-button" openType="contact" sessionFrom="{{extra.sourceParam}}">
+                <c customClass="icon" name="{{widget.icon}}"></c>
+                <text class="message__contact-text">客服聊天</text>
+            </b>
+        </view>
+        <d authTypeList="{{['nicknameAndAvatar']}}" bind:next="handlePluginAuthorize" bindgetuserinfo="handleBindGetUserInfo" data-key="{{widget.key}}" wx:else>
+            <c customClass="icon" name="{{widget.icon}}"></c>
+            <a customStyle="width: auto;right: 38%;margin: 10px auto;" info="{{cartInfo}}" wx:if="{{widget.key==='cart'&&cartInfo}}"></a>
+            <a customStyle="width: auto;right: 38%;margin: 10px auto;" info="{{giftInfo}}" wx:if="{{widget.key==='gifts'&&giftInfo}}"></a>
+            <view class="widget-item-view">{{widget.title||item.text}}</view>
+        </d>
+    </view>
+</view>

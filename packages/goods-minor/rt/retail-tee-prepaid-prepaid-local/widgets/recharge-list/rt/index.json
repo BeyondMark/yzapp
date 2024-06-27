@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../recharge-list-free/rt/index",
+    "b": "./../../recharge-list-recommend/rt/index",
+    "_": "../../../../../../../components/_/index"
+  }
+}

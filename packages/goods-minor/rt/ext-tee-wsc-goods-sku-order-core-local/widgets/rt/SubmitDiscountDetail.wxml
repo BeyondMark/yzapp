@@ -1,0 +1,11 @@
+<c bind:_init="_tic" bind:close="_p" customClass="aa6c0" customStyle="{{customStyle}}" data-t="{{ close:{en:'handleCloseDetail'} }}" position="bottom" safeAreaInsetBottom="{{true}}" show="{{showDiscountDetail}}">
+    <view class="c487c3">
+        <view class="c07d42">      订单明细
+      <d bind:_init="_tic" bind:tap="_p" class="c5174a" color="#C8C9CC" data-t="{{ tap:{en:'handleCloseDetail'} }}" name="cross" size="22px"></d>
+        </view>
+        <view class="c604ed">
+            <b bind:_init="_tic" rmId="b7-64" showAmount="{{false}}" wx:if="{{rmId==='b7-42'}}"></b>
+        </view>
+        <a bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='b7-42'}}"></a>
+    </view>
+</c>

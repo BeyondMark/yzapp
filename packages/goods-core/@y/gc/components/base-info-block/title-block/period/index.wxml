@@ -1,0 +1,4 @@
+<view class="ed25f">
+    <a bind:_init="_tic" customClass="baec6" hairline="{{themeTag.plain}}" plain="{{themeTag.plain}}">周期购</a>
+    <view class="c1dee8"> 按周期分期配送商品 </view>
+</view>

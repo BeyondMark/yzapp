@@ -1,0 +1,48 @@
+.ee070 {
+  padding: 8px 15px !important;
+}
+.shop__empty-block {
+  padding: 20px 0;
+  text-align: center;
+  background-color: #fff;
+}
+.shop__empty-icon {
+  height: 80px;
+  background: url(https://img01.yzcdn.cn/wsc-h5-trade/goods-list-empty@3x.png)
+    no-repeat 50%;
+  background-size: 80px 80px;
+}
+.shop__empty-title {
+  padding: 15px 0 5px;
+  font-size: 14px;
+  color: #111;
+}
+.shop__empty-desc {
+  padding: 5px 0 15px;
+  font-size: 10px;
+  color: #666;
+}
+.shop__empty-btn {
+  height: 35px;
+  margin-right: 0;
+  line-height: 35px;
+}
+.goods-presale {
+  background-color: #fafafa !important;
+}
+.t-hairline--bottom {
+  position: relative;
+}
+.t-hairline--bottom:after {
+  position: absolute;
+  box-sizing: border-box;
+  content: " ";
+  pointer-events: none;
+  top: -50%;
+  bottom: -50%;
+  border: 0 solid #ebedf0;
+  border-bottom-width: 1px;
+  transform: scaleY(0.5);
+  left: 12px;
+  right: 12px;
+}

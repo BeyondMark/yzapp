@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y-open/vt/dist/button/index.weapp",
+    "b": "/@y-open/vt/dist/popup/index.weapp",
+    "c": "../../../@y-open/vt/dist/uploader/index",
+    "_": "../../../../../components/_/index"
+  }
+}

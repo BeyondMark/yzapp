@@ -1,0 +1,28 @@
+.c89585 {
+  text-decoration: inherit;
+}
+.c78a5e text,
+.c89585 {
+  display: inline-block;
+}
+.c3a4d0 {
+  font-size: 12px;
+  margin-right: 2px;
+}
+.c8b830 {
+  font-size: 16px;
+  font-family: Avenir, pingfang, sans-serif;
+}
+.c3f0b3 {
+  font-weight: 600;
+}
+.c3f0b3,
+.c64989 {
+  font-size: 12px;
+  font-family: Avenir, pingfang, sans-serif;
+}
+.c64989 {
+  color: #969799;
+  margin-left: 10px;
+  text-decoration: line-through;
+}

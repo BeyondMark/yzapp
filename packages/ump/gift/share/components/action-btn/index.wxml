@@ -1,0 +1,14 @@
+<view class="btn-class">
+    <view class="receive-btn--wrapper" wx:if="{{isButtonGroup&&giftOrderNo}}">
+        <a authTypeList="{{['nicknameAndAvatar']}}" bindgetuserinfo="onGetUserInfo" bindtap="handleRepresentTap" class="receive-btn receive-btn--left" isOnce="{{true}}">转赠好友</a>
+        <view bindtap="handleAddressTap" class="receive-btn receive-btn--right">填写地址</view>
+    </view>
+    <a authTypeList="{{['nicknameAndAvatar']}}" bindgetuserinfo="onGetUserInfo" bindtap="handleWholeBtnTap" class="receive-btn receive-btn--whole" isOnce="{{true}}" wx:if="{{!isButtonGroup}}">
+        <block wx:if="{{presenterView}}">
+            <block wx:if="{{gameType===1}}">喊好友来收礼</block>
+            <block wx:elif="{{!lotteryEnd}}">喊好友来抽奖</block>
+            <block wx:else>再送一份</block>
+        </block>
+        <block wx:else>{{isPresenter?'再送一份':'我也要送礼'}}</block>
+    </a>
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "a": "../item/index",
+    "_": "../../../../../../../components/_/index"
+  },
+  "component": true
+}

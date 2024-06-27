@@ -1,0 +1,7 @@
+<view bindtap="linkToShelf" class="dine-floating {{dineFold?'dine-floating--fold':''}}" wx:if="{{showDineEntry}}">
+    <view class="dine-floating__number" style="background: {{themeMainColor}}">
+        <view class="dine-floating__number__text">{{tableNumber}}</view>
+    </view>
+    <view class="dine-floating__text">继续点单<a class="dine-floating__text__arrow" name="arrow"></a>
+    </view>
+</view>

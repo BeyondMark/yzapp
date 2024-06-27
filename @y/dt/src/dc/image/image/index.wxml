@@ -1,0 +1,4 @@
+<view class="img-warp">
+    <image bind:error="_p" bind:load="_p" class="{{'image'}} {{shadow?'image-shadow':''}} tee-image" data-t="{{ load:{en:'maxImageLoad'},error:{en:'onImageLoadError'} }}" lazyLoad="true" mode="{{mode}}" showMenuByLongpress="{{true}}" src="{{src}}" style="{{style}}"></image>
+    <image bind:error="_p" bind:load="_p" class="image high-img tee-image" data-t="{{ error:{en:'onMinImageLoadError'},load:{en:'minImageLoad'} }}" lazyLoad="true" mode="{{mode}}" showMenuByLongpress="{{true}}" src="{{minImg}}" style="{{style}}" wx:if="{{minImg&&!hideMin}}"></image>
+</view>

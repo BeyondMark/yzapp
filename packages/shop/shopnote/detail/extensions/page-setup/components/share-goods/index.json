@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/shop/@vant/weapp/dist/action-sheet/index",
+    "b": "/packages/shop/common/components/theme-view/index",
+    "c": "/@vant/weapp/dist/popup/index",
+    "_": "../../../../../../../../components/_/index"
+  }
+}

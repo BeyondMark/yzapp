@@ -1,0 +1,5 @@
+<view catch:touchstart="stopPropagation" class="van-number-keyboard" style="z-index: {{zIndex}}">
+    <view class=" van-number-keyboard__body">
+        <a bind:press="onPress" key="{{key.text}}" text="{{key.text}}" theme="{{key.theme}}" type="{{key.type}}" wx:for="{{keys}}" wx:for-item="key" wx:key="text"></a>
+    </view>
+</view>

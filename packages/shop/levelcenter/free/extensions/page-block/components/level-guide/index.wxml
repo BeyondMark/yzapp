@@ -1,0 +1,5 @@
+<view>
+    <a bind:bindMobile="triggerBindMobile" bindnext="finish" bizDataMap="{{bizDataMap}}" planId="{{crmFromScenePlanId}}" wx:if="{{guideList[curIdx]==='scene-market-subscribe'}}"></a>
+    <c bind:subscribeCallback="handleSubscribeCallback" bindnext="finish" bizDataMap="{{bizDataMap}}" groupAlias="{{groupAlias}}" hasAuthorized="{{hasAuthorized}}" hasMobile="{{hasMobile}}" joinGapInfo="{{joinGapInfo}}" kdtId="{{kdtId}}" nowBenefitList="{{nowBenefitList}}" nowLevel="{{nowLevel}}" pageQuery="{{pageQuery}}" removed="{{removed}}" scene="{{scene}}" wx:if="{{guideList[curIdx]==='level-welcome'}}"></c>
+    <b bindnext="finish" wx:if="{{guideList[curIdx]==='protocol-guide'}}"></b>
+</view>

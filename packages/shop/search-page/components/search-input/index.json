@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../highlight-text/index",
+    "b": "../../../@vant/weapp/dist/search/index",
+    "_": "../../../../../components/_/index"
+  }
+}

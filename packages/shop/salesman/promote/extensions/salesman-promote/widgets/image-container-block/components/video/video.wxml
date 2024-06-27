@@ -1,0 +1,1 @@
+<video autoplay="{{false}}" bindended="onVideoEnded" bindfullscreenchange="handleFullscreenChange" bindpause="setVideoPause" bindplay="setVideoPlay" class="goods-video" enableProgressGesture="{{false}}" id="goods-video-id" loop="{{false}}" objectFit="contain" src="{{video.videoUrl}}"></video>

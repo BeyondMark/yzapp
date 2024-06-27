@@ -1,0 +1,2 @@
+<a bindmessage="onMessage" src="{{pageUrl}}"></a>
+<b noAutoAuth="{{true}}"></b>

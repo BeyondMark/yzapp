@@ -1,0 +1,7 @@
+<view class="card-skeleton">
+    <view class="card-image"></view>
+    <view class="card-info">
+        <view class="card-title"></view>
+        <view class="card-buy"></view>
+    </view>
+</view>

@@ -1,0 +1,32 @@
+.dc-hot-words-box {
+  display: block;
+  position: relative;
+  padding: 10px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.dc-hot-words-box.dc-hot-words-box-inline {
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.dc-hot-words-box.dc-hot-words-box-inline::-webkit-scrollbar {
+  display: none;
+}
+.dc-hot-words-box .hot-words-title {
+  display: block;
+  margin-bottom: 12px;
+  padding: 0 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+.dc-hot-words-box .hot-words-fire {
+  display: inline-block;
+  padding: 0 4px;
+  color: #969799;
+  font-size: 14px;
+}
+.dc-hot-words-box .hot-words-fire .van-icon-fire {
+  margin-right: 4px;
+}

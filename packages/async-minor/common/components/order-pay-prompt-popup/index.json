@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@vant/weapp/dist/popup/index",
+    "b": "./components/prompt-btns/index",
+    "c": "./components/prompt-desc/index",
+    "d": "./components/single-goods/index",
+    "e": "./components/prompt-evaluation/index",
+    "f": "./components/multi-goods/index",
+    "_": "../../../../../components/_/index"
+  }
+}

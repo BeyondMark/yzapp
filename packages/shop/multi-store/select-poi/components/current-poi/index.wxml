@@ -1,0 +1,10 @@
+<view class="container current-position">
+    <view class="title">当前位置</view>
+    <view class="flex">
+        <view bindtap="handleClick" class="poi-name" data-poi="{{poi}}">{{poi===null?'定位中……':poi&&poi.title||'定位失败'}}</view>
+        <view bindtap="getLocation" class="re-location flex">
+            <image class="re-location__image" src="https://b.yzcdn.cn/public_files/2018/08/06/6d831dd86ee15db2bb05954040f2a38f.png"></image>
+            <view class="re-location__text">重新定位</view>
+        </view>
+    </view>
+</view>

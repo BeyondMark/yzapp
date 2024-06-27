@@ -1,0 +1,4 @@
+<view>
+    <a bind:_init="_tic" bind:tap="_p" color="{{themeColors.general}}" customClass="c605d3" customStyle="{{!border?'border: none':''}}" data-t="{{ tap:{en:'onOpen'} }}" plain="{{true}}" round="{{true}}">    查看提货码
+  </a>
+</view>

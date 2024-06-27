@@ -1,0 +1,15 @@
+<view class="task-list-wrap">
+    <view class="task-list" style="{{listStyle}}" wx:if="{{tasks.length}}">
+        <view class="task-list__task" wx:for="{{tasks}}">
+            <view class="task-content">
+                <image class="task-img" height="40px" src="{{item.imgUrl}}" width="40px"></image>
+                <view class="task-info">
+                    <view class="task-text">{{item.title}}</view>
+                    <view class="{{item.taskType==='3'?'task-desc-normal':'task-desc'}}">{{item.desc}}</view>
+                </view>
+            </view>
+            <button bind:tap="handleBtnClick" class="task-btn" data-task-type="{{item.taskType}}" disabled="{{item.finished}}" openType="{{item.taskType==='2'?'share':''}}">{{item.buttonText}}</button>
+        </view>
+    </view>
+    <view class="empty-text" wx:else></view>
+</view>

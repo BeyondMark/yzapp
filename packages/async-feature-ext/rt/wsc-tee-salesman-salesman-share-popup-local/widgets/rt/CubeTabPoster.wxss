@@ -1,0 +1,161 @@
+.t-text {
+  text-decoration: inherit;
+}
+.t-text,
+.tee-image {
+  display: inline-block;
+}
+.tee-image {
+  width: 100%;
+  height: 100%;
+}
+.cube-tab-poster {
+  text-align: center;
+  height: calc(80vh - 112px);
+}
+.cube-tab-poster .t-loading {
+  height: 400px;
+}
+.cube-tab-poster .poster-authorize {
+  color: #969799;
+  font-size: 14px;
+  margin-top: 150px;
+}
+.cube-tab-poster .poster-authorize__btn {
+  width: 108px !important;
+  margin-top: 24px;
+}
+.cube-tab-poster .poster-box {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+.cube-tab-poster .poster-banner > view {
+  height: 100%;
+  width: 100%;
+}
+.cube-tab-poster .poster-banner > view > view {
+  height: 100% !important;
+}
+.cube-tab-poster .poster-banner .t-swipe {
+  height: 100%;
+}
+.cube-tab-poster .poster-banner > view > view > view:first-child {
+  height: 100%;
+  margin-left: calc(50vw - 144px);
+}
+.cube-tab-poster .poster-banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border-bottom: 8px solid #f7f8fa;
+  text-align: center;
+  align-items: center;
+  overflow: hidden;
+}
+.cube-tab-poster .poster-banner:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  border: 1px solid #f2f3f5;
+  border-radius: 6px;
+}
+.cube-tab-poster .poster-banner .poster-img {
+  width: auto;
+  max-height: 100%;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.1019607843);
+}
+.cube-tab-poster .poster-banner-swipe {
+  position: relative;
+  flex: 1;
+  align-self: flex-start;
+  overflow: hidden;
+}
+.cube-tab-poster .poster-banner-swipe.offset .t-swipe__track {
+  margin-left: calc(50vw - 144px);
+}
+.cube-tab-poster .poster-banner-swipe .t-swipe__indicators {
+  left: 50vw;
+  bottom: 0;
+}
+.cube-tab-poster .poster-banner-swipe .t-swipe__indicator {
+  background: #999;
+}
+.cube-tab-poster .poster-banner__bottom {
+  display: flex;
+  padding: 16px 8px;
+  justify-content: flex-start;
+}
+.cube-tab-poster .poster-banner__bottom.single-btn {
+  justify-content: center;
+}
+.cube-tab-poster .poster-banner__bottom.single-btn .poster-banner__btn {
+  width: 300px;
+}
+.cube-tab-poster .poster-banner__bottom-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 80px;
+}
+.cube-tab-poster .poster-banner__bottom-image {
+  width: 48px;
+  height: 48px;
+}
+.cube-tab-poster .poster-banner__bottom-text {
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 12px;
+  color: #646566;
+  text-align: center;
+}
+.cube-tab-poster .poster-save-tip {
+  display: flex;
+  margin: 16px 0 12px;
+  align-items: center;
+  justify-content: center;
+  line-height: 18px;
+  font-size: 13px;
+  color: #969799;
+}
+.cube-tab-poster .poster-save-tip__icon {
+  margin-right: 6px;
+  width: 16px;
+  height: 16px;
+}
+.cube-tab-poster .poster-banner__img-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0 24px;
+  box-sizing: border-box;
+  height: 100%;
+  width: 288px;
+  transform: scale(0.85);
+  transition: all 0.3s ease-out;
+}
+.cube-tab-poster .poster-banner__img-container.widthFix .poster-img {
+  flex: 1;
+}
+.cube-tab-poster .poster-banner__img-container.active {
+  transform: scale(1);
+}
+.cube-tab-poster .poster-banner__img-container .t-loading__text {
+  color: #fff;
+}
+.cube-tab-poster .poster-banner__img-container .poster-img__error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 16px;
+}

@@ -1,0 +1,1 @@
+<a bind:agree="handleAgree" bind:disagree="handleDisagree" duration="{{popupDuration}}" needSkipSigned="{{needSkipSigned}}" popupCustomStyle="{{'z-index:'+zIndex+1}}" visible="{{showProtocol}}" zIndex="{{zIndex}}"></a>

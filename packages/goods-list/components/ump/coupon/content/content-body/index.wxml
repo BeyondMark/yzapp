@@ -1,0 +1,4 @@
+<view class="c58146 {{disabledClass}} {{unavailableClass}}">
+    <view class="c855c">{{content}}</view>
+    <view class="c18bf6">{{extra}}</view>
+</view>

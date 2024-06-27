@@ -1,0 +1,12 @@
+.c19e6f {
+  margin-bottom: 16px;
+}
+.d47c5 {
+  --cell-vertical-padding: var(--theme-page-inline-margin-bottom, 10px);
+}
+.d47c5:after {
+  content: none;
+}
+.d47c5:last-child {
+  padding-bottom: 0 !important;
+}

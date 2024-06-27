@@ -1,0 +1,28 @@
+function moveMaskView(instance, x) {
+  var mask = instance.selectComponent(".slide-popup__control-mask--inner");
+  mask.setStyle({ width: x + "px" });
+}
+module.exports = {
+  handleTouchMove: function handleTouchMove(event, instance) {
+    var x = event.detail.x;
+    var block = instance.selectComponent(".component-display__area-image");
+    if (block) {
+      block.setStyle({ transform: "translateX(" + x + "px)" });
+    }
+    moveMaskView(instance, x);
+    instance.callMethod("handleTouchMove", event);
+    return false;
+  },
+  handleDisplayMove: function handleDisplayMove(event, instance) {
+    var x = event.detail.x;
+    var slide = instance.selectComponent(
+      ".slide-popup__control-movables__view"
+    );
+    if (slide) {
+      slide.setStyle({ transform: "translateX(" + x + "px)" });
+    }
+    moveMaskView(instance, x);
+    instance.callMethod("handleTouchMove", event);
+    return false;
+  },
+};

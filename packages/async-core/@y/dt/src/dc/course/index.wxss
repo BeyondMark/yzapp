@@ -1,0 +1,34 @@
+.dc-course .knowleadge-item-container {
+  position: relative;
+  width: 100%;
+  overflow: auto;
+}
+.dc-course .knowleadge-scroll-wrap {
+  display: -webkit-flex;
+  display: flex;
+  overflow: visible;
+}
+.dc-course .cap-knowleadge-wrap {
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: wrap;
+}
+.dc-course .knowledge-good-item-mode0 {
+  width: 100%;
+}
+.dc-course .knowledge-good-item-mode1 {
+  width: 50%;
+}
+.dc-course .knowledge-good-item-mode2 {
+  width: 33.3%;
+}
+.dc-course .knowledge-good-item-mode3,
+.dc-course .knowledge-good-item-mode4.big {
+  width: 100%;
+}
+.dc-course .knowledge-good-item-mode4.small {
+  width: 50%;
+}
+.dc-course .knowledge-good-item-mode5 {
+  min-width: 40%;
+}

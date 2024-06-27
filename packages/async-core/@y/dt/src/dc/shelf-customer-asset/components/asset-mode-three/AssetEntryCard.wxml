@@ -1,0 +1,5 @@
+<view class="entries">
+    <view bind:tap="_p" class="entry" data-t="{{ tap:{ en:'handleNavigate',args:[item.link] } }}" style="{{cardStyle}}; {{i===0?entryCardMargin:''}}" wx:for="{{formatEntries}}" wx:for-index="i" wx:key="i">
+        <image class="entry-image tee-image" lazyLoad="true" mode="aspectFill" src="{{item.image}}"></image>
+    </view>
+</view>

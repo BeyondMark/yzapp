@@ -1,0 +1,12 @@
+<view>
+    <view class="title" wx:if="{{planType===PlanTypeEnum.Birthday}}">
+        <text class="name">{{nickName}}</text>
+        <text>生日快乐</text>
+    </view>
+    <view class="title" wx:else>
+        <text>{{planType===PlanTypeEnum.Festival?'店铺节日庆典':'店铺会员日'}}</text>
+    </view>
+    <view class="sub-title">
+        <view>{{planEffectiveTime}}<text class="highlight">{{userMatchBenefitLevel}}</text>会员享专属权益</view>
+    </view>
+</view>

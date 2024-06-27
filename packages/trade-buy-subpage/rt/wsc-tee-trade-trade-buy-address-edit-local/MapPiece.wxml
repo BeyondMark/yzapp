@@ -1,0 +1,10 @@
+<view class="c8a759" hidden="{{!(map.longitude&&map.latitude)}}">
+    <map bind:_init="_tic" bind:tap="_p" class="c1d78d" data-t="{{ tap:{en:'onClick'} }}" enableScroll="{{false}}" enableZoom="{{false}}" id="map" latitude="{{map.latitude}}" longitude="{{map.longitude}}" markers="{{map.markers}}" scale="{{15}}">
+        <cover-view class="e99eb">
+            <cover-view class="db450" wx:if="{{map.markerLabel&&showMarkerLabel}}">
+                <cover-view>{{map.markerLabel}}</cover-view>
+                <cover-view class="f966a"></cover-view>
+            </cover-view>
+        </cover-view>
+    </map>
+</view>

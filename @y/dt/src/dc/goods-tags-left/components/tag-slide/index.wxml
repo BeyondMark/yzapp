@@ -1,0 +1,30 @@
+<view class="dc-goods-tags-left" id="{{curId}}">
+    <view style="height: 100vh;" wx:if="{{isSticky}}"></view>
+    <view class="{{isSticky?'goods-tags-left-fixed':'goods-tags-left-normal'}}" style="{{'top:'+stickyTop+'px; margin-bottom: 7px'}}">
+        <view bind:touchend="_p" bind:touchstart="_p" catch:touchmove="_p" class="tag-list-nav" data-t="{{ touchmove:{en:'bindtouchNavMove',et:'stop'},touchstart:{en:'bindtouchstart'},touchend:{en:'bindtouchNavEnd'} }}" id="tag-list-nav">
+            <b _opt="{{navList:opt.tags,selectedGroup:selectedGroup}}" bind:_init="_tic" bind:handle-change="_p" data-t="{{ handleChange:{en:'handleNavChange'} }}" hideScrollbar="{{true}}" scrollViewStyle="{{scrollNavStyle}}">
+                <view slot="ext" style="height: 80px"></view>
+            </b>
+        </view>
+        <view class="tag-list-goods" style="{{scrollStyle}}">
+            <scroll-view bind:scrolltolower="_p" bind:touchend="_p" bind:touchstart="_p" bounces="{{false}}" catch:touchmove="_p" class="scroll-view" data-t="{{ scrolltolower:{en:'scrolltolower'},touchmove:{en:'bindtouchmove',et:'stop'},touchstart:{en:'bindtouchstart'},touchend:{en:'bindtouchend'} }}" enhanced="{{true}}" id="{{'tag_scroll_view'+selectedGroup}}" lowerThreshold="800" scrollIntoView="{{'tag'+selectedGroup}}" scrollY="{{true}}" showScrollbar="{{false}}" style="{{scrollViewStyle}}">
+                <view id="{{'tag'+selectedGroup}}" style="height: 1px"></view>
+                <view class="group-title" style="{{groupStyle}}">{{selectGroupTitle}}</view>
+                <view style="{{groupStyle}}" wx:if="{{currentTagGoods&&currentTagGoods.length}}">
+                    <view style="{{goodsStyle}}" wx:for="{{currentTagGoods}}" wx:for-item="goodsItem" wx:key="_id">
+                        <c bind:_init="_tic" wx:if="{{goodsItem._skeleton}}"></c>
+                        <a _opt="{{goodsItem.itemCardOpt}}" bind:_init="_tic" bind:button-click="_p" bind:item-click="_p" data-t="{{ buttonClick:{ en:'handleGoodsBuy',args:[goodsItem.id] },itemClick:{en:'handleItemClick'} }}" isShowGoodsAddNumber="{{isShowGoodsAddNumber}}" textClass="tag-group-text-info-no-margin-top" type="tag_slide" wx:else></a>
+                    </view>
+                </view>
+                <view class="group-empty" wx:else>
+                    <view>
+                        <image class="image tee-image" lazyLoad="true" src="https://img01.yzcdn.cn/upload_files/2023/04/17/FvVW8XePX7n7nCrgl8CjXUBJZPtY.png" wx:if="{{currentFinshed}}"></image>
+                    </view>
+                    <view wx:if="{{currentFinshed}}">            此类下暂时没有商品
+          </view>
+                </view>
+                <view style="height: 110px;text-align: center;font-size: 12px;color: #999;padding-top: 40px;" wx:if="{{currentFinshed}}">{{isLastTag?'已经到底啦':loadNextPageContent}}</view>
+            </scroll-view>
+        </view>
+    </view>
+</view>

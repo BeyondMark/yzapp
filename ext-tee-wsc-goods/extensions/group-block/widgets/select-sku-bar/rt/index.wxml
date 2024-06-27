@@ -1,0 +1,13 @@
+<view bind:tap="_p" class="f7b86 cb255" data-t="{{ tap:{en:'handleClick'} }}">
+    <a bind:_init="_tic" border="{{false}}" customClass="{{skuBarClass}}" isLink="{{!opt.isSkuBarDisabled}}">
+        <view class="a3110" slot="title">
+            <view class="c16158 c89585"> {{opt.skuBarInfo.isAnySelected?'已选':'选择'}} </view>
+            <view class="b837d"> {{opt.skuBarInfo.showText}} </view>
+        </view>
+    </a>
+    <view class="c78ee5" wx:if="{{opt.skuExtraData.barPictureCount}}">
+        <image class="c912bd bd231" lazyLoad="true" src="{{img}}" wx:for="{{opt.skuExtraData.barPictures}}" wx:for-item="img" wx:key="index"></image>
+        <view class="fa258">{{opt.skuBarDesc}}</view>
+    </view>
+    <b bind:_init="_tic" bind:tap="_p" data-t="{{ tap:{en:'handleClick'} }}" priceBarList="{{opt.priceBarList}}" wx:if="{{opt.showPriceCalendarBar}}"></b>
+</view>

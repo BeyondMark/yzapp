@@ -1,0 +1,8 @@
+<ul bind:_init="_tic" class="cap-text-nav">
+    <li bind:_init="_tic" bind:tap="_p" class="cap-text-nav__item" data-t="{{ tap:{ en:'handleClick',args:[item] } }}" wx:for="{{showLinkArr}}" wx:key="index">
+        <a bind:_init="_tic" class="cap-text-nav__link" href="{{item.url}}">
+            <span bind:_init="_tic" class="cap-text-nav__title">{{item.linkTitle}}</span>
+            <b bind:_init="_tic" class="cap-text-nav__icon" name="arrow"></b>
+        </a>
+    </li>
+</ul>

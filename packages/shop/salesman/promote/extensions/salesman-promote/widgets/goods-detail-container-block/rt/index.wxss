@@ -1,0 +1,39 @@
+.goods-detail-wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 0;
+  background-color: #fff;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.goods-detail {
+  background: #fff;
+  margin-top: 8px;
+}
+.goods-detail__title {
+  background: #fff;
+  height: 46px;
+  text-align: center;
+  font-size: 14px;
+  color: #111;
+  line-height: 46px;
+}
+.goods-detail__tab {
+  display: block;
+  background-color: #fff;
+}
+.goods-detail__nav-inner .van-tabs__line,
+.goods-detail__tab-inner .van-tabs__line {
+  width: 40px;
+}
+.goods-header {
+  background: #fff;
+  border: 0 solid #ebedf0;
+  font-size: 14px;
+  color: #323233;
+  text-align: center;
+  line-height: 40px;
+  font-weight: bolder;
+}

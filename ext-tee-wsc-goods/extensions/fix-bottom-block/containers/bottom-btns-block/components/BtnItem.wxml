@@ -1,0 +1,19 @@
+<button class="{{'c0643d'}} {{first?'acca5':''}} {{last?'e1e0e':''}}" disabled="{{disabled}}" openType="{{btn.share?'share':''}}">
+    <view class="{{'d0c3e'}} {{btn.primary?'c0cb0b':''}} {{disabled||btn.disabled?'c613f0':''}}" disabled="{{disabled||btn.disabled}}" style="{{btn.style}}">
+        <view class="c91011 c43ac2" wx:if="{{btn.sub&&btn.sub.length}}">
+            <view class="{{btn.sub.length===1?'c7ad44':''}}" wx:for="{{btn.sub}}" wx:for-item="subItem" wx:key="text"> {{subItem.text}} </view>
+        </view>
+        <view class="c91011">
+            <slot></slot>
+            <view class="c9b2eb {{btn.main.length===1?'c7ad44':''}} {{mainIndex===1&&mainItem.text.length>12?'faeef':''}}" wx:for="{{btn.main}}" wx:for-index="mainIndex" wx:for-item="mainItem" wx:key="text">
+                <view class="c3aa13">
+                    <image class="c733f5 bd231" lazyLoad="true" mode="aspectFill" src="{{mainItem.avatar}}" wx:if="{{mainItem.avatar}}"></image>
+                    <view wx:if="{{mainItem.type==='countDown'}}">{{countDownTime}}</view>
+                    <view wx:elif="{{mainItem.text}}">{{mainItem.text}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view bind:tap="_p" class="d782c" data-t="{{ tap:{en:'handleBigButtonClick'} }}" wx:if="{{isUnRenderAuth}}"></view>
+    <a allowDeny="{{btnAllowDeny}}" authTypeList="{{authTypeList}}" bind:_init="_tic" bind:next="_p" class="d782c" customStyle="display:block;border:none;" data-t="{{ next:{en:'handleBigButtonClick'} }}" dataset="{{btn}}" kdtId="{{kdtId}}" needGetUnionId="{{hasWxUnionId===false}}" scene="{{authScene}}" type="separate" wx:if="{{!disabled&&!isUnRenderAuth}}"></a>
+</button>

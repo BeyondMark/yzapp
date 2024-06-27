@@ -1,0 +1,4 @@
+<view class="c73f8a">
+    <view class="f063d">{{item.name}}</view>
+    <view class="d1983">{{item.value}}</view>
+</view>

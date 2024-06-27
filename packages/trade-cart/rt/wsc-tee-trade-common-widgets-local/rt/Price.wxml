@@ -1,0 +1,9 @@
+<view class="{{!hasEstimatedPrice&&needFlex?'c69d0d':''}}">
+    <view class="c78a5e">
+        <view class="c3a4d0 c89585">¥</view>
+        <view class="c8b830 c89585" style="font-weight:{{isPop?400:600}}">{{formatPrice[0]}}</view>
+        <view class="c3f0b3 c89585" wx:if="{{formatPrice[1]}}">.{{formatPrice[1]}}</view>
+    </view>
+    <view class="c67960" wx:if="{{hasEstimatedPrice}}">每件预计到手¥{{formatEstimatedPrice}}</view>
+    <view class="c64989" style="{{originStyle}}" wx:elif="{{formatOriginPrice}}">    ¥{{formatOriginPrice}} </view>
+</view>

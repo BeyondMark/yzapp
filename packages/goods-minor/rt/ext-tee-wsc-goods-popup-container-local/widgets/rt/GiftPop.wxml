@@ -1,0 +1,21 @@
+<b bind:_init="_tic" closeOnClickOverlay="{{false}}" customStyle="background-color: transparent;padding: 48px 0;" overlay="{{true}}" show="{{show}}">
+    <view class="gift-icon--close">
+        <view bind:tap="_p" class="gift-icon--close_img" data-t="{{ tap:{en:'onClose'} }}"></view>
+    </view>
+    <view>
+        <view class="gift-header" style="{{headImg}}" wx:if="{{detail.useSelfStyle}}"></view>
+        <view class="{{'gift-wrap'}} {{'gift-wrap-'+detail.showType}}" style="{{detail.style}}">
+            <view bind:tap="_p" class="rule-tag" data-t="{{ tap:{en:'showRule'} }}"> 活动规则 </view>
+            <view wx:if="{{detail.hasCoupon}}">
+                <view class="{{'gift-wrap__title'}} {{detail.titleClass}}">
+                    <view wx:if="{{detail.showType===2&&detail.totalMoney}}">            送你
+            <view class="gift-wrap__title--strong t-text"> {{detail.totalMoney}} </view>            元红包
+          </view>
+                    <view wx:else>{{detail.title}}</view>
+                </view>
+                <a bind:_init="_tic" bind:close="_p" bind:subscribe-message="_p" data-t="{{ close:{en:'onClose'},subscribeMessage:{en:'subscribeMessage'} }}" detail="{{detail}}" hideProtocol="{{1}}" rmId="{{i[0]}}" source="{{source}}" wx:if="{{i[1]}}" wx:for="{{[ [rmId,rmId==='b7-39'],[rmId,rmId==='b33-5'] ]}}" wx:for-item="i" wx:key="0"></a>
+            </view>
+            <c bind:_init="_tic" detail="{{detail}}" wx:else></c>
+        </view>
+    </view>
+</b>

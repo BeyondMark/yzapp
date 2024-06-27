@@ -1,0 +1,15 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@vant/weapp/dist/popup/index",
+    "b": "../../@vant/weapp/dist/button/index",
+    "c": "../../../async-main/@vant/weapp/dist/icon/index",
+    "d": "./components/scene-pop-header/index",
+    "e": "./components/benefits/index",
+    "f": "./components/coupon/index",
+    "g": "../subscribe-fail-popup/index",
+    "h": "/components/account/user-authorize/index",
+    "_": "../../../../components/_/index"
+  },
+  "componentPlaceholder": { "c": "_" }
+}

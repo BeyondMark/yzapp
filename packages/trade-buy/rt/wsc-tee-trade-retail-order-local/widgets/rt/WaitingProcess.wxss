@@ -1,0 +1,19 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.c50751 {
+  margin-top: 10px;
+}
+.c07cc6 {
+  display: inline;
+  height: 22px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 22px;
+  color: #323233;
+}
+.e2942 {
+  font-size: 20px;
+  color: var(--general, #ee0a24);
+}

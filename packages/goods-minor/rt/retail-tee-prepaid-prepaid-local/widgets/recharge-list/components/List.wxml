@@ -1,0 +1,20 @@
+<view class="b4acf" wx:if="{{list.length>0}}">
+    <view class="c0b4b6" wx:if="{{intro&&intro.text}}">
+        <view class="c69337"></view>
+        <view class="c5799b"></view>
+        <view class="c16447 c89585">储值更划算！</view>
+        <view class="c89585"> {{intro.text}} </view>
+    </view>
+    <view class="c572dc">
+        <view bind:tap="_p" class="dc7fe {{selectedIndex===idx?'f8404':''}} {{layoutClass}}" data-t="{{ tap:{ en:'handleSelect',args:[item,idx] } }}" wx:for="{{list}}" wx:for-index="idx" wx:key="idx">
+            <view class="b30b6 c130af" wx:if="{{!hideBadge&&idx===0&&selectedIndex!==idx}}">推荐</view>
+            <view class="b30b6 c0261b" wx:if="{{selectedIndex===idx}}">
+                <b bind:_init="_tic" name="success"></b>
+            </view>
+            <view class="c3d0e3 {{selectedIndex===idx?'c3d0e3--active':''}}">        充{{item.amount/100}}元</view>
+            <view class="bf4e8 {{promotion?'c86177':''}} c89585"> {{item.slogan}}</view>
+        </view>
+        <view class="c40e3c" wx:if="{{list.length>2}}"></view>
+    </view>
+    <a bind:_init="_tic" kdtId="{{kdtId}}"></a>
+</view>

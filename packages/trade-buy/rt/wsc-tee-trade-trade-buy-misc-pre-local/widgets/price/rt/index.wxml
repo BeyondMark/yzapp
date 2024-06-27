@@ -1,0 +1,8 @@
+<view>
+    <view class="c78a5e c89585" style="{{themeGeneralColor?'color: '+themeGeneralColor+';':''}}">
+        <view class="c3a4d0 c89585">¥</view>
+        <view class="c8b830 c89585">{{formatPrice[0]}}</view>
+        <view class="c3f0b3 c89585" wx:if="{{formatPrice[1]}}">.{{formatPrice[1]}}</view>
+    </view>
+    <view class="c64989 c89585" style="{{originStyle}}" wx:if="{{formatOriginPrice}}">    ¥{{formatOriginPrice}} </view>
+</view>

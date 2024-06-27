@@ -1,0 +1,14 @@
+.c77542 {
+  padding: 4px 16px;
+  margin-bottom: 8px;
+}
+.c46110 {
+  width: 100% !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 22px !important;
+  background: var(--main-bg, #e7c5a5) !important;
+  border-radius: var(--theme-radius-button, 21px) !important;
+  color: var(--main-text, #573413) !important;
+  border-color: var(--main-bg, #e7c5a5) !important;
+}

@@ -1,0 +1,24 @@
+.c89585 {
+  text-decoration: inherit;
+}
+.c89585,
+.bd231 {
+  display: inline-block;
+}
+.bd231 {
+  width: 100%;
+  height: 100%;
+}
+.c274dd {
+  color: #38f;
+  text-align: center !important;
+}
+.c1ae2 {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  vertical-align: middle;
+  background: 50%no-repeat;
+  background-size: 16px 16px;
+}

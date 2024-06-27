@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "权益卡",
+  "navigationBarBackgroundColor": "#FFF",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "a": "/pages/common/page-container/index",
+    "b": "../common/components/theme-view/index",
+    "c": "/components/account/user-authorize/index",
+    "d": "../../async-main/@vant/weapp/dist/dialog/index",
+    "_": "../../../components/_/index"
+  },
+  "componentPlaceholder": { "d": "_" }
+}

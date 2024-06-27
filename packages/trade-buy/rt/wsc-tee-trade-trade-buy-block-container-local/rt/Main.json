@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../wsc-tee-trade-trade-buy-drug-local/rt/Main",
+    "b": "./../../wsc-tee-trade-trade-buy-misc-local/widgets/haitao-footer-notice/rt/index",
+    "c": "./../../wsc-tee-trade-retail-order-local/widgets/rt/Dine",
+    "_": "../../../../../components/_/index"
+  }
+}

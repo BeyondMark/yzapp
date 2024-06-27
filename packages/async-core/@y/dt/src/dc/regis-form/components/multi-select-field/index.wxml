@@ -1,0 +1,27 @@
+<view class="multi-select-field">
+    <view class="multi-select">
+        <view bind:tap="_p" class="field-input" data-t="{{ tap:{en:'toggleSelector'} }}">
+            <view class="field-label"> {{fieldLabel}} </view>
+            <view class="multi-values" wx:if="{{fieldValue.length}}">
+                <view class="multi-values__item" wx:for="{{fieldValue}}" wx:key="item"> {{item}} </view>
+            </view>
+            <view class="field-placeholder" wx:else>{{fieldInfo.placeholder}}</view>
+            <b bind:_init="_tic" class="input-se-icon" name="arrow"></b>
+        </view>
+    </view>
+    <a bind:_init="_tic" bind:click-overlay="_p" class="select-popup" customStyle="{{popupStyle}}" data-t="{{ clickOverlay:{en:'handleCancel'} }}" position="bottom" show="{{showSelector}}" zIndex="10000">
+        <view class="options-header">      请选择
+      <b bind:_init="_tic" bind:tap="_p" class="options-header-icon" data-t="{{ tap:{en:'handleCancel'} }}" name="cross"></b>
+        </view>
+        <view class="options-container" style="{{optionsStyle}}" wx:if="{{options.length}}">
+            <c bind:_init="_tic" bind:change="_p" checkedColor="{{themeColors.general}}" customClass="van-checkbox" data-t="{{ change:{ en:'handleValueChange',args:[index] } }}" iconSize="{{checkBoxIconSize}}" name="{{opt}}" value="{{currentSelect[index]}}" wx:for="{{options}}" wx:for-item="opt" wx:key="index"> {{opt}} </c>
+        </view>
+        <view class="no-options" wx:else>没有可用的选项</view>
+        <view class="btn-container">
+            <view bg="main-bg" class="theme-view" style="{{'background: '+themeColors.general}}; {{'color: #fff'}}">
+                <d bind:_init="_tic" bind:tap="_p" customClass="van-button" customStyle="width: 100%" data-t="{{ tap:{en:'handleConfirm'} }}" type="primary">          确定
+        </d>
+            </view>
+        </view>
+    </a>
+</view>

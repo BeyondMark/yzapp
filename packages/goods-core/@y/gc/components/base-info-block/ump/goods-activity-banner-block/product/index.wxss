@@ -1,0 +1,14 @@
+.d3a1f {
+  position: relative;
+  margin-right: 18px;
+  box-sizing: border-box;
+  padding: 4px 12px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  border-radius: 8px;
+  text-align: center;
+  z-index: 0;
+}

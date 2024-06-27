@@ -1,0 +1,8 @@
+<view class="goods-btns__mini">
+    <b bind:_init="_tic" bind:btn-click="_p" btn="{{btn}}" data-t="{{ btnClick:{ en:'onMinBtnClick',args:[btn] } }}" wx:for="{{opt.miniBtns}}" wx:for-item="btn" wx:key="index">
+        <slot name="im" wx:if="{{btn.type==='im'}}"></slot>
+    </b>
+    <a bind:_init="_tic" bind:btn-click="_p" bind:hide="_p" buttons="{{opt.plusMiniBtns}}" data-t="{{ hide:{en:'togglePlusBtnsPopup'},btnClick:{en:'onMinBtnClick'} }}" show="{{plusBtnsShow}}" wx:if="{{opt.plusMiniBtns.length>0}}">
+        <slot name="plusIm"></slot>
+    </a>
+</view>

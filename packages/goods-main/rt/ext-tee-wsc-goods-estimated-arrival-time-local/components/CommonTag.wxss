@@ -1,0 +1,28 @@
+.arrival-common-tag {
+  position: relative;
+  display: inline-block;
+  color: var(--theme-tag-color, #323233);
+}
+.arrival-common-tag__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.arrival-common-tag__inner {
+  position: relative;
+  z-index: 2;
+  font-size: 12px;
+  text-align: center;
+  white-space: nowrap;
+  padding: 0 4px;
+  height: 16px;
+  line-height: 16px;
+  color: var(--theme-tag-color, #323233) !important;
+  background: var(--theme-tag-bg-color, #f2f2ff) !important;
+}
+.arrival-common-tag__inner:after {
+  border-radius: var(--theme-radius-tag, 1rem) !important;
+}

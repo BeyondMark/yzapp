@@ -1,0 +1,9 @@
+<view class="ump-tags-container">
+    <view class="ump-tags" wx:if="{{normalTags.length>0}}">
+        <a bind:_init="_tic" class="ump-tag" color="{{colors.tagBgColor}}" round="{{true}}" textColor="{{colors.tagTextColor}}" wx:for="{{normalTags}}" wx:key="index"> {{item}} </a>
+    </view>
+    <view class="ump-tags" wx:else>
+        <view class="{{'default-tag'}} {{'default-tag-'+item.id}}" wx:for="{{defaultTags}}" wx:key="id">
+            <view class="tag-icon"></view> {{item.name}} </view>
+    </view>
+</view>

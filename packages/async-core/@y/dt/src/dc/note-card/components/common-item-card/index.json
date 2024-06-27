@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y/dt/src/captain/layout/layout",
+    "b": "/@y/dt/src/captain/layout/layout-item",
+    "c": "./../note-thumb-view/index",
+    "d": "./../../../../captain/item-image/index",
+    "e": "./../more-button/index",
+    "_": "../../../../../../../../../components/_/index"
+  }
+}

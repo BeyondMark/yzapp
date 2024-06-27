@@ -1,0 +1,37 @@
+.rule-detail__popup {
+  text-align: center;
+  border-radius: 20px 20px 0 0;
+}
+.rule-detail__popup .rule-detail__container {
+  height: 340px;
+  overflow: scroll;
+  background: #fff;
+  border-radius: 8px;
+  text-align: left;
+  padding: 5px 15px;
+}
+.rule-detail__popup .rule-detail__container .rule-detail__title {
+  font-family: PingFangSC-Semibold;
+  font-size: 16px;
+  color: #000;
+  padding: 10px 0;
+  text-align: center;
+}
+.rule-detail__popup .rule-detail__container .rule-main__sect {
+  margin-top: 30px;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  white-space: pre-wrap;
+}
+.rule-detail__popup .rule-detail__container .rule-main__sect:first-of-type {
+  margin-top: 10px;
+}
+.rule-detail__popup .rule-detail__container .rule-main__sect:last-of-type {
+  margin-bottom: 10px;
+}
+.rule-detail__popup .rule-detail__container .rule-main__sect p {
+  line-height: 20px;
+}
+.rule-detail__popup .rule-detail__bottom {
+  padding: 16px;
+}

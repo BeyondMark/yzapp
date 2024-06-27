@@ -1,0 +1,5 @@
+<view class="{{'zan-pay__channel'}} {{!channel.available&&'zan-pay__channel--disabled'}}">
+    <a bind:_init="_tic" channel="{{lowerCase}}" customStyle="{{iconStyle}}"></a>
+    <view class="t-text">{{displayName}}</view>
+    <view class="t-text" wx:if="{{showBalance&&channel.balanceDesc}}">（{{channel.balanceDesc}}）</view>
+</view>

@@ -1,0 +1,32 @@
+<view class="d7f57 o-private {{prompt.goods.length===1?'dc8b8':'dcb89'}}">
+    <view bind:tap="_p" class="c66f61" data-t="{{ tap:{en:'onClick'} }}" wx:if="{{prompt.goods.length===1}}">
+        <view class="cae74">
+            <image class="c96582 bd231" lazyLoad="true" mode="aspectFill" src="{{prompt.goods[0].imgUrl}}" style="width: 56px; height: 56px"></image>
+            <view class="b67a1">
+                <p bind:_init="_tic" class="a5571"> {{prompt.goods[0].goodsName}} </p>
+                <view class="a5d38">
+          应付：<b bind:_init="_tic" price="{{prompt.payPrice}}"></b>
+                    <view class="c418cd c89585"> {{prompt.goods[0].service}} </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="c66f61" wx:else>
+        <view class="c8f776">
+            <view class="d9d38">
+                <view class="c7de17 {{prompt.goods.length<=2?'c1890f':''}}">
+                    <view class="edbfa" wx:for="{{prompt.goods}}" wx:key="name">
+                        <image class="c96582 bd231" lazyLoad="true" mode="aspectFill" src="{{item.imgUrl}}" style="width: 56px; height: 56px"></image>
+                    </view>
+                </view>
+            </view>
+            <view class="ad4ed">
+                <a bind:_init="_tic" color="#999999" name="arrow"></a>
+            </view>
+        </view>
+        <view class="a5d38">
+      共{{prompt.goods.length}}件，应付
+      <b bind:_init="_tic" price="{{prompt.payPrice}}"></b>
+        </view>
+    </view>
+</view>

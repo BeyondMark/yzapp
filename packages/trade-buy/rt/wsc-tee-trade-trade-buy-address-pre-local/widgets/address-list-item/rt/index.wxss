@@ -1,0 +1,95 @@
+.f49f8 {
+  position: relative;
+  margin: var(--theme-page-card-margin-top, 0)
+    var(--theme-page-card-margin-right, 0)
+    var(--theme-page-card-margin-bottom, 12px)
+    var(--theme-page-card-margin-left, 0);
+  padding: var(--theme-page-card-padding-top, 12px)
+    var(--theme-page-card-padding-right, 12px)
+    var(--theme-page-card-padding-bottom, 12px)
+    var(--theme-page-card-padding-left, 12px);
+  background-color: #fff;
+  border-radius: var(--theme-radius-card, 8px);
+  --radio-label-margin: 12px;
+  --radio-checked-icon-color: var(--main-bg, #323233);
+}
+.a9a2d {
+  margin-left: var(--theme-page-card-padding-left, 10px);
+}
+.c9d7b1 {
+  padding: 0 !important;
+}
+.d2821 {
+  padding-right: 44px;
+  text-align: left !important;
+  color: #323233 !important;
+}
+.c0ea45 {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: left;
+  color: #969799;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.f2d41 {
+  color: #c8c9cc;
+}
+.bc4b2 {
+  position: relative;
+  top: -1px;
+  justify-content: center;
+  margin-right: 4px;
+  height: 16px;
+  min-width: 32px;
+  box-sizing: border-box;
+}
+.bc4b2:after {
+  border-radius: var(--theme-radius-tag, 8px) !important;
+}
+.f5a4c {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: var(--theme-common-field-font-weight, 500);
+  line-height: 20px;
+}
+.f49f8--disabled .f5a4c,
+.f49f8--disabled .c0ea45 {
+  color: #c8c9cc;
+}
+.c94b08 {
+  padding: 10px 0 10px 10px;
+  position: absolute !important;
+  top: 50%;
+  right: 0;
+  color: #969799;
+  font-size: 20px !important;
+  transform: translateY(-50%);
+}
+.c77677 {
+  font-size: 12px;
+  color: #ed6a0c;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  margin: 8px 6px 0 0;
+  position: relative;
+  justify-content: space-between;
+}
+.c7a515 {
+  margin-left: 30px;
+}
+.c96171 {
+  height: 1em;
+}
+.f49f8 .t-radio__icon {
+  border: 1px solid #969799;
+}
+.f49f8 .van-radio__label {
+  margin-left: var(--theme-page-card-padding-left, 10px);
+}

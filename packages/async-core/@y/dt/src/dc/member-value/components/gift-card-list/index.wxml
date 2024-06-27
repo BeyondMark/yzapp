@@ -1,0 +1,21 @@
+<view class="list" style="{{'--themeColor: '+themeColors.general+';'}}">
+    <view class="{{className}}" wx:for="{{cardInfoList}}" wx:key="index">
+        <view bind:tap="_p" class="item" data-t="{{ tap:{ en:'redirectToBuyCardCenter',args:[item] } }}" href="{{link}}" wx:if="{{item.status===1}}">
+            <view class="img" style="background-image:{{'url('+item.productImage+')'}}; background-size:cover"></view>
+            <view class="name"> {{item.productName}} </view>
+            <view class="price"> {{item.formatedAmount}} </view>
+        </view>
+        <view class="item" wx:if="{{item.status===0}}">
+            <view class="img img-disable" style="background-image:{{'url('+item.productImage+')'}}; background-size:cover"></view>
+            <view class="name"> {{item.productName}} </view>
+            <view class="price"> {{item.formatedAmount}} </view>
+            <view class="tip"> 已售罄 </view>
+        </view>
+        <view class="item" wx:if="{{item.status===-1}}">
+            <view class="img img-disable" style="background-image:{{'url('+item.productImage+')'}}; background-size:cover"></view>
+            <view class="name"> {{item.productName}} </view>
+            <view class="price"> {{item.formatedAmount}} </view>
+            <view class="tip"> 已停售 </view>
+        </view>
+    </view>
+</view>

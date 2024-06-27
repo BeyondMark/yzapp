@@ -1,0 +1,40 @@
+.c7fd73 {
+  width: 686rpx;
+  margin: 24rpx auto 0;
+  background: #fff;
+  padding: 32rpx 0 32rpx 24rpx;
+  box-sizing: border-box;
+  border-radius: 8rpx;
+  position: relative;
+}
+.c7c53 {
+  color: #323233;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  margin-bottom: 24rpx;
+}
+.c778e0 {
+  position: absolute;
+  right: 24rpx;
+  top: 0;
+  height: 80rpx;
+}
+.aaee8 {
+  flex-wrap: wrap;
+}
+.aaee8,
+.f898d {
+  display: flex;
+  align-items: center;
+}
+.f898d {
+  padding: 0 32rpx;
+  height: 56rpx;
+  background: #f7f8fa;
+  border-radius: 32rpx;
+  font-size: 12px;
+  margin: 0 16rpx 16rpx 0;
+  color: #646566;
+  justify-content: center;
+}

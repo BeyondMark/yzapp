@@ -1,0 +1,7 @@
+<view class="header-wrap">
+    <a wx:if="{{showSlider}}"></a>
+    <b></b>
+    <view class="header-title" style="{{!showSlider?'text-align: left':''}}" wx:if="{{isOpenRank}}">幸运码排行榜前 {{topNum}} 名必中奖</view>
+    <c></c>
+    <d wx:if="{{status===2}}"></d>
+</view>

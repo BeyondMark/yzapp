@@ -1,0 +1,16 @@
+<a pageContainerClass="{{isIphoneX?'is-iphonex':''}}" pageContainerStyle="padding-top: {{navigationInfo.statusBarHeight+navigationInfo.navHeight}}px;">
+    <b></b>
+    <m wx:if="{{showEnd}}"></m>
+    <block wx:else>
+        <c></c>
+        <d wx:if="{{taskList.length}}"></d>
+        <e wx:if="{{prizeDesc}}"></e>
+        <f wx:if="{{status===statusMap.DRAWED}}"></f>
+        <h wx:if="{{status===statusMap.DRAWING||status===statusMap.DRAWED}}"></h>
+        <i></i>
+        <j></j>
+        <l></l>
+        <k></k>
+    </block>
+    <g wx:if="{{showRecommend}}"></g>
+</a>

@@ -1,0 +1,10 @@
+<a bind:_init="_tic" bind:close="_p" closeIcon="arrow-left" closeIconPosition="top-left" closeable="{{true}}" data-t="{{ close:{en:'onClose'} }}" position="bottom" round="{{true}}" show="{{value}}" zIndex="{{zIndex}}">
+    <view class="guarantee-common" wx:if="{{value}}">
+        <view class="guarantee-common__container">
+            <view class="guarantee-common__title">{{content.title}}</view>
+            <view class="guarantee-common__content" wx:if="{{content.content}}">
+                <image class="tee-image" lazyLoad="true" mode="widthFix" src="{{img}}" wx:for="{{content.content.imgs}}" wx:for-item="img" wx:key="img"></image>
+            </view>
+        </view>
+    </view>
+</a>

@@ -1,0 +1,6 @@
+.shopnote-headpic__image {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  border: 0;
+}

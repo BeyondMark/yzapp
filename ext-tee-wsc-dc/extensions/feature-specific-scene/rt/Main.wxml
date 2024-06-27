@@ -1,0 +1,9 @@
+<view>
+    <a bind:_init="_tic" bind:coverAdHide="_p" bind:coverAdShow="_p" data-t="{{ coverAdHide:{en:'coverAdHide'},coverAdShow:{en:'coverAdShow'} }}" isEnterShop="{{isEnterShop}}" pageHide="{{featurePageHide}}" wx:if="{{showCoverAd}}"></a>
+    <view style="display: none" wx:if="{{preLoadImages.length}}">
+        <image class="tee-image" lazyLoad="true" src="{{imageInfo}}" wx:for="{{preLoadImages}}" wx:for-item="imageInfo" wx:key="imageInfo"></image>
+    </view>
+    <view class="home-gray" wx:if="{{homepageGray&&isHomePage}}"></view>
+    <b alias="{{alias}}" bind:_init="_tic" isHomePage="{{isHomePage}}" kdtId="{{kdtId}}" timelineSnapshotInfo="{{timelineSnapshotInfo}}" wx:if="{{isFromTimeline}}"></b>
+    <c bind:_init="_tic" bind:message="_p" data-t="{{ message:{en:'onMessage'} }}" src="{{webviewFeatureUrl}}" usePrefetchInfo="{{usePreloadWebviewTicket}}" wx:if="{{isWebviewFeature}}"></c>
+</view>

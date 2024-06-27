@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../initiator-info/rt/index",
+    "_": "../../../../../../../../components/_/index"
+  }
+}

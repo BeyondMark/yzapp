@@ -1,0 +1,24 @@
+<view class="container" hidden="{{hidden}}">
+    <view class="shop-list-title" wx:if="{{!hiddenTitle}}">{{title||'全部店铺'}}<view bindtap="goAllStore" class="all" wx:if="{{isShowAll}}">
+            <text>查看全部</text>
+            <a class="title-arrow" color="#969799" name="arrow"></a>
+        </view>
+    </view>
+    <view wx:if="{{shopLists&&shopLists.length>0}}">
+        <view class="shop-list-wrapper" wx:for="{{shopLists}}" wx:key="name">
+            <view bindtap="handleChooseShop" class="shop-list-item" data-shop="{{item}}">
+                <view class="item-content">
+                    <view class="item-head">
+                        <view class="name">{{item.name}}</view>
+                        <view class="mark" wx:if="{{item.isCurrent}}">最近访问</view>
+                    </view>
+                    <view class="item-desc">
+                        <text class="num" wx:if="{{item.distance}}">{{item.distance}} km</text>{{item.desc}}</view>
+                </view>
+                <a class="icon-arrow" color="#969799" name="arrow" wx:if="{{!(isOffline||item.offlineShopOpen)&&!disableLink}}"></a>
+            </view>
+        </view>
+        <view class="no-more" wx:if="{{noMore}}">没有更多了...</view>
+    </view>
+    <view class="about-blank" wx:else>{{blankContent||'暂无相关店铺'}}</view>
+</view>

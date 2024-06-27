@@ -1,0 +1,24 @@
+<view class="e395a">
+    <view wx:for="{{postageRule}}" wx:key="index">
+        <a bind:_init="_tic" border="{{false}}" class="c0b873">
+            <view class="c66cb2" slot="title">
+                <view class="c6c7ee c89585">包邮区域：</view>
+                <view class="c0b873__value">{{item.area}}</view>
+            </view>
+        </a>
+        <a bind:_init="_tic" border="{{false}}" class="c0b873">
+            <view class="c66cb2" slot="title">
+                <view class="c6c7ee c89585">配送方式：</view>
+                <view class="c0b873__value c89585">{{item.type}}</view>
+            </view>
+        </a>
+        <a bind:_init="_tic" class="c0b873">
+            <view class="c66cb2" slot="title">
+                <view class="c6c7ee c89585">包邮规则：</view>
+                <view class="c0b873__value c89585">{{item.rule}}</view>
+            </view>
+        </a>
+    </view>
+    <view class="c5625f">注：如果多个包邮规则叠加，则按照最优优惠原则计算运费金额</view>
+    <view bind:tap="_p" class="c592a9" data-t="{{ tap:{en:'onUrlClick'} }}">查看活动</view>
+</view>

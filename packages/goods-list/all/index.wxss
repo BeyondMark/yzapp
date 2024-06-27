@@ -1,0 +1,17 @@
+.c964a4 {
+  flex-direction: column;
+}
+.c964a4,
+.r-r {
+  display: flex;
+}
+.r-r {
+  flex-direction: row;
+}
+.ce009 {
+  padding-bottom: 50px;
+}
+.c834f4 {
+  position: relative;
+  z-index: 10000;
+}

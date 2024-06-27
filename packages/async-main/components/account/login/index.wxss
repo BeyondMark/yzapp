@@ -1,0 +1,23 @@
+.mobile-popup {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.account-login-dialog {
+  line-height: normal;
+  text-align: initial;
+}
+.close-icon {
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  top: 22px;
+  color: #999;
+  z-index: 3000;
+}
+.copyright {
+  color: #d4d3d3;
+  font-size: 12px;
+  line-height: 17px;
+  padding: 16px 0;
+  text-align: center;
+}

@@ -1,0 +1,33 @@
+<view class="c86312 c0abf">
+    <g bind:_init="_tic" bind:assign-invoice-common="_p" bind:assign-invoice-enterprise="_p" bind:assign-invoice-personal="_p" data-t="{{ assignInvoiceCommon:{en:'modifyRaiseType'},assignInvoiceEnterprise:{en:'modifyEnterprise'},assignInvoicePersonal:{en:'modifyPersonal'} }}"></g>
+    <view class="c00c23 c18563">
+        <view class="c92518">发票类型</view>
+        <view bind:tap="_p" class="c86693" data-t="{{ tap:{en:'onOpenInvoiceTips'} }}">      查看发票须知
+      <b bind:_init="_tic" customClass="bb012" name="info-o" size="16px"></b>
+        </view>
+    </view>
+    <view class="a9088">
+        <view bind:tap="_p" class="{{'c51c14'}} {{isNormalType?'c49621':''}}" data-t="{{ tap:{ en:'modifyInvoiceType',args:[1] } }}" wx:if="{{isShowNormalInvoice}}">
+            <view class="c3da06 c89585">普通发票</view>
+        </view>
+        <view bind:tap="_p" class="{{'c51c14'}} {{isVatType?'c49621':''}}" data-t="{{ tap:{ en:'modifyInvoiceType',args:[2] } }}" wx:if="{{isShowVatInvoice}}">
+            <view class="c3da06 c89585">增值税专用发票</view>
+        </view>
+    </view>
+    <e bind:_init="_tic" border="{{false}}" customClass="c99838">
+        <d bind:_init="_tic" border="{{false}}" customClass="invoice-type-radio" customStyle="padding: 10px 0px;" title="抬头类型" titleWidth="72px" valueClass="c62da1">
+            <view class="c121ce">
+                <view style="color: #000" wx:if="{{isVatType}}">企业</view>
+                <view class="e6289" wx:else>
+                    <c bind:_init="_tic" bind:change="_p" checkedColor="{{themeColors.general}}" customClass="e37b6" data-t="{{ change:{ en:'modifyRaiseType',args:['enterprise'] } }}" iconSize="18" name="enterprise" value="{{raiseType}}">企业</c>
+                    <c bind:_init="_tic" bind:change="_p" checkedColor="{{themeColors.general}}" customClass="e37b6" data-t="{{ change:{ en:'modifyRaiseType',args:['personal'] } }}" iconSize="18" name="personal" value="{{raiseType}}">个人</c>
+                </view>
+            </view>
+        </d>
+        <a bind:_init="_tic" bind:blur="_p" bind:change="_p" bind:focus="_p" border="{{false}}" customStyle="padding: 10px 0px;" data-t="{{ focus:{en:'onUserNameFocus'},change:{en:'onUserNameInput'},blur:{en:'cellDropdownBlur'} }}" inputClass="c92b3f" label="发票抬头" placeholder="{{isEnterpriseType?'请输入企业名称':'请输入个人名称'}}" titleWidth="72px" value="{{userName}}"></a>
+        <f bind:_init="_tic" bind:close="_p" bind:select="_p" data-t="{{ select:{en:'onUserNameSelect'},close:{en:'onUserNameClose'} }}" list="{{corpList}}" name="{{userName}}" show="{{showCorpTips}}"></f>
+        <view wx:for="{{enterpriseList}}" wx:key="key">
+            <a bind:_init="_tic" bind:change="_p" border="{{false}}" customStyle="padding: 10px 0px;" data-t="{{ change:{ en:'onChangeEnterPrise',args:[item.key] } }}" inputClass="c92b3f" label="{{item.label}}" placeholder="{{item.placeholder}}" titleWidth="72px" value="{{invoice.enterprise[item.key]}}" wx:if="{{isEnterpriseType&&(item.key==='taxpayerId'||isVatType)}}"></a>
+        </view>
+    </e>
+</view>

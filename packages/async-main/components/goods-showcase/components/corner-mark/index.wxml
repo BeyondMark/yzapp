@@ -1,0 +1,1 @@
+<view class="ranking-mark ranking-mark--{{goodsInfo.rank}} {{goodsInfo.rank>3?'rank-above-3':'rank-1-to-3'}}"></view>

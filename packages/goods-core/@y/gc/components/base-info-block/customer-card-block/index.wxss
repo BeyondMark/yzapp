@@ -1,0 +1,41 @@
+.c650d2 {
+  left: 0;
+  top: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  line-height: 18px;
+  padding: 9px 10px;
+  border-radius: var(--theme-radius-card, 4px);
+  background: #fff3e4;
+  color: #573413;
+  font-size: 10px;
+  text-align: left;
+  margin-top: 12px;
+}
+.c650d2:before {
+  display: block;
+  content: "";
+  width: 27px;
+  height: 18px;
+  margin-right: 8px;
+  background: url(https://b.yzcdn.cn/public_files/0f423f329371cbe501eeb67def6243f9.png)
+    no-repeat;
+  background-size: cover;
+}
+.a21a9 {
+  flex: 1;
+  padding-right: 21px;
+  line-height: 18px;
+  font-size: 12px;
+}
+.c6f042 {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 18px;
+}
+.e95ae {
+  margin-top: 16px;
+}

@@ -1,0 +1,36 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../../../../@vant/weapp/dist/sticky/index",
+    "b": "../../../../../../@vant/weapp/dist/tag/index",
+    "c": "/packages/async-main/@vant/weapp/dist/icon/index",
+    "d": "../../../../../../@vant/weapp/dist/tab/index",
+    "e": "../../../../../../@vant/weapp/dist/tabs/index",
+    "f": "../../../../../../@vant/weapp/dist/dropdown-menu/index",
+    "g": "../../../../../../@vant/weapp/dist/dropdown-item/index",
+    "h": "/packages/async-main/components/account/inject-protocol/index",
+    "i": "/packages/async-minor/components/bi-list-icon/index",
+    "j": "/packages/async-minor/components/shop-pop-manager/index",
+    "k": "../../../../search-bar/widgets/search-bar-main/rt/index",
+    "l": "../../../../filter-bar/widgets/filter-bar-main/rt/index",
+    "m": "../../../../share-tab/widgets/share-tab-main/rt/index",
+    "n": "../../../../dc-goods/widgets/dc-goods-main/rt/index",
+    "o": "../../../../shop-block/widgets/shop-block-main/rt/index",
+    "p": "/packages/goods-main/rt/wsc-tee-statcenter-cps-recommend-goods-local/rt/Main",
+    "q": "/packages/async-feature-ext/rt/ext-tee-wsc-goods-biz-sku-manage-local/rt/Main",
+    "r": "/ext-tee-wsc-dc/extensions/showcase-container/rt/ShowcaseContainer",
+    "s": "/packages/async-main/@vant/weapp/dist/toast/index",
+    "t": "/packages/async-main/@vant/weapp/dist/notify/index",
+    "_": "../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": {
+    "c": "_",
+    "h": "_",
+    "i": "_",
+    "j": "_",
+    "p": "_",
+    "q": "_",
+    "s": "_",
+    "t": "_"
+  }
+}

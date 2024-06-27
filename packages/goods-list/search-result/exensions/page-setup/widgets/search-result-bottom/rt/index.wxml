@@ -1,0 +1,18 @@
+<view bindtap="handleRootTap" style="{{goodsOpt.layoutOpt.type==='list'?'; background: #fff':'; background: #F5F5F5'}}">
+    <view class="search-goods__recommend" wx:if="{{showRecommend&&isShowProducts&&isSupportGoodsRecommend&&recommendHasData}}">
+        <a bind:afterload="onAfterload" bizName="search~rec" goodsNumber="{{20}}" layoutConfig="{{layoutConfig}}">
+            <view slot="title">
+                <view class="e1ac0">
+                    <view class="c11ab4">更多精选商品</view>
+                </view>
+            </view>
+        </a>
+    </view>
+    <g id="van-toast"></g>
+    <h id="van-notify"></h>
+    <e goodsList="{{goodsOpt.items}}" searchText="{{keyword}}" slg="{{slg}}" wx:if="{{goodsOpt.items.length>0}}"></e>
+    <f cloudExcluded="{{true}}" rmId="b32-8" wx:if="{{rmId==='b32-1'}}"></f>
+    <d></d>
+    <c></c>
+    <b noAutoAuth="{{noAutoAuth}}" zIndex="{{protocolIndex}}"></b>
+</view>

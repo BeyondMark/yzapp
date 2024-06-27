@@ -1,0 +1,77 @@
+.t-text {
+  text-decoration: inherit;
+}
+.t-text,
+.tee-image {
+  display: inline-block;
+}
+.tee-image {
+  width: 100%;
+  height: 100%;
+}
+.container-column,
+.customer-asset-container {
+  display: -webkit-flex;
+  display: flex;
+}
+.container-column {
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  background-size: cover;
+  background-position: 50%;
+}
+.container-column .asset-info,
+.container-column .user-avatar {
+  position: relative;
+}
+.container-column .auth-block {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.growth-value {
+  margin: 6px 8px 0;
+}
+.avatar-content {
+  display: -webkit-flex;
+  display: flex;
+  height: 106px;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 8px 0;
+}
+.avatar-content .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-top: 6px;
+  overflow: hidden;
+  background: #fff;
+}
+.avatar-content .info-container {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.avatar-content .info-container .name {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--realTextColor);
+  font-weight: 700;
+}
+.avatar-content .info-container .name .level-icon {
+  padding-top: 2px;
+}
+.unAuth {
+  background: #fff;
+  flex: 1;
+}

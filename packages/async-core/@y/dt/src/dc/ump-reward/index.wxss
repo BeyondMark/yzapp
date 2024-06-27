@@ -1,0 +1,6 @@
+.ump-reward__tab-nav {
+  background-color: transparent;
+}
+.ump-reward__tab-line {
+  display: none;
+}

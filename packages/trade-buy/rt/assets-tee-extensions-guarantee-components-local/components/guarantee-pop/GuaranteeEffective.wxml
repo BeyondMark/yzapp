@@ -1,0 +1,30 @@
+<a bind:_init="_tic" bind:close="_p" closeIcon="arrow-left" closeIconPosition="top-left" closeable="{{true}}" data-t="{{ close:{en:'onClose'} }}" position="bottom" round="{{true}}" show="{{value}}" zIndex="{{zIndex}}">
+    <view class="guarantee-effective" wx:if="{{value}}">
+        <view class="guarantee-effective__container">
+            <view class="guarantee-effective__title">{{contentFormat.title}}</view>
+            <view class="guarantee-effective__content">
+                <view class="content1" wx:for="{{contentFormat.content}}" wx:for-item="c" wx:key="index">
+                    <view class="guarantee-effective__sub-title" wx:if="{{c.subTitle}}"> {{c.subTitle}} </view>
+                    <view class="guarantee-effective__desc">
+                        <view wx:for="{{c.desc}}" wx:for-index="rindex" wx:for-item="row" wx:key="rindex">
+                            <view class="guarantee-effective__inline" wx:for="{{row}}" wx:for-index="dindex" wx:for-item="c1" wx:key="dindex">
+                                <view class="t-text" wx:if="{{c1.text&&!c1.url}}">{{c1.text}}</view>
+                                <view bind:tap="_p" class="navigator t-text" data-t="{{ tap:{ en:'onClick',args:[c1.url] } }}" wx:if="{{c1.url}}">{{c1.text}}</view>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="guarantee-effective__list" wx:if="{{c.content.length}}">
+                        <view class="guarantee-effective__list-item" wx:for="{{c.content}}" wx:for-index="cindex" wx:key="cindex">
+                            <view>
+                                <view>{{item.text}}</view>
+                                <view style="color: #969799" wx:if="{{item.subText}}">{{item.subText}}</view>
+                            </view>
+                            <b bind:_init="_tic" color="#00B355" name="passed" wx:if="{{item.effective}}"></b>
+                            <b bind:_init="_tic" color="#969799" name="close" wx:else></b>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</a>

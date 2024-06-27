@@ -1,0 +1,45 @@
+.diabled {
+  pointer-events: none;
+}
+.goods-bottom-bar {
+  margin: 0;
+  min-height: 35px;
+  line-height: 35px;
+  background: #fff7cc;
+  font-size: 12px;
+  color: #f85;
+  text-align: center;
+}
+.goods-bottom-bar--fcode > a {
+  color: #38f;
+}
+.goods-bottom-bar__countdown {
+  font-size: 14px;
+  color: #323233;
+}
+.goods-bottom-bar__countdown .num {
+  padding: 0;
+  line-height: 1.5;
+  background-color: transparent;
+  font-size: 14px;
+  color: #f85;
+  font-family: monospace;
+  margin: 0 3px;
+}
+.goods-bottom-bar--space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+.goods-bottom-bar--space-between > span {
+  display: flex;
+  align-items: center;
+  color: #646566;
+}
+.goods-bottom-bar--space-between .van-icon-arrow {
+  transform: scale(0.83);
+}
+.goods-bottom-bar__text {
+  color: #f85;
+}

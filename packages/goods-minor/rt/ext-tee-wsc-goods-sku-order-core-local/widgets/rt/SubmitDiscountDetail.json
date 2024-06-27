@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./SkuOrderSubmitBlock",
+    "b": "./../../../wsc-tee-trade-trade-buy-ump-block-local/rt/TradeBuyUmpBlock",
+    "c": "/@y-open/vt/dist/popup/index.weapp",
+    "d": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "_": "../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "d": "_" }
+}

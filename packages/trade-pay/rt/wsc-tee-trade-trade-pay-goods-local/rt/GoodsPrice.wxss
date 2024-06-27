@@ -1,0 +1,24 @@
+.c89585 {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.c22098 {
+  font-weight: 700;
+}
+.d98d1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.c487e {
+  text-align: right;
+  color: #38f;
+}
+.c61f0f,
+.ccc42 {
+  vertical-align: middle;
+}
+.be18d {
+  max-height: 80%;
+  overflow-y: auto;
+}

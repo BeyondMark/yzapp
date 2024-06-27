@@ -1,0 +1,4 @@
+<a customClass="handsel-pop" show="{{showHandselPop}}" showBtn="{{false}}" useHeaderSlot="{{true}}">
+    <view class="handsel-pop__header" slot="header">好友送你<text class="strong">1</text>个幸运码</view>
+    <b bind:next="fetchCode" btnClass="handsel-pop-btn" scene="free_lottery">领取去抽奖</b>
+</a>

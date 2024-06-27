@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@vant/weapp/dist/popup/index",
+    "b": "/packages/ump/@vant/weapp/dist/button/index",
+    "_": "../../../../../../../../components/_/index"
+  }
+}

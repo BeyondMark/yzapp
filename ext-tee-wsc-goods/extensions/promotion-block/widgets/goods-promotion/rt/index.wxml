@@ -1,0 +1,33 @@
+<view class="goods-promotion-wrap" wx:if="{{showGoodsPromotion}}">
+    <view class="c41059" wx:if="{{!showTopGoodsPromotion}}">
+        <b bind:_init="_tic" bind:tap="_p" class="cb255" customClass="c17ab2" data-t="{{ tap:{en:'showPromotionPop'} }}">
+            <view class="c21ee" slot="title">
+                <view class="c5d696 c89585">优惠</view>
+                <view class="fb5e8">
+                    <estimate-price-tip bind:_init="_tic" estimatePrice="{{goodsEstimatePriceData.estimatedPrice}}" goodsSpe="{{goodsSpe}}" numPurchase="{{goodsEstimatePriceData.num}}" showBottomGoodsPromotion="{{!showTopGoodsPromotion}}" wx:if="{{showEstimatePriceTip}}"></estimate-price-tip>
+                    <view class="f8ca7" wx:if="{{promotionActivity.orderPromotionLimit}}">            促销信息加载中，请以最终结算价为准
+          </view>
+                    <e bind:_init="_tic" innerStyle="{{innerStyle}}" list="{{goodsPromotionList}}" listClass="cb255" showEstimatePriceTip="{{showEstimatePriceTip}}" themeTag="{{themeTag}}" wx:else></e>
+                </view>
+            </view>
+            <view slot="right-icon" wx:if="{{!promotionActivity.orderPromotionLimit}}">
+                <c bind:_init="_tic" class="c09fdc" name="arrow"></c>
+            </view>
+        </b>
+    </view>
+    <view bind:tap="_p" class="c385b" data-t="{{ tap:{en:'showPromotionPop'} }}" wx:else>
+        <view class="c8be4b cb255">
+            <view class="c64134">
+                <d bind:_init="_tic" item="{{item}}" theme="{{theme}}" themeTag="{{themeTag}}" wx:for="{{couponLabelProcessing}}" wx:key="index"></d>
+            </view>
+            <view class="c86683">
+                <view style="color:var(--ump-icon, #323233)">{{couponActionText}}</view>
+                <c bind:_init="_tic" color="var(--ump-icon, #323233)" name="arrow" size="16px"></c>
+            </view>
+        </view>
+    </view>
+    <f bind:_init="_tic" bind:close="_p" bind:handleShowSubscribeGuide="_p" bind:open="_p" couponList="{{umpCouponList}}" data-ref="promotion" data-t="{{ close:{en:'hidePropmotionPop'},open:{en:'showPromotionPop'},handleShowSubscribeGuide:{en:'toggleShowSubscribeGuide'} }}" goodsEstimatePriceData="{{goodsEstimatePriceData}}" goodsPromotion="{{goodsPromotion}}" goodsSpe="{{goodsSpe}}" kdtId="{{kdtId}}" panelSource="{{showPromotionPosition}}" promotionActivity="{{promotionActivity}}" show="{{promotionPopShow}}" showEstimatePrice="{{showEstimatePrice}}" showGoodsCoupon="{{showGoodsCoupon}}" showRuleBtn="{{pageFeature.showMiniActivityRuleButton}}" templates="{{templates}}"></f>
+    <block wx:if="{{showSubscribeGuide}}">
+        <a bind:_init="_tic" show="{{true}}" zIndex="110" wx:if="{{rmId==='b7-55'}}"></a>
+    </block>
+</view>

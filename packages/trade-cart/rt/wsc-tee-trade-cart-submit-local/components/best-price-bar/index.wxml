@@ -1,0 +1,7 @@
+<view class="f2f47" wx:if="{{showBar}}">
+    <view>
+        <view class="c89585">{{promotionTag[0]}}</view>
+        <view class="c78a5e c89585">￥{{promotionTag[1]}}</view>
+    </view>
+    <view bind:tap="_p" class="d4f5c" data-t="{{ tap:{en:'select'} }}">立即使用</view>
+</view>

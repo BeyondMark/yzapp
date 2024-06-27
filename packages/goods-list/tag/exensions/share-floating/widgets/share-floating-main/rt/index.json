@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../../../../components/share-floating/index",
+    "_": "../../../../../../../../components/_/index"
+  }
+}

@@ -1,0 +1,15 @@
+.coupon-discountbox {
+  width: inherit;
+}
+.coupon-discountbox__section {
+  text-align: inherit;
+}
+.coupon-discountbox__section ~ .coupon-discountbox__section {
+  margin-top: 6px;
+}
+.coupon-discountbox__slot-default {
+  display: none;
+}
+.coupon-discountbox__slot:empty + .coupon-discountbox__slot-default {
+  display: block;
+}

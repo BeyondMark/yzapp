@@ -1,0 +1,15 @@
+<view class="dd592" style="{{'top:'+navTop}}" wx:if="{{isShowBlock}}">
+    <c bind:_init="_tic" danmakuSource="{{danmakuSource}}" isFullScreen="{{isFullScreen}}">
+        <view class="c65eb5" style="{{themeCSS}}">
+            <view bind:tap="_p" class="c33b54" data-t="{{ tap:{en:'handleContentClick'} }}">
+                <a bind:_init="_tic" bind:video-ready="_p" controlsClass="c3fa3b" controlsStyle="{{controlsStyle}}" cover="{{explainVideo.coverUrl}}" data-ref="goodsVideo" data-t="{{ videoReady:{en:'onVideoReady'} }}" enableProgressGesture="{{isFullScreen}}" height="100%" isFullScreen="{{isFullScreen}}" isShowControl="{{isFullScreen}}" isShowFullToggle="{{false}}" isShowPlayIcon="{{!isFullScreen}}" isShowPlayToggle="{{true}}" isSupportBgToggle="{{false}}" loop="{{true}}" playIconClass="e64bd" playIconUrl="{{cloudConfig.playIconUrl}}" src="{{explainVideo.videoUrl}}" width="100%" wx:if="{{rmId==='b7-57'}}"></a>
+            </view>
+            <view>
+                <view bind:tap="_p" class="df8d3 c89585" data-t="{{ tap:{en:'handleCloseBlock'} }}">
+                    <b bind:_init="_tic" color="#fff" customStyle="display: flex" name="cross" size="10"></b>
+                </view>
+                <view class="c8f28d">视频讲解</view>
+            </view>
+        </view>
+    </c>
+</view>

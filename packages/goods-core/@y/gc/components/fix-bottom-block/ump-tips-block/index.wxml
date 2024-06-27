@@ -1,0 +1,9 @@
+<view class="c61589">
+    <e bind:_init="_tic" kdtId="{{opt.kdtId}}" query="{{opt.query}}" seActivity="{{seActivity}}"></e>
+    <b bind:_init="_tic" bind:show-share-pop="_p" currentActivity="{{currentActivity}}" data-t="{{ showSharePop:{en:'handleShowInSourcingSharePop'} }}" fissionSku="{{opt.fissionSku}}" showInSourcingSharePop="{{showInSourcingSharePop}}"></b>
+    <d bind:_init="_tic" buyButtonPop="{{buyButtonPop}}" newCustomerCouponPopIcon="{{newCustomerCouponPopIcon}}" wx:if="{{showNewCustomerCouponTip}}"></d>
+    <f bind:_init="_tic" currentActivity="{{currentActivity}}" kdtId="{{opt.kdtId}}" picture="{{goodsPicture}}" price="{{goodsPrice}}" wx:elif="{{showGroupBargin}}"></f>
+    <c bind:_init="_tic" currentActivity="{{currentActivity}}" kdtId="{{opt.kdtId}}" wx:elif="{{showGrouponTip}}"></c>
+    <a bind:_init="_tic" bind:tap="_p" buttonUmpTimelimitModel="{{opt.buttonUmpTimelimitModel}}" countDownIcon="{{countDownIcon}}" data-t="{{ tap:{en:'handleCountdownClick'} }}" isGroupOn="{{opt.isGroupOn}}" wx:elif="{{!opt.isGroupOn}}"></a>
+    <g bind:_init="_tic" currentActivity="{{currentActivity}}" wx:else></g>
+</view>

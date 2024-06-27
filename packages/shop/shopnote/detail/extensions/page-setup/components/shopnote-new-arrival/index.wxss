@@ -1,0 +1,9 @@
+.shopnote-new-arriva {
+  background-color: #fff;
+}
+.shopnote-new-arrival__content {
+  padding: 0 15px;
+}
+.shopnote-new-arrival__content--goods {
+  margin: 0-15px;
+}

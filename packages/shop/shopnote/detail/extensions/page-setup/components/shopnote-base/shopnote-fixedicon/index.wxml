@@ -1,0 +1,14 @@
+<view class="cap-shopnote-fixedicon">
+    <view class="cap-shopnote-fixedicon__left">
+        <b type="default">
+            <a bindtap="thumbClick" class="cap-shopnote-fixedicon__left-thumb {{thumbsStatus?'cap-shopnote-fixedicon__left-thumb-active':''}}" name="like" size="20px"></a>
+        </b>
+        <b openType="share" type="default">
+            <a class="cap-shopnote-fixedicon__left-share" name="share" size="20px"></a>
+        </b>
+    </view>
+    <b type="default">
+        <view bindtap="gotoBuy" class="cap-shopnote-fixedicon__button" style="background-color: {{themeColor}}" wx:if="{{showGoodsBtn&&single}}">去购买</view>
+        <view bindtap="showToast" class="cap-shopnote-fixedicon__button" style="background-color: {{themeColor}}" wx:elif="{{showGoodsBtn}}">文中商品({{goodsNum}})</view>
+    </b>
+</view>

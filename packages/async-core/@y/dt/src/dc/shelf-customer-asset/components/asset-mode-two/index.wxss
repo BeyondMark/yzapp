@@ -1,0 +1,49 @@
+.component-container .customer-asset {
+  position: relative;
+  background-color: #fff;
+  background-size: cover;
+  background-position: 50%;
+  padding: 16px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.component-container .customer-asset-container {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+.component-container .customer-asset-container .auth-block {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.component-container .customer-asset-container .container-line-one {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.component-container
+  .customer-asset-container
+  .container-line-one
+  .user-avatar {
+  display: -webkit-flex;
+  display: flex;
+  flex-grow: 1;
+  position: relative;
+}
+.component-container
+  .customer-asset-container
+  .container-line-one
+  .member-code {
+  margin-left: 16px;
+}
+.component-container .customer-asset-container .container-line-two {
+  position: relative;
+  margin-top: 16px;
+}
+.component-container .container-row {
+  padding-top: 8px;
+}

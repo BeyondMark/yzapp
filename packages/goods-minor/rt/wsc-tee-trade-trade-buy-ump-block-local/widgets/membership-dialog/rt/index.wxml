@@ -1,0 +1,8 @@
+<view>
+    <b bind:_init="_tic" bind:close="_p" bind:onSelect="_p" customerCards="{{customerCards}}" data-t="{{ close:{en:'hideDialog'},onSelect:{en:'onSelect'} }}" display="{{display}}" show="{{showMembership}}" themeButton="theme-button" themeColor="theme-color" themeColors="{{themeColors}}" themeTag="{{themeTag}}" unavailableCustomerCards="{{unavailableCustomerCards}}"></b>
+    <a bind:_init="_tic" bind:close="_p" btnTextColor="var(--main-text, #fff)" data-t="{{ close:{en:'onHideMembershipTips'} }}" show="{{showTips}}" themeColors="{{themeColors}}" title="会员优惠说明">
+        <view>1、会员优惠价仅对商家设置了会员优惠的商品生效，普通商品不享受；</view>
+        <view>2、当会员折扣商品参与限时折扣时，系统将选择其中较低的价格下单结算；</view>
+        <view>3、会员包邮为订单包邮，当订单中有砍价、秒杀、拼团、优惠套餐活动时，会员包邮失效。</view>
+    </a>
+</view>

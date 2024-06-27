@@ -1,0 +1,47 @@
+.c89585 {
+  text-decoration: inherit;
+}
+.c89585,
+.bd231 {
+  display: inline-block;
+}
+.bd231 {
+  width: 100%;
+  height: 100%;
+}
+.long-cell {
+  padding: var(--theme-page-cell-padding-top, 10px)
+    var(--theme-page-cell-padding-right, 12px)
+    var(--theme-page-cell-padding-bottom, 10px)
+    var(--theme-page-cell-padding-left, 12px) !important;
+}
+.goods-message-list__title {
+  font-size: 14px;
+  line-height: 40px;
+  height: 44px;
+  text-align: center;
+  font-weight: 500;
+}
+.c757ba {
+  width: 70px;
+  height: 70px;
+  border-radius: var(--theme-radius-card, 8px);
+  display: block;
+}
+.c0ecbf {
+  padding: 6px 16px !important;
+}
+.c39c1d {
+  color: #969799;
+  padding-right: 8px;
+  white-space: nowrap;
+  flex: 0 !important;
+}
+.c78b5e {
+  text-align: left;
+  color: #323233;
+}
+.dialog__content {
+  height: 386px;
+  background-color: #fff;
+}

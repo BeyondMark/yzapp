@@ -1,0 +1,42 @@
+<view class="c205b1" id="address-map">
+    <a bind:_init="_tic" bind:inSearch="_p" bind:onUseSearchAddress="_p" bind:select="_p" data-t="{{ inSearch:{en:'onInSearch'},select:{en:'onSelectAddress'},onUseSearchAddress:{en:'onUseSearchAddress'} }}" forcePoiSelect="{{forcePoiSelect}}" rmId="{{rmId}}" wx:if="{{rmId==='b37-8'}}"></a>
+    <map bind:_init="_tic" bind:regionchange="_p" class="b7494" data-t="{{ begin:{en:'regionChange'},end:{en:'regionChange'} }}" id="map" latitude="{{latitude}}" longitude="{{longitude}}" markers="{{markers}}" scale="{{15}}" wx:if="{{showMap}}">
+        <cover-view class="c86765">
+            <cover-view class="c75219" wx:if="{{showLabel}}">
+                <cover-view>{{markerLabel}}</cover-view>
+                <cover-view class="c2377"></cover-view>
+            </cover-view>
+            <cover-image class="c12c27" src="{{iconHost+'/2020/03/04/32a548551986a2c3c22ef3018eb7a9af.png'}}"></cover-image>
+        </cover-view>
+        <cover-view bind:tap="_p" class="c95405" data-t="{{ tap:{en:'resetPosition'} }}">
+            <cover-image class="c3390b" src="{{iconHost+'/2020/02/11/346338342922cbc47270d6387e527465.png'}}"></cover-image>
+        </cover-view>
+    </map>
+    <view class="c4f240" hidden="{{!!showMap}}"></view>
+    <view class="c2ccc9">附近位置</view>
+    <view class="c5ddb" wx:if="{{loading}}">
+        <e bind:_init="_tic" color="#1989fa"></e>
+    </view>
+    <view class="c5ddb" wx:elif="{{located&&pois.length===0}}">
+        <image class="c292aa bd231" lazyLoad="true" mode="aspectFit" src="{{iconHost+'/2020/02/12/bc6b35812bc41ee0a100415c438989e1.png'}}"></image>
+        <view class="c7ccd0">暂无地址信息，请搜索你的收货地址</view>
+    </view>
+    <view class="c5e0b9" wx:elif="{{located||pois.length}}">
+        <view bind:tap="_p" class="c3ed0c" data-t="{{ tap:{ en:'onSelectPoi',args:[index] } }}" wx:for="{{pois}}" wx:key="id">
+            <view class="c7e34a">
+                <d bind:_init="_tic" color="{{index===0?'#EE0A24':'#dddee0'}}" name="location" size="16px"></d>
+            </view>
+            <view class="c4f379">{{item.title||item.name}}</view>
+            <view class="c34afd">{{item.address}}</view>
+        </view>
+    </view>
+    <view class="c5ddb" wx:else>
+        <image class="f4fa7 bd231" lazyLoad="true" mode="aspectFit" src="{{iconHost+'/2020/02/12/bc6b35812bc41ee0a100415c438989e1.png'}}"></image>
+        <view class="af6fa">无法获取到当前位置信息</view>
+        <b bind:_init="_tic" bind:tap="_p" data-t="{{ tap:{en:'onReTryLocation'} }}" round="{{true}}">重新获取位置</b>
+    </view>
+    <g bind:_init="_tic" bind:close="_p" data-t="{{ close:{en:'onCloseAuthDialog'} }}" show="{{showAuthDialog}}" themeColors="{{themeColors}}"></g>
+    <c bind:_init="_tic" class="fae2d" position="bottom" show="{{showArea}}">
+        <f bind:_init="_tic" bind:cancel="_p" bind:confirm="_p" columns="{{countyOptions}}" data-t="{{ confirm:{en:'onConfirm'},cancel:{en:'onCancel'} }}" showToolbar="{{true}}" title="{{pickerTitle}}"></f>
+    </c>
+</view>

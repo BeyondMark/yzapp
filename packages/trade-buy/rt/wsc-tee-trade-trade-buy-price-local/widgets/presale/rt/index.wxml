@@ -1,0 +1,49 @@
+<view class="c93440" style="{{styleVar}}" wx:if="{{showPrice}}">
+    <view class="c835f5">
+        <view class="c91aba">
+            <view class="c91aba">
+                <view class="c718e6">
+                    <view class="{{'f8652'}} {{item.phase===phasePayment.currentPhase?'eb946':''}}" wx:for="{{phasePayment.phaseItems}}" wx:key="phase">
+                        <view class="c3ed81"></view>
+                        <view class="c89585"> {{item.phase===1?'定金':'尾款'}} <view class="{{item.phase===phasePayment.currentPhase?'c835f5__statu--active':'c835f5__statu'}} c89585"> {{statusMap[item.status]}} </view>
+                        </view>
+                        <view class="{{'ec1a2'}} {{item.phase===phasePayment.currentPhase?'ca4b8':''}} c89585">
+                            <b bind:_init="_tic" bind:tap="_p" class="c3b498" data-t="{{ tap:{ en:'onShowPayUmpDetail',args:[item.phase] } }}" name="info-o" size="16px" wx:if="{{item.payUmpDiscountMoney>0}}"></b>
+                            <view class="{{'c2c6ce'}} {{item.phase===phasePayment.currentPhase?'c7d44b':''}} c89585" style="min-width:{{priceSpanWidth+'px'}}"> {{phasePaymentExpandLabel[index]}}¥
+                {{finalPhasePayment[index]}} </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="c01e5">
+                    <block wx:if="{{longPreSaleTailPayTimeStr}}"> {{longPreSaleTailPayTimeStr}} </block>
+                    <block wx:else>            尾款支付时间{{formattedGoods.startTime}}-{{formattedGoods.endTime}} </block>
+                </view>
+            </view>
+        </view>
+        <view class="ab1d7" wx:if="{{showDepositAgreementVal}}">
+            <b bind:_init="_tic" bind:tap="_p" customClass="{{agreeDeposit?'c633ce':'fdb61'}}" data-t="{{ tap:{en:'agreeDepositIcon'} }}" name="{{agreeDeposit?'checked':'circle'}}" size="16px"></b>
+            <view class="db4bf c89585">我同意预售商品定金不退协议</view>
+            <b bind:_init="_tic" bind:tap="_p" customClass="ab1d7-icon" data-t="{{ tap:{en:'onShowAgreement'} }}" name="info-o" size="16px"></b>
+        </view>
+    </view>
+    <a bind:_init="_tic" bind:close="_p" btnTextColor="var(--main-text, #fff)" data-t="{{ close:{en:'onCloseAgreement'} }}" show="{{showAgreement}}" themeColors="{{themeColors}}" title="定金不退协议">
+        <view class="c07e9b">
+            <view class="c93d3" wx:for="{{agreement}}" wx:for-item="block" wx:key="index">
+                <view class="c7f272 c89585">{{block.title}}</view>
+                <view wx:for="{{block.words}}" wx:for-index="blockWordsIndex" wx:for-item="line" wx:key="blockWordsIndex"> {{line}} </view>
+            </view>
+        </view>
+    </a>
+    <a bind:_init="_tic" bind:close="_p" btnTextColor="var(--main-text, #fff)" data-t="{{ close:{en:'onClosePayUmpDetail'} }}" show="{{showPayUmpDetail}}" themeColors="{{themeColors}}" title="价格说明">
+        <view class="c721f">
+            <view class="bce88">
+                <view class="c89585"> {{currentPhase.phase===1?'定金':'尾款'}}
+          应付￥
+          {{currentPhase.currentPrice}} </view>
+            </view>
+            <view class="bce88">
+                <view class="c89585">支付优惠-￥{{currentPhase.payUmpDiscountMoney}}</view>
+            </view>
+        </view>
+    </a>
+</view>

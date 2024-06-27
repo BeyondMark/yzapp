@@ -1,0 +1,5 @@
+<view class="c57e12 custom-class">
+    <view class="c0e7e6" wx:if="{{opt.showTitle}}"> {{opt.stepperTitle||'购买数量'}} </view>
+    <a bind:_init="_tic" bind:change="_p" bind:overlimit="_p" class="c26776" data-t="{{ overlimit:{en:'onOverLimit'},change:{en:'onChange'} }}" disableInput="{{opt.disableStepperInput}}" disabled="{{opt.disabled}}" inputClass="c3bb69" integer="{{true}}" max="{{opt.stepperLimit}}" min="{{opt.stepperMinLimit}}" minusClass="c19d9e" plusClass="c2f21e" size="small" value="{{opt.selectedNum}}"></a>
+    <view class="c689a5 c89585" wx:if="{{opt.showQuotaText}}"> {{opt.quotaText}} </view>
+</view>

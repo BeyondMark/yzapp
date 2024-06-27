@@ -1,0 +1,5 @@
+<view>
+    <block wx:if="{{appContentAppendIsCloudSlot}}">
+        <a bind:_init="_tic" rmId="{{rmId}}" wx:if="{{rmId==='@wsc-tee-common/app-content-append~VAtrAMhi'}}"></a>
+    </block>
+</view>

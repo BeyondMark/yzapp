@@ -1,0 +1,7 @@
+<b bind:close="onClose" customClass="pop-container custom-class" position="bottom" round="{{true}}" show="{{show}}">
+    <a bind:tap="onClose" customClass="close-icon" name="cross" size="20"></a>
+    <slot name="header" wx:if="{{useHeaderSlot}}"></slot>
+    <view class="header" wx:else>{{title}}</view>
+    <slot></slot>
+    <view bind:tap="handleClick" class="pop-btn" wx:if="{{showBtn}}">{{btnText}}</view>
+</b>

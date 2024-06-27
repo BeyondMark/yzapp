@@ -1,0 +1,46 @@
+.c4d393 {
+  font-size: 12px;
+  margin-top: 8px;
+  display: flex;
+}
+.c17f06 {
+  display: flex;
+}
+.c26f7b,
+.c76dca {
+  display: flex;
+  align-items: center;
+  height: 16px;
+  padding: 0 4px;
+  font-size: 12px;
+  line-height: 16px;
+}
+.c26f7b:not(:first-child),
+.c76dca:not(:first-child) {
+  margin-left: 4px;
+}
+.c26f7b {
+  border-radius: 8px;
+  border: 1px solid rgba(238, 10, 36, 0.32);
+  color: #ee0a24;
+  box-sizing: border-box;
+}
+.c26f7b .c76b8a {
+  display: inline-block;
+  margin-right: 2px;
+  width: 12px;
+  height: 12px;
+  overflow: hidden;
+  background: url(https://b.yzcdn.cn/wsc-h5-statcenter/recommend-showcase-page/default_tag_icons_sprite.png)
+    no-repeat;
+  background-size: 12px;
+}
+.c26f7b.c26f7b-1 .c76b8a {
+  background-position: 0-1px;
+}
+.c26f7b.c26f7b-2 .c76b8a {
+  background-position: 0-15px;
+}
+.c26f7b.c26f7b-3 .c76b8a {
+  background-position: 0-28px;
+}

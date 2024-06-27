@@ -1,0 +1,8 @@
+<view class="c-video" style="height: {{height}}px" wx:if="{{src}}">
+    <view class="c-video__poster-wrap" wx:if="{{!hidePoster}}">
+        <image class="c-video__poster" mode="aspectFit" src="{{poster}}" style="height: {{height}}px"></image>
+        <view bind:tap="handlePosterClick" class="c-video__button"></view>
+        <view class="c-video__mask"></view>
+    </view>
+    <video bindended="handleVideoEnded" bindpause="handleVideoPause" bindplay="handleVideoPlay" bindtimeupdate="handleUpdateTime" class="c-video__player {{!showVideo?'c-video__player-hide':''}}" id="video-id" objectFit="{{objectFit}}" showCenterPlayBtn="{{false}}" src="{{src}}" style="height: {{height}}px"></video>
+</view>

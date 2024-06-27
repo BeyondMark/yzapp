@@ -1,0 +1,1 @@
+<a canShowNavBar="{{canShowNavBar}}" groupTitle="{{navBarTitle}}" listQuery="{{listQuery}}" shareFrom="{{shareFrom}}" show="{{showTab}}" totalAlias="{{totalAlias}}"></a>

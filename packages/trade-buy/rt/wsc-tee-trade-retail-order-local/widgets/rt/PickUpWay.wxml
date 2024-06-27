@@ -1,0 +1,11 @@
+<view style="padding-bottom: 10px; background: #fff">
+    <a bind:_init="_tic" border="{{false}}" customClass="d5a4c" title="提货方式" titleWidth="70px">
+        <view class="c4269e">
+            <view bind:tap="_p" class="c447b7" data-t="{{ tap:{ en:'onSwitchPickUpWay',args:[way.value] } }}" wx:for="{{pickUpWays}}" wx:for-item="way" wx:key="value">
+                <view class="baec6 {{way.value===value?'c76a5':''}}"></view>
+                <view>{{way.name}}</view>
+            </view>
+        </view>
+    </a>
+    <view class="cb5e1" wx:if="{{showRetailPickUpWayErrorToast}}">请选择提货方式</view>
+</view>

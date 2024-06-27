@@ -1,0 +1,24 @@
+<a forbidCopyright="{{true}}" pageBgColor="#e0493f">
+    <view class="using-tips">
+        <view class="top-section">
+            <view class="using-tips-title van-font-14 van-c-black">如何送礼</view>
+            <view class="tips-text van-font-12 van-c-gray-darker first-line-text">1. 点击“挑选礼物”</view>
+            <view class="tips-img-wrap tips-img-wrap-1">
+                <image class="tips-img-1" src="https://img01.yzcdn.cn/public_files/2018/07/03/a647b78358e3b2f5657dc0374e8960e1.png"></image>
+                <view class="touch-icon"></view>
+            </view>
+            <view class="tips-text van-font-12 van-c-gray-darker">2. 支付后分享给好友或将海报分享到朋友圈</view>
+            <view class="tips-img-wrap tips-img-wrap-2">
+                <image class="tips-img-2" src="https://img01.yzcdn.cn/public_files/2018/07/03/b3d280605811b32517e081da569bb756.png"></image>
+                <view class="touch-icon"></view>
+            </view>
+        </view>
+        <view class="bottom-section">
+            <view class="using-tips-title van-font-14 van-c-black">领取规则</view>
+            <view class="tips-text van-font-12 van-c-gray-darker">1.  每个人最多能领取一件礼物。</view>
+            <view class="tips-text van-font-12 van-c-gray-darker">2. 可在<text class="emphasize">个人中心 - 我的礼物</text>查看，送礼人可选择继续转赠或自己领取，也可选择退款。</view>
+            <view class="tips-text van-font-12 van-c-gray-darker">3. 礼物领取后，需填写地址才能收到礼物。礼物兑换有效期以商家设置为准，若有超出有效期未填地址的礼物，可联系商家处理。</view>
+            <view class="tips-text van-font-12 van-c-gray-darker">4. 送礼订单暂不支持用户主动发起退款，未领取及超出兑换有效期仍未填写地址的礼物可以联系商家退款。</view>
+        </view>
+    </view>
+</a>

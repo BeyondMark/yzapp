@@ -1,0 +1,58 @@
+.tee-image {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.img-upload-field .field-label {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #666;
+}
+.img-upload-field .field-label .optional-label {
+  display: inline-block;
+  color: #a7a7a7;
+  font-size: 12px;
+}
+.img-upload-field .field-input {
+  margin-top: 12px;
+}
+.img-upload-field .field-input .van-icon-photograph {
+  font-size: 20px;
+}
+.img-upload-field .field-input .van-uploader {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  background-color: #f7f8fa;
+  color: #dcdee0;
+  overflow: hidden;
+}
+.img-upload-field .field-input .uploaded-img {
+  width: 76px;
+  height: 76px;
+}
+.img-upload-field .field-input .upload-delete-icon {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  z-index: 2;
+  font-size: 20px;
+  color: #323233;
+}
+.img-upload-field .field-input .upload-delete-icon:before {
+  background: #fff;
+  border-radius: 100%;
+}
+.img-upload-field .field-input .upload-wrapper {
+  width: 76px;
+  height: 76px;
+  position: relative;
+}

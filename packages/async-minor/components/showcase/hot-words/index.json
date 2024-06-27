@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../captain-components/hot-words/index",
+    "_": "../../../../../components/_/index"
+  }
+}

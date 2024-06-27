@@ -1,0 +1,17 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../../common/components/form-view/index",
+    "b": "./promote/index",
+    "c": "./poster/index",
+    "d": "./begin-boarding/index",
+    "e": "/@vant/weapp/dist/popup/index",
+    "f": "./poster-popup/index",
+    "g": "../../../../@vant/weapp/dist/icon/index",
+    "h": "../../../../vant-weapp/dist/tabs/index",
+    "i": "../../../../vant-weapp/dist/tab/index",
+    "j": "../../../../@vant/weapp/dist/button/index",
+    "k": "../../../../@vant/weapp/dist/dialog/index",
+    "_": "../../../../../../components/_/index"
+  }
+}

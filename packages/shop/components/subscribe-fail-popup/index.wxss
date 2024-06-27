@@ -1,0 +1,50 @@
+.subscribe-fail-popup {
+  height: 500px;
+  max-height: 500px;
+}
+.subscribe-fail-popup__content {
+  color: #1a1a1a;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0 20px 20px 20px;
+  text-align: center;
+}
+.subscribe-fail-popup__content .header {
+  height: 68px;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.subscribe-fail-popup__content .header .title {
+  font-size: 16px;
+}
+.subscribe-fail-popup__content .header .sub-title {
+  font-size: 13px;
+  color: #b2b2b2;
+}
+.subscribe-fail-popup__content .step-line {
+  display: block;
+  margin: 16px 0;
+  text-align: left;
+}
+.desc__icon {
+  display: inline;
+}
+.desc__img {
+  display: block;
+  width: 159px;
+  height: 95px;
+}
+.confirm-button {
+  width: 136px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  color: #323233;
+  background: #fff;
+  border: 1px solid #dcded0;
+  border-radius: 20px !important;
+  display: inline-block;
+  margin-top: 20px;
+}

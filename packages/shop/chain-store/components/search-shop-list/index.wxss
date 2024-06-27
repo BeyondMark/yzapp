@@ -1,0 +1,23 @@
+.page-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.page-container .search-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 16px;
+}
+.page-container .add-address {
+  font-size: 14px;
+  color: #333;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+.page-container .shop-list-container {
+  flex: 1 0 auto;
+  height: 400px;
+}

@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./coupon-box/index",
+    "b": "./discount-info/discount-box/index",
+    "c": "./actions/stamp/index",
+    "d": "./content/content-box/index",
+    "e": "./actions/button/index",
+    "f": "./actions/checkbox/index",
+    "g": "./actions/status/index",
+    "_": "../../../../../components/_/index"
+  }
+}

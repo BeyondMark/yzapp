@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../../@y/tuc/src/fast-join/components/header/index",
+    "_": "../../../../../components/_/index"
+  }
+}

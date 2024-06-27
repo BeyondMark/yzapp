@@ -1,0 +1,3 @@
+<view class="{{'f2737'}} {{dashed?'c5fb72':''}} {{hairline?'c1fc2e':''}} {{'f2737--'+contentPosition}} {{customClass}}" style="{{customStyle}}">
+    <slot></slot>
+</view>

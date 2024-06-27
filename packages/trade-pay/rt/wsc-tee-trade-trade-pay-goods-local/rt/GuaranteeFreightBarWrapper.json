@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../assets-tee-extensions-guarantee-freight-bar-local/rt/GuaranteeFreightBar",
+    "_": "../../../../../components/_/index"
+  }
+}

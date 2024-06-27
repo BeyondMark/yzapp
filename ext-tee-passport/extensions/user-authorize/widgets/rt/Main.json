@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../../protocol/widgets/rt/ProtocolContent",
+    "b": "/@y/ppt/lib/user-authorize/index",
+    "_": "../../../../../components/_/index"
+  }
+}

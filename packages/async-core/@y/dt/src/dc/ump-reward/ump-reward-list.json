@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/@y-open/vt/dist/list/index",
+    "b": "/@y/dt/src/captain/layout/layout",
+    "c": "/@y/dt/src/captain/item-card/index",
+    "d": "/@y/dt/src/captain/load-mode/index",
+    "_": "../../../../../../../components/_/index"
+  }
+}

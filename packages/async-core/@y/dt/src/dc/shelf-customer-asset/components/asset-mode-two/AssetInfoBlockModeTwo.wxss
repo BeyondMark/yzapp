@@ -1,0 +1,64 @@
+.t-text {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.item-placeholder {
+  font-size: 20px;
+  font-family: Arial;
+  line-height: 30px;
+}
+.asset-info-block {
+  display: -webkit-flex;
+  display: flex;
+  align-items: flex-start;
+}
+.asset-info-block .asset-info .info-item {
+  color: #323233;
+}
+.asset-info-block-vertical .asset-info {
+  flex-grow: 1;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+.asset-info-block-vertical .asset-info:not(:last-child):after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: 0;
+  width: 0.5px;
+  height: 36px;
+  background-color: #d8d8d8;
+}
+.asset-info-block-vertical .asset-info .info-item {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.asset-info-block-vertical .asset-info .info-item .value {
+  line-height: 30px;
+  font-weight: 700;
+}
+.asset-info-block-vertical .asset-info .info-item .title {
+  font-size: 12px;
+  color: var(--realTextColor);
+  opacity: 0.5;
+  line-height: 18px;
+}
+.asset-info-block-horizontal {
+  flex-wrap: wrap;
+}
+.asset-info-block-horizontal .asset-info {
+  flex-shrink: 0;
+}
+.asset-info-block-horizontal .asset-info:not(:last-child) {
+  margin-right: 16px;
+}
+.asset-info-block-horizontal .asset-info .info-item {
+  font-size: 12px;
+  line-height: 20px;
+}

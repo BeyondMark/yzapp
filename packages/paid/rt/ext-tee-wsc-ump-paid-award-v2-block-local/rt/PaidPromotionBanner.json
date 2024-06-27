@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../components/ActivityUmp",
+    "b": "./../components/ActivityQrCode",
+    "_": "../../../../../components/_/index"
+  }
+}

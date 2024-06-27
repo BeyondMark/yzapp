@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../async-usecenter/components/showcase/title/index",
+    "b": "../../../async-minor/components/showcase/captain-components/recommend/index",
+    "c": "../../../async-main/components/feature-sku/index",
+    "d": "./components/ump-tags/index",
+    "e": "../../../async-minor/components/showcase/captain-components/list/index",
+    "_": "../../../../components/_/index"
+  },
+  "componentGenerics": { "goods-item-corner-mark": true },
+  "componentPlaceholder": { "a": "_", "b": "_", "c": "_", "e": "_" }
+}

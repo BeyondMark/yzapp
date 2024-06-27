@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "核销码",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "a": "/components/znb-web-view/index",
+    "_": "../../../../components/_/index"
+  }
+}

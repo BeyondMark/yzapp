@@ -1,0 +1,12 @@
+.ce50a {
+  position: relative;
+  display: flex;
+  min-width: 64px;
+  height: 24px;
+  font-size: 12px;
+  color: var(--bg-color);
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--bg-color);
+  border-radius: 12px;
+}

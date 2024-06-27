@@ -1,0 +1,19 @@
+<view>
+    <block wx:if="{{globalCustomLoading}}">
+        <a bind:_init="_tic" rmId="b1-24" show="{{!(featureComLoaded&&coverAdLoaded)}}" wx:if="{{rmId==='b1-10'}}"></a>
+    </block>
+    <view class="c4850d" style="display:{{featureComLoaded&&coverAdLoaded?'none':'block'}}" wx:else>
+        <view class="c98385">
+            <view class="c63d49">
+                <view class="a536c c5b8ed"></view>
+                <view class="c72b02 c5b8ed"></view>
+                <view class="f3f97"></view>
+            </view>
+            <image class="f226b bd231" lazyLoad="true" mode="aspectFill" src="{{appLogo}}" wx:if="{{appLogo}}"></image>
+            <view class="c7f42c" wx:if="{{isRetailApp&&isChainStore&&!isShowLoading}}">
+                <view>正在搜索附近门店</view>
+            </view>
+        </view>
+        <view class="dc25c" wx:if="{{!isRetailApp}}"></view>
+    </view>
+</view>

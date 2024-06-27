@@ -1,0 +1,46 @@
+.dc-note-card {
+  padding: 13px 0;
+}
+.dc-note-card .sn-title {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.dc-note-card .topic {
+  font-size: 16px;
+  color: #323233;
+  flex: 1;
+}
+.dc-note-card .link {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dc-note-card .link .van-icon {
+  font-size: 12px;
+  vertical-align: top;
+}
+.dc-note-card .link-text {
+  font-size: 12px;
+  color: #969799;
+  text-align: right;
+  line-height: 18px;
+  margin-left: 4px;
+  vertical-align: text-top;
+  display: inline-block;
+}
+.dc-note-card .sn-common-bottom {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  line-height: 18px;
+  font-size: 12px;
+  color: #969799;
+}
+.dc-note-card .sn-common-bottom .van-icon {
+  font-size: 12px;
+  margin-top: 3px;
+}

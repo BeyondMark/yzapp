@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "../../../../../../@vant/weapp/dist/button/index",
+    "b": "/packages/async-main/@vant/weapp/dist/icon/index",
+    "c": "../../../../../../common/components/theme-view/index",
+    "d": "/packages/async-main/components/account/wx-login/index",
+    "e": "../../../../../../components/message/subscribe-message/index",
+    "f": "/components/account/user-authorize/index",
+    "_": "../../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "b": "_", "d": "_" }
+}

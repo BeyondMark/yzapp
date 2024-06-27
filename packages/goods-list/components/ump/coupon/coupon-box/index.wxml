@@ -1,0 +1,24 @@
+<view class="e081c custom-class">
+    <view class="{{boxCls}}" style="{{themeBgStyle}} {{themeBorderStyle}}">
+        <view class="c442cd">
+            <view class="f251f da8b9">
+                <slot name="A"></slot>
+            </view>
+            <view class="f251f d0499">
+                <slot name="C"></slot>
+            </view>
+            <view class="f251f c18c2b custom-action-class">
+                <slot name="B"></slot>
+            </view>
+        </view>
+        <view class="c442cd">
+            <view class="f251f c2d738">
+                <slot name="D"></slot>
+            </view>
+        </view>
+    </view>
+    <view class="{{collapseCls}}" wx:if="{{showCollapse}}">
+        <view class="c830ad"></view>
+        <view class="c830ad" wx:if="{{collapse>=3}}"></view>
+    </view>
+</view>

@@ -1,0 +1,5 @@
+<view class="showcase-sticky-box" style="{{indexStyle}}">
+    <view class="showcase-sticky-wrap sticky-wrap-class" style="{{wrapStyle}}">
+        <slot></slot>
+    </view>
+</view>

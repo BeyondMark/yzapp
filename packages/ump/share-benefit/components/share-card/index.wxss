@@ -1,0 +1,258 @@
+@import "/common/css/helper/index.wxss";
+.share-card {
+  background-color: #de373e;
+}
+.share-card .share-card__img {
+  width: 100%;
+  min-height: 240px;
+  position: relative;
+}
+.share-card .share-card__img .image {
+  display: block;
+  width: 100%;
+}
+.share-card .share-card__img .share-card__activity-detail {
+  position: absolute;
+  text-align: center;
+  bottom: 15px;
+  width: 100%;
+  line-height: 22px;
+  font-size: 16px;
+  color: #fffbe3;
+}
+.share-card .share-card__img .share-card__activity-detail .span-bold {
+  line-height: 16px;
+  font-size: 12px;
+}
+.share-card .block-card {
+  background-color: #fff;
+  margin: 0 12px 12px 12px;
+  border-radius: 14px;
+  padding: 16px;
+  position: relative;
+  overflow: hidden;
+  color: #323233;
+}
+.share-card .block-card .share-card__tip {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.share-card .block-card .share-card__tip .share-card__tip-num {
+  color: #ee0a24;
+}
+.share-card .block-card .share-card__reward {
+  display: flex;
+  margin-top: 16px;
+  background-color: #fff5f1;
+  border-radius: 7px;
+  padding: 12px;
+  color: #de373e;
+  box-shadow: 0 22px 12px -15px rgba(221, 163, 124, 0.36);
+}
+.share-card .block-card .share-card__reward .share-card__logo {
+  border-color: #de373e;
+  border-radius: 8px;
+  border: 1px solid #de373e;
+  width: 70px;
+  height: 70px;
+  margin: 5px 12px 0 0;
+  overflow: hidden;
+}
+.share-card .block-card .share-card__reward .share-card__logo .shop-logo {
+  width: 100%;
+  height: 100%;
+}
+.share-card .block-card .share-card__reward .share-card__detail {
+  font-size: 12px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+.share-card .block-card .share-card__reward .share-card__detail .title {
+  margin-bottom: 8px;
+}
+.share-card
+  .block-card
+  .share-card__reward
+  .share-card__detail
+  .title
+  .denominations {
+  margin-left: -6px;
+}
+.share-card
+  .block-card
+  .share-card__reward
+  .share-card__detail
+  .title
+  .span-bold {
+  line-height: 32px;
+  font-size: 30px;
+  font-weight: 600;
+}
+.share-card .block-card .share-card__reward .share-card__detail .shop {
+  font-size: 14px;
+  line-height: 18px;
+}
+.share-card .block-card .share-card__reward .share-card__detail .time {
+  margin-top: 8px;
+  line-height: 16px;
+}
+.share-card .block-card .share-button {
+  position: relative;
+  border-radius: 24px;
+  background-color: #de373e;
+  line-height: 48px;
+  text-align: center;
+  font-size: 16px;
+  color: #fffbe3;
+  margin-top: 22px;
+}
+.share-card .block-card .share-button .share-button__item {
+  background-color: #de373e;
+}
+.share-card .block-card .tip {
+  margin-top: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 14px;
+  color: #969799;
+}
+.share-card .block-card .login {
+  margin-top: 20px;
+}
+.share-card .block-card .reward-list-title {
+  line-height: 22px;
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ebedf0;
+}
+.share-card .block-card .reward-list-title .total {
+  font-size: 14px;
+  float: right;
+}
+.share-card .block-card .reward-list-title .total span {
+  color: #ff5635;
+}
+.share-card .block-card .reward-list {
+  transition: all 0.5s;
+}
+.share-card .block-card .reward-list__few {
+  max-height: 180px;
+  overflow: hidden;
+}
+.share-card .block-card .list-spread-button {
+  width: 100%;
+  text-align: center;
+  color: #969799;
+  line-height: 20px;
+}
+.share-card .block-card .list-spread-button span {
+  font-size: 14px;
+}
+.share-card .block-card .list-spread-button .van-icon {
+  font-size: 16px;
+  vertical-align: middle;
+}
+.share-card .block-card .share-list {
+  padding-top: 12px;
+}
+.share-card .block-card .share-list .item {
+  display: flex;
+  margin-bottom: 16px;
+}
+.share-card .block-card .share-list .item:last-child {
+  margin-bottom: 0;
+}
+.share-card .block-card .share-list .item .item-detail {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.share-card .block-card .share-list .item .item-detail .user {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.share-card .block-card .share-list .item .item-detail .user .user-head {
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  margin-right: 8px;
+}
+.share-card .block-card .share-list .item .item-detail .user .user-name {
+  display: inline-block;
+  line-height: 20px;
+  font-size: 14px;
+  max-width: 180px;
+}
+.share-card .block-card .share-list .item .item-detail .time {
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #969799;
+}
+.share-card .block-card .share-list .item .item-status .reward-name {
+  display: none;
+}
+.share-card .block-card .share-list .item .item-status .rewar-icon {
+  display: inline-block;
+  height: 20px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+.share-card .block-card .share-list .item .item-status .status-button {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 44px;
+}
+.share-card
+  .block-card
+  .share-list
+  .item
+  .item-status
+  .status-button
+  .status-wait {
+  margin-right: 18px;
+  color: #969799;
+}
+.share-card .block-card .share-list .item .item-status-text {
+  text-align: right;
+}
+.share-card .block-card .share-list .item .item-status-text .reward-name {
+  line-height: 20px;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.share-card .block-card .share-list .item .item-status-text .rewar-icon {
+  display: none;
+}
+.share-card .block-card .share-list .item .item-status-text .status-button {
+  font-size: 12px;
+  line-height: 14px;
+}
+.share-card .block-card .share-list .item .item-status-text .status-wait {
+  margin-right: 0;
+  color: #969799;
+}
+.share-card .block-card .share-list .item .van-icon {
+  vertical-align: middle;
+  font-size: 16px;
+  margin-left: 4px;
+  margin-top: -2px;
+}
+.share-card .all-reward-list {
+  display: block;
+  padding: 12px;
+  color: #fff;
+  text-align: center;
+  line-height: 18px;
+  font-size: 14px;
+}
+.share-card .all-reward-list .van-icon {
+  vertical-align: middle;
+}

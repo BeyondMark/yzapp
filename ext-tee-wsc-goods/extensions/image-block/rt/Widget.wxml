@@ -1,0 +1,24 @@
+<view class="cc79a {{isInited?'c75571':''}}" style="height:{{initialHeight+'px'}}" wx:if="{{eShowImage}}">
+    <view class="f423e {{isFullscreen?'edaf7':''}}" id="js-nav-image" style="{{theme}}">
+        <swiper autoplay="{{autoPlay>0}}" bind:_init="_tic" bind:change="_p" circular="true" class="c96b24" current="{{navIndex}}" data-ref="imageSwipe" data-t="{{ change:{en:'onSwipeChange'} }}" displayMultipleItems="1" duration="500" indicatorActiveColor="#000000" indicatorColor="rgba(0, 0, 0, .3)" indicatorDots="{{false}}" interval="{{autoPlay}}">
+            <swiper-item bind:_init="_tic" itemId="{{pid}}" wx:if="{{hasVideo}}">
+                <view class="c612fd">
+                    <a bind:_init="_tic" bind:image-load="_p" bind:image-load-error="_p" bind:toggle-fullscreen="_p" bind:video-end="_p" bind:video-error="_p" bind:video-pause="_p" bind:video-play="_p" bind:video-ready="_p" bind:video-seek="_p" controlsClass="{{controlsClass}}" cover="{{video.coverUrl}}" data-ref="imageVideo" data-t="{{ videoReady:{en:'onVideoReady'},videoPlay:{en:'onVideoPlay'},videoPause:{en:'onVideoPause'},videoEnd:{en:'onVideoEnd'},videoSeek:{en:'onVideoSeek'},videoError:{en:'onVideoError'},toggleFullscreen:{en:'toggleFullscreen'},imageLoad:{ en:'onImageLoad',args:[0,null] },imageLoadError:{ en:'onImageLoadError',args:[0] } }}" height="{{height+'px'}}" isFullscreen="{{isFullscreen}}" playIconUrl="{{cloudConfig.playIconUrl}}" src="{{video.videoUrl}}" suspended="{{!isBlockVisible}}" videoPlayClass="{{playIconClass}}" width="{{width+'px'}}" wx:if="{{rmId==='b7-4'}}"></a>
+                </view>
+            </swiper-item>
+            <swiper-item bind:_init="_tic" bind:touchcancel="_p" bind:touchend="_p" bind:touchmove="_p" bind:touchstart="_p" data-t="{{ touchstart:{en:'onTouchStart'},touchmove:{en:'onTouchMove'},touchend:{en:'onTouchEnd'},touchcancel:{en:'onTouchCancel'} }}" wx:for="{{finalImageList}}" wx:for-item="img" wx:key="index">
+                <image bind:load="_p" class="c612fd cb255 bd231" data-t="{{ load:{ en:'onFirstImageLoadImageLoad',args:[index] } }}" lazyLoad="true" mode="aspectFit" showMenuByLongpress="{{isFullscreen}}" src="{{index===0&&!firstImageLoaded?img.thumbUrl:img.url}}" style="{{imageStyle}}"></image>
+                <image bind:error="_p" bind:load="_p" class="bd231" data-t="{{ load:{ en:'onImageLoad',args:[0] },error:{ en:'onImageLoadError',args:[0] } }}" lazyLoad="true" src="{{img.url}}" style="display: none" wx:if="{{index===0}}"></image>
+            </swiper-item>
+        </swiper>
+        <block wx:if="{{hasDanmaku}}">
+            <b bind:_init="_tic" bind:init="_p" bind:play-change="_p" bind:source="_p" data-ref="danmaku" data-t="{{ source:{en:'initDanmakuSource'},init:{en:'onDanmakuInit'},playChange:{en:'onDanmakuPlayChange'} }}" minCount="{{danmakuMinCount}}" offsetTop="{{danmakuOffsetTop}}" opt="{{danmakuOpt}}" rmId="{{rmId}}" source="{{danmakuSource}}" visible="{{danmakuVisible}}" wx:if="{{rmId==='b7-4'}}"></b>
+        </block>
+        <d allPictures="{{allPictures}}" bind:_init="_tic" bind:close-screen="_p" current="{{current}}" currentSkuKey="{{currentSkuKey}}" data-t="{{ closeScreen:{en:'toggleFullscreen'} }}" goodsBaseInfo="{{goodsBaseInfo}}" isFullscreen="{{isFullscreen}}" isVideoCurrent="{{isVideoCurrent}}" isVideoStopped="{{isVideoStopped}}" navRect="{{navRect}}">
+            <block wx:if="{{!isVideoCurrent&&hasNormalCover&&!isNoStock&&imageScale<=1.3}}">
+                <c bind:_init="_tic" bind:big-buttons-click="_p" class="b804e" data-t="{{ bigButtonsClick:{en:'handleBigButtonClick'} }}" finalBigButtons="{{finalBigButtons}}" goodsBaseInfo="{{goodsBaseInfo}}" goodsPriceInfo="{{goodsPriceInfo}}" kdtId="{{kdtId}}" rmId="b7-33" slot="normal-cover" wx:if="{{rmId==='b7-4'}}"></c>
+            </block>
+        </d>
+    </view>
+    <view id="hidden-image" style="visible:hidden; background-image:{{'url('+shareImg+')'}}; width:{{0}}; height:{{0}}"></view>
+</view>

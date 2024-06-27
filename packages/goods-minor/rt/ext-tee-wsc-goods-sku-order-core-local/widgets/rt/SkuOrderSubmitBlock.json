@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./SubmitDiscountCell",
+    "_": "../../../../../../components/_/index"
+  }
+}

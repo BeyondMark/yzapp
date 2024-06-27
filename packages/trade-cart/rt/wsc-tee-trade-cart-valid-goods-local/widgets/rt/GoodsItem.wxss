@@ -1,0 +1,38 @@
+.goods-item {
+  background: #fff;
+  overflow: hidden;
+}
+.goods-item-container {
+  padding: var(--theme-page-card-padding-top, 12px)
+    var(--theme-page-card-padding-right, 12px)
+    var(--theme-page-card-padding-bottom, 12px)
+    var(--theme-page-card-padding-left, 12px);
+}
+.checkbox-wrap {
+  float: left;
+  height: 105px;
+  width: 20px;
+  text-align: center;
+  line-height: 100px;
+  color: #38f;
+}
+.checkbox-wrap,
+.delete-btn {
+  display: flex;
+  align-items: center;
+}
+.delete-btn {
+  background: #f44;
+  color: #fff;
+  font-weight: 700;
+  justify-content: center;
+  font-size: 14px;
+  width: 64px;
+  height: 100%;
+}
+.delete-btn.border-top-right {
+  border-top-right-radius: var(--theme-radius-card, 8px);
+}
+.delete-btn.border-bottom-right {
+  border-bottom-right-radius: var(--theme-radius-card, 8px);
+}

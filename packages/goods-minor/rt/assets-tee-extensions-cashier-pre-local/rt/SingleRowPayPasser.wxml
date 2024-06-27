@@ -1,0 +1,1 @@
+<a bind:_init="_tic" bind:close="_p" bind:forget-pass="_p" bind:full="_p" bind:update="_p" data-t="{{ forgetPass:{en:'onPayPassForget'},update:{en:'onPayPassUpdate'},full:{en:'onPayPassCheck'},close:{en:'onPayPassClose'} }}" height="{{computedHeight}}" overlayStyle="background: transparent" password="{{prePayPass}}" show="{{prePayShowPayPasser}}"></a>

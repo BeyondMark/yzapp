@@ -1,0 +1,12 @@
+<view class="task {{!bottomLine?'task__unline':''}}">
+    <view class="task-left">
+        <image class="icon" src="{{icon}}"></image>
+        <view class="content">
+            <view class="title">{{title}}</view>
+            <view class="desc">{{preDesc}}<text class="desc-strong">{{num}}</text>{{nextDesc}}</view>
+        </view>
+    </view>
+    <a authTypeList="{{['nicknameAndAvatar']}}" bind:next="handleClick">
+        <b color="{{disabled?'#c8c9cc':'#f44'}}" customClass="task-btn" plain="{{true}}">{{btnText}}</b>
+    </a>
+</view>

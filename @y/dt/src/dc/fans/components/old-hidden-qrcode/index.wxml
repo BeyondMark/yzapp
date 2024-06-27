@@ -1,0 +1,61 @@
+<view class="dc-fans">
+    <button bind:contact="_p" businessId="{{businessId||''}}" data-t="{{ contact:{en:'handleContact'} }}" disabled="{{!sessionFrom}}" openType="contact" sendMessageImg="{{msgImg}}" sendMessagePath="{{messagePath}}" sendMessageTitle="{{''}}" sessionFrom="{{sessionFrom||''}}" showMessageCard="{{true}}" wx:if="{{opt.subType==='1'&&!isJumpH5}}">
+        <view class="group" style="background-color:{{opt.bgColor}}">
+            <view class="left">
+                <image class="logo tee-image" lazyLoad="true" mode="aspectFill" src="{{opt.logo}}"></image>
+                <view class="cnt">
+                    <view class="title">{{opt.title}}</view>
+                    <view class="desc">{{opt.desc}}</view>
+                </view>
+            </view>
+            <view class="right">
+                <view class="btn">{{opt.btnName}}</view>
+            </view>
+        </view>
+    </button>
+    <view bind:tap="_p" data-t="{{ tap:{en:'handleClick'} }}" wx:elif="{{opt.subType==='1'&&isJumpH5}}">
+        <view class="group" style="background-color:{{opt.bgColor}}">
+            <view class="left">
+                <image class="logo tee-image" lazyLoad="true" mode="aspectFill" src="{{opt.logo}}"></image>
+                <view class="cnt">
+                    <view class="title">{{opt.title}}</view>
+                    <view class="desc">{{opt.desc}}</view>
+                </view>
+            </view>
+            <view class="right">
+                <view class="btn">{{opt.btnName}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="official-account-view" wx:elif="{{canIUse&&opt.isWeappSupport}}">
+        <official-account bind:_init="_tic" bind:error="_p" data-t="{{ error:{en:'handleOfficialAccountLoadError'} }}"></official-account>
+    </view>
+    <div bind:_init="_tic" bind:tap="_p" data-t="{{ tap:{en:'handleJumpPublic'} }}" wx:elif="{{opt.isWeappContactSupport&&publicNumberPath}}">
+        <view class="official">
+            <view class="left">
+                <view class="tag">{{shopInfo.shopName}}的公众号</view>
+                <image class="logo tee-image" lazyLoad="true" src="{{opt.headImageUrl||shopInfo.shopLogo}}" style="border-radius: 50%"></image>
+                <view class="cnt">
+                    <view class="title">{{shopInfo.shopName}}</view>
+                </view>
+            </view>
+            <view class="right">
+                <view class="btn">关注</view>
+            </view>
+        </view>
+    </div>
+    <button bind:contact="_p" businessId="{{businessId||''}}" data-t="{{ contact:{en:'handleContact'} }}" disabled="{{!sessionFrom}}" openType="contact" sendMessageImg="{{msgImg}}" sendMessagePath="{{messagePath}}" sendMessageTitle="{{''}}" sessionFrom="{{sessionFrom||''}}" showMessageCard="{{true}}" wx:elif="{{opt.isWeappContactSupport&&!publicNumberPath}}">
+        <view class="official">
+            <view class="left">
+                <view class="tag">{{shopInfo.shopName}}的公众号</view>
+                <image class="logo tee-image" lazyLoad="true" src="{{opt.headImageUrl||shopInfo.shopLogo}}" style="border-radius: 50%"></image>
+                <view class="cnt">
+                    <view class="title">{{shopInfo.shopName}}</view>
+                </view>
+            </view>
+            <view class="right">
+                <view class="btn">关注</view>
+            </view>
+        </view>
+    </button>
+</view>

@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./../../de-cpn/avatar/index",
+    "b": "./../../de-cpn/mobile/index",
+    "c": "./../../de-cpn/input/index",
+    "d": "./../../de-cpn/date/index",
+    "e": "./../../de-cpn/region/index",
+    "f": "./../../de-cpn/gender/index",
+    "g": "./../../de-cpn/single-select/index",
+    "h": "./../../de-cpn/multiple-select/index",
+    "_": "../../../../../../../../components/_/index"
+  }
+}

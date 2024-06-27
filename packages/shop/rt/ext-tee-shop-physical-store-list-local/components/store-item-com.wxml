@@ -1,0 +1,17 @@
+<view class="shop-list-item">
+    <view class="item-content">
+        <view class="item-head">
+            <image class="logo tee-image" lazyLoad="true" src="{{item.logo}}" wx:if="{{storeConfig.shop_logo}}"></image>
+            <view catch:tap="_p" class="name-wrap" data-t="{{ tap:{en:'handleNameClick',et:'stop'} }}">
+                <view class="name">{{item.storeName}}</view>
+                <a bind:_init="_tic" name="arrow"></a>
+            </view>
+            <view catch:tap="_p" class="navigate" data-t="{{ tap:{en:'handleNavigate',et:'stop'} }}">导航</view>
+        </view>
+        <view class="address">
+            <view class="distance t-text" wx:if="{{item.distance>0}}">{{item.distance}} km</view> {{item.address}} </view>
+        <view class="summary" wx:if="{{storeConfig.business_hours}}">营业时间：{{item.summary}}</view>
+        <view catch:tap="_p" class="phone" data-t="{{ tap:{en:'handleCallPhone',et:'stop'} }}" wx:if="{{storeConfig.phone}}">联系电话：<view class="phone-num t-text">{{item.phone}}</view>
+        </view>
+    </view>
+</view>

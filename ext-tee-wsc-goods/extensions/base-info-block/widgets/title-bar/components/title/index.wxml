@@ -1,0 +1,40 @@
+<view class="goods-title">
+    <view class="c6d647">
+        <view class="c4059b" wx:if="{{goodsTag}}">
+            <view class="d3630 c5b574">跨境进口</view>
+            <view class="c19dc8" wx:if="{{haitaoCountry}}">
+                <image class="c7605f bd231" lazyLoad="true" src="{{haitaoFlag}}"></image>
+                <view class="c1ef73">{{haitaoCountry}}品牌</view>
+            </view>
+            <view wx:if="{{haitaoCountry&&goodsHaitaoTax}}">,</view>
+            <view class="c89585" wx:if="{{goodsHaitaoTax}}">{{goodsHaitaoTax}} </view>
+        </view>
+        <view wx:if="{{opt.retailShow}}">
+            <image class="d3630 bd231" lazyLoad="true" src="{{goodsRetailTag}}"></image>
+            <view class="c3218a c89585">线下同款，门店有售</view>
+        </view>
+    </view>
+    <view class="c42cac">
+        <view class="c0709e">
+            <view class="c7cc2c" wx:if="{{isShowBrandTitle}}"></view>
+            <view class="c28aba c89585">{{opt.title}}</view>
+            <view class="c78af3" wx:if="{{opt.isMedicine}}">
+                <view class="c1a238">
+                    <view class="c48cdb" wx:if="{{opt.isPrescriptionCategory}}">处方药</view>
+                    <block wx:if="{{opt.isPrescriptionCategory}}">该药品为处方药，处方药须凭处方在药师指导下购买和使用。</block>
+                    <block wx:else>请仔细阅读药品说明书的注意事项、禁忌等内容，并在医师指导下使用。</block>
+                </view>
+            </view>
+            <view class="c1a238" wx:if="{{opt.sellPoint&&!opt.goodsActivity.periodbuy}}"> {{opt.sellPoint}} </view>
+            <view class="e4d23" wx:if="{{atmosphereDataTag.length}}">
+                <b bind:_init="_tic" class="c7f1a7" hairline="{{true}}" plain="{{true}}" wx:for="{{atmosphereDataTag}}" wx:key="labelName"> {{item.labelName}} </b>
+            </view>
+        </view>
+        <view class="c75f69">
+            <view bind:tap="_p" class="f82e6" data-t="{{ tap:{en:'handleShareClick'} }}" wx:if="{{shareIcon.show&&isShowShareIcon}}">
+                <a bind:_init="_tic" class="{{shareIcon.animation?'c34be7':''}}" color="{{shareIcon.color}}" customStyle="display: block;" name="{{shareIcon.icon}}" size="{{shareIcon.size}}"></a>
+                <view class="c6f206" style="{{shareIcon.wordStyle}}"> {{shareIcon.word}} </view>
+            </view>
+        </view>
+    </view>
+</view>

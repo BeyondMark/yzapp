@@ -1,0 +1,6 @@
+<view class="goods-extra-wrapper" wx:if="{{goodsInfo.showExtra}}">
+    <block wx:if="{{goodsInfo.extra&&goodsInfo.extra.length>0}}">
+        <view class="goods-extra" style="color: {{item.color?item.color:'#ff720d'}}" wx:for="{{goodsInfo.extra}}" wx:key="index">{{item.text}}</view>
+    </block>
+    <view class="goods-extra empty" wx:else></view>
+</view>

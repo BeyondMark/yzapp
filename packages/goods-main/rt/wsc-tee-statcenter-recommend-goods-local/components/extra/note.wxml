@@ -1,0 +1,22 @@
+<view class="recommend-note" wx:if="{{title}}">
+    <view class="recommend-note-banner">
+        <view class="recommend-note-banner__img" style="{{paddingTopStyle}}">
+            <image class="recommend-note-banner__img-waterfall tee-image" lazyLoad="true" src="{{info.head_image_url}}" wx:if="{{isWaterFall}}"></image>
+            <view class="{{imageFillStyleClass}} {{'recommend-note-banner__img-bg'}}" key="info.headImageUrl" style="{{bgImg}}" wx:else></view>
+        </view>
+        <view class="recommend-note-wrapper recommend-note-left">
+            <view class="recommend-note-wrapper__title" wx:if="{{info.title}}">
+                <view class="{{'title'}} {{textStyleClass}}"> {{info.title}} </view>
+            </view>
+            <view class="recommend-note-wrapper__info">
+                <view class="recommend-note-wrapper__info-label">
+                    <view class="note-label">            #{{info.label}} </view>
+                </view>
+                <view class="recommend-note-wrapper__info-view" wx:if="{{layoutConfig.showBuyButton}}">
+                    <a bind:_init="_tic" class="icon-wrapper" name="eye-o" size="18px"></a>
+                    <view class="view-num">{{info.pv}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

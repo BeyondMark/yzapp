@@ -1,0 +1,7 @@
+<view class="reminder" wx:if="{{showReminder}}">
+    <view class="tips">{{isReminderOpen?'已':''}}开启签到提醒</view>
+    <a>
+        <c activeColor="{{themeColor}}" bind:change="onChangeReminderOpen" canReminderOpen="{{canReminderOpen}}" checked="{{isReminderOpen}}" size="22px"></c>
+    </a>
+    <b bind:close="closeSubscribeFailPopup" openImageSrc="https://img01.yzcdn.cn/public_files/2019/12/23/7b987495fc6bbd066262153577881592.png" show="{{showSubscirbeFail}}"></b>
+</view>

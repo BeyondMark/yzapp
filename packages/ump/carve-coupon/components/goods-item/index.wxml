@@ -1,0 +1,10 @@
+<navigator class="goods-item" hoverClass="none" url="/pages/goods/detail/index?alias={{goods.alias}}&banner_id={{goods.bannerId}}">
+    <view class="goods-item__img">
+        <image mode="aspectFit" src="{{goods.imgUrl}}"></image>
+    </view>
+    <view class="goods-item__title goods-item__info">{{goods.title}}</view>
+    <view class="goods-item__desc goods-item__info">
+        <view class="price">¥{{goods.price}}</view>
+        <view class="tag" wx:if="{{goods.showCouponTag}}">可使用</view>
+    </view>
+</navigator>

@@ -1,0 +1,8 @@
+.freight-insurance-popup__content {
+  padding: 10px 24px 20px 24px;
+  font-size: 14px;
+}
+.freight-insurance-bold .freight-insurance__value {
+  color: #323233;
+  font-weight: var(--theme-common-field-font-weight, 500);
+}

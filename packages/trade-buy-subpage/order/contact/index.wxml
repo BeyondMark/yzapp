@@ -1,0 +1,11 @@
+<d bind:_init="_tic" class="{{pageClassName}} {{pageDeviceClass}}" fixedBottom="{{fixedBottom}}" forbidCopyright="{{true}}" pageBgColor="{{pageBgColor}}" pageContainerItemStyle="{{pageContainerItemStyle}}" pageContainerStyle="{{pageContainerStyle}}">
+    <view style="{{_pageStyle}}">
+        <view>
+            <view class="c964a4">
+                <a bind:_init="_tic" nr="true" rmId="b37-9" wx:if="{{RM&&RM['b37-9']}}"></a>
+            </view>
+            <b bind:_init="_tic" data-ref="van-toast" isPageDefault="{{true}}"></b>
+            <c bind:_init="_tic" data-ref="van-dialog" isPageDefault="{{true}}"></c>
+        </view>
+    </view>
+</d>

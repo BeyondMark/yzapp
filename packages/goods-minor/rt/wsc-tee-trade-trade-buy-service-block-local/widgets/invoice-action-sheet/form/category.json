@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "/packages/async-tee/@y-open/vt/native/weapp/field/index/index",
+    "b": "/packages/async-tee/@y-open/vt/native/weapp/icon/index/index",
+    "c": "/packages/async-tee/@y-open/vt/dist/radio/index",
+    "d": "/@y-open/vt/dist/cell/index",
+    "e": "/@y-open/vt/dist/cell-group/index",
+    "f": "./corp-suggestion",
+    "g": "./wx-invoice-title",
+    "_": "../../../../../../../components/_/index"
+  },
+  "componentPlaceholder": { "a": "_", "b": "_", "c": "_" }
+}

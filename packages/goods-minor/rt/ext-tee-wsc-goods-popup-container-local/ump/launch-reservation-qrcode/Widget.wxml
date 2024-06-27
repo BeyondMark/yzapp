@@ -1,0 +1,16 @@
+<view style="{{themeVars}}">
+    <a bind:_init="_tic" bind:close="_p" closeable="{{true}}" customClass="a59d5" data-t="{{ close:{en:'hidePopUpMore'} }}" position="bottom" round="{{true}}" safeAreaInsetBottom="{{true}}" show="{{show}}">
+        <scroll-view class="c5210c" scrollY="{{true}}">
+            <view class="c760fd">
+                <view class="c201a7">{{popupTitle}}</view>
+                <view class="a8f38">
+                    <b bind:_init="_tic" class="d8cf8" color="#eeae33" name="info-o"></b>
+                    <view class="c89585">关注公众号才能接受通知完成预约</view>
+                </view>
+                <image class="c3d6f bd231" lazyLoad="true" src="{{weixinTempQrData.qrcodeUrl}}"></image>
+                <view class="c6763c">          长按识别二维码关注公众号
+        </view>
+            </view>
+        </scroll-view>
+    </a>
+</view>

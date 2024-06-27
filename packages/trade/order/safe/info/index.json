@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "退款详情",
+  "enablePullDownRefresh": true,
+  "componentPlaceholder": {
+    "recommend-goods": "_",
+    "van-toast": "_",
+    "van-notify": "_"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a": "./recommend-base",
+    "_": "../../../../../components/_/index"
+  }
+}

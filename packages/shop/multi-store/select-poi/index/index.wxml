@@ -1,0 +1,12 @@
+<view class="select-store">
+    <a bindselectPoi="getStore" current="{{currentInfo}}"></a>
+    <e wx:if="{{getLocationFailed}}"></e>
+    <block wx:else>
+        <b bindgetLocation="getLocation" bindgetStore="getStore" poi="{{currentPoI}}"></b>
+        <c bindeditAddress="goEditAddress" bindselect="getStore" list="{{addressList}}" wx:if="{{addressList.length>0}}"></c>
+        <d bindselect="getStore" coords="{{coords}}" list="{{nearPoIs}}" wx:if="{{nearPoIs.length>0}}"></d>
+    </block>
+    <view bindtap="goAddAdress" class="bottom">新建收货地址</view>
+    <f id="van-toast"></f>
+</view>
+<g noAutoAuth="{{true}}"></g>
